@@ -8,6 +8,112 @@ keywords: [ "Radeon", "Renoir", "APU" ]
 categories: [ "Hardware", "AMD", "APU", "GPU" ]
 ---
 
+### 製品
+
+<table>
+<thead>
+<tr>
+<th align="left">Ryzen 4000 U/H</th>
+<th align="center">4800U</th>
+<th align="center">4800H</th>
+<th align="center">4700U</th>
+<th align="center">4600U</th>
+<th align="center">4600H</th>
+<th align="center">4500U</th>
+<th align="center">4300U</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">CPU Core / Thread</td>
+<td align="center" colspan="2">8/16</td>
+<td align="center">8/8</td>
+<td align="center" colspan="2">6/12</td>
+<td align="center">6/6</td>
+<td align="center">4/4</td>
+</tr>
+
+<tr>
+<td align="left">CPU Base Clock (GHz)</td>
+<td align="center">1.8</td>
+<td align="center">2.9</td>
+<td align="center">2.0</td>
+<td align="center">?</td>
+<td align="center">3.0</td>
+<td align="center">2.3</td>
+<td align="center">2.7</td>
+</tr>
+
+<tr>
+<td align="left">CPU Boost Clock (GHz)</td>
+<td align="center" colspan="2">4.2</td>
+<td align="center">4.1</td>
+<td align="center" colspan="2">4.0</td>
+<td align="center">4.0</td>
+<td align="center">3.7</td>
+</tr>
+
+<tr>
+<td align="left">Total CPU L2$</td>
+<td align="center" colspan="3">4MB</td>
+<td align="center" colspan="3">3MB</td>
+<td align="center">2MB</td>
+</tr>
+
+<tr>
+<td align="left">Total CPU L3$</td>
+<td align="center" colspan="6">8MB</td>
+<td align="center">4MB</td>
+</tr>
+
+<tr>
+<td align="left">GPU Core</td>
+<td align="center">8</td>
+<td align="center" colspan="2">7</td>
+<td align="center" colspan="3">6</td>
+<td align="center">5</td>
+</tr>
+
+<tr>
+<td align="left">GPU Clock (MHz)</td>
+<td align="center">1750</td>
+<td align="center" colspan="2">1600</td>
+<td align="center" colspan="3">1500</td>
+<td align="center">1400</td>
+</tr>
+
+<tr>
+<td align="left">Default TDP</td>
+<td align="center">15W</td>
+<td align="center">45W</td>
+<td align="center">15W</td>
+<td align="center">15W</td>
+<td align="center">45W</td>
+<td align="center">15W</td>
+<td align="center">15W</td>
+</tr>
+
+<tr>
+<td align="left">cTDP</td>
+<td align="center">10-25W</td>
+<td align="center">35-54W</td>
+<td align="center">10-25W</td>
+<td align="center">10-25W</td>
+<td align="center">35-54W</td>
+<td align="center">10-25W</td>
+<td align="center">10-25W</td>
+</tr>
+</tbody>
+</table>
+
+4800UのBase Clockが1.8 GHzと他よりも低くなっているが、CPUが8-Core/16-Thread、GPUも4000 U/H-seriesでは最高性能でありながらTDP15Wなため仕方ない。  
+むしろPicassoの4C/8T、Base 2.3 GHzからコア数を倍にしても0.5 GHzの低下に抑えているあたりTSMC 7nm FinFetの恩恵を窺える。  
+
+4300Uは最も低いモデルとなり、Base ClockこそH-seriesに迫るほどだが、代わりに4C/4Tであり、L3キャッシュが4MBとのことからCCXを1つ丸々無効化しているはずだ。  
+近いBase ClockはPicasso 3000 seriesでは2C/4Tでないとないため、4300Uも7nmの恩恵を十分に受けているとも考えられる。  
+SMTを有効にした4C/8Tモデルがないのは、Picasso 3000 seriesの上位製品と競合しないようにするためかもしれない。（4000 seriesが出てもしばらくはPicassoを採用した新規製品が投入されるはず）  
+
 ### 構造
 ![Renoir Diagram](/image/2020/01/07/renoir-diagram.webp)  
 いつものダイアグラム。  
