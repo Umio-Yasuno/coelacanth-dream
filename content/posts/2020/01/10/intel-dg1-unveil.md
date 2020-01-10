@@ -12,8 +12,9 @@ categories: [ "Hardware", "GPU", "Intel" ]
 
 (引用元: [Intel、同社初の単体GPU「DG1」搭載ビデオカードを初披露。開発者向けボードは第1四半期中に出荷 - PC Watch](https://pc.watch.impress.co.jp/docs/news/event/1228480.html))
 
-ISV(Integrated Software Vendors)向けということで残念ながら自作PC市場で販売されることは今の所予定にないと思われる。  
-実機デモが行われたことからGPUとして至って普通に使えるだろうから、何かの拍子に流れてくることを期待する。  
+ISV（Integrated Software Vendors）向けということで残念ながら自作PC市場で販売されることは今の所予定にないと思われる。  
+実機デモが行われたことからGPUとして至って普通に使えるはずで、何かの拍子に流れてくることを期待する。  
+<span class="hide">エンジニアサンプリングという訳でもないから比較的流れやすそう</span>
 
 Intelが公式に公開している高解像度画像を見ると、インターフェイスこそx16だが、データリンクはx8までであることがわかる。  
 [Images: Intel DG1 SDV - Intel Newsroom ](https://newsroom.intel.com/image-archive/images-intel-dgi-sdv/)  
@@ -47,7 +48,7 @@ IntelはGen11からSlices数を増やすのではなく、Slices内のSub-Slices
 同L3キャッシュバンクにアクセスできるEUが多ければ性能、効率で有利になるのではないだろうか。（バランスの問題はあるが）  
 [Architecture Overview for Intel® Processor Graphics Gen11 - Intel® Software](https://software.intel.com/en-us/download/architecture-overview-for-intel-processor-graphics-gen11)（PDF Page15）  
 
-また、Gen11で16 Pixel/Clockとなり、4 Slicesの512EUは64 Pixel/Clockと他社のハイエンドGPUと同じバランスになる。  
+また、Gen11で16 Pixel/Clockとなり、Gen12でもそれを踏襲するならば4 Slicesの512EUは64 Pixel/Clockと他社のハイエンドGPUと同じバランスになる。  
 
 ただ、グラフィック性能を最低限確保するため128EUでは4 Dual Sub-Slices（64EU）構成にするということも考えられる。  
 

@@ -38,7 +38,7 @@ GPUに続いて、Intelのオープンな姿勢には驚嘆の念を抱く。
 
 #### おまけ
 Tiger LakeにGT3の名が。  
-<https://github.com/coreboot/coreboot/blob/master/src/include/device/pci_ids.h#L3283>  
+<https://github.com/coreboot/coreboot/blob/master/src/include/device/pci_ids.h#L3352>  
 他のファイルではただのGT3ではなく、eDRAM付きであることを表す3eとなっている。  
 [tigerlake/bootblock/report_platform.c](https://github.com/coreboot/coreboot/blob/master/src/soc/intel/tigerlake/bootblock/report_platform.c#L48)  
 
