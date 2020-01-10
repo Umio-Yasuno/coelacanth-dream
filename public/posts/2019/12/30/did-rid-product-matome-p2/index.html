@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="Cache-Control" content="max-age=2592000">
+
+	<title itemprop="name">AMDGPUのDID、RID、Productのびみょうまとめ Part2 | Coelacanth&#39;s Dream</title>
+	<meta property="og:title" content="AMDGPUのDID、RID、Productのびみょうまとめ Part2 | Coelacanth&#39;s Dream" />
+	<meta name="twitter:title" content="AMDGPUのDID、RID、Productのびみょうまとめ Part2 | Coelacanth&#39;s Dream" />
+	<meta itemprop="name" content="AMDGPUのDID、RID、Productのびみょうまとめ Part2 | Coelacanth&#39;s Dream" />
+	<meta name="application-name" content="AMDGPUのDID、RID、Productのびみょうまとめ Part2 | Coelacanth&#39;s Dream" />
+	<meta property="og:site_name" content="Coelacanth&#39;s Dream" /><meta name="description" content="ソースは主にDeviceInfoUtils.cpp - GPUOpen-Tools/common-src-DeviceInfo、 Bo... " />
+	<meta itemprop="description" content="ソースは主にDeviceInfoUtils.cpp - GPUOpen-Tools/common-src-DeviceInfo、 Bo... " />
+	<meta property="og:description" content="ソースは主にDeviceInfoUtils.cpp - GPUOpen-Tools/common-src-DeviceInfo、 Bo... " />
+	<meta name="twitter:description" content="ソースは主にDeviceInfoUtils.cpp - GPUOpen-Tools/common-src-DeviceInfo、 Bo... " /><base href="https://umio-yasuno.github.io/posts/2019/12/30/did-rid-product-matome-p2/">
+	<link rel="canonical" href="https://umio-yasuno.github.io/posts/2019/12/30/did-rid-product-matome-p2/" itemprop="url" /> 
+	<meta name="url" content="https://umio-yasuno.github.io/posts/2019/12/30/did-rid-product-matome-p2/" />
+	<meta name="twitter:url" content="https://umio-yasuno.github.io/posts/2019/12/30/did-rid-product-matome-p2/" /> 
+	<meta property="og:url" content="https://umio-yasuno.github.io/posts/2019/12/30/did-rid-product-matome-p2/" />
+	<meta name="author" content="Umio Yasuno" />
+	<meta name="keywords" content=" Radeon, AMDGPU, Device ID, Revision ID, Product Name" />
+
+	<meta property="og:locale" content="ja">
+	
+
+<link rel="preload" href="https://umio-yasuno.github.io/css/lain.min.css" as="style" importance="high">
+	<link rel="preload" href="https://umio-yasuno.github.io/css/animation.min.css" as="style" importance="high">
+		<link rel="stylesheet" href="https://umio-yasuno.github.io/css/lain.min.css">
+		<link rel="stylesheet" href="https://umio-yasuno.github.io/css/animation.min.css">
+		<link rel="icon" href="https://umio-yasuno.github.io/favicon.ico">
+	</head>
+    <body>
+	<div class="text">
+			<br>
+<div class="title"><a href="https://umio-yasuno.github.io/">Coelacanth&#39;s Dream</a></div>
+<br>
+
+		<article>
+		<h2><span class="page-title">AMDGPUのDID、RID、Productのびみょうまとめ Part2 </span></h2>
+			
+
+<p>ソースは主に<a href="https://github.com/GPUOpen-Tools/common-src-DeviceInfo/blob/master/DeviceInfoUtils.cpp" rel="nofollow noreferrer" target="_blank">DeviceInfoUtils.cpp - GPUOpen-Tools/common-src-DeviceInfo</a>、<br />
+BootCamoDriver内のcccmanifest_64.xml。</p>
+
+<p>Dali、Renoirは製品が出次第埋めていく、つもり。<span class="hide">たぶんやる。</span></p>
+
+<h4 id="table-of-content">Table of Content</h4>
+
+<ul>
+<li><a href="#apu">APU</a>
+
+<ul>
+<li><a href="#raven-gfx902">Raven</a></li>
+<li><a href="#picasso-gfx902">Picasso</a></li>
+<li><a href="#raven2-gfx909">Raven2</a>
+
+<ul>
+<li><a href="#dali-gfx909">Dali</a></li>
+<li><a href="#pollock-gfx909">Pollock</a></li>
+</ul></li>
+<li><a href="#renoir-gfx909">Renoir</a></li>
+</ul></li>
+<li><a href="#discrete-gpu">Discrete GPU</a>
+
+<ul>
+<li><a href="#vega10-gfx900">Vega10</a></li>
+<li><a href="#vega12-gfx904">Vega12</a></li>
+<li><a href="#vega20-gfx906">Vega20</a></li>
+<li><a href="#navi10-gfx1010">Navi10</a></li>
+<li><a href="#navi14-gfx1012">Navi14</a></li>
+<li><a href="#navi12-gfx1011">Navi12</a></li>
+<li><a href="#arcturus-gfx908">Arcturus</a></li>
+</ul></li>
+</ul>
+
+<h3 id="apu"><em>APU</em></h3>
+
+<!-- FAMILY_RV -->
+
+<h4 id="raven-gfx902"><em>Raven ( gfx902 )</em></h4>
+
+<table>
+<thead>
+<tr>
+<th align="left">Device ID</th>
+<th align="left">Revision ID</th>
+<th align="center">Product Name</th>
+<th align="center">Memo</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">15DD ↓</td>
+<td align="left">81</td>
+<td align="center">V1807B</td>
+<td align="center">(45W FP5 Vega 11)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">82</td>
+<td align="center">V1756B</td>
+<td align="center">(45W FP5 Vega 8)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">83</td>
+<td align="center">V1605B</td>
+<td align="center">(15W FP5 Vega 8)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">84</td>
+<td align="center">iTemp EMBEDDED</td>
+<td align="center">(15W FP5 Vega 6)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">85</td>
+<td align="center">V1202B</td>
+<td align="center">(15W FP5 Vega 3)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">86</td>
+<td align="center"></td>
+<td align="center">(Embedded 65W AM4)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">87</td>
+<td align="center"></td>
+<td align="center">(Embedded 65W AM4)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">88</td>
+<td align="center"></td>
+<td align="center">(Embedded 65W AM4 Vega 8)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C1</td>
+<td align="center">2800H?</td>
+<td align="center">(45W FP5 Vega 11)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C2</td>
+<td align="center">2600H?</td>
+<td align="center">(45W FP5 Vega 8)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C3</td>
+<td align="center">2700U</td>
+<td align="center">(15W FP5 Vega 10)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C4</td>
+<td align="center">2500U</td>
+<td align="center">(15W FP5 Vega 8)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C5</td>
+<td align="center">2200U</td>
+<td align="center">(15W FP5 Vega 3)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C6</td>
+<td align="center">2400G</td>
+<td align="center">(65W AM4 Vega 11)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C7</td>
+<td align="center"></td>
+<td align="center">(B8 65W AM4)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C8</td>
+<td align="center">2200G</td>
+<td align="center">(65W AM4 Vega 8)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C9</td>
+<td align="center">2400GE?</td>
+<td align="center">(35W AM4 Vega 11)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">CA</td>
+<td align="center">2200GE?</td>
+<td align="center">(35W AM4 Vega 8)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">CB</td>
+<td align="center">200GE /220GE /240GE</td>
+<td align="center">(35W AM4 Vega 3)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">CC</td>
+<td align="center">2300U</td>
+<td align="center">(15W FP5 Vega 6)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">CE</td>
+<td align="center">2200U?</td>
+<td align="center">(15W FP5 Vega 3)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D0</td>
+<td align="center">PRO 2700U?</td>
+<td align="center">(15W FP5 Vega 10)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D1</td>
+<td align="center">PRO 2500U</td>
+<td align="center">(15W FP5 Vega 8)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D2</td>
+<td align="center"></td>
+<td align="center">(B4 15W FP5)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D3</td>
+<td align="center">PRO 2400G?</td>
+<td align="center">(65W AM4 Vega 11)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D4</td>
+<td align="center"></td>
+<td align="center">(B8 65W AM4)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D5</td>
+<td align="center">PRO 2200G?</td>
+<td align="center">(65W AM4 Vega 8)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D6</td>
+<td align="center">PRO 2400GE?</td>
+<td align="center">(35W AM4 Vega 11)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D7</td>
+<td align="center">PRO 2200GE?</td>
+<td align="center">(35W AM4 Vega 8)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D8</td>
+<td align="center"></td>
+<td align="center">(35W AM4 Vega 3)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D9</td>
+<td align="center"></td>
+<td align="center">(15W FP5 Vega 6)</td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="#table-of-content">Page Top</a></p>
+
+<h4 id="picasso-gfx902"><em>Picasso ( gfx902 )</em></h4>
+
+<table>
+<thead>
+<tr>
+<th align="left">Device ID</th>
+<th align="left">Revision ID</th>
+<th align="center">Product Name</th>
+<th align="center">Memo</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">15D8 ↓</td>
+<td align="left">00</td>
+<td align="center"></td>
+<td align="center">Winston (Vega 8 WS)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">93</td>
+<td align="center"></td>
+<td align="center">(Vega 1 Raven2? /Dali? /Pollock?)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">A1</td>
+<td align="center"></td>
+<td align="center">(Vega 10)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">A2</td>
+<td align="center"></td>
+<td align="center">(Vega 8)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">A3</td>
+<td align="center"></td>
+<td align="center">(Vega 6)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">A4</td>
+<td align="center"></td>
+<td align="center">(Vega 3)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">B1</td>
+<td align="center"></td>
+<td align="center">(Vega 10)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">B2</td>
+<td align="center"></td>
+<td align="center">(Vega 8)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">B3</td>
+<td align="center"></td>
+<td align="center">(Vega 6)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">B4</td>
+<td align="center"></td>
+<td align="center">(Vega 3)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C1</td>
+<td align="center">3750H</td>
+<td align="center">(Vega 10)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C2</td>
+<td align="center">3500U /3550H</td>
+<td align="center">(Vega 8)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C3</td>
+<td align="center"></td>
+<td align="center">(Vega 6)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C4</td>
+<td align="center"></td>
+<td align="center">(Vega 3)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C5</td>
+<td align="center"></td>
+<td align="center">(Vega 3)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C8</td>
+<td align="center">3400G</td>
+<td align="center">(AM4 Vega 11)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C9</td>
+<td align="center">3200G</td>
+<td align="center">(AM4 Vega 8)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">CA</td>
+<td align="center"></td>
+<td align="center">(AM4 Vega 11)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">CB</td>
+<td align="center"></td>
+<td align="center">(AM4 Vega 8)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">CD</td>
+<td align="center"></td>
+<td align="center">(AM4 Vega 2)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D1</td>
+<td align="center">(PRO) 3700U</td>
+<td align="center">(Vega 10)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D2</td>
+<td align="center">PRO 3500U</td>
+<td align="center">(Vega 8)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D3</td>
+<td align="center">(PRO) 3300U</td>
+<td align="center">(Vega 6)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D4</td>
+<td align="center"></td>
+<td align="center">(Vega 3)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D8</td>
+<td align="center"></td>
+<td align="center">(AM4 Vega 11)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D9</td>
+<td align="center"></td>
+<td align="center">(AM4 Vega 8)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">DA</td>
+<td align="center"></td>
+<td align="center">(AM4 Vega 11)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">DB</td>
+<td align="center"></td>
+<td align="center">(AM4 Vega 8)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">DC</td>
+<td align="center"></td>
+<td align="center">(AM4 Vega 3)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">E1</td>
+<td align="center">3780U</td>
+<td align="center">Winston (Surface Edition Vega 11)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">E2</td>
+<td align="center">3580U</td>
+<td align="center">Winston (Surface Edition Vega 8)</td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="#table-of-content">Page Top</a></p>
+
+<h4 id="raven2-gfx909"><em>Raven2 ( gfx909 )</em></h4>
+
+<table>
+<thead>
+<tr>
+<th align="left">Device ID</th>
+<th align="left">Revision ID</th>
+<th align="center">Product Name</th>
+<th align="center">Memo</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">15DD ↓</td>
+<td align="left">E1</td>
+<td align="center"></td>
+<td align="center">(15W FP5 Vega 3)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">E2</td>
+<td align="center"></td>
+<td align="center">(35W AM4 Vega 3)</td>
+</tr>
+
+<tr>
+<td align="left">15D8</td>
+<td align="left">CC</td>
+<td align="center">3000G</td>
+<td align="center">(AM4 Vega 3)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">91 /92</td>
+<td align="center">R1505G? /R1605G?</td>
+<td align="center">Embedded</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">?</td>
+<td align="center">300U</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">?</td>
+<td align="center">3200U</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="#table-of-content">Page Top</a></p>
+
+<h4 id="dali-gfx909"><em>Dali ( gfx909 )</em></h4>
+
+<table>
+<thead>
+<tr>
+<th align="left">Device ID</th>
+<th align="left">Revision ID</th>
+<th align="center">Product Name</th>
+<th align="center">Memo</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">15D8 ↓</td>
+<td align="left">CD</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">CE</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">CF</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">DE</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">DF</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">E3 /E4</td>
+<td align="center"></td>
+<td align="center">(Vega 3)</td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="#table-of-content">Page Top</a></p>
+
+<h4 id="pollock-gfx909"><em>Pollock ( gfx909 )</em></h4>
+
+<table>
+<thead>
+<tr>
+<th align="left">Device ID</th>
+<th align="left">Revision ID</th>
+<th align="center">Product Name</th>
+<th align="center">Memo</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">15D8 ↓</td>
+<td align="left">94</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">95</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">E9</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">EA</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">EB</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="#table-of-content">Page Top</a></p>
+
+<!--
+| 15D9 ↓ | 91 | | **?** |
+| | 92 | | |
+| | C1 | | |
+| | C2 | | |
+| | C3 | | |
+-->
+
+<h4 id="renoir-gfx909"><em>Renoir ( gfx909 )</em></h4>
+
+<table>
+<thead>
+<tr>
+<th align="left">Device ID</th>
+<th align="left">Revision ID</th>
+<th align="center">Product Name</th>
+<th align="center">Memo</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">1636 ↓</td>
+<td align="left">00</td>
+<td align="center"></td>
+<td align="center">(BringUp FP6 )</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C1</td>
+<td align="center"></td>
+<td align="center">(B12 15W FP6)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C2</td>
+<td align="center"></td>
+<td align="center">(B10 15W FP6)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C3</td>
+<td align="center"></td>
+<td align="center">(B8 15W FP6)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C4</td>
+<td align="center"></td>
+<td align="center">(B6 15W FP6)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C5</td>
+<td align="center"></td>
+<td align="center">(B12 45W FP6)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C6</td>
+<td align="center"></td>
+<td align="center">(B10 45W FP6)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C7</td>
+<td align="center"></td>
+<td align="center">(B8 45W FP6)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C8</td>
+<td align="center"></td>
+<td align="center">(B10 65W AM4)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C9</td>
+<td align="center"></td>
+<td align="center">(B8 65W AM4)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">CA</td>
+<td align="center"></td>
+<td align="center">(B6 65W AM4)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">CB</td>
+<td align="center"></td>
+<td align="center">(B10 35W AM4)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">CC</td>
+<td align="center"></td>
+<td align="center">(B8 35W AM4)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">CD</td>
+<td align="center"></td>
+<td align="center">(B6 35W AM4)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">CE</td>
+<td align="center"></td>
+<td align="center">(B4 35W AM4)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D1</td>
+<td align="center"></td>
+<td align="center">(B12B 15W FP6)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D2</td>
+<td align="center"></td>
+<td align="center">(B10B 15W FP6)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D3</td>
+<td align="center"></td>
+<td align="center">(B8B 15W FP6)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D4</td>
+<td align="center"></td>
+<td align="center">(B6B 15W FP6)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D5</td>
+<td align="center"></td>
+<td align="center">(B12B 45W FP6)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D6</td>
+<td align="center"></td>
+<td align="center">(B10B 45W FP6)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D7</td>
+<td align="center"></td>
+<td align="center">(B8B 45W AM4)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D8</td>
+<td align="center"></td>
+<td align="center">(B10B 65W AM4)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">D9</td>
+<td align="center"></td>
+<td align="center">(B8B 65W AM4)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">DA</td>
+<td align="center"></td>
+<td align="center">(B6B 65W AM4)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">DB</td>
+<td align="center"></td>
+<td align="center">(B10B 35W AM4)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">DC</td>
+<td align="center"></td>
+<td align="center">(B8B 35W AM4)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">DD</td>
+<td align="center"></td>
+<td align="center">(B6B 35W AM4)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">DE</td>
+<td align="center"></td>
+<td align="center">(B4B 35W AM4)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">E1</td>
+<td align="center"></td>
+<td align="center"><!-- Acton --></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">E2</td>
+<td align="center"></td>
+<td align="center"><!-- Acton --></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">E3</td>
+<td align="center"></td>
+<td align="center"><!-- Acton --></td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="#table-of-content">Page Top</a></p>
+
+<h3 id="discrete-gpu"><em>Discrete GPU</em></h3>
+
+<!-- FAMILY_AI -->
+
+<h4 id="vega10-gfx900"><em>Vega10 ( gfx900 )</em></h4>
+
+<table>
+<thead>
+<tr>
+<th align="left">Device ID</th>
+<th align="left">Revision ID</th>
+<th align="center">Product Name</th>
+<th align="center">Memo</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">6860 ↓</td>
+<td align="left">00</td>
+<td align="center">Radeon Instinct MI25 ↓</td>
+<td align="center">(Vega10 GLXT SERVER) ↓</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">01</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">02</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">03</td>
+<td align="center">Radeon Pro V340</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">04</td>
+<td align="center">Radeon Instinct MI25x2</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">07</td>
+<td align="center">Radeon Pro V320 (/V340?)</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C0</td>
+<td align="center">Radeon Pro Vega 48 /56 /64 /64X<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup></td>
+<td align="center">?</td>
+</tr>
+
+<tr>
+<td align="left">6861</td>
+<td align="left">00</td>
+<td align="center">Radeon Pro &trade; WX 9100</td>
+<td align="center">(Vega10 GLXT)</td>
+</tr>
+
+<tr>
+<td align="left">6862</td>
+<td align="left">00</td>
+<td align="center">Radeon Pro SSG</td>
+<td align="center">(Vega10 SSG)</td>
+</tr>
+
+<tr>
+<td align="left">6863</td>
+<td align="left">00</td>
+<td align="center">Radeon Vega Frontier Edition</td>
+<td align="center">(Vega10 GLXTX)</td>
+</tr>
+
+<tr>
+<td align="left">6864 ↓</td>
+<td align="left">00</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">03</td>
+<td align="center">Radeon Pro V340</td>
+<td align="center">(Vega10 GLXT SERVER) ↓</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">04</td>
+<td align="center">Instinct MI25x2</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">05</td>
+<td align="center">Radeon Pro V340</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left">6867</td>
+<td align="left">00</td>
+<td align="center">Radeon Pro Vega 56</td>
+<td align="center">(Vega10 XLA)</td>
+</tr>
+
+<tr>
+<td align="left">6868</td>
+<td align="left">00</td>
+<td align="center">Radeon &trade; Pro WX 8200</td>
+<td align="center">(Vega10 GLXL)</td>
+</tr>
+
+<tr>
+<td align="left">6869</td>
+<td align="left">00</td>
+<td align="center"></td>
+<td align="center">(Vega10 XGA)</td>
+</tr>
+
+<tr>
+<td align="left">686A</td>
+<td align="left">00</td>
+<td align="center"></td>
+<td align="center">(Vega10 LEA)</td>
+</tr>
+
+<tr>
+<td align="left">686B</td>
+<td align="left">00</td>
+<td align="center">Radeon Pro Vega 64X</td>
+<td align="center">(Vega10 XTXA)</td>
+</tr>
+
+<tr>
+<td align="left">686C ↓</td>
+<td align="left">00</td>
+<td align="center">Radeon Instinct MI25 MxGPU ↓</td>
+<td align="center">(Vega10 GLXT SERVER VF) ↓</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">01</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">02</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">03</td>
+<td align="center">Radeon Pro V340 MxGPU</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">04</td>
+<td align="center">Radeon Instinct MI25x2 MxGPU</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">05</td>
+<td align="center">Radeon Pro V340 MxGPU</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C1</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left">686D</td>
+<td align="left">00</td>
+<td align="center"></td>
+<td align="center">(Vega10 GLXTA)</td>
+</tr>
+
+<tr>
+<td align="left">686E</td>
+<td align="left">00</td>
+<td align="center"></td>
+<td align="center">(Vega10 GLXLA)</td>
+</tr>
+
+<tr>
+<td align="left">687F ↓</td>
+<td align="left">01</td>
+<td align="center">Radeon RX Vega</td>
+<td align="center">(Vega10 XT - Blade)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C0</td>
+<td align="center">Radeon RX Vega</td>
+<td align="center">(Vega10 XTX)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C1</td>
+<td align="center">Radeon RX Vega (64)</td>
+<td align="center">(Vega10 DESKTOP XT)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C3</td>
+<td align="center">Radeon RX Vega (56)</td>
+<td align="center">(Vega10 XL)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C4</td>
+<td align="center"></td>
+<td align="center">(Vega10 XL)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C7</td>
+<td align="center">Radeon RX Vega</td>
+<td align="center">(Vega10 XL)</td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="#table-of-content">Page Top</a></p>
+
+<h4 id="vega12-gfx904"><em>Vega12 ( gfx904 )</em></h4>
+
+<table>
+<thead>
+<tr>
+<th align="left">Device ID</th>
+<th align="left">Revision ID</th>
+<th align="center">Product Name</th>
+<th align="center">Memo</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">69A0</td>
+<td align="left">00</td>
+<td align="center"></td>
+<td align="center">(Vega12 GL MXT)</td>
+</tr>
+
+<tr>
+<td align="left">69A1</td>
+<td align="left">00</td>
+<td align="center"></td>
+<td align="center">(Vega12 GL MXL)</td>
+</tr>
+
+<tr>
+<td align="left">69A2</td>
+<td align="left">00</td>
+<td align="center"></td>
+<td align="center">(Vega12 GL XL)</td>
+</tr>
+
+<tr>
+<td align="left">69A3</td>
+<td align="left">00</td>
+<td align="center"></td>
+<td align="center">(Vega12 Reserved)</td>
+</tr>
+
+<tr>
+<td align="left">69AF ↓</td>
+<td align="left">C0</td>
+<td align="center">Radeon Pro Vega 20</td>
+<td align="center">(Vega12 XTA)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C1</td>
+<td align="center"></td>
+<td align="center">(Vega12 MXT)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C3</td>
+<td align="center"></td>
+<td align="center">(Vega12 MLP)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C7</td>
+<td align="center">Radeon Pro Vega 16</td>
+<td align="center">(Vega12 XLA)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">CF</td>
+<td align="center"></td>
+<td align="center">(Vega12 XL)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">FF</td>
+<td align="center"></td>
+<td align="center">(Vega12 LE)</td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="#table-of-content">Page Top</a></p>
+
+<h4 id="vega20-gfx906"><em>Vega20 ( gfx906 )</em></h4>
+
+<table>
+<thead>
+<tr>
+<th align="left">Device ID</th>
+<th align="left">Revision ID</th>
+<th align="center">Product Name</th>
+<th align="center">Memo</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">66A0</td>
+<td align="left">00</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left">66A1 ↓</td>
+<td align="left">00</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">02</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">03</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">06</td>
+<td align="center"></td>
+<td align="center">(Vega20 WKS GL-XE)</td>
+</tr>
+
+<tr>
+<td align="left">66A2 ↓</td>
+<td align="left">00</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">02</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left">66A3</td>
+<td align="left">00</td>
+<td align="center">Radeon Pro Vega II (Duo)</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left">66A4</td>
+<td align="left">00</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left">66A7</td>
+<td align="left">00</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left">66AF ↓</td>
+<td align="left">C0</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C1</td>
+<td align="center">Radeon VII</td>
+<td align="center">(Vega20 XT)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C3</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C7</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">CF</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="#table-of-content">Page Top</a></p>
+
+<!-- FAMILY_NV -->
+
+<!--
+Navi LITE 13E9:00
+-->
+
+<h4 id="navi10-gfx1010"><em>Navi10 ( gfx1010 )</em></h4>
+
+<table>
+<thead>
+<tr>
+<th align="left">Device ID</th>
+<th align="left">Revision ID</th>
+<th align="center">Product Name</th>
+<th align="center">Memo</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">66AF ↓</td>
+<td align="left">70</td>
+<td align="center"></td>
+<td align="center">(Fake DID?)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">71</td>
+<td align="center"></td>
+<td align="center">(Fake DID?)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">72</td>
+<td align="center"></td>
+<td align="center">(Fake DID?)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">73</td>
+<td align="center"></td>
+<td align="center">(Fake DID?)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">F0</td>
+<td align="center"></td>
+<td align="center">(Navi10 XTX Fake DID?<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">F1</td>
+<td align="center"></td>
+<td align="center">(Navi10 XT Fake DID?<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">F2</td>
+<td align="center"></td>
+<td align="center">(Navi10 XL Fake DID?<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">F3</td>
+<td align="center"></td>
+<td align="center">(Fake DID?)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">F4</td>
+<td align="center"></td>
+<td align="center">(Fake DID?)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">F5</td>
+<td align="center"></td>
+<td align="center">(Fake DID?)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">F6</td>
+<td align="center"></td>
+<td align="center">(Navi10 XME Fake DID?<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>)</td>
+</tr>
+
+<tr>
+<td align="left">7310</td>
+<td align="left">00</td>
+<td align="center">Radeon Pro W5700X</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left">7312</td>
+<td align="left">00</td>
+<td align="center">Radeon Pro W5700</td>
+<td align="center">(Navi10 Pro XL?<sup class="footnote-ref" id="fnref:4"><a href="#fn:4">3</a></sup>)</td>
+</tr>
+
+<tr>
+<td align="left">7318</td>
+<td align="left">40</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left">7319</td>
+<td align="left">40</td>
+<td align="center">Radeon Pro 5700 XT</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left">731A</td>
+<td align="left">40</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left">731B</td>
+<td align="left">40</td>
+<td align="center">Radeon Pro 5700</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left">731F ↓</td>
+<td align="left">C0</td>
+<td align="center">RX 5700 XT 50th</td>
+<td align="center">(Navi10 XTX)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C1</td>
+<td align="center">RX 5700 XT</td>
+<td align="center">(Navi10 XT)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C2</td>
+<td align="center">RX 5600M?</td>
+<td align="center">(Navi10 XME)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C3</td>
+<td align="center">RX 5700M</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C4</td>
+<td align="center">RX 5700</td>
+<td align="center">(Navi10 XL)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C5</td>
+<td align="center">RX 5700 XT</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">CA</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">CB</td>
+<td align="center">RX 5600</td>
+<td align="center">(Navi10 XE)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">E1</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">E3</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">E7</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="#table-of-content">Page Top</a></p>
+
+<h4 id="navi14-gfx1012"><em>Navi14 ( gfx1012 )</em></h4>
+
+<table>
+<thead>
+<tr>
+<th align="left">Device ID</th>
+<th align="left">Revision ID</th>
+<th align="center">Product Name</th>
+<th align="center">Memo</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">67DF ↓</td>
+<td align="left">3C</td>
+<td align="center"></td>
+<td align="center">(Navi14 Pro-? Fake DID?)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">3D</td>
+<td align="center"></td>
+<td align="center">(Navi14 Pro-? Fake DID?)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">3E</td>
+<td align="center"></td>
+<td align="center">(Navi14 Pro-? Fake DID?)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">3F</td>
+<td align="center"></td>
+<td align="center">(Navi14 Pro-XLM Fake DID?)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">F2</td>
+<td align="center"></td>
+<td align="center">(Navi14 XTM Fake DID?<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">F3</td>
+<td align="center"></td>
+<td align="center">(Navi14 XLM Fake DID?<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">F4</td>
+<td align="center"></td>
+<td align="center">(Navi14 XT Fake DID?<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">F5</td>
+<td align="center"></td>
+<td align="center">(Navi14 XL Fake DID??)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">F6</td>
+<td align="center"></td>
+<td align="center">(Navi14 XTX Fake DID?<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>)</td>
+</tr>
+
+<tr>
+<td align="left">7340 ↓</td>
+<td align="left">00</td>
+<td align="center"></td>
+<td align="center"><!-- Falcon GL-XTA --></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">40</td>
+<td align="center">Radeon Pro 5500M</td>
+<td align="center">(Navi14 ULA<sup class="footnote-ref" id="fnref:3"><a href="#fn:3">4</a></sup>)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">41</td>
+<td align="center"></td>
+<td align="center"><!-- Falcon XTA 8G --></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">43</td>
+<td align="center">Radeon Pro 5300M</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">47</td>
+<td align="center"></td>
+<td align="center"><!-- Falcon XLXA --></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">70</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C1</td>
+<td align="center">RX 5500M</td>
+<td align="center">(Navi14 XTM)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C3</td>
+<td align="center">RX 5300M</td>
+<td align="center">(Navi14 XLM)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C5</td>
+<td align="center">RX 5500 XT</td>
+<td align="center">(Navi14 XTX)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C7</td>
+<td align="center">RX 5500</td>
+<td align="center">(Navi14 XT)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">CF</td>
+<td align="center">RX 5300?</td>
+<td align="center">(Navi14 XL?)</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">F2</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">F3</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left">7341</td>
+<td align="left">00</td>
+<td align="center">Radeon Pro W5500</td>
+<td align="center">(Navi14 Pro-XL)</td>
+</tr>
+
+<tr>
+<td align="left">7343</td>
+<td align="left">00</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left">7347</td>
+<td align="left">00</td>
+<td align="center">Radeon Pro W5500M</td>
+<td align="center">(Navi14 Pro-XTM)</td>
+</tr>
+
+<tr>
+<td align="left">734F</td>
+<td align="left">00</td>
+<td align="center">Radeon Pro W5300M</td>
+<td align="center">(Navi14 Pro-XLM)</td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="#table-of-content">Page Top</a></p>
+
+<!--
+SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
+-->
+
+<h4 id="navi12-gfx1011"><em>Navi12 ( gfx1011 )</em></h4>
+
+<table>
+<thead>
+<tr>
+<th align="left">Device ID</th>
+<th align="left">Revision ID</th>
+<th align="center">Product Name</th>
+<th align="center">Memo</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">69B0 ↓</td>
+<td align="left">71</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">F1</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">F3</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left">7360 ↓</td>
+<td align="left">40</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">41</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C1</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left">C3</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left">7362</td>
+<td align="left"></td>
+<td align="center"></td>
+<td align="center">(Navi12 VF)</td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="#table-of-content">Page Top</a></p>
+
+<!-- FAMILY_AI -->
+
+<h4 id="arcturus-gfx908"><em>Arcturus ( gfx908 )</em></h4>
+
+<table>
+<thead>
+<tr>
+<th align="left">Device ID</th>
+<th align="left">Revision ID</th>
+<th align="center">Product Name</th>
+<th align="center">Memo</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">738C</td>
+<td align="left"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left">7388</td>
+<td align="left"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left">738E</td>
+<td align="left"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="left">7390</td>
+<td align="left"></td>
+<td align="center"></td>
+<td align="center">(Arcturus VF)</td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="#table-of-content">Page Top</a></p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">SubSystem ID? ( Vega 48:0x0196, Vega 56:0x017B, Vega 64:0x017C Vega 64X:0x0188 )
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2"><a href="https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/powerplay/navi10_ppt.c?h=amd-staging-drm-next#n1593" rel="nofollow noreferrer" target="_blank">navi10_ppt.c#n1593</a>
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+<li id="fn:4"><a href="https://www.techpowerup.com/vgabios/216287/216287" rel="nofollow noreferrer" target="_blank">AMD Radeon Pro W5700 8 GB BIOS - TechPowerUp</a>
+ <a class="footnote-return" href="#fnref:4"><sup>[return]</sup></a></li>
+<li id="fn:3"><a href="https://www.techpowerup.com/vgabios/216534/apple-pro5500m-8192-191010" rel="nofollow noreferrer" target="_blank">Apple Pro 5500M 8 GB BIOS - TechPowerUp</a>
+ <a class="footnote-return" href="#fnref:3"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+<hr>
+<footer><a href="https://umio-yasuno.github.io/tags">Tags</a>:<a href="https://umio-yasuno.github.io/tags/radeon">Radeon</a><a href="https://umio-yasuno.github.io/tags/database">Database</a><br><a href="https://umio-yasuno.github.io/categories">Categories</a>:<a href="https://umio-yasuno.github.io/categories/hardware">Hardware</a><a href="https://umio-yasuno.github.io/categories/amd">AMD</a><a href="https://umio-yasuno.github.io/categories/gpu">GPU</a><br>Lastmod : Jan 10, 09:06<br> Author : Umio Yasuno 
+		<br><a href="https://umio-yasuno.github.io/about/" target="_blank">About</a>
+		<a href="https://umio-yasuno.github.io/tags/database" target="_blank">Database</a>
+		<address class="mail"> </address><br>
+<div class="title"><a href="https://umio-yasuno.github.io/">Coelacanth&#39;s Dream</a></div>
+<br>
+</footer>
+
+		</article>
+	</div>
+	<span class="lace"></span> 
+    </body>
+</html>
