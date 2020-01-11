@@ -10,6 +10,13 @@ categories: [ "Hardware", "AMD", "APU", "GPU" ]
 
 ### 製品
 
+4800UのBase Clockが1.8 GHzと他よりも低くなっているが、CPUが8-Core/16-Thread、GPUも4000 U/H-seriesでは最高性能でありながらTDP15Wなため仕方ない。  
+むしろPicassoの4C/8T、Base 2.3 GHzからコア数を倍にしても0.5 GHzの低下に抑えているあたりTSMC 7nm FinFetの恩恵を窺える。  
+
+4300Uは最も低いモデルとなり、Base ClockこそH-seriesに迫るほどだが、代わりに4C/4Tであり、L3キャッシュが4MBとのことからCCXを1つ丸々無効化しているはずだ。  
+近いBase ClockはPicasso 3000 seriesでは2C/4Tでないとないため、4300Uも7nmの恩恵を十分に受けているとも考えられる。  
+SMTを有効にした4C/8Tモデルがないのは、Picasso 3000 seriesの上位製品と競合しないようにするためかもしれない。（4000 seriesが出てもしばらくはPicassoを採用した新規製品が投入されるはず）  
+
 <table>
 <thead>
 <tr>
@@ -106,13 +113,6 @@ categories: [ "Hardware", "AMD", "APU", "GPU" ]
 </tr>
 </tbody>
 </table>
-
-4800UのBase Clockが1.8 GHzと他よりも低くなっているが、CPUが8-Core/16-Thread、GPUも4000 U/H-seriesでは最高性能でありながらTDP15Wなため仕方ない。  
-むしろPicassoの4C/8T、Base 2.3 GHzからコア数を倍にしても0.5 GHzの低下に抑えているあたりTSMC 7nm FinFetの恩恵を窺える。  
-
-4300Uは最も低いモデルとなり、Base ClockこそH-seriesに迫るほどだが、代わりに4C/4Tであり、L3キャッシュが4MBとのことからCCXを1つ丸々無効化しているはずだ。  
-近いBase ClockはPicasso 3000 seriesでは2C/4Tでないとないため、4300Uも7nmの恩恵を十分に受けているとも考えられる。  
-SMTを有効にした4C/8Tモデルがないのは、Picasso 3000 seriesの上位製品と競合しないようにするためかもしれない。（4000 seriesが出てもしばらくはPicassoを採用した新規製品が投入されるはず）  
 
 ### 構造
 ![Renoir Diagram](/image/2020/01/07/renoir-diagram.webp)  
