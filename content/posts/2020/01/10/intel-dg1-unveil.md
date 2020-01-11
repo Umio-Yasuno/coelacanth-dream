@@ -13,7 +13,7 @@ categories: [ "Hardware", "GPU", "Intel" ]
 (引用元: [Intel、同社初の単体GPU「DG1」搭載ビデオカードを初披露。開発者向けボードは第1四半期中に出荷 - PC Watch](https://pc.watch.impress.co.jp/docs/news/event/1228480.html))
 
 ISV（Integrated Software Vendors）向けということで残念ながら自作PC市場で販売されることは今の所予定にないと思われる。  
-実機デモが行われたことからGPUとして至って普通に使えるはずで、何かの拍子に流れてくることを期待する。  
+実機デモが行われたことからGPUとして至って普通に使えるはずで、何かの拍子に流れてくることを期待している。  
 <span class="hide">エンジニアサンプリングという訳でもないから比較的流れやすそう</span>
 
 Intelが公式に公開している高解像度画像を見ると、インターフェイスこそx16だが、データリンクはx8までであることがわかる。  
