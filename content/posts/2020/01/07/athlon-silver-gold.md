@@ -21,7 +21,7 @@ CPU/GPUと14nmであることから、ダイとしては[Raven2](/tags/raven2)�
 [AMD's Slide Deck - AMD Ryzen 4000 Mobile APUs: 7nm, 8-core on both 15W and 45W, Coming Q1 - AnandTech](https://www.anandtech.com/show/15324/amd-ryzen-4000-mobile-apus-7nm-8core-on-both-15w-and-45w-coming-q1/2)  
 ただそうなると、Raven2からプロセスも設計も変更していないDaliの存在意義が謎なため、Raven2である可能性のが高いと個人的には見ている。  
 
-[AMD Athlon™ 3000 Series Mobile Processors – Real Performance Meets Modern Features - Youtube](https://www.youtube-nocookie.com/embed/T-xWH1vgxTM)  
+{{% youtube id="T-xWH1vgxTM" title="AMD Athlon™ 3000 Series Mobile Processors – Real Performance Meets Modern Features" %}}
 
 AMDはRyzenのセグメントにおいて、対抗であるIntelのCore iシリーズに合わせた 3/5/7 を取り入れたが、  
 今回はAthlonにPentiumのセグメント、Silver/Goldを取り入れた形となる。  
