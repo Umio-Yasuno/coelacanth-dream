@@ -31,5 +31,5 @@ APU系統では他にDID:15D9も確認されており、これにPollockが追�
 [DeviceInfoUtils.cpp#L523](https://github.com/GPUOpen-Tools/common-src-DeviceInfo/blob/master/DeviceInfoUtils.cpp#L523)  
 
 <br>
-こっちで既に反映させてあるため、ややこしさの解消に役立てていただければ幸いだ。  
+こちらで既に反映させてあるため、ややこしさの解消に役立てていただければ幸いだ。  
 [AMDGPUのDID、RID、Productのびみょうまとめ Part2](/posts/2019/12/30/did-rid-product-matome-p2/#pollock-gfx909)  
