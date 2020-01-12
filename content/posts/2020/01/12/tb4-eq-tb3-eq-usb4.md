@@ -39,5 +39,7 @@ Thunderboltは信号にPCI Expressを使っており、TB3はPCIeGen3 x4で40 Gb
 
  * [IntelがThunderbolt 4に言及、詳細不明ながら速度は据え置きか - Computerworldニュース：Computerworld](https://project.nikkeibp.co.jp/idg/atcl/19/00001/00076/?ST=idg-cm-hardware)  
  * [Intel's new 'Thunderbolt 4' spec quickly turns into a confusing messi - PCWorld](https://www.pcworld.com/article/3512937/intels-new-thunderbolt-4-spec-quickly-turns-into-a-mess.html)  
+ * [Intel's 'new' Thunderbolt 4 is just a re-branding of Thunderbolt 3 - TweakTown](https://www.tweaktown.com/news/69845/intels-new-thunderbolt-4-re-branding-3/index.html)  
+ * [Thunderbolt 4 vs. USB 4 - what's the difference? • Indeedly](https://indeedly.io/thunderbolt-4-is-usb-4-maxed-out/)  
  * [新しいUSBのスタンダード：USB 3.2の説明 - MSI](https://jp.msi.com/blog/new-usb-standard-usb-3-2-gen-1-gen2-explained)  
  * [USB 3.0#USB_3.2 - Wikipedia](https://en.wikipedia.org/wiki/USB_3.0#USB_3.2)  
