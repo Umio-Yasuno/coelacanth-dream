@@ -27,15 +27,31 @@ Thunderboltは信号にPCI Expressを使っており、TB3はPCIeGen3 x4で40 Gb
 そこの所気になった[Tom's Hardware](https://www.tomshardware.com)がIntelに確認を取ったところ、4倍というのは**USB 3.1（10 Gbit/s）**に掛かるとのことで、TB4はTB3、それとTB3を仕様に取り込んだ次世代規格であるUSB4と帯域が変わらないことが確定となった。  
 [What Is Thunderbolt 4? Tiger Lake Tech Isn't Faster, Thunderbolt 3 With a New Name - Tom's Hardware](https://www.tomshardware.com/news/what-is-thunderbolt-4-tiger-lake-tech-isnt-faster-thunderbolt-3-with-a-new-name)  
 
+#### 推測
 したがってTigerlakeがPCIeGen4に対応した可能性も低くなる。  
-さらに言えば、モバイル向けにPCIeGen4が来る日も遠くなった。USB4の対応にPCIeGen4である必要はなく、それ以上の速度となる外部バスもしばらく（1,2年）は来ないだろうからだ。  
-来てもそれがモバイル向けに求められるかは怪しく、先日発表されたAMD Ryzen 4000シリーズもPCIeGen4に対応しなかった。  
+少なくともモバイル向けでPCIeGen4の必要性は薄い。先日発表されたAMD Ryzen 4000シリーズもPCIeGen4に対応しなかった。  
 
-#### どうなんの
-さすがにIntelはリブランドだけに留まらず、何らかの付加価値を作り、アピールしてくるはずだが、そこに関してはまだ一切明かされていない。  
+TigerlakeとPCH間接続がPCIeGen4 x4になる、という話が流れたこともあったが、  
+[Intel "Tiger Lake" Supports PCIe Gen 4 and Features Xe Graphics, Phantom Canyon NUC Detailed - TechPowerUp](https://www.techpowerup.com/258196/intel-tiger-lake-supports-pcie-gen-4-and-features-xe-graphics-phantom-canyon-nuc-detailed)  
+TB4ではなくTB3となっていることから、その時からある程度変更が入っていることは間違いないだろう。  
+
+Tigerlakeの新機能に
+
+ > NEXT GEN I/O TECHNOLOGY
+
+があったりと可能性がない訳ではないが、PCIeGen4であるとは言っていないし、あるならあるで先日のCES2020の場でアピールしそうな気もする。  
+[2019 Intel Investor Meeting - 2019_Intel_Investor_Meeting_Bryant.pdf - Intel](http://intelstudios.edgesuite.net/im/2019/pdf/2019_Intel_Investor_Meeting_Bryant.pdf#page=10)  
+PCIeGen4にCPU側が対応しても、デバイス側としては自社製品が**まだ**ないためアピールとしては事欠けるというのが実情だったりするかもしれないが。  
+
+<br>
+IntelからのTigerlakeに関しての情報はちらつかせるだけのものが多く、かえって謎が増えてるような気がしてならない。  
+
+#### どうなんのTB4
+さすがにTB3のリブランドだけに留まらず、Intelは何らかの付加価値を作ってくるはずだが、そこに関してはまだ一切明かされていない。  
 
 <hr>
 <code>参考</code>
+
  * [What Is Thunderbolt 4? Tiger Lake Tech Isn't Faster, Thunderbolt 3 With a New Name - Tom's Hardware](https://www.tomshardware.com/news/what-is-thunderbolt-4-tiger-lake-tech-isnt-faster-thunderbolt-3-with-a-new-name)  
  * [IntelがThunderbolt 4に言及、詳細不明ながら速度は据え置きか - Computerworldニュース：Computerworld](https://project.nikkeibp.co.jp/idg/atcl/19/00001/00076/?ST=idg-cm-hardware)  
  * [Intel's new 'Thunderbolt 4' spec quickly turns into a confusing messi - PCWorld](https://www.pcworld.com/article/3512937/intels-new-thunderbolt-4-spec-quickly-turns-into-a-mess.html)  
