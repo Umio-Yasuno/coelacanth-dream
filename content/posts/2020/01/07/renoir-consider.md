@@ -115,8 +115,8 @@ SMTを有効にした4C/8Tモデルがないのは、Picasso 3000 seriesの上�
 </table>
 
 ### 構造
-![Renoir Diagram](/image/2020/01/07/renoir-diagram.webp)  
-いつものダイアグラム。  
+
+{{% figure src="/image/2020/01/07/renoir-diagram.webp" title="いつものダイアグラム" %}}
 
 #### プロセス
 他のAMD 7nm製品と同様にTSMC 7nm FinFetで製造されている。  

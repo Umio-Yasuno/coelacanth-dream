@@ -1,5 +1,5 @@
 ---
-title: "Thunderbolt 4の帯域はThunderbolt 3、USB4と変わらず"
+title: "Thunderbolt 4の速度はThunderbolt 3、USB4と変わらず"
 date: 2020-01-12T15:09:32+09:00
 draft: false
 tags: [ "Bus", ]
@@ -36,7 +36,7 @@ Thunderboltは信号にPCI Expressを使っており、TB3はPCIeGen3 x4で40 Gb
 
 <hr>
 <code>参考</code>
-
+ * [What Is Thunderbolt 4? Tiger Lake Tech Isn't Faster, Thunderbolt 3 With a New Name - Tom's Hardware](https://www.tomshardware.com/news/what-is-thunderbolt-4-tiger-lake-tech-isnt-faster-thunderbolt-3-with-a-new-name)  
  * [IntelがThunderbolt 4に言及、詳細不明ながら速度は据え置きか - Computerworldニュース：Computerworld](https://project.nikkeibp.co.jp/idg/atcl/19/00001/00076/?ST=idg-cm-hardware)  
  * [Intel's new 'Thunderbolt 4' spec quickly turns into a confusing messi - PCWorld](https://www.pcworld.com/article/3512937/intels-new-thunderbolt-4-spec-quickly-turns-into-a-mess.html)  
  * [Intel's 'new' Thunderbolt 4 is just a re-branding of Thunderbolt 3 - TweakTown](https://www.tweaktown.com/news/69845/intels-new-thunderbolt-4-re-branding-3/index.html)  
