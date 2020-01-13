@@ -42,8 +42,14 @@ Tigerlakeの新機能に
 があったりと可能性がない訳ではないが、PCIeGen4であるとは言っていないし、あるならあるで先日のCES2020の場でアピールしそうな気もする。  
 [2019 Intel Investor Meeting - 2019_Intel_Investor_Meeting_Bryant.pdf - Intel](http://intelstudios.edgesuite.net/im/2019/pdf/2019_Intel_Investor_Meeting_Bryant.pdf#page=10)  
 PCIeGen4にCPU側が対応しても、デバイス側としては自社製品が**まだ**ないためアピールとしては事欠けるというのが実情だったりするかもしれないが。  
+[Intel® Stratix® 10 DX FPGAs - Intel® FPGAs](https://www.intel.com/content/www/us/en/products/programmable/sip/stratix-10-dx.html)は対応しているが一般向けではなく、せめてSSD等が望まれる。  
+一応、Optane SSDのGen4対応は予定されており、Linuxドライバー開発用のサンプルがあるくらいには進んでいるらしい。  
+[Intel has PCIe 4.0 Optane SSDs Ready, But Nothing for Customers to Plug Them Into- Tom's Hardware](https://www.tomshardware.com/news/intel-has-pcie-40-optane-ssds-ready-but-nothing-to-plug-them-in-to)  
+最も、これもサーバー向けのOptane DCといった製品になると思われ、一般向けではない。  
+
 
 <br>
+#### 感想
 IntelからのTigerlakeに関しての情報はちらつかせるだけのものが多く、かえって謎が増えてるような気がしてならない。  
 
 #### どうなんのTB4
