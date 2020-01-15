@@ -2,7 +2,7 @@
 title: "Vegaの新機能今いずこ"
 date: 2019-12-07T05:13:46+09:00
 draft: false
-tags: [ "Radeon", "GCN", "GFX9" ]
+tags: [ "Radeon", "GCN", "GFX9", "Database" ]
 keywords: [ "Radeon", "Vega" ]
 categories: [ "Hardware", "AMD", "GPU" ]
 ---
