@@ -2,7 +2,7 @@
 title: "行き着く先はVim"
 date: 2020-01-15T04:36:18+09:00
 draft: false
-tags: [ "", ]
+tags: [ ]
 keywords: [ "", ]
 categories: [ "Diary", ]
 noindex: true

@@ -4,7 +4,7 @@ date: 2020-01-14T23:38:40+09:00
 draft: false
 tags: [ "Database", ]
 keywords: [ "", ]
-categories: [ "", ]
+categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
 ---
 
