@@ -50,7 +50,7 @@ noindex: false
 | Abbr | Full | memo |
 | :--: | :--: | :--: |
 | SE | Shader Engine | |
-| SA/SH | Shader Array | GCN(1SE=1SA=16CU), RDNA(1SE=2SA=10WGP=20CU) |
+| SA/SH | Shader Array | GCN(1SE =1SA =16CU), RDNA(1SE =2SA =10WGP =20CU) |
 | HWS | Hardware Schedulers | |
 | ACE | Asynchronous Compute Engine | |
 | RB | Render Backend | =4 ROPs |
@@ -76,11 +76,11 @@ noindex: false
 | LRU | Least Recently Used | |
 | CGPG | Coarse Grained PoweGating | |
 | UVD | Unified Video Decoder | |
-| VCE | Video Compression/Codec Engine | |
+| VCE | Video Compression (/Codec) Engine | |
 | VCN | Video Core Next | |
 | DC | Display Core | |
 | DCE |
-| DMCUB | Display MicroController Unit B | |
+| DMCUB | Display Micro Controller Unit B | |
 | HBCC | High Bandwidth Cache Controller | GFX9+ |
 | DSBR | Draw Stream Binning Rasterrizer | GFX9+ |
 
@@ -104,5 +104,5 @@ noindex: false
 | TMZ | Trusted Memory Zone | |
 | DWB | Display WriteBack | |
 | RAS | Reliability, Availability, Serviceability | |
-| HDCP | Highbandwidth Digiral Content Protection | |
+| HDCP | Highbandwidth Digital Content Protection | |
 | TA | Trusted Application | |

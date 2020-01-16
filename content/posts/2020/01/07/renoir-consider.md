@@ -237,6 +237,8 @@ Built on Intel’s 10nm+ process, the first Tiger Lake systems are expected to s
  > The Ice Lake processor family is the next generation Intel® Core™ processor family. These processors utilize Intel’s industry-leading 10 nm+ process technology.
 
 Tigerlakeの中身（特にCPU）がどうなってるのか、靄がかかり始める。  
+間違いかIntel内できちんと統一されてないかだが、どっちにしろはっきりしてほしい。  
+
 2020年中に製品が出るとのことだがどうなるか。  
 まあ気長に待つ他ない。  
 

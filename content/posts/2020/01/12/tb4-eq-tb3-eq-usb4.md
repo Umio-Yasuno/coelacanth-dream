@@ -56,7 +56,7 @@ IntelからのTigerlakeに関しての情報はちらつかせるだけのもの
 さすがにTB3のリブランドだけに留まらず、Intelは何らかの付加価値を作ってくるはずだが、そこに関してはまだ一切明かされていない。  
 
 <hr>
-<code>参考</code>
+<span class="reference">参考</span>
 
  * [What Is Thunderbolt 4? Tiger Lake Tech Isn't Faster, Thunderbolt 3 With a New Name - Tom's Hardware](https://www.tomshardware.com/news/what-is-thunderbolt-4-tiger-lake-tech-isnt-faster-thunderbolt-3-with-a-new-name)  
  * [IntelがThunderbolt 4に言及、詳細不明ながら速度は据え置きか - Computerworldニュース：Computerworld](https://project.nikkeibp.co.jp/idg/atcl/19/00001/00076/?ST=idg-cm-hardware)  
