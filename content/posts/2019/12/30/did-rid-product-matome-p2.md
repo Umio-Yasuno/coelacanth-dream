@@ -8,6 +8,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 ---
 ソースは主に[DeviceInfoUtils.cpp - GPUOpen-Tools/common-src-DeviceInfo](https://github.com/GPUOpen-Tools/common-src-DeviceInfo/blob/master/DeviceInfoUtils.cpp)、  
 BootCamoDriver内のcccmanifest_64.xml。  
+[gputable.txt - ROCm-Developer-Tools/aomp-extras/](https://github.com/ROCm-Developer-Tools/aomp-extras/blob/f3d316fe64347e697a9789f0f2499fec50024db1/utils/bin/gputable.txt)
 
 Dali、Renoirは製品が出次第埋めていく、つもり。<span class="hide">たぶんやる。</span>  
 
@@ -144,6 +145,11 @@ Dali、Renoirは製品が出次第埋めていく、つもり。<span class="hid
 | | C3 | | |
 -->
 
+#### *FireFlight*
+| Device ID | Revision ID | Product Name | Memo |
+| :--- | :--- | :---: | :---: |
+| 15FF | 00 | Radeon Vega 28 Mobile | RavenRidge (Vega11?) |
+
 #### *Renoir ( gfx909 )*
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
@@ -244,7 +250,7 @@ Dali、Renoirは製品が出次第埋めていく、つもり。<span class="hid
 #### *Vega20 ( gfx906 )*
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 66A0 | 00 | | |
+| 66A0 | 00 | Radeon Instinct | |
 | 66A1 ↓ | 00 | | |
 | | 02 | | |
 | | 03 | | |
@@ -356,8 +362,10 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 #### *Arcturus ( gfx908 )*
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 738C | | | |
+| 738C | | MI100[^5] | |
 | 7388 | | | |
 | 738E | | | |
 | 7390 | | | (Arcturus VF) |
 [Page Top](#table-of-content)
+
+[^5]:<https://github.com/ROCm-Developer-Tools/aomp-extras/blob/f3d316fe64347e697a9789f0f2499fec50024db1/utils/bin/gputable.txt#L1867>
