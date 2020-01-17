@@ -108,8 +108,16 @@ Gen10でもDSCらしき記述があるがこれも、GPUが無効化されてい
 #### Gen12
 Gen12はまだmedia-driverにはないが、Mesaには記述されている。  
 <https://gitlab.freedesktop.org/mesa/mesa/blob/master/src/intel/dev/gen_device_info.c#L1035>  
-スペックではGT1が32EU、GT2が96EUとなり、スライス数、バンクあたりのL3キャッシュはGen11を継承して1、384KB。  
-合計L3キャッシュ容量もIce Lakeと同じ3072 KB。  
+スペックではGT1が32EU、GT2が96EUとなり、スライス数、<del>バンクあたりのL3キャッシュはGen11を継承して1、384KB。  
+合計L3キャッシュ容量もIce Lakeと同じ3072 KB。</del>  
+
+{{< ins datetime="2020-01-17" >}}
+IntelのGithubレポジトリの1つ、compute-runtime よりL3キャッシュは8バンク、3840 KBという構成だとわかった。  
+[hw_info_tgllp.inl - Intel / compute-runtime](https://github.com/intel/compute-runtime/blob/master/runtime/gen12lp/hw_info_tgllp.inl#L120)  
+
+バンク数はIcelakeと同じであることから、バンクあたりの容量をGen11の384 KBから480 KBに増やしたと推測される。  
+
+{{< /ins >}}
 
  Tiger Lake LPという名前でありながら、intel-graphics-compilerにはID名に DESK_65W があったり。  
 <https://github.com/intel/intel-graphics-compiler/blob/master/inc/common/igfxfmid.h#L557>  
