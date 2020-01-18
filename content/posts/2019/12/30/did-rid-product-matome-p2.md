@@ -8,9 +8,10 @@ categories: [ "Hardware", "AMD", "GPU" ]
 ---
 ソースは主に[DeviceInfoUtils.cpp - GPUOpen-Tools/common-src-DeviceInfo](https://github.com/GPUOpen-Tools/common-src-DeviceInfo/blob/master/DeviceInfoUtils.cpp)、  
 BootCamoDriver内のcccmanifest_64.xml。  
-[gputable.txt - ROCm-Developer-Tools/aomp-extras/](https://github.com/ROCm-Developer-Tools/aomp-extras/blob/f3d316fe64347e697a9789f0f2499fec50024db1/utils/bin/gputable.txt)
 
-Dali、Renoirは製品が出次第埋めていく、つもり。<span class="hide">たぶんやる。</span>  
+<!--[gputable.txt - ROCm-Developer-Tools/aomp-extras/](https://github.com/ROCm-Developer-Tools/aomp-extras/blob/f3d316fe64347e697a9789f0f2499fec50024db1/utils/bin/gputable.txt)-->
+
+Dali、Renoirは製品が出次第埋めていく、つもり。<span class="hide">たぶんやる。</span> 
 
 #### Table of Content
 
@@ -144,11 +145,10 @@ Dali、Renoirは製品が出次第埋めていく、つもり。<span class="hid
 | | C2 | | |
 | | C3 | | |
 -->
-
 #### *FireFlight*
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 15FF | 00 | Radeon Vega 28 Mobile | RavenRidge (Vega11?) |
+| 15FF | 00 | Fenghuang (Zhongshan Subor Z+) | Radeon Vega 28 Mobile |
 
 #### *Renoir ( gfx909 )*
 | Device ID | Revision ID | Product Name | Memo |
