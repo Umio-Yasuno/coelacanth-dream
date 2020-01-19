@@ -103,13 +103,13 @@ SMTを有効にした4C/8Tモデルがないのは、Picasso 3000 seriesの上�
 
 <tr>
 <td align="left">cTDP</td>
-<td align="center">10-25W</td>
-<td align="center">35-54W</td>
-<td align="center">10-25W</td>
-<td align="center">10-25W</td>
-<td align="center">35-54W</td>
-<td align="center">10-25W</td>
-<td align="center">10-25W</td>
+<td align="center">10 - 25W</td>
+<td align="center">35 - 54W</td>
+<td align="center">10 - 25W</td>
+<td align="center">10 - 25W</td>
+<td align="center">35 - 54W</td>
+<td align="center">10 - 25W</td>
+<td align="center">10 - 25W</td>
 </tr>
 </tbody>
 </table>
