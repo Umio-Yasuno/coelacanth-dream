@@ -82,9 +82,9 @@ Macの英数/かなのようなものだ。
 
 Vim自体の設定では最初、Markdownで改行を意味する行末の二重スペースにシンタックスが対応していないのに悩まされたが、以下を ~/.vimrc に追加することで解決した。  
 
- > syntax on  
-highlight MarkdownTrailingSpaces ctermbg=green guibg=green  
-match MarkdownTrailingSpaces "\s\s$"
+	syntax on  
+	highlight MarkdownTrailingSpaces ctermbg=green guibg=green  
+	match MarkdownTrailingSpaces "\s\s$"
 
 参考: [syntax highlighting - Highlight double space in markdown - Vi and Vim Stack Exchange](https://vi.stackexchange.com/questions/3539/highlight-double-space-in-markdown)  
 
