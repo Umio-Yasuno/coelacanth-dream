@@ -301,7 +301,7 @@ Navi LITE 13E9:00
 | | C3 | RX 5700M | |
 | | C4 | RX 5700 | (Navi10 XL) |
 | | C5 | RX 5700 XT | |
-| | CA | | |
+| | CA | RX 5600 XT | (Navi10 XLE) |
 | | CB | RX 5600 | (Navi10 XE) |
 | | E1 | | |
 | | E3 | | |
