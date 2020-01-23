@@ -58,22 +58,22 @@ ASRockは旧vBIOSの仕様のままだが、PowerColorとSAPPHIREは新vBIOSな�
 <br>
 それはともかく、一番の問題は**価格**だ。  
 
- * SAPPHIRE PULSE RADEON RX 5600 XT : **<span class="yen">41,800（税込み）</span>**
- * ASRock Radeon RX 5600 XT Phantom Gaming D3 6G OC : **<span class="yen">42,980（税抜き）</span>**
- * ASRock Radeon RX 5600 XT Phantom Gaming D2 6G OC : **<span class="yen">38,980（税抜き）</span>**
- * ASRock Radeon RX 5600 XT Challenger D 6G OC : **<span class="yen">37,520（税抜き）</span>**
- * PowerColor RED DEVIL RX 5600 XT : **<span class="yen">39,980（税抜き）</span>**
- * PowerColor RED DRAGON RX 5600 XT : **<span class="yen">36,980（税抜き）</span>**
+ * SAPPHIRE PULSE RADEON RX 5600 XT : **&yen;41,800（税込み）**
+ * ASRock Radeon RX 5600 XT Phantom Gaming D3 6G OC : **&yen;42,980（税抜き）**
+ * ASRock Radeon RX 5600 XT Phantom Gaming D2 6G OC : **&yen;38,980（税抜き）**
+ * ASRock Radeon RX 5600 XT Challenger D 6G OC : **&yen;37,520（税抜き）**
+ * PowerColor RED DEVIL RX 5600 XT : **&yen;39,980（税抜き）**
+ * PowerColor RED DRAGON RX 5600 XT : **&yen;36,980（税抜き）**
 
 そして、Amazon.co.jpでRX 5700の価格を見ると、  
 
- * [SAPPHIRE サファイア PULSE RADEON RX 5700 8G GDDR6](https://www.amazon.co.jp/dp/B07WK7ZNSY/) :  **<span class="yen">38,212</span>**
- * [ASRock RX5700 Challenger D8G OC](https://www.amazon.co.jp/dp/B07X8TRWQY/) : **<span class="yen">40,384</span>**
- * [PowerColor AMD Radeon RX5700](https://www.amazon.co.jp/dp/B07WY3TJW3/) : **<span class="yen">41,791</span>**
+ * [SAPPHIRE サファイア PULSE RADEON RX 5700 8G GDDR6](https://www.amazon.co.jp/dp/B07WK7ZNSY/) :  **&yen;38,212**
+ * [ASRock RX5700 Challenger D8G OC](https://www.amazon.co.jp/dp/B07X8TRWQY/) : **&yen;40,384**
+ * [PowerColor AMD Radeon RX5700](https://www.amazon.co.jp/dp/B07WY3TJW3/) : **&yen;41,791**
 
 ……？？？？？  
 お祝儀価格込みとはいえ下位製品が上位製品より高いってどういうことなの……  
-さらにはRTX 2060が安いモデルだと約<span class="yen">35,000</span>とか<span class="yen">39,000</span>で買える。  
+さらにはRTX 2060が安いモデルだと約&yen;35,000とか&yen;39,000で買える。  
 これじゃどう見たってRX 5600 XTを早速買おうとはならない。RX 5600 XTを買う予算があるならRX 5700かRTX 2060に行くに決まってる。  
 いくら電力効率が優れていると言っても、新しいGPUを購入する人のほとんどは絶対性能とコスパで選ぶだろう。  
 電力効率の優秀さで高めの価格設定が許されるのは、カード長も短めなMini-ITX向けモデルくらいだ。  
