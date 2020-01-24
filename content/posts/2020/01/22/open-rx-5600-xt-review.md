@@ -83,3 +83,5 @@ ASRockは旧vBIOSの仕様のままだが、PowerColorとSAPPHIREは新vBIOSな�
 
 性能も消費電力も優秀なのに、最後で *価格が落ち着けばね* 、と付いてしまうのは残念と言わざるをえない。  
 ほんと、優秀なのに……
+
+<span class="hide">混沌以前に、馬鹿げている</span>
