@@ -18,7 +18,7 @@ noindex: false
 氏が詳細な解説をしているため、自分がここに書くことはあんまりない。  
 ダイアグラムが氏のものと若干違っているが、別段自分の方が正しいと主張する気はなく、示せるだけの根拠も持ち合わせていない。  
 
-{{% figure src="/image/2020/01/22/navi10-dieshot-guess.webp" title="Navi10推測" %}}
+{{% figure src="/image/2020/01/22/navi10-dieshot-guess.webp" title="Navi10推測" caption="Update: 2020-01-26" %}}
 
 サイズとの兼ね合いで非常に見辛くなってしまったが、RBEとHUBの間にある黄緑（lime）色のブロックは2xL1$(128KB)と推測している。  
 （リポジトリサイズ節約のために1MB未満に抑えたかった。）  
