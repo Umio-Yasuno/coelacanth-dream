@@ -23,15 +23,15 @@ X300やA300のように、外部チップセットを持たず、RyzenをよりS
 [IdeaCentre A540 (24, AMD) | 24” All-in-one PC | Lenovo US](https://www.lenovo.com/us/en/desktops-and-all-in-ones/ideacentre/aio-500-series/IdeaCentre-A540-24API/p/FFICF500327)  
 [ideacentre_A540_24API_Spec.pdf](https://psref.lenovo.com/syspool/Sys/PDF/IdeaCentre/ideacentre_A540_24API/ideacentre_A540_24API_Spec.pdf)  
 
-"PRO 500"という名前と、第三世代RyzenをサポートしていることからPCIeGen4がありそうだが{{< comple >}}"PRO 560"と微妙に違いはするが{{< /comple >}}採用している製品のデータシートを見ると、NVMeのバスも拡張スロットもPCIeGen3となっている。  
+"PRO 500"という名前と、第三世代RyzenをサポートしていることからPCIeGen4がありそうだが{{< comple >}}"PRO 560"と微妙に違いはするが{{< /comple >}}採用している製品のデータシートを見ると、PCIeGen3までとなっている。  
 [ideacentre_T540_15AMA_G_Spec.PDF](https://psref.lenovo.com/syspool/Sys/PDF/IdeaCentre/ideacentre_T540_15AMA_G/ideacentre_T540_15AMA_G_Spec.PDF)  
 
 フロントへの2x USB 3.1 Gen2は、Ryzenから引き出している可能性があるが、別のPRO 560を採用し、APU（中身としては第二世代Ryzen）も搭載可能な製品でもUSB 3.1 Gen2が記載されているため、別途コントローラーを用意し、そこから出している可能性のが高い。  
 [ThinkCentre M75s | Compact, High-Performance PC with AMD Ryzen™ PRO Processing | Lenovo NZ](https://www.lenovo.com/nz/en/desktops-and-all-in-ones/thinkcentre/m-series-sff/ThinkCentre-M75s-1/p/11TC1MD735S)  
 ただそれも、第三世代Ryzenを搭載する場合はRadeon 520から映像が出力されるため、同じボードを使っているとは限らず、PRO 560の仕様がうまく掴めない。  
 
-それに拡張スロットが3本しっかりあったりと、外部チップセットのない"PRO 560"を使う意味があまりないように思える。  
-その拡張スロット3本も許容した規格が"PRO 500/560"であり、特徴ということなのだろうか？  
+それにPCIeスロットが3本しっかりあったりと、外部チップセットのない"PRO 560"を使う意味があまりないように思える。  
+そのPCIeスロット3本も許容した規格が"PRO 500/560"であり、特徴ということなのだろうか？  
 
 OEM向けの規格、チップセットはその通り自作PC市場に出回ることが少なく、資料もまた少ないため{{< comple >}}X/B/A300は第一世代Ryzenの際に発表されたきりで、以降AMD公式から言及することはなかった{{< /comple >}}わからないことが多い……  
 
