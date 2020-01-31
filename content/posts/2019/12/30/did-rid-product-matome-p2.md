@@ -87,7 +87,6 @@ Dali、Renoirは製品が出次第埋めていく、つもり。<span class="hid
 | | C2 | 3500U /3550H | (Vega 8) |
 | | C3 | | (Vega 6) |
 | | C4 | | (Vega 3) |
-| | C5 | | (Vega 3) |
 | | C8 | 3400G | (AM4 Vega 11) |
 | | C9 | 3200G | (AM4 Vega 8) |
 | | CA | | (AM4 Vega 11) |
@@ -111,9 +110,9 @@ Dali、Renoirは製品が出次第埋めていく、つもり。<span class="hid
 | :--- | :--- | :---: | :---: |
 | 15DD ↓ | E1 | | (15W FP5 Vega 3) |
 | | E2 | | (35W AM4 Vega 3) |
-| 15D8 | CC | 3000G | (AM4 Vega 3) |
-| | 91 /92 | R1505G? /R1605G? | Embedded |
-| | ? | 300U | |
+| 15D8 ↓ | 91 /92 | R1505G? /R1605G? | Embedded |
+| | C5 | 300U | (Vega 3) |
+| | CC | 3000G | (AM4 Vega 3) |
 | | ? | 3200U | |
 [Page Top](#table-of-content)
 
