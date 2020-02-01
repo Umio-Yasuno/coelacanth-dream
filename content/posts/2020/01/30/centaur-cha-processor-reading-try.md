@@ -1,6 +1,7 @@
 ---
 title: "Centaur CHAプロセッサーについて読んでみたかった"
-date: 2020-01-30T09:57:53+09:00
+# date: 2020-01-30T09:57:53+09:00
+date:	2020-02-01T19:39:13+09:00 
 draft: true
 tags: [ "Centaur", "" ]
 keywords: [ "", ]
@@ -9,14 +10,46 @@ noindex: false
 ---
 
 製造プロセスはTSMC 16nm FinFet Compact(16FFC)。  
-16FFCは
-ダイサイズは 194mm<sub>2</sub>だが、トランジスタ数は不明。  
+ハイパフォーマンス向けの16FF+を低コストにしたのが16FFC(16FF Compact)であり、メインストリーム向けや低消費電力(Ultra Low Power)向けに位置付けされている。  
 
-2ソケットの構成にも対応する。  
+ > 参考:  
+ [10nmに見切りをつけ低コストの12FFCに注力　TSMC 半導体ロードマップ - ASCII.jp](https://ascii.jp/elem/000/001/516/1516220/2/)  
+ [16/12nm Technology - Taiwan Semiconductor Manufacturing Company Limited](https://www.tsmc.com/english/dedicatedFoundry/technology/16nm.htm)  
+ [TSMC Symposium: New 16FFC and 28HPC+ Processes Target “Mainstream” Designers and Internet of Things (IoT) - Industry Insights - Cadence Blogs - Cadence Community](https://community.cadence.com/cadence_blogs_8/b/ii/posts/tsmc-symposium-new-16ffc-and-28hpc-processes-target-mainstream-designers-and-internet-of-things-iot)  
+
+<!--
+ダイサイズは 194mm<sup>2</sup>だが、トランジスタ数は不明。
+2ソケットの構成にも対応
+
+-->
 
 名称は、SoC全体のコードネームが**CHA**、x86 CPU部のマイクロアーキテクチャ名が**CNS**、DLA(deep-learning accelarator)部が**Ncore**とされている。  
 
-### Security (Spectre, Meltdown)
+##### I/O
+
+#### CNS (x86 CPU)
+<!--
+CPUの最高クロックを制限することで物理設計の最適化に費やす時間を削減した
+
+CHAのTDPを公表していないが、Xeon Silver 4208(Cascade Lake, 8-Core/16-Thread,Base 2.1GHz Boost 3.2GHz, 85W)より低い消費電力とピーク周波数を期待しているそう
+
+IPC: {
+	Haswell <= CNS <= Skylake
+	?
+}
+
+-->
+
+#### Ncore
+学習（トレーニング）は行わず、推論専用のアクセラレータ。  
+Ncore部のダイサイズはTSMC 16FFCプロセスで34.4mm<sup>2</sup>、  
+x86 CPU 8-Coreクラスターのおおよそ半分のサイズであり、Ncoreの約2/3は16MB SRAMが占める。  
+
+ダイショットを見ると、中央部分のComputer unitが16スライスに分割されていることがわかり、これによって設計をシンプルにしているとのこと。  
+緑色の部分はData Unit内の密集した金属配線を示し、この配線は主にデータの再配置するため。  
+そして16スライスの中央にある横長の部分に、Instruction UnitとRing Interfaceが含まれる。  
+
+#### Security (Spectre, Meltdown)
 言ってしまえば、不明。  
 ただ正式には公表されていないものの、過去のVIAプロセッサはSpectre、Meltdownの影響を受けるとされている。  
 [Windows月例更新でVIAプロセッサにもSpectre/Meltdown対策が盛り込まれる - PC Watch](https://pc.watch.impress.co.jp/docs/news/1180455.html)  

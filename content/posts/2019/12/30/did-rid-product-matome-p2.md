@@ -201,7 +201,7 @@ Dali、Renoirは製品が出次第埋めていく、つもり。<span class="hid
 | | 02 | | |
 | | 03 | Radeon Pro V340 | |
 | | 04 | Radeon Instinct MI25x2 | |
-| | 07 | Radeon Pro V320 (/V340?) | |
+| | 07 | Radeon Pro V320 (/V340?) [^6]| |
 | | C0 | Radeon Pro Vega 48 /56 /64 /64X[^1] | ? |
 | 6861 | 00 | Radeon Pro (TM) WX 9100 | (Vega10 GLXT) |
 | 6862 | 00 | Radeon Pro SSG | (Vega10 SSG) |
@@ -233,6 +233,7 @@ Dali、Renoirは製品が出次第埋めていく、つもり。<span class="hid
 [Page Top](#table-of-content)
 
 [^1]: SubSystem ID? ( Vega 48:0x0196, Vega 56:0x017B, Vega 64:0x017C Vega 64X:0x0188 )
+[^6]: [Compute Performance of AMD Radeon Pro V320 - CompuBench](https://compubench.com/device.jsp?benchmark=compu20d&os=Windows&api=cl&D=AMD+Radeon+Pro+V320&testgroup=info)
 
 #### *Vega12 ( gfx904 )*
 | Device ID | Revision ID | Product Name | Memo |
