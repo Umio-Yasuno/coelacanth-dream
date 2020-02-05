@@ -2,7 +2,7 @@
 title: "Centaur CHAプロセッサーについて読んでみたかった"
 date: 2020-02-04T17:49:26+09:00
 draft: false
-tags: [ "Centaur", "" ]
+tags: [ "Centaur" ]
 keywords: [ "", ]
 categories: [ "Hardware", "CPU" ]
 noindex: false
