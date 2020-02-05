@@ -155,7 +155,7 @@ Dali、Renoirは製品が出次第埋めていく、つもり。<span class="hid
 | 1636 ↓ | 00 | | (BringUp FP6 ) |
 | | C1 | | (B12 15W FP6) |
 | | C2 | | (B10 15W FP6) |
-| | C3 | | (B8 15W FP6) |
+| | C3 | 4500U | (B8 15W FP6) |
 | | C4 | | (B6 15W FP6) |
 | | C5 | | (B12 45W FP6) |
 | | C6 | | (B10 45W FP6) |
