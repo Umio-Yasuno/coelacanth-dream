@@ -13,12 +13,12 @@ noindex: false
 
  * [x86 CPU Design House Centaur Technology will host an AMA next week, Thursday Jan 23, 2020 @ 12:00pm-3:00pm CST - r/hardware Reddit](https://www.reddit.com/r/hardware/comments/ep0lf4/x86_cpu_design_house_centaur_technology_will_host/)  
  * [MPR Article Template - MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf](https://centtech.com/wp-content/uploads/MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf)  
+ * [Centaur’s x86 SoC with AI Coprocessor Technology - PRSlides_1118_Release.pdf](https://centtech.com/wp-content/uploads/PRSlides_1118_Release.pdf)  
 
 ただ、最初に断りを入れさせていただくと、自分はテクニカルライターではなく、ブロガーと言うのも怪しい存在だ。  
 そのため、内容の正確性には責任を持てない。  
 知識が及ばない部分や、資料を読むのが一番だと判断した部分は意図的に飛ばしてもいる。  
 だが責任を完全に放棄した訳ではないため、間違っていた場合は連絡をくださると嬉しい。  
-ほぼ趣味でやっていることであり、知識が増え、繋がりができるという点でも嬉しい。  
 
 #### Table of Content
 
@@ -38,6 +38,7 @@ noindex: false
 製造プロセスはTSMC 16FFC。ダイサイズは194mm<sup>2</sup>。  
 CHAのx86 CPU 8コアはそれぞれL3キャッシュ 2MBを持つ。  
 CNSは前世代のCPUよりもはるかに高いIPCを目標に設計された。  
+クロックは2.5GHz。  
 
 Ncoreはデータ精度 INT8で20TOPS（trillion operations per second）のピーク性能。  
 NVIDIA Tensor CoreやIntel Spring Hillに見られる流行りのMACアレイではなく、SIMDエンジンで構成されるが、SIMD幅は極端に広く、4096-Byte(32,768-bit)を並列に処理できる。  
@@ -45,13 +46,8 @@ NcoreアーキテクトであるGlenn Henry氏はこれを「AVX-32,768」に喩
 これによりデータ精度 INT8で20TOPS（trillion operations per second）ものピーク性能を持つ。  
 大量のデータをSIMDユニットに供給するため、専用のSRAM 16MBが設けられている。 
 
-### I/O
-DDR4-3200 4-Channel ECCに対応し、ピークメモリ帯域は102 GB/sとなる。  
-PCIe Gen3 44-Laneを有し、サーバーにおいて標準的なサウスブリッジ機能（レガシーI/O）も内蔵されているため、統合されたソリューションを作成可能としている……が、  
-Redditのスレッドにおける回答では、USBとSATAは外部チップセットを必要とし、またグラフィック機能は内蔵されていない、とのこと。  
-（そこらへんはAspeedのBMCをボード側に搭載すればいい、ということだろうか）
-
-またマルチソケット用のI/Oも存在し、2ソケットのシステムが可能だが、ソケット間の帯域等は不明。  
+また2ソケットのシステムにも対応する。  
+ターゲットにはエッジサーバー、2ソケットシステムでは低コストのサーバーを想定している。  
 
 ### CNS (x86 CPU)
 
@@ -176,16 +172,17 @@ AMDはZen2アーキテクチャでSpectre対策強化のため一部設計を変
 {{< figure src="/image/2020/02/03/ncore-dieshot.webp" title="CHA die plot" caption="出典: [MPR Article Template - MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf](https://centtech.com/wp-content/uploads/MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf)" >}}
 </details>
 
+{{< figure src="/image/2020/02/03/ncore-slide.webp" title="Current Version of Centaur AI Coprocessor" caption="出典: [MPR Article Template - MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf](https://centtech.com/wp-content/uploads/MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf)" >}}
+
 学習（トレーニング）は行わず、推論専用のアクセラレータ。  
 Ncore部のダイサイズはTSMC 16FFCプロセスで34.4mm<sup>2</sup>、  
 x86 CPU 8-Coreクラスターのおおよそ半分のサイズであり、Ncoreの約2/3は16MB SRAMが占める。  
 
-ダイショットを見ると、中央部分のComputer unitが16スライスに分割されていることがわかり、これによって設計をシンプルにしているとのこと。  
+Computer unitは16スライスに分割されており、これによって設計をシンプルにしている。  
 緑色の部分はData Unit内の密集した金属配線を示し、この配線は主にデータの再配置するため。  
 そして16スライスの中央にある横長の部分に、Instruction UnitとRing Interfaceが含まれる。  
 
 クロックはx86コアと同じ2.5GHzであり、Ncore有効時にクロックが下がることはないとのこと。  
-
 ハードウェアレベルのコンテキストスイッチと仮想機能は持たず、シングルスレッドでの実行となる。  
 ソフトウェアベースでの仮想機能サポートは予定されているらしい。  
 
@@ -194,8 +191,20 @@ x86コアはWindowsを動作させられるが、Ncoreのためのソフトウ�
 
 <details>
 <summary>Ncore block diagram</summary>
-{{< figure src="/image/2020/02/03/ncore-diagram.webp" title="Ncore block diagram" caption="出典: [MPR Article Template - MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf](https://centtech.com/wp-content/uploads/MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf)" >}}
+{{< figure src="/image/2020/02/03/ncore-diagram.webp" title="Ncore block diagram" caption="出典: [Centaur’s x86 SoC with AI Coprocessor Technology - PRSlides_1118_Release.pdf](https://centtech.com/wp-content/uploads/PRSlides_1118_Release.pdf)" >}}
 </details>
+
+SRAMは内部で2つに分かれており（D-RAMとW-RAM、DはData、WはWeightの意だろうか？）、それぞれSIMD幅に合わせて32,768-bit/cycleで接続されており、帯域は10TB/s、合計で20TB/sとなる。  
+リングインターフェイスからData Unitへの書き込みを割り込ませることも可能だが、その間D-RAM/W-RAMからの書き込みは中断され、またそれら32,768-bitの接続に対し、リングインターフェイスは512-bitと狭く、十分にデータを供給するには64サイクルも必要とするため、割り込みが行なわれることは稀であるらしい。  
+
+### I/O
+DDR4-3200 4-Channel ECCに対応し、ピークメモリ帯域は102 GB/sとなる。  
+PCIe Gen3 44-Laneを有し、サーバーにおいて標準的なサウスブリッジ機能（レガシーI/O）も内蔵されているため、統合されたソリューションを作成可能としている……が、  
+Redditのスレッドにおける回答では、USBとSATAは外部チップセットを必要とし、またグラフィック機能は内蔵されていない、とのこと。  
+（そこらへんはAspeedのBMCをボード側に搭載すればいい、ということだろうか）
+
+またマルチソケット用のインターフェイスも存在し、2ソケットのシステムが可能だが、ソケット間接続のプロトコル、帯域等は不明。  
+ただ、それもリングバスで接続されていることを考えると、最大で320GB/sだろう。  
 
 ### その他
 
@@ -213,16 +222,33 @@ Centaurは目標に、サーバークラスのシステムに1ドルあたりで
 TSMC 16FFCプロセスを選び、物理設計の最適化に費やす時間を減らしたのもそのためだと考えられる。  
 
 まだCHAの具体的な価格とTDPは決まっていないが、I/O性能が近い Intel Xeon Silver 4209 ($417, Cascade Lake, 6ch DDR4-2400, PCIe Gen3 48-Lane)より高いピーク周波数で動作しつつ、少ない消費電力になることを **期待** しているとのこと。  
-そして価格も近くなるだろう、とも言っている。
+そして価格も近くなるだろう、とも言っている。  
 
 そしてNcoreの、MLPerfで MobileNetとResNet-50 をモデルに計測した推論性能は、AVX-512VNNI命令を使用した$5,000のXeon Platinumとほぼ同じくらい強力であり、  
 先程挙げた、CHAと同等のXeon Silverよりも5倍高速と推定している。  
 
 Intelには推論用のアクセラレーター、NNP-Iがあり、Xeon Silverと組み合わせることができるが、当然システムにかかるコストは高価となり、（Intelはまだ価格を公表していないが$500~1,000になると見ているらしい）  
-また、NvidiaのT4を搭載しようとすると、追加で約$2,000のコストがかかる。  
+また、NvidiaのT4といったカードを搭載しようとすると、追加で約$2,000のコストがかかる。  
 どちらも性能こそ高いが、システムのプロセッサーよりも高価であることがほとんどだ。  
 
 CHAならば外部DLA無しに、低いコストで優れた性能を得ることができ、  
 ソフトウェアもまだ最適化中の段階にあるため、製品が市場に出るまでに性能が向上することも考えられる。  
 そうなればCHAのアドバンテージはさらに広がるだろう。  
 
+#### 感想とか
+ここから先は完全に個人的な感想と推測。  
+
+今後の展開が気になる所。  
+微細化が進めばx86 CPUのアーキテクチャを拡張する余裕ができるだろうし、コアとバスが同じクロックで動作するCHAはクロック向上がそのまま全体の帯域に反映される。  
+micro-opキャッシュの追加はまずあるだろう。  
+
+Ncoreも専用SRAMを増やす、Ncoreのクラスタを追加するといった拡張が考えられるだろう。  
+SIMD幅をさらに増やすかは、今もソフトウェアの最適化で忙しいだろうに、その時にまた最適化の手間がかかることを考えるとまだやらないのではないかと思う。  
+
+メモリ、I/Oも、7nmで製造されるZhaoxin 7-SeriesがDDR5、PCIe Gen4に対応することを考えれば、次世代CHAでの対応も期待できる。  
+
+16FFCのままでx86 CPU、メモリーコントローラー、I/Oをスケールダウンさせ、より小型な推論用エッジサーバー向けのSoCがあっても面白そうだが、そのターゲット層だと絶対的な消費電力が課題となるのかもしれない。  
+x86 CPUでmicro-opキャッシュも持たないCNSアーキテクチャは消費電力の点で、他のARM+コプロセッサーの構成を取る製品より劣るはずだ。  
+
+<br>
+色んなことを期待しつつ、今後も情報を追っていきたい。  
