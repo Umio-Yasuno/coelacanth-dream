@@ -83,10 +83,9 @@ Dali、Renoirは製品が出次第埋めていく、つもり。<span class="hid
 | | B2 | | (Vega 8) |
 | | B3 | | (Vega 6) |
 | | B4 | | (Vega 3) |
-| | C1 | 3750H | (Vega 10) |
-| | C2 | 3500U /3550H | (Vega 8) |
+| | C1 | 3750C/H[^7] | (Vega 10) |
+| | C2 | 3500C/U[^7] /3550H | (Vega 8) |
 | | C3 | | (Vega 6) |
-| | C4 | | (Vega 3) |
 | | C8 | 3400G | (AM4 Vega 11) |
 | | C9 | 3200G | (AM4 Vega 8) |
 | | CA | | (AM4 Vega 11) |
@@ -119,20 +118,23 @@ Dali、Renoirは製品が出次第埋めていく、つもり。<span class="hid
 #### *Dali ( gfx909 )*
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 15D8 ↓ | CD | | | |
-| | CE | | | |
-| | CF | | | |
-| | DE | | | |
-| | DF | | | |
+| 15D8 ↓ | C4 | 3250C/U[^7] | (Vega 3) |
+| | CD | 3050C/U[^7] | (Vega 2) |
+| | CE | 3150C/U[^7] | (Vega 3) |
+| | CF | | |
+| | DE | | |
+| | DF | | |
 | | E3 /E4 | | (Vega 3) |
 [Page Top](#table-of-content)
+
+[^7]: [ 2040455: Rework map_oprom_vendev to add revision check and mapping —   Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2040455/3/src/soc/amd/picasso/northbridge.c#332)
 
 #### *Pollock ( gfx909 )*
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 15D8 ↓ | 94 | | |
 | | 95 | | |
-| | E9 | | |
+| | E9 | | (Samples)[^7] |
 | | EA | | |
 | | EB | | |
 [Page Top](#table-of-content)
