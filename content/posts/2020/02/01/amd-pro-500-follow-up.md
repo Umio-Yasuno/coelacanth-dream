@@ -10,7 +10,7 @@ noindex: false
 
 先日書いた「PRO 500」及び「PRO 560」について、もう少し情報を手に入れることができた。  
 
-#### 「PRO 500」 ≠  「PRO 560」
+### 「PRO 500」 ≠  「PRO 560」
 まず、他に「PRO 560」を搭載したシステムがないか調べたところ、HP EliteDesk 705 G5 Small Form Factorが見つかった。  
 [HP EliteDesk 705 G5 Small Form Factor Business PC Specifications | HP® Customer Support](https://support.hp.com/us-en/document/c06461848)  
 
@@ -37,7 +37,7 @@ Lenovoでは「PRO 560」を搭載したシステムのみだったことから�
 「PRO 500」はA/X300同様に外部チップセットを必要としないプラットフォームであり、  
 「PRO 560」は外部チップセットを必要とする。  
 
-#### 「PRO 500」 = 「B300」 ?
+### 「PRO 500」 = 「B300」 ?
 またさらにややこしい話となってしまうが、  
 HP Desktop Pro A G3の資料が *6390ENL* と *6362EEAP* の2バージョン見つかり、前者の方が古く、最下部に 2019 October 2 とある。  
 [4AA7-6390ENL.pdf](https://www8.hp.com/h20195/v2/GetPDF.aspx/4AA7-6390ENL.pdf)  
@@ -62,7 +62,7 @@ AMD公式サイトでは何故かハブられていた「B300」がまさか最�
 ただ、それならPCIeGen3までのサポートとなった理由も納得いくのではないだろうか。  
 しかし「B300」は外部チップセットを必要としないため、仕様変更が一部加えられている可能性もある。  
 
-#### 「PRO 560」の正体は
+### 「PRO 560」の正体は
 そうなると気になるのは「PRO 560」の正体だ。  
 
 まず、パッケージ外観からしてX570ではない。PCIeGen4もサポートしていないことからも、それはわかる。  
