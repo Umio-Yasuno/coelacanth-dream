@@ -83,7 +83,7 @@ Dali、Renoirは製品が出次第埋めていく、つもり。<span class="hid
 | | B2 | | (Vega 8) |
 | | B3 | | (Vega 6) |
 | | B4 | | (Vega 3) |
-| | C1 | 3750C/H[^7] | (Vega 10) |
+| | C1 | 3700C[^7] /3750H | (Vega 10) |
 | | C2 | 3500C/U[^7] /3550H | (Vega 8) |
 | | C3 | | (Vega 6) |
 | | C8 | 3400G | (AM4 Vega 11) |
@@ -118,9 +118,9 @@ Dali、Renoirは製品が出次第埋めていく、つもり。<span class="hid
 #### *Dali ( gfx909 )*
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 15D8 ↓ | C4 | 3250C/U[^7] | (Vega 3) |
-| | CD | 3050C/U[^7] | (Vega 2) |
-| | CE | 3150C/U[^7] | (Vega 3) |
+| 15D8 ↓ | C4 | 3250C[^7] | (Vega 3) |
+| | CD | 3050C[^7] | (Vega 2) |
+| | CE | 3150C[^7] | (Vega 3) |
 | | CF | | |
 | | DE | | |
 | | DF | | |
@@ -135,7 +135,7 @@ Dali、Renoirは製品が出次第埋めていく、つもり。<span class="hid
 | 15D8 ↓ | 94 | | |
 | | 95 | | |
 | | E9 | | (Samples)[^7] |
-| | EA | | |
+| | EA | | (Production)[^7] |
 | | EB | | |
 [Page Top](#table-of-content)
 
