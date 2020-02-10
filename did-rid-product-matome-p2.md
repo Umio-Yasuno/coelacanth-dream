@@ -1,0 +1,1 @@
+/home/coelacanth/crt-umio-yasuno-blog/content/posts/2019/12/30/did-rid-product-matome-p2.md

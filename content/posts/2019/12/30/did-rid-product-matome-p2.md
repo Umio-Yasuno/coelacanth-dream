@@ -9,10 +9,6 @@ categories: [ "Hardware", "AMD", "GPU" ]
 ソースは主に[DeviceInfoUtils.cpp - GPUOpen-Tools/common-src-DeviceInfo](https://github.com/GPUOpen-Tools/common-src-DeviceInfo/blob/master/DeviceInfoUtils.cpp)、  
 BootCamoDriver内のcccmanifest_64.xml。  
 
-<!--[gputable.txt - ROCm-Developer-Tools/aomp-extras/](https://github.com/ROCm-Developer-Tools/aomp-extras/blob/f3d316fe64347e697a9789f0f2499fec50024db1/utils/bin/gputable.txt)-->
-
-Dali、Renoirは製品が出次第埋めていく、つもり。<span class="hide">たぶんやる。</span> 
-
 #### Table of Content
 
  * [APU](#apu)
@@ -121,13 +117,14 @@ Dali、Renoirは製品が出次第埋めていく、つもり。<span class="hid
 | 15D8 ↓ | C4 | 3250C[^7] | (Vega 3) |
 | | CD | 3050C[^7] | (Vega 2) |
 | | CE | 3150C[^7] | (Vega 3) |
-| | CF | | |
+| | CF | | (6W[^8]) |
 | | DE | | |
 | | DF | | |
-| | E3 /E4 | | (Vega 3) |
+| | E3 /E4 | | (6W[^8] Vega 3) |
 [Page Top](#table-of-content)
 
-[^7]: [ 2040455: Rework map_oprom_vendev to add revision check and mapping —   Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2040455/3/src/soc/amd/picasso/northbridge.c#332)
+[^7]: [2040455: Rework map_oprom_vendev to add revision check and mapping —   Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2040455/3/src/soc/amd/picasso/northbridge.c#332)
+[^8]: [[Dali] Raven 2 detection Patch](https://lists.freedesktop.org/archives/amd-gfx/2020-February/045579.html)  <https://lists.freedesktop.org/archives/amd-gfx/attachments/20200205/f22ebc46/attachment.obj>
 
 #### *Pollock ( gfx909 )*
 | Device ID | Revision ID | Product Name | Memo |
