@@ -56,6 +56,11 @@ Radeon Pro W5500の方が省電力であることはともかく、TBPと差が�
 この *マルチタスク性能* はRadeonが有利にある傾向があり、AMDは新Radeon Proの発表の際にはほぼ毎回それを持ち出している。  
 Radeonにはハードウェアスケジューラーが入っていることによる恩恵だろうか。  
 
+#### Radeon Pro Software for Enterprise 20.Q1
+またRadeon Pro Software for Enterprise 20.Q1も公開され、Linux版ではRadeon Pro W5700がようやく正式サポートされた。  
+[Radeon Pro Software for Enterprise 20.Q1 for Linux Release Notes | AMD](https://www.amd.com/en/support/kb/release-notes/rn-pro-lin-20-q1)  
+W5500も遅れずにサポートされている。  
+
 <!--
 
 | Navi14 Product | RX 5300M | <span style="color:#08E8DE">Pro 5300M</span> | RX 5500M | <span style="color:#08E8DE">Pro 5500M</span> | RX 5500 | RX 5500 XT | <span style="color:#08E8DE">Pro W5500</span>
