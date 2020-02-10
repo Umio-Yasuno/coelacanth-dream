@@ -16,6 +16,7 @@ NotebookCheck.netのレビュー記事より、Radeon Pro 5500Mが DeviceID:7340
 <https://www.notebookcheck.net/fileadmin/Notebooks/Apple/MacBook_Pro_16_2019_i7_5500M/gpuz_mbp16_5500m.gif>  
 
 ファームウェアを読み込むコードにて、（DID:7340かつRID:00以外）でない場合にWKSのファームウェアを読み込むようになっている。  
+[drm/amdgpu/gfx10: add support for wks firmware loading](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd?h=amd-staging-drm-next&id=4db37544cee58f7d669796d75bbce6913f1203bc)  
 もう少し簡単に書くと、DID:7340以外かRID:00の場合に読み込む。  
 そして、DID:7340のRadeon Pro 5500MはWKSではない、となる。  
 
@@ -77,7 +78,7 @@ RX 5300MのTGPはまだはっきりと出ていないが、他の<span style="co
 | WKS Pro-XL | 7341 | 00 | |
 | | 7343 | 00 | |
 | WKS Pro-XTM | 7347 | 00 | |
-| WKS Pro-XL | 734F | 00 | |
+| WKS Pro-XLM | 734F | 00 | |
 
 [^1]: <span style="color:skyblue">Radeon Pro 5300M</span>はレビュー記事が見つからなかったため、Apple Boot Camp Software Graphics Drivers内部のファイルから自分が探したもの。そのため信頼度としてはびみょう。  
 

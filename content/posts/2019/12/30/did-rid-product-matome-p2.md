@@ -32,7 +32,7 @@ BootCamoDriver内のcccmanifest_64.xml。
 #### *Raven ( gfx902 )*
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 15DD ↓ | 81 | V1807B | (45W FP5 Vega 11)
+| 15DD &darr; | 81 | V1807B | (45W FP5 Vega 11)
 |  | 82 | V1756B | (45W FP5 Vega 8)
 | | 83 | V1605B | (15W FP5 Vega 8)
 | | 84 | iTemp EMBEDDED | (15W FP5 Vega 6)
@@ -69,7 +69,7 @@ BootCamoDriver内のcccmanifest_64.xml。
 #### *Picasso ( gfx902 )*
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 15D8 ↓ | 00 | | Winston (Vega 8 WS) |
+| 15D8 &darr; | 00 | | Winston (Vega 8 WS) |
 | | 93 | | (Vega 1 Raven2? /Dali? /Pollock?) |
 | | A1 | | (Vega 10) |
 | | A2 | | (Vega 8) |
@@ -103,9 +103,9 @@ BootCamoDriver内のcccmanifest_64.xml。
 #### *Raven2 ( gfx909 )*
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 15DD ↓ | E1 | | (15W FP5 Vega 3) |
+| 15DD &darr; | E1 | | (15W FP5 Vega 3) |
 | | E2 | | (35W AM4 Vega 3) |
-| 15D8 ↓ | 91 /92 | R1505G? /R1605G? | Embedded |
+| 15D8 &darr; | 91 /92 | R1505G? /R1605G? | Embedded |
 | | C5 | 300U | (Vega 3) |
 | | CC | 3000G | (AM4 Vega 3) |
 | | ? | 3200U | |
@@ -114,7 +114,7 @@ BootCamoDriver内のcccmanifest_64.xml。
 #### *Dali ( gfx909 )*
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 15D8 ↓ | C4 | 3250C[^7] | (Vega 3) |
+| 15D8 &darr; | C4 | 3250C[^7] | (Vega 3) |
 | | CD | 3050C[^7] | (Vega 2) |
 | | CE | 3150C[^7] | (Vega 3) |
 | | CF | | (6W[^8]) |
@@ -129,7 +129,7 @@ BootCamoDriver内のcccmanifest_64.xml。
 #### *Pollock ( gfx909 )*
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 15D8 ↓ | 94 | | |
+| 15D8 &darr; | 94 | | |
 | | 95 | | |
 | | E9 | | (Samples)[^7] |
 | | EA | | (Production)[^7] |
@@ -137,7 +137,7 @@ BootCamoDriver内のcccmanifest_64.xml。
 [Page Top](#table-of-content)
 
 <!--
-| 15D9 ↓ | 91 | | **?** |
+| 15D9 &darr; | 91 | | **?** |
 | | 92 | | |
 | | C1 | | |
 | | C2 | | |
@@ -151,7 +151,7 @@ BootCamoDriver内のcccmanifest_64.xml。
 #### *Renoir ( gfx909 )*
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 1636 ↓ | 00 | | (BringUp FP6 ) |
+| 1636 &darr; | 00 | | (BringUp FP6 ) |
 | | C1 | | (B12 15W FP6) |
 | | C2 | | (B10 15W FP6) |
 | | C3 | 4500U | (B8 15W FP6) |
@@ -195,7 +195,7 @@ BootCamoDriver内のcccmanifest_64.xml。
 #### *Vega10 ( gfx900 )*
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 6860 ↓ | 00 | Radeon Instinct MI25 ↓ | (Vega10 GLXT SERVER) ↓ |
+| 6860 &darr; | 00 | Radeon Instinct MI25 &darr; | (Vega10 GLXT SERVER) &darr; |
 | | 01 | | |
 | | 02 | | |
 | | 03 | Radeon Pro V340 | |
@@ -205,8 +205,8 @@ BootCamoDriver内のcccmanifest_64.xml。
 | 6861 | 00 | Radeon Pro (TM) WX 9100 | (Vega10 GLXT) |
 | 6862 | 00 | Radeon Pro SSG | (Vega10 SSG) |
 | 6863 | 00 | Radeon Vega Frontier Edition | (Vega10 GLXTX) |
-| 6864 ↓ | 00 | | |
-| | 03 | Radeon Pro V340 | (Vega10 GLXT SERVER) ↓ |
+| 6864 &darr; | 00 | | |
+| | 03 | Radeon Pro V340 | (Vega10 GLXT SERVER) &darr; |
 | | 04 | Instinct MI25x2 | |
 | | 05 | Radeon Pro V340 | |
 | 6867 | 00 | Radeon Pro Vega 56 | (Vega10 XLA) |
@@ -214,7 +214,7 @@ BootCamoDriver内のcccmanifest_64.xml。
 | 6869 | 00 | | (Vega10 XGA) |
 | 686A | 00 | | (Vega10 LEA) |
 | 686B | 00 | Radeon Pro Vega 64X | (Vega10 XTXA) |
-| 686C ↓ | 00 | Radeon Instinct MI25 MxGPU ↓ | (Vega10 GLXT SERVER VF) ↓ |
+| 686C &darr; | 00 | Radeon Instinct MI25 MxGPU &darr; | (Vega10 GLXT SERVER VF) &darr; |
 | | 01 | | |
 | | 02 | | |
 | | 03 | Radeon Pro V340 MxGPU | |
@@ -223,7 +223,7 @@ BootCamoDriver内のcccmanifest_64.xml。
 | | C1 | | |
 | 686D | 00 | | (Vega10 GLXTA) |
 | 686E | 00 | | (Vega10 GLXLA) |
-| 687F ↓ | 01 | Radeon RX Vega | (Vega10 XT - Blade) |
+| 687F &darr; | 01 | Radeon RX Vega | (Vega10 XT - Blade) |
 | | C0 | Radeon RX Vega | (Vega10 XTX) |
 | | C1 | Radeon RX Vega (64) | (Vega10 DESKTOP XT) |
 | | C3 | Radeon RX Vega (56) | (Vega10 XL) |
@@ -241,7 +241,7 @@ BootCamoDriver内のcccmanifest_64.xml。
 | 69A1 | 00 | | (Vega12 GL MXL) |
 | 69A2 | 00 | | (Vega12 GL XL) |
 | 69A3 | 00 | | (Vega12 Reserved) |
-| 69AF ↓ | C0 | Radeon Pro Vega 20 | (Vega12 XTA) |
+| 69AF &darr; | C0 | Radeon Pro Vega 20 | (Vega12 XTA) |
 | | C1 | | (Vega12 MXT) |
 | | C3 | | (Vega12 MLP) |
 | | C7 | Radeon Pro Vega 16 | (Vega12 XLA) |
@@ -253,16 +253,16 @@ BootCamoDriver内のcccmanifest_64.xml。
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 66A0 | 00 | Radeon Instinct | |
-| 66A1 ↓ | 00 | | |
+| 66A1 &darr; | 00 | | |
 | | 02 | | |
 | | 03 | | |
 | | 06 | | (Vega20 WKS GL-XE) |
-| 66A2 ↓ | 00 | | |
+| 66A2 &darr; | 00 | | |
 | | 02 | | |
 | 66A3 | 00 | Radeon Pro Vega II (Duo) | |
 | 66A4 | 00 | | |
 | 66A7 | 00 | | |
-| 66AF ↓ | C0 | | |
+| 66AF &darr; | C0 | | |
 | | C1 | Radeon VII | (Vega20 XT) |
 | | C3 | | |
 | | C7 | | |
@@ -277,7 +277,7 @@ Navi LITE 13E9:00
 #### *Navi10 ( gfx1010 )*
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 66AF ↓ | 70 | | (Fake DID?) |
+| 66AF &darr; | 70 | | (Fake DID?) |
 | | 71 | | (Fake DID?) |
 | | 72 | | (Fake DID?) |
 | | 73 | | (Fake DID?) |
@@ -294,7 +294,7 @@ Navi LITE 13E9:00
 | 7319 | 40 | Radeon Pro 5700 XT | |
 | 731A | 40 | | |
 | 731B | 40 | Radeon Pro 5700 | |
-| 731F ↓ | C0 | RX 5700 XT 50th | (Navi10 XTX) |
+| 731F &darr; | C0 | RX 5700 XT 50th | (Navi10 XTX) |
 | | C1 | RX 5700 XT | (Navi10 XT) |
 | | C2 | RX 5600M? | (Navi10 XME) |
 | | C3 | RX 5700M | |
@@ -313,7 +313,7 @@ Navi LITE 13E9:00
 #### *Navi14 ( gfx1012 )*
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 67DF ↓ | 3C | | (Navi14 Pro-? Fake DID?) |
+| 67DF &darr; | 3C | | (Navi14 Pro-? Fake DID?) |
 |  | 3D | | (Navi14 Pro-? Fake DID?) |
 |  | 3E | | (Navi14 Pro-? Fake DID?) |
 |  | 3F | | (Navi14 Pro-XLM Fake DID?) |
@@ -322,7 +322,7 @@ Navi LITE 13E9:00
 |  | F4 | | (Navi14 XT Fake DID?[^2]) |
 |  | F5 | | (Navi14 XL Fake DID??) |
 |  | F6 | | (Navi14 XTX Fake DID?[^2]) |
-| 7340 ↓ | 00 | | <!-- Falcon GL-XTA --> |
+| 7340 &darr; | 00 | | <!-- Falcon GL-XTA --> |
 | | 40 | Radeon Pro 5500M | (Navi14 ULA[^3]) |
 | | 41 | | <!-- Falcon XTA 8G --> |
 | | 43 | Radeon Pro 5300M | |
@@ -350,10 +350,10 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 #### *Navi12 ( gfx1011 )*
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 69B0 ↓ | 71 | | |
+| 69B0 &darr; | 71 | | |
 | | F1 | | |
 | | F3 | | |
-| 7360 ↓ | 40 | | |
+| 7360 &darr; | 40 | | |
 | | 41 | | |
 | | C1 | | |
 | | C3 | | |
