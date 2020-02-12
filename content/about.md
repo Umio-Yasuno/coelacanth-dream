@@ -35,6 +35,7 @@ NVIDIAはさっぱり。
 マストドン: <a href="https://mstdn.jp/@Coelacanth_poor" rel="me nofollow noreferrer" target="_blank">@Coelacanth_poor</a>
 <br>
 メールアドレス:  <span class="mail"> </span><br>
+<a href="https://github.com/Umio-Yasuno/umio-yasuno.github.io/issues">Issues · Umio-Yasuno/umio-yasuno.github.io</a>
 </address>
 
 <!--

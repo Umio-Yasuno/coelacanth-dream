@@ -106,9 +106,9 @@ BootCamoDriver内のcccmanifest_64.xml。
 | 15DD &darr; | E1 | | (15W FP5 Vega 3) |
 | | E2 | | (35W AM4 Vega 3) |
 | 15D8 &darr; | 91 /92 | R1505G? /R1605G? | Embedded |
+| | C4 | 3200U | (FP5 15W Vega 3), == 3250C? |
 | | C5 | 300U | (Vega 3) |
 | | CC | 3000G | (AM4 Vega 3) |
-| | ? | 3200U | |
 [Page Top](#table-of-content)
 
 #### *Dali ( gfx909 )*
