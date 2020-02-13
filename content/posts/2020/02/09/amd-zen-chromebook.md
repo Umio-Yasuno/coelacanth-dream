@@ -1,5 +1,5 @@
 ---
-title: "AMD Zen APUを搭載したChromebookの話――Ryzen 7 3700C、Ryzen 5 3500C――"
+title: "AMD Zen APUを搭載したChromebookの話 ――Ryzen 7 3700C、Ryzen 5 3500C――"
 date: 2020-02-09T12:31:30+09:00
 draft: false
 tags: [ "Picasso", "Raven2", "Dali", "Pollock" ]

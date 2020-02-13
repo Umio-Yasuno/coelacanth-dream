@@ -1,5 +1,5 @@
 ---
-title: "drm amdgpu.idsアップデート(2020-01-31)"
+title: "drm amdgpu.idsアップデート (2020-01-31)"
 date: 2020-01-31T12:44:37+09:00
 draft: false
 tags: [ "Radeon", ]
