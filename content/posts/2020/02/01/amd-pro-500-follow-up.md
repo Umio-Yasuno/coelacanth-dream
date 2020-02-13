@@ -3,7 +3,7 @@ title: "AMD 「PRO 500」チップセット続報 & まとめ"
 date: 2020-02-01T21:12:42+09:00
 draft: false
 tags: [ "PCH",  ]
-keywords: [ "", ]
+keywords: [ ]
 categories: [ "Hardware", "Chipset" ]
 noindex: false
 ---

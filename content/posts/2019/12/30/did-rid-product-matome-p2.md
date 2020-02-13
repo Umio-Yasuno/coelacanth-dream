@@ -131,8 +131,8 @@ BootCamoDriver内のcccmanifest_64.xml。
 | :--- | :--- | :---: | :---: |
 | 15D8 &darr; | 94 | | |
 | | 95 | | |
-| | E9 | | (Samples)[^7] |
-| | EA | | (Production)[^7] |
+| | E9 | | (Samples FT5)[^7] |
+| | EA | | (Production FT5)[^7] |
 | | EB | | |
 [Page Top](#table-of-content)
 

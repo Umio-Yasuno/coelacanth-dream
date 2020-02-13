@@ -48,3 +48,6 @@ AMDGPUはSEが対称となるように構成され、8SEのArcturusがCUを一�
 
 ### Arcturusでは行列演算に対応する？
 
+[MI 32x32x2x1 F32 (#800) · ROCmSoftwarePlatform/Tensile@9dfd621](https://github.com/ROCmSoftwarePlatform/Tensile/commit/9dfd6212f888cf83ff334e675c823239831c4aa8)  
+[Initial version of Store code clean-up for mi100 · ROCmSoftwarePlatform/Tensile@1ae540b](https://github.com/ROCmSoftwarePlatform/Tensile/commit/1ae540b7170ef971abdecd1ab0b4fc3e5f927dc1)  
+[Fix total number of Agprs to account for multiple instructions, add d… · ROCmSoftwarePlatform/Tensile@756d5b3](https://github.com/ROCmSoftwarePlatform/Tensile/commit/756d5b3e435fea4aeeea74bd17d206f6fc01c305)
