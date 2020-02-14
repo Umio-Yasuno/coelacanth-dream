@@ -98,6 +98,7 @@ BootCamoDriver内のcccmanifest_64.xml。
 | | DC | | (AM4 Vega 3) |
 | | E1 | 3780U | Winston (Surface Edition Vega 11) |
 | | E2 | 3580U | Winston (Surface Edition Vega 8) |
+| | ? | 300UGE | (65W AM4 Vega 3) |
 [Page Top](#table-of-content)
 
 #### *Raven2 ( gfx909 )*
