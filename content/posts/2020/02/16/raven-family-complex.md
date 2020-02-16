@@ -9,6 +9,8 @@ noindex: false
 ---
 
 先日、Chromium OSへのパッチを眺めていたら、Raven2 (Dali, Pollock)を判定するコードの関数名の一部で *zen2* が使われていた。  
+[soc/amd/picasso: Add helper functions for finding SOC type (I24b73145) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2051514)  
+
 当然これは間違いであり、Raven2 (Dali, Pollock)のCPUコアは、  
 EPYC 7002シリーズ (Rome)、Ryzen 3000シリーズ (Matisse)、Ryzen Threadripper 3000シリーズ (Castle Peak)、Ryzen Mobile 4000シリーズ (Renoir)に採用されている、 *あの* Zen2ではない。  
 
@@ -130,7 +132,7 @@ x86_model はCPU内部のデータの1つであり、主にソフトウェアが
 （Ext. Model が 18）  
 
 このため、悲しいことに Raven2 は、CPU-Z 等のソフトでは Picasso と認識される。  
-個人的に、Raven2 の影が薄い、下手したら全く認識されていない原因はこれなんじゃないかと考えている。  
+個人的に、Raven2 の影が薄い、下手したら全く認知されていない原因はこれなんじゃないかと考えている。  
 
 さらに Zen+ と言っても、Zen から変更された部分はブースト制御といったソフトウェア部や、物理設計の改良によるキャッシュレイテンシの削減ぐらいで、  
 アーキテクチャには全く変更されていないが、そこに拘るとまた面倒くさいことになる。  
