@@ -24,7 +24,8 @@ Raven2 (Dali)ベースのAthlon Gold 3150U、Athlon Silver 3050Uでも "Zen" ア
 
  > 引用元: [AMD Announces World’s Highest Performance Desktop and Ultrathin Laptop Processors at CES 2020 | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/amd-announces-worlds-highest-performance-desktop-and-ultrathin)
 
-パッチ内のメッセージでも突っ込まれまくっており、少し色々とあったが、最終的に zen2 ではなく raven2 を関数名に使うということで納得してくれたようだ。  
+<br>
+パッチ内のメッセージでもその点が突っ込まれまくっており、少し色々とあったが、最終的に zen2 ではなく raven2 を関数名に使うということで納得してくれたようだ。  
 
  > I'll change it to raven2 instead of zen2. Thanks.
 
