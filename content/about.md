@@ -32,7 +32,7 @@ NVIDIAはさっぱり。
 
 <address>
 連絡先:<br>
-Rediit: <a href="https://www.reddit.com/user/coelacanth_poor" target="_blank">https://www.reddit.com/user/coelacanth_poor</a><br>
+Reddit: <a href="https://www.reddit.com/user/coelacanth_poor" target="_blank">https://www.reddit.com/user/coelacanth_poor</a><br>
 Github: <a href="https://github.com/Umio-Yasuno/umio-yasuno.github.io/issues" target="_blank">Issues · Umio-Yasuno/umio-yasuno.github.io</a><br>
 </address>
 
