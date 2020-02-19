@@ -144,10 +144,13 @@ BootCamoDriver内のcccmanifest_64.xml。
 | | C2 | | |
 | | C3 | | |
 -->
+
+<!--
 #### *FireFlight*
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 15FF | 00 | Fenghuang (Zhongshan Subor Z+) | Radeon Vega 28 Mobile |
+-->
 
 #### *Renoir ( gfx909 )*
 | Device ID | Revision ID | Product Name | Memo |

@@ -31,7 +31,7 @@ AMDの真意ははかれないが、ヒントらしきものはある。
 i2c[^1]コントローラーの数が *Dali* と *Pollock* で違い、*Pollock* の方が多いとされている。  
 どちらも *Raven2* ベースであるため、実際にそれしか持たないのではなく、仕様構成の違いだと推察される。  
 またどちらも同じソケット（恐らくFP5）を使用したとあるため、ソケットの仕様ではない。  
-*Dali* と *Pollock* の違いがこれだけとは限らないが、少なくとも i2cコントローラー、仕様構成の違いが新たにコードネームを付けるだけの理由にはなると言える。  
+*Dali* と *Pollock* の違いがこれだけとは限らないが{{% comple %}}Linux Kernelのamd-gfx、ディスプレイ関連に名があるため、Raven2、Dali、Pollockでそれぞれディスプレイコントローラーの仕様が違う可能性がある{{% /comple %}}、少なくとも i2cコントローラー、仕様構成の違いが新たにコードネームを付けるだけの理由にはなると言える。  
 
 [^1]:[I2C（Inter-Integrated Circuit）とは - IT用語辞典 e-Words](http://e-words.jp/w/I2C.html)
 
@@ -41,15 +41,20 @@ i2c[^1]コントローラーの数が *Dali* と *Pollock* で違い、*Pollock*
 
  > 引用元: [Microsoft Takes Pole Position in Laptops based on AMD Technology - AMD](https://community.amd.com/community/amd-business/blog/2019/10/03/microsoft-takes-pole-position-in-laptops-based-on-amd-technology)  
 
-on-board でも on-package でもなく、on-die とあり、ひとまずこれを信じるにしても、  
+on-board でも on-package でもなく、**on-die** とあり、ひとまずこれを信じるにしても、  
 いくらMicrosoftのためとは言え、コンソール機ならまだしもラップトップ向けにわざわざカスタム品を設計、生産するとは考えにくい。  
-実際、パッケージもFP5で、ダイも他の *Picasso* と同一という見方が世間では強い。  
+実際、パッケージはRyzen Mobileに通常用いられるFP5で、  
+[AMD Ryzen™ 7 3780U Microsoft Surface® Edition Processor | AMD](https://www.amd.com/en/products/apu/amd-ryzen-7-3780u-microsoft-surface-edition#product-specs)  
+
+ダイ自体も他の *Picasso* と同一という見方が世間では強い。  
 そのため、元々 *Picasso* 内にあった何らかのコントローラーを利用する形を取ったと思われる。  
 これは仕様構成の違い、と言えるはずだ。  
 
-<br>
-……という推測。  
+そして、AMDはRyzen 7 3780U、Ryzen 5 3580Uに *Winston* というコードネームを *Picasso* とは別に付けた……
 
-そう何種類も出ないため、GPUのコードネームが実質SoCを指し示すことが多いが、  
+<br>
+という推測。  
+
+そう何種類も出ないため、GPUのコードネームが実質SoCをも指し示すことが多いが、  
 Zen APUには、GPUのコードネームとして、*Raven* 、*Picasso* 、*Raven2* 、*Renoir* が存在し、  
-SoCのコードネームにはそれとは別に、*Winston* (*Picasso*)、*Dali* / *Pollock* (*Raven2*) が存在すると考えれば、少しはわかりやすくなるかもしれない。  
+SoCのコードネームにはGPUのそれとは別に、*Winston* (*Picasso*)、*Dali* / *Pollock* (*Raven2*) が存在すると考えれば、少しはわかりやすくなるかもしれない。  

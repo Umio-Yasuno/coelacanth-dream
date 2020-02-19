@@ -57,33 +57,48 @@ Zen CPUとVega GPUを組み合わせた **Zen APU** は既に市場にいくつ�
 
 それぞれ具体的な製品には、
 
- * Raven
-	* Ryzen 5 2400G /2200G
-	* Athlon 200GE /220GE /240GE
-	* Ryzen 3 2200U /2300U
-	* Ryzen 5 2500U /2600H
-	* Ryzen 7 2700U /2800H
-	* Ryzen Embedded V1202B /V1605B /V1756B /V1807B
- * Picasso
-	* Ryzen 5 3400G /3200G
-	* Ryzen 3 3300U
-	* Ryzen 5 3500U /3550H /3580U
-	* Ryzen 7 3700U /3750H /3780U
-	* Ryzen 7 3780U Surface Edition (Winston)
-	* Ryzen 5 3580U Surface Edition (Winston)
- * Raven2
- 	* Ryzen 5 3200U
-	* Athlon 300U
-	* Athlon 3000G
-	* Ryzen Embedded R1505G /R1605G 
-		* Dali
-			* Ryzen 3 3250U
-			* Athlon Gold 3150U
-			* Athlon Silver 3050U
- * Renoir
- 	* Ryzen 7 4700U /4800U /4800H
-	* Ryzen 5 4500U /4600U /4600H
-	* Ryzen 3 4300U
+{{% details smry="Raven" %}}
+
+ * Ryzen 5 2400G /2200G
+ * Athlon 200GE /220GE /240GE
+ * Ryzen 3 2200U /2300U
+ * Ryzen 5 2500U /2600H
+ * Ryzen 7 2700U /2800H
+ * Ryzen Embedded V1202B /V1605B /V1756B /V1807B
+
+{{% /details %}}
+
+{{% details smry="Picasso" %}}
+
+ * Ryzen 5 3400G /3200G
+ * Ryzen 3 3300U
+ * Ryzen 5 3500U /3550H /3580U
+ * Ryzen 7 3700U /3750H /3780U
+ * Ryzen 7 3780U Surface Edition (Winston)
+ * Ryzen 5 3580U Surface Edition (Winston)
+
+{{% /details %}}
+
+{{% details smry="Raven2" %}}
+
+ * Ryzen 5 3200U
+ * Athlon 300U
+ * Athlon 3000G
+ * Ryzen Embedded R1505G /R1605G 
+ 	* Dali
+		* Ryzen 3 3250U
+		* Athlon Gold 3150U
+		* Athlon Silver 3050U
+
+{{% /details %}}
+
+{{% details smry="Renoir" %}}
+
+ * Ryzen 7 4700U /4800U /4800H
+ * Ryzen 5 4500U /4600U /4600H
+ * Ryzen 3 4300U
+
+{{% /details %}}
 
 があげられる。（不確定なものは抜いてある）  
 
