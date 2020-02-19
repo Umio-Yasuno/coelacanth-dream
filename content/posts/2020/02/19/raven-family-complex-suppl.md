@@ -1,10 +1,10 @@
 ---
 title: "いかに Zen APU は複雑か 補足 (Winston)"
 date: 2020-02-19T08:43:56+09:00
-draft: true
-tags: [ "", ]
+draft: false
+tags: [ "Raven", "Renoir", "Picasso", "Raven2", "Dali", "Pollock" ]
 keywords: [ "", ]
-categories: [ "", ]
+categories: [ "Hardware", "APU" ]
 noindex: false
 ---
 
