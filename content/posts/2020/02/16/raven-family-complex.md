@@ -8,19 +8,19 @@ categories: [ "Hardware", "APU" ]
 noindex: false
 ---
 
-先日、Chromium OSへのパッチを眺めていたら、Raven2 (Dali, Pollock)を判定するコードの関数名の一部で *zen2* が使われていた。  
+先日、Chromium OSへのパッチを眺めていたら、*Raven2 (Dali, Pollock)* を判定するコードの関数名の一部で *zen2* が使われていた。  
 [soc/amd/picasso: Add helper functions for finding SOC type (I24b73145) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2051514)  
 
 当然これは間違いであり、Raven2 (Dali, Pollock)のCPUコアは、  
-EPYC 7002シリーズ (Rome)、Ryzen 3000シリーズ (Matisse)、Ryzen Threadripper 3000シリーズ (Castle Peak)、Ryzen Mobile 4000シリーズ (Renoir)に採用されている、 *あの* Zen2ではない。  
+EPYC 7002シリーズ (Rome)、Ryzen 3000シリーズ (Matisse)、Ryzen Threadripper 3000シリーズ (Castle Peak)、Ryzen Mobile 4000シリーズ (Renoir)に採用されている、 あの *Zen2* ではない。  
 
-AMDもはっきりと、Raven2ベースの製品、Athlon 3000Gを発表の際に "Zen" ベースであると言っているし、  
+AMDもはっきりと、Raven2ベースの製品、Athlon 3000Gを発表の際に *Zen* ベースであると言っているし、  
 
  >  The Athlon 3000G is the first “Zen”-based Athlon processor that is unlocked for overclocking potential, delivering the only unlocked processor in its segment10.
 
  > 引用元: [AMD Introduces World’s Most Powerful 16-core Consumer Desktop Processor, the AMD Ryzen™ 9 3950X | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/amd-introduces-worlds-most-powerful-16-core-consumer-desktop)  
 
-Raven2 (Dali)ベースのAthlon Gold 3150U、Athlon Silver 3050Uでも "Zen" アーキテクチャだとしている。  
+*Raven2 (Dali)* ベースのAthlon Gold 3150U、Athlon Silver 3050Uでも *Zen* アーキテクチャだとしている。  
 
  > Bringing consumers more choice, the new AMD Athlon 3000 Series Mobile Processor family expands the reach of the powerful “Zen” architecture to mainstream notebooks.
 
@@ -51,12 +51,9 @@ Raven2 (Dali)ベースのAthlon Gold 3150U、Athlon Silver 3050Uでも "Zen" ア
 
 ### 前提情報
 Zen CPUとVega GPUを組み合わせた **Zen APU** は既に市場にいくつも存在するが、  
-それらを開発コードネームで区別すると、Raven、Picasso、Raven2、Dali、Pollock、Renoirの6種類に分けられる。  
+それらを開発コードネームで区別すると、*Raven* 、*Picasso* 、*Raven2 (Dali /Pollock)* 、*Renoir* の6種類に分けられる。  
 
-内 Dali と Pollock はRaven2ベース（別リビジョン?）であり、基本 (Raven2 == Dali == Pollock) という認識でいい（はず）。  
-Dali と Pollock の違いは、i2cコントローラーの数くらいしか（私が）わかっていないが、  
-Pollock の方が多く、Pollock は組み込み向けとしての色が強いとは言える。  
-[soc/amd/common: Determine # of i2c controllers at runtime (I397b074e) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2057468)  
+内 *Dali* と *Pollock* はRaven2ベース（別リビジョン?）であり、基本 (*Raven2* == *Dali* == *Pollock*) という認識でいい（はず）。  
 
 それぞれ具体的な製品には、
 
@@ -90,15 +87,15 @@ Pollock の方が多く、Pollock は組み込み向けとしての色が強い�
 
 があげられる。（不確定なものは抜いてある）  
 
-それぞれの Raven に対しての違いは、  
+それぞれの *Raven* に対しての違いは、  
 
- * Picasso が Raven のアーキテクチャはそのままに製造プロセスを GF 14nm から GF 12nm に変更。  
- * Raven2 は Raven からCPUコア数、GPUコア数、I/Oを一部削り、GPUアーキテクチャの微改良（バグ修正）を行なったもの。製造プロセスは Raven と同じ GF 14nm。  
- * Renoir はCPUアーキテクチャをZen2に、CPUコア数は増量（倍）、GPUアーキテクチャを Raven2 と同じものに、GPUコア数は Raven より減らし、製造プロセスを TSMC 7nm へ変更。  
+ * *Picasso* が Raven のアーキテクチャはそのままに製造プロセスを GF 14nm から GF 12nm に変更。  
+ * *Raven2* は Raven からCPUコア数、GPUコア数、I/Oを一部削り、GPUアーキテクチャの微改良（バグ修正）を行なったもの。製造プロセスは Raven と同じ GF 14nm。  
+ * *Renoir* はCPUアーキテクチャをZen2に、CPUコア数は増量（倍）、GPUアーキテクチャを Raven2 と同じものに、GPUコア数は Raven より減らし、製造プロセスを TSMC 7nm へ変更。  
 
 となっている。  
 
-複雑に絡まっているのは Raven、Picasso、Raven2 であり、Renoir は今の所そこまでではない。  
+複雑に絡まっているのは *Raven* 、*Picasso* 、*Raven2* であり、*Renoir* は今の所そこまでではない。  
 
 ### CPU
 
@@ -128,7 +125,7 @@ x86_model はCPU内部のデータの1つであり、主にソフトウェアが
 
  > 引用元: [k10temp.c\hwmon\drivers - kernel/git/torvalds/linux.git - Linux kernel source tree](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/hwmon/k10temp.c#n587)  
 
-これが本当にそうなってたらいいのだが、Zen APU である Raven2 の x86_model までが 0x18 となっている。  
+これが本当にそうなってたらいいのだが、**Zen APU** である *Raven2* の x86_model までが 0x18 となっている。  
 
 [AMD Athlon 3000G review - CPU-Z Screenshots - Guru3D.com](https://www.guru3d.com/articles_pages/amd_athlon_3000g_review,4.html)  
 （Ext. Model が 18）  
@@ -136,23 +133,23 @@ x86_model はCPU内部のデータの1つであり、主にソフトウェアが
 このため、悲しいことに Raven2 は、CPU-Z 等のソフトでは Picasso と認識される。  
 個人的に、Raven2 の影が薄い、下手したら全く認知されていない原因はこれなんじゃないかと考えている。  
 
-さらに Zen+ と言っても、Zen から変更された部分はブースト制御といったソフトウェア部や、物理設計の改良によるキャッシュレイテンシの削減ぐらいで、  
+さらに *Zen+* と言っても、*Zen* から変更された部分はブースト制御といったソフトウェア部や、物理設計の改良によるキャッシュレイテンシの削減ぐらいで、  
 アーキテクチャには全く変更されていないが、そこに拘るとまた面倒くさいことになる。  
 
 ### GPU
 #### Device ID
-GPUを判別するための Device ID は、Raven に 0x15DD、Picasso に 0x15D8 が割り振られているが、  
-Raven2 には 0x15DD、0x15D8 の両方が割り振られている。  
-そして Raven2 のマイナーバージョンとして Dali と Pollock があり、混沌さを加速させている。  
+GPUを判別するための Device ID は、*Raven* に 0x15DD、*Picasso* に 0x15D8 が割り振られているが、  
+*Raven2* には 0x15DD、0x15D8 の両方が割り振られている。  
+そして *Raven2* のマイナーバージョンとして Dali と Pollock があり、混沌さを加速させている。  
 
 判別には Device ID だけでなく Revision ID も使われるため、大きな問題がある訳ではないが、  
 コードの判定部分を複雑にさせてしまうし、人為的なミスも起こしやすい。  
 
-Linux Kernel では Raven, Picasso, Raven2 に別々の内部的なリビジョンIDを割り振ることで、何とか他のコードでの判定を簡略しているが、  
+Linux Kernel では *Raven* , *Picasso* , *Raven2* に別々の内部的なリビジョンIDを割り振ることで、何とか他のコードでの判定を簡略しているが、  
 [Line 130: dal_asic_id.h\include\display\amd\drm\gpu\drivers - ~agd5f/linux - Unnamed repository; edit this file 'description' to name the repository.](https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/display/include/dal_asic_id.h?h=amd-staging-drm-next#n130)  
 [Line 1336: amdgpu_device.c\amdgpu\amd\drm\gpu\drivers - ~agd5f/linux - Unnamed repository; edit this file 'description' to name the repository.](https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c?h=amd-staging-drm-next&id=b989531b1f192a77c739a2976953e241d78229a3#n1336)  
 
-Raven2, Dali, Pollock はそうではなく、判定するための部分が長ったらしくなってしまっている。  
+*Raven2* , *Dali* , *Pollock* はそうではなく、判定するための部分が長ったらしくなってしまっている。  
 [Line 150: dal_asic_id.h\include\display\amd\drm\gpu\drivers - ~agd5f/linux - Unnamed repository; edit this file 'description' to name the repository.](https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/display/include/dal_asic_id.h?h=amd-staging-drm-next#n150)  
 
 ハードウェアの情報を追う趣味を持っている人間にもひたすらにややこしいと不評である。  
@@ -165,22 +162,22 @@ Raven2, Dali, Pollock はそうではなく、判定するための部分が長�
 
  > 引用元: [Rework map_oprom_vendev to add revision check and mapping (I2978a569) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2040455)  
 
-素直に Raven, Picasso, Raven2, Dali, Pollock へ違うDevice IDを割り振れなかったのだろうか？  
-Dali, Pollock は Raven2ベースであるため同一IDであることはまだ納得行くが、  
-Raven2自体のDevice IDを Raven, Picasso に被せなかった方が良かったと言える。  
+素直に *Raven, Picasso, Raven2, Dali, Pollock* へ違うDevice IDを割り振れなかったのだろうか？  
+*Dali, Pollock* は Raven2ベースであるため同一IDであることはまだ納得行くが、  
+*Raven2* 自体のDevice IDを *Raven, Picasso* に被せなかった方が良かったと言える。  
 
 #### アーキテクチャ
-前述したように、Raven2、Renoir では Raven、Picasso にGPU部のバグが修正されており、  
-GPUアーキテクチャに割り振られる GFX ID は、Raven、Picasso が **gfx902** 、  
-Raven2、Renoir が **gfx909** となっている。  
+前述したように、*Raven2、Renoir* では *Raven、Picasso* にGPU部のバグが修正されており、  
+GPUアーキテクチャに割り振られる GFX ID は、*Raven* 、*Picasso* が **gfx902** 、  
+*Raven2* 、*Renoir* が **gfx909** となっている。  
 
-そのため、x86_model で Picasso と Raven2 を一緒くたにすることは、この違いが無視されやすくなることに繋がる。  
+そのため、x86_model で *Picasso* と *Raven2* を一緒くたにすることは、この違いが無視されることに繋がる。  
 
 ただ、言ってしまうとこれも問題としては全く無い。  
 あるとするなら気分の問題だ。  
 バグが修正されたと言っても、性能にはこれといった影響は確認されてない。  
-というより Picasso と Raven2 でGPU部の規模が違うため、性能を比較することが難しい。  
-LLVMのバージョンが古い場合、Raven2、Renoir のGPUは **gfx902** として認識されたりもする。  
+というより *Picasso* と *Raven2* でGPU部の規模がそれなりに違うため、性能を比較することが難しい。  
+LLVMのバージョンが古い場合、*Raven2* 、*Renoir* のGPUは **gfx902** として認識されたりもする。  
 
 ### 製品型番
 これは初代Zen APU、Ryzen 5 2400G、Ryzen 3 2200Gが出た時から広くに言われていた。  
@@ -192,7 +189,7 @@ Ryzen Mobile 4000シリーズが、デスクトップ向けのRyzen 3000シリ�
 
 ## 対策
 #### CPUIDを使う
-CPUID は x86_model のように Picasso と Raven2 がごちゃごちゃになっておらず、  
+CPUID は x86_model のように *Picasso* と *Raven2* がごちゃごちゃになっておらず、  
 実際にChromium OS内のコードでは CPUID が使われている。  
 [Rework map_oprom_vendev to add revision check and mapping (I2978a569) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2040455/)  
 （src/soc/amd/picasso/include/soc/cpu.h）  
