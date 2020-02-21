@@ -119,13 +119,14 @@ BootCamoDriver内のcccmanifest_64.xml。
 | | CD | 3050C[^7] | (Vega 2) |
 | | CE | 3150C[^7] | (Vega 3) |
 | | CF | | (6W[^8]) |
-| | DE | | |
-| | DF | | |
+| | DE[^9] | | |
+| | DF[^9] | | |
 | | E3 /E4 | | (6W[^8] Vega 3) |
 [Page Top](#table-of-content)
 
 [^7]: [2040455: Rework map_oprom_vendev to add revision check and mapping —   Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2040455/3/src/soc/amd/picasso/northbridge.c#332)
-[^8]: [[Dali] Raven 2 detection Patch](https://lists.freedesktop.org/archives/amd-gfx/2020-February/045579.html)  <https://lists.freedesktop.org/archives/amd-gfx/attachments/20200205/f22ebc46/attachment.obj>
+[^8]: [[Dali] Raven 2 detection Patch](https://lists.freedesktop.org/archives/amd-gfx/2020-February/045579.html) <br> <https://lists.freedesktop.org/archives/amd-gfx/attachments/20200205/f22ebc46/attachment.obj>
+[^9]: [[PATCH 28/35] drm/amd/display: Fix RV2 Variant Detection](https://lists.freedesktop.org/archives/amd-gfx/2020-February/046322.html)
 
 #### *Pollock ( gfx909 )*
 | Device ID | Revision ID | Product Name | Memo |
@@ -136,6 +137,9 @@ BootCamoDriver内のcccmanifest_64.xml。
 | | EA | | (Production FT5)[^7] |
 | | EB | | |
 [Page Top](#table-of-content)
+
+Source:
+[drm/amd/display: add Pollock IDs, fix Pollock & Dali clk mgr construct - amd-staging-drm-next](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/display/include/dal_asic_id.h?h=amd-staging-drm-next&id=04d8707ef5549065c10d5a2e20d2c61089807997)
 
 <!--
 | 15D9 &darr; | 91 | | **?** |
