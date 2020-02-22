@@ -17,6 +17,7 @@ NVIDIA Tensor CoreはVolta、TuringではFP16までの対応であり、BF16に�
 また、専用ハードウェア追加ではなく、CU側での対応という汎用的なものであるから、性能がどこまで出るか。その分割かなければならないダイエリアも少なく済むが。  
 
  > 参考:  
+
  > * [llvm-project/AMDGPUAsmGFX908.rst at master · llvm/llvm-project](https://github.com/llvm/llvm-project/blob/master/llvm/docs/AMDGPU/AMDGPUAsmGFX908.rst)  
  > * [MI 32x32x2x1 F32 (#800) · ROCmSoftwarePlatform/Tensile@9dfd621](https://github.com/ROCmSoftwarePlatform/Tensile/commit/9dfd6212f888cf83ff334e675c823239831c4aa8)  
  > * [Initial version of Store code clean-up for mi100 · ROCmSoftwarePlatform/Tensile@1ae540b](https://github.com/ROCmSoftwarePlatform/Tensile/commit/1ae540b7170ef971abdecd1ab0b4fc3e5f927dc1)  
