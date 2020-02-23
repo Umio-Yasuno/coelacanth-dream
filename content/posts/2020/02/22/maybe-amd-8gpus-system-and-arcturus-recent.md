@@ -53,6 +53,14 @@ AMDGPUはSEが対称となるように構成され、8-SEのArcturusがCUを一�
 （MI60はINT8で59 TOPs、MI50はINT8で53 TOPs）  
 [Professional Graphics Specifications | AMD](https://www.amd.com/en/products/specifications/professional-graphics/4476)  
 
+そしてArcturusベースの製品名が *MI100* となるのは、ほぼ確実と見られる。  
+何しろ最適化でのターゲット名に *Arcturus* ではなく *MI100* を使うほどだ。  
+（その裏で一部ファイル名を *MI100* から *Artus* に変えたりと名称、略称がはっきりしない。）[^1]  
+
+[^1]: [Conf files added for Artus · ROCm-Developer-Tools/ROCmValidationSuite@80db060](https://github.com/ROCm-Developer-Tools/ROCmValidationSuite/commit/80db0604624e18bd1f894f659519c8d054e22058)  
+
+ > 関連: [ROCmのコードにMI100、Arielが追加される | Coelacanth's Dream](https://umio-yasuno.github.io/posts/2019/12/20/rocm-mi100-ariel/)
+
 このことと、120CUという推測を合わせると、逆算して動作クロックは1628MHzとなる。  
 
  > ( 100 [TOPs] / ( 120 [CU] * 64 [SP] * 2 [FLOPS] * 4 [INT8のPacked実行] )  
