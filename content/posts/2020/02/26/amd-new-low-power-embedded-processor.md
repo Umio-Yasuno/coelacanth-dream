@@ -15,22 +15,24 @@ noindex: false
 [Trade fair for embedded technologies | embedded world](https://www.embedded-world.de/en)  
 
 追加された、R1305GはTDP 8-10W、R1102GはTDP (SDP[^1]) 6Wと、それまでのRyzen Embedded R1000シリーズの下限12Wより低く、  
-より省電力が求められ、メモリは比較的少容量なシステムにおけるコストを削減できるとする。そのTDP (SDP)であればファンレスシステムの設計も容易となるだろう。  
+より省電力が求められ、メモリは比較的少容量なシステムにおけるコストを削減できるとし、ファンレスシステムの設計も容易となる。  
 これら2つのプロセッサーは3月末より注文可能になる予定とのこと。  
 
 [^1]: Scenario Dissipation Power の略。特定のアプリケーションを実行するシナリオにおいての消費電力を表す。  
 
 AMDはZenアーキテクチャで、前世代の小規模x86 CPUアーキテクチャ Jaguarと同程度の低消費電力までカバーできるとしていたが、  
-今回の R1305G、R1102G の正式発表により、実に3年半かけてようやく果たされたと言える。  
+今回の R1305G、R1102G の正式発表により、実に3年半かけてようやく果たされた。  
 
  > まずOverallであるが、ZenはJaguarと同程度の低い消費電力から、Excavatorにかなり近いところまでカバーするScalableなcoreであり、Excavatorと比較して、同じ消費電力であればIPCがおおむね40%高いとしている(Photo01)。
 
  > 引用元: <cite>[Zenアーキテクチャの概要が明らかに - 分岐予測やCache構造の強化で40%のIPC改善を実現 (1) モバイルからサーバまでカバーするスケーラブルな構成 | マイナビニュース](https://news.mynavi.jp/article/20160830-zen/)</cite>
 
-これで28nm世代のx86 CPUアーキテクチャ、Jaguar/+、Excavator、Steamrollerも安心してZenにバトンを渡せるようになったのではないかと思う。  
-後数年はモバイル向けや組み込み向けで28nmは残り続けるが。  
-実際、SAPPHIREよりRyzen Embedded搭載製品と同時に、G-Series GX-424CC (28nm Jaguar+) 搭載製品が新たに発表されている。  
-[SAPPHIRE Announces New Family of Compact AMD Ryzen™ Embedded Processor Based Motherboards at Embedded World 2020.](https://www.sapphiretech.com/en/news/embeddedworldmb)  
+とにもかくも、これで28nm世代のx86 CPUアーキテクチャ、Jaguar/+、Excavator、Steamrollerも安心してZenにバトンを渡せるようになったのではないかと思う。  
+搭載製品が新たに出てくることはあるかもしれないが[^3]、SoCのラインナップに28nm世代が追加されることももうないはずだ。  
+Chromebook向けは現状A4-9120C、A6-9220Cしかないが、Chronium OSへのパッチからRyzen、Athlonの具体的なSKU名が明らかになっている。  
+そう遠くない内に実際に搭載した製品が出てくれることだろう。  
+
+[^3]: [SAPPHIRE Announces New Family of Compact AMD Ryzen™ Embedded Processor Based Motherboards at Embedded World 2020.](https://www.sapphiretech.com/en/news/embeddedworldmb)  
 
 ## 製品仕様
 
