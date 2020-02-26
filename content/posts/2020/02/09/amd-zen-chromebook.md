@@ -1,5 +1,5 @@
 ---
-title: "AMD Zen APUを搭載したChromebookの話 ――Ryzen 7 3700C、Ryzen 5 3500C――"
+title: "AMD Zen APUを搭載したChromebookの話 ――Ryzen 7 3700C、Ryzen 5 3500C"
 date: 2020-02-09T12:31:30+09:00
 draft: false
 tags: [ "Picasso", "Raven2", "Dali", "Pollock" ]
@@ -54,7 +54,7 @@ IntelとAMDでTDPの意味合いが違うため無視するとしても、Ryzen 
 
  > Alternativ können auch Prozessoren der Serie R1000 Low-Power mit den Varianten R1305G Dual Core (vier Threads), 1,5 GHz (beziehunsweise 2,8 GHz Boost) mit einer TDP von 8 W (6 bis 8 W) beziehungsweise R1102G Dual Core (zwei Threads), 1,2 GHz (beziehungsweise 2,6 GHz Boost) mit einer TDP von 6 W bestückt werden. Die integrierte Vega-Grafikprozessoreinheit mit drei bis zu 1200 MHz schnellen Compute Units steht für hohe Grafikleistung. 
 
- > (引用元: [Maßgeschneiderte HMI-Systemkomponenten in 90 Tagen](https://www.elektronikpraxis.vogel.de/massgeschneiderte-hmi-systemkomponenten-in-90-tagen-a-901430/))
+ > (引用元: <cite>[Maßgeschneiderte HMI-Systemkomponenten in 90 Tagen](https://www.elektronikpraxis.vogel.de/massgeschneiderte-hmi-systemkomponenten-in-90-tagen-a-901430/)</cite>)
 
  * R1305G: CPU 2-Core/4-Thread Base 1.5GHz /Boost 2.8GHz, GPU 3CU 1GHz, TDP 8-10W[^1]
  * R1102G: CPU 2-Core/4-Thread Base 1.2GHz /Boost 2.6Ghz, GPU 不明, TDP 6W

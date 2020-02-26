@@ -26,7 +26,7 @@ AMDの真意ははかれないが、ヒントらしきものはある。
  > the same socket. So we determine at runtime how many i2c controllers are  
  > available.  
 
- > 引用元: [soc/amd/common: Determine # of i2c controllers at runtime (I397b074e) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2057468)  
+ > 引用元: <cite>[soc/amd/common: Determine # of i2c controllers at runtime (I397b074e) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2057468)</cite>  
 
 i2c[^1]コントローラーの数が *Dali* と *Pollock* で違い、*Pollock* の方が多いとされている。  
 どちらも *Raven2* ベースであるため、実際にそれしか持たないのではなく、仕様構成の違いだと推察される。  

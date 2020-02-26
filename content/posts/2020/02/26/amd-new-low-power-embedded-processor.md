@@ -1,0 +1,54 @@
+---
+title: "AMD、新たな低消費電力向けRyzen Embeddedプロセッサー発表 ――R1305G, R1102G"
+date: 2020-02-26T09:20:57+09:00
+draft: false
+tags: [ "Raven2", "Dali", "Pollock" ]
+keywords: [ "", ]
+categories: [ "Hardware", "APU" ]
+noindex: false
+---
+
+前々からちらほら出てきていた、より低消費電力なRyzen Embedded R1305G /R1102G だが、やっとAMDよりプレスリリースが出された。  
+[New AMD Processors Drive High-Performance Computing for Embedded Industry | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/new-amd-processors-drive-high-performance-computing-embedded)  
+
+開催中である embedded world 2020 に合わせての発表と思われる。  
+[Trade fair for embedded technologies | embedded world](https://www.embedded-world.de/en)  
+
+追加された、R1305GはTDP 8-10W、R1102GはTDP (SDP[^1]) 6Wと、それまでのRyzen Embedded R1000シリーズの下限12Wより低く、  
+より省電力が求められ、メモリは比較的少容量なシステムにおけるコストを削減できるとする。そのTDP (SDP)であればファンレスシステムの設計も容易となるだろう。  
+これら2つのプロセッサーは3月末より注文可能になる予定とのこと。  
+
+[^1]: Scenario Dissipation Power の略。特定のアプリケーションを実行するシナリオにおいての消費電力を表す。  
+
+AMDはZenアーキテクチャで、前世代の小規模x86 CPUアーキテクチャ Jaguarと同程度の低消費電力までカバーできるとしていたが、  
+今回の R1305G、R1102G の正式発表により、実に3年半かけてようやく果たされたと言える。  
+
+ > まずOverallであるが、ZenはJaguarと同程度の低い消費電力から、Excavatorにかなり近いところまでカバーするScalableなcoreであり、Excavatorと比較して、同じ消費電力であればIPCがおおむね40%高いとしている(Photo01)。
+
+ > 引用元: <cite>[Zenアーキテクチャの概要が明らかに - 分岐予測やCache構造の強化で40%のIPC改善を実現 (1) モバイルからサーバまでカバーするスケーラブルな構成 | マイナビニュース](https://news.mynavi.jp/article/20160830-zen/)</cite>
+
+これで28nm世代のx86 CPUアーキテクチャ、Jaguar/+、Excavator、Steamrollerも安心してZenにバトンを渡せるようになったのではないかと思う。（実際はモバイル向けや組み込み向けで後数年は28nmが残り続けるが。）  
+
+
+## 製品仕様
+
+| R1000 | R1305G | R1102G |
+| :--- | :---: | :---: |
+| TDP | 8-10W | 6W (SDP) |
+| CPU Base Clock | 2.8 GHz | 2.6 GHz |
+| GPU CU | 3 | 3 |
+| Max GPU Clock | 1.0 GHz | 1.0 GHz |
+
+### 特筆点
+2つともソケット /パッケージは他のモバイル向け、組み込み向け同様のFP5。
+
+AMD公式サイトの仕様を見るとR1305GのみECCの記載がないが、  
+[Embedded Processor Specifications | AMD](https://www.amd.com/en/products/specifications/embedded)  
+それは不自然であるし、R1305Gを採用している Kontron D3713-V/R mITX のデータシートを見ると ECC supported とあるため、単なるAMDの記載漏れだろう。<span class="hide">いつものこと。</span>  
+[D3713-V/R mITX | Kontron](https://www.kontron.com/products/boards-and-standard-form-factors/motherboards/mini-itx/d3713-v-r-mitx.html)  
+(<https://www.kontron.com/downloads/datasheets/d/d3713-mitx.pdf?product=158681>)  
+
+R1102Gは他のR1000シリーズ製品とは違い、SMT無効、最大画面出力は2、メモリはシングルチャネル、PCIe Gen3 4-Laneまでとなっている。（Ethernet、USB、SATAの仕様は他のR1000シリーズ製品同様。）  
+Raven2でDDR4シングルチャネルというと、最近出てきたFT5ソケット[^2]を思わせるが、Zen APUでTDP (SDP) 6Wまで抑えるにはコア/スレッド数、クロックの調整だけでは足りない、ということなのかもしれない。  
+
+[^2]: [Chromebookに搭載されるPollockはFT5ソケット ――DDR4シングルチャネル、SATA無し | Coelacanth's Dream](/posts/2020/02/12/amd-pollock-ft5/)
