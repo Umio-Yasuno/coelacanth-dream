@@ -27,8 +27,10 @@ AMDはZenアーキテクチャで、前世代の小規模x86 CPUアーキテク�
 
  > 引用元: <cite>[Zenアーキテクチャの概要が明らかに - 分岐予測やCache構造の強化で40%のIPC改善を実現 (1) モバイルからサーバまでカバーするスケーラブルな構成 | マイナビニュース](https://news.mynavi.jp/article/20160830-zen/)</cite>
 
-これで28nm世代のx86 CPUアーキテクチャ、Jaguar/+、Excavator、Steamrollerも安心してZenにバトンを渡せるようになったのではないかと思う。（実際はモバイル向けや組み込み向けで後数年は28nmが残り続けるが。）  
-
+これで28nm世代のx86 CPUアーキテクチャ、Jaguar/+、Excavator、Steamrollerも安心してZenにバトンを渡せるようになったのではないかと思う。  
+後数年はモバイル向けや組み込み向けで28nmは残り続けるが。  
+実際、SAPPHIREよりRyzen Embedded搭載製品と同時に、G-Series GX-424CC (28nm Jaguar+) 搭載製品が新たに発表されている。  
+[SAPPHIRE Announces New Family of Compact AMD Ryzen™ Embedded Processor Based Motherboards at Embedded World 2020.](https://www.sapphiretech.com/en/news/embeddedworldmb)  
 
 ## 製品仕様
 
