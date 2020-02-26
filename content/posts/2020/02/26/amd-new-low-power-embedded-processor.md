@@ -46,7 +46,15 @@ Chromebook向けは現状A4-9120C、A6-9220Cしかないが、Chronium OSへの�
 | Max GPU Freq | 1.0 GHz | 1.0 GHz |
 
 ### 特筆点
-2つともソケット /パッケージは他のモバイル向け、組み込み向け同様のFP5。
+2つともソケット /パッケージは他のモバイル向け、組み込み向け同様のFP5。  
+また、"Zen" CPU とあることから、ダイも他のR1000シリーズ製品同様 *Raven2* とされる。  
+
+ > Built on “Zen” CPU and Radeon™ “Vega” graphics cores, 
+
+ > 引用元: <cite>[New AMD Processors Drive High-Performance Computing for Embedded Industry | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/new-amd-processors-drive-high-performance-computing-embedded)</cite>
+
+*Raven2* と言っても、その中で *Raven2* / *Dali* / *Pollock* のどれにあたるかは不明だが、組み込み向けに割り当てられることが多い RevisionID: 0x9\* を、*Pollock* が2つ持っているため、  
+*Pollock* である可能性が高いように**思う**。  
 
 AMD公式サイトの仕様を見るとR1305GのみECCの記載がないが、  
 [Embedded Processor Specifications | AMD](https://www.amd.com/en/products/specifications/embedded)  

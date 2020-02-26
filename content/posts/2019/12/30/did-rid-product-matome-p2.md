@@ -138,8 +138,8 @@ BootCamoDriver内のcccmanifest_64.xml。
 | | EB | | |
 [Page Top](#table-of-content)
 
-Source:
-[drm/amd/display: add Pollock IDs, fix Pollock & Dali clk mgr construct - amd-staging-drm-next](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/display/include/dal_asic_id.h?h=amd-staging-drm-next&id=04d8707ef5549065c10d5a2e20d2c61089807997)
+ > <cite>Source:
+[drm/amd/display: add Pollock IDs, fix Pollock & Dali clk mgr construct - amd-staging-drm-next](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/display/include/dal_asic_id.h?h=amd-staging-drm-next&id=04d8707ef5549065c10d5a2e20d2c61089807997)</cite>
 
 <!--
 | 15D9 &darr; | 91 | | **?** |
