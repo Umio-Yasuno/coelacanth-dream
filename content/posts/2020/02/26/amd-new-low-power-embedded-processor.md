@@ -37,9 +37,11 @@ AMDはZenアーキテクチャで、前世代の小規模x86 CPUアーキテク�
 | R1000 | R1305G | R1102G |
 | :--- | :---: | :---: |
 | TDP | 8-10W | 6W (SDP) |
-| CPU Base Clock | 2.8 GHz | 2.6 GHz |
+| CPU Core/Thread | 2/4 | 2/2 |
+| CPU Base Freq | 1.5 GHz | 1.2 GHz |
+| 1T CPU Boost Freq | 2.8 GHz | 2.6 GHz |
 | GPU CU | 3 | 3 |
-| Max GPU Clock | 1.0 GHz | 1.0 GHz |
+| Max GPU Freq | 1.0 GHz | 1.0 GHz |
 
 ### 特筆点
 2つともソケット /パッケージは他のモバイル向け、組み込み向け同様のFP5。
