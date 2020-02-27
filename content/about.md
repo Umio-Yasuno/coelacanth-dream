@@ -8,11 +8,12 @@ noindex: false
 ---
 
 ## このサイトについて
-{{< figure src="/image/site-image.png" title="サイトイメージ" >}}
+<img src="/image/site-image.png" style="width:32%; float:left; margin:.3em .5em 0 0">
 個人的にまとめたハードウェア系の情報や”推測”を公開するブログ的なもの。  
 ネット上で広まっている噂やリーク情報に関する推測を書いたりもすると思いますが、私からリークすることはありません。<span class="hide">たぶん</span>  
 情報元は主にDRMやMesa3Dへのパッチ、Githubのリポジトリ、公式資料。  
-それと私の知識はAMD CPU/GPUに偏っています。Intel CPU/GPUは少しだけ。  
+それと私の知識はAMD CPU/GPUに偏っています。  
+Intel CPU/GPUは少しだけ。  
 NVIDIAはさっぱり。  
 
 当サイトはGithub Pageを利用しているため、更新内容、過去の状態は以下で確認することが出来ます。  
@@ -30,10 +31,11 @@ NVIDIAはさっぱり。
  	* コミットの取り消し（巻き戻し）までやるかは場合による。
 
 <address>
-連絡先:<br>
-Reddit: <a href="https://www.reddit.com/user/coelacanth_poor" target="_blank">https://www.reddit.com/user/coelacanth_poor</a><br>
-Github: <a href="https://github.com/Umio-Yasuno/umio-yasuno.github.io/issues" target="_blank">Issues · Umio-Yasuno/umio-yasuno.github.io</a><br>
+連絡先:  
+&emsp;Reddit: <https://www.reddit.com/user/coelacanth_poor>  
+&emsp;Github: [Issues · Umio-Yasuno/umio-yasuno.github.io](https://github.com/Umio-Yasuno/umio-yasuno.github.io/issues)  
 </address>
+<br>
 
 <!--
 The Cloths of Heaven
