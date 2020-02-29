@@ -36,6 +36,7 @@ NVIDIAはさっぱり。
 &emsp;Github: [Issues · Umio-Yasuno/umio-yasuno.github.io](https://github.com/Umio-Yasuno/umio-yasuno.github.io/issues)  
 </address>
 <br>
+メールアドレスは現在掲載予定なし。  
 
 <!--
 The Cloths of Heaven

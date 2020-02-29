@@ -8,7 +8,7 @@ categories: [ "Hardware", "GPU" ]
 noindex: false
 ---
 
-[Fritzchens Fritz - Flickr](https://www.flickr.com/photos/130561288@N04/)氏が先日のNavi10のダイショットからあまり間を空けずに、Navi14のダイショットも公開した。  
+[Fritzchens Fritz - Flickr](https://www.flickr.com/photos/130561288@N04/)氏が先日のNavi10のダイショットからあまり間を空けずに、Navi14のダイショットをも公開した。  
 [AMD@7nm@RDNA_1th_gen@Navi14@Radeon_RX_5500_XT@215-0932396@… | Flickr](https://www.flickr.com/photos/130561288@N04/49437016132/)  
 既にネット上ではGPUに詳しい方達が推測したダイアグラムを上げているが、自分のためにもとりあえず作ってみることとした。  
 
