@@ -58,7 +58,7 @@ NcoreアーキテクトであるGlenn Henry氏はこれを「AVX-32,768」に喩
 
 <details>
 <summary>Centaur CNS microarchitecture</summary>
-{{< figure src="/image/2020/02/03/centaur-cns-microarchitecture.webp" title="Centaur CNS microarchitecture" caption="出典: [MPR Article Template - MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf](https://centtech.com/wp-content/uploads/MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf)" >}}
+{{< figure src="/image/2020/02/03/centaur-cns-microarchitecture.webp" title="Centaur CNS microarchitecture" caption="出典: <cite>[MPR Article Template - MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf](https://centtech.com/wp-content/uploads/MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf)</cite>" >}}
 </details>
 
 #### フロントエンド
@@ -111,7 +111,7 @@ CPUのクロックと同じ速度であり、理論ピーク帯域は320 GB/s (2
 
 #### アーキテクチャ比較
 
-{{< figure src="/image/2020/02/03/cpu-microarch-comparison.webp" title="CPU-microarchitecture comparison" caption="出典: [MPR Article Template - MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf](https://centtech.com/wp-content/uploads/MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf)" >}}
+{{< figure src="/image/2020/02/03/cpu-microarch-comparison.webp" title="CPU-microarchitecture comparison" caption="出典: <cite>[MPR Article Template - MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf](https://centtech.com/wp-content/uploads/MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf)</cite>" >}}
 
 <details>
 <summary>Zen/2 Architecture</summary>
@@ -174,10 +174,10 @@ AMDはZen2アーキテクチャでSpectre対策強化のため一部設計を変
 
 <details>
 <summary>CHA die plot</summary>
-{{< figure src="/image/2020/02/03/ncore-dieshot.webp" title="CHA die plot" caption="出典: [MPR Article Template - MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf](https://centtech.com/wp-content/uploads/MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf)" >}}
+{{< figure src="/image/2020/02/03/ncore-dieshot.webp" title="CHA die plot" caption="出典: <cite>[MPR Article Template - MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf](https://centtech.com/wp-content/uploads/MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf)</cite>" >}}
 </details>
 
-{{< figure src="/image/2020/02/03/ncore-slide.webp" title="Current Version of Centaur AI Coprocessor" caption="出典: [MPR Article Template - MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf](https://centtech.com/wp-content/uploads/MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf)" >}}
+{{< figure src="/image/2020/02/03/ncore-slide.webp" title="Current Version of Centaur AI Coprocessor" caption="出典: <cite>[MPR Article Template - MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf](https://centtech.com/wp-content/uploads/MPR_19_12_02_Centaur_Adds_AI_to_Server_Processor.pdf)</cite>" >}}
 
 学習（トレーニング）は行わず、推論専用のアクセラレータ。  
 Ncore部のダイサイズはTSMC 16FFCプロセスで34.4mm<sup>2</sup>、  
@@ -196,7 +196,7 @@ x86コアはWindowsを動作させられるが、Ncoreのためのソフトウ�
 
 <details>
 <summary>Ncore block diagram</summary>
-{{< figure src="/image/2020/02/03/ncore-diagram.webp" title="Ncore block diagram" caption="出典: [Centaur’s x86 SoC with AI Coprocessor Technology - PRSlides_1118_Release.pdf](https://centtech.com/wp-content/uploads/PRSlides_1118_Release.pdf)" >}}
+{{< figure src="/image/2020/02/03/ncore-diagram.webp" title="Ncore block diagram" caption="出典: <cite>[Centaur’s x86 SoC with AI Coprocessor Technology - PRSlides_1118_Release.pdf](https://centtech.com/wp-content/uploads/PRSlides_1118_Release.pdf)</cite>" >}}
 </details>
 
 SRAMは内部で2つに分かれており（D-RAMとW-RAM、DはData、WはWeightの意だろうか？）、それぞれSIMD幅に合わせて32,768-bit/cycleで接続されており、帯域は10TB/s、合計で20TB/sとなる。  
@@ -217,20 +217,22 @@ Redditのスレッドにおける回答では、USBとSATAは外部チップセ�
 参考までに記しておくと、Intel Xeon Scalableで双方向2x 10.4 GT/s@20レーン (104GT/s?)、（Cascade Lakeなら3リンクで156GT/s?）  
 AMD EPYC Romeで双方向4x 18GT/s@16レーン (288GT/s, 実帯域 202GB/s)。  
 
- > 参考:  
- * [Intel® Xeon® Processor Scalable Family Technical Overview | Intel® Software](https://software.intel.com/en-us/articles/intel-xeon-processor-scalable-family-technical-overview)  
- * [AMDが最高性能のx86 CPUと謳う「AMD EPYC 7002」シリーズ - PC Watch](https://pc.watch.impress.co.jp/docs/column/kaigai/1201352.html)  
- * [[画像] 【後藤弘茂のWeekly海外ニュース】AMDが最高性能のx86 CPUと謳う「AMD EPYC 7002」シリーズ (25/28) - PC Watch](https://pc.watch.impress.co.jp/img/pcw/docs/1201/352/html/23_o.jpg.html)  
+ > 参考:
+
+ > * [Intel® Xeon® Processor Scalable Family Technical Overview | Intel® Software](https://software.intel.com/en-us/articles/intel-xeon-processor-scalable-family-technical-overview)  
+ > * [AMDが最高性能のx86 CPUと謳う「AMD EPYC 7002」シリーズ - PC Watch](https://pc.watch.impress.co.jp/docs/column/kaigai/1201352.html)  
+ > * [[画像] 【後藤弘茂のWeekly海外ニュース】AMDが最高性能のx86 CPUと謳う「AMD EPYC 7002」シリーズ (25/28) - PC Watch](https://pc.watch.impress.co.jp/img/pcw/docs/1201/352/html/23_o.jpg.html)  
 
 ### その他
 
 製造プロセスはTSMC 16nm FinFet Compact(16FFC)。  
 ハイパフォーマンス向けの16FF+を低コストにしたのが16FFC (16FF Compact) であり、メインストリーム向けや低消費電力 (Ultra Low Power) 向けに位置付けされている。  
 
- > 参考:  
- * [10nmに見切りをつけ低コストの12FFCに注力　TSMC 半導体ロードマップ - ASCII.jp](https://ascii.jp/elem/000/001/516/1516220/2/)  
- * [16/12nm Technology - Taiwan Semiconductor Manufacturing Company Limited](https://www.tsmc.com/english/dedicatedFoundry/technology/16nm.htm)  
- * [TSMC Symposium: New 16FFC and 28HPC+ Processes Target “Mainstream” Designers and Internet of Things (IoT) - Industry Insights - Cadence Blogs - Cadence Community](https://community.cadence.com/cadence_blogs_8/b/ii/posts/tsmc-symposium-new-16ffc-and-28hpc-processes-target-mainstream-designers-and-internet-of-things-iot)  
+ > 参考:
+
+ > * [10nmに見切りをつけ低コストの12FFCに注力　TSMC 半導体ロードマップ - ASCII.jp](https://ascii.jp/elem/000/001/516/1516220/2/)  
+ > * [16/12nm Technology - Taiwan Semiconductor Manufacturing Company Limited](https://www.tsmc.com/english/dedicatedFoundry/technology/16nm.htm)  
+ > * [TSMC Symposium: New 16FFC and 28HPC+ Processes Target “Mainstream” Designers and Internet of Things (IoT) - Industry Insights - Cadence Blogs - Cadence Community](https://community.cadence.com/cadence_blogs_8/b/ii/posts/tsmc-symposium-new-16ffc-and-28hpc-processes-target-mainstream-designers-and-internet-of-things-iot)  
 
 余談だが、Habanaの推論用アクセラレーター Goya、Cerebrasの学習用プロセッサー WSE (Wafer Scale Engine)もTSMC 16nmで製造されている。（16FFCかどうかは不明）  
 ユニットを増やし、並列に実行するのが効果的なディープラーニング用途ではコストの低さから人気なのかもしれない。  
