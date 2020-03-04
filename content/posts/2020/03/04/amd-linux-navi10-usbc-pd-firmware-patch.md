@@ -19,7 +19,7 @@ USB-Cコントローラーを内蔵しているのがNavi10のみ（Navi12, Navi
 もしくはコントローラーは内蔵されていても、コネクタが実装されるのは現状Navi10ベースの製品しか予定にない、ということかもしれない。  
 
 Navi14ベースのRadeon Pro 5300M /5500Mを搭載した[MacBook Pro 16-inch](https://www.apple.com/macbook-pro-16/specs/)にもUSB-C (Thunderbolt 3)は実装されているが、  
-そちらはIntel JHL7540 Thunderbolt 3コントローラーを経由するため、問題無いのだと思われる。[^1][^2]  
+そちらは Intel JHL7540 Thunderbolt 3コントローラーを経由するため、問題無いのだと思われる。[^1][^2]  
 
 また、[linux-firmware.git](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/log/)にはまだ当のUSB-C PDファームウェアはアップロードされていない。  
 
