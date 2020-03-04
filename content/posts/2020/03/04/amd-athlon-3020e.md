@@ -30,6 +30,8 @@ R1102Gではメモリはシングルチャネル、外部へのPCIe Gen3は4-Lan
 対してA4-3020Eは、容量こそ最大8GBとなっているが、オンボード実装されたDDR4メモリ 4GBとは別にSO-DIMMソケットを利用できることから、デュアルチャネルだと考えられる。  
 PCIeレーンは、Storageの項目にPCIe 3.0 x4接続のM.2 SSDがあり、また特に注釈や制限されていることを伝える旨がファイル中に無いため、PCIe Gen3 8-Laneまで利用可能だと思われる。  
 
+AMDはTDP 6W枠製品を、CPUの仕様は統一し、I/O部の機能{{< comple >}}それに加えてGPUの可能性もある{{< /comple >}}の制限で差別化を図ろうとしているのかもしれない。  
+
 ## おまけ 〜DaliかPollockか〜
 A4-3020EがRaven2ベースだとして、[Raven2](/tags/raven2) /[Dali](/tags/dali) /[Pollock](/tags/pollock)のどれに属するか。  
 自分としては *Dali* の気がする。  
