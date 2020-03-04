@@ -42,3 +42,6 @@ Navi10は6基搭載されているが、Navi14は5基であるため、 5-6 と�
  > because there is no ENGINE_ID_DIGD in Navi14.
 
  > 引用元: <cite>[drm/amd/display: Add ENGINE_ID_DIGD condition check for Navi14](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/display/dc/dcn20/dcn20_resource.c?h=amd-staging-drm-next&id=9fd4c2d712377f5fb9d3a1ad4f3106bf7833ccad)</cite>
+
+まあそこまで重要ではない。  
+
