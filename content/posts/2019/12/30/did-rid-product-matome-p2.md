@@ -106,11 +106,14 @@ BootCampDriver内のcccmanifest_64.xml。
 | :--- | :--- | :---: | :---: |
 | 15DD &darr; | E1 | | (15W FP5 Vega 3) |
 | | E2 | | (35W AM4 Vega 3) |
-| 15D8 &darr; | 91 /92 | R1505G? /R1605G? | Embedded |
+| 15D8 &darr; | 91[^10] | R1605G | Embedded |
+| | 92 | R1505G? | Embedded |
 | | C4 | 3200U | (FP5 15W Vega 3), == 3250C? |
 | | C5 | 300U | (Vega 3) |
 | | CC | 3000G | (AM4 Vega 3) |
 [Page Top](#table-of-content)
+
+[^10]: [Core i7並みのRyzen搭載で、4万円台＆片手サイズ⁉ 〝Ryzen Embedded”搭載の超小型PCベアボーン「4×4 BOX」が超お得 (3/3) | AMD HEROES](https://amd-heroes.jp/article/2020/03/0364/3/)
 
 #### Dali ( gfx909 )
 | Device ID | Revision ID | Product Name | Memo |
