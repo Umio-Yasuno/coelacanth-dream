@@ -27,9 +27,9 @@ BootCampDriver内のcccmanifest_64.xml。
 	* [Navi12](#navi12-gfx1011)
 	* [Arcturus](#arcturus-gfx908)
 
-## *APU*
+## APU
 <!-- FAMILY_RV -->
-### *Raven ( gfx902 )*
+### Raven ( gfx902 )
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 15DD &darr; | 81 | V1807B | (45W FP5 Vega 11)
@@ -66,7 +66,7 @@ BootCampDriver内のcccmanifest_64.xml。
 | | ? | V1404I | (15W FP5 Vega 8) |
 [Page Top](#table-of-content)
 
-### *Picasso ( gfx902 )*
+### Picasso ( gfx902 )
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 15D8 &darr; | 00 | | Winston (Vega 8 WS) |
@@ -101,7 +101,7 @@ BootCampDriver内のcccmanifest_64.xml。
 | | ? | 300UGE | (65W AM4 Vega 3) |
 [Page Top](#table-of-content)
 
-### *Raven2 ( gfx909 )*
+### Raven2 ( gfx909 )
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 15DD &darr; | E1 | | (15W FP5 Vega 3) |
@@ -112,7 +112,7 @@ BootCampDriver内のcccmanifest_64.xml。
 | | CC | 3000G | (AM4 Vega 3) |
 [Page Top](#table-of-content)
 
-#### *Dali ( gfx909 )*
+#### Dali ( gfx909 )
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 15D8 &darr; | C4 | 3250C[^7] | (Vega 3) |
@@ -128,7 +128,7 @@ BootCampDriver内のcccmanifest_64.xml。
 [^8]: [[Dali] Raven 2 detection Patch](https://lists.freedesktop.org/archives/amd-gfx/2020-February/045579.html) <br> <https://lists.freedesktop.org/archives/amd-gfx/attachments/20200205/f22ebc46/attachment.obj>
 [^9]: [[PATCH 28/35] drm/amd/display: Fix RV2 Variant Detection](https://lists.freedesktop.org/archives/amd-gfx/2020-February/046322.html)
 
-#### *Pollock ( gfx909 )*
+### Pollock ( gfx909 )
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 15D8 &darr; | 94 | | |
@@ -150,13 +150,13 @@ BootCampDriver内のcccmanifest_64.xml。
 -->
 
 <!--
-#### *FireFlight*
+### FireFlight
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 15FF | 00 | Fenghuang (Zhongshan Subor Z+) | Radeon Vega 28 Mobile |
 -->
 
-### *Renoir ( gfx909 )*
+## Renoir ( gfx909 )
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 1636 &darr; | 00 | | (BringUp FP6) |
@@ -198,9 +198,9 @@ BootCampDriver内のcccmanifest_64.xml。
 
 [Page Top](#table-of-content)
 
-## *Discrete GPU*
+# Discrete GPU
 <!-- FAMILY_AI -->
-### *Vega10 ( gfx900 )*
+## Vega10 ( gfx900 )
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 6860 &darr; | 00 | Radeon Instinct MI25 &darr; | (Vega10 GLXT SERVER) &darr; |
@@ -242,7 +242,7 @@ BootCampDriver内のcccmanifest_64.xml。
 [^1]: SubSystem ID? ( Vega 48:0x0196, Vega 56:0x017B, Vega 64:0x017C Vega 64X:0x0188 )
 [^6]: [Compute Performance of AMD Radeon Pro V320 - CompuBench](https://compubench.com/device.jsp?benchmark=compu20d&os=Windows&api=cl&D=AMD+Radeon+Pro+V320&testgroup=info)
 
-### *Vega12 ( gfx904 )*
+## Vega12 ( gfx904 )
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 69A0 | 00 | | (Vega12 GL MXT) |
@@ -257,7 +257,7 @@ BootCampDriver内のcccmanifest_64.xml。
 | | FF | | (Vega12 LE) |
 [Page Top](#table-of-content)
 
-### *Vega20 ( gfx906 )*
+## Vega20 ( gfx906 )
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 66A0 | 00 | Radeon Instinct | |
@@ -282,7 +282,7 @@ BootCampDriver内のcccmanifest_64.xml。
 Navi LITE 13E9:00
 -->
 
-### *Navi10 ( gfx1010 )*
+## Navi10 ( gfx1010 )
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 66AF &darr; | 70 | | (Fake DID?) |
@@ -318,7 +318,7 @@ Navi LITE 13E9:00
 [^2]: [navi10_ppt.c#n1593](https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/powerplay/navi10_ppt.c?h=amd-staging-drm-next#n1593)
 [^4]:[AMD Radeon Pro W5700 8 GB BIOS - TechPowerUp](https://www.techpowerup.com/vgabios/216287/216287)
 
-### *Navi14 ( gfx1012 )*
+## Navi14 ( gfx1012 )
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 67DF &darr; | 3C | | (Navi14 Pro-? Fake DID?) |
@@ -355,7 +355,7 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 
 [^3]:[Apple Pro 5500M 8 GB BIOS - TechPowerUp](https://www.techpowerup.com/vgabios/216534/apple-pro5500m-8192-191010)
 
-### *Navi12 ( gfx1011 )*
+## Navi12 ( gfx1011 )
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 69B0 &darr; | 71 | | |
@@ -369,7 +369,7 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 [Page Top](#table-of-content)
 
 <!-- FAMILY_AI -->
-### *Arcturus ( gfx908 )*
+## Arcturus ( gfx908 )
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 738C | | MI100[^5] | |

@@ -14,6 +14,18 @@ AMD Financial Analyst Day 2020の気になった部分を、AMDのスライド�
 
 使用したスライドを全て公開してくれているのは嬉しいが、それぞれのファイルで被っている内容も多く、頭の中の整理に少し手間取ってしまった。  
 
+## Table Of Content
+
+ * [X3D](#x3d)
+ * [CPU](#cpu)
+ 	* [EPYC](#epyc)
+	* [Ryzen](#ryzen)
+ * [GPU](#gpu)
+ 	* [CDNA](#cdna)
+	* [3rd Gen Infinity Architecturue](#3rd-gen-infinity-architecturue)
+	* [RDNA 2](#rdna-2)
+	* [RDNA 3](#rdna-3)
+
 ## X3D
 
 {{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_4.webp" title="AMD Leadership Packaging" caption="画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Mark Papermaster: Future of High Performance](https://ir.amd.com/static-files/ccef22f0-f641-4fc5-861f-cb3d7d125a68)" >}}
@@ -100,6 +112,13 @@ Arcturusでは長く、MI100では製品的過ぎたが、*CDNA* は呼びやす
 そこで、隣の2GPUとはそれぞれ2リンク、それより離れた4GPUとはそれぞれ1リンクとすれば、合計リンク数がSDMAエンジンの数 8基と一致する。  
 恐らくそういったネットワーク設計になっているのではないかと *予想する* 。  
 *Vega20* は複数GPUのコヒーレント接続でリングバスを構築していたが、8GPUの場合でもベースとしてそれを残すのだろうか。  
+
+{{< ins datetime="2020-03-06T19:06:04" >}}
+こういったネットワークを *コーダルリング (Chordal Ring)* と呼ぶらしい。  
+
+<https://twitter.com/kato_kats/status/1235694954971717632>  
+<https://twitter.com/chiakokhua/status/1235694201150439424>  
+{{< /ins >}}
 
 
 気になるのは時期と8GPUシステムが採用されるかどうかで、AMDが納入する予定の次世代Exascaleスパコン、*Frontier* と *El Capitan* はどちらもノードあたり GPU 4 : CPU 1 の設計とされている。  
