@@ -1,0 +1,138 @@
+---
+title: "AMD Financial Analyst Day 2020 個人的まとめ"
+date: 2020-03-06T07:03:36+09:00
+draft: false
+tags: [ "Radeon", "Arcturus", "Ryzen" ]
+keywords: [ "", ]
+categories: [ "Hardware", "CPU", "GPU" ]
+noindex: false
+---
+
+AMD Financial Analyst Day 2020の気になった部分を、AMDのスライド、プレスリリースからまとめた。  
+
+[Financial Analyst Day – 2020 | Advanced Micro Devices](https://ir.amd.com/events/event-details/financial-analyst-day-2020)  
+[AMD Details Strategy to Deliver Best-in-Class Growth and Strong Shareholder Returns at 2020 Financial Analyst Day | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/amd-details-strategy-deliver-best-class-growth-and-strong)  
+
+使用したスライドを全て公開してくれているのは嬉しいが、それぞれのファイルで被っている内容も多く、頭の中の整理に少し手間取ってしまった。  
+
+## X3D
+
+{{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_4.webp" title="AMD Leadership Packaging" caption="画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Mark Papermaster: Future of High Performance](https://ir.amd.com/static-files/ccef22f0-f641-4fc5-861f-cb3d7d125a68)" >}}
+
+AMDは今回、チップレット、ハイブリッド2.5D、ダイスタッキングを組み合わせ、帯域幅密度を10倍以上向上させたパッケージング技術、**X3D** を明らかにした。  
+IntelのEMIB、Foveros技術への対抗と思われる。  
+AMDは以前3D積層によってコンピュータを1つのパッケージに統合するビジョンを発表していたが、*X3D* はそれを実現に近づける技術だ。[^3]  
+
+[^3]: [【後藤弘茂のWeekly海外ニュース】AMDがCPUをフル3D積層へと進化させるビジョンを発表 - PC Watch](https://pc.watch.impress.co.jp/docs/column/kaigai/1098363.html)
+
+## CPU
+### EPYC
+*Zen 3* アーキテクチャを採用する第3世代EPYC *Milan* は2020年後期に導入予定であり、続く*Zen 4* アーキテクチャでは5nmプロセスを採用することを発表した。  
+
+ > AMD plans to introduce the first processors based on its next-generation “Zen 3” core in late 2020. The “Zen 4” core is currently in design and is targeted to use advanced 5nm process technology.
+
+ > 引用元: <cite>[AMD Details Strategy to Deliver Best-in-Class Growth and Strong Shareholder Returns at 2020 Financial Analyst Day | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/amd-details-strategy-deliver-best-class-growth-and-strong)  
+
+
+{{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_9.webp" title="CPU RoadMap" caption="画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Forrest Norrod: Data Center Leadership](https://ir.amd.com/static-files/15702f66-d8d1-4816-8906-9612580f9aa1)<cite>" >}}
+
+### Ryzen
+*Zen 3* アーキテクチャ採用の第4世代Ryzenも2020年中に提供するとしている。  
+
+ >  AMD is on track to bring increased performance to the gaming, content creation and productivity markets when it delivers the first “Zen 3”-based AMD Ryzen™ product in 2020.
+
+ > 引用元: <cite>[AMD Details Strategy to Deliver Best-in-Class Growth and Strong Shareholder Returns at 2020 Financial Analyst Day | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/amd-details-strategy-deliver-best-class-growth-and-strong)  
+
+## GPU
+### CDNA
+今回新たに **CDNA** の名が出された。  
+
+{{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_5.webp" title="Data Center GPU Road Map" caption="画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Forrest Norrod: Data Center Leadership](https://ir.amd.com/static-files/15702f66-d8d1-4816-8906-9612580f9aa1)<cite>" >}}
+
+まだ出てきていない、7nmということから *CDNA* は [Arcturus](/tags/arcturus)を指し示していると思われる。  
+*CDNA 2* が既にロードマップ上にあるが、採用プロセスは明らかにされていない。  
+時期を考えれば *Zen4* 同様に5nmプロセスを採用しそうだが、そう記されていないのは設計がまだ完了していないためか。  
+
+{{< details smry="ひどく個人的な話だが、CDNAという名前には少し思う所がある。" >}}
+**RDNA** が *Radeon DNA* の略なのに、**CDNA** は *Compute DNA* の略だ。  
+
+ > AMD unveiled its new AMD Compute DNA (AMD CDNA) architecture, designed to accelerate data center compute workloads. 
+
+ > 引用元: <cite>[AMD Details Strategy to Deliver Best-in-Class Growth and Strong Shareholder Returns at 2020 Financial Analyst Day | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/amd-details-strategy-deliver-best-class-growth-and-strong)</cite>
+
+どうも格好がつかないというか、Radeon に対して Compute では寂しいというか、*GCN* の格好よさを受け継いで欲しかったというか。  
+3つ目に関しては、**GCN** が *Graphic Core Next* の略で、*Arcturus /CDNA* はグラフィック処理をするためのユニットを持たず、GPGPU偏重のアーキテクチャとされるため、仕方がないと言えば仕方ないが。  
+
+Arcturusでは長く、MI100では製品的過ぎたが、*CDNA* は呼びやすく、その点では好き。  
+{{< /details >}}
+#### 3rd Gen Infinity Architecturue
+
+{{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_1.webp" title="3rd Gen AMD Infinity Architecture" caption="画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Mark Papermaster: Future of High Performance](https://ir.amd.com/static-files/ccef22f0-f641-4fc5-861f-cb3d7d125a68)<cite>" >}}
+
+3rd Genでは最大8GPUのコヒーレント接続に対応するとされ、いつかの妄想話[^1]がかすっていたようで嬉しい限りだ。  
+ただ *CDNA* は8GPUに対応するが、CPUとGPUのメモリ空間の統合に対応せず、**2nd Gen Infinity Architecture**とされ、  
+8GPUが可能な上でCPUとGPUのメモリ空間統合が為された **3rd Gen Inifinity Architecture** は *CDNA 2* からとなる。  
+
+{{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_6.webp" title="Unlocking Accelerated Computing" caption="画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Forrest Norrod: Data Center Leadership](https://ir.amd.com/static-files/15702f66-d8d1-4816-8906-9612580f9aa1)<cite>" >}}
+
+図を鵜呑みするならば、1st Genと2nd GenのようにPCI ExpressでCPUにそれぞれのGPUを接続するのではなく、Infinity FabricでCPUと8GPUのクラスタに接続するのだろうか。  
+図がひどく複雑になるため簡略化している可能性もある。  
+
+そしてGPUネットワークをよく見るとわかるが、あるGPUの対角に位置するGPUには線がない。（これも簡略されてる可能性があるが）  
+
+{{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_3.webp" title="3rd Gen AMD Infinity Architecture - GPU Network" caption="隣のGPUとの線がそれより離れたGPUとの線より太く、<br>また、対角のGPUには繋がれていない。<br><br>画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Forrest Norrod: Data Center Leadership](https://ir.amd.com/static-files/15702f66-d8d1-4816-8906-9612580f9aa1)<cite>" >}}
+
+しかしArcturus関連のコードから、ArcturusにはXGMIに最適化されたSDMAエンジンは8基ある。[^1]  
+そしてGPUネットワークの繋がれた線は、隣のGPUとそれより離れたGPUとで太さが違う。  
+そこで、隣の2GPUとはそれぞれ2リンク、それより離れた4GPUとはそれぞれ1リンクとすれば、合計リンク数がSDMAエンジンの数 8基と一致する。  
+恐らくそういったネットワーク設計になっているのではないかと *予想する* 。  
+
+気になるのは時期と8GPUシステムが採用されるかどうかで、AMDが納入する予定の次世代Exascaleスパコン、*Frontier* と *El Capitan* はどちらもノードあたり GPU 4 : CPU 1 の設計とされている。  
+
+ > New approach using accelerator-centric compute blades (in a 4:1 GPU to CPU ratio, connected by the 3rd Gen AMD Infinity Architecture for high-bandwidth, low latency connections) to increase performance for data-intensive AI, machine learning and analytics needs by offloading processing from the CPU to the GPU.
+
+ > 引用元: <cite>[HPE and AMD power complex scientific discovery in world’s fastest supercomputer for U.S. Department of Energy’s (DOE) National Nuclear Security Administration (NNSA) | HPE](https://www.hpe.com/us/en/newsroom/press-release/2020/03/hpe-and-amd-power-complex-scientific-discovery-in-worlds-fastest-supercomputer-for-us-department-of-energys-doe-national-nuclear-security-administration-nnsa.html)</cite>
+
+*Frontier* は2021年納入予定であり、調整の時間を考えると *CDNA* を、  
+*El Captitan* は2022年か2023年早期に納入予定とのことから、*CDNA 2* をGPUに採用するのではないかと個人的に考えている。  
+別段スパコンだけがGPGPUを使う訳ではなく、データセンターや別のスパコンでも採用されるはずだが、それらスパコンが GPU 4 : CPU 1となると、今の段階では GPU 8 : CPU 1 の設計の採用予定は無いのかもしれない。  
+ボード開発や、8GPUに対応したブリッジに課題が残っている可能性もある。8GPUもの規模になるとIntelが{{< xe class="hpc" >}}を16基搭載する *Ponte Vecchio* の構想で示したように、GPUをPCIeカードに収めるのではなく、ボード上に8GPUを搭載する形のが良いだろう。[^2]  
+AMDが今回、パッケージング技術 **X3D** を発表したのは、その布石かもしれない。もしかしなくてもIntel、AMDで近い形になるか。  
+
+そして、**3rd Gen Infinity Architecture** により、CPU-GPU間の帯域はPCIe Gen4の倍近くまで向上する。  
+
+{{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_10.webp" title="AMD 3rd Gen Infinity Architecture Enables Accelerated Computing" caption="画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Mark Papermaster: Future of High Performance](https://ir.amd.com/static-files/ccef22f0-f641-4fc5-861f-cb3d7d125a68)" >}}
+
+倍近くということから、PCIe Gen5を想定している可能性がある。  
+また、CPUとGPUのメモリ統合による、アドレス変換のオーバヘッドの削減も要因に含まれると考えられる。  
+
+### RDNA 2
+{{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_8.webp" title="Gaming GPU RoadMap" caption="画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Rick Bergman: Driving Growth Across PCs and Gaming](https://ir.amd.com/static-files/dd12bed4-a96e-42e7-b2d9-3940183e2473)<cite>" >}}
+
+RDNA2の製品情報までは出なかったが、RDNAからの進化点は明らかにされた。  
+
+*RDNA* は *GCN* との比較で電力効率が50%向上したが、*RDNA 2* ではそのさらに50%の向上が達成されるとする。  
+また、*Ray Tracing* と *Variable Rate Shading* の対応も明言されたが、それらはXbox Series X、PS5からの情報で既に明らかになっていたため、そこまでの驚きはないかもしれない。  
+
+性能面でも妥協のない4Kゲーミングをもたらす、とAMDは述べており、  
+相変わらず出てこない [Navi12](/tags/navi12) では [Navi10](/tags/navi10) 以上のゲーミング性能を目標とせず、  
+*Navi10* のターゲットであった1440Pより上の4Kは *RDNA2* で果たす、ということと思われる。  
+
+動作デモはなかったが、*RDNA 2* 実物でDXR 1.1を実行した際のスクリーンショットは公開された。  
+
+そしてAMDは2020年後期に最初の*RDNA 2* ベースの製品を発売する予定にある。  
+
+ > The first AMD RDNA 2-based products are expected to launch in late 2020.
+
+ > 引用元: <cite>[AMD Details Strategy to Deliver Best-in-Class Growth and Strong Shareholder Returns at 2020 Financial Analyst Day | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/amd-details-strategy-deliver-best-class-growth-and-strong)  
+
+### RDNA 3
+*RDNA 3* もロードマップ上に姿を現したが、*CDNA 2* 同様に Advanced Node とされ、具体的なプロセスは明らかにされなかった。  
+
+<hr>
+<div class="reference">参考:</div>
+
+ * <cite>[Powering the Exascale Era | AMD](https://www.amd.com/en/products/exascale-era)</cite>
+
+[^1]: [AMDは8 GPUsのシステムを計画している？ | Coelacanth's Dream](http://localhost:1313/posts/2019/11/26/amd-planning-8gpus-system/)
+[^2]: [Ponte Vecchio: The Old Bridge in the land of Gelato - Analyzing Intel’s Discrete Xe-HPC Graphics Disclosure: Ponte Vecchio, Rambo Cache, and Gelato](https://www.anandtech.com/show/15188/analyzing-intels-discrete-xe-hpc-graphics-disclosure-ponte-vecchio/3)

@@ -16,7 +16,7 @@ RDNA世代で初のUSB-Cコネクタを実装した、Radeon Pro W5700が出て�
 以下のパッチを読むとASICはNavi10だけが対象とされており、  
 [[PATCH v3 3/3] drm/amdgpu: Add support for USB-C PD FW download](https://lists.freedesktop.org/archives/amd-gfx/2020-March/046846.html)  
 USB-Cコントローラーを内蔵しているのがNavi10のみ（Navi12, Navi14には無い）、  
-もしくはコントローラーは内蔵されていても、コネクタが実装されるのは現状Navi10ベースの製品しか予定にない、ということかもしれない。  
+もしくはコントローラーは内蔵されていても、コネクタが実装されるのは現状Navi10ベースの製品しか予定にない、ということだろう。  
 
 Navi14ベースのRadeon Pro 5300M /5500Mを搭載した[MacBook Pro 16-inch](https://www.apple.com/macbook-pro-16/specs/)にもUSB-C (Thunderbolt 3)は実装されているが、  
 そちらは Intel JHL7540 Thunderbolt 3コントローラーを経由するため、問題無いのだと思われる。[^1][^2]  

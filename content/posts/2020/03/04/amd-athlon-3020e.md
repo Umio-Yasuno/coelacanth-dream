@@ -21,8 +21,8 @@ noindex: false
 
 A4-3020Eの基本的な仕様は、  
 CPU: 2-Core/2-Thread、Base Freq 1.2GHz、Max Turbo Freq 2.6GHz、L2キャッシュ 1MB、L3キャッシュ 4MB。  
-CPUの仕様だけを見れば、先日公式に発表されたR1102Gとまんま同じだ。  
-A4というセグメントが付けられてはいるが、ASICもR1102Gと同じRaven2ベース (Zen APU)のSKUだと思われる。  
+CPUの仕様だけを見れば、先日公式に発表されたRyzen Embedded R1102Gとまんま同じだ。  
+A4というセグメントが付けられてはいるが、R1102Gと同じRaven2ベース (Zen APU)のSKUだと思われる。  
 少なくともキャッシュの仕様から、Zenアーキテクチャであることは確かだ。  
 
 ただ、GPUの仕様は不明なため触れないでおくが、メモリとPCIeレーンの仕様はR1102Gとは違っている。  
