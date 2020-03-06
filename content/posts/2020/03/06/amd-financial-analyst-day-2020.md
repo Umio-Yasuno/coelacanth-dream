@@ -2,14 +2,13 @@
 title: "AMD Financial Analyst Day 2020 個人的まとめ"
 date: 2020-03-06T07:03:36+09:00
 draft: false
-tags: [ "Radeon", "Arcturus", "Ryzen" ]
+tags: [ "Radeon", "Arcturus", "CDNA", "RDNA", "RDNA2", "Zen3", "Zen4" ]
 keywords: [ "", ]
 categories: [ "Hardware", "CPU", "GPU" ]
 noindex: false
 ---
 
 AMD Financial Analyst Day 2020の気になった部分を、AMDのスライド、プレスリリースからまとめた。  
-
 [Financial Analyst Day – 2020 | Advanced Micro Devices](https://ir.amd.com/events/event-details/financial-analyst-day-2020)  
 [AMD Details Strategy to Deliver Best-in-Class Growth and Strong Shareholder Returns at 2020 Financial Analyst Day | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/amd-details-strategy-deliver-best-class-growth-and-strong)  
 
@@ -20,8 +19,8 @@ AMD Financial Analyst Day 2020の気になった部分を、AMDのスライド�
 {{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_4.webp" title="AMD Leadership Packaging" caption="画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Mark Papermaster: Future of High Performance](https://ir.amd.com/static-files/ccef22f0-f641-4fc5-861f-cb3d7d125a68)" >}}
 
 AMDは今回、チップレット、ハイブリッド2.5D、ダイスタッキングを組み合わせ、帯域幅密度を10倍以上向上させたパッケージング技術、**X3D** を明らかにした。  
-IntelのEMIB、Foveros技術への対抗と思われる。  
-AMDは以前3D積層によってコンピュータを1つのパッケージに統合するビジョンを発表していたが、*X3D* はそれを実現に近づける技術だ。[^3]  
+IntelのEMIB、Foveros技術への対抗と思われ、  
+AMDは以前3D積層によってコンピュータを1つのパッケージに統合するビジョンを発表していたが、*X3D* はそれを実現に近づける技術とされる。[^3]  
 
 [^3]: [【後藤弘茂のWeekly海外ニュース】AMDがCPUをフル3D積層へと進化させるビジョンを発表 - PC Watch](https://pc.watch.impress.co.jp/docs/column/kaigai/1098363.html)
 
@@ -36,6 +35,17 @@ AMDは以前3D積層によってコンピュータを1つのパッケージに�
 
 {{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_9.webp" title="CPU RoadMap" caption="画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Forrest Norrod: Data Center Leadership](https://ir.amd.com/static-files/15702f66-d8d1-4816-8906-9612580f9aa1)<cite>" >}}
 
+*Zen 3* のプロセスが7nmとされているが、これは *Zen 2* で採用されたTSMC N7プロセスではなく、EUV露光技術を使用したTSMC N7+プロセスだと思われる。  
+*N7+* ではN7と比べて、15%から20%上のトランジスタ密度を可能とし、消費電力も削減される。  
+
+ > N7+ is also providing improved overall performance. When compared to the N7 process, N7+ provides 15% to 20% more density and improved power consumption, making it an increasingly popular choice for the industry’s next-wave products.
+
+ > 引用元: <cite>[TSMC’s N7+ Technology is First EUV Process Delivering Customer Products to Market in High Volume](https://www.tsmc.com/tsmcdotcom/PRListingNewsArchivesAction.do?action=detail&newsid=THHIHIPGTH&language=E)</cite>
+
+*Zen 4* の5nmはTSMC N5と考えられ、そちらはN7と比べて、80%上のトランジスタ密度、16%の高速化、30%の低消費電力化を実現する見込みとなっている。[^4]  
+
+[^4]: [「当面は微細化を進められる」 TSMCが強調 (1/2) - EE Times Japan](https://eetimes.jp/ee/articles/1905/07/news046.html)
+
 ### Ryzen
 *Zen 3* アーキテクチャ採用の第4世代Ryzenも2020年中に提供するとしている。  
 
@@ -49,8 +59,8 @@ AMDは以前3D積層によってコンピュータを1つのパッケージに�
 
 {{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_5.webp" title="Data Center GPU Road Map" caption="画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Forrest Norrod: Data Center Leadership](https://ir.amd.com/static-files/15702f66-d8d1-4816-8906-9612580f9aa1)<cite>" >}}
 
-まだ出てきていない、7nmということから *CDNA* は [Arcturus](/tags/arcturus)を指し示していると思われる。  
-*CDNA 2* が既にロードマップ上にあるが、採用プロセスは明らかにされていない。  
+まだ出てきていない、7nm (恐らく *N7+*)ということから *CDNA* は [Arcturus](/tags/arcturus)を指し示していると思われる。  
+*CDNA 2* がロードマップ上にあるが、採用プロセスは明らかにされていない。  
 時期を考えれば *Zen4* 同様に5nmプロセスを採用しそうだが、そう記されていないのは設計がまだ完了していないためか。  
 
 {{< details smry="ひどく個人的な話だが、CDNAという名前には少し思う所がある。" >}}
@@ -86,6 +96,8 @@ Arcturusでは長く、MI100では製品的過ぎたが、*CDNA* は呼びやす
 そしてGPUネットワークの繋がれた線は、隣のGPUとそれより離れたGPUとで太さが違う。  
 そこで、隣の2GPUとはそれぞれ2リンク、それより離れた4GPUとはそれぞれ1リンクとすれば、合計リンク数がSDMAエンジンの数 8基と一致する。  
 恐らくそういったネットワーク設計になっているのではないかと *予想する* 。  
+*Vega20* は複数GPUのコヒーレント接続でリングバスを構築していたが、8GPUの場合でもベースとしてそれを残すのだろうか。  
+
 
 気になるのは時期と8GPUシステムが採用されるかどうかで、AMDが納入する予定の次世代Exascaleスパコン、*Frontier* と *El Capitan* はどちらもノードあたり GPU 4 : CPU 1 の設計とされている。  
 
@@ -104,21 +116,25 @@ AMDが今回、パッケージング技術 **X3D** を発表したのは、そ�
 {{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_10.webp" title="AMD 3rd Gen Infinity Architecture Enables Accelerated Computing" caption="画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Mark Papermaster: Future of High Performance](https://ir.amd.com/static-files/ccef22f0-f641-4fc5-861f-cb3d7d125a68)" >}}
 
 倍近くということから、PCIe Gen5を想定している可能性がある。  
-また、CPUとGPUのメモリ統合による、アドレス変換のオーバヘッドの削減も要因に含まれると考えられる。  
+また、CPUとGPUのメモリ統合による、従来あったアドレス変換のオーバヘッドの削減も効果しているはずだ。  
 
 ### RDNA 2
 {{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_8.webp" title="Gaming GPU RoadMap" caption="画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Rick Bergman: Driving Growth Across PCs and Gaming](https://ir.amd.com/static-files/dd12bed4-a96e-42e7-b2d9-3940183e2473)<cite>" >}}
 
-RDNA2の製品情報までは出なかったが、RDNAからの進化点は明らかにされた。  
+*RDNA 2* の製品情報までは出なかったが、RDNAからの進化点は明らかにされた。  
 
 *RDNA* は *GCN* との比較で電力効率が50%向上したが、*RDNA 2* ではそのさらに50%の向上が達成されるとする。  
+*RDNA 2* も *N7+* で生産されると思われるが、電力効率の向上はプロセス技術の進化だけではなく、マイクロアーキテクチャの改良、物理設計の最適化で実現するとしている。  
+
+{{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_11.webp" title="AMD RDNA 2 Perf/Watt Improve" caption="画像元: <cite>[FINANCIAL ANALYST DAY 2020 - David Wang: Driving GPU Leadership](https://ir.amd.com/static-files/321c4810-ffe2-4d6c-863f-690464c033a9)<cite>" >}}
+
 また、*Ray Tracing* と *Variable Rate Shading* の対応も明言されたが、それらはXbox Series X、PS5からの情報で既に明らかになっていたため、そこまでの驚きはないかもしれない。  
 
 性能面でも妥協のない4Kゲーミングをもたらす、とAMDは述べており、  
 相変わらず出てこない [Navi12](/tags/navi12) では [Navi10](/tags/navi10) 以上のゲーミング性能を目標とせず、  
 *Navi10* のターゲットであった1440Pより上の4Kは *RDNA2* で果たす、ということと思われる。  
 
-動作デモはなかったが、*RDNA 2* 実物でDXR 1.1を実行した際のスクリーンショットは公開された。  
+動作デモはなかったが、*RDNA 2* 実シリコンにて DXR 1.1 を実行した際のスクリーンショットは公開された。  
 
 そしてAMDは2020年後期に最初の*RDNA 2* ベースの製品を発売する予定にある。  
 
