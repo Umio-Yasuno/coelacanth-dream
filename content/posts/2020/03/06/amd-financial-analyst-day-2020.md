@@ -26,7 +26,7 @@ AMDは以前3D積層によってコンピュータを1つのパッケージに�
 
 ## CPU
 ### EPYC
-*Zen 3* アーキテクチャを採用する第3世代EPYC *Milan* は2020年後期に導入予定であり、続く*Zen 4* アーキテクチャでは5nmプロセスを採用することを発表した。  
+*Zen 3* アーキテクチャを採用する第3世代EPYC *Milan* は2020年後期に導入予定であり、続く *Zen 4* アーキテクチャでは5nmプロセスを採用することを発表した。  
 
  > AMD plans to introduce the first processors based on its next-generation “Zen 3” core in late 2020. The “Zen 4” core is currently in design and is targeted to use advanced 5nm process technology.
 
@@ -35,7 +35,7 @@ AMDは以前3D積層によってコンピュータを1つのパッケージに�
 
 {{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_9.webp" title="CPU RoadMap" caption="画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Forrest Norrod: Data Center Leadership](https://ir.amd.com/static-files/15702f66-d8d1-4816-8906-9612580f9aa1)<cite>" >}}
 
-*Zen 3* のプロセスが7nmとされているが、これは *Zen 2* で採用されたTSMC N7プロセスではなく、EUV露光技術を使用したTSMC N7+プロセスだと思われる。  
+*Zen 3* のプロセスが7nmとされているが、これは *Zen 2* で採用されたTSMC N7プロセスではなく、EUV露光技術を使用した *TSMC N7+プロセス* だと思われる。  
 *N7+* ではN7と比べて、15%から20%上のトランジスタ密度を可能とし、消費電力も削減される。  
 
  > N7+ is also providing improved overall performance. When compared to the N7 process, N7+ provides 15% to 20% more density and improved power consumption, making it an increasingly popular choice for the industry’s next-wave products.
@@ -52,6 +52,9 @@ AMDは以前3D積層によってコンピュータを1つのパッケージに�
  >  AMD is on track to bring increased performance to the gaming, content creation and productivity markets when it delivers the first “Zen 3”-based AMD Ryzen™ product in 2020.
 
  > 引用元: <cite>[AMD Details Strategy to Deliver Best-in-Class Growth and Strong Shareholder Returns at 2020 Financial Analyst Day | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/amd-details-strategy-deliver-best-class-growth-and-strong)  
+
+<br>
+しかし、アーキテクチャの具体的な改良点やプラットフォームに関しては今回明らかにされなかった。  
 
 ## GPU
 ### CDNA
@@ -133,8 +136,14 @@ AMDが今回、パッケージング技術 **X3D** を発表したのは、そ�
 性能面でも妥協のない4Kゲーミングをもたらす、とAMDは述べており、  
 相変わらず出てこない [Navi12](/tags/navi12) では [Navi10](/tags/navi10) 以上のゲーミング性能を目標とせず、  
 *Navi10* のターゲットであった1440Pより上の4Kは *RDNA2* で果たす、ということと思われる。  
+しかし、今回の発表の中でRDNAアーキテクチャの特徴に、モバイルからクラウドゲーミングまでカバーするスケーラブルな構成であることがあげられた。  
 
-動作デモはなかったが、*RDNA 2* 実シリコンにて DXR 1.1 を実行した際のスクリーンショットは公開された。  
+{{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_12.webp" title="AMD RDNA Architecture" caption="画像元: <cite>[FINANCIAL ANALYST DAY 2020 - David Wang: Driving GPU Leadership](https://ir.amd.com/static-files/321c4810-ffe2-4d6c-863f-690464c033a9)<cite>" >}}
+
+Navi12はRDNA世代では唯一SR-IOV (MxGPU)用のDevice IDが用意されており、その機能が強化されている。  
+そのことと合わせると、昨今広まりつつあるクラウドゲーミング向けのGPUとして *Navi12* が出てくる可能性も十分にある。  
+
+*RDNA 2* の動作デモはなかったが、実シリコンにて DXR 1.1 を実行した際のスクリーンショットは公開された。  
 
 そしてAMDは2020年後期に最初の*RDNA 2* ベースの製品を発売する予定にある。  
 
