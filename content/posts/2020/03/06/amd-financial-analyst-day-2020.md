@@ -116,13 +116,16 @@ Arcturusでは長く、MI100では製品的過ぎたが、*CDNA* は呼びやす
 
 {{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_3.webp" title="3rd Gen AMD Infinity Architecture - GPU Network" caption="隣のGPUとの線がそれより離れたGPUとの線より太く、<br>また、対角のGPUには繋がれていない。<br><br>画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Forrest Norrod: Data Center Leadership](https://ir.amd.com/static-files/15702f66-d8d1-4816-8906-9612580f9aa1)<cite>" >}}
 
-しかしArcturus関連のコードから、ArcturusにはXGMIに最適化されたSDMAエンジンは8基ある。[^1]  
+<del>しかしArcturus関連のコードから、ArcturusにはXGMIに最適化されたSDMAエンジンは8基ある。[^1]  
 そしてGPUネットワークの繋がれた線は、隣のGPUとそれより離れたGPUとで太さが違う。  
 そこで、隣の2GPUとはそれぞれ2リンク、それより離れた4GPUとはそれぞれ1リンクとすれば、合計リンク数がSDMAエンジンの数 8基と一致する。  
-恐らくそういったネットワーク設計になっているのではないかと *予想する* 。  
-*Vega20* は複数GPUのコヒーレント接続でリングバスを構築していたが、8GPUの場合でもベースとしてそれを残すのだろうか。  
+恐らくそういったネットワーク設計になっているのではないかと予想する。</del>  
+大間違い。XGMIに最適化されたSDMAエンジンは6基だった。[^5]  
+リンク数はどのGPUに対しても変わらない可能性のが高い。<span class="hide">間抜けなシーラカンス……</span>  
 
-{{< figure src="/image/2020/03/06/gpu-network-guess.webp" title="GPU ネットワーク 予想図" width="54%" >}}
+[^5]:[drm/amdkfd: Set number of xgmi optimized SDMA engines for arcturus](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/amdkfd?h=amd-staging-drm-next&id=b6689cf7b9cd2600ebd6981e19fb5f697819a60b)  
+
+*Vega20* は複数GPUのコヒーレント接続でリングバスを構築していたが、8GPUの場合でもベースとしてそれを残すのだろうか。  
 
 {{< ins datetime="2020-03-06T19:06:04" >}}
 こういったネットワークを *コーダルリング (Chordal Ring)* と呼ぶらしい。  
