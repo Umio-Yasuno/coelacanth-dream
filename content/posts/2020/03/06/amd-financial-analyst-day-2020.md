@@ -121,7 +121,8 @@ Arcturusでは長く、MI100では製品的過ぎたが、*CDNA* は呼びやす
 そこで、隣の2GPUとはそれぞれ2リンク、それより離れた4GPUとはそれぞれ1リンクとすれば、合計リンク数がSDMAエンジンの数 8基と一致する。  
 恐らくそういったネットワーク設計になっているのではないかと予想する。</del>  
 大間違い。XGMIに最適化されたSDMAエンジンは6基だった。[^5]  
-リンク数はどのGPUに対しても変わらない可能性のが高い。<span class="hide">間抜けなシーラカンス……</span>  
+使用するSDMAエンジン数はどのGPUに対しても変わらない可能性のが高い。  
+というかSDMAエンジン数=リンク数のように書いてたが、リンク数はまた別の話だ。<span class="hide">間抜けなシーラカンス……</span>  
 
 [^5]:[drm/amdkfd: Set number of xgmi optimized SDMA engines for arcturus](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/amdkfd?h=amd-staging-drm-next&id=b6689cf7b9cd2600ebd6981e19fb5f697819a60b)  
 
