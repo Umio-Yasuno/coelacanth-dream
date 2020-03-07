@@ -41,7 +41,6 @@ NVIDIAはさっぱり。
 
 <address>
 連絡先:  
-&emsp;Reddit: <https://www.reddit.com/user/coelacanth_poor>  
 &emsp;Github: [Issues · Umio-Yasuno/umio-yasuno.github.io](https://github.com/Umio-Yasuno/umio-yasuno.github.io/issues)  
 &emsp;Mail: <span class="mail"></span>
 </address>

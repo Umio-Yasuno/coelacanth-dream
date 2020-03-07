@@ -2,7 +2,7 @@
 title: "AMD Financial Analyst Day 2020 個人的まとめ"
 date: 2020-03-06T07:03:36+09:00
 draft: false
-tags: [ "Radeon", "Arcturus", "CDNA", "RDNA", "RDNA2", "Zen3", "Zen4" ]
+tags: [ "Radeon", "Arcturus", "CDNA", "RDNA", "RDNA\ 2", "Zen\ 3", "Zen\ 4" ]
 keywords: [ "", ]
 categories: [ "Hardware", "CPU", "GPU" ]
 noindex: false
@@ -16,17 +16,16 @@ AMD Financial Analyst Day 2020の気になった部分を、AMDのスライド�
 
 ## Table Of Content
 
- * [X3D](#x3d)
+ * [AMDの新パッケージング技術X3D](#x3d)
  * [CPU](#cpu)
- 	* [EPYC](#epyc)
-	* [Ryzen](#ryzen)
+ 	* [2020年後期にZen 3 EPYC、Milan導入](#epyc)
+	* [第4世代Ryzenも2020年中に登場](#ryzen)
  * [GPU](#gpu)
- 	* [CDNA](#cdna)
-	* [3rd Gen Infinity Architecturue](#3rd-gen-infinity-architecturue)
-	* [RDNA 2](#rdna-2)
-	* [RDNA 3](#rdna-3)
+ 	* [コンピュート向け GPUアーキテクチャ、CDNA](#cdna)
+	* [8 GPU構成、CPUとGPUのメモリ空間統合を可能へ](#3rd-gen-infinity-architecturue)
+	* [2020年後期にRDNA 2ベースGPUを発売予定](#rdna-2)
 
-## X3D
+## AMDの新パッケージング技術X3D {#x3d}
 
 {{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_4.webp" title="AMD Leadership Packaging" caption="画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Mark Papermaster: Future of High Performance](https://ir.amd.com/static-files/ccef22f0-f641-4fc5-861f-cb3d7d125a68)" >}}
 
@@ -37,7 +36,7 @@ AMDは以前3D積層によってコンピュータを1つのパッケージに�
 [^3]: [【後藤弘茂のWeekly海外ニュース】AMDがCPUをフル3D積層へと進化させるビジョンを発表 - PC Watch](https://pc.watch.impress.co.jp/docs/column/kaigai/1098363.html)
 
 ## CPU
-### EPYC
+### 2020年後期にZen 3 EPYC、Milan導入 {#epyc}
 *Zen 3* アーキテクチャを採用する第3世代EPYC *Milan* は2020年後期に導入予定であり、続く *Zen 4* アーキテクチャでは5nmプロセスを採用することを発表した。  
 
  > AMD plans to introduce the first processors based on its next-generation “Zen 3” core in late 2020. The “Zen 4” core is currently in design and is targeted to use advanced 5nm process technology.
@@ -54,11 +53,21 @@ AMDは以前3D積層によってコンピュータを1つのパッケージに�
 
  > 引用元: <cite>[TSMC’s N7+ Technology is First EUV Process Delivering Customer Products to Market in High Volume](https://www.tsmc.com/tsmcdotcom/PRListingNewsArchivesAction.do?action=detail&newsid=THHIHIPGTH&language=E)</cite>
 
-*Zen 4* の5nmはTSMC N5と考えられ、そちらはN7と比べて、80%上のトランジスタ密度、16%の高速化、30%の低消費電力化を実現する見込みとなっている。[^4]  
+*Zen 4* の5nmはTSMC N5プロセスと考えられ、そちらはN7と比べて、80%上のトランジスタ密度、16%の高速化、30%の低消費電力化を実現する見込みとなっている。[^4]  
 
 [^4]: [「当面は微細化を進められる」 TSMCが強調 (1/2) - EE Times Japan](https://eetimes.jp/ee/articles/1905/07/news046.html)
 
-### Ryzen
+{{< ins datetime="2020-03-07T13:20:40" >}}
+
+しかし従来AMDが用いていた '7nm+' という表記を使わなかったことは、必ずしもTSMC N7+を採用するとは限らないと[AnandTech](anandtech.com)は指摘している。  
+[AMD Clarifies Comments on 7nm / 7nm+ for Future Products: EUV Not Specified](https://www.anandtech.com/show/15589/amd-clarifies-comments-on-7nm-7nm-for-future-products-euv-not-specified)  
+そのため、N7プロセスを改良したN7Pプロセスを採用する可能性もある。  
+*N7P* はN7とデザインに互換性があるものの、EUV露光技術は使われない。  
+
+{{< /ins >}}
+
+
+### 第4世代Ryzenも2020年中に登場 {#ryzen}
 *Zen 3* アーキテクチャ採用の第4世代Ryzenも2020年中に提供するとしている。  
 
  >  AMD is on track to bring increased performance to the gaming, content creation and productivity markets when it delivers the first “Zen 3”-based AMD Ryzen™ product in 2020.
@@ -69,7 +78,7 @@ AMDは以前3D積層によってコンピュータを1つのパッケージに�
 しかし、アーキテクチャの具体的な改良点やプラットフォームに関しては今回明らかにされなかった。  
 
 ## GPU
-### CDNA
+### コンピュート向け GPUアーキテクチャ、CDNA {#cdna}
 今回新たに **CDNA** の名が出された。  
 
 {{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_5.webp" title="Data Center GPU Road Map" caption="画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Forrest Norrod: Data Center Leadership](https://ir.amd.com/static-files/15702f66-d8d1-4816-8906-9612580f9aa1)<cite>" >}}
@@ -90,7 +99,7 @@ AMDは以前3D積層によってコンピュータを1つのパッケージに�
 
 Arcturusでは長く、MI100では製品的過ぎたが、*CDNA* は呼びやすく、その点では好き。  
 {{< /details >}}
-#### 3rd Gen Infinity Architecturue
+#### 8 GPU構成、CPUとGPUのメモリ空間統合を可能へ {#3rd-gen-infinity-architecturue}
 
 {{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_1.webp" title="3rd Gen AMD Infinity Architecture" caption="画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Mark Papermaster: Future of High Performance](https://ir.amd.com/static-files/ccef22f0-f641-4fc5-861f-cb3d7d125a68)<cite>" >}}
 
@@ -128,7 +137,7 @@ Arcturusでは長く、MI100では製品的過ぎたが、*CDNA* は呼びやす
  > 引用元: <cite>[HPE and AMD power complex scientific discovery in world’s fastest supercomputer for U.S. Department of Energy’s (DOE) National Nuclear Security Administration (NNSA) | HPE](https://www.hpe.com/us/en/newsroom/press-release/2020/03/hpe-and-amd-power-complex-scientific-discovery-in-worlds-fastest-supercomputer-for-us-department-of-energys-doe-national-nuclear-security-administration-nnsa.html)</cite>
 
 *Frontier* は2021年納入予定であり、調整の時間を考えると *CDNA* を、  
-*El Captitan* は2022年か2023年早期に納入予定とのことから、*CDNA 2* をGPUに採用するのではないかと個人的に考えている。  
+*El Captitan* は2022年か2023年早期に納入予定、そして *3rd Gen Infinity Architecture* に対応することから、*CDNA 2* をGPUに採用するとされる。  
 別段スパコンだけがGPGPUを使う訳ではなく、データセンターや別のスパコンでも採用されるはずだが、それらスパコンが GPU 4 : CPU 1となると、今の段階では GPU 8 : CPU 1 の設計の採用予定は無いのかもしれない。  
 ボード開発や、8GPUに対応したブリッジに課題が残っている可能性もある。8GPUもの規模になるとIntelが{{< xe class="hpc" >}}を16基搭載する *Ponte Vecchio* の構想で示したように、GPUをPCIeカードに収めるのではなく、ボード上に8GPUを搭載する形のが良いだろう。[^2]  
 AMDが今回、パッケージング技術 **X3D** を発表したのは、その布石かもしれない。もしかしなくてもIntel、AMDで近い形になるか。  
@@ -140,7 +149,7 @@ AMDが今回、パッケージング技術 **X3D** を発表したのは、そ�
 倍近くということから、PCIe Gen5を想定している可能性がある。  
 また、CPUとGPUのメモリ統合による、従来あったアドレス変換のオーバヘッドの削減も効果しているはずだ。  
 
-### RDNA 2
+### 2020年後期にRDNA 2ベースGPUを発売予定 {#rdna-2}
 {{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_8.webp" title="Gaming GPU RoadMap" caption="画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Rick Bergman: Driving Growth Across PCs and Gaming](https://ir.amd.com/static-files/dd12bed4-a96e-42e7-b2d9-3940183e2473)<cite>" >}}
 
 *RDNA 2* の製品情報までは出なかったが、RDNAからの進化点は明らかにされた。  
@@ -170,7 +179,7 @@ Navi12はRDNA世代では唯一SR-IOV (MxGPU)用のDevice IDが用意されて�
 
  > 引用元: <cite>[AMD Details Strategy to Deliver Best-in-Class Growth and Strong Shareholder Returns at 2020 Financial Analyst Day | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/amd-details-strategy-deliver-best-class-growth-and-strong)  
 
-### RDNA 3
+#### RDNA 3
 *RDNA 3* もロードマップ上に姿を現したが、*CDNA 2* 同様に Advanced Node とされ、具体的なプロセスは明らかにされなかった。  
 
 <hr>
