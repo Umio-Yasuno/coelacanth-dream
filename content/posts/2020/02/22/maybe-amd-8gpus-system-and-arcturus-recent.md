@@ -2,7 +2,7 @@
 title: "Arcturus情報近況 (2020/02/22)"
 date: 2020-02-22T08:54:20+09:00
 draft: false
-tags: [ "Radeon", "GCN", "gfx908", "GFX9", "Arcturus" ]
+tags: [ "Radeon", "gfx908", "GFX9", "Arcturus" ]
 keywords: [ "Arcturus", "gfx908" ]
 categories: [ "Hardware", "GPU", "AMD" ]
 noindex: false

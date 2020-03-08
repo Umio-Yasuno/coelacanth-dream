@@ -59,7 +59,7 @@ AMDは以前3D積層によってコンピュータを1つのパッケージに�
 
 {{< ins datetime="2020-03-07T13:20:40" >}}
 
-しかし従来AMDが用いていた '7nm+' という表記を使わなかったことは、必ずしもTSMC N7+を採用するとは限らないと[AnandTech](anandtech.com)は指摘している。  
+しかし従来AMDが用いていた '7nm+' という表記を使わなかったことは、必ずしもTSMC N7+を採用するとは限らないことを意味する、と[AnandTech](anandtech.com)は指摘している。  
 [AMD Clarifies Comments on 7nm / 7nm+ for Future Products: EUV Not Specified](https://www.anandtech.com/show/15589/amd-clarifies-comments-on-7nm-7nm-for-future-products-euv-not-specified)  
 そのため、N7プロセスを改良したN7Pプロセスを採用する可能性もある。  
 *N7P* はN7とデザインに互換性があるものの、EUV露光技術は使われない。  
@@ -114,15 +114,15 @@ Arcturusでは長く、MI100では製品的過ぎたが、*CDNA* は呼びやす
 
 そしてGPUネットワークをよく見るとわかるが、あるGPUの対角に位置するGPUには線がない。（これも簡略されてる可能性があるが）  
 
-{{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_3.webp" title="3rd Gen AMD Infinity Architecture - GPU Network" caption="隣のGPUとの線がそれより離れたGPUとの線より太く、<br>また、対角のGPUには繋がれていない。<br><br>画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Forrest Norrod: Data Center Leadership](https://ir.amd.com/static-files/15702f66-d8d1-4816-8906-9612580f9aa1)<cite>" >}}
+{{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_3.webp" title="3rd Gen AMD Infinity Architecture - GPU Network" caption="対角のGPUには繋がれていない。<br><br>画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Forrest Norrod: Data Center Leadership](https://ir.amd.com/static-files/15702f66-d8d1-4816-8906-9612580f9aa1)<cite>" >}}
 
 <del>しかしArcturus関連のコードから、ArcturusにはXGMIに最適化されたSDMAエンジンは8基ある。[^1]  
 そしてGPUネットワークの繋がれた線は、隣のGPUとそれより離れたGPUとで太さが違う。  
 そこで、隣の2GPUとはそれぞれ2リンク、それより離れた4GPUとはそれぞれ1リンクとすれば、合計リンク数がSDMAエンジンの数 8基と一致する。  
 恐らくそういったネットワーク設計になっているのではないかと予想する。</del>  
-大間違い。XGMIに最適化されたSDMAエンジンは6基だった。[^5]  
+<ins datetime="2020-03-07T16:37:28">大間違い。XGMIに最適化されたSDMAエンジンは6基だった。[^5]  
 使用するSDMAエンジン数はどのGPUに対しても変わらない可能性のが高い。  
-というかSDMAエンジン数=リンク数のように書いてたが、リンク数はまた別の話だ。<span class="hide">間抜けなシーラカンス……</span>  
+というかSDMAエンジン数=リンク数のように書いてたが、リンク数はまた別の話だ。<span class="hide">間抜けなシーラカンス……</span></ins>  
 
 [^5]:[drm/amdkfd: Set number of xgmi optimized SDMA engines for arcturus](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/amdkfd?h=amd-staging-drm-next&id=b6689cf7b9cd2600ebd6981e19fb5f697819a60b)  
 

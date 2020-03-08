@@ -2,7 +2,7 @@
 title: "公式が常に正しいとは限らない"
 date: 2019-11-09T04:34:12+09:00
 draft: false
-tags: [ "CPU", "GPU" ]
+tags: [ ]
 categories: [ "Hardware", "AMD" ]
 ---
 

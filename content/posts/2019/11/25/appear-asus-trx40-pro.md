@@ -1,7 +1,7 @@
 ---
 title: "米AmazonにてASUS TRX40-PROが現れる"
 date: 2019-11-25T15:40:19+09:00
-draft: false
+draft: true
 tags: [ "ASUS", "TRX40" ]
 keywords: [ "TRX40", "Threadripper", ]
 categories: [ "Hardware", "AMD", "Motherboard" ]

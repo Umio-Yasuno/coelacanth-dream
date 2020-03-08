@@ -79,7 +79,8 @@ noindex: false
 | VCE | Video Compression (/Codec) Engine | |
 | VCN | Video Core Next | |
 | DC | Display Core | |
-| DCE |
+| PSR | Panel Self-Refresh | eDP PowerSave |
+| DCE | Display Core Engine? | |
 | DMCUB | Display Micro Controller Unit B | |
 | HBCC | High Bandwidth Cache Controller | GFX9+ |
 | DSBR | Draw Stream Binning Rasterrizer | GFX9+ |
