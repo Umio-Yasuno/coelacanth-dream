@@ -1,5 +1,5 @@
 ---
-title: "Navi12情報近況 & 推測"
+title: "Navi12情報近況 (2020-03-09) & 推測"
 date: 2020-03-09T04:16:47+09:00
 draft: false
 tags: [ "gfx1011", "Navi12", "RDNA" ]
