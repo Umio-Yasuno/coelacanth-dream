@@ -17,7 +17,7 @@ noindex: false
 *Navi12* 及び *Navi14* 、*Arcturus* は、*Vega20* よりも広範なドット積の混合演算に対応する。  
 ドット積の混合演算は機械学習の推論高速化に用いられる。[^2]  
 
-[^2]: [Introduction - rdna-whitepaper.pdf](https://www.amd.com/system/files/documents/rdna-whitepaper.pdf)
+[^2]: [Introduction - rdna-whitepaper.pdf - Page 13](https://www.amd.com/system/files/documents/rdna-whitepaper.pdf#page=13)
 
 LLVMの記述に合わせて言えば、*Vega20* では `dot1-insts`、`dot2-insts` までの対応だったのが、  
 *Navi12* 、*Navi14* では `dot5-insts`、`dot6-insts` が、  
