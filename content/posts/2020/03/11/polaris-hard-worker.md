@@ -30,7 +30,7 @@ AMD公式サイトでのスペックでは無印、GME共に `第三代 14nm 工
 内 *RX 580G* 、*RX 580 2048SP* は中国市場限定。  
 RX 580X の最大クロックが1340MHz、RX 590 GME は1380MHzであるから、*RX 580 XT* としても良かったかもしれないが、それでは RX 580 の枠内が複雑になってしまうし、中国市場限定というのがわかりにくい。  
 
-[^1]: <cite>[AMD Radeon RX 590 GPU | AMD 显卡 | AMD](https://www.amd.com/zh-hans/products/graphics/radeon-rx-590#product%20footnotetids_9496-1866-2116-816)</cite> <br> 英語版でもそれは同様。 [AMD Radeon RX 590 GPU | AMD Graphics Card | AMD](https://www.amd.com/en/products/graphics/radeon-rx-590#product-specs)
+[^1]: <cite>[AMD Radeon RX 590 GPU | AMD 显卡 | AMD](https://www.amd.com/zh-hans/products/graphics/radeon-rx-590#product%20footnotetids_9496-1866-2116-816)</cite> <br> 英語版でもそれは同様。<br> [AMD Radeon RX 590 GPU | AMD Graphics Card | AMD](https://www.amd.com/en/products/graphics/radeon-rx-590#product-specs)
 [^2]: <cite>[蓝宝石RX590 8G D5 超白金 极光特别版 FO](https://www.sapphiretech.com/zh-cn/consumer/nitro-rx-590-8g-g5-se_c#Specification)</cite>
 [^3]: <cite>[蓝宝石RX 590 GME 8G D5 超白金 极光特别版](https://www.sapphiretech.com/zh-cn/consumer/nitro-rx-590-gme-8g-g5-se_c#Specification)</cite>
 
@@ -64,7 +64,9 @@ OEM向けを見てもわかるようにローエンドからメインストリ�
 これはやはり、1スタック構成でもVRAMにHBM2を採用するのはコスト的に難しかったのだろうか。PCIeカード型では1パッケージに納め、専有面積を減らすことの意義もオンボード実装であるモバイル向けよりは薄くなる。  
 
 そして後者にも関連するが、RX 5500 XTは自作PC市場において RX 590 しか置き換えたとは言えないし、AMDもそのつもりはないと思える。  
+
 {{< figure src="/image/2020/03/11/product-perf-matrix.webp" title="Radeon Product Performance Matrix" caption="画像出典: <cite>[パートナーリソース&情報 | AMDパートナーハブ](https://www.amd.com/ja/partner)</cite>" >}}
+
 RX 580/570等はメインストリームとして RX 5500 XTより下の性能帯に位置する。  
 Navi14ベースでは、メモリバス幅を96-bitに減らし、VRAMも3GBとなる製品があるはずだが、現状では RX 5300Mが発表されているのみで、デスクトップ、ワークステーション向けで近い製品はまだ表に出てきていない。  
 これは、RX 5500 XTではメモリバス幅が RX 580/570の半分である128-bit幅でも、GDDR6メモリがGDDR5に比べて倍近くの速度(14Gbps)を持ち、16Gbitチップも合わせ、帯域とVRAM容量でも綺麗に置き換えるのが可能だったのに対し、  
@@ -79,7 +81,10 @@ Navi14ベースでは、メモリバス幅を96-bitに減らし、VRAMも3GBと�
  > 引用元: <cite>[【後藤弘茂のWeekly海外ニュース】ZEN 2ベースの64コアCPU「Rome」はなぜCPUとI/Oを分離したのか - PC Watch](https://pc.watch.impress.co.jp/docs/column/kaigai/1156455.html)</cite>
 
 そして Navi14のダイサイズは約157mm<sup>2</sup>[^11]、Polaris10のダイサイズは約244mm<sup>2</sup>[^12]であるため、単純に計算すれば Navi14 は Polaris10 よりもコストが高い。  
-昨今の新型コロナウイルスによる市場への影響、新世代コンソール機によるGDDR6メモリチップの需要急増を考えると……Polarisにはまだまだ働き者でいる必要があるかもしれない。  
+それならば性能で見られることが多いコンシューマ向けではPolarisベースの製品を継続し、消費電力、電力効率が重要なモバイル向けやワークステーション向けに拡張していった方が良い、となる。  
+EUV露光技術を導入するプロセスではコストが改善されるが[^13]、Radeon GPUにおけるタイミングは早くとも[RDNA 2](/tags/rdna-2)からとなるため、ミドルやローエンド帯GPU好みの人には、またしばらくPolarisに働き者でいてもらわなければならないかもしれない。  
+そう言う自分もNavi14ベースのGPU欲しかったけど RX 560 のまま……  
 
 [^11]: [AMD@7nm@RDNA_1th_gen@Navi14@Radeon_RX_5500_XT@215-0932396@… | Flickr](https://www.flickr.com/photos/130561288@N04/49437016132/)
 [^12]: [comparison\_\_\_Fiji\_-\_Polaris10\_-\_Vega10\_-\_Polaris22 | Flickr](https://www.flickr.com/photos/130561288@N04/46202429935/)
+[^13]: [【福田昭のセミコン業界最前線】EUV露光による先端ロジックと先端DRAMの量産がついにはじまる - PC Watch](https://pc.watch.impress.co.jp/docs/column/semicon/1159880.html)
