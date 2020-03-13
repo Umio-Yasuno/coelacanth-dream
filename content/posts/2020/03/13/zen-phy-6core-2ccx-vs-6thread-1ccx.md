@@ -28,8 +28,7 @@ lps (Lines Per Second)は1秒あたりの実行回数を表す。
 
 ## 方法
 ### ベンチマークソフト
-ベンチマークソフトには、歴史ある [byte-unixbench](https://github.com/kdlucas/byte-unixbench) の一部、  
-それとOpenMPを有効にした [m-queens](https://github.com/sudden6/m-queens) を採用した。  
+ベンチマークソフトには、歴史ある[byte-unixbench](https://github.com/kdlucas/byte-unixbench) の一部、それとOpenMPを有効にした[m-queens](https://github.com/sudden6/m-queens)、レイテンシの測定に [sysbench](https://github.com/akopytov/sysbench) を採用した。  
 出来る限り上述したようなテストとは違うものを選んだつもりだが、やはり現実的なベンチマークというのは難しく、他に適したベンチマークソフトがあれば教えて頂けると嬉しい。それがLinuxに対応しており、計測が特別難しくなければ試すつもりでいる。  
 
 #### byte-unixbench
@@ -93,19 +92,41 @@ Ryzen 5 2600のトポロジを参考にすると、
 | Shell Scripts (16 concurrent) (lpm) | 3363.9 | 2595.7 (-23%) |
 | m-queens (Solution/s) | 12357498.9 | 9799726.6 (-21%) |
 
-## 考察
-正直、少し意外な結果だった。あんなメモリを使っているため、CCX間通信のオーバーヘッドが大きく、*6-Thread 1CCX* のが勝つのではないかと思っていた。  
-だが *6-Core 2CCX* が勝った。やはり物理コアは正義ということか。  
+| sysbench threads | 6-Core 2CCX | 6-Thread 1CCX |
+| :-- | :---: | :---: |
+| events/s (eps) | 26374.6090 | 25598.8243 |
+| Latency (ms) |
+| &emsp;&emsp;min | 0.15 | 0.15 |
+| &emsp;&emsp;avg | 0.23 | 0.23 |
+| &emsp;&emsp;max | 9.23 | 6.15 |
+| &emsp;95th percentile | 0.28 | 0.25 |
 
-`Process Creation` のみ *6-Thread 1CCX* が勝っているが、これはテストがメモリ帯域幅を反映する傾向にあり、メモリ割り当てではCPUのキャッシュが効きにくいため、CCX間通信が発生する *6-Core 2CCX* の方が遅くなった……ということなのだろうか。  
-CPUよりはメモリ帯域、プロセス生成の呼び出しを行なうOS、Kernel部を計測するテストであるため、不適当だったかもしれない。  
+| sysbench mutex (64threads) | 6-Core 2CCX | 6-Thread 1CCX |
+| :-- | :---: | :---: |
+| events/s (eps) | 21.2456 | 21.2207 |
+| Latency (ms) |
+| &emsp;&emsp;min | 1602.09 | 2318.88 |
+| &emsp;&emsp;avg | 2842.96 | 2902.36 |
+| &emsp;&emsp;max | 3000.67 | 2997.10 |
+| &emsp;95th percentile | 2985.89 | 2985.89 |
+
+## 考察
+正直、少し意外な結果だった。あんなメモリを使っているため、CCX間通信のオーバーヘッドが大きく、*6-Thread 1CCX* のが勝つのではないかと思っていた。レイテンシだけではなく一部性能でももしかしたらと。    
+だが *6-Core 2CCX* が勝った。  
+やはり物理コアは正義か。  
+
+byte-unixbench では `Process Creation` のみ *6-Thread 1CCX* が勝っているが、これはテストがメモリ帯域幅を反映する傾向にあり、メモリ割り当てではCPUのキャッシュが効きにくいため、CCX間通信が発生する *6-Core 2CCX* の方が遅くなった……ということなのだろうか。  
 [sysbench](https://github.com/akopytov/sysbench) と [stream](https://github.com/jeffhammond/STREAM) でもメモリ帯域を計測したところ、sysbench では *6-Thread 1CCX* が広いメモリ帯域を示したが、stream では逆に *6-Core 2CCX* が勝った。  
 しかし stream では差が2%程しかなかったのに対し、sysbench は read で約36%、write で約23%の差が見られた。  
 CCXを跨ぐことでメモリ帯域に影響があるが、具体的にどの部分が原因となっているかは今後の課題としたい。  
 より転送速度が高いメモリであれば、InfinityFabricの速度も向上するため、その差が縮まるといった結果が見られるかもしれない。  
 
+sysbench では *6-Thread 1CCX* がレイテンシにおいて、`max`、`95th percentile` の値が *6-Core 2CCX* より小さいが、 `events/s` では *6-Thread 1CCX* が負けている。  
+1CCX内に収まることで、確かにレイテンシが短くなったが、性能に影響が出る程ではない、またはリソースの競合が発生したか。  
+
 それと気をつけたいのは、今回の検証はCCXを跨ぐ場合のオーバーヘッドがどれだけあるかを確かめるのが主であり、SMTの効果の検証ではないということだ。それなら *6-Core/6-Thread* と *6-Core/12-Thread* を比較するのが適当だろう。  
 
+## 結論
 結論として、CCX間通信にオーバーヘッドがあっても、それはSMTによる論理コアで処理するより性能への影響はずっと小さく、物理コアに割り振るメリットで容易にカバーが可能と言える。  
 しかし、メモリ帯域に関してそれが確実に当てはまるとは言えない。  
 
