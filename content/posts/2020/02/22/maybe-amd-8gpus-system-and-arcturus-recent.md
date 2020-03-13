@@ -12,7 +12,7 @@ noindex: false
 
 ## Arcturusでは行列演算に対応
 結構今更な情報。  
-Arcturusではそれぞれが32-bit幅の AGPR (Accumulate? General-Purpose Register) が増設され、INT8 /FP16 /FP32 /BF16 32x32までの行列演算に対応すると思われる。  
+Arcturusではそれぞれが32-bit幅の AccVGPR (Accumulate? Vector General-Purpose Register) が増設され、INT8 /FP16 /FP32 /BF16 32x32までの行列演算に対応すると思われる。  
 NVIDIA Tensor CoreはVolta、TuringではFP16までの対応であり、BF16には対応してないため、学習精度という点では有利だが、NVIDIAもAmpereで対応しそうである。  
 また、専用ハードウェア追加ではなく、CU側での対応という汎用的なものであるから、性能がどこまで出るか。その分割かなければならないダイエリアも少なく済むが。  
 
