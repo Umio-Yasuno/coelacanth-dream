@@ -18,9 +18,7 @@ ChromiumOSへのパッチから以下の新たなZen Mobile SKUが見つかっ�
 
 [ 2040455: Rework map_oprom_vendev to add revision check and mapping —  Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2040455/3/src/soc/amd/picasso/northbridge.c#b326)  
 
-基本、既存のMobile向けSKUの末尾をUからCに置き換えたSKU名となるが、  
-パッチ内のRevision IDを照らし合わせるとRyzen 7 3700Cのみ、Ryzen 7 3700UではなくRyzen 7 3750Hと共有のものとなっている。  
-[AMDGPUのDID、RID、Productのびみょうまとめ Part2 | Coelacanth's Dream](/posts/2019/12/30/did-rid-product-matome-p2/#picasso-gfx902)  
+基本、既存のMobile向けSKUの末尾をUからCに置き換えたSKU名となる。  
 
 それとDaliの一部Revision ID、さらにはPollockもSKU名こそ不明だが一部が判明し、個人的には結構嬉しい発見だった。  
 

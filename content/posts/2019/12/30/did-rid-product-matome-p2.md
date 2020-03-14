@@ -79,7 +79,7 @@ BootCampDriver内のcccmanifest_64.xml。
 | | B2 | | (Vega 8) |
 | | B3 | | (Vega 6) |
 | | B4 | | (Vega 3) |
-| | C1 | 3700C[^7] /3750H | (Vega 10) |
+| | C1 | 3700C/U[^7] /3750H | (Vega 10) |
 | | C2 | 3500C/U[^7] /3550H | (Vega 8) |
 | | C3 | | (Vega 6) |
 | | C8 | 3400G | (AM4 Vega 11) |
@@ -87,7 +87,7 @@ BootCampDriver内のcccmanifest_64.xml。
 | | CA | | (AM4 Vega 11) |
 | | CB | | (AM4 Vega 8) |
 | | CD | | (AM4 Vega 2) |
-| | D1 | (PRO) 3700U | (Vega 10) |
+| | D1 | PRO 3700U | (Vega 10) |
 | | D2 | PRO 3500U | (Vega 8) |
 | | D3 | (PRO) 3300U | (Vega 6) |
 | | D4 | | (Vega 3) |
