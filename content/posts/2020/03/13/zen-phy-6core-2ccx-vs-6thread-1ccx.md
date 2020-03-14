@@ -26,25 +26,27 @@ noindex: false
 
 lps (Lines Per Second)は1秒あたりの実行回数を表す。  
 
-## 方法
 ### CPU
 まず、Ryzen 5 2600のトポロジは以下のようになっている。  
-{{< figure src="/image/2020/03/13/r5-2600-topo.webp" title="Ryzen 5 2600 トポロジ" caption="lstopo の実行結果" >}}
-物理コアに数字を割り振ってから、SMTによる論理コアに割り振っている。  
-そしてLinuxでは `taskset` コマンド[^1]で起動中のプロセス、または新たなコマンドを実行するCPUコアを指定することができる。  
-Ryzen 5 2600のトポロジを参考にすると、  
+{{< figure src="/image/2020/03/13/r5-2600-topo.webp" title="Ryzen 5 2600 トポロジ" caption="lstopo の実行結果" >}}  
+L3キャッシュ 8MBに 3-Core/6-Thread が付く形となり、それがZenアーキテクチャにおけるCCXを構成している。  
+Zen/+は本来ならCCXあたり4-Core/8-Threadを構成しているが、Ryzen 5 2600では2CCXそれぞれのCPUコアを1個ずつ無効化し、製品としている。  
 
-	taskset -c 0-5 ./<ベンチマークの実行バイナリ> <コア/スレッド数を指定>
+## 方法
+CPUコアの番号はまず物理コア、SMTによる論理コアの順番に割り振っている。  
+そしてLinuxでは `taskset` コマンド[^1]で起動中のプロセス、または新たなコマンドを実行するCPUコアを指定することができ、Ryzen 5 2600のトポロジを参考にすると、  
+
+	taskset -c 0-5 ./<ベンチマークの実行バイナリ> <6コア/スレッド数を指定>
 
 で *6-Core 2CCX* を、
 
-	taskset -c 0-2,6-8 ./<ベンチマークの実行バイナリ> <コア/スレッド数を指定>
+	taskset -c 0-2,6-8 ./<ベンチマークの実行バイナリ> <6コア/スレッド数を指定>
 
 で *6-Thread 1CCX* を指定して実行させられる。  
 
 [^1]: [taskset(1): retrieve/set process's CPU affinity - Linux man page](https://linux.die.net/man/1/taskset)
 
-また、省電力機能による誤差を減らすため、CPUクロックは3.6GHzで固定して計測を行なった。  
+また、省電力機能による誤差を減らすため、CPUクロックは3.6GHzで固定して計測を行なう。  
 
 ### ベンチマークソフト
 ベンチマークソフトには、歴史ある[byte-unixbench](https://github.com/kdlucas/byte-unixbench) の一部、それとOpenMPを有効にした[m-queens](https://github.com/sudden6/m-queens)、レイテンシの測定に [sysbench](https://github.com/akopytov/sysbench) を採用した。  
@@ -102,15 +104,6 @@ N(クイーンの数)は17とし、計測結果5回の平均をスコアとす�
 | &emsp;&emsp;avg | 0.23 | 0.23 |
 | &emsp;&emsp;max | 9.23 | 6.15 |
 | &emsp;95th percentile | 0.28 | 0.25 |
-
-| sysbench mutex (64threads) | 6-Core 2CCX | 6-Thread 1CCX |
-| :-- | :---: | :---: |
-| events/s (eps) | 21.2456 | 21.2207 |
-| Latency (ms) |
-| &emsp;&emsp;min | 1602.09 | 2318.88 |
-| &emsp;&emsp;avg | 2842.96 | 2902.36 |
-| &emsp;&emsp;max | 3000.67 | 2997.10 |
-| &emsp;95th percentile | 2985.89 | 2985.89 |
 
 ## 考察
 正直、少し意外な結果だった。あんなメモリを使っているため、CCX間通信のオーバーヘッドが大きく、*6-Thread 1CCX* のが勝つのではないかと思っていた。レイテンシだけではなく一部性能でももしかしたらと。    
