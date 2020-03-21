@@ -124,12 +124,14 @@ BootCampDriver内のcccmanifest_64.xml。
 | | CF | | (6W[^8]) |
 | | DE[^9] | | |
 | | DF[^9] | | |
-| | E3 /E4 | | (6W[^8] Vega 3) |
+| | E3 | | (6W[^8] Vega 3) |
+| | E4 | R1102G[^11] | (6W[^8] Vega 3) |
 [Page Top](#table-of-content)
 
 [^7]: [2040455: Rework map_oprom_vendev to add revision check and mapping —   Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2040455/3/src/soc/amd/picasso/northbridge.c#332)
 [^8]: [[Dali] Raven 2 detection Patch](https://lists.freedesktop.org/archives/amd-gfx/2020-February/045579.html) <br> <https://lists.freedesktop.org/archives/amd-gfx/attachments/20200205/f22ebc46/attachment.obj>
 [^9]: [[PATCH 28/35] drm/amd/display: Fix RV2 Variant Detection](https://lists.freedesktop.org/archives/amd-gfx/2020-February/046322.html)
+[^11]: amdgpu.ids [R-Series R1000 with Radeon™ Vega Graphics Drivers & Support | AMD](https://www.amd.com/en/support/embedded/amd-ryzen-embedded-r-series-processors/r-series-r1000-radeon-vega-graphics)
 
 ### Pollock ( gfx909 )
 | Device ID | Revision ID | Product Name | Memo |
