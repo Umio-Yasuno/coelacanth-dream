@@ -14,7 +14,17 @@ noindex: false
 情報元は主にDRMやMesa3Dへのパッチ、Githubのリポジトリ、公式資料。  
 知識はAMD CPU/GPUに偏っています。Intel CPU/GPUは少しだけ。NVIDIAはさっぱり。  
 
-当サイトはGithub Pageを利用しているため、更新内容、過去の状態は以下で確認することが出来ます。  
+<div style="clear:left"></div>
+
+### オープンソース
+
+当サイトはオープンソースに支えられています。  
+オープンソースなソフトウェアからハードウェアの情報を得て、  
+オープンソースである[Vim](https://www.vim.org/)で記事を書き、HTMLのテンプレートを編集し、  
+オープンソースである[Hugo](https://github.com/gohugoio/hugo)で Markdown で書いた記事等をビルドし、  
+オープンソースである [git](https://git-scm.com/) を使用して、Github Pageのレポジトリにアップロードしています。  
+
+それもありオープンなサイト、記事を目標に活動しています。  
 <https://github.com/Umio-Yasuno/umio-yasuno.github.io>
 
 ### ポリシー
@@ -34,9 +44,7 @@ noindex: false
 
 <div style="text-align:right">ポリシー最終更新日: 2020-03-07</div>
 
-あくまで上記はポリシーであり、別段強制力は持たない。  
-過去記事に思い切りポリシーから外れているようなのがあるし。ポリシー変更によって記事を削除することは（たぶん）ない。  
-
+あくまで上記はポリシーであり、別段強制力は持ちません。過去記事に思い切りポリシーから外れているようなのがあるし。ポリシー変更によって記事を削除することは（たぶん）ない。  
 
 <address>
 連絡先:  
@@ -44,6 +52,7 @@ noindex: false
 &emsp;Mail: <span class="mail"></span>
 </address>
 <br>
+ハードウェア系の文章に関するお仕事募集中。  
 
 <!--
 The Cloths of Heaven

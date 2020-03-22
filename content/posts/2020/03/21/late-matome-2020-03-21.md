@@ -18,11 +18,15 @@ noindex: true
 並べられている過去のAPUダイショットと見比べても、ディテールの度合いが大きく違い、*Renoir* はのっぺりしている。  
 [拡大画像 015l | AMD Ryzen Mobile 4000シリーズの詳細を明らかに (1) Ryzen Mobile 4000シリーズのアーキテクチャ詳細 | マイナビニュース](https://news.mynavi.jp/photo/article/20200316-997459/images/015l.jpg)  
 
-一応、フェイクダイショットを作成、使用するのは競合等からの解析を防ぐといった意味があるはずだ。それにそう珍しいことでもない。加えて言えば、公式が示すダイショットは、完全に信用することはできないが、全く信用できないという訳でもない。個人それぞれで判断するしかない。  
+一応、フェイクダイショットを作成、使用するのは機密を守るといった意味があり、そう珍しいことでもない。加えて言えば、公式が示すダイショットは、完全に信用することはできないが、全く信用できないという訳でもない。個人それぞれで判断するしかない。  
 
  > なお、この図はアーティストがCGで描いたものであり、実際のチップ写真ではなく、学術的な意味はない単なる壁紙である。
 
  > 引用元: <cite>[COOL Chips 22 - NVIDIAのGPUは真のクールAIチップ (1) アクセラレータとして必須となったGPU | マイナビニュース](https://news.mynavi.jp/article/20190516-822581/)</cite>
+
+今回の件に関しては、*Zen 2* コアの詳細は既にISSCC 2020で発表しているため[^1]、CCXの構造を隠したかったのかもしれない。  
+
+[^1]: [Zen 2: The AMD 7nm Energy-Efficient High-Performance x86-64 Microproc…](https://www.slideshare.net/AMD/zen-2-the-amd-7nm-energyefficient-highperformance-x8664-microprocessor-core)
 
 ### PCIe 4-Lane と USB 2-Port を追加
 いつかに増やしてないと考えてたが、大ハズレ。  
