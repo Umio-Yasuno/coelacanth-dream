@@ -112,6 +112,7 @@ N(クイーンの数)は17とし、計測結果5回の平均をスコアとす�
 byte-unixbench では `Process Creation` のみ *6-Thread 1CCX* が勝っているが、これはテストがメモリ帯域幅を反映する傾向にあり、メモリ割り当てではCPUのキャッシュが効きにくいため、CCX間通信が発生する *6-Core 2CCX* の方が遅くなった……ということなのだろうか。  
 [sysbench](https://github.com/akopytov/sysbench) と [stream](https://github.com/jeffhammond/STREAM) でもメモリ帯域を計測したところ、sysbench では *6-Thread 1CCX* が広いメモリ帯域を示したが、stream では逆に *6-Core 2CCX* が勝った。  
 しかし stream では差が2%程しかなかったのに対し、sysbench は read で約36%、write で約23%の差が見られた。  
+また、レイテンシの点では *6-Core 2CCX* の方が小さい結果となった。  
 CCXを跨ぐことでメモリ帯域に影響があるが、具体的にどの部分が原因となっているかは今後の課題としたい。  
 より転送速度が高いメモリであれば、InfinityFabricの速度も向上するため、その差が縮まるといった結果が見られるかもしれない。  
 

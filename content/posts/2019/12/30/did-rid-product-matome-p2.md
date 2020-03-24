@@ -121,7 +121,7 @@ BootCampDriver内のcccmanifest_64.xml。
 | 15D8 &darr; | C4 | 3250C[^7] | (Vega 3) |
 | | CD | 3050C[^7] | (Vega 2) |
 | | CE | 3150C[^7] | (Vega 3) |
-| | CF | | (6W[^8]) |
+| | CF | R1305G | (6W[^8]) |
 | | DE[^9] | | |
 | | DF[^9] | | |
 | | E3 | | (6W[^8] Vega 3) |
