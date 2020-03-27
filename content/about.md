@@ -18,11 +18,11 @@ noindex: false
 
 ### オープンソース
 
-当サイトはオープンソースに支えられています。  
-オープンソースなソフトウェアからハードウェアの情報を得て、  
-オープンソースである[Vim](https://www.vim.org/)で記事を書き、HTMLのテンプレートを編集し、  
-オープンソースである[Hugo](https://github.com/gohugoio/hugo)で Markdown で書いた記事等をビルドし、  
-オープンソースである [git](https://git-scm.com/) を使用して、Github Pageのレポジトリにアップロードしています。  
+当サイトはOSS(オープンソース・ソフトウェア)に支えられています。  
+OSSのソースコードからハードウェアの情報を得て、  
+OSSである[Vim](https://www.vim.org/)で記事を書き、HTMLのテンプレートを編集し、  
+OSSである[Hugo](https://github.com/gohugoio/hugo)で Markdown で書いた記事等をビルドし、  
+OSSである [git](https://git-scm.com/) を使用して、Github Pageのレポジトリにアップロードしています。  
 
 それもありオープンなサイト、記事を目標に活動しています。  
 <https://github.com/Umio-Yasuno/umio-yasuno.github.io>

@@ -8,7 +8,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
 ---
 
-いつかやろうと思っていて放置していた[Vega10](/tags/vega10)、[Vega20](/tags/vega20)のユニット推測を、毎度お馴染み[Fritzchens Fritz | Flickr](https://www.flickr.com/photos/130561288@N04/)によるダイショットを元に行なった。  
+いつかやろうと思っていて放置していた[Vega10](/tags/vega10)、[Vega20](/tags/vega20)のユニット推測を、毎度お馴染み[Fritzchens Fritz | Flickr](https://www.flickr.com/photos/130561288@N04/)氏によるダイショットを元に行なった。  
 
 ## Vega10
 {{< figure src="/image/2020/03/24/vega10-dieshot-guess.webp" title="Vega10 推測" caption="ダイサイズ: 509.73mm<sup>2</sup><br>画像出典: [AMD@14nm@GCN\_5th\_gen@Vega10@Radeon\_RX\_Vega\_64@ES-Sample@\_\_… | Flickr](https://www.flickr.com/photos/130561288@N04/40482186211/)" >}}

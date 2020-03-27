@@ -10,7 +10,7 @@ noindex: false
 
 更新休止前、最後の記事。昼頃からはほんとに休止。  
 
-CHUWIはMiniPC [AeroBox](https://www.chuwi.com/jp/product/items/Chuwi-AeroBox.html)が近日Amazonにて発売予定であることを発表した。  
+CHUWIはMiniPC [AeroBox](https://www.chuwi.com/product/items/Chuwi-AeroBox.html)が近日Amazonにて発売予定であることを発表した。  
 CPUにAMD A9-9820、GPUにRadeon R7 350を搭載し、RAMにはDDR3 8GB、ストレージにはSSD 256GBを標準で搭載し、またDDR3スロットを4基備えるため増設も可能となっている。  
 A9-9820は8-Core/8-Threadを最大2.35GHzで駆動し、日常的な軽作業はもちろん、重い作業もスムーズに処理できるとする。  
 [8コアCPU搭載！CHUWIオフィス向けミニPC「AeroBox」近日発売 - Chuwi](https://www.chuwi.com/jp/news/items/36.html)  
