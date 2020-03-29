@@ -21,7 +21,7 @@ noindex: false
  * 4-ShaderEngine
  * ShaderEngineあたりのRBE (RenderBackend) 数は4基
  * 〃 のCU (ComputerUnit) 数は16基
- * TCC (L2 cache) ブロック数は16基 (ブロックあたり256KB)
+ * TCC (L2 cache) ブロック数は16基 (ブロックあたり256KB、計4MB)
 
 [RadeonFeature](https://www.x.org/wiki/RadeonFeature/#radeondisplayhardware)からの情報では、
 
@@ -51,7 +51,7 @@ AMD GCNアーキテクチャでは、最大4CUで I$(Instruction Cache) 32KB と
  * 4-ShaderEngine
  * ShaderEngineあたりのRBE (RenderBackend) 数は4基
  * 〃 のCU (ComputerUnit) 数は16基
- * TCC (L2 cache) ブロック数は16基 (ブロックあたり256KB)
+ * TCC (L2 cache) ブロック数は16基 (ブロックあたり256KB、計4MB)
 
 [RadeonFeature](https://www.x.org/wiki/RadeonFeature/#radeondisplayhardware)からの情報ではこちらも、
 
@@ -66,9 +66,16 @@ AMD GCNアーキテクチャでは、最大4CUで I$(Instruction Cache) 32KB と
 [Navi10のダイ観察 & 推測 | Coelacanth's Dream](http://localhost:1313/posts/2020/01/22/navi10-dieshot-and-guess/)  
 設計の最適化に掛けた時間にも結構な違いがあったりするのだろうか？  
 
+## Vega10とVega20の比較
+{{< figure src="/image/2020/03/24/compare-vega10-vega20.webp" title="L: Vega10 / R: Vega20" caption="Process: GF 14nm / TSMC 7nm (N7)<br>DieSize: 509.73mm<sup>2</sup> / 330.93mm<sup>2</sup>" >}}
+
+*Vega20* のShaderEngineのサイズが *Vega10* のほぼ半分になっているところに、TSMC 7nm(N7)移行の効果が見て取れる。  
+
 ## 余談
-*GCN/GFX9* 系であり、8-ShaderEngine構成、AGPR増設、8-SDMAといった変更点がコードの記述から確認されている [Arcturus](/tags/arcturus) ではどうなるかは気になる所だが、  
-高コスト&一般向けではないことから、公式以外からのダイショット公開は期待できそうにない。  
+*GCN/GFX9* 系であり、8-ShaderEngine構成、AGPR増設、8-SDMAといった変更点がコードの記述から確認されている [Arcturus](/tags/arcturus) ではどうなるかは気になる所だが、高コスト&一般向けではないことから、公式以外からのダイショット公開は期待できそうにない。  
+*Arcturus* が8-ShaderEngine / 最大128(120)CUだとして、内部構成はどのようになるのだろう？  
+I/OのPHYを抜いた *Vega20* をそのまま縦に積む形になのだろうか。その場合、L2$、RBE(あるのかはまだ不明だが)の配置と、フロントエンド部(ACE/HWS/GDS/Geometry等)の規模がどうなるか。  
+とにもかくにも楽しみだ。  
 
 それとお金を稼ぐ手段として、AMDGPUの解説をまとめた同人誌的なものを出す計画を思い付いた。解説範囲はGFX9、GFX10あたり、頑張ってGFX8も、とかだろうか。さすがにGCNアーキテクチャの最初からとなると新しく情報を集めなければならないため、時間がかかり過ぎる。  
 実を言うと、興味を持ち始めたのはそう昔ではなく、知識や情報量に自信が持てるのはGFX9からだ。ハードウェア界隈ではまだまだ新人。  
