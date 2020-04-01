@@ -1,5 +1,5 @@
 ---
-title: "AMDGPU Database: Device ID, Revision ID, Product Name"
+title: "AMDGPU Database: Device ID/ Revision ID/ Product Name"
 date: 2019-12-30T10:59:25+09:00
 draft: false
 tags: [ "Radeon", "Database" ]

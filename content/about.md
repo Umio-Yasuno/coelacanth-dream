@@ -8,7 +8,7 @@ noindex: false
 ---
 
 ## このサイトについて
-<img src="/image/site-image.png" title="sleeping coelacanth" style="width:32%; float:left; margin:.3em .5em 0 0">
+<img src="/image/site-image.png" title="sleeping coelacanth" style="width:32%; float:left; margin:.3em .5em 0 0; background-color: #436060">
 個人的にまとめたハードウェア系の情報や”推測”を公開するブログ的なもの。  
 情報元は主にDRMやMesa3Dへのパッチ、Githubのリポジトリ、公式資料。  
 知識はAMD CPU/GPUに偏っています。Intel CPU/GPUは少しだけ。NVIDIAはさっぱり。  
@@ -49,6 +49,7 @@ OSSである [git](https://git-scm.com/) を使用して、Github Pageのレポ�
 ## 寄付のお願い {#donate}
 ソースコード等以外にハードウェアの検証によって情報を得、広めることを目標としていますが、それにはまず実物のハードウェア、CPU、MotherBoard、GPUが必要です。  
 寄付がハードウェアを購入するための資金となり、このサイト、そしてハードウェアのより詳細な情報を得るための助けとなります。  
+
 [Liberapay を使って Umio-Yasuno に寄付する](https://liberapay.com/Umio-Yasuno/donate)  
 [Umio Yasuno is creating writing/journalism | Patreon](https://www.patreon.com/user?u=32413942)  
 
