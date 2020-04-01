@@ -114,6 +114,7 @@ byte-unixbench では `Process Creation` のみ *6-Thread 1CCX* が勝ってい�
 しかし stream では差が2%程しかなかったのに対し、sysbench は read で約36%、write で約23%の差が見られた。  
 また、レイテンシの点では *6-Core 2CCX* の方が小さい結果となった。  
 CCXを跨ぐことでメモリ帯域に影響があるが、具体的にどの部分が原因となっているかは今後の課題としたい。  
+思いつくのは、CCX間のトラフィックでInfinityFabric内の帯域が圧迫され、結果メモリ帯域が若干小さくなる、とかだろうか。  
 より転送速度が高いメモリであれば、InfinityFabricの速度も向上するため、その差が縮まるといった結果が見られるかもしれない。  
 
 sysbench では *6-Thread 1CCX* がレイテンシにおいて、`max`、`95th percentile` の値が *6-Core 2CCX* より小さいが、 `events/s` では *6-Thread 1CCX* が負けている。  

@@ -51,7 +51,7 @@ noindex: false
 ## Polaris10とPolaris11の比較
 {{< figure src="/image/2020/03/30/compare-polaris10-polaris11.webp" title="L : Polaris10 / R : Polaris11" caption="Process: GF 14nm / GF 14nm<br>DieSize: 243.78mm<sup>2</sup> / 129.40mm<sup>2</sup><br>画像出典:[AMD@14nm@GCN\_4th\_gen@Polaris\_10@Radeon\_RX\_470@1622\_M60J5.0… | Flickr](https://www.flickr.com/photos/130561288@N04/43550225514)<br>,[AMD@14nm@GCN\_4th\_gen@Polaris\_11@Radeon\_RX\_460@1628\_NAA2Y.1… | Flickr](https://www.flickr.com/photos/130561288@N04/42217737082)" >}}
 同プロセスで製造されているのだから、当然各ユニットのサイズもほぼ変わらず。  
-特筆することと言えば、L1 I$/K$を共有するCU数が Polaris10: 4基、Polaris10: 3基と違うことから、微妙に配置を変えていたことだろうか。高さは変わっておらず、内部だけの変更で対応していた。  
+特筆することと言えば、L1 I$/K$を共有するCU数が Polaris10: 3基、Polaris11: 4基と違うことから、微妙に配置を変えていたことだろうか。高さは変わっておらず、内部だけの変更で対応していた。  
 ただそれは、3CU分に詰め込められるものを4CU分に引き伸ばしているとも取れ、そういった点でもGCNアーキテクチャには無駄があったと言える。  
 RDNAアーキテクチャでは、共有する数が2CU(1WGP)と固定された。これにより設計をわずかでも弄る手間が減ったのではないかと思う。  
 
