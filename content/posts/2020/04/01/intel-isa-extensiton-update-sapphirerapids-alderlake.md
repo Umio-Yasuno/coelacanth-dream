@@ -17,8 +17,10 @@ noindex: false
  * [非対称ハイブリッドプロセッサへの対応が進められる](#hybrid-processor)
 
 ### AVX512_BF16命令にSapphire Rapidsが対応 {#BF16-SPR}
-中々姿を見せぬIntelの次世代サーバ向けプロセッサ、*Cooper Lake-SP* と *Ice Lake-SP* の、またさらに次世代となる *Sapphire Rapids* が AVX512_BF16命令 に対応することが明らかになった。[^1]  
-*Sapphire Rapids* は2021年に登場が予定されている。[^2]  
+中々姿を見せぬIntelの次世代サーバ向けプロセッサ、*Cooper Lake-SP* と *Ice Lake-SP* の、またさらに次世代となる *Sapphire Rapids* が AVX512_BF16命令 に対応することが明らかになった。[^1] *Sapphire Rapids* は2021年に登場が予定されている。[^2]  
+AVX512_BF16には、他に *Cooper Lake* でしか対応していないため、*Sapphire Rapids* が *Cooper Lake* の後継という色が濃くなった形だ。  
+
+  
 また、*Tiger Lake* で追加された AVX512_VP2INTERSECT命令 にも対応するとしている。  
 *Ice Lake* レベルまでの[^3]その他 AVX512命令に対応するかはわからないが、最近のIntel CPUアーキテクチャ{{< comple >}}Ice Lake、Cooper Lake、Tiger Lake{{< /comple >}}でAVX512命令の対応範囲が異なり、ややこしい事態となっているため、一度 *Sapphire Rapids* で全てに対応してもいいように思う。  
 
@@ -28,7 +30,7 @@ noindex: false
 
 ### Alder Lake現る {#alderlake}
 また、登場時期は不明ではあるが *Tiger Lake* より後の世代と予想されている *Alder Lake* の名が記載されている。[^1]  
-しかし、*Tiger Lake* の対応する命令と一致しないため、後継ではなくまた別の用途向けのプロセッサである可能性も考えられる。  
+しかし、*Tiger Lake* の対応する命令と一致しないため、後継ではなくまた別の用途向けのプロセッサである可能性も十分考えられる。  
 
 ### 非対称ハイブリッドプロセッサへの対応が進められる {#hybrid-processor}
 *Lakefield* [^4]のような Atom系コアと Core系コアの両方を搭載した非対称ハイブリッドプロセッサの情報を示すEAXレジスタが追加された。[^5]  
