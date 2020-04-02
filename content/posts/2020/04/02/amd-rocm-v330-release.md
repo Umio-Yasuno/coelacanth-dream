@@ -20,8 +20,9 @@ ROCm v3.2 は *Arcturus* のテスト版としてリリース、ROCm v3.4 で正
 
 [^2]: [merge develop into master for ROCm 3.2 Feature complete by amcamd · Pull Request #983 · ROCmSoftwarePlatform/rocBLAS](https://github.com/ROCmSoftwarePlatform/rocBLAS/pull/983)
 
-<hr>
-<span class="reference">参考</span>
+{{< ref >}}
 
  * [RadeonOpenCompute/ROCm at roc-3.3.0](https://github.com/RadeonOpenCompute/ROCm/tree/roc-3.3.0#Whats-New-in-This-Release)  
  	* <https://github.com/RadeonOpenCompute/ROCm/tree/roc-3.3.0#Whats-New-in-This-Release>
+
+{{< /ref >}}
