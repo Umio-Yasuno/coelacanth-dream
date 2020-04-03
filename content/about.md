@@ -50,8 +50,8 @@ OSSである [git](https://git-scm.com/) を使用して、Github Pageのレポ�
 ソースコード等以外にハードウェアの検証によって情報を得、広めることを目標としていますが、それにはまず実物のハードウェア、CPU、MotherBoard、GPUが必要です。  
 寄付がハードウェアを購入するための資金となり、このサイト、そしてハードウェアのより詳細な情報を得るための助けとなります。  
 
-[Liberapay を使って Umio-Yasuno に寄付する](https://liberapay.com/Umio-Yasuno/donate)  
-[Umio Yasuno is creating writing/journalism | Patreon](https://www.patreon.com/user?u=32413942)  
+ * [Liberapay を使って Umio-Yasuno に寄付する](https://liberapay.com/Umio-Yasuno/donate)  
+ * [Umio Yasuno is creating writing/journalism | Patreon](https://www.patreon.com/user?u=32413942)  
 
 <address>
 連絡先:  

@@ -9,10 +9,19 @@ noindex: false
 ---
 
 レポジトリには既に反映されており、インストール可能となっている。  
-今回も新しいGPUのサポート追加はなく、複数バージョンのインストールが可能となったこと、GPUのプロセス情報表示機能の改良[^1]、3Dプーリングレイヤーのサポート[^3]、ONNX(Open Neural Network eXchange)のサポート強化が主な変更点となっている。  
+今回も新しいGPUのサポート追加はなく、
 
-[^1]: プロセス情報表示が複数のGPUに対応した。<br>[SMI: Add --showpidgpus flag to display GPUs used by a PID · RadeonOpenCompute/ROC-smi@feb4412](https://github.com/RadeonOpenCompute/ROC-smi/commit/feb441259fd933d8cc5224810157d0e9a34af2bf)
-[^3]: これによりResNext3D等の3D畳込みネットワークの実行が可能となった。
+ * 複数バージョンのインストールが可能に
+ * GPUのプロセス情報表示機能の改良
+ * 3Dプーリングレイヤーのサポート
+ * ONNX(Open Neural Network eXchange)のサポート強化
+ 
+が主な変更点となっている。  
+
+中でも、*GPUのプロセス情報表示機能の改良* は複数のGPUに対応したものと見られ、[^1]  
+*3Dプーリングレイヤーのサポート* [^3]では、これによりResNext3D等の3D畳込みネットワークの実行が可能になったとしている。
+
+[^1]: [SMI: Add --showpidgpus flag to display GPUs used by a PID · RadeonOpenCompute/ROC-smi@feb4412](https://github.com/RadeonOpenCompute/ROC-smi/commit/feb441259fd933d8cc5224810157d0e9a34af2bf)
 
 [Arcturus](/tags/arcturus)対応がメインになるであろう ROCm v3.2 を飛ばしての ROCm v3.3 のリリースとなったが[^2]、リリース方式に何か変更があったのだろうか。  
 複数バージョンのインストールが可能となったため、新GPU対応版と既存GPUの機能強化版で分ける、といった感じに。  

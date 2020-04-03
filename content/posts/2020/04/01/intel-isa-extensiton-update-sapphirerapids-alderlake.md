@@ -29,13 +29,15 @@ AVX512_BF16には、他に *Cooper Lake* でしか対応していないため、
 [^3]: <https://github.com/llvm/llvm-project/blob/master/clang/lib/Basic/Targets/X86.cpp#L166>
 
 ### Alder Lake現る {#alderlake}
-また、登場時期は不明ではあるが *Tiger Lake* より後の世代と予想されている *Alder Lake* の名が記載されている。[^1]  
+登場時期は不明ではあるが *Tiger Lake* より後の世代と予想されている *Alder Lake* の名が記載されている。[^1]  
 しかし、*Tiger Lake* の対応する命令と一致しないため、後継ではなくまた別の用途向けのプロセッサである可能性も十分考えられる。  
 
 ### 非対称ハイブリッドプロセッサへの対応が進められる {#hybrid-processor}
 *Lakefield* [^4]のような Atom系コアと Core系コアの両方を搭載した非対称ハイブリッドプロセッサの情報を示すEAXレジスタが追加された。[^5]  
 コアの種類は現状 Atom系と Core系の2種あるが、新たなEAXレジスタにはそれに加えもう2種分が予約されている。  
 これは、Intelが将来的に新たなアーキテクチャを開発、実装するとも考えられるが、あくまで予約されているだけ、ということを強調しておきたい。  
+
+また、これによりスケジューリングといったソフトウェア側の対応が進められるものと考えられる。  
 
 [^4]: [Lakefield: Hybrid CPU with Foveros Technology | Intel Newsroom](https://newsroom.intel.com/press-kits/lakefield/?wapkw=lakefield)
 [^5]: <https://software.intel.com/sites/default/files/managed/c5/15/architecture-instruction-set-extensions-programming-reference.pdf#page=32>
