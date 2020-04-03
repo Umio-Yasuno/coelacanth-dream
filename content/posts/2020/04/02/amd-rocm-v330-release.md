@@ -19,7 +19,7 @@ noindex: false
 が主な変更点となっている。  
 
 中でも、*GPUのプロセス情報表示機能の改良* は複数のGPUに対応したものと見られ、[^1]  
-*3Dプーリングレイヤーのサポート* [^3]では、これによりResNext3D等の3D畳込みネットワークの実行が可能になったとしている。
+*3Dプーリングレイヤーのサポート* では、これによりResNext3D等の3D畳込みネットワークの実行が可能になったとしている。
 
 [^1]: [SMI: Add --showpidgpus flag to display GPUs used by a PID · RadeonOpenCompute/ROC-smi@feb4412](https://github.com/RadeonOpenCompute/ROC-smi/commit/feb441259fd933d8cc5224810157d0e9a34af2bf)
 
