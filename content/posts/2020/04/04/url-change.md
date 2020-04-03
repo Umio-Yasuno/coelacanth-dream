@@ -9,7 +9,7 @@ noindex: true
 ---
 
 このサイトのURLを <https://umio-yasuno.github.io> から <https://blog.coelacanth-dream.com> へ変更しました。  
-Github Pageのサービスが優秀で、以前のURLにアクセスしても 301ステータスを返して新しいURLへリダイレクトしてくれる。  
+Github Pageのサービスが優秀で、以前のURLにアクセスしても 301ステータスを返して新しいURLへリダイレクトしてくれるため、ユーザ側で特別修正する必要はありません。  
 
 ## ドメイン購入
 [Namecheap](https://www.namecheap.com/)にて comドメインを購入。価格は初回1年分で $8.88 + ICANN $0.18 で計 $9.06、日本円で &yen;1,100。  
