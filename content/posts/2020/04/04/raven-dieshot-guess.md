@@ -1,7 +1,7 @@
 ---
 title: "Raven Ridgeのダイ観察 & 推測"
 date: 2020-04-04T06:11:26+09:00
-draft: false
+draft: true
 tags: [ "Radeon", "DieShot" ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU"]
@@ -43,10 +43,16 @@ L1 I$(32KB) /K$(16KB)は2CU、または3CUで共有する構成となってい�
 [^5]: [Vega10/Vega20のダイ観察 & 推測 | Coelacanth's Dream](/posts/2020/03/24/vega10-vega20-dieshot-guess/)
 
 {{< fig src="/image/2020/04/04/raven-dieshot.webp" imgstyle="width: 48vmax; height: 32vmax; object-position: 64% 30%; object-fit: none" title="Raven 推測 *ダイ中央*" caption="画像出典: [AMD@14nm@Zen(Zeppelin)@Raven_Ridge@Ryzen_3_2200G@YD2200C5M… | Flickr](https://www.flickr.com/photos/130561288@N04/39716562275)" >}}
-ダイ中央に配置された4基のユニットだが、これはダイ内の各ユニットの接続に使われている *Infinity Fabric* の *Transport Layer Switch* と考えている。  
+<del>ダイ中央に配置された4基のユニットだが、これはダイ内の各ユニットの接続に使われている *Infinity Fabric* の *Transport Layer Switch* と考えている。</del>  
 
-最初は4基であることからディスプレイコントローラだと思っていたが、他のGPUのダイショットを見るに、それらしきユニットは画像のようにSRAMをそう多くは内包していない。  
-HotChips30の発表資料に *Trasport Layer Switch* が4基存在するような図表があり、そういった高速なデータ通信に関連するユニットであれば、バッファだろうSRAMを多く含むのは自然なはずだ。  
+<del>最初は4基であることからディスプレイコントローラだと思っていたが、他のGPUのダイショットを見るに、それらしきユニットは画像のようにSRAMをそう多くは内包していない。  
+HotChips30の発表資料に *Trasport Layer Switch* が4基存在するような図表があり、そういった高速なデータ通信に関連するユニットであれば、バッファだろうSRAMを多く含むのは自然なはずだ。</del>  
+
+RBEである可能性を失念していた。  
+*Zeppelin* のダイショットを見ても同様のユニットが見当たらないため、RBEである可能性は高い。[^9]  
+もしそうであれば、HotChips30での発表資料は間違っておらず、何らかの理由でRavenベースの全ての製品でRBE 2基を無効化していることとなる。[^4]  
+
+[^9]: [AMD@14nm@Zen(Zeppelin)@Summit_Ridge@Ryzen_3_1200@YD1200BBM… | Flickr](https://www.flickr.com/photos/130561288@N04/35620962953/)
 
 {{< fig src="/image/2020/04/04/raven-dieshot.webp" imgstyle="width: 100%; height: 12vmax; object-position: 40% 100%; object-fit: cover" title="Raven 推測 *ダイ下部 I/O*" caption="画像出典: [AMD@14nm@Zen(Zeppelin)@Raven_Ridge@Ryzen_3_2200G@YD2200C5M… | Flickr](https://www.flickr.com/photos/130561288@N04/39716562275)" >}}
 [RadeonFeature](https://www.x.org/wiki/RadeonFeature/)から、
@@ -61,7 +67,7 @@ HotChips30の発表資料に *Trasport Layer Switch* が4基存在するよう�
  * 最大16レーンのPCIeGen3
 
 ということがわかっており、それを元にしている。  
-左から、USB 3.1インターフェイス(以下I/F) 4基、ディスプレイI/F 2基とUSB Type-C I/F2基[^8]、PCIeGen3 2-LaneとSATAの共用I/F 2基、ディスプレイI/F 2基、と推測した。  
+左から、USB 3.1インターフェイス(以下I/F) 4基、ディスプレイI/F 2基とUSB Type-C I/F 2基[^8]、PCIeGen3 2-LaneとSATAの共用I/F 2基、ディスプレイI/F 2基、と推測した。  
 USB Type-C I/Fの上にあるユニットが、他のGPUで見られるディスプレイコントローラの形状、構造に近いため、そうであると考えた。ディスプレイI/Fとの距離も近い。  
 
 USB Type-Cに関しては似た配置が *Navi10* 、*Navi14* でも見られる。[^7]  
