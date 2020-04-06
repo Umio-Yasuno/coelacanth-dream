@@ -67,9 +67,11 @@ AMD GCNアーキテクチャでは、最大4CUで I$(Instruction Cache) 32KB と
 設計の最適化に掛けた時間にも結構な違いがあったりするのだろうか？  
 
 ## Vega10とVega20の比較
-{{< figure src="/image/2020/03/24/compare-vega10-vega20.webp" title="L: Vega10 / R: Vega20" caption="Process: GF 14nm / TSMC 7nm (N7)<br>DieSize: 509.73mm<sup>2</sup> / 330.93mm<sup>2</sup>" >}}
+{{< figure src="/image/2020/03/24/compare-vega10-vega20.webp" title="L: Vega10 / R: Vega20" caption="Process: GF 14nm / TSMC 7nm (N7)<br>DieSize: 509.73mm<sup>2</sup> / 330.93mm<sup>2</sup><br>CU Size(推定): 25.08mm<sup>2</sup> / 12.45mm<sup>2</sup> " >}}
 
 *Vega20* のShaderEngineのサイズが *Vega10* のほぼ半分になっているところに、TSMC 7nm(N7)移行の効果が見て取れる。  
+CUのサイズもほぼ半分となっていた。  
+それに対し、画像を見てもわかりやすいが、*HBM2 PHY*、*PCIeGen4 4-Lane PHY* 等、I/Oの物理層となる部はほとんどサイズが変わっていない。  
 
 ## 余談
 *GCN/GFX9* 系であり、8-ShaderEngine構成、AGPR増設、8-SDMAといった変更点がコードの記述から確認されている [Arcturus](/tags/arcturus) ではどうなるかは気になる所だが、高コスト&一般向けではないことから、公式以外からのダイショット公開は期待できそうにない。  
