@@ -8,7 +8,7 @@ noindex: false
 ---
 
 ## このサイトについて
-<img src="/image/site-image.png" title="sleeping coelacanth" style="width:32%; float:left; margin:.3em .5em 0 0; background-color: #436060">
+<img src="/image/site-image.webp" title="sleeping coelacanth" style="width:32%; float:left; margin:.3em .5em 0 0; background-color: #436060">
 個人的にまとめたハードウェア系の情報や”推測”を公開するブログ的なもの。  
 情報元は主にDRMやMesa3Dへのパッチ、Githubのリポジトリ、公式資料。  
 知識はAMD CPU/GPUに偏っています。Intel CPU/GPUは少しだけ。NVIDIAはさっぱり。  
