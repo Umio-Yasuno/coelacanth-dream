@@ -1,7 +1,7 @@
 ---
 title: "Ryzen搭載Chromebookの情報を整理する"
 date: 2020-04-10T20:40:19+09:00
-draft: true
+draft: false
 tags: [ "Raven", "Raven2" ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU" ]
