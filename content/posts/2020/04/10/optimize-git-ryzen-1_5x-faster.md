@@ -16,7 +16,7 @@ noindex: false
 2017年に登場し、ハードウェア業界に新たな風を吹き込んだ *Zenアーキテクチャ* の特徴の1つとして、SHA-NI命令セットをサポートしているというものがある。  
 *SHA* は *Secure Hash Algorithm* 、*NI* は *New Instruction* の略であり、その名の通り暗号化を高速に行なうために用いられる。  
 
-現行で対応しているCPUは、*Hygon* を除く[^1]、*AMD Zen* 、*AMD Zen 2* アーキテクチャベースのCPU、(Ryzen、Threadripper、EPYC)  
+現行で対応しているCPUは、*Hygon* を除く[^1]、*AMD Zen* 、*AMD Zen 2* アーキテクチャベースのCPU、(Athlon, Ryzen, Threadripper, EPYC)  
 *Intel Sunny Cove* アーキテクチャベースの *Ice Lake (Client)* だけとなる。  
 製品が未登場ではあるが対応していることが確認されているCPUは、*Ice Lake (Server)* 、*Tiger Lake* 。  
 キャンセルされてしまった *Cannon Lake* も対応していた。[^2]  
