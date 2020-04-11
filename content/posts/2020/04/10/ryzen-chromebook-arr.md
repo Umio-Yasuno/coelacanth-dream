@@ -82,7 +82,11 @@ I/O部の規模は *Picasso* より小さい。
 ### Zork {#zork}
 *Zork* はChromebookにおけるRyzen APUのリファレンスボードの立ち位置にあり[^2]、*Zork* を元にした異なるボードが複数存在する。  
 *Ezkinil* 、*Morphius* 、*Trembyle* 、*Dalboz* がそれにあたる。  
-ちなみにそれらコードネームは、1980年から始まるコンピュータゲーム、Zorkシリーズに登場するキャラクターから取られていると思われる。  
+他にもリファレンスボードにはAMDが提供している *FP5 BGAソケット* を実装した *Mandolin* 、後述する *FT5 BGAソケット* を実装した *Cereme* が存在する[^29]。  
+
+[^29]: [mainboard/amd/cereme : Create Initial Cereme Platform (I593d661f) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2024459)
+
+ちなみにそれらChromebookのボードに使われているコードネームは、1980年から始まるコンピュータゲーム、Zorkシリーズに登場するキャラクターから取られていると思われる。  
 
  * [Ezkinil](https://www.thezorklibrary.com/history/ezkinil.html)  
  * [Morphius | Zork Wiki | Fandom](https://zork.fandom.com/wiki/Morphius)  
@@ -104,6 +108,11 @@ I/O部の規模は *Picasso* より小さい。
 となっているようにChromiuOSのソースコードからは読める。[^13]
 
 [^13]: [Dalboz: tuning PCIe topology make DUT can boot up from SSD (I9113b54d) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2066389)
+
+また、*Dalboz* の一部SKUを除いて[^28]、タッチスクリーンが実装されている。[^27]  
+
+[^27]: [mb/google/zork: Touchscreen uses an edge low interrupt (Ieb21febd) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/1993690)
+[^28]: [dalboz: add configuration according to SKU ID (Ie1e14df8) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2123947)
 
 *Dalboz* 以外のボード、*Ezkinil* 、*Moephius* 、*Trembyle* それぞれの間から大きな違いは見られず、あるのはセンサーやファン、入力インターフェイス、バッテリーといった細かい違いとされる。  
 
@@ -151,7 +160,7 @@ USBと映像出力の仕様は、3x USB-A(10Gbps)、3x USB-C(10Gbps) 内1つが�
 
 ### Dalboz {#dalboz}
 ソケットからして他と同じ *FP5 BGAソケット* ではなく、*FT5 BGAソケット* を採用している。[^1]  
-その *FT5 BGAソケット* は、メモリをシングルチャネルとし、SATAインターフェイスは無しとパッケージサイズを小さくし、配線数も減らしているものと思われる。[^14]元々 *FP5 BGAソケット* は *Raven* のための仕様であったため、規模を小さくした *Raven2* には必要のない部分があった。  
+その *FT5 BGAソケット* は、メモリをシングルチャネルとし、SATAインターフェイスは無しとパッケージサイズを小さくし、配線数も減らしているものと思われる。[^14]元々 *FP5 BGAソケット* は *Raven* のために作られた仕様であったため、規模を小さくした *Raven2* には必要のない部分があった。  
 ただSATAに関しては、後のパッチセットでは記述がなくなっているため、いまいち確定していないところがある。  
 
 [^14]: <https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2051509/1/src/soc/amd/picasso/Kconfig>
@@ -160,18 +169,17 @@ USBと映像出力の仕様は、3x USB-A(10Gbps)、3x USB-C(10Gbps) 内1つが�
 
 [^1]: [mb/google/zork: update power parameters to 4.8w for dalboz (I711d1109) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2135098)
 
-そしてバッテリーは3種類あり、SMP L19M3PG1、LGC L19L3PG1、Celxpert L19C3PG1。その中で仕様が見つかったのは L19L3PG1のみ。  
-容量は4123mAh(47.6Wh)。[^21]  
+そしてバッテリーは3種類あり、SMP L19M3PG1、LGC L19L3PG1、Celxpert L19C3PG1。その中で仕様が見つかったのは L19L3PG1のみで、容量は4123mAh(47.6Wh)。[^21]  
 
 バッテリーから *Dalboz* はLenovoのボードと思われるが、残念ながらトラックポイントが存在することを示すコードは無かった。  
 
 [^21]: [Lenovo L19L3PG1 11.55V 4123mAh original batteries - $64.31 : Laptop battery shop](https://www.laptop-battery-shop.com/lenovo-l19l3pg1-1155v-4123mah-original-batteries-p-7520.html)
 
+USBは、3x USB-A(5Gbps)、2x USB-C (5Gbps)、1x HDMIとされる。[^26]  
+
+[^26]: <https://chromium-review.googlesource.com/c/chromiumos/platform/ec/+/2142848/1/board/dalboz/board.h#91>
+
 *Morphius* のコードにはファンのパロメーターが記述されていたのに対し[^24]、*Dalboz* には無いことから、*Dalboz* はファンレスモデルである可能性がある。[^23]  
 
 [^23]: <https://chromium-review.googlesource.com/c/chromiumos/platform/ec/+/2142848/1/board/morphius/board.c>
 [^24]: <https://chromium-review.googlesource.com/c/chromiumos/platform/ec/+/2142848/1/board/dalboz/board.c>
-
-USBは、3x USB-A(5Gbps)、2x USB-C (5Gbps)、1x HDMIとされる。  
-
-[^26]: <https://chromium-review.googlesource.com/c/chromiumos/platform/ec/+/2142848/1/board/dalboz/board.h#91>
