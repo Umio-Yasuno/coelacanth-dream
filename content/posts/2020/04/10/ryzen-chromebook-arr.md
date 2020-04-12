@@ -95,7 +95,7 @@ I/O部の規模は *Picasso* より小さい。
 
 自分はプレイしたことがないためピンと来ないが、1つの作品だけから取らないあたり、コードネームを付けている人は相当のファンなのだろうか。  
 それ以外のボードもある作品内のキャラクターから取られていることが多い。[^3]  
-[Debian](https://www.debian.org/)のコードネームがトイ・ストーリーのキャラクターから取られているのは有名な話で、この名付け方はプログラマー、ハッカーに共通するユーモアと言えるだろう。  
+Linuxディストリビューション [Debian](https://www.debian.org/)のコードネームがトイ・ストーリーのキャラクターから取られているのは有名な話で、この名付け方はプログラマー、ハッカーに共通するユーモアと言えるだろう。  
 
 [^2]: [new_variant: add reference board name to create_coreboot_variant.sh (I9ac7ad18) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/platform/dev-util/+/2044976)
 [^3]: <https://github.com/coreboot/chrome-ec/tree/master/baseboard>

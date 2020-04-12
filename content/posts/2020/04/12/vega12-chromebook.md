@@ -37,16 +37,21 @@ GPUの構成としては、4-ShaderEngine、総CU数 20基、総RBE数 8基(32 R
 [^2]: [RadeonFeature](https://www.x.org/wiki/RadeonFeature/)
 
 ## Mushu
-*Hatch* をベースボードとするIntel CPU搭載のボード。[^3]  
+*Mushu* は *Hatch* をベースとするIntel CPU搭載のボード。[^3]  
 CPUに関しては、PCHが *Cannon Lake PCH* とされることから *Coffee Lake* か *Whiskey Lake* と考えられる。メモリにDDR4-2666 16Gを想定していることから前者である可能性が高い。[^5]  
 その他判明している仕様は、ディスプレイ解像度 2400x1600(3:2)[^9]、デュアルファン[^6]。  
 バッテリーから、DellのChromebookボードと思われる。[^7]  
+
+*Hatch* をベースにしたボードのコードネームは個性的で、*Mushu* の他に *Akemi* 、*Dratini* 、*Helios* 、*Jinlon* 、*Kindred* 、*Kohaku* 、*Puff* 、*Stryke* といったものが並ぶ。[^10]  
+軽く調べた所、日本のゲームやコミックだったりアメコミといったキャラクターが引っかかった。  
+ただそれで出てきたキャラクターもそこまで有名、というか作品のメインを張るキャラではなかったりと、コードネームを付けた人の個性が強く出ている気がする。  
 
 [^3]: [mb/google/hatch: Add mushu variant (I81b5bf96) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/1934468)<br><https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/1934468/9/src/mainboard/google/hatch/variants/mushu/overridetree.cb>
 [^9]: [bmpblk: Add mushu board (Ie0bd4ba4) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/platform/bmpblk/+/1986097)
 [^5]: [mb/google/hatch: Add mushu variant (I81b5bf96) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/1934468)<br><https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/1934468/9/src/mainboard/google/hatch/variants/mushu/overridetree.cb>
 [^6]: [Mushu : add dual fan control by EC (I41ba92ad) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/platform/ec/+/2073740)
 [^7]: [board/mushu/battery.c - chromiumos/platform/ec - Git at Google](https://chromium.googlesource.com/chromiumos/platform/ec/+/refs/heads/master/board/mushu/battery.c#35)
+[^10]: [mb/google/hatch: Add mushu variant (I81b5bf96) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/1934468)<br><https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/1934468/9/src/mainboard/google/hatch/Kconfig>
 
 ## 嬉しいニュース
 *Vega12* には前から多数のDeviceID、SKUが確認されていたが[^8]、上述したように現在世に出てるのはMacBook Pro 2018に搭載された **Radeon Pro Vega 16** 、**Radeon Pro Vega 20** のみだ。  
