@@ -39,11 +39,11 @@ GPUの構成としては、4-ShaderEngine、総CU数 20基、総RBE数 8基(32 R
 ## Mushu
 *Hatch* をベースボードとするIntel CPU搭載のボード。[^3]  
 CPUに関しては、PCHが *Cannon Lake PCH* とされることから *Coffee Lake* か *Whiskey Lake* と考えられる。メモリにDDR4-2666 16Gを想定していることから前者の可能性のが高い。[^5]  
-その他判明している仕様は、ディスプレイ解像度 2400x1600(3:2)[^4]、デュアルファン[^6]。  
-バッテリーからして DellのChromebookボードと思われる。[^7]  
+その他判明している仕様は、ディスプレイ解像度 2400x1600(3:2)[^9]、デュアルファン[^6]。  
+バッテリーから、DellのChromebookボードと思われる。[^7]  
 
 [^3]: [mb/google/hatch: Add mushu variant (I81b5bf96) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/1934468)<br><https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/1934468/9/src/mainboard/google/hatch/variants/mushu/overridetree.cb>
-[^4]: [bmpblk: Add mushu board (Ie0bd4ba4) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/platform/bmpblk/+/1986097)
+[^9]: [bmpblk: Add mushu board (Ie0bd4ba4) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/platform/bmpblk/+/1986097)
 [^5]: [mb/google/hatch: Add mushu variant (I81b5bf96) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/1934468)<br><https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/1934468/9/src/mainboard/google/hatch/variants/mushu/overridetree.cb>
 [^6]: [Mushu : add dual fan control by EC (I41ba92ad) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/platform/ec/+/2073740)
 [^7]: [board/mushu/battery.c - chromiumos/platform/ec - Git at Google](https://chromium.googlesource.com/chromiumos/platform/ec/+/refs/heads/master/board/mushu/battery.c#35)
