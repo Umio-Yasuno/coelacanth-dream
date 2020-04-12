@@ -1,5 +1,5 @@
 ---
-title: "Vega12を搭載したChromebookが開発中か"
+title: "GPUにAMD Vega12を搭載したChromebookが開発中か"
 date: 2020-04-12T12:47:09+09:00
 draft: false
 tags: [ "Vega12", "Chromebook" ]
@@ -38,7 +38,7 @@ GPUの構成としては、4-ShaderEngine、総CU数 20基、総RBE数 8基(32 R
 
 ## Mushu
 *Hatch* をベースボードとするIntel CPU搭載のボード。[^3]  
-CPUに関しては、PCHが *Cannon Lake PCH* とされることから *Coffee Lake* か *Whiskey Lake* と考えられる。メモリにDDR4-2666 16Gを想定していることから前者の可能性のが高い。[^5]  
+CPUに関しては、PCHが *Cannon Lake PCH* とされることから *Coffee Lake* か *Whiskey Lake* と考えられる。メモリにDDR4-2666 16Gを想定していることから前者である可能性が高い。[^5]  
 その他判明している仕様は、ディスプレイ解像度 2400x1600(3:2)[^9]、デュアルファン[^6]。  
 バッテリーから、DellのChromebookボードと思われる。[^7]  
 
