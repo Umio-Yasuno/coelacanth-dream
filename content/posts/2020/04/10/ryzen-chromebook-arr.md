@@ -2,7 +2,7 @@
 title: "Ryzen搭載Chromebookの情報を整理する"
 date: 2020-04-10T20:40:19+09:00
 draft: false
-tags: [ "Raven", "Raven2" ]
+tags: [ "Raven", "Raven2", "Chromebook" ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU" ]
 noindex: false
@@ -136,7 +136,7 @@ USBと映像出力の仕様は、2x USB-A(5Gbps)、3x USB-C(5Gbps)、1x HDMIと�
 
 バッテリーは SMP SB10x63140、または Sunwoda L18D3PG1 。[^16]  
 調べた所、後者はあっさりと見つかり、バッテリー容量は3735mAh(42Wh)。[^17]  
-Lenovo専用のバッテリーということだが、トラックポイントと合わせて考えるに、*Morphius* はLenovo用のボードということなのだろうか。  
+Lenovo専用のバッテリーということだが、トラックポイントと合わせて考えるに、*Morphius* はLenovo用のボードだろう。  
 
 [^16]: [morphius: Add batteries configuration (I258058ca) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/platform/ec/+/1966815)
 [^17]: [Canada L18D3PG1 Battery For Lenovo Laptop Li-Polymer 11.25v 42Wh Black](https://www.canada-laptop-battery.com/canada-battery-lenovo-7895.html)
@@ -165,7 +165,7 @@ USBと映像出力の仕様は、3x USB-A(10Gbps)、3x USB-C(10Gbps) 内1つが�
 
 [^14]: <https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2051509/1/src/soc/amd/picasso/Kconfig>
 
-消費電力も通常時で最大4.8W、ブースト時最大9Wに制限されており、冷却設計の簡易化によるコスト削減、バッテリー持続時間に期待が持てる。[^1]  
+消費電力も持続可能な状態で最大4.8W、ブースト時最大9Wに制限されており、冷却設計の簡易化によるコスト削減、バッテリー持続時間に期待が持てる。[^1]  
 
 [^1]: [mb/google/zork: update power parameters to 4.8w for dalboz (I711d1109) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2135098)
 

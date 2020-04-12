@@ -2,7 +2,7 @@
 title: "Chromebookに搭載されるPollockはFT5ソケット ――DDR4シングルチャネル、SATA無し"
 date: 2020-02-12T22:54:30+09:00
 draft: false
-tags: [ "Picasso", "Raven2", "Dali", "Pollock" ]
+tags: [ "Picasso", "Raven2", "Dali", "Pollock", "Chromebook" ]
 keywords: [ "Chromebook", "Picasso", "Dali", "Pollock", "Ryzen", "Athlon" ]
 categories: [ "Hardware", "APU" ]
 noindex: false
