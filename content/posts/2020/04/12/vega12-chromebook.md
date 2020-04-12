@@ -53,7 +53,7 @@ CPUに関しては、PCHが *Cannon Lake PCH* とされることから *Coffee L
 [^7]: [board/mushu/battery.c - chromiumos/platform/ec - Git at Google](https://chromium.googlesource.com/chromiumos/platform/ec/+/refs/heads/master/board/mushu/battery.c#35)
 [^10]: [mb/google/hatch: Add mushu variant (I81b5bf96) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/1934468)<br><https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/1934468/9/src/mainboard/google/hatch/Kconfig>
 
-## 嬉しいニュース
+## Vega12は輝き続ける
 *Vega12* には前から多数のDeviceID、SKUが確認されていたが[^8]、上述したように現在世に出てるのはMacBook Pro 2018に搭載された **Radeon Pro Vega 16** 、**Radeon Pro Vega 20** のみだ。  
 それらがまた *Mushu* に搭載されることとなるか、それとも隠れていた *Vega12* ベースの製品が出てくるかはまだわからないが、  
 *Vega12* がMacBook Proだけに終わらない、ということは個人的に嬉しいニュースだ。
