@@ -179,7 +179,7 @@ USBは、3x USB-A(5Gbps)、2x USB-C (5Gbps)、1x HDMIとされる。[^26]
 
 [^26]: <https://chromium-review.googlesource.com/c/chromiumos/platform/ec/+/2142848/1/board/dalboz/board.h#91>
 
-*Morphius* のコードにはファンのパロメーターが記述されていたのに対し[^24]、*Dalboz* には無いことから、*Dalboz* はファンレスモデルである可能性がある。[^23]  
+*Morphius* のコードにはファンのパラメーターが記述されていたのに対し[^24]、*Dalboz* には無いことから、*Dalboz* はファンレスモデルである可能性がある。[^23]  
 
 [^23]: <https://chromium-review.googlesource.com/c/chromiumos/platform/ec/+/2142848/1/board/morphius/board.c>
 [^24]: <https://chromium-review.googlesource.com/c/chromiumos/platform/ec/+/2142848/1/board/dalboz/board.c>

@@ -31,3 +31,6 @@ ROCm のパッケージには一般ユーザーもそれなりに使うOpenCLド
  > An enhanced version of the open source ROCm heterogenous programming environment, being developed to tap into the combined performance of AMD CPUs and GPUs, unlocking maximum performance.
 
  > 引用元: <cite>[Next-Generation AMD EPYC™ CPUs and Radeon™ Instinct GPUs Enable El Capitan Supercomputer at Lawrence Livermore National Laboratory to Break 2 Exaflops Barrier | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/next-generation-amd-epyctm-cpus-and-radeontm-instinct-gpus)</cite>
+
+それならそれで番号以外に違いを付けてほしい。それか合流するか。  
+詰まるところ、わかりやすくしてくれというのが個人的な気持ちだ。
