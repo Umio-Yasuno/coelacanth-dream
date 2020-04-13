@@ -39,6 +39,7 @@ GPUの構成としては、4-ShaderEngine、総CU数 20基、総RBE数 8基(32 R
 ## Mushu
 *Mushu* は *Hatch* をベースとするIntel CPU搭載のボード。[^3]  
 CPUに関しては、PCHが *Cannon Lake PCH* とされることから *Coffee Lake* か *Whiskey Lake* と考えられる。メモリにDDR4-2666 16Gを想定していることから前者である可能性が高い。[^5]  
+最大CPU数(スレッド数)は4。[^10]  
 その他判明している仕様は、ディスプレイ解像度 2400x1600(3:2)[^9]、デュアルファン[^6]。  
 バッテリーから、DellのChromebookボードと思われる。[^7]  
 
