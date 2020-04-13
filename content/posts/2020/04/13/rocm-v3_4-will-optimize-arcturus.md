@@ -8,7 +8,7 @@ categories: [ "Software", ]
 noindex: false
 ---
 
-[Tensile](https://github.com/ROCmSoftwarePlatform/Tensile)から ROCm v3.4 での更新内容が見えてきた。[^1]  
+[Tensile](https://github.com/ROCmSoftwarePlatform/Tensile)へのプルリクエストから ROCm v3.4 での更新内容が見えてきた。[^1]  
 Tensileとは、行列演算やN次元のテンソルの縮約、2つの多次元オブジェクトの乗算といった演算のベンチマークに使われるバックエンドライブラリを作成するためのツール。
 
 [^1]: [ROCm 3.4 milestone merge develop into master by zaliu · Pull Request #922 · ROCmSoftwarePlatform/Tensile](https://github.com/ROCmSoftwarePlatform/Tensile/pull/922)
