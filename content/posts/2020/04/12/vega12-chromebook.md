@@ -14,7 +14,7 @@ ChromiumOSへのパッチから、ボード *Mushu* がdGPUに *Vega12* を搭�
 
 ## Vega12
 GFX Coreは[GFX9](/tags/gfx9)であり、名の通り正真正銘 Vega世代のGPU。  
-GPUの構成としては、4-ShaderEngine、総CU数 20基、総RBE数 8基(32 ROP)、L2cache 2MB[^1]。  
+GPUの構成としては、4-ShaderEngine、総CU数 20基、総RBE数 8基(32 ROP)、L2cache 2MB。[^1]  
 メモリにはHBM2を1スタック(1024-bit)使用している。  
 [Vega10](/tags/vega10)よりも小規模とはいえ確実に *GFX9/Vega* 世代であることと未だコンシューマ向けGPUでは採用例が少ないHBM2を搭載することから一部で注目と期待を浴びていたが、現在[Vega12](/tags/vega12)ベースの製品を組み込んでいるのはMacBook Pro 2018年モデルのみとなっている。  
 

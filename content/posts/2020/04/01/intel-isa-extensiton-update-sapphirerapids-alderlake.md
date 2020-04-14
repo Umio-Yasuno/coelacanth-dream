@@ -29,7 +29,7 @@ AVX512_BF16には、他に *Cooper Lake* でしか対応していないため、
 [^3]: <https://github.com/llvm/llvm-project/blob/master/clang/lib/Basic/Targets/X86.cpp#L166>
 
 ### Alder Lake現る {#alderlake}
-登場時期は不明ではあるが *Tiger Lake* より後の世代と予想されている *Alder Lake* の名が記載されている。[^1]  
+登場時期は不明ではあるが *Tiger Lake* より後の世代と予想されている *Alder Lake* の名が記載された。[^1]  
 しかし、*Tiger Lake* の対応する命令と一致しないため、後継ではなくまた別の用途向けのプロセッサである可能性も十分考えられる。  
 
 ### 非対称ハイブリッドプロセッサへの対応が進められる {#hybrid-processor}
