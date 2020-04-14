@@ -1,7 +1,7 @@
 ---
 title: "AMD、コアあたりの性能を高めたEPYC 7Fx2シリーズを発表"
 date: 2020-04-14T22:27:01+09:00
-draft: true
+draft: false
 tags: [ "Zen2", ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "CPU" ]
