@@ -61,7 +61,7 @@ GDDR系のPHY(物理層)であれば、縦横の比率が大きく、*Polaris10*
 
 [^5]: [Polaris10/Polaris11のダイ観察 & 推測](/posts/2020/03/30/polaris10-polaris11-dieshot-guess/)
 
-余談だが、総CU数 36基、RBE 16基の *Polaris10* は 243.78mm<sup>2</sup>と *Vega12* より小さい。これは上述のGDDR系とHBM2の違い以外に、CUの大きさが *GFX8 /Polaris10* で 推定 2.912mm<sup>2</sup>、*GFX9 /Vega10* で推定 3.744mm<sup>2</sup>とだいぶ差があるからだろう。[^1][^5]  
+余談だが、総CU数 36基、RBE 8基の *Polaris10* は 243.78mm<sup>2</sup>と *Vega12* より小さい。これは上述のGDDR系とHBM2の違い以外に、CUの大きさが *GFX8 /Polaris10* で 推定 2.912mm<sup>2</sup>、*GFX9 /Vega10* で推定 3.744mm<sup>2</sup>とだいぶ差があるからだろう。[^1][^5]  
 
 <br>
 規模から単純にダイサイズを求めるのは難しく、またダイサイズから規模を図るのも難しいということだ。  
