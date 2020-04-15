@@ -35,6 +35,7 @@ GPU-Zの表示では、PCIe Gen3は8レーン。
 | UVD | v7.0 | v7.0 |
 | VCE | v4.0 | v4.0 |
 | CMOS | 14nm | 14nm |
+| DieSize | 509.73mm<sup>2</sup> | 252mm<sup>2</sup>
 
 [^2]: [Vega12 - pal/ndDevice.cpp at dev · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/dev/src/core/os/nullDevice/ndDevice.cpp#L854)
 [^3]: [RadeonFeature](https://www.x.org/wiki/RadeonFeature/)
@@ -55,8 +56,7 @@ GPU-Zの表示では、PCIe Gen3は8レーン。
 総CU数が20基と少なめなのに 4-ShaderEngineとしたのは、コンピュートタスクをより並列に実行し、性能効率を高める目的があったのではないかと思う。  
 
 次に、メモリにHBM2を採用していることが考えられる。  
-GDDR系のPHY(物理層)であれば、縦横の比率が大きく、*Polaris10* のように ShaderEngine をぐるりと囲む配置を取れるが、  
-HBM2 PHYはGDDR系よりは縦横の比率が小さい。  
+GDDR系のPHY(物理層)であれば、縦横の比率が大きく、*Polaris10* のように ShaderEngine をぐるりと囲む配置を取れるが、HBM2 PHYはGDDR系よりは縦横の比率が小さい。  
 そのため、ダイサイズを無駄に喰わないように配置するのが難しいのではないと思う。  
 
 このことから言えるのは、規模から単純にダイサイズを求めるのは難しく、またダイサイズから規模を図るのも難しいということだ。  
