@@ -16,8 +16,8 @@ AMDは2020/04/14付けで、ベースクロックを上げ、L3cacheを多くあ
 
 追加されたSKUは、8-Core *EPYC 7F32* 、16-Core *EPYC 7F52* 、24-Core *EPYC 7F72* 。  
 全体的に、コア数を抑え、L3cacheは多くした(=CCDチップレットが多い)仕様。それまでの同コア数のSKUは、8-Coreで 2-CCD、16-Coreで2-CCDか4-CCD、24-Coreで4-CCDが基本だった。  
-L3cacheから最低でも、8-Core *EPYC 7F32* は4-CCD、24-Core *EPYC 7F72* は6-CCD、  
-そして *EPYC 7F52* は中でも豪勢な仕様であり、L3cache 256MBということから、 *EPYC Rome* パッケージが搭載可能な8-CCDすべてを、それぞれ2-Coreずつ有効することで 16-Coreとしている。  
+それが今回追加されたSKUではL3cacheから考えるに最低でも、8-Core *EPYC 7F32* は4-CCD、24-Core *EPYC 7F72* は6-CCD、  
+そして *EPYC 7F52* は中でも豪勢な仕様であり、 *EPYC Rome* パッケージが搭載可能な8-CCDすべてを、それぞれ2-Coreずつ有効することで 16-Coreとしている。  
 CCD内は2-CCX構成であるため、CCXが対称という中で最低までコアを無効化したSKUとなった。  
 
 | | EPYC 7F32 | EPYC 7F52 | EPYC 7F72 |
