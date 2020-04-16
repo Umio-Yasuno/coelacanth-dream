@@ -66,7 +66,7 @@ U-Series を元にした仕様推測、というかコピペ
 GF 12nmプロセスで製造され、CPUは *Zen/+アーキテクチャ* で最大4-Core/8-Thread、L3cache 4MB、  
 GPUは *Vegaアーキテクチャ ([gfx902](/tags/gfx902))* で最大11CU、2RBE(8ROP)、L2cache 1MBの規模となるAPU。[^6]
 
-[^6]: <https://github.com/GPUOpen-Drivers/pal/blob/dev/src/core/os/nullDevice/ndDevice.cpp#L888>
+[^6]: <https://github.com/GPUOpen-Drivers/pal/blob/e642f608a62887d40d1f25509d2951a4a3576985/src/core/os/nullDevice/ndDevice.cpp#L888>
 
 ### Raven2 /Dali /Pollock {#raven2}
 GF 14nmプロセスで製造され、CPUは *Zenアーキテクチャ* 最大2-Core/4-Thread、L3cache 4MB、  
@@ -76,7 +76,7 @@ I/O部の規模は *Picasso* より小さい。
 
 名前が3つあるように書いたが、個人的にはまず[Raven2](/tags/raven2)が基本としてあり、[Dali](/tags/dali)と[Pollock](/tags/pollock)はそのマイナーバージョンという認識でいる。  
 
-[^12]: <https://github.com/GPUOpen-Drivers/pal/blob/dev/src/core/os/nullDevice/ndDevice.cpp#L905>
+[^12]: <https://github.com/GPUOpen-Drivers/pal/blob/e642f608a62887d40d1f25509d2951a4a3576985/src/core/os/nullDevice/ndDevice.cpp#L905>
 
 ## Board {#board}
 ### Zork {#zork}

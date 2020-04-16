@@ -21,7 +21,7 @@ noindex: false
  * 〃 のCU(ComputeUnit)数は9基
  * TCC(L2cache)ブロック数は8基(ブロックあたり256KB、計2MB)
 
-[^1]: <https://github.com/GPUOpen-Drivers/pal/blob/dev/src/core/os/nullDevice/ndDevice.cpp#L716>
+[^1]: <https://github.com/GPUOpen-Drivers/pal/blob/e642f608a62887d40d1f25509d2951a4a3576985/src/core/os/nullDevice/ndDevice.cpp#L716>
 
 [RadeonFeature](https://www.x.org/wiki/RadeonFeature/#radeondisplayhardware)からの情報では、
 
@@ -40,7 +40,7 @@ noindex: false
  * 〃 のCU(ComputeUnit)数は8基
  * TCC(L2cache)ブロック数は4基(ブロックあたり256KB、計1MB)
 
-[^2]: <https://github.com/GPUOpen-Drivers/pal/blob/dev/src/core/os/nullDevice/ndDevice.cpp#L734>
+[^2]: <https://github.com/GPUOpen-Drivers/pal/blob/e642f608a62887d40d1f25509d2951a4a3576985/src/core/os/nullDevice/ndDevice.cpp#L734>
 
 [RadeonFeature](https://www.x.org/wiki/RadeonFeature/#radeondisplayhardware)からの情報では、
 

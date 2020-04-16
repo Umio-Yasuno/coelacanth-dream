@@ -65,8 +65,6 @@ OEM向けを見てもわかるようにローエンドからメインストリ�
 
 そして後者にも関連するが、RX 5500 XTは自作PC市場において RX 590 しか置き換えたとは言えないし、AMDもそのつもりはないと思える。  
 
-{{< figure src="/image/2020/03/11/product-perf-matrix.webp" title="Radeon Product Performance Matrix" caption="画像出典: <cite>[パートナーリソース&情報 | AMDパートナーハブ](https://www.amd.com/ja/partner)</cite>" >}}
-
 RX 580/570等はメインストリームとして RX 5500 XTより下の性能帯に位置する。  
 Navi14ベースでは、メモリバス幅を96-bitに減らし、VRAMも3GBとなる製品があるはずだが、現状では RX 5300Mが発表されているのみで、デスクトップ、ワークステーション向けで近い製品はまだ表に出てきていない。  
 これは、RX 5500 XTではメモリバス幅が RX 580/570の半分である128-bit幅でも、GDDR6メモリがGDDR5に比べて倍近くの速度(14Gbps)を持ち、16Gbitチップも合わせ、帯域とVRAM容量でも綺麗に置き換えるのが可能だったのに対し、  

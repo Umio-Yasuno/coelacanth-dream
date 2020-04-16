@@ -37,9 +37,10 @@ GPU-Zの表示では、PCIe Gen3は8レーン。
 | CMOS | 14nm | 14nm |
 | DieSize | 509.73mm<sup>2</sup> | 252mm<sup>2</sup>
 
-[^2]: [Vega12 - pal/ndDevice.cpp at dev · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/dev/src/core/os/nullDevice/ndDevice.cpp#L854)
+[^2]: [Vega12 - pal/ndDevice.cpp at dev · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/e642f608a62887d40d1f25509d2951a4a3576985/src/core/os/nullDevice/ndDevice.cpp#L854)
 [^3]: [RadeonFeature](https://www.x.org/wiki/RadeonFeature/)
 [^4]: [Vega10 - pal/ndDevice.cpp at dev · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/dev/src/core/os/nullDevice/ndDevice.cpp#L835)
+[^4]: [Vega10 - pal/ndDevice.cpp at dev · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/e642f608a62887d40d1f25509d2951a4a3576985/src/core/os/nullDevice/ndDevice.cpp#L835)
 
 ## そこまで謎でもなかったダイサイズ
 そこで以前作った *Vega10* のダイアグラムから規模を合わせた *Vega12* のダイアグラムを作成してみた。[^1]  
@@ -64,4 +65,4 @@ GDDR系のPHY(物理層)であれば、縦横の比率が大きく、*Polaris10*
 余談だが、総CU数 36基、RBE 8基の *Polaris10* は 243.78mm<sup>2</sup>と *Vega12* より小さい。これは上述のGDDR系とHBM2の違い以外に、CUの大きさが *GFX8 /Polaris10* で 推定 2.912mm<sup>2</sup>、*GFX9 /Vega10* で推定 3.744mm<sup>2</sup>とだいぶ差があるからだろう。[^1][^5]  
 
 <br>
-規模から単純にダイサイズを求めるのは難しく、またダイサイズから規模を図るのも難しいということだ。  
+これらのことから言えるのは、規模から単純にダイサイズを求めるのは難しく、またダイサイズから規模を図るのも難しいということだ。  

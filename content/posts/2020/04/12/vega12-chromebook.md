@@ -33,7 +33,7 @@ GPUの構成としては、4-ShaderEngine、総CU数 20基、総RBE数 8基(32 R
 | VCE | v4.0 |
 | CMOS | 14nm |
 
-[^1]: [pal/ndDevice.cpp at dev · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/dev/src/core/os/nullDevice/ndDevice.cpp#L854)
+[^1]: [pal/ndDevice.cpp at dev · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/e642f608a62887d40d1f25509d2951a4a3576985/src/core/os/nullDevice/ndDevice.cpp#L854)
 [^2]: [RadeonFeature](https://www.x.org/wiki/RadeonFeature/)
 
 ## Mushu

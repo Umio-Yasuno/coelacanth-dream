@@ -16,7 +16,7 @@ noindex: false
 
 [GPUOpen-Drivers/pal: Platform Abstraction Library](https://github.com/GPUOpen-Drivers/pal)からの情報では[^1]、
 
-[^1]: <https://github.com/GPUOpen-Drivers/pal/blob/dev/src/core/os/nullDevice/ndDevice.cpp#L835>
+[^1]: <https://github.com/GPUOpen-Drivers/pal/blob/e642f608a62887d40d1f25509d2951a4a3576985/src/core/os/nullDevice/ndDevice.cpp#L835>
 
  * 4-ShaderEngine
  * ShaderEngineあたりのRBE (RenderBackend) 数は4基
@@ -46,7 +46,7 @@ AMD GCNアーキテクチャでは、最大4CUで I$(Instruction Cache) 32KB と
 {{< figure src="/image/2020/03/24/vega20-dieshot-guess.webp" title="Vega20 推測" caption="ダイサイズ: 330.93mm<sup>2</sup><br>画像出典: [AMD@7nm@GCN\_5th\_gen@Vega20@Radeon\_VII@\_-\_@\_\_\_DSCx2\_polysil… | Flickr](https://www.flickr.com/photos/130561288@N04/48243282516/)" >}}
 [GPUOpen-Drivers/pal: Platform Abstraction Library](https://github.com/GPUOpen-Drivers/pal)からの情報では *Vega10* と特に変わらず、[^3]
 
-[^3]: <https://github.com/GPUOpen-Drivers/pal/blob/dev/src/core/os/nullDevice/ndDevice.cpp#L871>
+[^3]: <https://github.com/GPUOpen-Drivers/pal/blob/e642f608a62887d40d1f25509d2951a4a3576985/src/core/os/nullDevice/ndDevice.cpp#L871>
 
  * 4-ShaderEngine
  * ShaderEngineあたりのRBE (RenderBackend) 数は4基
