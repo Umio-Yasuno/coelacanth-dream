@@ -39,7 +39,6 @@ GPU-Zの表示では、PCIe Gen3は8レーン。
 
 [^2]: [Vega12 - pal/ndDevice.cpp at dev · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/e642f608a62887d40d1f25509d2951a4a3576985/src/core/os/nullDevice/ndDevice.cpp#L854)
 [^3]: [RadeonFeature](https://www.x.org/wiki/RadeonFeature/)
-[^4]: [Vega10 - pal/ndDevice.cpp at dev · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/dev/src/core/os/nullDevice/ndDevice.cpp#L835)
 [^4]: [Vega10 - pal/ndDevice.cpp at dev · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/e642f608a62887d40d1f25509d2951a4a3576985/src/core/os/nullDevice/ndDevice.cpp#L835)
 
 ## そこまで謎でもなかったダイサイズ
@@ -53,8 +52,7 @@ GPU-Zの表示では、PCIe Gen3は8レーン。
 ダイショットから推測したダイアグラムを再配置した、というものであるため、当然正確性には欠けることを留意したい。  
 
 *Vega12* が大きくなった理由としては、まず 4-ShaderEngineという構成であることが考えられる。  
-言い換えれば、フロントエンド部が占める大きさが *Vega10* と変わらない。  
-総CU数が20基と小規模ながら 4-ShaderEngineとしたのは、コンピュートタスクをより並列に実行し、性能効率を高める目的があったのではないかと思う。  
+言い換えれば、*Geometry /Rasterizer* 、フロントエンド部が占める大きさが *Vega10* と変わらない。  
 
 次に、メモリにHBM2を採用していることが考えられる。  
 GDDR系のPHY(物理層)であれば、縦横の比率が大きく、*Polaris10* のように ShaderEngine をぐるりと囲む配置を取れる[^5]。しかし、HBM2 PHYはGDDR系よりは縦横の比率が小さい。  
