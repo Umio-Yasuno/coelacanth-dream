@@ -13,6 +13,7 @@ noindex: true
 ## インデックス
 
  * [やはり MI100 は8CUを無効化して120CUか](#mi100-120cu)
+ * [HP Desktop Pro A G3のマザーボード画像](#pro-500-motherboard)
  * [電源のファン交換](#psu-fan)
  * [最近のCSS変更点](#recent-css-change)
 
@@ -26,6 +27,16 @@ noindex: true
 上記のスペックが仮のものである可能性もあるため、ここで書くこととした。  
 
 [^1]: [Arcturus情報近況 (2020/02/22) | Coelacanth's Dream](/posts/2020/02/22/maybe-amd-8gpus-system-and-arcturus-recent/)
+
+## HP Desktop Pro A G3のマザーボード画像 {#pro-500-motherboard}
+**HP Desktop Pro A G3** のマニュアルにて、PRO 500チップセット仕様のマザーボードの画像が公開されていた。  
+以前、*PRO 500* 、*PRO 560* チップセットを取り上げた時[^2][^3]は画像がなく、ちょっとした不安を抱えていたが、やはりチップセットはなく、*PRO 500* がチップセットレスであることが確認でき、安心した。  
+
+ * [HP Desktop Pro A G3 Manuals | HP® Customer Support](https://support.hp.com/hk-en/product/hp-desktop-pro-a-g3/31268965/manuals)  
+  * <http://h10032.www1.hp.com/ctg/Manual/c06515366>
+
+[^2]: [AMDの新しい小型PC向けチップセット「PRO 500」 | Coelacanth's Dream](/posts/2020/01/28/amd-pro-500-chipset/)
+[^3]: [AMD 「PRO 500」チップセット続報 & まとめ | Coelacanth's Dream](/posts/2020/02/01/amd-pro-500-follow-up/)
 
 ## 電源のファン交換 {#psu-fan}
 個人的な話。  
