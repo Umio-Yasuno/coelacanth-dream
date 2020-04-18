@@ -2,7 +2,7 @@
 title: "GPUにAMD Vega12を搭載したChromebookが開発中か"
 date: 2020-04-12T12:47:09+09:00
 draft: false
-tags: [ "Vega12", "Chromebook" ]
+tags: [ "Vega12", "gfx904", "Chromebook" ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false

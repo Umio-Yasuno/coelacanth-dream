@@ -2,7 +2,7 @@
 title: "Vega12 謎?のダイサイズ"
 date: 2020-04-15T21:53:34+09:00
 draft: false
-tags: [ "Vega12", ]
+tags: [ "GFX9", "GCN", "Vega12", "gfx904" ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
