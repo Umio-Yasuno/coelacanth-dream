@@ -8,10 +8,10 @@ categories: [ "Software", ]
 noindex: false
 ---
 
-[Tensile](https://github.com/ROCmSoftwarePlatform/Tensile)へのプルリクエストから ROCm v3.4 での更新内容が見えてきた。[^1]  
+[Tensile](https://github.com/ROCmSoftwarePlatform/Tensile)へのプルリクエストから ROCm v3.4 での更新内容が見えてきた。  
 Tensileとは、行列演算やN次元のテンソルの縮約、2つの多次元オブジェクトの乗算といった演算のベンチマークに使われるバックエンドライブラリを作成するためのツール。
 
-[^1]: [ROCm 3.4 milestone merge develop into master by zaliu · Pull Request #922 · ROCmSoftwarePlatform/Tensile](https://github.com/ROCmSoftwarePlatform/Tensile/pull/922)
+[ROCm 3.4 milestone merge develop into master by zaliu · Pull Request #922 · ROCmSoftwarePlatform/Tensile](https://github.com/ROCmSoftwarePlatform/Tensile/pull/922)
 
 内容としては、行列演算用の命令 MFMA、データ精度 BF16、その他もろもろへの最適化、修正が見られ、  
 先2つから ROCm v3.4 は[Arcturus](/tags/arcturus)への対応をより進め、性能を引き出すことがメインと考えられる。  
