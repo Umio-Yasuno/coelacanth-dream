@@ -76,9 +76,9 @@ PCHのコードネームは *Mule Creek Canyon PCH* と、ちょっと凝った�
 CPUコア数に関しては若干情報があるのだが、正直怪しいところがある。  
 まず[Coreboot](https://github.com/coreboot/coreboot)にある *Jasper Lake* のリファレンスボード、**jasperlake_rvp** の `Kconfig` は `MAX_CPUS` の値が `8` となっている。[^9]このままだと *Jasper Lake* の最大CPUスレッド数は8、と思われるが、  
 *Jasper Lake* を搭載するChromebookのリファレンスボード、コードネーム **dedede** では `MAX_CPUS` を `4` としている。[^10]  
-どちらを信用するかで言えば、**jasperlake_rvp** には **icelake_rvp** を元にして名前を置き換えた、という経緯があるため、[^11]**dedede** に分がある。*Ice Lake (Client)* の最大CPUスレッド数は8であり、**jasperlake_rvp** はその値をそのまま持ってきた結果と考えられる。  
-そういうことで、*Jasper Lake* は最大4スレッドではないかと個人的に考えている。  
-ただそれはあくまでも **dedede** で想定しているスレッド数であり、より多いコア/スレッド数を持つ *Jasper Lake* が出てくる可能性もある。  
+どちらを信用するかで言えば、**jasperlake_rvp** には **icelake_rvp** を元にして名前を置き換えた、という経緯があるため、[^11]**dedede** に分がある。*Ice Lake (Client)* の最大CPUスレッド数は8であり、**jasperlake_rvp** はその値をそのまま持ってきた結果だろう。  
+そういうことで、*Jasper Lake* は最大4スレッドではないかと個人的に考えているが、  
+それはあくまでも **dedede** で想定しているスレッド数であり、より多いコア/スレッド数を持つ *Jasper Lake* が出てくる可能性もある。  
 
 [^9]: <https://github.com/coreboot/coreboot/blob/630aa4b3db1b7fa459380ec52328d632b53b22de/src/mainboard/intel/jasperlake_rvp/Kconfig#L34>
 [^10]: <https://github.com/coreboot/coreboot/blob/aa56c11b1911fa49e53a145926b00670f9939f27/src/mainboard/google/dedede/Kconfig#L59>
@@ -121,15 +121,16 @@ GPUの機能は同じで、PCHもコードネームこそ違うが、中身と�
 
 ## Lakefiled {#lakefield}
 *Lakefield* は高性能な *Sunny Cove* ベースのコアと省電力に優れる *Tremont* ベースのコアを両方併せ持つ非対称ハイブリッドプロセッサであり、  
-I/O系を集約し、22nm(P1222)で製造される Base die、CPU、GPU、メモリコントローラを集約した、10nmで製造される Compute dieをFoveros技術で3D積層し、  
-DRAMもPOP(Package-on-package)で搭載する、Intelの最新技術が詰め込まれた画期的なSoCでもある。  
+I/O系を集約し、22nm(P1222)で製造される Base die、CPU、GPU、メモリコントローラを集約した、10nmで製造される Compute dieをFoveros技術で3D積層する、Intelの最新技術が詰め込まれた画期的なSoCでもある。
+DRAMも積層されるが、それはPOP(Package-on-package)技術による積層となる。  
+
+参考: <cite><https://www.hotchips.org/hc31/HC31_2.10_LKF_HC_2019_Final_v7.pdf></cite>
 
 ただまだ情報は少なく、CPU関連では先日の Intel 拡張命令リファレンスのアップデートでハイブリッドプロセッサの情報を示すEAXレジスタが追加されたくらいだ。[^17]
-*Sunny Cove* と *Tremont* で対応する命令の範囲は異なるが、コンパイラはどのように見ることになるのだろうか。
+*Sunny Cove* と *Tremont* で対応する命令の範囲は異なるが、コンパイラやスケジューラはどのように見ることになるのだろうか。
 
 [^17]: [Intel、拡張命令リファレンスをアップデート (Sapphire Rapids /Alder Lake /ハイブリッドプロセッサ) | Coelacanth's Dream](/posts/2020/04/01/intel-isa-extensiton-update-sapphirerapids-alderlake/#hybrid-processor)
 
 GPUはもう少し明らかにされており、GPUアーキテクチャは *Ice Lake /Elkhart Lake /Jasper Lake* と同世代の Gen11で、EU数は最大64基、  
 メディア関連も Gen11だが、Display Coreは Gen11.5と進んでおり、映像出力数は最大4つ、解像度は最大5k60か4k120となっている。  
 
-参考: <cite><https://www.hotchips.org/hc31/HC31_2.10_LKF_HC_2019_Final_v7.pdf></cite>
