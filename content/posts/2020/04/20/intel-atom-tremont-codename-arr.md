@@ -138,5 +138,6 @@ DRAMも積層されるが、それはPOP(Package-on-package)技術による積�
 [^17]: [Intel、拡張命令リファレンスをアップデート (Sapphire Rapids /Alder Lake /ハイブリッドプロセッサ) | Coelacanth's Dream](/posts/2020/04/01/intel-isa-extensiton-update-sapphirerapids-alderlake/#hybrid-processor)
 
 GPUはもう少し明らかにされており、GPUアーキテクチャは *Ice Lake /Elkhart Lake /Jasper Lake* と同世代の Gen11で、EU数は最大64基、  
-メディア関連も Gen11だが、Display Coreは Gen11.5と進んでおり、映像出力数は最大4つ、解像度は最大5k60か4k120となっている。  
+メディア関連も Gen11だが、*Ice Lake* 同等の機能を持つのか、*Elkhart /Jasper Lake* と同等になるのかは不明。EU 64基と、*Ice Lake* 同等であることに期待が持てるが果たして。  
+Display Coreは Gen11.5と進んでおり、映像出力数は最大4つ、解像度は最大5k60か4k120となっている。  
 
