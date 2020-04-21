@@ -14,9 +14,9 @@ Intelの次世代低消費電力 x86アーキテクチャ、*Tremont* ベース�
 ## インデックス
 
  * [Tremontアーキテクチャ](#tremont-arch)
- * [Jacobsville (Tremont\_D)](#tremont-d)
+ * [Jacobsville (Tremont-D)](#tremont-d)
  * [Elkhart Lake (Tremont)](#tremont)
- * [Jasper Lake (Tremont\_L)](#tremont-l)
+ * [Jasper Lake (Tremont-L)](#tremont-l)
   * [Elkhart Lake と Jasper Lake の共通点と違い](#elkhart-jasper-diff)
  * [Lakefield](#lakefield)
 
@@ -28,7 +28,7 @@ Intelの次世代低消費電力 x86アーキテクチャ。
 
 参考: [ASCII.jp：AtomベースのSmall CoreがTremontと判明　インテル CPUロードマップ (2/4)](https://ascii.jp/elem/000/001/981/1981403/2/)
 
-## Jacobsville (Tremont\_D) {#tremont-d}
+## Jacobsville (Tremont-D) {#tremont-d}
 *Tremont* コアを採用したマイクロサーバ向けプロセッサ。[^2][^3]  
 マイクロサーバということから、10nmで製造され最大24コアの無線基地局向けSoC **Atom P5900** のベースとなるプロセッサを指すと思われる。  
 [^2]: [x86/cpu: Add Atom Tremont (Jacobsville) · torvalds/linux@00ae831](https://github.com/torvalds/linux/commit/00ae831dfe4474ef6029558f5eb3ef0332d80043)
@@ -40,7 +40,7 @@ Intelの次世代低消費電力 x86アーキテクチャ。
 
 *Jacobsville* は 4 Tremontコアと L2cache 4.5MBをまとめた *Core Tile* を6基持つ構成となっている。  
 
-| Tremont_D | P5962B[^4] |
+| Tremont-D | P5962B[^4] |
 | :--- | :---: |
 | Core Title | 6 |
 | Core/Thread (per Tile) | 24/24 (4) |
@@ -68,7 +68,7 @@ PCHのコードネームは *Mule Creek Canyon PCH* と、ちょっと凝った�
 
 [^15]: [drm/i915/ehl: Introduce Mule Creek Canyon PCH · torvalds/linux@c6f7acb](https://github.com/torvalds/linux/commit/c6f7acb80abf5f73be4ee08541e3393a0146b15e)
 
-## Jasper Lake (Tremont\_L) {#tremont-l}
+## Jasper Lake (Tremont-L) {#tremont-l}
 *Tremont* コアを採用したモバイル向けプロセッサ。[^1]
 
 [^1]: [x86/cpu: Add Jasper Lake to Intel family · torvalds/linux@b2d32af](https://github.com/torvalds/linux/commit/b2d32af0bff402b4c1fce28311759dd1f6af058a)
@@ -118,6 +118,12 @@ GPUの機能は同じで、PCHもコードネームこそ違うが、中身と�
 
 恐らく、2つのプロセッサを分ける最大の要素は、この *Sigle Cluster Mode* が有効にされているか否かであり、  
 組み込み向けの *Elkhaet Lake* では有効にされ、モバイル向けの *Jasper Lake* では無効にされ、代わりに *Hyper-Threading* が有効にされているのではないだろうか。
+
+しかし、それと上述した *Jasper Lake* は最大4スレッドという考えを合わせると、*Jasper Lake* は 2-Core/4-Thread となるが、Atom系にしても小さいように思える。  
+現世代Atomプロセッサ、*Gemini Lake* は 4-Core で *Hyper-Threading* はサポートしないため、アーキテクチャが *Tremont* である *Jasper Lake* では 2-Core/4-Thread でも性能向上が見込めるのか、  
+それとも、4スレッド より上の *Jasper Lake* が予定されているのか、  
+または、*Single Cluster Mode* に関する自分の推測が外れているのか。  
+こればかりは新たな情報が出てこないければわからない。  
 
 ## Lakefiled {#lakefield}
 *Lakefield* は高性能な *Sunny Cove* ベースのコアと省電力に優れる *Tremont* ベースのコアを両方併せ持つ非対称ハイブリッドプロセッサであり、  
