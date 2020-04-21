@@ -74,10 +74,10 @@ PCHのコードネームは *Mule Creek Canyon PCH* と、ちょっと凝った�
 [^1]: [x86/cpu: Add Jasper Lake to Intel family · torvalds/linux@b2d32af](https://github.com/torvalds/linux/commit/b2d32af0bff402b4c1fce28311759dd1f6af058a)
 
 CPUコア数に関しては若干情報があるのだが、正直怪しいところがある。  
-まず[Coreboot](https://github.com/coreboot/coreboot)にある *Jasper Lake* のリファレンスボード、**jasperlake_rvp** の `Kconfig` は `MAX_CPUS` の値が `8` となっている。[^9]このままだと *Jasper Lake* の最大CPUスレッド数は8、と思われるが、  
+まず[Coreboot](https://github.com/coreboot/coreboot)にある *Jasper Lake* のリファレンスボード、**jasperlake_rvp** の `Kconfig` は `MAX_CPUS` の値が `8` となっている。[^9]このままだと *Jasper Lake* の最大 8-Thread、と思われるが、  
 *Jasper Lake* を搭載するChromebookのリファレンスボード、コードネーム **dedede** では `MAX_CPUS` を `4` としている。[^10]  
-どちらを信用するかで言えば、**jasperlake_rvp** には **icelake_rvp** を元にして名前を置き換えた、という経緯があるため、[^11]**dedede** に分がある。*Ice Lake (Client)* の最大CPUスレッド数は8であり、**jasperlake_rvp** はその値をそのまま持ってきた結果だろう。  
-そういうことで、*Jasper Lake* は最大4スレッドではないかと個人的に考えているが、  
+どちらを信用するかで言えば、**jasperlake_rvp** には **icelake_rvp** を元にして名前を置き換えた、という経緯があるため、[^11]**dedede** に分がある。*Ice Lake (Client)* は最大 8-Threadであり、**jasperlake_rvp** はその値をそのまま持ってきた結果とも考えられる。  
+そういうことで、*Jasper Lake* は最大 4-Threadではないかと推測するが、  
 それはあくまでも **dedede** で想定しているスレッド数であり、より多いコア/スレッド数を持つ *Jasper Lake* が出てくる可能性もある。  
 
 [^9]: <https://github.com/coreboot/coreboot/blob/630aa4b3db1b7fa459380ec52328d632b53b22de/src/mainboard/intel/jasperlake_rvp/Kconfig#L34>
@@ -121,7 +121,7 @@ GPUの機能は同じで、PCHもコードネームこそ違うが、中身と�
 
 しかし、それと上述した *Jasper Lake* は最大4スレッドという考えを合わせると、*Jasper Lake* は 2-Core/4-Thread となるが、Atom系にしても小さいように思える。  
 現世代Atomプロセッサ、*Gemini Lake* は 4-Core で *Hyper-Threading* はサポートしないため、アーキテクチャが *Tremont* である *Jasper Lake* では 2-Core/4-Thread でも性能向上が見込めるのか、  
-それとも、4スレッド より上の *Jasper Lake* が予定されているのか、  
+それとも、4-Threadより上の *Jasper Lake* が予定されているのか、  
 または、*Single Cluster Mode* に関する自分の推測が外れているのか。  
 こればかりは新たな情報が出てこないければわからない。  
 
