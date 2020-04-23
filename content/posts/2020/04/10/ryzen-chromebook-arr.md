@@ -158,6 +158,8 @@ USBと映像出力の仕様は、3x USB-A(10Gbps)、3x USB-C(10Gbps) 内1つが�
 
 [^27]: <https://chromium-review.googlesource.com/c/chromiumos/platform/ec/+/2142848/1/board/trembyle/board.h#98>
 
+ちなみに上記のベンチマーク結果は *Trembyle* で実行されたもの。[^4][^5]
+
 ### Dalboz {#dalboz}
 ソケットからして他と同じ *FP5 BGAソケット* ではなく、*FT5 BGAソケット* を採用している。[^1]  
 その *FT5 BGAソケット* は、メモリをシングルチャネルとし、SATAインターフェイスは無しとパッケージサイズを小さくし、配線数も減らしているものと思われる。[^14]元々 *FP5 BGAソケット* は *Raven* のために作られた仕様であったため、規模を小さくした *Raven2* には必要のない部分があった。  

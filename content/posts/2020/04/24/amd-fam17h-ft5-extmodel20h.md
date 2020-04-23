@@ -46,7 +46,7 @@ noindex: false
 
 コミットメッセージでは *FP5ソケット* が `0x18` としているが、これはChromebookに採用される *FP5ソケット* 搭載のAPUが *Raven* 以降の *Picasso* 、*Raven2 (Dali)* のみであるからと思われる。  
 そして、*FT5ソケット* を `0x20` としているが、それに搭載するAPUは *Raven2 (Pollock)* だけとなっている。[^3]  
-これで少なくとも 12nm *Zen+ APU /Picasso* ではなく、14nm *Zen APU /Raven2 (Pollock)* としっかり判別されるはずだ。  
+少なくとも *Raven2 (Pollock)* は、12nm *Zen+ APU /Picasso* ではなく、14nm *Zen APU /Raven2 (Pollock)* としっかり判別されるはずだ。  
 
 [^3]: [soc/amd/picasso: Add Kconfig option for chip footprint (Ia4663d38) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2051509)
 

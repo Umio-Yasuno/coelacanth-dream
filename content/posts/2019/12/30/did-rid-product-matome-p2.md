@@ -165,11 +165,11 @@ BootCampDriver内のcccmanifest_64.xml。
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 1636 &darr; | 00 | | (BringUp FP6) |
-| | C1 | | (B12 15W FP6) |
+| | C1 | 4800U | (B12 15W FP6) |
 | | C2 | | (B10 15W FP6) |
 | | C3 | 4500U | (B8 15W FP6) |
 | | C4 | | (B6 15W FP6) |
-| | C5 | | (B12 45W FP6) |
+| | C5 | 4900HS | (B12 45W FP6) |
 | | C6 | | (B10 45W FP6) |
 | | C7 | | (B8 45W FP6) |
 | | C8 | | (B10 65W AM4) |
