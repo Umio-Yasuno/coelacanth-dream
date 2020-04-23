@@ -16,6 +16,7 @@ noindex: false
 
  * [x86_Model](#x86_model)
  * [Pollock の x86_Model は "0x20"](#pollock)
+ * [気がかり](#worry)
 
 ## x86_Model {#x86_model}
 現在主流の x86-64プロセッサはその判別に Family ID と Model を用いられる。  
@@ -44,12 +45,12 @@ noindex: false
 {{< link >}}参考: <cite>[soc/amd: Update macro name for IOMMU on AMD Family 17h (I17c78200) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2153715)</cite>{{< /link >}}
 
 コミットメッセージでは *FP5ソケット* が `0x18` としているが、これはChromebookに採用される *FP5ソケット* 搭載のAPUが *Raven* 以降の *Picasso* 、*Raven2 (Dali)* のみであるからと思われる。  
-そして、*FT5ソケット* を `0x20` としているが、それに搭載するAPUは *Raven2 (Pollock)* だけとしている。[^3]  
-これで 12nm *Zen+ APU /Picasso* ではなく、14nm *Zen APU /Raven2 (Pollock)* としっかり判別されるはずだ。  
+そして、*FT5ソケット* を `0x20` としているが、それに搭載するAPUは *Raven2 (Pollock)* だけとなっている。[^3]  
+これで少なくとも 12nm *Zen+ APU /Picasso* ではなく、14nm *Zen APU /Raven2 (Pollock)* としっかり判別されるはずだ。  
 
 [^3]: [soc/amd/picasso: Add Kconfig option for chip footprint (Ia4663d38) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2051509)
 
-### 気がかり
+### 気がかり {#worry}
 気がかりなのは、CPU-Z[^4]といったハードウェアの情報を表示するソフトウェアで*FT5ソケット* *Raven2 (Pollock)* を見た時、コードネームの項目に表示されるのは *Raven2* となるか *Pollock* となるかだ。  
 個人的には、*Pollock* は *Raven2* のリビジョンの1つというものであるため、*Raven2* と表示してほしい。  
 
@@ -64,4 +65,4 @@ Chromebookには *Raven2 (Dali)* ベースの **Ryzen 3 3250C** 、**Athlon Silv
 つまり、*AM4ソケット* 、*FP5ソケット* に搭載される *Raven2* 、*Raven2 (Dali)* は *Picasso* と判別され続け、  
 *FT5ソケット* に搭載される *Raven2 (Pollock)* は正しくそのままに判別される。  
 
-やっぱりややこしいままな気も。  
+やっぱりややこしいままな気も。
