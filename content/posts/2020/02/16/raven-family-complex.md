@@ -2,11 +2,27 @@
 title: "いかに Zen APU は複雑か"
 date: 2020-02-16T02:32:47+09:00
 draft: false
-tags: [ "Raven", "Renoir", "Picasso", "Raven2", "Dali", "Pollock" ]
+tags: [ "Raven", "Picasso", "Raven2", "Dali", "Pollock", "Renoir" ]
 keywords: [ "", ]
-categories: [ "Hardware", "APU" ]
+categories: [ "Hardware", "AMD", "APU" ]
 noindex: false
 ---
+
+## インデックス
+
+ * [Raven2 は Zenベース](#raven2-zen-base)
+ * [前提情報](#premise)
+  * [CPU](#cpu)
+  * [GPU](#gpu)
+  	 * [Device ID](#did)
+   	 * [アーキテクチャ](#arch)
+  * [製品型番](#product-number)
+ * [対策](#measure)
+ 	* [CPUIDを使う](#cpuid)
+	* [地道に情報収集](#pick)
+	* [気にしない](#dont-mind)
+
+## Raven2 は Zenベース {#raven2-zen-base}
 
 先日、Chromium OSへのパッチを眺めていたら、*Raven2 (Dali, Pollock)* を判定するコードの関数名の一部で *zen2* が使われていた。  
 [soc/amd/picasso: Add helper functions for finding SOC type (I24b73145) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2051514)  
@@ -49,7 +65,7 @@ AMDもはっきりと、Raven2ベースの製品、Athlon 3000Gを発表の際�
 
 前置きが少し長くなってしまったが、今回書きたいと思ったのはどれだけ Zen APU がややこしいかについてだ。  
 
-### 前提情報
+## 前提情報 {#premise}
 Zen CPUとVega GPUを組み合わせた **Zen APU** は既に市場にいくつも存在するが、  
 それらを開発コードネームで区別すると、*Raven* 、*Picasso* 、*Raven2 (Dali /Pollock)* 、*Renoir* の6種類に分けられる。  
 
@@ -112,7 +128,7 @@ Zen CPUとVega GPUを組み合わせた **Zen APU** は既に市場にいくつ�
 
 複雑に絡まっているのは *Raven* 、*Picasso* 、*Raven2* であり、*Renoir* は今の所そこまでではない。  
 
-### CPU
+### CPU {#cpu}
 
 まず、Zen APU全体、RavenファミリーをCPUで分け、リストで表すと以下になる。  
 
@@ -138,7 +154,7 @@ x86_model はCPU内部のデータの1つであり、主にソフトウェアが
  >		case 0x11:	/* Zen APU */
  >		case 0x18:	/* Zen+ APU */
 
- > 引用元: <cite>[k10temp.c\hwmon\drivers - kernel/git/torvalds/linux.git - Linux kernel source tree](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/hwmon/k10temp.c#n587)</cite>  
+ > 引用元: <cite><https://github.com/torvalds/linux/blob/b02c6857389da66b09e447103bdb247ccd182456/drivers/hwmon/k10temp.c#L587></cite>  
 
 これが本当にそうなってたらいいのだが、**Zen APU** である *Raven2* の x86_model までが 0x18 となっている。  
 
@@ -151,8 +167,8 @@ x86_model はCPU内部のデータの1つであり、主にソフトウェアが
 さらに *Zen+* と言っても、*Zen* から変更された部分はブースト制御といったソフトウェア部や、物理設計の改良によるキャッシュレイテンシの削減ぐらいで、  
 アーキテクチャには全く変更されていないが、そこに拘るとまた面倒くさいことになる。  
 
-### GPU
-#### Device ID
+### GPU {#gpu}
+#### Device ID {#did}
 GPUを判別するための Device ID は、*Raven* に 0x15DD、*Picasso* に 0x15D8 が割り振られているが、  
 *Raven2* には 0x15DD、0x15D8 の両方が割り振られている。  
 そして *Raven2* のマイナーバージョンとして Dali と Pollock があり、混沌さを加速させている。  
@@ -181,7 +197,7 @@ Linux Kernel では *Raven* , *Picasso* , *Raven2* に別々の内部的なリ�
 *Dali, Pollock* は Raven2ベースであるため同一IDであることはまだ納得行くが、  
 *Raven2* 自体のDevice IDを *Raven, Picasso* に被せなかった方が良かったと言える。  
 
-#### アーキテクチャ
+#### アーキテクチャ {#arch}
 前述したように、*Raven2、Renoir* では *Raven、Picasso* にGPU部のバグが修正されており、  
 GPUアーキテクチャに割り振られる GFX ID は、*Raven* 、*Picasso* が **gfx902** 、  
 *Raven2* 、*Renoir* が **gfx909** となっている。  
@@ -194,7 +210,7 @@ GPUアーキテクチャに割り振られる GFX ID は、*Raven* 、*Picasso* 
 というより *Picasso* と *Raven2* でGPU部の規模がそれなりに違うため、性能を比較することが難しい。  
 LLVMのバージョンが古い場合、*Raven2* 、*Renoir* のGPUは **gfx902** として認識されたりもする。  
 
-### 製品型番
+### 製品型番 {#product-number}
 これは初代Zen APU、Ryzen 5 2400G、Ryzen 3 2200Gが出た時から広くに言われていた。  
 型番としてはRyzen 2000シリーズと読めるが、中身は 12nm Zen+ ではなく、14nm Zen だからだ。  
 ただ、Zen+ で盛り込まれたキャッシュレイテンシの削減によるIPC向上は確認できるため、これも気にする必要はないと思う。  
@@ -202,8 +218,8 @@ LLVMのバージョンが古い場合、*Raven2* 、*Renoir* のGPUは **gfx902*
 しかしこれは現在進行系で、Ryzen 3000シリーズでAPUでないRyzenは TSMC 7nmプロセス採用と、Zen2アーキテクチャにより、省電力、性能が大きく向上したため、問題として悪化した。  
 Ryzen Mobile 4000シリーズが、デスクトップ向けのRyzen 3000シリーズより進んだアーキテクチャ、Zen3となっている、なんて勘違いもたまに見かけたりする。  
 
-## 対策
-#### CPUIDを使う
+## 対策 {#measure}
+### CPUIDを使う {#cpuid}
 CPUID は x86_model のように *Picasso* と *Raven2* がごちゃごちゃになっておらず、  
 実際にChromium OS内のコードでは CPUID が使われている。  
 [Rework map_oprom_vendev to add revision check and mapping (I2978a569) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2040455/)  
@@ -217,7 +233,7 @@ CPUID は x86_model のように *Picasso* と *Raven2* がごちゃごちゃに
 
 [coreboot/cpu.c at master · coreboot/coreboot](https://github.com/coreboot/coreboot/blob/master/src/soc/amd/picasso/cpu.c#L131)  
 
-#### 地道に情報収集
+### 地道に情報収集 {#pick}
 自分がやっているのがこれ。  
 [AMDGPUのDID、RID、Productのびみょうまとめ Part2 | Coelacanth's Dream](/posts/2019/12/30/did-rid-product-matome-p2/)  
 
@@ -227,7 +243,7 @@ CPUID は x86_model のように *Picasso* と *Raven2* がごちゃごちゃに
 問題点は信頼度と注目度。  
 どっちも自分とこのサイトにはない。  
 
-#### 気にしない
+### 気にしない {#dont-mind}
 複雑に見るから複雑なのだ。  
 
 製品を買うのに大半の人はこれまで書いてきたことは気にしないだろうし、公式や各種メディアから、製造プロセス、アーキテクチャ等の結論として存在するベンチマーク結果が示されているのだから、それと価格で決めれば良い。  
