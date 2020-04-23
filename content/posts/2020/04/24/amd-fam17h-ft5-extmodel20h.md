@@ -1,7 +1,7 @@
 ---
 title: "AMD Pollock の x86_Model は \"0x20\""
 date: 2020-04-24T01:02:04+09:00
-draft: true
+draft: false
 tags: [ "Raven", "Picasso", "Raven2", "Dali", "Pollock", "Renoir" ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU" ]
