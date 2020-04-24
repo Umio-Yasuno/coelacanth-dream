@@ -46,12 +46,10 @@ OSSである [git](https://git-scm.com/) を使用して、Github Pageのレポ�
 
 あくまで上記はポリシーであり、別段強制力は持ちません。過去記事に思い切りポリシーから外れているようなのがあるし。ポリシー変更によって記事を削除することは（たぶん）ない。  
 
-## 寄付のお願い {#donate}
-ソースコード等以外にハードウェアの検証によって情報を得、広めることを目標としていますが、それにはまず実物のハードウェア、CPU、MotherBoard、GPUが必要です。  
-寄付がハードウェアを購入するための資金となり、このサイト、そしてハードウェアのより詳細な情報を得るための助けとなります。  
+## 寄付 {#donate}
+欲しいPCパーツを買って予算がびみょうに余り、さらに気が向いたらお願いします。
 
  * [Liberapay を使って Umio-Yasuno に寄付する](https://liberapay.com/Umio-Yasuno/donate)  
- * [Umio Yasuno is creating writing/journalism | Patreon](https://www.patreon.com/user?u=32413942)  
 
 <address>
 連絡先:  
