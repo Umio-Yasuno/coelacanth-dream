@@ -170,7 +170,7 @@ BootCampDriver内のcccmanifest_64.xml。
 | | C3 | 4500U | (B8 15W FP6) |
 | | C4 | | (B6 15W FP6) |
 | | C5 | 4900HS | (B12 45W FP6) |
-| | C6 | | (B10 45W FP6) |
+| | C6 | 4800HS | (B10 45W FP6) |
 | | C7 | | (B8 45W FP6) |
 | | C8 | | (B10 65W AM4) |
 | | C9 | | (B8 65W AM4) |

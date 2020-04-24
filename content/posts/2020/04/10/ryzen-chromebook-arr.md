@@ -82,7 +82,7 @@ I/O部の規模は *Picasso* より小さい。
 ### Zork {#zork}
 *Zork* はChromebookにおけるRyzen APUのリファレンスボードの立ち位置にあり[^2]、*Zork* を元にした異なるボードが複数存在する。  
 *Ezkinil* 、*Morphius* 、*Trembyle* 、*Dalboz* がそれにあたる。  
-他にもリファレンスボードにはAMDが提供している *FP5 BGAソケット* を実装した *Mandolin* 、後述する *FT5 BGAソケット* を実装した *Cereme* が存在する[^29]。  
+他にもリファレンスボードにはAMDが提供している *FP5 BGAソケット* を実装した *Mandolin* 、*Raven2 (Dali)* 仕様の *Cereme* が存在する[^29]。  
 
 [^29]: [mainboard/amd/cereme : Create Initial Cereme Platform (I593d661f) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2024459)
 
