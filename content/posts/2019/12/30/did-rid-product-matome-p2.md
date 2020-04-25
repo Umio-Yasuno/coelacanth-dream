@@ -22,10 +22,10 @@ BootCampDriver内のcccmanifest_64.xml。
 	* [Vega10](#vega10-gfx900)
 	* [Vega12](#vega12-gfx904)
 	* [Vega20](#vega20-gfx906)
+	* [Arcturus](#arcturus-gfx908)
 	* [Navi10](#navi10-gfx1010)
 	* [Navi14](#navi14-gfx1012)
 	* [Navi12](#navi12-gfx1011)
-	* [Arcturus](#arcturus-gfx908)
 
 ## APU
 <!-- FAMILY_RV -->
@@ -199,6 +199,7 @@ BootCampDriver内のcccmanifest_64.xml。
 
 <!--
 	VANGOGH 163F:00
+	gfx1032
 -->
 
 [Page Top](#table-of-content)
@@ -280,6 +281,15 @@ BootCampDriver内のcccmanifest_64.xml。
 | | C3 | | |
 | | C7 | | |
 | | CF | | |
+[Page Top](#table-of-content)
+
+## Arcturus ( gfx908 )
+| Device ID | Revision ID | Product Name | Memo |
+| :--- | :--- | :---: | :---: |
+| 738C | | MI100[^5] | |
+| 7388 | | | |
+| 738E | | | |
+| 7390 | | | (Arcturus VF) |
 [Page Top](#table-of-content)
 
 <!-- FAMILY_NV -->
@@ -373,14 +383,9 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | 7362 | | | (Navi12 VF) |
 [Page Top](#table-of-content)
 
-<!-- FAMILY_AI -->
-## Arcturus ( gfx908 )
-| Device ID | Revision ID | Product Name | Memo |
-| :--- | :--- | :---: | :---: |
-| 738C | | MI100[^5] | |
-| 7388 | | | |
-| 738E | | | |
-| 7390 | | | (Arcturus VF) |
-[Page Top](#table-of-content)
+<!--
+	Navi21: gfx1030
+-->
+
 
 [^5]:<https://github.com/ROCm-Developer-Tools/aomp-extras/blob/f3d316fe64347e697a9789f0f2499fec50024db1/utils/bin/gputable.txt#L1867>
