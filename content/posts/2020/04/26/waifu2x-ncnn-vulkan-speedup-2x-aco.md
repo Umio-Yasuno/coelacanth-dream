@@ -25,6 +25,7 @@ Radeonの性能をさらに引き出す *ACO* だが、GPGPUではどうだろ�
 オープンソースのAMDGPU向けVulkanドライバー、RADVの新たなシェーダーコンパイラバックエンド。  
 *ACO* の IR(Intermediate Representaions, 中間言語)[^3]は完全に SSA(Static Single Assignment form, 静的単一代入)[^2]ベースであり、  
 レジスタ割り付けも SSA で行なうため、シェーダーのレジスタ要求を正確に事前計算することができる。  
+Just-in-timeコンパイルを念頭に置いてに記述されており、反復の速いデータ構造を使用している。  
 記述言語は C\+\+。  
 
 [^2]: [静的単一代入 - Wikipedia](https://ja.wikipedia.org/wiki/%E9%9D%99%E7%9A%84%E5%8D%98%E4%B8%80%E4%BB%A3%E5%85%A5)
@@ -34,7 +35,7 @@ RADV はそれまで[LLVM](https://llvm.org/)をバックエンドに採用し�
 バックエンドを別に開発することでそれを避けられるというのが利点の1つであり、また積極的な "DivergenceAnalysis" の実装と正確なレジスタ割り付けにより、効率的なバイナリの生成を *ACO* は可能とする。  
 (DivergenceAnalysis: 発散分析? SIMD実行モデルにおける性能低下原因となる条件分岐を最適化する手法。日本語の文献が見つけられなかったため、この解説はかなり怪しい。)
 
-[X.Org Developer's Conference 2019](https://xdc2019.x.org/event/5/)での発表スライドによると、*LLVM* から使用するレジスタ量は若干増えたが、レジスタあふれの頻度はスカラレジスタで -95.91%、ベクタレジスタで -100.00%(!)とかなり減り、Waveも -5.24%減少、コードサイズは -7.90%に減少したとしている。[^6]　  
+[X.Org Developer's Conference 2019](https://xdc2019.x.org/event/5/)での発表スライドでは、*LLVM* から使用するレジスタ量は若干増えたが、レジスタあふれの頻度はスカラレジスタで -95.91%、ベクタレジスタで -100.00%(!)とかなり減り、Waveも -5.24%減少、コードサイズは -7.90%に減少したとしている。[^6]　  
 (Wave: GPUで実行するスレッドをまとめた単位。スレッド数は GCN は64スレッド、RDNA は基本32スレッド。)  
 ゲーミング性能も Doom[^5]では約25%の向上を確認している。[^7]  
 [Phoronix](https://www.phoronix.com/scan.php?page=home)による検証でも、平均で概ね20%近くの性能向上が見られている。[^4]  
@@ -103,8 +104,6 @@ waifu2x-ncnn-vulakn は入力元にディレクトリを指定することで、
 
 RADV/ACO は、RADV(LLVM) より `models-cunet` では 1.48倍、`models-upconv_7_anime_style_art_rgb` では 3.42倍も高速という結果となった。  
 
-<!-- RADV/ACO は、RADV(LLVM) より `models-cunet` では 33%、`models-upconv_7_anime_style_art_rgb`では 71% 短い時間で実行を完了した。 -->
-
 ### 推測 {#guess}
 まず、どちらも RADV/ACO の方が高速という結果となったが、これは *ACO* の正確なレジスタ割り付けが効いているものと思われる。  
 レジスタあふれの頻度が減ったことで、そのままメモリにアクセスする頻度も減り、効率的な実行が可能となった。  
@@ -127,9 +126,9 @@ RADV にあるシェーダーや SPIR-V をダンプする機能から作成し�
 
 OSS で高性能なGPU性能を得られる。これこそ **AMD Radeon** の魅力の1つであり、何よりも勝っている点だろう。  
 
-あと願うとするならば、Vulkan APIを用いたクロスプラットフォームなソフトウェアの増加と普及だろうか……
+あと願わくば、Vulkan APIを用いたクロスプラットフォームなソフトウェアの増加と普及を……
 
-[^19]: [Radeon RX 5700 / RX 5700 XT Linux Gaming Performance With AMDGPU 5.3 + Mesa 19.2-devel - Phoronix](https://www.phoronix.com/scan.php?page=article&item=rx-5700-july&num=1)
+[^9]: [Radeon RX 5700 / RX 5700 XT Linux Gaming Performance With AMDGPU 5.3 + Mesa 19.2-devel - Phoronix](https://www.phoronix.com/scan.php?page=article&item=rx-5700-july&num=1)
 
 {{< ref >}}
 
