@@ -18,6 +18,7 @@ Radeonの性能をさらに引き出す *ACO* だが、GPGPUではどうだろ�
   * [計測方法](#how)
  * [結果](#result)
   * [推測](#guess)
+  * [課題](#issue)
  * [最適化で Radeon はさらに輝く](#shinning-radeon)
 
 ## ACOとは {#aco}
@@ -31,7 +32,7 @@ Radeonの性能をさらに引き出す *ACO* だが、GPGPUではどうだろ�
 
 RADV はそれまで[LLVM](https://llvm.org/)をバックエンドに採用していたが、*LLVM* のプロジェクト規模は大きく、シェーダーコンパイラバックエンドとして使う上で何かしらの問題が発覚し、修正を行なったとしてもそれがリリースサイクルに乗るまでは時間がかかる。  
 バックエンドを別に開発することでそれを避けられるというのが利点の1つであり、また積極的な "DivergenceAnalysis" の実装と正確なレジスタ割り付けにより、効率的なバイナリの生成を *ACO* は可能とする。  
-(DivergenceAnalysis: 発散分析? SIMD実行モデルにおける性能低下原因となる条件分岐を最適化する手法。日本語の文献が見つけられなかったため、この解説は色々と怪しい。)
+(DivergenceAnalysis: 発散分析? SIMD実行モデルにおける性能低下原因となる条件分岐を最適化する手法。日本語の文献が見つけられなかったため、この解説はかなり怪しい。)
 
 [X.Org Developer's Conference 2019](https://xdc2019.x.org/event/5/)での発表スライドによると、*LLVM* から使用するレジスタ量は若干増えたが、レジスタあふれの頻度はスカラレジスタで -95.91%、ベクタレジスタで -100.00%(!)とかなり減り、Waveも -5.24%減少、コードサイズは -7.90%に減少したとしている。[^6]　  
 (Wave: GPUで実行するスレッドをまとめた単位。スレッド数は GCN は64スレッド、RDNA は基本32スレッド。)  
@@ -110,6 +111,12 @@ RADV/ACO は、RADV(LLVM) より `models-cunet` では 1.48倍、`models-upconv_
 そして、Vulkan の Compute Shader で実行される waifu2x-ncnn-vulkan では、CU(Compute Unit)以外のユニットに性能が左右されにくく、*ACO* の利点が最大限発揮されたはずだ。  
 
 また、`models-upconv_7_anime_style_art_rgb` では差が `models-cunet` よりも大きくついているが、これはモデルのサイズが前者の方が 1.1MBと半分近く( `models-cunet` は 2.6MB)小さく、レイヤー数も少ないため、その分キャッシュヒットしやすく、さらにメモリアクセスが少なくなったのではないだろうか。  
+
+#### 課題 {#issue}
+何ともぼやけた推測となってしまった。  
+AMD が提供する [RGA (Radeon GPU Analyzer)](https://github.com/GPUOpen-Tools/radeon_gpu_analyzer)や[Radeon™ GPU Profiler](https://github.com/GPUOpen-Tools/radeon_gpu_profiler)といったツールを使いこなせれば、詳細な分析ができたのかもしれないが、  
+それらツールでモニタやプロファイル生成することもうまくいかず、  
+RADV にあるシェーダーや SPIR-V をダンプする機能から作成したファイルを使おうにもうまくいかず、断念した。  
 
 ## 最適化で Radeon はさらに輝く {#shinning-radeon}
 *ACO* によって **Radeon** の性能はより引き出される。  
