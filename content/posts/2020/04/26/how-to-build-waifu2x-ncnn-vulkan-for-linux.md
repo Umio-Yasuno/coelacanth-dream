@@ -8,7 +8,7 @@ categories: [ "Software", "GPU" ]
 noindex: false
 ---
 
-Vulkan Computeで使うため、Linux + Radeon 環境でもローカルで実行可能な画像高解像度ソフトウェア、waifu2x-ncnn-vulkan をビルドする方法のメモ。
+Vulkan Computeで演算するため、Linux + Radeon 環境でもローカルで実行可能な画像高解像度ソフトウェア、waifu2x-ncnn-vulkan をビルドする方法のメモ。
 
  * [ncnn のビルド方法](#ncnn)
  * [waifu2x-ncnn-vulkan のビルド方法](#waifu2x-ncnn-vulkan)
