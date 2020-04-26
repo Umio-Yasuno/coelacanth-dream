@@ -3,7 +3,7 @@ title: "waifu2x-ncnn-vulkan ビルド方法(Linux向け)"
 date: 2020-04-26T07:53:15+09:00
 draft: false
 # tags: [ "", ]
-keywords: [ "", ]
+keywords: [ "waifu2x-ncnn-vulkan", ]
 categories: [ "Software", "GPU" ]
 noindex: false
 ---

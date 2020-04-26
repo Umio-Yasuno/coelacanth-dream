@@ -3,7 +3,7 @@ title: "RADV/ACO 検証: waifu2x-ncnn-vulakan の実行が最大3倍近く高速
 date: 2020-04-26T00:04:50+09:00
 draft: false
 tags: [ "ACO", "GCN", ]
-keywords: [ "", ]
+keywords: [ "waifu2x-ncnn-vulkan" ]
 categories: [ "Software", "AMD", "GPU" ]
 noindex: false
 ---
@@ -103,6 +103,7 @@ waifu2x-ncnn-vulakn は入力元にディレクトリを指定することで、
 | real time<br>(lower is better) | 22.19 s | 6.48 s<br>(3.42x) |
 
 RADV/ACO は、RADV(LLVM) より `models-cunet` では 1.48倍、`models-upconv_7_anime_style_art_rgb` では 3.42倍も高速という結果となった。  
+同じモデル、同じパラメーター、そこまで高精度なデータタイプは用いないため、出力結果の画像に違いはなかった。  
 
 ### 推測 {#guess}
 まず、どちらも RADV/ACO の方が高速という結果となったが、これは *ACO* の正確なレジスタ割り付けが効いているものと思われる。  
