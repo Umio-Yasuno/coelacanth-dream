@@ -84,14 +84,11 @@ noindex: false
 | DMCUB | Display Micro Controller Unit B | |
 | HBCC | High Bandwidth Cache Controller | GFX9+ |
 | DSBR | Draw Stream Binning Rasterrizer | GFX9+ |
-
-<!--
 | SGPR | Scalar General-Purpose Register | |
 | VGPR | Vector General-Purpose Register | |
 | ALU | Arithmetc Logic Unit | |
 | SPI | Shader Processor Interpolator | |
 | PRT | Partially Resident Textures | |
--->
 
 #### Other
 | Abbr | Full | memo |

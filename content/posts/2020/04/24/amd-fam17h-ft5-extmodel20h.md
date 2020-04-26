@@ -16,7 +16,7 @@ noindex: false
 
  * [x86_Model](#x86_model)
  * [Pollock の x86_Model は "0x20"](#pollock)
- * [気がかり](#worry)
+  * [気がかり](#worry)
 
 ## x86_Model {#x86_model}
 現在主流の x86-64プロセッサはその判別に Family ID と Model を用いられる。  
