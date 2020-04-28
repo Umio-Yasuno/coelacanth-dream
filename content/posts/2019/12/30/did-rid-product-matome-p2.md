@@ -6,9 +6,10 @@ tags: [ "Radeon", "Database" ]
 keywords: [ "Radeon", "AMDGPU" , "Device ID", "Revision ID", "Product Name" ]
 categories: [ "Hardware", "AMD", "GPU" ]
 ---
+ソースは主に[DeviceInfoUtils.cpp - GPUOpen-Tools/common-src-DeviceInfo](https://github.com/GPUOpen-Tools/common-src-DeviceInfo/blob/master/DeviceInfoUtils.cpp)、  
+BootCampDriver内のcccmanifest_64.xml。  
 
-
-## Table of Content
+### Table of Content
 
  * [APU](#apu)
 	* [Raven](#raven-gfx902)
@@ -25,7 +26,6 @@ categories: [ "Hardware", "AMD", "GPU" ]
 	* [Navi10](#navi10-gfx1010)
 	* [Navi14](#navi14-gfx1012)
 	* [Navi12](#navi12-gfx1011)
- * [参考リンク](#ref-title)
 
 ## APU
 <!-- FAMILY_RV -->
@@ -389,10 +389,3 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 
 
 [^5]:<https://github.com/ROCm-Developer-Tools/aomp-extras/blob/f3d316fe64347e697a9789f0f2499fec50024db1/utils/bin/gputable.txt#L1867>
-
-{{< ref >}}
-
- * [DeviceInfoUtils.cpp - GPUOpen-Tools/common-src-DeviceInfo](https://github.com/GPUOpen-Tools/common-src-DeviceInfo/blob/master/DeviceInfoUtils.cpp)
-
-{{< /ref >}}
-
