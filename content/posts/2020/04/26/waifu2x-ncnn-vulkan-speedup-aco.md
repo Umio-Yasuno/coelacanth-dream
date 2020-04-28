@@ -48,12 +48,15 @@ RADV はそれまで[LLVM](https://llvm.org/)をバックエンドに採用し�
 それと、*ACO* は **AMD Compiler** を縮めた名前、と開発者の Daniel Schürmann 氏は述べている。[^1]  
 
 [^1]: [aco: Initial commit of independent AMD compiler (93c8ebfa) · Commits · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/commit/93c8ebfa780ebd1495095e794731881aef29e7d3)
+
+最新ドライバーのビルド方法は別記事で。  
+{{< link >}}[Radeon向けMesaビルド方法 | Coelacanth's Dream](/posts/2019/12/04/how-to-build-mesa-for-radeon/){{< /link >}}
 ## waifu2x-ncnn-vulkan
 高性能なニューラルネットワークの推論フレームワーク、[ncnn](https://github.com/Tencent/ncnn)を用いた画像の高解像度化ソフトウェア。  
 Vulkan APIでGPGPU処理を行なうため、広いプラットフォームに対応しており、Intel / AMD / NVIDIA GPUで実行できることが特徴。  
 {{< link >}}[nihui/waifu2x-ncnn-vulkan: waifu2x converter ncnn version, runs fast on intel / amd / nvidia GPU with vulkan](https://github.com/nihui/waifu2x-ncnn-vulkan){{< /link >}}
 
-ビルド方法は別記事にて。  
+waifu2x-ncnn-vulkan のビルド方法は別記事にて。  
 {{< link >}}[waifu2x-ncnn-vulkan ビルド方法(Linux向け)](/posts/2020/04/26/how-to-build-waifu2x-ncnn-vulkan-for-linux/){{< /link >}}
 
 ncnn はVulkan拡張 `VK_KHR_shader_float16_int8` に対応しているのだが、RADV/LLVM ではそれが有効となっているのに対し、RADV/ACO では無効とされていた。  
