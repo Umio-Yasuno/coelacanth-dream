@@ -38,7 +38,7 @@ RADV はそれまで[LLVM](https://llvm.org/)をバックエンドに採用し�
 [X.Org Developer's Conference 2019](https://xdc2019.x.org/event/5/)での発表スライドでは、*LLVM* から使用するレジスタ量は若干増えたが、レジスタあふれの頻度はスカラレジスタで -95.91%、ベクタレジスタで -100.00%(!)とかなり減り、Waveも -5.24%減少、コードサイズは -7.90%に減少したとしている。[^6]　  
 (Wave: GPUで実行するスレッドをまとめた単位。スレッド数は GCN は64スレッド、RDNA は基本32スレッド。)  
 ゲーミング性能も Doom[^5]では約25%の向上を確認している。[^7]  
-[Phoronix](https://www.phoronix.com/scan.php?page=home)による検証でも、平均で概ね20%近くの性能向上が見られている。[^4]  
+[Phoronix](https://www.phoronix.com/scan.php?page=home)による検証でも、平均で概ね +20%近くの性能向上が見られている。[^4]  
 
 [^4]: [Radeon Software 20.10 vs. Upstream Linux AMD Radeon OpenGL / Vulkan Performance - Phoronix](https://www.phoronix.com/scan.php?page=article&item=radeon-software-20&num=6)
 [^5]: [Steam：DOOM](https://store.steampowered.com/app/379720/DOOM/)
@@ -123,7 +123,7 @@ RADV にあるシェーダーや SPIR-V をダンプする機能から作成し�
 
 ## 最適化で Radeon はさらに輝く {#shinning-radeon}
 *ACO* によって **Radeon** の性能はより引き出される。  
-ゲームといったグラフィック処理では RADV(LLVM) から 10%近い性能向上を確認でき、この 10%というのは同一ダイベースの製品の性能差に設定されることが多い。Polari10ベースの RX 570 と RX 580、Navi10ベースの RX 5700 と RX 5700 XT 等がそうだ。[^9]  
+ゲームといったグラフィック処理では RADV(LLVM) から 1.1倍(+10%)近い性能向上を確認でき、この 10%というのは同一ダイベースの製品の性能差に設定されることが多い。Polari10ベースの RX 570 と RX 580、Navi10ベースの RX 5700 と RX 5700 XT 等がそうだ。[^9]  
 ソフトウェアの最適化によって現在使っているGPUが実質1ランク上がるというのは、消費者からすれば最高と言う他ないだろう。  
 今回の検証結果では、Vulkan Compute に限れば上位ダイベースの製品、2か3ランク上の性能を体感できることになる。  
 こうなるともう最高という言葉では足りない。  
