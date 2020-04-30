@@ -54,7 +54,7 @@ OSSである [git](https://git-scm.com/) を使用して、Github Pageのレポ�
 <address>
 連絡先:  
 &emsp;Github: [Issues · Umio-Yasuno/umio-yasuno.github.io](https://github.com/Umio-Yasuno/umio-yasuno.github.io/issues)  
-&emsp;Mail: <span class="mail"></span>
+&emsp;&emsp;Mail: <span class="mail"></span>
 </address>
 <br>
 ハードウェア系の文章に関するお仕事募集中。  
