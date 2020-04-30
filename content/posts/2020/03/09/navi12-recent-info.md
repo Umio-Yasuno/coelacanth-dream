@@ -8,7 +8,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
 ---
 
-相変わらず実物が出てこない *Navi12* 。そうこうしている内に次世代GPU [RDNA 2](/tags/rdna-2) の実シリコンが動作しているという話が出てきてしまった。（DXR 1.1の実行結果の画像1枚ではあるが）  
+相変わらず実物が出てこない *Navi12* 。そうこうしている内に次世代GPU [RDNA 2](/tags/rdna_2) の実シリコンが動作しているという話が出てきてしまった。（DXR 1.1の実行結果の画像1枚ではあるが）  
 しかしソフトウェア面ではちゃっかり出てきており、最新のLinux版Radeon Proドライバには *Navi12* のファームウェア、そして amdgpu.ids に 7360:C1 が既に追加されている。  
 [Radeon Pro Software for Enterprise 20.Q1.1 for Linux Release Notes | AMD](https://www.amd.com/en/support/kb/release-notes/rn-pro-lin-20-q1-1)  
 期待を捨てずに情報を追っていきたい。  

@@ -2,7 +2,7 @@
 title: "AMD Financial Analyst Day 2020 個人的まとめ"
 date: 2020-03-06T07:03:36+09:00
 draft: false
-tags: [ "Radeon", "Arcturus", "CDNA", "RDNA", "RDNA\ 2", "Zen\ 3", "Zen\ 4" ]
+tags: [ "Radeon", "Arcturus", "CDNA", "RDNA", "RDNA_2", "Zen_3", "Zen_4" ]
 keywords: [ "", ]
 categories: [ "Hardware", "CPU", "GPU" ]
 noindex: false

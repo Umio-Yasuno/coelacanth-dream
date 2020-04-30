@@ -103,4 +103,5 @@ noindex: false
 | DWB | Display WriteBack | |
 | RAS | Reliability, Availability, Serviceability | |
 | HDCP | Highbandwidth Digital Content Protection | |
-| TA | Trusted Application | |
+| TA | Texture Address /Trusted Application? | |
+| TC | Texture Cache | |

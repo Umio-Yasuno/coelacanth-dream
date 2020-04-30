@@ -16,9 +16,9 @@ noindex: false
 [^4]: 従来のインストール先だった */opt/rocm* をシンボリックリンクとし、実ファイルは */opt/rocm-\<version\>* にインストールするようになった。これで複数バージョンのインストール、切り替えが容易となるはずだ。  
 
 [Release Tag for the roc 3.1 release · RadeonOpenCompute/ROCm](https://github.com/RadeonOpenCompute/ROCm/releases/tag/rocm-3.1)  
-<https://github.com/RadeonOpenCompute/ROCm#Whats-New-in-This-Release>  
+<https://github.com/RadeonOpenCompute/ROCm/tree/roc-3.1.0#Whats-New-in-This-Release>  
 
-[^1]: Reliability, Accessibility, and Serviceability <br> <https://github.com/RadeonOpenCompute/ROCm#reliability-accessibility-and-serviceability-support-for-vega7nm>
+[^1]: Reliability, Accessibility, and Serviceability <br> <https://github.com/RadeonOpenCompute/ROCm/tree/roc-3.1.0#Reliability-Accessibility-and-Serviceability-Support-for-Vega7nm>
 [^2]: Simple Linux Utility for Resource Management <br> [SchedMD/slurm: Slurm: A Highly Scalable Workload Manager](https://github.com/SchedMD/slurm)
 
 OpenCLドライバも更新されているため、手持ちのRX560 (Polaris11, gfx803)[^5] で darktable-cltest (ver 3.0.0)[^3] を実行してみたが、問題はなかった。  
