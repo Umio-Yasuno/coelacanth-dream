@@ -63,7 +63,7 @@ Coreboot は単なる記載漏れなのだろうか？
 しかしパターンとして、リネームされたチップセットは記載されていない。(例: Z370)。  
 *H470* と *B460* で PCI ID を共有している可能性も考えられるだろうか？  
 
-言えるのは、少なくとも *B460* は *CometLakeS* ということだ。  
+言えるのは、少なくとも *B460* は *CometLakeS* ということだ。逆にそうわざわざ書いてあることが引っかかりもするが。  
 
 [^5]: [Intel® B460 Chipset Product Brief](https://www.intel.com/content/www/us/en/products/docs/chipsets/desktop-chipsets/b460-chipset-brief.html?wapkw=b460)
 [^6]: [Comet Lake S: Overview and Technical Documentation](https://www.intel.com/content/www/us/en/design/products-and-solutions/processors-and-chipsets/comet-lake-s/overview.html?wapkw=H410&grouping=EMT_Content%20Type&sort=title:asc)

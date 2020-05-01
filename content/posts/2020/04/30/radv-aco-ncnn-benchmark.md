@@ -56,10 +56,13 @@ waifu2x-ncnn-vulkan のような一般ユーザーにとって実用的なソフ
   * benchmark/
      * \<param files\>
 
+<span>
+
 検証では実行バイナリとパラメータを収めたファイルを /tmp に置いて行なった。  
 また、**Ryzen 5 2600** で実行する際、全12スレッドを使用するのではなく、物理コアのみを使用するように設定した。  
 理由をここでは簡潔に書くが、性能が下がるからだ。詳細な理屈は以下の記事で。  
 {{< link >}}[Zen検証 ―― 物理6-Core 2CCX vs 6-Thread 1CCX | Coelacanth's Dream](/posts/2020/03/13/zen-phy-6core-2ccx-vs-6thread-1ccx/#前提){{< /link >}}
+
 
 実行コマンド:  
 
@@ -78,6 +81,8 @@ waifu2x-ncnn-vulkan のような一般ユーザーにとって実用的なソフ
 また、実行する項目は CPU **Ryzen 5 2600** の方が多いが、GPU **RX 560** と合わせるため、一部項目の結果を省いている。  
 実行結果は gist.github.com にほぼそのまま投稿してある。別環境、別デバイスとの比較にはそちらの方が使いやすい。  
 {{< link >}}[ncnn benchmark result](https://gist.github.com/Umio-Yasuno/99356254f0d1eb69864955cc9c8d91a3){{< /link >}}
+
+</span>
 
 [^1]: [ncnn/README.md at master · Tencent/ncnn](https://github.com/Tencent/ncnn/blob/master/benchmark/README.md)
 
