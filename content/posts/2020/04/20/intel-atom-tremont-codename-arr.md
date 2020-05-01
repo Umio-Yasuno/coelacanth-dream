@@ -98,6 +98,7 @@ PCHのコードネームは *Jasper Lake PCH* と、こちらはシンプル。[
 モバイル向けとのことから、 *Jasper Lake* はここであげるプロセッサの中では今後最も見ることになるのはないかと思う。次点で *Lakefield* か。  
 
 ### Elkhart Lake と Jasper Lake の共通点と違い {#elkhart-jasper-diff}
+
 *Elkhart Lake* と *Jasper Lake* は非常に似ている。  
 GPUの機能は同じで、PCHもコードネームこそ違うが、中身としては映像出力1ポートのマッピングが微妙に異なるだけだ。[^14]ついでに言うと、*Cannon Lake PCH* 以降もIPを再使用しているため、*Ice Lake* 、*Elkhart Lake* 、*Jasper Lake* 、*Tiger Lake* のPCHに大きな違いはない。[^16]  
 強いてそれらを分けるとするならば、*Mule Creek Canyon PCH* は *Ice Lake PCH* 寄り、[^15]  
