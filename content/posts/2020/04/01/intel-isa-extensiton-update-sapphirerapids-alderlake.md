@@ -2,7 +2,7 @@
 title: "Intel、拡張命令リファレンスをアップデート (Sapphire Rapids /Alder Lake /ハイブリッドプロセッサ)"
 date: 2020-04-01T22:28:18+09:00
 draft: false
-tags: [ "Sapphire\ Rapids", "Tiger\ Lake", "Alder Lake" ]
+tags: [ "Sapphire_Rapids", "Tiger_Lake", "Alder_Lake" ]
 keywords: [ "", ]
 categories: [ "Hardware", "Intel", "CPU" ]
 noindex: false

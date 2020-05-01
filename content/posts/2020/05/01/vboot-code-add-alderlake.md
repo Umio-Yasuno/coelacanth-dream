@@ -2,7 +2,7 @@
 title: "ChromiumOSへのパッチから Alderlake-S / Alderlake-P を確認"
 date: 2020-05-02T05:30:43+09:00
 draft: false
-tags: [ "Alder Lake", ]
+tags: [ "Alder_Lake", ]
 keywords: [ "", ]
 categories: [ "Intel", "Hardware", "CPU" ]
 noindex: false
