@@ -14,6 +14,12 @@ OSSのコードに *Rocket Lake* の名が出るのはこれが初だ。
 
 GPU部は *Tiger Lake* と同世代、[Gen12](/tags/gen12)であることが明記されており、ディスプレイ出力が4つすべてコンボPHYを使用する、つまりは4つのType-C/TB3(4?)からディスプレイ出力が可能なものと考えられる。  
 
+追加された PCI ID は6つ。 ( `0x4C80` 、`0x4C8A` 、 `0x4C8B` 、`0x4C8C` 、`0x4C90` 、`0x4C9A` )  
+{{< link >}}[[Intel-gfx] [PATCH 01/23] drm/i915/rkl: Add RKL platform info and PCI ids](https://lists.freedesktop.org/archives/intel-gfx/2020-May/238499.html){{< /link >}}
+
+また、これまでのプラットフォームとは異なるメモリ特性を有するとしている。  
+{{< link >}}[[Intel-gfx] [PATCH 06/23] drm/i915/rkl: Update memory bandwidth parameters](https://lists.freedesktop.org/archives/intel-gfx/2020-May/238505.html){{< /link >}}
+
 ## PCH
 一連のパッチにはPCHに関するパッチも含まれており、*Comet Lake PCH* と *Tiger Lake LP PCH* 両方のプラットフォームに *Rocket Lake* が今後追加されることを示唆している。  
 {{< link >}}[[Intel-gfx] [PATCH 05/23] drm/i915/rkl: Add PCH support](https://lists.freedesktop.org/archives/intel-gfx/2020-May/238515.html){{< /link >}}
