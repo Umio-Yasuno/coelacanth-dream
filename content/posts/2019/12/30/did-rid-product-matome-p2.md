@@ -25,7 +25,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 	* [Navi14](#navi14-gfx1012)
 	* [Navi12](#navi12-gfx1011)
 
-[参考リンク](#ref-links)
+[参考リンク](#ref-title)
 
 ## APU
 <!-- FAMILY_RV -->
