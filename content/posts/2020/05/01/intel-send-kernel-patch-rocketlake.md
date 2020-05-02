@@ -25,4 +25,4 @@ GPU部は *Tiger Lake* と同世代、[Gen12](/tags/gen12)であることが明�
 {{< link >}}[[Intel-gfx] [PATCH 05/23] drm/i915/rkl: Add PCH support](https://lists.freedesktop.org/archives/intel-gfx/2020-May/238515.html){{< /link >}}
 
 *Tiger Lake LP PCH* はモバイル向けとなるが、*Comet Lake PCH* に関してはデスクトップ向けも含まれるため、*Rocket Lake* がデスクトップ市場に登場する可能性が考えられるだろう。  
-また、*Rocket Lake* のGPUは *Tiger Lake* と同世代であることから、CPU部で差別化を図るはずだ。果たしてそれがどこまでのものとなるかは気になる所。
+また、*Rocket Lake* のGPUは *Tiger Lake* と同世代であることから、 *Tiger Lake LP PCH* ではCPU部で差別化を図るはずだ。果たしてそれがどこまでのものとなるかは気になる所。
