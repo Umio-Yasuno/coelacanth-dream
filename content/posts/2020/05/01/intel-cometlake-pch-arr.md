@@ -57,13 +57,16 @@ noindex: false
 
  > 引用元:<cite>[FSP/README.md at 8af76d732b006acceaaee184b597a46f39ec15e3 · IntelFsp/FSP](https://github.com/IntelFsp/FSP/blob/8af76d732b006acceaaee184b597a46f39ec15e3/CometLakeFspBinPkg/README.md)</cite>
 
-意外だと感じたのは、[Coreboot](https://github.com/coreboo)のPCI IDリストに *Comet Lake PCH* の中で *H410* と *B460* が無く、*CometLakeV* だと思っていたからだ。*H410* と、これも未発表だが *B460C* は *CometLakeV* と記述されている。[^7]  
-Intel のサイトを確認すると、確かに *B460* のブロックダイアグラムには 2.5G Ethernet とWi-Fi 6 **AX200** が描かれているのに対し、*H420E /H410* にはそれらがない。[^5][^6]  
-Coreboot は単なる記載漏れなのだろうか？  
-しかしパターンとして、リネームされたチップセットは記載されていない。(例: Z370)。  
-*H470* と *B460* で PCI ID を共有している可能性も考えられるだろうか？  
+意外だと感じたのは、[Coreboot](https://github.com/coreboo)のPCI IDリストに *Comet Lake PCH* の中で *H410* と *B460* が無く、  
+*CometLakeV* だと思っていたからだ。*H410* と、これも未発表だが *B460C* は *CometLakeV* と記述されている。[^7]  
+パターンとして、リネームされたチップセットは記載されていない(例: Z370)。  
+*H470* と *B460* で PCI ID を共有している可能性が？  
 
-言えるのは、少なくとも *B460* は *CometLakeS* ということだ。逆にそうわざわざ書いてあることが引っかかりもするが。  
+ただ Intel のサイトを確認すると、確かに *B460* のブロックダイアグラムには 2.5G Ethernet とWi-Fi 6 **AX200** が描かれているのに対し、*H420E /H410* にはそれらがないため、*B460* が *CometLakeS* というのはもっともらしい。 [^5][^6]  
+Coreboot は単なる記載漏れなのだろうか？  
+
+言えるのは、少なくとも *B460* は *CometLakeS* ということだ。  
+逆にそうわざわざ書いてあることが引っかかりもするが。  
 
 [^5]: [Intel® B460 Chipset Product Brief](https://www.intel.com/content/www/us/en/products/docs/chipsets/desktop-chipsets/b460-chipset-brief.html?wapkw=b460)
 [^6]: [Comet Lake S: Overview and Technical Documentation](https://www.intel.com/content/www/us/en/design/products-and-solutions/processors-and-chipsets/comet-lake-s/overview.html?wapkw=H410&grouping=EMT_Content%20Type&sort=title:asc)
