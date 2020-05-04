@@ -199,7 +199,9 @@ categories: [ "Hardware", "AMD", "GPU" ]
 
 <!--
 	VANGOGH 163F:00
-	gfx1032
+	gfx1032 / gfx1033 [^13]
+
+[^13]: [P4 to Git Change 2008166 by vsytchen@vsytchen-remote-ocl-win10 on 201… · ROCm-Developer-Tools/ROCclr@df2e0b9](https://github.com/ROCm-Developer-Tools/ROCclr/commit/df2e0b9ae27f43ba8e23a3afa185c16dd3bb5ebc)
 -->
 
 [Page Top](#table-of-content)
@@ -267,7 +269,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 66A0 | 00 | Radeon Instinct | |
-| 66A1 &darr; | 00 | | |
+| 66A1 &darr; | 00 | | (Server XT 32GB) |
 | | 02 | | |
 | | 03 | | |
 | | 06 | | (Vega20 WKS GL-XE) |
@@ -384,7 +386,16 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 [Page Top](#table-of-content)
 
 <!--
-	Navi21: gfx1030
+	Navi21: gfx1030 [^12]
+
+    [^12]: [P4 to Git Change 1759681 by asalmanp@asalmanp-ocl-stg on 2019/03/21 1… · ROCm-Developer-Tools/ROCclr@42c005d](https://github.com/ROCm-Developer-Tools/ROCclr/commit/42c005d656a8bd99f87fa4fc86ad086701c59a86)
+
+    Navi22: gfx1031?
+    Navi23: gfx1032?
+
+    MI200: gfx909??? maybe temp id
+
+[^14]: [P4 to Git Change 2042212 by kjayapra@1_HIPWS_LNX1_PAL on 2019/12/06 1… · ROCm-Developer-Tools/ROCclr@a35c1d2](https://github.com/ROCm-Developer-Tools/ROCclr/commit/a35c1d2f2d954363c7d2121d5334f9e7766beeae)
 -->
 
 
