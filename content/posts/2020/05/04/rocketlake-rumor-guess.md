@@ -118,6 +118,8 @@ Intelは *Suny Cove (Ice Lake)* でIPCを平均18%向上させたとあるため
 この場合、CPUダイを小さくし、消費電力も低くすることができるが、クロックと熱密度の問題は14nmプロセスで製造したときよりも顕在化してしまう。  
 デスクトップ向けというのを考えればパターン1の方が調和しているように思える。
 
+{{< figure src="/image/2020/05/04/rocketlake-guess-pattern1.webp" title="パターン1: CPU+I/O(14nmm) + GPU+Display(10nm)" width="64%" >}}
+
 {{< ref >}}
 
  * [Intel、「Comet Lake」ベースの8製品を第10世代Coreプロセッサに追加投入 | マイナビニュース](https://news.mynavi.jp/article/20190821-881022/)
