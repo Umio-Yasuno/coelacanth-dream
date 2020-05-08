@@ -18,10 +18,16 @@ noindex: false
 [^1]: [intel: Update TGL PCI strings (1c6ef016) · Commits · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/commit/1c6ef0165f03a8e8c20a2c33a78584166a73487c)
 
 ## GPU規模
-
+### DG1
 コードを読むに、*DG1* の規模は *Tiger Lake GT2* とほぼ変わらない、Dual-SubSlice数 6基、L3キャッシュバンク数 8基というもの。  
-しかし、URB(Unified Return Buffer)のサイズは *Tiger Lake GT2* の 1024KB よりも小さい 768KB となっている。また、統合GPUではないため、CPUと共用するLLC(Last Level Cache)は無いとされている。  
+しかし、URB(Unified Return Buffer)のサイズは *Tiger Lake GT2* の 1024KB よりも小さい 768KB となっている。URBはL3キャッシュに統合されており、各シェーダーの入出力やローカルスレッドの発行のためのバッファとして機能する。[^2]  
+Intel が公開している *Ice Lake* GPUのドキュメントを読むと、URBを 96KBとする設定は1つだけであり、L3キャッシュのタグとして使われる Rest が省かれている。そしてその分をグローバルメモリアクセウ等に使用される Data Cluster と、 Read-Only である命令キャッシュや状態管理、テキスチャーを収める分に割り振っている。  
+URBのサイズが *DG1* で減らされているというのは、性能をGPGPUにも向ける意味があるのではないかと思う。  
 
+[^2]: <https://01.org/sites/default/files/documentation/intel-gfx-prm-osrc-icllp-vol07-memory_cache_0.pdf>
+[^3]: <https://01.org/sites/default/files/documentation/intel-gfx-prm-osrc-icllp-vol07-memory_cache_0.pdf#page=9>
+
+### Rocket Lake GT0.5/1
 *Rocket Lake* には GT0.5、GT1 の2種類が用意されており、  
 GT0.5 は Dual-SubSlice数 1基、L3キャッシュバンク数 4基。  
 GT1 は Dual-SubSlice数 2基、L3キャッシュバンク数は GT0.5 と同数の 4基。  
@@ -39,4 +45,4 @@ L3キャッシュバンクあたりの容量はまだ確定していないが、
 | &emsp;EUs | 96 | 96 | 16 | 32 |
 | &emsp;Shading Units | 768 | 768 | 128 | 256 |
 | GPU L3$ | 3072KB? | 3072KB? | 1536KB? | 1536KB? |
-| URB Size | 1024KB | 768KB | 512KB | 512KB |
+| &emsp;URB Size | 1024KB | 768KB | 512KB | 512KB |
