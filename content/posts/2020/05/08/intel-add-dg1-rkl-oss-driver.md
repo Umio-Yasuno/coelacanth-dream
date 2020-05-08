@@ -1,7 +1,7 @@
 ---
 title: "Intel、オープンソースドライバーに DG1 と Rocket Lake の関するコードを追加"
 date: 2020-05-08T17:07:08+09:00
-draft: true
+draft: false
 tags: [ "DG1", "Rocket_Lake", "Gen12" ]
 keywords: [ "", ]
 categories: [ "Intel", "Hardware", "GPU" ]
