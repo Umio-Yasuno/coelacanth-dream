@@ -27,17 +27,18 @@ URBのサイズが *DG1* で減らされているというのは、性能をGPGP
 [^2]: <https://01.org/sites/default/files/documentation/intel-gfx-prm-osrc-icllp-vol07-memory_cache_0.pdf>
 [^3]: <https://01.org/sites/default/files/documentation/intel-gfx-prm-osrc-icllp-vol07-memory_cache_0.pdf#page=9>
 
-### Rocket Lake GT0.5/1
+### Rocket Lake GT0.5/GT1
 *Rocket Lake* には GT0.5、GT1 の2種類が用意されており、  
 GT0.5 は Dual-SubSlice数 1基、L3キャッシュバンク数 4基。  
 GT1 は Dual-SubSlice数 2基、L3キャッシュバンク数は GT0.5 と同数の 4基。  
 
-GPUコア部の規模は、プロプライエタリなドライバー等から出てきたものであろう前情報と一致している。  
-{{< link >}}[Intel DG1は96EU構成? & 推測 | Coelacanth's Dream](/posts/2019/12/28/intel-dg1-96eu-guess/){{< /link >}}
-{{< link >}}[Rocket Lakeの噂、そこからの推測 | Coelacanth's Dream](/posts/2020/05/04/rocketlake-rumor-guess/){{< /link >}}
+GTの後の数字が示すように、GT0.5 のGPUコア部はGen12LPアーキテクチャでは最小の規模だ。  
+また *Rocket Lake* では GT2 が現時点で存在しないが、GPU性能は *Tiger Lake* で、ということと思われる。  
 
+## Gen12LP
 Gen12LPアーキテクチャではGen11アーキテクチャから踏襲する、Slice内の SubSlicesを増やして性能を調整する方法を取っているため、*DG1* でも *Tiger Lake* でも *Rocket Lake* でも総Slice数は1基で変わらない。  
 L3キャッシュバンクあたりの容量はまだ確定していないが、Gen11アーキテクチャから変わらないとすれば 384KBとなる。  
+以下はGen12アーキテクチャ採用GPUを比較した表。  
 
 | Gen12LP | TGL GT2 | DG1 | RKL GT0.5 | RKL GT1 |
 | :--- | :---: | :---: | :---: | :---: |
