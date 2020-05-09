@@ -16,8 +16,8 @@ noindex: false
 
 主な参考資料:
 
- * [IntelFsp/FSP: Intel(R) Firmware Support Package (FSP)](https://github.com/IntelFsp/FSP)
-    * <https://github.com/IntelFsp/FSP/tree/master/CometLakeFspBinPkg>
+ * [IntelFsp/FSP: Intel(R) Firmware Support Package (FSP)](https://github.com/Intel/FSP)
+    * <https://github.com/Intel/FSP/tree/master/CometLakeFspBinPkg>
 
 
 ## インデックス
@@ -55,7 +55,7 @@ noindex: false
 
  > For all other Intel® 400 Series Chipsets, use CometLakeS. For the Intel® B460 Chipset use CometLakeS.
 
- > 引用元:<cite>[FSP/README.md at 8af76d732b006acceaaee184b597a46f39ec15e3 · IntelFsp/FSP](https://github.com/IntelFsp/FSP/blob/8af76d732b006acceaaee184b597a46f39ec15e3/CometLakeFspBinPkg/README.md)</cite>
+ > 引用元:<cite>[FSP/README.md at 8af76d732b006acceaaee184b597a46f39ec15e3 · IntelFsp/FSP](https://github.com/Intel/FSP/blob/8af76d732b006acceaaee184b597a46f39ec15e3/CometLakeFspBinPkg/README.md)</cite>
 
 意外だと感じたのは、[Coreboot](https://github.com/coreboo)のPCI IDリストに *Comet Lake PCH* の中で *H410* と *B460* が無く、  
 *CometLakeV* だと思っていたからだ。*H410* と、これも未発表だが *B460C* は *CometLakeV* と記述されている。[^7]  
@@ -70,7 +70,7 @@ Coreboot は単なる記載漏れなのだろうか？
 
 [^5]: [Intel® B460 Chipset Product Brief](https://www.intel.com/content/www/us/en/products/docs/chipsets/desktop-chipsets/b460-chipset-brief.html?wapkw=b460)
 [^6]: [Comet Lake S: Overview and Technical Documentation](https://www.intel.com/content/www/us/en/design/products-and-solutions/processors-and-chipsets/comet-lake-s/overview.html?wapkw=H410&grouping=EMT_Content%20Type&sort=title:asc)
-[^7]: [FSP/README.md at 8af76d732b006acceaaee184b597a46f39ec15e3 · IntelFsp/FSP](https://github.com/IntelFsp/FSP/blob/8af76d732b006acceaaee184b597a46f39ec15e3/CometLakeFspBinPkg/README.md)
+[^7]: [FSP/README.md at 8af76d732b006acceaaee184b597a46f39ec15e3 · IntelFsp/FSP](https://github.com/Intel/FSP/blob/8af76d732b006acceaaee184b597a46f39ec15e3/CometLakeFspBinPkg/README.md)
 
 *CometLake1* 、*CometLake2* 、*CometLakeS* は、Linux Kernelからは *Comet Lake PCH* と、  
 *CometLakeV* は *Comet Lake V PCH* と判定される。[^3][^4]  
@@ -85,8 +85,8 @@ Coreboot は単なる記載漏れなのだろうか？
 
 {{< ref >}}
 
- * [IntelFsp/FSP: Intel(R) Firmware Support Package (FSP)](https://github.com/IntelFsp/FSP)
-    * <https://github.com/IntelFsp/FSP/tree/master/CometLakeFspBinPkg>
+ * [IntelFsp/FSP: Intel(R) Firmware Support Package (FSP)](https://github.com/Intel/FSP)
+    * <https://github.com/Intel/FSP/tree/master/CometLakeFspBinPkg>
  * [coreboot/coreboot: Mirror of https://review.coreboot.org/coreboot.git. We don't handle Pull Requests.](https://github.com/coreboot/coreboot)
     * [coreboot/pci_ids.h at d7a6d61d51ebf4025484e567a20b2b50fda5a6f9 · coreboot/coreboot](https://github.com/coreboot/coreboot/blob/d7a6d61d51ebf4025484e567a20b2b50fda5a6f9/src/include/device/pci_ids.h#L2845)
  * [linux/intel_pch.h at 50a5065f4474c2dbc1f7462b45a32d33d7b48d88 · torvalds/linux](https://github.com/torvalds/linux/blob/50a5065f4474c2dbc1f7462b45a32d33d7b48d88/drivers/gpu/drm/i915/intel_pch.h#L44)
