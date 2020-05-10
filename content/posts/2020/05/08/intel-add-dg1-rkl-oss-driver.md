@@ -21,8 +21,15 @@ noindex: false
 ### DG1
 コードを読むに、*DG1* の規模は *Tiger Lake GT2* とほぼ変わらない、Dual-SubSlice数 6基、L3キャッシュバンク数 8基というもの。  
 しかし、URB(Unified Return Buffer)のサイズは *Tiger Lake GT2* の 1024KB よりも小さい 768KB となっている。URBはL3キャッシュに統合されており、各シェーダーの入出力やローカルスレッドの発行のためのバッファとして機能する。[^2]  
-Intel が公開している *Ice Lake* GPUのドキュメントを読むと、L3キャッシュバンクあたりの URB を 96KBとする設定は1つだけであり、L3キャッシュのタグとして使われる Rest が省かれている。そしてその分をグローバルメモリアクセス等に使用される Data Cluster と、 Read-Only である命令キャッシュや状態管理、テクスチャーを収める分に割り振っている。  
+Intel が公開している *Ice Lake* GPUのドキュメントを読むと、L3キャッシュバンクあたりの URB を 96KBとする設定は1つだけであり、L3キャッシュのタグとして使われる Rest が省かれている。そしてその分をグローバルメモリアクセス等に使用される Data Cluster と、 Read-Only である命令キャッシュや状態管理、テクスチャーを収める分に割り振っている。[^3]  
 このことから、{{< comple >}}L3キャッシュ構成が *Ice Lake /Gen11* と同様であるという前提付きではあるが{{< /comple >}}URBのサイズが *DG1* で減らされているというのは、性能をGPGPUにも向ける意味があるのではないかと思う。  
+
+{{< ins >}}
+
+一応、 *DG1* の URBサイズは固定だが、他の Gen7以上の世代のGPUはURBサイズ、L3キャッシュバンクの設定を変更可能とのこと。  
+*Tiger Lake GT2* を *DG1* は同様の設定で動作させることも可能だろう。  
+
+{{< /ins >}}
 
 [^2]: <https://01.org/sites/default/files/documentation/intel-gfx-prm-osrc-icllp-vol07-memory_cache_0.pdf>
 [^3]: <https://01.org/sites/default/files/documentation/intel-gfx-prm-osrc-icllp-vol07-memory_cache_0.pdf#page=9>
