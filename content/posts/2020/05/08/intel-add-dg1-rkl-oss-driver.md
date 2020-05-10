@@ -1,5 +1,5 @@
 ---
-title: "Intel、オープンソースドライバーに DG1 と Rocket Lake の関するコードを追加 ――DG1 は 96EU、RKL は 16EU か 32EU"
+title: "Intel、オープンソースドライバーに DG1 と Rocket Lake の関するコードを追加 ――DG1 は 96EU、RKL は 16EU または 32EU"
 date: 2020-05-08T17:07:08+09:00
 draft: false
 tags: [ "DG1", "Rocket_Lake", "Gen12" ]
