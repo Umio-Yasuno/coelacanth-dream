@@ -103,7 +103,7 @@ PCHのコードネームは *Jasper Lake PCH* と、こちらはシンプル。[
 GPUの機能は同じで、PCHもコードネームこそ違うが、中身としては映像出力1ポートのマッピングが微妙に異なるだけだ。[^14]ついでに言うと、*Cannon Lake PCH* 以降もIPを再使用しているため、*Ice Lake* 、*Elkhart Lake* 、*Jasper Lake* 、*Tiger Lake* のPCHに大きな違いはない。[^16]  
 強いてそれらを分けるとするならば、*Mule Creek Canyon PCH* は *Ice Lake PCH* 寄り、[^15]  
 *Jasper Lake PCH* は *Tiger Lake PCH* 寄りの仕様と言える。[^14]  
-  
+
 
 [^14]: [drm/i915: Introduce Jasper Lake PCH · torvalds/linux@943682e](https://github.com/torvalds/linux/commit/943682e3bd19385511171d730499120ab7245566)
 [^16]: [platform/x86: intel_pmc_core: Add Atom based Jasper Lake (JSL) platfo… · torvalds/linux@16292be](https://github.com/torvalds/linux/commit/16292bed9c56a20715d942fd5d9e025f01fa65fe)
@@ -125,6 +125,11 @@ GPUの機能は同じで、PCHもコードネームこそ違うが、中身と�
 それとも、4-Threadより上の *Jasper Lake* が予定されているのか、  
 または、*Single Cluster Mode* に関する自分の推測が外れているのか。  
 こればかりは新たな情報が出てこないければわからない。  
+
+{{< ins >}}
+Linux Kernel documentation の記述から、*Jasper Lake* はPCHの機能を統合したSoC、*Elkhart Lake* は I/O の規模を増やすべく外部にPCHを搭載する、という違いも考えられる。  
+[Kernel driver i2c-i801 — The Linux Kernel documentation](https://01.org/linuxgraphics/gfx-docs/drm/i2c/busses/i2c-i801.html)
+{{< /ins >}}
 
 ## Lakefiled {#lakefield}
 *Lakefield* は高性能な *Sunny Cove* ベースのコアと省電力に優れる *Tremont* ベースのコアを両方併せ持つ非対称ハイブリッドプロセッサであり、  

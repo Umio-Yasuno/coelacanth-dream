@@ -105,3 +105,7 @@ noindex: false
 | HDCP | Highbandwidth Digital Content Protection | |
 | TA | Texture Address /Trusted Application? | |
 | TC | Texture Cache | |
+| BACO | Bus Active, Chip Off[^2] | |
+| BOCO | Bus Off, Chip Off[^2] | |
+
+[^2]: [drm/amdgpu: rename amdgpu_device_is_px to amdgpu_device_supports_boco (v2)](https://cgit.freedesktop.org/~agd5f/linux/commit/?h=tmz&id=31af062acfbd5db8b0b99d0ad418b33d4458e206)

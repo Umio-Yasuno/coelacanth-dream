@@ -27,6 +27,7 @@ Intel が公開している *Ice Lake* GPUのドキュメントを読むと、L3
 {{< ins >}}
 
 一応、 *DG1* の URBサイズは固定だが、他の Gen7以上の世代のGPUはURBサイズ、L3キャッシュバンクの設定を変更可能とのこと。  
+[intel: Delete hardcoded devinfo->urb.size values for Gen7+ (sans DG1). (!4969) · Merge Requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/4969)  
 *Tiger Lake GT2* を *DG1* は同様の設定で動作させることも可能だろう。  
 
 {{< /ins >}}
