@@ -2,9 +2,9 @@
 title: "RadeonSI が Trust Memory Zone をサポート"
 date: 2020-05-11T22:11:12+09:00
 draft: false
-tags: [ "", ]
+tags: [ "RadeonSI", ]
 keywords: [ "", ]
-categories: [ "", ]
+categories: [ "Software", "AMD", "GPU" ]
 noindex: false
 ---
 
