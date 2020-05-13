@@ -44,3 +44,7 @@ RadeonFeature は 公式に 8Kデコードに対応しているとされる VCN 
 | FP32 (TFLOPS) | 8.89 | 9.5 | 13.1 |
 | FP64 (TFLOPS) | 0.56 | 0.59 | 6.55  |
 | Typical Board Power | 190 W<br>205 W (+USB) | ? | 250 W |
+| Price | $799[^2] | $1,000[^1] | $1,899 |
+
+[^1]: [Radeon Pro W5700X MPX Module - Apple](https://www.apple.com/shop/product/MW662AM/A/radeon-pro-w5700x-mpx-module)
+[^2]: [AMD Launches World’s First 7nm Professional PC Workstation Graphics Card for 3D Designers, Architects and Engineers | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/amd-launches-worlds-first-7nm-professional-pc-workstation)
