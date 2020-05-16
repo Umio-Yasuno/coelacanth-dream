@@ -14,6 +14,8 @@ noindex: false
 知識はAMD CPU/GPUに偏っています。Intel CPU/GPUは少しだけ。NVIDIAはさっぱり。  
 ネット上で広まっている噂を積極的に取り上げることはありません。  
 
+オープンソースコードは眺めるだけのシーラカンス。  
+
 <div style="clear:left"></div>
 
 ## 寄付 {#donate}
