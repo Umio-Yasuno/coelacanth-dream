@@ -31,14 +31,16 @@ GPUOpen は 2016年、*Polarisアーキテクチャ* 採用GPUの発表と同時
 等を提供してきた実績がある。  
 
 ### オープンソース……?
-しかし GPUOpen と言っても、上記すべてがオープンソースという訳ではなく、[Radeon™ GPU Profiler](https://github.com/GPUOpen-Tools/radeon_gpu_profiler)と[Radeon™ Memory Visualizer](https://github.com/GPUOpen-Tools/radeon_memory_visualizer)はバイナリのみのクローズドソースで提供されている。  
+しかし GPUOpen と言っても、上記すべてがオープンソースという訳ではなく、[Radeon™ GPU Profiler](https://github.com/GPUOpen-Tools/radeon_gpu_profiler)、それとつい最近リリースされた[Radeon™ Memory Visualizer](https://github.com/GPUOpen-Tools/radeon_memory_visualizer)はバイナリのみのクローズドソースで提供されている。  
 {{< link >}}[Plans to make source available ? · Issue #1 · GPUOpen-Tools/radeon_gpu_profiler](https://github.com/GPUOpen-Tools/radeon_gpu_profiler/issues/1){{< /link >}}
 
 これは理由として、ライブラリやSDKよりもオープンソースで提供する意義が薄く、AMD も企業として活動する以上、隠しておきたい情報が含まれるといったことが考えられる。  
 それでも GPUOpen は GPUOpen であり続けてきた。  
 
 ## 再度オープンソースに
-RadeonRays 4.0 のリリースから2日後、開発者の yozhijk(Dmitry Kozlov)氏は再度オープンソースにするとコメントした。  
+RadeonRays 4.0 がクローズドソースになることがユーザー間で話題となり、"炎上"が巻き起こった後にAMD は動いた。  
+
+RadeonRays 4.0 のリリースから2日後に、開発者の yozhijk(Dmitry Kozlov)氏は、社内で話し合った結果として、再度オープンソースにするとコメントした。  
 
  > Hi guys,
  > Thanks for still being with us and for the feedback you have provided so far. It has been decided yesterday to open-source most of RadeonRays4 and put AMD specific IP in closed-source modules (source will be available upon request under SLA).
@@ -47,7 +49,7 @@ RadeonRays 4.0 のリリースから2日後、開発者の yozhijk(Dmitry Kozlov
 
  > 引用元: <cite>[https://github.com/GPUOpen-LibrariesAndSDKs/RadeonRays_SDK/issues/206](https://github.com/GPUOpen-LibrariesAndSDKs/RadeonRays_SDK/issues/206)</cite>
 
-これでめでたしめでたしとはならない。  
+これでめでたしめでたしとは思わない。  
 
 AMD はユーザーからの反応に良くも悪くも敏感な所がある。  
 2018年年初、最新ドライバーを導入すると DirectX 9 を用いるゲームが動作しなくなる問題がコミュニティで上げられ、話題となった。  
@@ -60,6 +62,7 @@ AMD はユーザーからの反応に良くも悪くも敏感な所がある。
 それと同時に、古いゲームのサポートの代わりに新しいゲームへの最適化が進むとなれば、それもまたユーザーにとって悪い話ではないはずだ。  
 
 ただ、ユーザーからの反応を見て、どうするのが得か AMDは考え、行動に移した。  
+今回もそうだろうか？ いやユーザー、ゲーマーへの直接的な影響は限りなく小さかったはずだ。  
 
 かつて、Linux Kernel の開発者であり優しい終身の独裁者を務める Linus Torvalds氏は NVIDIA に対し中指を立てた。  
 これは Linuxユーザーからの「NVIDIA はオープンソースドライバー出してくれず、ドキュメントも整備されていないが、あなたはどう思う？」という質問に対し、開発者として回答したものだ。  
@@ -86,6 +89,7 @@ RadeonRays を利用したソフトウェアを開発している開発者だろ
 今後同様に他のソフトウェアがクローズドソースになることを危惧した。  
 それが反感へと繋がり、"炎上"が起きることとなった。  
 
+<br>
 これからも GPUOpen は"変わらず"オープンであり続けることだろう。  
 しかし、一度オープンソースにしたことで企業としての理屈に則る一貫した行動を取りにくくなることは、AMD にちょっとした後悔と方針の変化を与えることとなるかもしれない。  
 
