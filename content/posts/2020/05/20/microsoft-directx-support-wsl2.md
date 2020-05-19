@@ -1,5 +1,5 @@
 ---
-title: "Microsoft が WSL2 の DirectX サポートを発表"
+title: "Microsoft が WSL2 で DirectX をサポートする計画を発表"
 date: 2020-05-20T02:44:51+09:00
 draft: false
 # tags: [ "", ]
@@ -26,7 +26,7 @@ UMD (User Mode Driver) と KMD が通信する際に用いられるレイヤー�
 GPUメーカーが提供する DirectX 12 UMD も当然クローズドソースだ。  
 そのため、WSL2以外 (WindowsをホストOSとしない Linux OS) は UMD が存在しないため、動作させることはできない。  
 
-また、Linux 環境下で DirectX を実行する [Wine](https://www.winehq.org/#carouselScreenshots) / [Proton](https://github.com/ValveSoftware/Proton/) は、API 呼び出しを変換する形で実現しているため、今回の Microsoft が行なう Linux へのさらなる歩み寄りを、それらに活かせるかは微妙なところだ。  
+また、Linux 環境下で DirectX を実行するソフトウェアでは、[Wine](https://www.winehq.org/#carouselScreenshots) / [Proton](https://github.com/ValveSoftware/Proton/)が有名だが、Wine は API 呼び出しを変換する形で実行しているため、今回の Microsoft が行なう Linux へのさらなる歩み寄りを、それらに活かせるかは微妙なところと思われる。  
 
 {{< ref >}}
 
