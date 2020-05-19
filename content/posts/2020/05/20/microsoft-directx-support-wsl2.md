@@ -9,7 +9,7 @@ noindex: false
 ---
 
 Microsoft は開催中の開発者向けイベント、[Microsoft Build 2020](https://news.microsoft.com/build2020/)の中で、Windows向けグラフィクスAPI DirectX を WSL (Windows Subsystem for Linux 2) でサポートすることを発表した。  
-{{< link >}}[DirectX ❤ Linux | DirectX Developer Blog](https://devblogs.microsoft.com/directx/directx-heart-linux/){{< /link >}}
+{{< link >}}<cite>[DirectX ❤ Linux | DirectX Developer Blog](https://devblogs.microsoft.com/directx/directx-heart-linux/)</cite>{{< /link >}}
 
 Linux Kernel に `Dxgkrnl` と呼ぶ新たな KMD (Kernel Mode Driver) を実装し、Windows OS をホストOSとする Linux は `Dxgkrnl` を、`Dxgkrnl` は仮想的なバス (VM Bus) を通して Windows OS内のGPUドライバー、そして物理GPUと通信する。  
 これは WDDM (Windows Display Driver Model) v2.9 の仕様に統合される。  
@@ -26,4 +26,11 @@ UMD (User Mode Driver) と KMD が通信する際に用いられるレイヤー�
 GPUメーカーが提供する DirectX 12 UMD も当然クローズドソースだ。  
 そのため、WSL2以外 (WindowsをホストOSとしない Linux OS) は UMD が存在しないため、動作させることはできない。  
 
-また、Linux 環境下で DirectX を実行する [Wine](https://www.winehq.org/#carouselScreenshots) / [Proton](https://github.com/ValveSoftware/Proton/) は、API 呼び出しを変換する形で実現しているため、今回の Microsoft が行なう Linux へのさらなる歩み寄りをそれらに活かせるかは微妙なところだ。  
+また、Linux 環境下で DirectX を実行する [Wine](https://www.winehq.org/#carouselScreenshots) / [Proton](https://github.com/ValveSoftware/Proton/) は、API 呼び出しを変換する形で実現しているため、今回の Microsoft が行なう Linux へのさらなる歩み寄りを、それらに活かせるかは微妙なところだ。  
+
+{{< ref >}}
+
+ * [DirectX ❤ Linux | DirectX Developer Blog](https://devblogs.microsoft.com/directx/directx-heart-linux/)
+ * <cite>[Microsoft Announces Direct3D 12 For Linux / WSL2 - Phoronix](https://www.phoronix.com/scan.php?page=news_item&px=Microsoft-DX12-WSL2)</cite>
+
+{{< /ref >}}
