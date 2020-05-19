@@ -57,12 +57,17 @@ Intelの次世代低消費電力 x86アーキテクチャ。
 
 [^5]: <ftp://data.aaeon.com.tw/DOWNLOAD/Brochure/2020_Network_Appliances_brochure_AAEON.pdf><br>&emsp;&emsp;<ftp://data.aaeon.com.tw/DOWNLOAD/Brochure/2020_Network_Appliances_brochure_AAEON.pdf#page=7><br>&emsp;&emsp;<ftp://data.aaeon.com.tw/DOWNLOAD/Brochure/2020_Network_Appliances_brochure_AAEON.pdf#page=14>
 
-それ以外に判明している仕様はGPUくらいで、GPUアーキテクチャは *Ice Lake* と同じ[Gen11](/tags/gen11)、EU(Execution Unit)数は32基、L3cacheは4バンク、1280KB。[^7]  
+それ以外に判明している仕様はGPUくらいで、GPUアーキテクチャは *Ice Lake* と同じ[Gen11](/tags/gen11)、規模は最大で EU(Execution Unit) 32基、L3cacheバンク 4基(1280KB)。[^7]  
 *Ice Lake* と同じ世代ではあっても機能面で微妙に違いが存在し、[intel/media-driver](https://github.com/intel/media-driver)によると、一部コーデックにてシェーダー(EU)を用いたエンコードがサポートされない。[^8]  
 他にも、デノイズやシャーピング、HDR10トーンマッピングといった映像処理のサポートも削られている。  
 
 [^7]: [media-driver/media_sysinfo_g11.cpp at intel-media-20.1.1 · intel/media-driver](https://github.com/intel/media-driver/blob/intel-media-20.1.1/media_driver/linux/gen11/ddi/media_sysinfo_g11.cpp#L322)
 [^8]: [update readme for TGL/EHL/JSL · intel/media-driver@d0cbf53](https://github.com/intel/media-driver/commit/d0cbf53cd4dc23f1ef99b4b2e9bfab74172d9c9d)
+
+*Elkhart Lake* GPUの規模には3種類あり、L3cacheバンクの構成は変わらず、SubSlice数とその内部のEU数が主な差別化点となっている。  
+3種それぞれの総EU数は 32基、16基、8基。[^18]  
+
+[^18]: [intel: Add Elkhart Lake device info (a583f863) · Commits · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/commit/a583f86305875957931fccfa7c4176d07b192fe2)
 
 PCHのコードネームは *Mule Creek Canyon PCH* と、ちょっと凝ったものになっている。[^15]
 
@@ -94,6 +99,9 @@ CPUコア数に関しては若干情報があるのだが、正直怪しいと�
 {{< /ins >}}
 
 *Jasper Lake* はGPUに関連するソフトウェア、[intel/media-driver](https://github.com/intel/media-driver) や [Mesa3D](https://gitlab.freedesktop.org/mesa/mesa) 等では *Elkhart Lake* として扱われており、両者の間にGPUの仕様違いは規模以外にないものと思われる。[^12][^13]  
+そして *Jasper Lake* GPUの規模は、総EU数 24基、L3cacheバンク 4基(1280KB)[^19]。  
+
+[^19]: [intel: Add device info for 1x4x6 Jasper Lake (11fdd5f5) · Commits · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/commit/11fdd5f52c3db070f33f7ef82d41acf14b1a2670)
 
 [^12]: [[Encode] Add some device IDs for JSL · intel/media-driver@4b5a279](https://github.com/intel/media-driver/commit/4b5a279dae45f36e7bc42bb4ac662591567b5c2e#diff-56a1f17349b8bf63003aa4674344637b)
 [^13]: [intel: Add device info for 1x4x6 Jasper Lake (11fdd5f5) · Commits · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/commit/11fdd5f52c3db070f33f7ef82d41acf14b1a2670)

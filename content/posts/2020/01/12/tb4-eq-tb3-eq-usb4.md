@@ -9,7 +9,7 @@ categories: [ "Hardware", "Intel" ]
 
 IntelがCES2020にてTigerlakeの新機能の1つとして出したThunderbolt 4（以下、TB4）だが、帯域はThunderbolt 3（以下、TB3）と変わらず、実質的なリブランドになる可能性が高い。  
 
-### USB3の4倍?
+## USB3の4倍?
 IntelはNewsroomでTB4はUSB3の4倍とアナウンスしているが、問題はUSB3のどれかはっきりと言っていないことだ。[^1]  
 
  > and 4x the throughput of USB 3 with the new integrated Thunderbolt 4.  
@@ -23,11 +23,11 @@ USB3には現在、ざっくりと帯域で言うと5 Gbit/s、10 Gbit/s、20 Gb
 Thunderboltは信号にPCI Expressを使っており、TB3はPCIeGen3 x4で40 Gbit/sのスループットを実現していた。  
 そこから発展させて、x4という構成を保ちながら80 Gbit/sにするにはPCIeGen4でないといけないことから、TigerlakeはPCIeGen4に対応するのではないか、と予想するメディアもいた。  
 
-#### 結果
+### 結果
 そこの所気になった[Tom's Hardware](https://www.tomshardware.com)がIntelに確認を取ったところ、4倍というのは**USB 3.1（10 Gbit/s）**に掛かるとのことで、TB4はTB3、それとTB3を仕様に取り込んだ次世代規格であるUSB4と帯域が変わらないことが確定となった。  
 [What Is Thunderbolt 4? Tiger Lake Tech Isn't Faster, Thunderbolt 3 With a New Name - Tom's Hardware](https://www.tomshardware.com/news/what-is-thunderbolt-4-tiger-lake-tech-isnt-faster-thunderbolt-3-with-a-new-name)  
 
-#### 推測
+### 推測
 したがってTigerlakeがPCIeGen4に対応した可能性も低くなる。  
 少なくともモバイル向けでPCIeGen4の必要性は薄い。先日発表されたAMD Ryzen 4000シリーズもPCIeGen4に対応しなかった。  
 
@@ -47,12 +47,8 @@ PCIeGen4にCPU側が対応しても、デバイス側としては自社製品が
 [Intel has PCIe 4.0 Optane SSDs Ready, But Nothing for Customers to Plug Them Into- Tom's Hardware](https://www.tomshardware.com/news/intel-has-pcie-40-optane-ssds-ready-but-nothing-to-plug-them-in-to)  
 最も、これもサーバー向けのOptane DCといった製品になると思われ、一般向けではない。  
 
-
-<br>
-##### 感想
+## 感想
 IntelからのTigerlakeに関しての情報はちらつかせるだけのものが多く、かえって謎が増えてるような気がしてならない。  
-
-#### どうなんのTB4
 さすがにTB3のリブランドだけに留まらず、Intelは何らかの付加価値を作ってくるはずだが、そこに関してはまだ一切明かされていない。  
 
 <hr>

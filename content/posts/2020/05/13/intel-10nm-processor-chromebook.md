@@ -44,7 +44,7 @@ GPU部は仕様が一致しており、GPUドライバーからは *Jasper Lake*
 GPUは *Ice Lake* と同じGen11アーキテクチャではあるが *Ice Lake* GPUは L3cacheバンクあたりのサイズが最大 384KBなのに対し、*Jasper/Elkhart Lake* GPUは[media-driver](https://github.com/intel/media-driver)から最大 320KBと読める。[^9]  
 また、一部コーディックのシェーダー(EU)を用いたエンコードや、デノイズ、シャーピング、HDR10トーンマッピング処理のサポートが *Jasper/Elkhart Lake* では外されているなど、*Ice Lake* GPUとは細かい違いが存在する。  
 
-*Jasper Lake* GPUの規模は、Mesa3D へのコミットの中で 24EU、L3cacheバンク 4基という仕様が明らかにされている。[^8]  
+*Jasper Lake* GPUの規模は、Mesa3D へのコミットの中で EU数 24基、L3cacheバンク 4基という仕様が明らかにされている。[^8]  
 
 ### Dedede 仕様 {#dedede-spec}
 **Dedede** はリファレンスボードであり、実際に製品に搭載される派生ボードには **Waddledoo** [^3] 、**Waddledee** [^4]、**Wheelie** [^5] が存在する。  
