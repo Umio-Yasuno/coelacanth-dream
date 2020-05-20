@@ -8,10 +8,15 @@ categories: [ "Software", "GPU" ]
 noindex: false
 ---
 
-Microsoft は開催中の開発者向けイベント、[Microsoft Build 2020](https://news.microsoft.com/build2020/)の中で、Windows向けグラフィクスAPI DirectX を WSL (Windows Subsystem for Linux 2) でサポートすることを発表した。  
+Microsoft は開催中の開発者向けイベント、[Microsoft Build 2020](https://news.microsoft.com/build2020/)の中で、Windows向けグラフィクスAPI DirectX を WSL2 (Windows Subsystem for Linux 2) でサポートすることを発表した。  
+機械学習 API DirectML や NVIDIA CUDA といった GPUコンピューティングも WSL2 下で実行可能となる。  
+また、リモートデスクトップを用いて、Linux向けGUIアプリケーションを WSL2 から動作させる機能の将来的なサポートも発表している。  
 {{< link >}}<cite>[DirectX ❤ Linux | DirectX Developer Blog](https://devblogs.microsoft.com/directx/directx-heart-linux/)</cite>{{< /link >}}
+{{< link >}}<cite>[The Windows Subsystem for Linux BUILD 2020 Summary | Windows Command Line](https://devblogs.microsoft.com/commandline/the-windows-subsystem-for-linux-build-2020-summary/){{< /link >}}
 
-Linux Kernel に `Dxgkrnl` と呼ぶ新たな KMD (Kernel Mode Driver) を実装し、Windows OS をホストOSとする Linux は `Dxgkrnl` を、`Dxgkrnl` は仮想的なバス (VM Bus) を通して Windows OS内のGPUドライバー、そして物理GPUと通信する。  
+## Direct X on "WSL"
+
+仕組みとしては、Linux Kernel に `Dxgkrnl` と呼ぶ新たな KMD (Kernel Mode Driver) を実装し、Windows OS をホストOSとする Linux は `Dxgkrnl` を、`Dxgkrnl` は仮想的なバス (VM Bus) を通して Windows OS内のGPUドライバー、そして物理GPUと通信することで、DirectX 12 API を使用する。  
 これは WDDM (Windows Display Driver Model) v2.9 の仕様に統合される。  
 
 それと同時に DirectX のライブラリが Linux向けにリリースされる。  
