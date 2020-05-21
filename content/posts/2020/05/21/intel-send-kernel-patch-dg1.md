@@ -27,6 +27,6 @@ Intel は、[Gen12](/tags/gen12)アーキテクチャ採用のディスクリー
 {{< link >}}[Intel、オープンソースドライバーに DG1 と Rocket Lake の関するコードを追加 ――DG1 は 96EU、RKL は 16EU または 32EU | Coelacanth's Dream](/posts/2020/05/08/intel-add-dg1-rkl-oss-driver/){{< /link >}}
 ただ、PCIeカードタイプの *DG1* はソフトウェア開発用としてのみ供給され、一般向けにはオンボードで実装したノートPCしか出てこないという話が出てきている。[^5]  
 Intel Gen12アーキテクチャを採用した、初(?)の dGPU ということで、性能関係なく欲しいと考える人はそれなりにいると思われるため、少し残念ではある。  
-ドライバーのサポートは為されているため、入手さえ出来れば動作させることはそれほど難しくはないはずだ。  
+ドライバーのサポートは為されているため、入手さえ出来れば動作させることはそれほど難しくはないはずだが。  
 
 [^5]: <https://ecpannualmeeting.com/assets/overview/sessions/Aurora-Public-FULL-talk-Feb-4-2020_for_posting_c.pdf#page=7>
