@@ -14,6 +14,13 @@ OSSのコードに *Rocket Lake* の名が出るのはこれが初だ。
 
 GPU部は *Tiger Lake* と同世代、[Gen12](/tags/gen12)であることが明記されており、ディスプレイ出力が4つすべてコンボPHYを使用する、つまりは4つのType-C/TB3(4?)からディスプレイ出力が可能なものと考えられる。  
 
+{{< ins >}}
+
+しかし、ピクセルクロックを生成する DPLL (Digital Phase-Locked Loop) は 3基とのこと。  
+{{< link >}}[[Intel-gfx] [PATCH 01/37] drm/i915/rkl: Add DPLL4 support](https://lists.freedesktop.org/archives/intel-gfx/2020-May/240206.html){{< /link >}}
+
+{{< /ins >}}
+
 追加された PCI ID は6つ。 ( `0x4C80` 、`0x4C8A` 、 `0x4C8B` 、`0x4C8C` 、`0x4C90` 、`0x4C9A` )  
 {{< link >}}[[Intel-gfx] [PATCH 01/23] drm/i915/rkl: Add RKL platform info and PCI ids](https://lists.freedesktop.org/archives/intel-gfx/2020-May/238499.html){{< /link >}}
 
