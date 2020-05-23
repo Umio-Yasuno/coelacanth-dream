@@ -11,7 +11,7 @@ noindex: false
 足音をはっきりと立て、そろそろ姿を現しそうなデスクトップ向け[Renoir](/tags/renoir)だが、  
 先日マザーボードベンダー各社から発表された AMD B550チップセット搭載製品の仕様から、HDMI 2.1 をサポートすることがわかった。  
 
-## 8Kに対応するか、それとも未来のAPUに託すか
+## 8Kに対応するか
 
 現行の AMD Navi1x世代GPU は、DisplayPort こそ DSC (Display Stream Compression) により 4K@240Hz、4K HDR@120Hz、8K HDR@60Hz に対応していたが、  
 HDMI は ver2.0b に留まり、4K@60Hzまでとなっていた。  
@@ -25,12 +25,10 @@ B550チップセット搭載製品の仕様を見る限りでは、
 **GIGABYTE B550I AORUS PRO AX** [^1] はDisplayPort からは 5K@60Hz まで、HDMI からは 4K@60Hz、  
 **ASRock B550 Phantom Gaming-ITX/ax** [^2] は DisplayPort 5K@120Hz、HDMI 4K@60Hz、  
 **MSI MAG B550M MORTAR** [^3] は DisplayPort 4K@60Hz、HDMI 4K@24Hz となっており、  
-対応解像度がバラバラではあるが、どれも 8Kには対応していない点では統一されている。(見落としていたら連絡下さると嬉しいです。)  
-それと、恐らく MSI はまだデスクトップ向け *Renoir* の仕様を反映していないものと思われる。  
-
+対応解像度がバラバラではあるが、どれも HDMI 8Kには対応していない点では統一されている。(見落としていたら連絡下さると嬉しいです。)  
 HDMI 2.1 が意味するのは、4K HDR と HDCP 2.3 への対応ということなのだろうか。HDMI 2.1 で追加された、可変リフレッシュレートの存在も考えられる。  
-機能として *Renoir* の DisplayPort側は 8K解像度に対応しているはずだが、マザーボード側が対応していないとなると、  
-AMD APU搭載機で 8K出力は次世代に託すこととなるかもしれない。  
+
+そして、仕様的には、5K@120Hz に対応しているならば 8K@60Hz 出力も可能なように思えるが、そう記載しなかった理由はどこにあるのか。  
 
 [^1]: [B550I AORUS PRO AX (rev. 1.0) | Motherboard - GIGABYTE Global](https://www.gigabyte.com/Motherboard/B550I-AORUS-PRO-AX-rev-10/sp#sp)
 [^2]: [ASRock > B550 Phantom Gaming-ITX/ax](https://www.asrock.com/mb/AMD/B550%20Phantom%20Gaming-ITXax/index.asp#Specification)
