@@ -272,7 +272,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | 66A1 &darr; | 00 | | (Server XT 32GB) |
 | | 02 | | |
 | | 03 | | |
-| | 06 | | (Vega20 WKS GL-XE) |
+| | 06 | Radeon Pro VII | (Vega20 WKS GL-XE) |
 | 66A2 &darr; | 00 | | |
 | | 02 | | |
 | 66A3 | 00 | Radeon Pro Vega II (Duo) | |
@@ -321,10 +321,11 @@ Navi LITE 13E9:00
 | 731B | 40 | Radeon Pro 5700 | |
 | 731F &darr; | C0 | RX 5700 XT 50th | (Navi10 XTX) |
 | | C1 | RX 5700 XT | (Navi10 XT) |
-| | C2 | RX 5600M? | (Navi10 XME) |
+| | C2 | RX 5600M | (Navi10 XME) |
 | | C3 | RX 5700M | |
 | | C4 | RX 5700 | (Navi10 XL) |
 | | C5 | RX 5700 XT | |
+| | C7 | | |
 | | CA | RX 5600 XT | (Navi10 XLE) |
 | | CB | RX 5600 | (Navi10 XE) |
 | | E1 | | |

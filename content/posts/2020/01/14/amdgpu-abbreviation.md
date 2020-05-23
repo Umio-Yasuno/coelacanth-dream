@@ -8,13 +8,9 @@ categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
 ---
 
-最初に断っておくと、これはあくまで個人的なメモであり、資料としてはいくつかの問題を抱えている。  
-わからない略語を見つける -> 探し出す -> メモする の繰り返しで貯まったものをテーブル形式に出力しただけだ。  
-そのためソースが記載されていないのがほとんどで、順番も一応関係あるものを固めているがやっぱりメチャクチャ。  
-かといってA-Z順ではそれはそれでメチャクチャだ。  
-だからブラウザのページ内検索を前提にした、今後わからない略語に会った時の解決に役立てたらいいな、というものだ。  
+個人的なメモ
 
-#### Software
+## Software
 | Abbr | Full | memo |
 | :--: | :--: | :--: |
 | UMD | User Mode graphics Drivers | |
@@ -46,7 +42,7 @@ noindex: false
 
 [^1]:[drm/amdgpu AMDgpu driver — The Linux Kernel documentation](https://www.kernel.org/doc/html/latest/gpu/amdgpu.html)
 
-#### Hardware
+## Hardware
 | Abbr | Full | memo |
 | :--: | :--: | :--: |
 | SE | Shader Engine | |
@@ -90,7 +86,7 @@ noindex: false
 | SPI | Shader Processor Interpolator | |
 | PRT | Partially Resident Textures | |
 
-#### Other
+## Other
 | Abbr | Full | memo |
 | :--: | :--: | :--: |
 | CDIT | Component locality Distance Information Table | |
