@@ -193,5 +193,5 @@ Navi12はRDNA世代では唯一SR-IOV (MxGPU)用のDevice IDが用意されて�
 
  * <cite>[Powering the Exascale Era | AMD](https://www.amd.com/en/products/exascale-era)</cite>
 
-[^1]: [AMDは8 GPUsのシステムを計画している？ | Coelacanth's Dream](http://localhost:1313/posts/2019/11/26/amd-planning-8gpus-system/)
+[^1]: [AMDは8 GPUsのシステムを計画している？ | Coelacanth's Dream](/posts/2019/11/26/amd-planning-8gpus-system/)
 [^2]: [Ponte Vecchio: The Old Bridge in the land of Gelato - Analyzing Intel’s Discrete Xe-HPC Graphics Disclosure: Ponte Vecchio, Rambo Cache, and Gelato](https://www.anandtech.com/show/15188/analyzing-intels-discrete-xe-hpc-graphics-disclosure-ponte-vecchio/3)

@@ -23,13 +23,14 @@ noindex: false
 
  * [Liberapay を使って Umio-Yasuno に寄付する](https://liberapay.com/Umio-Yasuno/donate)  
 
+
+ハードウェア系の文章に関するお仕事募集中。  
 <address>
 連絡先:  
 &emsp;Github: [Issues · Umio-Yasuno/umio-yasuno.github.io](https://github.com/Umio-Yasuno/umio-yasuno.github.io/issues)  
 &emsp;&emsp;Mail: <span class="mail"></span>
 </address>
 <br>
-ハードウェア系の文章に関するお仕事募集中。  
 
 <!--
 The Cloths of Heaven

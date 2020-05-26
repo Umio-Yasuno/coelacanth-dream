@@ -63,7 +63,7 @@ AMD GCNアーキテクチャでは、最大4CUで I$(Instruction Cache) 32KB と
 
 感想としては、*Vega10* と比べてコア部こそ微細化の効果が見られるが、他GPUと接続するための *Infinity Fabric (XGMI)* 、さらに *HBM2* 2スタック分のインターフェース追加等、主に微細化が効きにくい I/O のパッド部にダイサイズが引っ張られて大きくなっているように感じた。  
 [Navi10](/tags/navi10) のダイショットからはCUからWGPへの基本単位変更もあり、*Vega20* よりも詰めている印象を受ける。  
-[Navi10のダイ観察 & 推測 | Coelacanth's Dream](http://localhost:1313/posts/2020/01/22/navi10-dieshot-and-guess/)  
+[Navi10のダイ観察 & 推測 | Coelacanth's Dream](/posts/2020/01/22/navi10-dieshot-and-guess/)  
 設計の最適化に掛けた時間にも結構な違いがあったりするのだろうか？  
 
 ## Vega10とVega20の比較
