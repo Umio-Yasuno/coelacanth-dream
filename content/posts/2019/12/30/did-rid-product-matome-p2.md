@@ -309,9 +309,9 @@ Navi LITE 13E9:00
 | | F0 | | (Navi10 XTX Fake DID?[^2]) |
 | | F1 | | (Navi10 XT Fake DID?[^2]) |
 | | F2 | | (Navi10 XL Fake DID?[^2]) |
-| | F3 | | (Fake DID?) |
-| | F4 | | (Fake DID?) |
-| | F5 | | (Fake DID?) |
+| | F3 | | (12Gbps, Fake DID?) |
+| | F4 | | (12Gbps, Fake DID?) |
+| | F5 | | (12Gbps, Fake DID?) |
 | | F6 | | (Navi10 XME Fake DID?[^2]) |
 | 7310 | 00 | Radeon Pro W5700X |  |
 | 7312 | 00 | Radeon Pro W5700 | (Navi10 Pro XL?[^4]) |
