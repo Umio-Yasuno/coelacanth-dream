@@ -8,6 +8,13 @@ categories: [ "Software", "GPU" ]
 noindex: false
 ---
 
+{{< ins datetime="2020-05-27" >}}
+
+ビルドプロセスが改良されて別に ncnn をビルドして、パスを指定する必要がなくなった。  
+<https://github.com/nihui/waifu2x-ncnn-vulkan#build-from-source>  
+
+{{< /ins >}}
+
 Vulkan Computeで演算するため、Linux + Radeon 環境でもローカルで実行可能な画像高解像度ソフトウェア、waifu2x-ncnn-vulkan をビルドする方法のメモ。
 
  * [ncnn のビルド方法](#ncnn)
@@ -24,6 +31,7 @@ waifu2x-ncnn-vulkan をビルドするには、まず ncnn をビルドする必
 </del>
 
 {{< ins datetime="2020-04-29" >}}
+
 最新版ではエラーが出ると書いたが、原因が発覚した。  
 端的に言えば `glslangValidator` が最新版でなかった。誰かのせいにするなら cmake が `VULKAN_SDK` を認識してくれないのが悪い。  
 そういうことで以下修正版。
@@ -44,8 +52,7 @@ waifu2x-ncnn-vulkan をビルドするには、まず ncnn をビルドする必
 	$ mkdir build_$(date "+%F")
 	$ cd <build dir>
 
-<del>
-cmake、ビルド、そしてインストール。インストール先はデフォルトで `<build dir>/install` になっている。</del>  
+<del>cmake、ビルド、そしてインストール。インストール先はデフォルトで `<build dir>/install` になっている。</del>  
 
 	$ cmake -DVulkan_LIBRARY="${VULKAN_SDK}/lib/libvulkan.so" -DVulkan_INCLUDE_DIR="${VULKAN_SDK}/include" -DNCNN_VULKAN=ON ../
 	$ make -j$(grep -c processor /proc/cpuinfo)

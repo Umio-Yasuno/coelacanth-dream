@@ -44,9 +44,9 @@ RadeonRays 4.0 のリリースから2日後に、開発者の yozhijk(Dmitry Koz
 
  > Hi guys,
  > Thanks for still being with us and for the feedback you have provided so far. It has been decided yesterday to open-source most of RadeonRays4 and put AMD specific IP in closed-source modules (source will be available upon request under SLA).
-
+ >
  > -Dmitry
-
+>
  > 引用元: <cite>[https://github.com/GPUOpen-LibrariesAndSDKs/RadeonRays_SDK/issues/206](https://github.com/GPUOpen-LibrariesAndSDKs/RadeonRays_SDK/issues/206)</cite>
 
 これでめでたしめでたしとは思わない。  
@@ -89,7 +89,8 @@ RadeonRays を利用したソフトウェアを開発している開発者だろ
 今後同様に他のソフトウェアがクローズドソースになることを危惧した。  
 それが反感へと繋がり、"炎上"が起きることとなった。  
 
-<br>
+<br><br>
+
 これからも GPUOpen は"変わらず"オープンであり続けることだろう。  
 しかし、一度オープンソースにしたことで企業としての理屈に則る一貫した行動を取りにくくなることは、AMD にちょっとした後悔と方針の変化を与えることとなるかもしれない。  
 

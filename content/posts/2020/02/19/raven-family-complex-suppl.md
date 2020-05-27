@@ -25,7 +25,7 @@ AMDの真意ははかれないが、ヒントらしきものはある。
  > Dali only has 3 i2c controllers, while Pollock has 5. Both boards use  
  > the same socket. So we determine at runtime how many i2c controllers are  
  > available.  
-
+ >
  > 引用元: <cite>[soc/amd/common: Determine # of i2c controllers at runtime (I397b074e) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2057468)</cite>  
 
 i2c[^1]コントローラーの数が *Dali* と *Pollock* で違い、*Pollock* の方が多いとされている。  
@@ -38,7 +38,7 @@ i2c[^1]コントローラーの数が *Dali* と *Pollock* で違い、*Pollock*
 そして *Winston* だが、専用Ryzen搭載Surface発表時のアピールに、以下のものがあった。  
 
  > Dynamic responsiveness: A fully optimized pen interface delivers unparalleled precision through the revolutionary on-die pen controller.  
-
+ >
  > 引用元: [Microsoft Takes Pole Position in Laptops based on AMD Technology - AMD](https://community.amd.com/community/amd-business/blog/2019/10/03/microsoft-takes-pole-position-in-laptops-based-on-amd-technology)  
 
 on-board でも on-package でもなく、**on-die** とあり、ひとまずこれを信じるにしても、  

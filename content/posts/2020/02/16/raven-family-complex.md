@@ -33,20 +33,20 @@ EPYC 7002シリーズ (Rome)、Ryzen 3000シリーズ (Matisse)、Ryzen Threadri
 AMDもはっきりと、Raven2ベースの製品、Athlon 3000Gを発表の際に *Zen* ベースであると言っているし、  
 
  >  The Athlon 3000G is the first “Zen”-based Athlon processor that is unlocked for overclocking potential, delivering the only unlocked processor in its segment10.
-
+ >
  > 引用元: <cite>[AMD Introduces World’s Most Powerful 16-core Consumer Desktop Processor, the AMD Ryzen™ 9 3950X | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/amd-introduces-worlds-most-powerful-16-core-consumer-desktop)</cite>  
 
 *Raven2 (Dali)* ベースのAthlon Gold 3150U、Athlon Silver 3050Uでも *Zen* アーキテクチャだとしている。  
 
  > Bringing consumers more choice, the new AMD Athlon 3000 Series Mobile Processor family expands the reach of the powerful “Zen” architecture to mainstream notebooks.
-
+ >
  > 引用元: <cite>[AMD Announces World’s Highest Performance Desktop and Ultrathin Laptop Processors at CES 2020 | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/amd-announces-worlds-highest-performance-desktop-and-ultrathin)</cite>
 
 <br>
 パッチ内のメッセージでもその点が突っ込まれまくっており、少し色々とあったが、最終的に zen2 ではなく raven2 を関数名に使うということで納得してくれたようだ。  
 
  > I'll change it to raven2 instead of zen2. Thanks.
-
+ >
  > 引用元: <cite>[soc/amd/picasso: Add helper functions for finding SOC type (I24b73145) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2051514)</cite>  
 
 ただMartin Roth氏は最初、ソースとして WikiChip の Zen2 のページをあげており、  
@@ -153,7 +153,7 @@ x86_model はCPU内部のデータの1つであり、主にソフトウェアが
  >		case 0x8:	/* Zen+ */
  >		case 0x11:	/* Zen APU */
  >		case 0x18:	/* Zen+ APU */
-
+ >
  > 引用元: <cite><https://github.com/torvalds/linux/blob/b02c6857389da66b09e447103bdb247ccd182456/drivers/hwmon/k10temp.c#L587></cite>  
 
 これが本当にそうなってたらいいのだが、**Zen APU** である *Raven2* の x86_model までが 0x18 となっている。  
@@ -190,7 +190,7 @@ Linux Kernel では *Raven* , *Picasso* , *Raven2* に別々の内部的なリ�
 
  > Even though the hardware has the same vendor/device IDs, the vBIOS  
  > contains a \*different\* device ID, confusing the situation even more.  
-
+ >
  > 引用元: <cite>[Rework map_oprom_vendev to add revision check and mapping (I2978a569) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2040455)</cite>  
 
 素直に *Raven, Picasso, Raven2, Dali, Pollock* へ違うDevice IDを割り振れなかったのだろうか？  

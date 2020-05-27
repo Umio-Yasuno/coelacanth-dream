@@ -17,7 +17,7 @@ noindex: false
 HDMI は ver2.0b に留まり、4K@60Hzまでとなっていた。  
 
 > AMDの説明では，「HDMI 2.1は現状まだ不要である」というものだったが，Naviの設計段階で，HDMI 2.1対応のトランスミッタIPがなかった，というのが実情だろう。
-
+>
 > 引用元: <cite>[西川善司の3DGE：次世代GPU「Navi」の詳細とRadeon Softwareの新機能をレポート。操作遅延を低減する「Anti-Lag」は本当に効くのか？ - 4Gamer.net](https://www.4gamer.net/games/337/G033715/20190612140/)</cite>
 
 Navi1x のディスプレイエンジン *DCN2.0* より進んだ、*Renoir* の *DCN2.1* なら DisplayPort、HDMI のどちらからも 8K出力が可能、と思いきや、  

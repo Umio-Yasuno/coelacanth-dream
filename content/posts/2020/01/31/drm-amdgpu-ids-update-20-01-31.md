@@ -35,10 +35,10 @@ noindex: false
 gfxoffというのはAMDのScott Stankard氏の発言とも一致する。  
 
  > ――グラフィックス処理の負荷に応じて，CPUとGPUの間で電力を動的に振り分ける「AMD SmartShift」において，iGPUと単体GPUを同時に稼動させることはできるのか。
-
+ >
  > Stankard氏：
 　iGPUと単体GPUを同時に動かすことはできない。iGPUと単体GPUのどちらか一方が動いているとき，稼動していないGPUはほぼ完全に動作を停止する。
-
+ >
  > (引用元: [西川善司の3DGE:Ryzen 4000とRadeon RX 5600 XTの気になるところをAMDにアレコレ聞いてみた - 4Gamer.net](https://www.4gamer.net/games/446/G044684/20200115091/))
 
 ついでとなるが、Navi10でGDDR6 12Gbpsを採用したSKUにて不具合があったらしく、Linux Kernleへそれを修正するパッチが投稿された。  

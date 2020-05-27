@@ -40,7 +40,7 @@ AMDは以前3D積層によってコンピュータを1つのパッケージに�
 *Zen 3* アーキテクチャを採用する第3世代EPYC *Milan* は2020年後期に導入予定であり、続く *Zen 4* アーキテクチャでは5nmプロセスを採用することを発表した。  
 
  > AMD plans to introduce the first processors based on its next-generation “Zen 3” core in late 2020. The “Zen 4” core is currently in design and is targeted to use advanced 5nm process technology.
-
+ >
  > 引用元: <cite>[AMD Details Strategy to Deliver Best-in-Class Growth and Strong Shareholder Returns at 2020 Financial Analyst Day | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/amd-details-strategy-deliver-best-class-growth-and-strong)  
 
 
@@ -50,7 +50,7 @@ AMDは以前3D積層によってコンピュータを1つのパッケージに�
 *N7+* ではN7と比べて、15%から20%上のトランジスタ密度を可能とし、消費電力も削減される。  
 
  > N7+ is also providing improved overall performance. When compared to the N7 process, N7+ provides 15% to 20% more density and improved power consumption, making it an increasingly popular choice for the industry’s next-wave products.
-
+ >
  > 引用元: <cite>[TSMC’s N7+ Technology is First EUV Process Delivering Customer Products to Market in High Volume](https://www.tsmc.com/tsmcdotcom/PRListingNewsArchivesAction.do?action=detail&newsid=THHIHIPGTH&language=E)</cite>
 
 *Zen 4* の5nmはTSMC N5プロセスと考えられ、そちらはN7と比べて、80%上のトランジスタ密度、16%の高速化、30%の低消費電力化を実現する見込みとなっている。[^4]  
@@ -71,7 +71,7 @@ AMDは以前3D積層によってコンピュータを1つのパッケージに�
 *Zen 3* アーキテクチャ採用の第4世代Ryzenも2020年中に提供するとしている。  
 
  >  AMD is on track to bring increased performance to the gaming, content creation and productivity markets when it delivers the first “Zen 3”-based AMD Ryzen™ product in 2020.
-
+ >
  > 引用元: <cite>[AMD Details Strategy to Deliver Best-in-Class Growth and Strong Shareholder Returns at 2020 Financial Analyst Day | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/amd-details-strategy-deliver-best-class-growth-and-strong)  
 
 <br>
@@ -91,7 +91,7 @@ AMDは以前3D積層によってコンピュータを1つのパッケージに�
 **RDNA** が *Radeon DNA* の略なのに、**CDNA** は *Compute DNA* の略だ。  
 
  > AMD unveiled its new AMD Compute DNA (AMD CDNA) architecture, designed to accelerate data center compute workloads. 
-
+ >
  > 引用元: <cite>[AMD Details Strategy to Deliver Best-in-Class Growth and Strong Shareholder Returns at 2020 Financial Analyst Day | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/amd-details-strategy-deliver-best-class-growth-and-strong)</cite>
 
 どうも格好がつかないというか、Radeon に対して Compute では寂しいというか、*GCN* の格好よさを受け継いで欲しかったというか。  
@@ -139,7 +139,7 @@ Arcturusでは長く、MI100では製品的過ぎたが、*CDNA* は呼びやす
 気になるのは時期と8GPUシステムが採用されるかどうかで、AMDが納入する予定の次世代Exascaleスパコン、*Frontier* と *El Capitan* はどちらもノードあたり GPU 4 : CPU 1 の設計とされている。  
 
  > New approach using accelerator-centric compute blades (in a 4:1 GPU to CPU ratio, connected by the 3rd Gen AMD Infinity Architecture for high-bandwidth, low latency connections) to increase performance for data-intensive AI, machine learning and analytics needs by offloading processing from the CPU to the GPU.
-
+ >
  > 引用元: <cite>[HPE and AMD power complex scientific discovery in world’s fastest supercomputer for U.S. Department of Energy’s (DOE) National Nuclear Security Administration (NNSA) | HPE](https://www.hpe.com/us/en/newsroom/press-release/2020/03/hpe-and-amd-power-complex-scientific-discovery-in-worlds-fastest-supercomputer-for-us-department-of-energys-doe-national-nuclear-security-administration-nnsa.html)</cite>
 
 *Frontier* は2021年納入予定であり、調整の時間を考えると *CDNA* を、  
@@ -182,7 +182,7 @@ Navi12はRDNA世代では唯一SR-IOV (MxGPU)用のDevice IDが用意されて�
 そしてAMDは2020年後期に最初の*RDNA 2* ベースの製品を発売する予定にある。  
 
  > The first AMD RDNA 2-based products are expected to launch in late 2020.
-
+ >
  > 引用元: <cite>[AMD Details Strategy to Deliver Best-in-Class Growth and Strong Shareholder Returns at 2020 Financial Analyst Day | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/amd-details-strategy-deliver-best-class-growth-and-strong)  
 
 #### RDNA 3

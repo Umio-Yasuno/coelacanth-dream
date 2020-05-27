@@ -30,11 +30,10 @@ AVX の後の数字から、用いるベクトル演算器のSIMDベクトル幅
 
 [^1]: [FSI Multi-Cloud Strategies Webinar](https://www.intel.com/content/www/us/en/financial-services-it/fsi-multi-cloud-webinar.html)
 
-<br>
+## Alder Lake のSIMD幅はどうなるか
 上記2つの命令は、幅の小さいベクトル演算器を意識しているように見える。  
-以前、Intel 拡張命令リファレンス資料がアップデートされた際、 *Alder Lake* と *Tiger Lake* で対応する命令が一致していないと書いたが、  
+以前、Intel 拡張命令リファレンス資料がアップデートされた際、 *Alder Lake* と *Tiger Lake* で対応する命令が一致していないと書いたが、*Alder Lake* は *Tiger Lake* よりもベクトル演算器の規模を小さく変更するかもしれない。  
 {{< link >}}[Intel、拡張命令リファレンスをアップデート (Sapphire Rapids /Alder Lake /ハイブリッドプロセッサ) | Coelacanth's Dream](/posts/2020/04/01/intel-isa-extensiton-update-sapphirerapids-alderlake/){{< /link >}}
-*Alder Lake* は *Tiger Lake* よりもベクトル演算器の規模を小さく変更するかもしれない。  
 また、 *Alder Lake* には2種類のプロセッサが確認されており(Alder Lake-S /Alder Lake-P)、*Skylake* と *Skylake-SP* のように、それぞれでベクトル演算器周りの構成が異なるということも考えられる。  
 {{< link >}}[ChromiumOSへのパッチから Alderlake-S / Alderlake-P を確認 | Coelacanth's Dream](/posts/2020/05/01/vboot-code-add-alderlake/){{< /link >}}
 

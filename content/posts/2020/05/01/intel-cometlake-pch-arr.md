@@ -54,7 +54,7 @@ noindex: false
 *CometLakeS* の具体的な製品名は、*Z490 /H470* 、まだ Intel のサイトには掲載されていないが *Q470 /W480* 、そして意外なことに *B460* となっている。  
 
  > For all other Intel® 400 Series Chipsets, use CometLakeS. For the Intel® B460 Chipset use CometLakeS.
-
+ >
  > 引用元:<cite>[FSP/README.md at 8af76d732b006acceaaee184b597a46f39ec15e3 · IntelFsp/FSP](https://github.com/Intel/FSP/blob/8af76d732b006acceaaee184b597a46f39ec15e3/CometLakeFspBinPkg/README.md)</cite>
 
 意外だと感じたのは、[Coreboot](https://github.com/coreboo)のPCI IDリストに *Comet Lake PCH* の中で *H410* と *B460* が無く、  
