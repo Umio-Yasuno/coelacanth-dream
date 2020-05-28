@@ -32,7 +32,7 @@ noindex: false
  >		case 0x8:	/* Zen+ */
  >		case 0x11:	/* Zen APU */
  >		case 0x18:	/* Zen+ APU */
-
+ >
  > 引用元: <cite><https://github.com/torvalds/linux/blob/b02c6857389da66b09e447103bdb247ccd182456/drivers/hwmon/k10temp.c#L587></cite>
 
 これに従えば、`"0x18"` は *Zen+ APU* 、[Picasso](/tags/picasso)となるが、  
