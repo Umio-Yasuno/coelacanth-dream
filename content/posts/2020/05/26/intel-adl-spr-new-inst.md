@@ -13,7 +13,7 @@ Intel の次世代プロセッサ、[Alder Lake](/tags/alder_lake)、[Sapphire R
 
 ## AVX2 VNNI
 VNNI(Vector Neural Network Instructions) というと、*Cascade Lake* 、*Cooper Lake* 、 *Ice Lake (client/server)* 、*Tiger Lake* がサポートする `AVX512 VNNI`命令 が思い浮かぶが、  
-`AVX2 VNNI`命令は、既存のそれとは異なる feature bit を追加するとしている。  
+`AVX2 VNNI`命令は、既存のそれとは異なる feature bit を追加する(=また別の命令)としている。  
 {{< link >}}[Bug #1879836 “[ADL]Add CPUID feature bit for AVX2 VNNI” : Bugs : intel](https://bugs.launchpad.net/intel/+bug/1879836){{< /link >}}
 {{< link >}}[Bug #1880162 “[EGS] Add CPUID feature bit for AVX2 VNNI” : Bugs : intel](https://bugs.launchpad.net/intel/+bug/1880162){{< /link >}}
 
