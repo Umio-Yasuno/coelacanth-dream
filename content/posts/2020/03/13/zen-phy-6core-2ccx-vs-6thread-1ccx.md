@@ -29,6 +29,7 @@ lps (Lines Per Second)は1秒あたりの実行回数を表す。
 ### CPU
 まず、Ryzen 5 2600のトポロジは以下のようになっている。  
 {{< figure src="/image/2020/03/13/r5-2600-topo.webp" title="Ryzen 5 2600 トポロジ" caption="lstopo の実行結果" >}}  
+
 L3キャッシュ 8MBに 3-Core/6-Thread が付く形となり、それがZenアーキテクチャにおけるCCXを構成している。  
 Zen/+は本来ならCCXあたり4-Core/8-Threadを構成しているが、Ryzen 5 2600では2CCXそれぞれのCPUコアを1個ずつ無効化し、製品としている。  
 

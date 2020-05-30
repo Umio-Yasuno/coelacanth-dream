@@ -31,6 +31,7 @@ noindex: false
 
 ## Polaris11
 {{< figure src="/image/2020/03/30/polaris11-dieshot.webp" title="Polaris11 推測" caption="ダイサイズ: 129.40mm<sup>2</sup><br>画像出典: [AMD@14nm@GCN\_4th\_gen@Polaris\_11@Radeon\_RX\_460@1628\_NAA2Y.1… | Flickr](https://www.flickr.com/photos/130561288@N04/42217737082)" >}}
+
 129.40mm<sup>2</sup>と小型なダイだけあって、内部はより入り組んだ印象を受けた。  
 
 [GPUOpen-Drivers/pal: Platform Abstraction Library](https://github.com/GPUOpen-Drivers/pal)からの情報では[^2]、
@@ -50,6 +51,7 @@ noindex: false
 
 ## Polaris10とPolaris11の比較
 {{< figure src="/image/2020/03/30/compare-polaris10-polaris11.webp" title="L : Polaris10 / R : Polaris11" caption="Process: GF 14nm / GF 14nm<br>DieSize: 243.78mm<sup>2</sup> / 129.40mm<sup>2</sup><br>画像出典:[AMD@14nm@GCN\_4th\_gen@Polaris\_10@Radeon\_RX\_470@1622\_M60J5.0… | Flickr](https://www.flickr.com/photos/130561288@N04/43550225514)<br>,[AMD@14nm@GCN\_4th\_gen@Polaris\_11@Radeon\_RX\_460@1628\_NAA2Y.1… | Flickr](https://www.flickr.com/photos/130561288@N04/42217737082)" >}}
+
 同プロセスで製造されているのだから、当然各ユニットのサイズもほぼ変わらず。  
 特筆することと言えば、L1 I$/K$を共有するCU数が Polaris10: 3基、Polaris11: 4基と違うことから、微妙に配置を変えていたことだろうか。高さは変わっておらず、内部だけの変更で対応していた。  
 ただそれは、3CU分に詰め込められるものを4CU分に引き伸ばしているとも取れ、そういった点でもGCNアーキテクチャには無駄があったと言える。  

@@ -2,7 +2,7 @@
 title: "Vega10/Vega20のダイ観察 & 推測"
 date: 2020-03-24T20:57:11+09:00
 draft: false
-tags: [ "Radeon", "Vega10", "Vega20", "DieShot", "gfx900", "gfx906" ]
+tags: [ "Radeon", "Vega10", "Vega20", "DieShot", "gfx900", "gfx906", "DieShot" ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
@@ -12,6 +12,7 @@ noindex: false
 
 ## Vega10
 {{< figure src="/image/2020/03/24/vega10-dieshot-guess.webp" title="Vega10 推測" caption="ダイサイズ: 509.73mm<sup>2</sup><br>画像出典: [AMD@14nm@GCN\_5th\_gen@Vega10@Radeon\_RX\_Vega\_64@ES-Sample@\_\_… | Flickr](https://www.flickr.com/photos/130561288@N04/40482186211/)" >}}
+
 元画像は色付きであり、そのままだと字が非常に読みにくくなるため画像に補正を掛けた。それでもまだぼやけて分かりにくい所があるが。  
 
 [GPUOpen-Drivers/pal: Platform Abstraction Library](https://github.com/GPUOpen-Drivers/pal)からの情報では[^1]、
@@ -44,6 +45,7 @@ AMD GCNアーキテクチャでは、最大4CUで I$(Instruction Cache) 32KB と
 
 ## Vega20
 {{< figure src="/image/2020/03/24/vega20-dieshot-guess.webp" title="Vega20 推測" caption="ダイサイズ: 330.93mm<sup>2</sup><br>画像出典: [AMD@7nm@GCN\_5th\_gen@Vega20@Radeon\_VII@\_-\_@\_\_\_DSCx2\_polysil… | Flickr](https://www.flickr.com/photos/130561288@N04/48243282516/)" >}}
+
 [GPUOpen-Drivers/pal: Platform Abstraction Library](https://github.com/GPUOpen-Drivers/pal)からの情報では *Vega10* と特に変わらず、[^3]
 
 [^3]: <https://github.com/GPUOpen-Drivers/pal/blob/e642f608a62887d40d1f25509d2951a4a3576985/src/core/os/nullDevice/ndDevice.cpp#L871>
