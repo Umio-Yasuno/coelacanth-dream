@@ -18,11 +18,6 @@ noindex: false
 
 <div style="clear:left"></div>
 
-## 寄付 {#donate}
-欲しいPCパーツを買って予算がびみょうに余り、その上で気が向いたらお願いします。
-
- * [Liberapay を使って Umio-Yasuno に寄付する](https://liberapay.com/Umio-Yasuno/donate)  
-
 <address>
 
 連絡先:  

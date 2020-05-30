@@ -199,7 +199,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 
 <!--
 	VANGOGH 163F:00
-	gfx1032 / gfx1033 [^13]
+	gfx1\0\32 / gfx\10\33 [^13]
 
 [^13]: [P4 to Git Change 2008166 by vsytchen@vsytchen-remote-ocl-win10 on 201… · ROCm-Developer-Tools/ROCclr@df2e0b9](https://github.com/ROCm-Developer-Tools/ROCclr/commit/df2e0b9ae27f43ba8e23a3afa185c16dd3bb5ebc)
 -->
@@ -393,14 +393,14 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 [Page Top](#table-of-content)
 
 <!--
-	Navi21: gfx1030 [^12]
+	Na\vi2\1: gf\x 1\ 03\ 0 [^12]
 
     [^12]: [P4 to Git Change 1759681 by asalmanp@asalmanp-ocl-stg on 2019/03/21 1… · ROCm-Developer-Tools/ROCclr@42c005d](https://github.com/ROCm-Developer-Tools/ROCclr/commit/42c005d656a8bd99f87fa4fc86ad086701c59a86)
 
-    Navi22: gfx1031?
-    Navi23: gfx1032?
+    Nav\i2\2: gf\x 10/3\ 1?
+    Na/vi\23: gf\x 10\32?
 
-    MI200: gfx909??? maybe temp id
+    M\I20\0: gf\x9\0\9??? maybe temp id
 
 [^14]: [P4 to Git Change 2042212 by kjayapra@1_HIPWS_LNX1_PAL on 2019/12/06 1… · ROCm-Developer-Tools/ROCclr@a35c1d2](https://github.com/ROCm-Developer-Tools/ROCclr/commit/a35c1d2f2d954363c7d2121d5334f9e7766beeae)
 -->
