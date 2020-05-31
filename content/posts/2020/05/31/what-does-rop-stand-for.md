@@ -9,11 +9,11 @@ noindex: false
 ---
 
 GPU のグラフィック性能を推し量る際の指標として用いられる *ROP* 。  
-それが何の略称かはあんまり気にされなかったりする。  
+その役割はともかく、何の略称かはあんまり気にされなかったりする。  
 
 ## ROP の役割
 *ROP* は GPU のレンダリングパイプライン最終段に位置し、結果をピクセルに対応させ、メモリ(フレームバッファ) に書き出す役割を持つ。  
-*AMD GCNアーキテクチャ GPU* では効率を良くするために ROP 相当のユニットを L2cache経由でメモリコントローラにアクセス、書き出しを行なっていた。  
+*AMD GCNアーキテクチャ GPU* では効率を良くするために ROP 相当のユニットを L2cache経由でメモリコントローラにアクセス、書き出しを行なう。  
 *NVIDIA GPU* も似た構成を取っている。  
 
 この構成によって、製品の差別化のため搭載メモリチップ数を減らす(=一部メモリコントローラを無効化)と、合わせて L2cache、ROP も一部無効化される。  
@@ -46,17 +46,19 @@ Raster から離れたのは、ROP とは別に *Raster Unit* 、*Raster Engine*
 
 そして、今日では ROP は記号と化している。  
 [NVIDIA-Turing-Architecture-Whitepaper.pdf](https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/technologies/turing-architecture/NVIDIA-Turing-Architecture-Whitepaper.pdf) を見ても、わざわざ ROP が何の略かは説明していない。  
-これは AMD もそうだ。それに AMD GPU は、ROP 4基相当の RB(Render Backend)を単位としているため、公式のスペックで ROP数を出すのは競合との比較という意義があるのではないかと思う。  
+2015年時点でも、*Render Output Unit* としているのに、ROP Unit と書いていたりと、既に記号化が進んでいた。  
+これは AMD もそうで、そも *AMD GPU* は ROP 4基相当の RB(Render Backend)を単位としているのに、  
+公式のスペックで ROP数を出すのは、競合との比較のためという意味合いがあるのではないかと思う。  
 
 Intel はどうなのかというと、Slice Common が ROP としての機能を含んでおり、その中で結果をメモリ出力するユニットを PBE(Picel Backend) と呼んでいる。[^7]  
-わかりやすさを重視してか、NVIDIA、AMDも ROP を *Pixel Engine* 、*Pixel Unit* とした資料もある。[^8][^9]  
+わかりやすさを重視してか、NVIDIA、AMDも ROP を *Pixel Engine* 、*Pixel Unit* とする資料もある。[^8][^9]  
 
 [^7]: [the-architecture-of-intel-processor-graphics-gen11-r1new.pdf](https://software.intel.com/content/dam/develop/public/us/en/documents/the-architecture-of-intel-processor-graphics-gen11-r1new.pdf#page=17)
 [^8]:[ Windowing System on a 3D Pipeline - Windowing_System_on_a_3D_Pipeline_Slides.pdf](http://developer.download.nvidia.com/assets/gamedev/docs/Windowing_System_on_a_3D_Pipeline_Slides.pdf)
 [^9]: [M&E GBGH - HC29.21.120-Radeon-Vega10-Mantor-AMD-f1.pdf](https://www.hotchips.org/wp-content/uploads/hc_archives/hc29/HC29.21-Monday-Pub/HC29.21.10-GPU-Gaming-Pub/HC29.21.120-Radeon-Vega10-Mantor-AMD-f1.pdf)
 
-一般的に見てもその方がわかりやすいと個人的には思うが、今後 Intel が本格的に ハイパフォーマンスGPU へ進出すれば、  
-その時は競合 NVIDIA、AMD を意識し、記号として ROP を使い始めるかもしれない。  
+個人的にもその方がまだ直感的にわかりやすいと思うが、今後 Intel が本格的に ハイパフォーマンスGPU へ進出すれば、  
+その時は競合 NVIDIA、AMD を意識し、Intel もまた記号として ROP を使い始めるかもしれない。  
 
 {{< ref >}}
 

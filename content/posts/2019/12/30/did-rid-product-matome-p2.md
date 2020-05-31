@@ -24,8 +24,9 @@ categories: [ "Hardware", "AMD", "GPU" ]
 	* [Navi10](#navi10-gfx1010)
 	* [Navi14](#navi14-gfx1012)
 	* [Navi12](#navi12-gfx1011)
+ * [参考リンク](#ref-title)
 
-[参考リンク](#ref-title)
+<p></p>
 
 ## APU {#apu}
 <!-- FAMILY_RV -->
@@ -40,7 +41,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | 86 |  | (Embedded 65W AM4)
 | | 87 |  | (Embedded 65W AM4)
 | | 88 |  | (Embedded 65W AM4 Vega 8)
-|  | C1 | 2800H? | (45W FP5 Vega 11) |
+| | C1 | 2800H? | (45W FP5 Vega 11) |
 | | C2 | 2600H? | (45W FP5 Vega 8) |
 | | C3 | 2700U | (15W FP5 Vega 10) |
 | | C4 | 2500U | (15W FP5 Vega 8) |
@@ -64,6 +65,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | D8 | | (35W AM4 Vega 3) |
 | | D9 | | (15W FP5 Vega 6) |
 | | ? | V1404I | (15W FP5 Vega 8) |
+
 [Page Top](#table-of-content)
 
 ### Picasso ( gfx902 ) {#picasso-gfx902}
@@ -99,6 +101,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | E1 | 3780U | Winston (Surface Edition Vega 11) |
 | | E2 | 3580U | Winston (Surface Edition Vega 8) |
 | | ? | 300UGE | (65W AM4 Vega 3) |
+
 [Page Top](#table-of-content)
 
 ### Raven2 ( gfx909 ) {#raven2-gfx909}
