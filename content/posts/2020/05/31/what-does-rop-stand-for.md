@@ -34,7 +34,7 @@ NVIDIA の各資料から見るに、2004年時点では *Raster Operation* [^1]
 2007年の NVIDIA Teslaブランドの立ち上げ後[^4]に、2008年の HotChips19 に合わせて発表したと思われる資料では *Raster Operation Processor* の略としており、[^5]  
 この影響か、その後も一部メディアや GPUコンピューティング関連の資料では *Raster Operation Processor* が使われている。  
 しかし、NVIDIA が ROP をその略称としたのはそれきりである。  
-単に見落としてるかもしれないが、少なくとも、検索エンジンを駆使し、資料を漁ったが他に見つからなかった。  
+単に見落としてるかもしれないが、少なくとも検索エンジンを駆使し、資料を漁った限りでは他に見つからなかった。  
 
 [^4]: [NVIDIA、G80ベースのHPC向けGPU「Tesla」](https://pc.watch.impress.co.jp/docs/2007/0621/nvidia.htm)
 [^5]: [micr-28-02-lind 39..55 - gpu.pdf](https://people.cs.umass.edu/~emery/classes/cmpsci691st/readings/Arch/gpu.pdf)
@@ -51,7 +51,7 @@ Raster から離れたのは、ROP とは別に *Raster Unit* 、*Raster Engine*
 公式のスペックで ROP数を出すのは、競合との比較のためという意味合いがあるのではないかと思う。  
 
 Intel はどうなのかというと、Slice Common が ROP としての機能を含んでおり、その中で結果をメモリ出力するユニットを PBE(Picel Backend) と呼んでいる。[^7]  
-わかりやすさを重視してか、NVIDIA、AMDも ROP を *Pixel Engine* 、*Pixel Unit* とする資料もある。[^8][^9]  
+関連して、わかりやすさを重視してか、NVIDIA、AMDも ROP を *Pixel Engine* 、*Pixel Unit* としている資料もある。[^8][^9]  
 
 [^7]: [the-architecture-of-intel-processor-graphics-gen11-r1new.pdf](https://software.intel.com/content/dam/develop/public/us/en/documents/the-architecture-of-intel-processor-graphics-gen11-r1new.pdf#page=17)
 [^8]:[ Windowing System on a 3D Pipeline - Windowing_System_on_a_3D_Pipeline_Slides.pdf](http://developer.download.nvidia.com/assets/gamedev/docs/Windowing_System_on_a_3D_Pipeline_Slides.pdf)
