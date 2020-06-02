@@ -7,6 +7,8 @@ keywords: [ "Radeon", "AMDGPU" , "Device ID", "Revision ID", "Product Name" ]
 categories: [ "Hardware", "AMD", "GPU" ]
 ---
 
+<p></p>
+
 ## Table of Content
 
  * [APU](#apu)
@@ -28,8 +30,6 @@ categories: [ "Hardware", "AMD", "GPU" ]
       * [Navi14](#navi14-gfx1012)
       * [Navi12](#navi12-gfx1011)
  * [参考リンク](#ref-title)
-
-<p></p>
 
 ## APU {#apu}
 ### FAMILY_RV {#family_rv}
@@ -117,6 +117,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | C4 | 3200U | (FP5 15W Vega 3), == 3250C? |
 | | C5 | 300U | (Vega 3) |
 | | CC | 3000G | (AM4 Vega 3) |
+
 [Page Top](#table-of-content)
 
 [^10]: [Core i7並みのRyzen搭載で、4万円台＆片手サイズ⁉ 〝Ryzen Embedded”搭載の超小型PCベアボーン「4×4 BOX」が超お得 (3/3) | AMD HEROES](https://amd-heroes.jp/article/2020/03/0364/3/)
@@ -132,6 +133,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | DF[^9] | | |
 | | E3 | | (6W[^8] Vega 3) |
 | | E4 | R1102G[^11] | (6W[^8] Vega 3) |
+
 [Page Top](#table-of-content)
 
 [^7]: [2040455: Rework map_oprom_vendev to add revision check and mapping —   Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2040455/3/src/soc/amd/picasso/northbridge.c#332)
@@ -139,7 +141,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 [^9]: [[PATCH 28/35] drm/amd/display: Fix RV2 Variant Detection](https://lists.freedesktop.org/archives/amd-gfx/2020-February/046322.html)
 [^11]: amdgpu.ids [R-Series R1000 with Radeon™ Vega Graphics Drivers & Support | AMD](https://www.amd.com/en/support/embedded/amd-ryzen-embedded-r-series-processors/r-series-r1000-radeon-vega-graphics)
 
-#### Pollock ( gfx909 ) {#pollock-gfx909}
+##### Pollock ( gfx909 ) {#pollock-gfx909}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 15D8 &darr; | 94 | | |
@@ -147,6 +149,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | E9 | | (Samples FT5)[^7] |
 | | EA | | (Production FT5)[^7] |
 | | EB | | |
+
 [Page Top](#table-of-content)
 
  > Source:<cite>
