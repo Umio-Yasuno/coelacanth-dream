@@ -21,7 +21,7 @@ VRAMには Navi1x から続いて GDDR6 を採用すると見られる。[^11]
 
 [^11]: [[PATCH 095/207] drm/amdgpu: add vram_info v2_5 in atomfirmware header](https://lists.freedesktop.org/archives/amd-gfx/2020-June/050059.html)
 
-### インデックス
+## インデックス
 
    * [GFX](#gfx)
    * [SDMA](#sdma)
