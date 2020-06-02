@@ -4,7 +4,7 @@ title: "ACO"
 # draft: true
 tags: [ "Radeon", "GCN", "RDNA" ]
 keywords: [ "", ]
-# categories: [ "", ]
+categories: [ "Software", "AMD", "GPU" ]
 noindex: false
 ---
 

@@ -4,7 +4,7 @@ title: "Dali"
 # draft: true
 tags: [ "Raven2", "Pollock", "gfx909" ]
 keywords: [ "", ]
-# categories: [ "", ]
+categories: [ "Hardware", "AMD", "APU" ]
 noindex: false
 ---
 

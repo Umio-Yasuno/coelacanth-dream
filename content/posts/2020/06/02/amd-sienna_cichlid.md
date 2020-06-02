@@ -17,6 +17,17 @@ gfx103x となる [RDNA 2](/tags/rdna_2) GPU に関連すると見られる。
 
 [^3]: [[PATCH 316/459] drm/amd/display: Add DCN2 and NV ASIC ID](https://lists.freedesktop.org/archives/amd-gfx/2019-June/035497.html)
 
+VRAMには Navi1x から続いて GDDR6 を採用すると見られる。[^11]  
+
+[^11]: [[PATCH 095/207] drm/amdgpu: add vram_info v2_5 in atomfirmware header](https://lists.freedesktop.org/archives/amd-gfx/2020-June/050059.html)
+
+### インデックス
+
+   * [GFX](#gfx)
+   * [SDMA](#sdma)
+   * [VCN 3.0](#vcn3)
+   * [DCN 3](#dcn3)
+   * [余談](#aside)
 
 ## GFX
 Navi1x では無効化されていた 3D pipe、Async ring が *Sienna Cichlid* ではサポートされている。[^8]  
@@ -30,10 +41,10 @@ Navi1x で無効化したのはユースケースがないため、という理�
 [^9]: <https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/amdgpu/gfx_v10_0.c?h=amd-staging-drm-next&id=f091c1c70e89adca93c4f4f35dfa0abf90611453>
 
 ## SDMA
-*Sienna Cichlid* は SDMAコントローラを 4基持ち、これは従来の一般向けGPUの倍の数だ。[^5](HPC向けの *Arcturus* は 8基)  
+*Sienna Cichlid* は SDMAコントローラを 4基持ち、これは従来の一般向けGPUの倍の数だ。[^5]\(HPC向けの *Arcturus* は 8基)  
 コントローラあたりのキュー数が減らされていないため、純粋に倍となる。[^7]  
 増やした意図ははっきりせず、*Arctturus* のように XGMI/マルチGPU に最適化された SDMAコントローラという訳でもないようだ。  
-追加された `atom_smc_dpm_info_v4_9` には XGMIに関するコードがあるが、*Arcturus* の v4_6 と同一であり、ハードウェアが実際にサポートしているかは定かでない。  
+追加された `atom_smc_dpm_info_v4_9` には XGMIに関するコードがあるが、*Arcturus* の v4_6 と同一であることから流用したものと思われ、*Sienna Cichlid* が実際にサポートしているかは定かでない。  
 
 また、これまでは SDMAコントローラそれぞれのファームウェアイメージが用意され、それぞれロードするという形だったが、この部分が改良され、1つのファームウェアイメージを共有するようになった。  
 *Arcturus* は末尾の番号が違う 8つのファームウェアイメージを用意することになったため、さすがに面倒、冗長だと感じたのだろうか。  
@@ -42,7 +53,7 @@ Navi1x で無効化したのはユースケースがないため、という理�
 [^6]: [[PATCH 049/207] drm/amdgpu: update SDMA 5.2 microcode init](https://lists.freedesktop.org/archives/amd-gfx/2020-June/050013.html)
 [^7]: [[PATCH 116/207] drm/amdkfd: Support Sienna_Cichlid KFD v4](https://lists.freedesktop.org/archives/amd-gfx/2020-June/050080.html)
 
-## VCN 3.0
+## VCN 3.0 {#vcn3}
 動画のデコード/エンコードを担当するマルチメディア部の VCN も更新されている。  
 *Sienna Cichlid* は 2つの VCN3インスタンスを持つが、それらは非対称であり、片方がデコードのみ、もう片方がエンコードのみを担当する。[^1]  
 
@@ -57,8 +68,14 @@ VCN3 ではデコード担当とエンコード担当がはっきり分かれる
 DCN も更新され、DCN3 となった。  
 どういった新機能があるかはまだ不明。(読み取れていない)  
 
-一応、リソースから最大6画面出力ということは読み取れる。[^10]
+一応、リソースから最大6画面出力ということは読み取れる。[^10]一般向けでミドル帯以上のGPUとして普通の規模だろう。  
 
 [^10]: [[PATCH 197/207] drm/amd/display: Add DCN3 Resource](https://lists.freedesktop.org/archives/amd-gfx/2020-June/050165.html)
 
+## 余談 {#aside}
+最後に余談を。  
 *Arcturus* ではそのコードネームの長さから略称が安定しない印象があるが、*Sienna Cichlid* はどうなるのか。  
+それと、コードネームの *Cichlid (シクリッド)* は調べるまで知らなかったが、カワスズメ科の硬骨魚の総称らしい。  
+分布は主にアフリカと中南米、一部が熱帯アジアであり、観賞用、食用とされている。  
+*Sienna (シエナ)* には黄褐色または赤褐色の意味があり、イタリア中部の都市 Siena(シエーナ) が由来らしい。  
+AMD が EPYC CPU のコードネームにイタリアの都市を用いていたことを考えると、*Sienna Cichlid* が突拍子もないコードネームという感じはしない。  

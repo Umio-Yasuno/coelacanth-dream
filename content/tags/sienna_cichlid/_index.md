@@ -1,10 +1,10 @@
 ---
-title: "Alder Lake"
+title: "Sienna Cichlid"
 # date: 2020-01-25T23:01:37+09:00
 # draft: true
-# tags: [ "" ]
+tags: [ "Radeon", "RDNA_2", "Navi21" ]
 keywords: [ "", ]
-categories: [ "Hardware", "Intel", "CPU" ]
+# categories: [ "", ]
 noindex: false
 ---
 

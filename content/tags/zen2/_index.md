@@ -4,7 +4,7 @@ title: "Zen 2"
 # draft: true
 # tags: [ "", ]
 keywords: [ "", ]
-# categories: [ "", ]
+categories: [ "Hardware", "CPU", "AMD" ]
 noindex: false
 ---
 

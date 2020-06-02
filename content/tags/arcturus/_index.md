@@ -4,7 +4,7 @@ title: "Arcturus"
 # draft: true
 tags: [ "gfx908", "CDNA" ]
 keywords: [ "", ]
-# categories: [ "", ]
+categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
 ---
 
