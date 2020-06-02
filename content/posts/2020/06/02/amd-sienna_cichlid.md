@@ -19,6 +19,42 @@ gfx103x となる [RDNA 2](/tags/rdna_2) GPU に関連すると見られる。
 
 VRAMには Navi1x から続いて GDDR6 を採用すると見られる。[^11]  
 
+{{< ins >}}
+
+[Guru3D](https://www.guru3d.com) は *Sienna Cichlid* が VRAMバス幅 128-bit なんて書いているが、  
+{{< link >}}[AMD Sienna Cichlid spotted in Linux Kernel patches, Big Navi?](https://www.guru3d.com/news-story/amd-sienna-cichlid-spotted-in-linux-kernel-patchesbig-navi.html){{< /link >}}
+その根拠としている部分を見ると、まず判定部分に `amdgpu_emu_mode == 1` があることからエミュレータで実行している場合を対象としていることがわかる。  
+{{< link >}}[drm/amdgpu AMDgpu driver — The Linux Kernel documentation](https://www.kernel.org/doc/html/latest/gpu/amdgpu.html){{< /link >}}
+
+```
+
+-	if (!amdgpu_emu_mode)
+-		adev->gmc.vram_width = vram_width;
+-	else
++	if (adev->asic_type == CHIP_SIENNA_CICHLID && amdgpu_emu_mode == 1) {
++		adev->gmc.vram_type = AMDGPU_VRAM_TYPE_GDDR6;
+ 		adev->gmc.vram_width = 1 * 128; /* numchan * chansize */
++	} else {
++		r = amdgpu_atomfirmware_get_vram_info(adev,
++				&vram_width, &vram_type, &vram_vendor);
++		adev->gmc.vram_width = vram_width;
++
++		adev->gmc.vram_type = vram_type;
++		adev->gmc.vram_vendor = vram_vendor;
++	}
+
+```
+引用元: <cite>[[PATCH 017/207] drm/amdgpu: add gmc ip block for sienna_cichlid](https://lists.freedesktop.org/archives/amd-gfx/2020-June/049981.html)</cite>
+
+128-bit の根拠としている行に + マークが付いていないことから、追加されたコードではなく元々あったものだということもわかる。  
+そして、 - マークの付いている部分を見るに、元々 Navi1x系をエミュレータで実行した時は VRAM 128-bit としていたらしい。  
+
+だから *Sienna Cichlid* が VRAM 128-bit だという根拠にはなり得ない。  
+
+本来なら影響力のあるメディアや個人が指摘すべきなんだろうけど、嘘と誤解ばかりで真実がどこにも無いよりはマシなはず。  
+
+{{< /ins >}}
+
 [^11]: [[PATCH 095/207] drm/amdgpu: add vram_info v2_5 in atomfirmware header](https://lists.freedesktop.org/archives/amd-gfx/2020-June/050059.html)
 
 ## インデックス
