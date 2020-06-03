@@ -2,7 +2,7 @@
 title: "姿くらます未確認Navi"
 date: 2019-11-07T19:38:47+09:00
 draft: false
-tags: [ "Radeon", "RDNA", "Navi", "Navi22", "Navi23", "GFX10" ]
+tags: [ "Radeon", "RDNA", "Navi22", "Navi23", "GFX10" ]
 categories: [ "Hardware", "AMD", "GPU" ]
 ---
 

@@ -2,7 +2,7 @@
 title: "AMD、RX 5600シリーズ、RX 5700Mを発表"
 date: 2020-01-07T09:53:25+09:00
 draft: false
-tags: [ "Radeon", "RDNA", "Navi", "Navi10", "GFX10", "gfx1010" ]
+tags: [ "Radeon", "RDNA", "Navi10", "GFX10", "gfx1010" ]
 keywords: [ "Radeon", "Navi10", "Radeon RX 5600" ]
 categories: [ "Hardware", "AMD", "GPU" ]
 ---

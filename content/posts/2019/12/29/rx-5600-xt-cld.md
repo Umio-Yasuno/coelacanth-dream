@@ -2,7 +2,7 @@
 title: "RX 5600 XTのスペックが判明?"
 date: 2019-12-29T18:43:00+09:00
 draft: false
-tags: [ "Radeon", "RDNA", "Navi", "Navi10", "GFX10", "gfx1010" ]
+tags: [ "Radeon", "RDNA", "Navi10", "GFX10", "gfx1010" ]
 keywords: [ "Radeon", "Navi10", "RX 5600" ]
 categories: [ "Hardware", "AMD", "GPU" ]
 ---

@@ -2,7 +2,7 @@
 title: "ROCmのコードにMI100、Arielが追加される"
 date: 2019-12-20T07:19:56+09:00
 draft: false
-tags: [ "Radeon", "GCN", "RDNA", "Arcturus", "Navi", "Navi10", "GFX9", "GFX10", "gfx908", "gfx1010", ]
+tags: [ "Radeon", "GCN", "RDNA", "Arcturus", "Navi10", "GFX9", "GFX10", "gfx908", "gfx1010", ]
 keywords: [ "Radeon", "Navi10", "Arcturus" ]
 categories: [ "Hardware", "AMD", "GPU" ]
 ---

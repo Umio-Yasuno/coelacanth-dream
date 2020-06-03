@@ -2,7 +2,7 @@
 title: "Radeon RX 5500 XT発表！ & 国内は18日から発売開始"
 date: 2019-12-13T05:18:40+09:00
 draft: false
-tags: [ "Radeon", "RDNA", "Navi", "Navi14", "GFX10", "gfx1012" ]
+tags: [ "Radeon", "RDNA", "Navi14", "GFX10", "gfx1012" ]
 keywords: [ "Radeon", "Navi14" ]
 categories: [ "Hardware", "AMD", "GPU" ]
 ---

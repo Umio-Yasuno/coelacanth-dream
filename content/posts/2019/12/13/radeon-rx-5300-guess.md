@@ -2,7 +2,7 @@
 title: "RX 5300のスペック推測"
 date: 2019-12-13T13:49:50+09:00
 draft: false
-tags: [ "Radeon", "RDNA", "Navi", "Navi14", "GFX10", "gfx1012" ]
+tags: [ "Radeon", "RDNA", "Navi14", "GFX10", "gfx1012" ]
 keywords: [ "Radeon", "Navi14" ]
 categories: [ "Hardware", "AMD", "GPU" ]
 ---

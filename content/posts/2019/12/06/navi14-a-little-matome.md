@@ -2,7 +2,7 @@
 title: "Navi14のちょっとしたまとめ"
 date: 2019-12-06T07:08:54+09:00
 draft: false
-tags: [ "Radeon", "RDNA", "Navi", "Navi14", "GFX10", "gfx1012" ]
+tags: [ "Radeon", "RDNA", "Navi14", "GFX10", "gfx1012" ]
 keywords: [ "Radeon", "Navi14" ]
 categories: [ "Hardware", "AMD", "GPU" ]
 ---

@@ -2,7 +2,7 @@
 title: "混沌とするミッドレンジGPUの価格"
 date: 2020-01-18T11:11:09+09:00
 draft: false
-tags: [ "Radeon", "RDNA", "Navi", "Navi10", "GFX10", "gfx1010" ]
+tags: [ "Radeon", "RDNA", "Navi10", "GFX10", "gfx1010" ]
 keywords: [ "Radeon", "Navi10", "Radeon RX 5600" ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false

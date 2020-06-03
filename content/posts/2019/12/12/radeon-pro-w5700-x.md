@@ -2,7 +2,7 @@
 title: "Radeon Pro W5700Xが発表される"
 date: 2019-12-12T09:41:07+09:00
 draft: false
-tags: [ "Radeon", "RDNA", "Navi", "Navi10", "GFX10", "gfx1010" ]
+tags: [ "Radeon", "RDNA", "Navi10", "GFX10", "gfx1010" ]
 keywords: [ "Radeon", "Navi10", "Radeon Pro W5700" ]
 categories: [ "Hardware", "AMD", "GPU" ]
 ---

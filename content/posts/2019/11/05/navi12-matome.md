@@ -2,7 +2,7 @@
 title: "Navi12 Matome"
 date: 2019-11-05T15:30:17+09:00
 draft: false
-tags: [ "Radeon", "RDNA", "Navi", "Navi12", "GFX10", "gfx1011" ]
+tags: [ "Radeon", "RDNA", "Navi12", "GFX10", "gfx1011" ]
 keywords: [ "Radeon", "Navi12" ]
 categories: [ "Hardware", "AMD", "GPU" ]
 ---

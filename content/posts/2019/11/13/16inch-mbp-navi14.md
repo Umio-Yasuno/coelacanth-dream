@@ -2,7 +2,7 @@
 title: "Navi14を搭載した16-inch MacBook Proがいきなり発表"
 date: 2019-11-13T22:57:20+09:00
 draft: false
-tags: [ "Radeon", "RDNA", "Navi", "Navi14", "GFX10", "gfx1012" ]
+tags: [ "Radeon", "RDNA", "Navi14", "GFX10", "gfx1012" ]
 keywords: [ "Radeon", "Navi14", "MacBookPro" ]
 categories: [ "Hardware", "AMD", "GPU" ]
 ---

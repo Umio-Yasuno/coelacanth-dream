@@ -2,7 +2,7 @@
 title: "Radeon Pro W5700が発表"
 date: 2019-11-20T01:36:50+09:00
 draft: false
-tags: [ "Radeon", "RDNA", "Navi", "Navi10", "GFX10", "gfx1010" ]
+tags: [ "Radeon", "RDNA", "Navi10", "GFX10", "gfx1010" ]
 keywords: [ "Radeon", "Navi10", "Radeon Pro W5700" ]
 categories: [ "Hardware", "AMD", "GPU" ]
 ---
