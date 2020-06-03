@@ -85,6 +85,19 @@ noindex: false
 | ALU | Arithmetc Logic Unit | |
 | SPI | Shader Processor Interpolator | |
 | PRT | Partially Resident Textures | |
+| DIO | Display IO | DCN3 |
+| OPP | Output Plane Processing | DCN3 |
+| MPC | Multiple pipe and plane combine | DCN3 |
+| DPP | | DCN3 |
+| HUBBUB | | DCN memory HUB interface /DCN3 |
+| MMHUBBUB | | Multimedia HUB interface /DCN3 |
+| HUBP | | Display to data fabric interface /DCN3 |
+| DWB | Display Writeback | DCN3 |
+| DML | Display mode library | DCN3 |
+| AMFT | Audio formating | |
+| VPG | Video Package ganerator | |
+| SPL | Security patch level | |
+
 
 ## Other
 | Abbr | Full | memo |
