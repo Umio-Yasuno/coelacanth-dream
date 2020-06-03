@@ -2,7 +2,7 @@
 title: "Intel PCH Matome"
 date: 2019-12-02T01:32:23+09:00
 draft: false
-tags: [ "Intel", "PCH" ]
+tags: [ "PCH" ]
 keywords: [ "Intel", "PCH" ]
 categories: [ "Hardware", "Chipset", "Intel" ]
 ---

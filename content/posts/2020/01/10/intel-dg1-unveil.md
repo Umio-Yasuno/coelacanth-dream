@@ -2,7 +2,7 @@
 title: "Intelが開発者向けのPCIeカード型DG1を公開"
 date: 2020-01-10T10:11:56+09:00
 draft: false
-tags: [ "Intel", "Gen12", "DG1" ]
+tags: [ "Gen12", "DG1" ]
 keywords: [ "Intel", "Gen12", "DG1" ]
 categories: [ "Hardware", "GPU", "Intel" ]
 ---

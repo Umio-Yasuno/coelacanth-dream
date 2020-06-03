@@ -2,7 +2,7 @@
 title: "Intel GPU Matome (Gen10/11/12)"
 date: 2019-12-01T07:56:37+09:00
 draft: false
-tags: [ "Intel", "Gen10", "Gen11", "Gen12" ]
+tags: [ "Gen10", "Gen11", "Gen12" ]
 keywords: [ "Intel", "Gen10", "Gen11", "Gen12" ]
 categories: [ "Hardware", "GPU", "Intel" ]
 ---

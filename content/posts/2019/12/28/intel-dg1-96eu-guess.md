@@ -2,8 +2,8 @@
 title: "Intel DG1は96EU構成? & 推測"
 date: 2019-12-28T10:01:20+09:00
 draft: false
-tags: [ "Intel", "Gen11", "Gen12", "DG1" ]
-keywords: [ "Intel", "Gen11", "Gen12", "DG1" ]
+tags: [ "Gen11", "Gen12", "DG1" ]
+# keywords: [ "Intel", "Gen11", "Gen12", "DG1" ]
 categories: [ "Hardware", "GPU", "Intel" ]
 ---
 

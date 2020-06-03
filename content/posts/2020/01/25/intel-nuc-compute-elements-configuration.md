@@ -2,9 +2,9 @@
 title: "Intel NUC Compute Elementsの軽い解説とまとめ"
 date: 2020-01-25T03:13:41+09:00
 draft: false
-tags: [ "Intel" ]
+# tags: [ "Intel" ]
 keywords: [ "", ]
-categories: [ "Hardware", "CPU" ]
+categories: [ "Hardware", "Intel" ]
 noindex: false
 ---
 

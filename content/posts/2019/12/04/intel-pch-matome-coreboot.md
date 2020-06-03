@@ -2,7 +2,7 @@
 title: "Intel PCH Matome (Coreboot編)"
 date: 2019-12-04T00:19:21+09:00
 draft: false
-tags: [ "Intel", "PCH" ]
+tags: [ "PCH" ]
 keywords: [ "Intel", "PCH" ]
 categories: [ "Hardware", "Chipset", "Intel" ]
 ---
