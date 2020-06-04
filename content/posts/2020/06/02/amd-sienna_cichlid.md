@@ -81,14 +81,23 @@ Navi1x で無効化したのはユースケースがないため、という理�
 *Sienna Cichlid* は SDMAコントローラを 4基持ち、これは従来の一般向けGPUの倍の数だ。[^5]\(HPC向けの *Arcturus* は 8基)  
 コントローラあたりのキュー数が減らされていないため、純粋に倍となる。[^7]  
 増やした意図ははっきりせず、*Arctturus* のように XGMI/マルチGPU に最適化された SDMAコントローラという訳でもないようだ。  
-追加された `atom_smc_dpm_info_v4_9` には XGMIに関するコードがあるが、*Arcturus* の v4_6 と同一であることから流用したものと思われ、*Sienna Cichlid* が実際にサポートしているかは定かでない。  
+追加された `atom_smc_dpm_info_v4_9` には XGMIに関するコードがあるが[^6]、*Arcturus* の v4_6 と同一であることから流用したものと思われ、*Sienna Cichlid* が実際にサポートしているかは定かでない。[^11]  
+
+SMU(System Management Unit) のバージョンが *Sienna Cichlid* と *Arcturus* とで同じであるため、コードの流用は普通だ。  
+しかし、`arcturus_ppt.c` と `sienna_ciclid_ppt.c` を見比べると、(ppt = PPTable)  
+後者は `SMC_DPM_FEATURE` に `FEATURE_DPM_XGMI_MASK` が無い、message_map に SetXgmiMode が無いといった違いがある。[^12][^13]  
+そのため、やはり *Sienna Cichlid* が XGMI /Inifnity Fabric を介したマルチGPUをサポートするかは微妙、というのが現在の個人的姿勢だ。  
+
+[^12]: <https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/powerplay/arcturus_ppt.c?h=amd-staging-drm-next-sienna_cichlid&id=43349491dae7284a195abfa8ff9044f7a20222a2#n128>
+[^13]: <https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/powerplay/sienna_cichlid_ppt.c?h=amd-staging-drm-next-sienna_cichlid&id=f6f084fdbb462e29dbf7258a99730cdd5fc51093>
 
 また、これまでは SDMAコントローラそれぞれのファームウェアイメージが用意され、それぞれロードするという形だったが、この部分が改良され、1つのファームウェアイメージを共有するようになった。  
 *Arcturus* は末尾の番号が違う 8つのファームウェアイメージを用意することになったため、さすがに面倒、冗長だと感じたのだろうか。  
 
 [^5]: [[PATCH 021/207] drm/amdgpu: add sdma ip block for sienna_cichlid (v5)](https://lists.freedesktop.org/archives/amd-gfx/2020-June/049985.html)
-[^6]: [[PATCH 049/207] drm/amdgpu: update SDMA 5.2 microcode init](https://lists.freedesktop.org/archives/amd-gfx/2020-June/050013.html)
+[^6]: [[PATCH 155/207] drm/amd/powerplay: and smc dpm info struct for sienna_cichlid](https://lists.freedesktop.org/archives/amd-gfx/2020-June/050119.html)
 [^7]: [[PATCH 116/207] drm/amdkfd: Support Sienna_Cichlid KFD v4](https://lists.freedesktop.org/archives/amd-gfx/2020-June/050080.html)
+[^11]: <https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/include/atomfirmware.h?h=amd-staging-drm-next-sienna_cichlid&id=4c35e77865a9037c32b0354663d23c33b08ae188>
 
 ## VCN 3.0 {#vcn3}
 動画のデコード/エンコードを担当するマルチメディア部の VCN も更新されている。  
