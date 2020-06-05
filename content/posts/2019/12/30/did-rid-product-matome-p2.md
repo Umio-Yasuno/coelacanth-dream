@@ -12,7 +12,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 ## Table of Content
 
  * [APU](#apu)
-   * [FAMILY_RV](#family_rv)
+   * FAMILY_RV
       * [Raven](#raven-gfx902)
       * [Picasso](#picasso-gfx902)
       * [Raven2](#raven2-gfx909)
@@ -20,12 +20,13 @@ categories: [ "Hardware", "AMD", "GPU" ]
          * [Pollock](#pollock-gfx909)
       * [Renoir](#renoir-gfx909)
  * [Discrete GPU](#dgpu)
-   * [FAMILY_AI](#family_ai)
+   * FAMILY_AI
       * [Vega10](#vega10-gfx900)
       * [Vega12](#vega12-gfx904)
       * [Vega20](#vega20-gfx906)
+   * FAMILY_AR
       * [Arcturus](#arcturus-gfx908)
-   * [FAMILY_NV](#family_nv)
+   * FAMILY_NV
       * [Navi10](#navi10-gfx1010)
       * [Navi14](#navi14-gfx1012)
       * [Navi12](#navi12-gfx1011)

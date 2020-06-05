@@ -62,7 +62,13 @@ noindex: false
 | EOP | End Of Packet | |
 | SMU | System Manasgement Unit | |
 | PG | Powergating | |
+| RLC | Rear left Center? | |
+| PFP | Prefetch Parser | |
+| CE | Constant Engine | |
+| DE | Dispatch Engine | |
+| ME | Micro Engine | |
 | MES | Micro Engine Scheduler | GFX10? |
+| MEC | Micro Engine Compute? | |
 | PSP | Platform Security Processor | |
 | SDP | Scalable Data Port | |
 | PA | Primitive Assembly  | |
@@ -97,6 +103,7 @@ noindex: false
 | AMFT | Audio formating | |
 | VPG | Video Package ganerator | |
 | SPL | Security patch level | |
+
 
 
 ## Other
