@@ -2,7 +2,7 @@
 title: "AMD Sienna Cichlid をサポートするパッチが OpenGL、Vulkanドライバーに投稿される"
 date: 2020-06-09T04:29:37+09:00
 draft: false
-tags: [ "Sienna_Cichlid", "Navi21" ]
+tags: [ "Sienna_Cichlid", "Navi21", "RDNA_2", "GFX10" ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
@@ -34,8 +34,8 @@ AMDGPU向けのオープンソースなドライバー、RadeonSI(OpenGL)、RADV
 *AMD GCNアーキテクチャ* では SIMD16ユニットあたりに保持する実行中の Wave数(Wavefront)が 10エントリであり、CU全体では 40エントリとなっていた。  
 *AMD RDNAアーキテクチャ* でもそのバランスを保ち、SIMD32ユニットあたり 20エントリ、WGP(2CU)全体では 80エントリとなっていた。  
 それが *Sienna Cichlid* では SIMD32ユニットあたり 16エントリ、WGP(2CU)全体で 64エントリになることが今回のマージリクエストからわかる。  
-同時に実行可能な Wave(スレッド)数は減るが、保持した Wavefrontを順番に実行する方式であるため、スレッド性能は高まる。  
-AMD は *RDNA 2* ではさらにIPCが向上するとしていたが、そのための改良点の1つがこれなのかもしれない。  
+同時に実行可能な Wave(スレッド)数は減るが、保持した Wavefrontを順番に実行する方式であるため、同じ Wavefrontを実行するまでの間隔が小さくなり、スレッド性能は高まる。  
+{{< link >}}参考: <cite>[コンピュータアーキテクチャの話(365) GCNのブロックダイヤグラムを読む | マイナビニュース](https://news.mynavi.jp/article/architecture-365/)</cite>{{< /link >}}
 
 ちなみに、コードを見る限り *Polaris アーキテクチャ* も SIMD16ユニットあたり 8エントリ、CU全体で 32エントリとなっているらしく、過去にゲーミングGPUのため取り入れた改良点を再度取り入れたとも見られる。  
 

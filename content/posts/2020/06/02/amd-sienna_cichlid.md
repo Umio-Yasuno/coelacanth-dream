@@ -2,7 +2,7 @@
 title: "AMD の次世代GPU、Sienna Cichlid の Linux Kernelパッチが投稿される"
 date: 2020-06-02T15:39:35+09:00
 draft: false
-tags: [ "Navi21", "Sienna_Cichlid", "GFX10" ]
+tags: [ "Navi21", "Sienna_Cichlid", "GFX10", "RDNA_2" ]
 keywords: [ "", ]
 categories: [ "Hardware", "GPU", "AMD" ]
 noindex: false
