@@ -156,13 +156,15 @@ categories: [ "Hardware", "AMD", "GPU" ]
  > Source:<cite>
 [drm/amd/display: add Pollock IDs, fix Pollock & Dali clk mgr construct - amd-staging-drm-next](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/display/include/dal_asic_id.h?h=amd-staging-drm-next&id=04d8707ef5549065c10d5a2e20d2c61089807997)</cite>
 
-<!--
+#### ?
+
+| Device ID | Revision ID | Product Name | Memo |
+| :--- | :--- | :---: | :---: |
 | 15D9 &darr; | 91 | | **?** |
 | | 92 | | |
 | | C1 | | |
 | | C2 | | |
 | | C3 | | |
--->
 
 <!--
 #### FireFlight
@@ -171,7 +173,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | 15FF | 00 | Fenghuang (Zhongshan Subor Z+) | Radeon Vega 28 Mobile |
 -->
 
-## Renoir ( gfx909 ) {#renoir-gfx909}
+### Renoir ( gfx909 ) {#renoir-gfx909}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 1636 &darr; | 00 | | (BringUp FP6) |
