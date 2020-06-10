@@ -2,7 +2,7 @@
 title: "AMD、「PPR for AMD Family 17h Model 20h, Revision A1 Processors」 を公開"
 date: 2020-06-10T14:57:15+09:00
 draft: false
-tags: [ "Raven2", "Dali", "Pollock" ]
+tags: [ "Raven2", "Dali", "Pollock", "Zen" ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU" ]
 noindex: false
@@ -19,7 +19,10 @@ Model 20h-2Fh プロセッサ{{< comple >}}Dali /Pollock{{< /comple >}}は、第
 
 FT5ソケット/パッケージの一部概要も記されており、2-in-1 の小型のフォームファクター向けで、エネルギー効率を重視したクラスのパッケージとしている。  
 
-内部GPUの Device ID に、`0x15D8` 、`0x15DD`、そしてまだ使用が確認されていない `0x15D9` を使うとしており、今後さらなる低電力低コストな Zen APU の登場に期待が持てる。  
+内部GPUの Device ID に、`0x15D8` 、`0x15DD`、そしてまだ実物が確認されていない `0x15D9` を使うとしており、今後さらなる低電力低コストな Zen APU の登場に期待が持てる。  
+予約されている `0x15D9` の Revision ID にはコンシューマ向けに使われることの多い `0xCX` が 3つあることもそれを手伝う。 (0xC1, 0xC2, 0xC3)[^9]  
+
+[^9]: <https://github.com/GPUOpen-Tools/common_src_device_info/commit/f5e7f3c8177e98d8333eed0e0f0cbc8114b8a621#diff-fdd3c86dd88500382e70fe0ef61d0a50>
 
 ## Zen APU 再整理
 最初に以前した間違いを訂正すると、*Dali* も x86\_Model は `20h` になる。  
@@ -64,6 +67,8 @@ DAL は *Dali* の略称。
 [^7]: [soc/amd/picasso: load RV2 VBIOS with rv2 family OPN (I21f317e1) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2033051)
 
 何があった？ GPUの Device ID だけでなく、CPU の判定までもややこしいなんて。  
+*Raven2* なのに素直に *Raven2* と言えず。  
+プロセッサのコードネームが、コードネームとしてうまく機能していないというのも中々に問題な気がする。  
 気にする人しか気にしないかもしれないが、ほんと何があったのか。  
 
 | Family17h SoC | CPU Arch | x86\_Model |
