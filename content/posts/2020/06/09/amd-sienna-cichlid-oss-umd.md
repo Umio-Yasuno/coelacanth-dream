@@ -13,7 +13,7 @@ AMDGPU向けのオープンソースなドライバー、RadeonSI(OpenGL)、RADV
 
 今回読み取れるのは、*Sienna Cichlid* が
 
- * [SIMDユニットあたりで保持する実行中の Wave数が Navi1x の 20-wave から 16-wave に減らされている](#wavefront-16)[^2]
+ * [SIMDユニットあたりで保持する実行中の Wave数が Navi1x の 20エントリ から 16エントリ に減らされている](#wavefront-16)[^2]
  * [GPU ID は gfx1030](#gfx1030)[^1]
  * [DFSM(Deterministic Finite State Machine) のサポートが外された](#dfsm)[^3]
  * [`pc_lines` は 1024](#pc-lines)[^5]
@@ -29,6 +29,12 @@ AMDGPU向けのオープンソースなドライバー、RadeonSI(OpenGL)、RADV
 [^5]: <https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5383/diffs?commit_id=c09cac343eb8dbca0b8dda24941540b20768702b#diff-content-c3cf206d71203e77a4252c3915daf913c9251dc3>
 [^6]: <https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5389/diffs?commit_id=859d7a5fe951ce45b4693f0a3bb55fbbe0c5b2d5>
 
+RADV のバックエンドに使われる LLVM は ver11 で *Sienna Cichlid* をサポートする予定でいるらしく[^8]、  
+LLVM のリリース間隔を見ると、ver11 は 2020/09 に来る可能性が高い。  
+{{< link >}}[Download LLVM releases](https://releases.llvm.org/){{< /link >}}
+インターネット上の噂でもそのくらいに新GPUが出るのではと囁かれている。  
+
+[^8]: <https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5389/diffs?commit_id=7366021e3854532837dc5c569bc8a24bb023c11b>
 
 ## SIMDユニットあたりで保持する Wave数が減る、スレッド性能の向上が目的か {#wavefront-16}
 *AMD GCNアーキテクチャ* では SIMD16ユニットあたりに保持する実行中の Wave数(Wavefront)が 10エントリであり、CU全体では 40エントリとなっていた。  
