@@ -1,5 +1,5 @@
 ---
-title: "Intel、Lakefiled を正式発表 & AVX命令は非対応?"
+title: "Intel、Lakefiled を正式発表 & AVX命令には非対応？"
 date: 2020-06-13T09:46:31+09:00
 draft: false
 tags: [ "Tremont", "Lakefield", "Gen11" ]
