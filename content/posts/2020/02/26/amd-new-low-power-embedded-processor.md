@@ -2,7 +2,7 @@
 title: "AMD、新たな低消費電力向けRyzen Embeddedプロセッサー発表 ――R1305G, R1102G"
 date: 2020-02-26T09:20:57+09:00
 draft: false
-tags: [ "Raven2", "Dali", "Pollock" ]
+tags: [ "Raven2", "Dali" ]
 keywords: [ "", ]
 categories: [ "Hardware", "APU" ]
 noindex: false

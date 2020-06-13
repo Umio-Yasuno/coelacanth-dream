@@ -2,7 +2,7 @@
 title: "AMD、TDP 6W の AMD 3020e、Athlon Silver 3050e の仕様をひっそりと公開"
 date: 2020-05-20T16:35:17+09:00
 draft: false
-tags: [ "Raven2", "Dali", "Pollock" ]
+tags: [ "Raven2", "Dali" ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU" ]
 noindex: false
