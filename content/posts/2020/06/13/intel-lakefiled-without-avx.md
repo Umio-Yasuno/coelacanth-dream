@@ -35,7 +35,7 @@ SKUは **i5-L16G7** 、**i3-L13G4** の 2種類となる。
 まず *Lakefield* が 1-Core 持つ高性能な *Sunny Cove* コアは、*Ice Lake* のコアと同じだ。  
 だが、**i5-L16G7** の製品ページを見ると、`Instruction Set Extensions` に AVX という文字列は無い。[^1]  
 `AVX512-VNNI` 命令による高速な推論、**Intel DL Boost** が *Ice Lake* の特徴の1つだったが、やはりそれも製品ページには記載が無く、  
-代わりか、GPU を用いた推論において **i5-L16G7** は **i7-8500Y** と比べて 2倍のスループットで実行できることがアピールされている。  
+代わりか、GPU を用いた推論において **i5-L16G7** は **i7-8500Y** と比べて 2倍のスループットで実行できることがリリースではアピールされている。  
 
 [^1]: [Intel® Core™ i5-L16G7 Processor (4M Cache, up to 3.0GHz) Product Specifications](https://ark.intel.com/content/www/us/en/ark/products/202777/intel-core-i5-l16g7-processor-4m-cache-up-to-3-0ghz.html#tab-blade-1-0-7)
 

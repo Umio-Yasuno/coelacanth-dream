@@ -134,6 +134,8 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | DF[^9] | | |
 | | E3 | | (6W[^8] Vega 3) |
 | | E4 | R1102G[^11] | (6W[^8] Vega 3) |
+| | | 3020e | |
+| | | 3050e | |
 
 [Page Top](#table-of-content)
 
