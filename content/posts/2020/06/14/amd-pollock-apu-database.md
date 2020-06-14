@@ -33,6 +33,9 @@ TDP は *FT5 パッケージ* で 4.8W。[^1]
 [^1]: [mb/google/zork: update power parameters to 4.8w for dalboz (I711d1109) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2135098)
 
 コードネーム *Pollock* の略称は *PLK* 。[^5][^6]  
+Linux Kernel へのパッチに初めて *Pollock* という名が出てきたのは、2020/01/08。[^13]
+
+[^13]: [[PATCH] drm/amd/display: add Pollock IDs, fix Pollock & Dali clk mgr construct](https://lists.freedesktop.org/archives/amd-gfx/2020-January/044548.html)
 
 [^5]: [Jun4 Benchmarks [2006047-AR-JUN47027921] - OpenBenchmarking.org](https://openbenchmarking.org/result/2006047-AR-JUN47027921)
 [^6]: [Details for Computer/Device AMD Cereme-PLK Pollock : SiSoftware Official Live Ranker](https://ranker.sisoftware.co.uk/show_system.php?q=cea598ab93a493a79eb8dfe2c4b68badc4f9dfb78aacd4e9cfaacff2c2e497aa92&l=en)
