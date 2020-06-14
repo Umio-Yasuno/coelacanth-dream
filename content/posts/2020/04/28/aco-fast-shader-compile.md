@@ -2,7 +2,7 @@
 title: "RADV/ACO 検証: ACOの高速シェーダーコンパイル"
 date: 2020-04-28T23:48:27+09:00
 draft: false
-tags: [ "ACO", "GCN", ]
+tags: [ "ACO", "GCN", "RADV" ]
 keywords: [ "RADV", "ACO", "Radeon" ]
 categories: [ "Software", "AMD", "GPU" ]
 noindex: false

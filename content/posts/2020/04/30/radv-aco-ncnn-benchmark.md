@@ -2,7 +2,7 @@
 title: "RADV/ACO検証: ncnn Benchmark"
 date: 2020-04-30T20:59:29+09:00
 draft: false
-tags: [ "ACO", "GCN" ]
+tags: [ "ACO", "GCN", "RADV" ]
 keywords: [ "", ]
 categories: [ "Software", "AMD", "GPU" ]
 noindex: false
