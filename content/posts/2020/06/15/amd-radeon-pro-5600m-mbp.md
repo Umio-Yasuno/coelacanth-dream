@@ -42,6 +42,10 @@ HBM2 はダイあたり2chとなるため、実質的なメモリ速度は 1.54G
 クロックが最大でも 1035MHzと **Radeon Pro 5300M/5500M** よりも低めだが、CU数が多いため、ピーク演算性能では勝っている。  
 そして電力効率に優れた HBM2 をメモリに採用したこともあり、倍近いメモリ帯域を確保しながら、TGP(Total Graphis Power) は他と同じ 50Wを保っている。  
 
+RevisionID はパターンから Apple向けSKUに使われやすい `0x40` か `0x41` だろうか？[^1]  
+
+[^1]: [AMDGPU Database: Device ID/ Revision ID/ Product Name | Coelacanth's Dream](/posts/2019/12/30/did-rid-product-matome-p2/#navi12-gfx1011)
+
 ### Navi12 答え合わせ {#navi12-grading}
 これまで限られた情報から推測していた *Navi12* の、一部答え合わせをすると、まあほとんど外れてた。  
 自分の考えていた、*Navi12* はサーバ向けとかクラウドゲーミング向けのGPUというのは、まだ外れたとはっきりしてはいないが可能性としては薄くなり、  
