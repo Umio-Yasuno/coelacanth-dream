@@ -18,6 +18,15 @@ noindex: false
 
 現行で対応しているCPUは、*Hygon* を除く[^1]、*AMD Zen* 、*AMD Zen 2* アーキテクチャベースのCPU、(Athlon, Ryzen, Threadripper, EPYC)  
 *Intel Sunny Cove* アーキテクチャベースの *Ice Lake (Client)* だけとなる。  
+
+{{< ins datetime="2020-06-15T11:27:19" >}}
+
+LLVMのソースコードを見るに、Intel Atom が *Goldmont* より対応しているようです。  
+{{< link >}}<https://github.com/llvm/llvm-project/blob/d5c28c4094324e94f6eee403022ca21c8d76998e/clang/lib/Basic/Targets/X86.cpp#L260>{{< /link >}}
+お詫びするとともに、ここに追記し、修正致します。  
+
+{{< /ins >}}
+
 製品が未登場ではあるが対応していることが確認されているCPUは、*Ice Lake (Server)* 、*Tiger Lake* 。  
 キャンセルされてしまった *Cannon Lake* も対応していた。[^2]  
 

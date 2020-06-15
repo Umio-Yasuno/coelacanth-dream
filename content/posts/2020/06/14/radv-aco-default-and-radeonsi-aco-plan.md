@@ -33,8 +33,10 @@ GFX9世代(Vegaアーキテクチャ)から対応している FP16/int16 の Pac
 
 また、RADV の開発者の1人、[Samuel Pitoiset](https://gitlab.freedesktop.org/hakzsam)氏は、*ACO* を AMD GPU向けOpenGLドライバー、RadeonSI に移す計画はあるかという質問に対し、Yes と答えている。[^6]  
 
+RADV 同様に、バイナリを生成する前段階に位置する LLVM IR を *ACO IR* に置き換える形になると思われる。  
+
 RadeonSI にも *ACO* がバックエンドに採用されれば、より多くのアプリケーションにおける処理性能が向上する。  
-Linux + AMD GPUユーザーにとってかなりの朗報だ。  
+まだいつ頃からその計画が始まるのかもわからないが、Linux + AMD GPUユーザーにとってかなりの朗報だ。  
 
 [^6]: <https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5445#note_532279>
 
