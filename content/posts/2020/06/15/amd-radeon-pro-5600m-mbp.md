@@ -15,11 +15,13 @@ AMD は 2020-06-15付で、16インチ MacBook Pro向けの **Radeon Pro 5600M**
 *AMD RDNAアーキテクチャ (Navi1x)* であり、[Navi10](/tags/navi10)、[Navi14](/tags/navi14)が採用した GDDR6メモリとは違う HBM2 を採用するGPU。  
 このことから、**Radeon Pro 5600M** のベースとなるのは、これまで名前が出てきつつも具体的な姿を現さなかった、*Navi12* と考えられる。  
 
-## インデックス
+{{< pindex >}}
 
  * [スペック](#spec)
    * [Navi12 答え合わせ](#navi12-grading)
  * [HBM2採用において効率的な内部構造](#design-for-hbm2)
+
+{{< /pindex >}}
 
 ## スペック {#spec}
 上記のニュースリリースでは情報が少ないが、MacBook Pro向けの **Radeon Pro 5000Mシリーズ** のページには詳細が記述されている。  
@@ -60,7 +62,7 @@ RevisionID はパターンから Apple向けSKUに使われやすい `0x40` か 
 
 それと [Navi12](/tags/navi12) について初めてまとめたのが 7ヶ月前ということに恐怖を覚えた。  
 
-## HBM2採用において効率的な内部構造 {#desing-for-hbm2}
+## HBM2採用において効率的な内部構造 {#design-for-hbm2}
 気を取り直して、  
 AMD は **Radeon Pro 5600M** の内部構造を示す画像を公開している。  
 {{< link >}}<https://www.globenewswire.com/NewsRoom/AttachmentNg/5b3001ca-447c-4b58-921e-919895b6afc9/en>{{< /link >}}

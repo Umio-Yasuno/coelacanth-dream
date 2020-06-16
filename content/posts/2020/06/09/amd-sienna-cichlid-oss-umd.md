@@ -2,7 +2,7 @@
 title: "AMD Sienna Cichlid をサポートするパッチが OpenGL、Vulkanドライバーに投稿される"
 date: 2020-06-09T04:29:37+09:00
 draft: false
-tags: [ "Sienna_Cichlid", "Navi21", "RDNA_2", "GFX10" ]
+tags: [ "Sienna_Cichlid", "Navi21", "RDNA_2", "GFX10", "gfx1030" ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false

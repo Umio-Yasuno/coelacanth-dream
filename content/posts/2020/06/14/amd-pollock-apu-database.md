@@ -13,12 +13,14 @@ noindex: false
 
 今後他のハードウェアに関するページも作っていくつもり。  
 
-## インデックス
+{{< pindex >}}
 
  * [Pollock 概要](#plk-summary)
  * [Pollock 仕様(推測)](#plk-spec)
  * [FT5 パッケージ](#ft5-pack)
  * [ボード](#board)
+
+{{< /pindex >}}
 
 ## Pollock 概要 {#plk-summary}
 コードネーム *Pollock* は[Raven2](/tags/raven2)をベースとする省電力APU。  
