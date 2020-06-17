@@ -64,13 +64,15 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | D3 | PRO 2400G? | (65W AM4 Vega 11) |
 | | D4 | | (B8 65W AM4) |
 | | D5 | PRO 2200G? | (65W AM4 Vega 8) |
-| | D6 | PRO 2400GE? | (35W AM4 Vega 11) |
+| | D6 | PRO 2400GE[^13] | (35W AM4 Vega 11) |
 | | D7 | PRO 2200GE? | (35W AM4 Vega 8) |
 | | D8 | | (35W AM4 Vega 3) |
 | | D9 | | (15W FP5 Vega 6) |
 | | ? | V1404I | (15W FP5 Vega 8) |
 
 [Page Top](#table-of-content)
+
+[^13]: [207899 – AMDGPU large block noise in chrome, on streaming video pages. CS:GO freezes.](https://bugzilla.kernel.org/show_bug.cgi?id=207899)
 
 #### Picasso ( gfx902 ) {#picasso-gfx902}
 | Device ID | Revision ID | Product Name | Memo |
