@@ -2,7 +2,7 @@
 title: "AMD Sienna Cichlid をサポートするパッチが OpenGL、Vulkanドライバーに投稿される"
 date: 2020-06-09T04:29:37+09:00
 draft: false
-tags: [ "Sienna_Cichlid", "Navi21", "RDNA_2", "GFX10", "gfx1030" ]
+tags: [ "Sienna_Cichlid", "Navi21", "RDNA_2", "GFX10", "gfx1030", "RadeonSI", "RADV" ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
@@ -43,7 +43,7 @@ LLVM のリリース間隔を見ると、ver11 は 2020/09 に来る可能性が
 同時に実行可能な Wave(スレッド)数は減るが、保持した Wavefrontを順番に実行する方式であるため、同じ Wavefrontを実行するまでの間隔が小さくなり、スレッド性能は高まる。  
 {{< link >}}参考: <cite>[コンピュータアーキテクチャの話(365) GCNのブロックダイヤグラムを読む | マイナビニュース](https://news.mynavi.jp/article/architecture-365/)</cite>{{< /link >}}
 
-ちなみに、コードを見る限り *Polaris アーキテクチャ* も SIMD16ユニットあたり 8エントリ、CU全体で 32エントリとなっているらしく、過去にゲーミングGPUのため取り入れた改良点を再度取り入れたとも見られる。  
+ちなみに、コードを見る限り *AMD Polaris系 (Polaris10/11/12, VegaM)* も SIMD16ユニットあたり 8エントリ、CU全体で 32エントリとなっているらしく、過去にゲーミングGPUのため取り入れた改良点を再度取り入れたとも見られる。  
 
 ## GPU ID: gfx1030 {#gfx1030}
 ディスプレイコントローラの eChipRev が *Navi21* と一致していたことから、`Sienna Cichlid == Navi21` と考えたが、*gfx1030* という GPU ID もやはり *Navi21* と一致する。  
@@ -86,7 +86,7 @@ GFX9 で追加された、レンダリング領域を細かいタイルに分割
 {{< ref >}}
 
  * <https://gpuopen.com/wp-content/uploads/2019/08/RDNA_Architecture_public.pdf>
- * <https://www.olcf.ornl.gov/wp-content/uploads/2019/10/ORNL_Application_Readiness_Workshop-AMD_Libraries.pdf>
+ * <https://www.olcf.ornl.gov/wp-content/uploads/2019/10/ORNL_Application_Readiness_Workshop-AMD_GPU_Basics.pdf>
  * [AMDのRDNAアーキテクチャの「Navi GPU」を読み解く - Hot Chips 31 | マイナビニュース](https://news.mynavi.jp/article/20191023-912850/)
  * [コンピュータアーキテクチャの話(365) GCNのブロックダイヤグラムを読む | マイナビニュース](https://news.mynavi.jp/article/architecture-365/)
 

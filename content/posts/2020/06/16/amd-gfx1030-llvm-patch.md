@@ -28,6 +28,13 @@ AMDGPU のコンパイラバックエンドとしても用いられる LLVM に�
 
 [^3]: <https://github.com/llvm/llvm-project/blob/9ee272f13d88f090817235ef4f91e56bb2a153d6/llvm/test/CodeGen/AMDGPU/llvm.amdgcn.image.msaa.load.ll>
 
+以前、OpenGL/Vulkan ドライバーに追加されたコードと同様に、SIMD32ユニットあたりの Wave数が 16エントリとなることを示すコードも追加されている。[^4]  
+{{< link >}}[AMD Sienna Cichlid をサポートするパッチが OpenGL、Vulkanドライバーに投稿される | Coelacanth's Dream](/posts/2020/06/09/amd-sienna-cichlid-oss-umd/){{< /link >}}
+その時に、*AMD Polaris系* も SIMD16ユニットあたり 8エントリとなっていると書いたが、LLVM のコードにはそういった記述は見つけられなかった。  
+グラフィクス系処理のみに向けた最適化の一環だったりするのだろうか？  
+
+[^4]: <https://github.com/llvm/llvm-project/blob/9ee272f13d88f090817235ef4f91e56bb2a153d6/llvm/lib/Target/AMDGPU/Utils/AMDGPUBaseInfo.cpp>
+
 {{< ref >}}
 
  * <https://developer.amd.com/wp-content/resources/RDNA_Shader_ISA.pdf>
