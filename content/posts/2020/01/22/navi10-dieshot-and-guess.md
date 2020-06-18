@@ -1,5 +1,5 @@
 ---
-title: "Navi10のダイ観察 & 推測"
+title: "AMD Navi10のダイ観察 & 推測"
 date: 2020-01-22T15:36:49+09:00
 draft: false
 tags: [ "Navi10", "GFX10", "DieShot", "gfx1010" ]

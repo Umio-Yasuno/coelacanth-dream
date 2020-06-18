@@ -1,5 +1,5 @@
 ---
-title: "Polaris10/Polaris11のダイ観察 & 推測"
+title: "AMD Polaris10/Polaris11のダイ観察 & 推測"
 date: 2020-03-30T00:51:08+09:00
 draft: false
 tags: [ "Radeon", "DieShot" ]

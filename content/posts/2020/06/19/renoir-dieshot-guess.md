@@ -54,7 +54,9 @@ noindex: false
 ### 解説的な {#explain}
 #### 3つの 共有CUキャッシュ {#shared-cu-cache}
 *Renoir* もやはりというか、複数の CUで共有する L1cache (Scalar 16KB, Instruction 32KB) が8CU に対して 3基あり、2基または 3基の CUで共有する構成だった。  
-これはどうも *GFX9 /Vega* アーキテクチャで共通する特徴らしく、*Vega10 /Vega20* は 16CU に対して L1cache 6基、*Raven* は 11CUに対して L1cache 4基となっている。  
+これはどうも *GFX9 /Vega* アーキテクチャで共通する特徴らしく、*Vega10 /Vega20* は 1-SE あたりの 16CU に対して L1cache 6基[^11]、*Raven* は 11CUに対して L1cache 4基となっている。  
+
+[^11]: [AMD Vega10/Vega20のダイ観察 & 推測 | Coelacanth's Dream](/posts/2020/03/24/vega10-vega20-dieshot-guess/)
 
 GCNアーキテクチャでは L1cache を最大 4CUで共有することが可能であり、*GFX9 /Vega* の前世代、*GFX8* 世代の *Polaris11* は 8CU に対して L1cache 2基であり[^7]、*Renoir* もそうした構成が取れたはずだ。  
 AMD の資料では、*Vega10* も変わらず 4CUで共有することになっているため[^6]、歩留まり向上策なのかもしれない。  
