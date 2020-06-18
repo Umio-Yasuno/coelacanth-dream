@@ -14,7 +14,7 @@ noindex: false
 氏の測定によると、*Renoir* のダイサイズは 155.01mm<sup>2</sup>。  
 
 そして、氏のダイショットを元に内部構造を推測、各ユニットを区分けしてみた。  
-**？** とその数は自身の無さを表す。  
+**？** とその数は自信の無さを表す。  
 
 {{< pindex >}}
 
@@ -30,7 +30,7 @@ noindex: false
 
 ## Renoir 推測 {#renoir-guess}
 
-{{< figure src="/image/2020/06/19/renoir-dieshot-guess.webp" title="AMD Renoir" caption="DieSize: 155.001mm<sup>2</sup><br>画像元:<cite>[AMD@7nm@Zen2@Renoir@Ryzen_3_4300U@100-000000085_9JB4977P00… | Flickr](https://www.flickr.com/photos/130561288@N04/50016639913/)" >}}
+{{< figure src="/image/2020/06/19/renoir-dieshot-guess.webp" title="AMD Renoir" caption="DieSize: 155.001mm<sup>2</sup><br>画像元:<cite>[AMD@7nm@Zen2@Renoir@Ryzen_3_4300U@100-000000085_9JB4977P00… | Flickr](https://www.flickr.com/photos/130561288@N04/50016639913/)</cite>" >}}
 
 ### Renoir GPUスペック {#renoir-gpu-spec}
 大体の *Renoir* GPUスペックは以下となっている。  

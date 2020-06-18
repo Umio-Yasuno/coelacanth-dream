@@ -9,7 +9,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 
 <p></p>
 
-## Table of Content
+{{< pindex >}}
 
  * [APU](#apu)
    * FAMILY_RV
@@ -31,6 +31,8 @@ categories: [ "Hardware", "AMD", "GPU" ]
       * [Navi14](#navi14-gfx1012)
       * [Navi12](#navi12-gfx1011)
  * [参考リンク](#ref-title)
+
+{{< /pindex >}}
 
 ## APU {#apu}
 ### FAMILY_RV {#family_rv}
@@ -355,7 +357,7 @@ Navi LITE 13E9:00
 
 [Page Top](#table-of-content)
 
-[^2]: [navi10_ppt.c#n1593](https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/powerplay/navi10_ppt.c?h=amd-staging-drm-next#n1593)
+[^2]: <https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/powerplay/navi10_ppt.c?h=amd-staging-drm-next&id=fa34520c953b57a3ace3cfb3bfa3b3f1c8e0d414#n1698>
 [^4]:[AMD Radeon Pro W5700 8 GB BIOS - TechPowerUp](https://www.techpowerup.com/vgabios/216287/216287)
 
 #### Navi14 ( gfx1012 ) {#navi14-gfx1012}
