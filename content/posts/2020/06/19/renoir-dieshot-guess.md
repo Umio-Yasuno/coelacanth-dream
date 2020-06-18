@@ -1,7 +1,7 @@
 ---
 title: "AMD Renoir のダイ観察 & 推測"
 date: 2020-06-19T01:41:57+09:00
-draft: true
+draft: false
 tags: [ "Renoir", "gfx909", "DieShot", "GCN", "GFX9" ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU" ]
