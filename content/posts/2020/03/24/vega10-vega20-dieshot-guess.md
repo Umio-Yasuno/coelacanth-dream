@@ -2,7 +2,7 @@
 title: "Vega10/Vega20のダイ観察 & 推測"
 date: 2020-03-24T20:57:11+09:00
 draft: false
-tags: [ "Radeon", "Vega10", "Vega20", "DieShot", "gfx900", "gfx906", "DieShot" ]
+tags: [ "Radeon", "Vega10", "Vega20", "DieShot", "gfx900", "gfx906" ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false

@@ -2,7 +2,7 @@
 title: "Navi10のダイ観察 & 推測"
 date: 2020-01-22T15:36:49+09:00
 draft: false
-tags: [ "Navi10", "GFX10", "DieShot" ]
+tags: [ "Navi10", "GFX10", "DieShot", "gfx1010" ]
 keywords: [ "", ]
 categories: [ "Hardware", "GPU" ]
 noindex: false
@@ -18,7 +18,7 @@ noindex: false
 氏が詳細な解説をしているため、自分がここに書くことはあんまりない。  
 ダイアグラムが氏のものと若干違っているが、別段自分の方が正しいと主張する気はなく、示せるだけの根拠も持ち合わせていない。  
 
-{{% figure src="/image/2020/01/22/navi10-dieshot-guess.webp" title="Navi10推測" caption="Update: 2020-01-26" %}}
+{{% figure src="/image/2020/01/22/navi10-dieshot-guess.webp" title="Navi10推測" caption="画像元:<cite>[AMD@7nm@RDNA_1th_gen@Navi10@Radeon_RX_5700_XT@215-0917210@… | Flickr](https://www.flickr.com/photos/130561288@N04/49411586768/in/photostream/)</cite>" %}}
 
 サイズとの兼ね合いで非常に見辛くなってしまったが、RBEとHUBの間にある黄緑（lime）色のブロックは2xL1$(128KB)と推測している。  
 （リポジトリサイズ節約のために1MB未満に抑えたかった。）  
