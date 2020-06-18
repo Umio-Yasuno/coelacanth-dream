@@ -72,7 +72,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | D9 | | (15W FP5 Vega 6) |
 | | ? | V1404I | (15W FP5 Vega 8) |
 
-[Page Top](#table-of-content)
+[Page Top](#page_index)
 
 [^13]: [207899 – AMDGPU large block noise in chrome, on streaming video pages. CS:GO freezes.](https://bugzilla.kernel.org/show_bug.cgi?id=207899)
 
@@ -110,7 +110,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | E2 | 3580U | Winston (Surface Edition Vega 8) |
 | | ? | 300UGE | (65W AM4 Vega 3) |
 
-[Page Top](#table-of-content)
+[Page Top](#page_index)
 
 #### Raven2 ( gfx909 ) {#raven2-gfx909}
 | Device ID | Revision ID | Product Name | Memo |
@@ -123,7 +123,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | C5 | 300U | (Vega 3) |
 | | CC | 3000G | (AM4 Vega 3) |
 
-[Page Top](#table-of-content)
+[Page Top](#page_index)
 
 [^10]: [Core i7並みのRyzen搭載で、4万円台＆片手サイズ⁉ 〝Ryzen Embedded”搭載の超小型PCベアボーン「4×4 BOX」が超お得 (3/3) | AMD HEROES](https://amd-heroes.jp/article/2020/03/0364/3/)
 
@@ -141,7 +141,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | | 3020e | |
 | | | 3050e | |
 
-[Page Top](#table-of-content)
+[Page Top](#page_index)
 
 [^7]: [2040455: Rework map_oprom_vendev to add revision check and mapping —   Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2040455/3/src/soc/amd/picasso/northbridge.c#332)
 [^8]: [[Dali] Raven 2 detection Patch](https://lists.freedesktop.org/archives/amd-gfx/2020-February/045579.html) <br> <https://lists.freedesktop.org/archives/amd-gfx/attachments/20200205/f22ebc46/attachment.obj>
@@ -157,7 +157,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | EA | | (Production FT5)[^7] |
 | | EB | | |
 
-[Page Top](#table-of-content)
+[Page Top](#page_index)
 
  > Source:<cite>
 [drm/amd/display: add Pollock IDs, fix Pollock & Dali clk mgr construct - amd-staging-drm-next](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/display/include/dal_asic_id.h?h=amd-staging-drm-next&id=04d8707ef5549065c10d5a2e20d2c61089807997)</cite>
@@ -222,7 +222,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 [^13]: [P4 to Git Change 2008166 by vsytchen@vsytchen-remote-ocl-win10 on 201… · ROCm-Developer-Tools/ROCclr@df2e0b9](https://github.com/ROCm-Developer-Tools/ROCclr/commit/df2e0b9ae27f43ba8e23a3afa185c16dd3bb5ebc)
 -->
 
-[Page Top](#table-of-content)
+[Page Top](#page_index)
 
 ## Discrete GPU {#dgpu}
 ### FAMILY_AI {#family_ai}
@@ -264,7 +264,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | C4 | | (Vega10 XL) |
 | | C7 | Radeon RX Vega | (Vega10 XL) |
 
-[Page Top](#table-of-content)
+[Page Top](#page_index)
 
 [^1]: SubSystem ID? ( Vega 48:0x0196, Vega 56:0x017B, Vega 64:0x017C Vega 64X:0x0188 )
 [^6]: [Compute Performance of AMD Radeon Pro V320 - CompuBench](https://compubench.com/device.jsp?benchmark=compu20d&os=Windows&api=cl&D=AMD+Radeon+Pro+V320&testgroup=info)
@@ -283,7 +283,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | CF | | (Vega12 XL) |
 | | FF | | (Vega12 LE) |
 
-[Page Top](#table-of-content)
+[Page Top](#page_index)
 
 #### Vega20 ( gfx906 ) {#vega20-gfx906}
 | Device ID | Revision ID | Product Name | Memo |
@@ -303,7 +303,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | C3 | | |
 | | C7 | | |
 | | CF | | |
-[Page Top](#table-of-content)
+[Page Top](#page_index)
 
 #### Arcturus ( gfx908 ) {#arcturus-gfx908}
 | Device ID | Revision ID | Product Name | Memo |
@@ -313,7 +313,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | 738E | | | |
 | 7390 | | | (Arcturus VF) |
 
-[Page Top](#table-of-content)
+[Page Top](#page_index)
 
 ### FAMILY_NV {#family_nv}
 <!--
@@ -355,7 +355,7 @@ Navi LITE 13E9:00
 | | E7 | | |
 | | EB | | |
 
-[Page Top](#table-of-content)
+[Page Top](#page_index)
 
 [^2]: <https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/powerplay/navi10_ppt.c?h=amd-staging-drm-next&id=fa34520c953b57a3ace3cfb3bfa3b3f1c8e0d414#n1698>
 [^4]:[AMD Radeon Pro W5700 8 GB BIOS - TechPowerUp](https://www.techpowerup.com/vgabios/216287/216287)
@@ -390,7 +390,7 @@ Navi LITE 13E9:00
 | 7347 | 00 | Radeon Pro W5500M | (Navi14 Pro-XTM) |
 | 734F | 00 | Radeon Pro W5300M | (Navi14 Pro-XLM) |
 
-[Page Top](#table-of-content)
+[Page Top](#page_index)
 
 <!--
 SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
@@ -410,7 +410,7 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | | C3 | | |
 | 7362 | | | (Navi12 VF) |
 
-[Page Top](#table-of-content)
+[Page Top](#page_index)
 
 #### Navi21 / Sienna Cichlid ( gfx1030 ) {#navi21-gfx1030}
 Navi21: gfx1030 [^12]
