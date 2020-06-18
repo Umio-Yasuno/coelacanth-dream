@@ -8,7 +8,7 @@ categories: [ "Hardware", "AMD", "APU" ]
 noindex: false
 ---
 
-これまでにも数多くのチップを撮影、その内部構造を詳細に公開してきた [Fritzchens Fritz | Flickr](https://www.flickr.com/photos/130561288@N04/) が、  
+これまでにも数多くのチップを撮影、その内部構造を詳細に公開してきた [Fritzchens Fritz | Flickr](https://www.flickr.com/photos/130561288@N04/) 氏が、  
 先日、*Zen 2* CPU と *Vega* GPU を持ったAMD の 7nm APU、[Renoir](/tags/renoir)のダイショットをパブリック・ドメインで公開した。  
 {{< link >}}[AMD@7nm@Zen2@Renoir@Ryzen_3_4300U@100-000000085_9JB4977P00… | Flickr](https://www.flickr.com/photos/130561288@N04/50017165886/in/photostream/){{< /link >}}
 氏の測定によると、*Renoir* のダイサイズは 155.01mm<sup>2</sup>。  
@@ -79,6 +79,7 @@ AM4ソケットの仕様で考えると、16-Lane をディスクリートGPUに
 ついでに *Zen 2* CPUコアの内部も区分けしてみたが、内容としては ISSCC 2020 で AMD が発表した資料を丸写ししただけ。[^8]  
 言い換えれば *Renoir* で CPU部は L3cacheの規模以外に大きく弄っていないということになる。  
 しかし小さい改良点はあり、Spectre v2対策に `IBRS_FW` が追加されている。[^9][^10]  
+それにどれほどの効果があるのかはわからん。  
 
 [^8]: [Zen 2: The AMD 7nm Energy-Efficient High-Performance x86-64 Microproc…](https://www.slideshare.net/AMD/zen-2-the-amd-7nm-energyefficient-highperformance-x8664-microprocessor-core)
 [^9]: [Ryzen 7 4700U Windows 10 Vs. Ubuntu Linux Benchmarks - OpenBenchmarking.org](https://openbenchmarking.org/result/2005141-PTS-WINLINUX22)
