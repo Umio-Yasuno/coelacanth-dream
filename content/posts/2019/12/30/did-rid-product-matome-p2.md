@@ -348,8 +348,10 @@ Navi LITE 13E9:00
 | | CA | RX 5600 XT | (Navi10 XLE) |
 | | CB | RX 5600 | (Navi10 XE) |
 | | E1 | | |
+| | E2 | | |
 | | E3 | | |
 | | E7 | | |
+| | EB | | |
 
 [Page Top](#table-of-content)
 
@@ -368,11 +370,11 @@ Navi LITE 13E9:00
 |  | F4 | | (Navi14 XT Fake DID?[^2]) |
 |  | F5 | | (Navi14 XL Fake DID??) |
 |  | F6 | | (Navi14 XTX Fake DID?[^2]) |
-| 7340 &darr; | 00 | | <!-- Falcon GL-XTA --> |
+| 7340 &darr; | 00 | Radeon Pro W5500X | Falcon GL-XTA |
 | | 40 | Radeon Pro 5500M | (Navi14 ULA[^3]) |
-| | 41 | | <!-- Falcon XTA 8G --> |
+| | 41 | Radeon Pro 5500 XT | Falcon XTA 8G |
 | | 43 | Radeon Pro 5300M | |
-| | 47 | | <!-- Falcon XLXA --> | 
+| | 47 | Radeon Pro 5300 | Falcon XLXA | 
 | | 70 | | |
 | | C1 | RX 5500M | (Navi14 XTM) |
 | | C3 | RX 5300M | (Navi14 XLM) |
