@@ -85,4 +85,4 @@ Chromebook向け以外で *Dali* だとはっきり言えるのは現状 **AMD 3
 | Dali(for Chromebook, **AMD 3020e**)<br>/Pollock | Zen | 20h |
 | Matisse | Zen 2 | 71h |
 | Castle Peak<br> /Rome | Zen 2 | 31h |
-
+| Renoir | Zen 2 | 60h
