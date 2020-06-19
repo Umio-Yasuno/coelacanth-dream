@@ -22,12 +22,12 @@ ChromiumOSを構成する Coreboot へのパッチの中で、[Matt Papageorge](
 *Renoir* の `x86_Model` は `60h` だ。[^2]  
 `30h-3Fh` では、 `Family 17h Model 31h` に *Castle Peak(Zen 2 TR) / Rome(Zen 2 EPYC)* があるため、それらを指してしまう。  
 
-現時点で最新の Patchset 6 では *LCN* に限らず、構造体変数からコードネームは取り除かれ、別のコードで処理が実装されているが、`30h-3Fh` という部分は変わっていない。  
+現時点で最新の Patchset 6 では *LCN* に限らず、構造体変数名からコードネームは取り除かれ、別のコードで処理が実装されているが、`30h-3Fh` という部分は変わっていない。  
 
 [^2]: [hwmon: (k10temp) Add AMD family 17h model 60h PCI match](https://git.kernel.org/pub/scm/linux/kernel/git/tip/tip.git/commit/?h=ras/core&id=279f0b3a4b80660fba6faadc2ca2fa426bf3f7e9)
 
 それと *Lucianne* の元ネタがわからん。自分が無学というのもあるが、検索してみてもしっくり来るようなものはなかった。*Picasso* とか *Dali* とか *Pollock* みたいな関係性を持ったものは。  
-[Lucianne Goldberg](https://en.wikipedia.org/wiki/Lucianne_Goldberg) という作家は見つかった。  
+[Lucianne Goldberg](https://en.wikipedia.org/wiki/Lucianne_Goldberg) という作家は見つかったが。  
 
 そういうことで怪しい部分を無視して考えるならば、*Lucianne* は *Raven* に対する *Picasso* のように、内部のアーキテクチャは特に変えない *Renoir* のプロセス最適化版、**かもしれない** ということだけを書き残し、  
 後は深く考えないでおく。  
