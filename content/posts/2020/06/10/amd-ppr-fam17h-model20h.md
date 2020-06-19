@@ -66,7 +66,11 @@ DAL は *Dali* の略称。
 
 [^7]: [soc/amd/picasso: load RV2 VBIOS with rv2 family OPN (I21f317e1) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2033051)
 
-何があった？ GPUの Device ID だけでなく、CPU の判定までもややこしいなんて。  
+Chromebook向け以外で *Dali* だとはっきり言えるのは現状 **AMD 3020e** のみ[^10]、**Athlon Silver 3050e** も *Dali* である可能性は高いが確認できていない。  
+
+[^10]: [HP HP Laptop 15-ef1xxx - Geekbench Browser](https://browser.geekbench.com/v4/cpu/15465129)
+
+……何があった？ GPUの Device ID だけでなく、CPU の判定までもややこしいなんて。  
 *Raven2* なのに素直に *Raven2* と言えず。  
 プロセッサのコードネームが、コードネームとしてうまく機能していないというのも中々に問題な気がする。  
 気にする人しか気にしないかもしれないが、ほんと何があったのか。  
@@ -78,7 +82,7 @@ DAL は *Dali* の略称。
 | Raven Ridge | Zen/+ | 11h |
 | Picasso | Zen+ | 18h |
 | Raven2<br> /Dali | Zen | 18h |
-| Dali(for Chromebook)<br>/Pollock | Zen | 20h |
+| Dali(for Chromebook, **AMD 3020e**)<br>/Pollock | Zen | 20h |
 | Matisse | Zen 2 | 71h |
 | Castle Peak<br> /Rome | Zen 2 | 31h |
 
