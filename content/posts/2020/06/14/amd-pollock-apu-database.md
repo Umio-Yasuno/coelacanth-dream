@@ -2,10 +2,11 @@
 title: "AMD Pollock APU Database"
 date: 2020-06-14T00:07:27+09:00
 draft: false
-tags: [ "Database", "Raven2", "Pollock", "gfx909" ]
+tags: [ "Database", "Raven2", "Pollock", "gfx909", "Zen" ]
 keywords: [ "", ]
 categories: [ "Hardware", "APU", "AMD" ]
 noindex: false
+# weight: 100
 ---
 
 あるハードウェアに関する情報を集め続ける内に、情報それぞれが孤立気味になってきたため、随時更新を行なう情報が集約されたページを作ることとした。  

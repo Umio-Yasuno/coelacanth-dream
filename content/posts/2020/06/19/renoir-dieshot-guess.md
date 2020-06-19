@@ -72,8 +72,18 @@ Linux Kernel の AMD GPU でディスプレイに関する部分を見ても[^5]
 *Renoir* の持つ PCIeレーン数は、5x 4-Lane + 2x 2-Lane で計 24-Laneある **ように** 見えた。  
 AM4ソケットの仕様で考えると、16-Lane をディスクリートGPUに、4-Lane を NVMe SSDに、4-Lane をチップセットとの接続に充てられそうだが、  
 2x 2-Lane は USB にも使わられるはずで、そして AM4ソケットは CPU から 4つの USB 3.2 Gen1/2 を出す。  
-そのため、デスクトップ向け *Renoir* が使えるのは 20-Laneで、  
-ディスクリートGPUは前世代から変わらず 8-Lane、NVMe SSD に 4-Lane、チップセットに 4-Lane、その他 PCIeスロットや NVMe SSD に 4-Lane、という感じになるのではないかと思う。  
+<del>そのため、デスクトップ向け *Renoir* が使えるのは 20-Laneで、  
+ディスクリートGPUは前世代から変わらず 8-Lane、NVMe SSD に 4-Lane、チップセットに 4-Lane、その他 PCIeスロットや NVMe SSD に 4-Lane、という感じになるのではないかと思う。</del>  
+
+{{< ins >}}
+
+**ASRock B550 PG Velocita** 、**GIGABYTE B550 AORUS PRO (rev. 1.0)** のマニュアルには、  
+*Renoir* 、*New Generation AMD Ryzen™ with Radeon™ Graphics processors* で PCIe 3.0 x16が利用可能と記述されており、自分が USB の分を勘違いしてるか見落としているだけの可能性が高い。  
+{{< link >}}<https://download.asrock.com/Manual/B550%20PG%20Velocita.pdf#page=32>{{< /link >}} {{< link >}}<https://download.gigabyte.com/FileList/Manual/mb_manual_b550-aorus-pro-ac_1001_e.pdf#page=7>{{< /link >}}
+
+GIGABYTE は PCIeスロット、M.2、USBそれぞれが CPU側か B550 PCH側かをしっかり書いてあり、とても分かりやすく、確かだと言える。  
+
+{{< /ins >}}
 
 ## Zen 2 {#zen-2}
 {{< figure src="/image/2020/06/19/zen2-core-renoir.webp" title="Zen 2 CPU Core" caption="画像元:<cite>[AMD@7nm@Zen2@Renoir@Ryzen_3_4300U@100-000000085_9JB4977P00… | Flickr](https://www.flickr.com/photos/130561288@N04/50016639913/)</cite><br>参考:<cite>[Zen 2: The AMD 7nm Energy-Efficient High-Performance x86-64 Microproc…](https://www.slideshare.net/AMD/zen-2-the-amd-7nm-energyefficient-highperformance-x8664-microprocessor-core)</cite>" >}}
