@@ -53,6 +53,8 @@ Linux Kernel へのパッチに初めて *Pollock* という名が出てきた�
 
 | AMD Pollock | |
 | :-- | :--: |
+| Socket | FT5 |
+| Memory Interface | 64-bit (1ch) |
 | CPU | *Zen* |
 | &emsp;Max CPU Core/Thread | 2/4 |
 | &emsp;CPU L3cache | 4 MB |
