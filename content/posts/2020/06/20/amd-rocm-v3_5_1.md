@@ -31,14 +31,14 @@ ROCm v3.5.1 というマイナーアップデートだからなのか、ライ�
 
 ```
 export ROCM_PATH="/opt/rocm-3.5.0"
-export ROCM_PATH_3_5_1="/opt/rocm-3.5.1
+export ROCM_PATH_3_5_1="/opt/rocm-3.5.1"
 
 export PATH=$HCC_HOME/bin:$HIP_PATH/bin:$PATH
 export OPENCL_LIBS="${ROCM_PATH}/opencl/lib"
 export LIBOPENCL="${ROCM_PATH}/opencl/lib"
 
 export LD_LIBRARY_PATH="${ROCM_PATH}/opencl/lib":$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=${ROCM_PATH_3_5_1}/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH="${ROCM_PATH_3_5_1}/lib":$LD_LIBRARY_PATH
 
 export OPENCL_HEADERS="${ROCM_PATH}/opencl/include"
 export OPENCL_INCLUDES="${ROCM_PATH}/opencl/include"
