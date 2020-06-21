@@ -19,7 +19,7 @@ Intel は [oneAPI Level Zero](https://spec.oneapi.com/versions/latest/elements/l
 EU数 96基、L3cacheバンク 8基、最大Pixel Fill Rate 16/clock (16ROP相当)、  
 EUをまとめる Sub-Slice内の共有キャッシュ(SLM)のサイズ 64KB、EUあたりが保持するスレッド数 7スレッド、という構成になる。[^2][^3]  
 
-しかし、*DG1* の L3cacheバンクあたりの容量は大幅に増量され、*Tiger Lake GT2* がバンクあたり 480KB、計 38040KB であるのに対し、  
+しかし、*DG1* の L3cacheバンクあたりの容量は大幅に増量され、*Tiger Lake GT2* がバンクあたり 480KB、計 3840KB であるのに対し、  
 *DG1* はバンクあたり 2048KB(2MB)、計 16384KB(16MB) となっている。  
 {{< link >}}[compute-runtime/hw_info_dg1.inl at 3029db07c3135ec5fde55de369ead2c14f9b3f9c · intel/compute-runtime](https://github.com/intel/compute-runtime/blob/3029db07c3135ec5fde55de369ead2c14f9b3f9c/opencl/source/gen12lp/hw_info_dg1.inl){{< /link >}}
 {{< link >}}[compute-runtime/hw_info_tgllp.inl at 3029db07c3135ec5fde55de369ead2c14f9b3f9c · intel/compute-runtime](https://github.com/intel/compute-runtime/blob/3029db07c3135ec5fde55de369ead2c14f9b3f9c/opencl/source/gen12lp/hw_info_tgllp.inl){{< /link >}}
