@@ -49,8 +49,8 @@ Intel GPUアーキテクチャでは L3cacheバンク内で、バッファとし
 {{< ref >}}
 
  * [2019 Intel(r) processors based on Ice Lake platform | 01.org](https://01.org/linuxgraphics/hardware-specification-prms/2019-intelr-processors-based-ice-lake-platform)
- * [Cover_Sheet - intel-gfx-prm-osrc-icllp-vol09-renderengine_0.pdf](https://01.org/sites/default/files/documentation/intel-gfx-prm-osrc-icllp-vol09-renderengine_0.pdf)
- * [Volume 4: Configurations - intel-gfx-prm-osrc-icllp-vol04-configurations_0.pdf](https://01.org/sites/default/files/documentation/intel-gfx-prm-osrc-icllp-vol04-configurations_0.pdf)
- * [Volume 7: Memory Cache - intel-gfx-prm-osrc-icllp-vol07-memory_cache_0.pdf](https://01.org/sites/default/files/documentation/intel-gfx-prm-osrc-icllp-vol07-memory_cache_0.pdf)
+    * [Cover_Sheet - intel-gfx-prm-osrc-icllp-vol09-renderengine_0.pdf](https://01.org/sites/default/files/documentation/intel-gfx-prm-osrc-icllp-vol09-renderengine_0.pdf)
+    * [Volume 4: Configurations - intel-gfx-prm-osrc-icllp-vol04-configurations_0.pdf](https://01.org/sites/default/files/documentation/intel-gfx-prm-osrc-icllp-vol04-configurations_0.pdf)
+    * [Volume 7: Memory Cache - intel-gfx-prm-osrc-icllp-vol07-memory_cache_0.pdf](https://01.org/sites/default/files/documentation/intel-gfx-prm-osrc-icllp-vol07-memory_cache_0.pdf)
 
 {{< /ref >}}

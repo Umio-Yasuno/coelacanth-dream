@@ -29,5 +29,5 @@ ChromiumOSを構成する Coreboot へのパッチの中で、[Matt Papageorge](
 それと *Lucianne* の元ネタがわからん。自分が無学というのもあるが、検索してみてもしっくり来るようなものはなかった。*Picasso* とか *Dali* とか *Pollock* みたいな関係性を持ったものは。  
 [Lucianne Goldberg](https://en.wikipedia.org/wiki/Lucianne_Goldberg) という作家は見つかったが。  
 
-そういうことで怪しい部分を無視して考えるならば、*Lucianne* は *Raven* に対する *Picasso* のように、内部のアーキテクチャは特に変えない *Renoir* のプロセス最適化版、**かもしれない** ということだけを書き残し、  
+そういうことで怪しい部分を無視して考えるならば、*Lucianne* は *Raven* に対する *Picasso* のように、内部のアーキテクチャは特に変えない *Renoir* のプロセス最適化版、**かもしれない** 、またはそうした APU が計画にあるということだけを書き残し、  
 後は深く考えないでおく。  
