@@ -2,7 +2,7 @@
 title: "AMD Renoir の兄弟？ 現れるは Lucianne"
 date: 2020-06-20T00:46:19+09:00
 draft: false
-tags: [ "Renoir", "Zen 2" ]
+tags: [ "Renoir", "Zen2" ]
 keywords: [ "", ]
 categories: [ "Hardware", "APU", "AMD" ]
 noindex: false

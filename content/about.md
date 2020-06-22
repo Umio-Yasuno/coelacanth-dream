@@ -18,6 +18,8 @@ noindex: false
 
 オープンソースコードは眺めるだけのシーラカンス。速報性には期待しないでください。  
 
+このサイトは Markdown で記事を書き、[Hugo](https://github.com/gohugoio/hugo)でビルド、そして Github Page のサービスを利用して公開しています。  
+
 <address>
 連絡先:  
 &emsp;Github: [Issues · Umio-Yasuno/umio-yasuno.github.io](https://github.com/Umio-Yasuno/umio-yasuno.github.io/issues)  
