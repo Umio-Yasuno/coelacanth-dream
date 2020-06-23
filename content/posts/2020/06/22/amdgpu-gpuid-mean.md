@@ -41,7 +41,7 @@ GFX1世代とされる AMD GPU はないため、間違うこともそう無い�
 
 また、GFX10 までは補助的なバージョンを示す数字が使われることはあまり無く、*gfx810* である *Stoney* APU くらいで、ほとんど `0` となっていた。  
 GFX10 からは *RDNA /Navi1x* であることを示すためには `1` (gfx101x) 、*RDNA 2/Navi2x* には `3` (gfx103x) が充てられている。  
-`2` が飛ばされているが、存在はしており、*Navi21_Lite/nv21_lite* が *gfx1020* とされている。[^3]*gfx1000* の *Navi10_Lite/nv10_lite* もあり、そちらは *Ariel* というコードネームが付けられている。[^4]  
+`2` (gfx102x) が飛ばされているが、存在はしており、*Navi21_Lite/nv21_lite* が *gfx1020* とされている。[^3]*gfx1000* の *Navi10_Lite/nv10_lite* もあり、そちらは *Ariel* というコードネームが付けられている。[^4]  
 自分が知っているのはそれだけで、詳しくは知らない。<span class="hide">知りたいなら探偵様にでも聞いてくれ。</span>  
 
 [^3]: [P4 to Git Change 1917655 by vsytchen@vsytchen-remote-ocl-win10 on 201… · ROCm-Developer-Tools/ROCclr@3d26650](https://github.com/ROCm-Developer-Tools/ROCclr/commit/3d2665034250cf93bc88b409e67c86453f568bd4)
@@ -64,7 +64,8 @@ GFX10 からは *RDNA /Navi1x* であることを示すためには `1` (gfx101x
 下の表を見るとわかるが、GPU ID は普通に被る。  
 規模の異なる *Fiji /Polaris10 /Polaris11 /Polaris12* が一緒の *gfx803* になってたり、  
 最近の AMD GPU でも、*Raven2 /Renoir* が一緒の *gfx909* だった。  
-だから、GPU ID と [llvm-project/AMDGPU.td](https://github.com/llvm/llvm-project/blob/master/llvm/lib/Target/AMDGPU/AMDGPU.td) と組み合わせである AMD GPU の規模を知ることは不可能と言っていい。  
+だから、GPU ID と [llvm-project/AMDGPU.td](https://github.com/llvm/llvm-project/blob/master/llvm/lib/Target/AMDGPU/AMDGPU.td) と組み合わせで、ある AMD GPU の規模を知ることは不可能と言っていい。  
+GPU ID だけとなるともっと無理。  
 
 倍精度(FP64)演算を、単精度(FP32)演算の半分のレートで実行できることを示す `HalfRate64Ops` があれば、その AMD GPUアーキテクチャはサーバやデータセンター向けで、それを採用する GPUもそういった製品に使われる、といったことは推測できるが、あくまで規模が読み取れる訳ではない。  
 
@@ -75,7 +76,7 @@ GFX10世代が対応する命令、機能をまとめた `FeatureGFX10` に、Wa
 gfx10xx としても、厳密に言えば RDNA系列でない可能性がある、というのが自分の考えだ。  
 gfx10xx すべてが RDNA系列となるなら `FeatureGFX10` に記述すれば楽に済む。  
 
-メジャーバージョンで Wavefrontのサイズを判定するコードもどっかにあるだろうから、わざわざややこしく、わかりにくいことをするとも考えにくいが、可能性としてはわずかに存在する。  
+メジャーバージョン、世代で Wavefront のサイズを判定するコードもどっかにあるだろうから、わざわざややこしく、わかりにくいことをするとも考えにくいが、可能性としてはわずかに存在する。  
 
 ### HBCC / XNACK について {#hbcc-xnack}
 HBCC は CPU側の一部 DRAM も追加で VRAM として扱う *Vega* の目玉機能だが、これを有効にすると GPU ID が変更されていた。[^8]  
@@ -86,7 +87,7 @@ HBCC は CPU側の一部 DRAM も追加で VRAM として扱う *Vega* の目玉
 何で変更する必要があるのかは、  
 まず HBCC機能の中身としては、メモリのデマンドページングやページ移行に使用される `XNACK` という機能を有効にしている。[^9][^10] LLVM から *gfx901* 等は消されているが、消された時の内容から *gfx901* に `FeatureXNACK` がある。[^11]
 
-これを有効にした場合にコンパイルしたバイナリを、無効にされている GPU で実行すると、正しく実行されない、またはパフォーマンスが低下するといったことが発生するため、GPU ID で判別する必要があるのだと思われる。  
+`XNACK` を有効にした場合に生成したコードを、無効にされている GPU で実行すると、正しく実行されない、またはパフォーマンスが低下するといったことが発生するため、GPU ID で判別する必要があるのだと思われる。  
 
 [^9]: [User Guide for AMDGPU Backend — LLVM 8 documentation](https://prereleases.llvm.org/8.0.0/rc5/docs/AMDGPUUsage.html#target-features)
 [^10]: [pal/palDevice.h at 82390674c40402c81dbf311a5ee488fb972894f5 · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/82390674c40402c81dbf311a5ee488fb972894f5/inc/core/palDevice.h#L1020)
@@ -109,9 +110,9 @@ HBCC は CPU側の一部 DRAM も追加で VRAM として扱う *Vega* の目玉
 | :-- | :--: | :--: | :--: | :--: |
 | GPU ID | gfx801 | gfx802 | gfx803 | gfx810 |
 
-| Code Name | Vega10 | Raven / Picasso | Vega12 | Vega20 | Arcturus | Raven2 / Renoir |
-| :-- | :--: | :--: | :--: | :--: | :--: | :--: |
-| GPU ID | gfx900 | gfx902 | gfx904 | gfx906 | gfx908 | gfx909 |
+| Code Name | Vega10 | Vega10 (HBCC) | Raven / Picasso | Vega12 | Vega20 | Arcturus | Raven2 / Renoir |
+| :-- | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| GPU ID | gfx900 | gfx901 | gfx902 | gfx904 | gfx906 | gfx908 | gfx909 |
 
 | Code Name | Navi10 | Navi12 | Navi14 | Navi21 |
 | :-- | :--: | :--: | :--: | :--: |
