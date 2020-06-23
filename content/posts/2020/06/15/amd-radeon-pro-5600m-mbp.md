@@ -48,6 +48,12 @@ RevisionID はパターンから Apple向けSKUに使われやすい `0x40` か 
 
 [^1]: [AMDGPU Database: Device ID/ Revision ID/ Product Name | Coelacanth's Dream](/posts/2019/12/30/did-rid-product-matome-p2/#navi12-gfx1011)
 
+{{< ins >}}
+こちらの動画より、`0x7360:0x41` であることが確認できた。  
+{{< youtube id="unG5uGqefmA" title="【新GPUの実力は？】16-inch MacBook Pro 2020mid GPUテスト【Radeon Pro 5600M】 - YouTube" >}}
+
+{{< /ins >}}
+
 後述する AMD が公開している画像で HBM2 の下にあるのは、長さが合わされていることからパッケージングやクーラーとの接着のためのスペーサーかもしれない。  
 
 ### Navi12 答え合わせ {#navi12-grading}

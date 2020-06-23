@@ -8,6 +8,12 @@ categories: [ "Intel", "Hardware", "CPU" ]
 noindex: false
 ---
 
+{{< ins datetime="2020-06-22T22:52:10" >}}
+
+この記事で情報元として示したリンク先は削除されたため、現在では不確実な情報を取り扱った記事となります。  
+
+{{< /ins >}}
+
 Intel の次世代プロセッサ、[Alder Lake](/tags/alder_lake)、[Sapphire Rapids](/tags/sapphire_rapids)では新たな拡張命令が2つ追加される。  
 そのことが新機能のバグ報告プラットフォーム、[intel in Launchpad](https://launchpad.net/intel)からわかった。  
 
