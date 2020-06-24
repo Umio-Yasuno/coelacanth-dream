@@ -215,6 +215,8 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | E2 | | Acton |
 | | E3 | | Acton |
 
+<!--  Lucianne (gfx909?)  -->
+
 <!--
 	VANGOGH 163F:00
 	gfx1\0\32 / gfx\10\33 [^13]
