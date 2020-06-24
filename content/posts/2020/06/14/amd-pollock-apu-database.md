@@ -25,10 +25,11 @@ noindex: false
 
 ## Pollock 概要 {#plk-summary}
 コードネーム *Pollock* は[Raven2](/tags/raven2)をベースとする省電力APU。  
-アーキテクチャと規模が、CPU は Zenアーキテクチャ、2-Core/4-Thread、CPU L3cache 4MB、  
-GPU は Vega/GCN5アーキテクチャ (gfx909)、総CU数 3基、総RB(RenderBackend)数 1基(4-ROP相当)、GPU L2cache 512KB。  
+アーキテクチャと規模は、CPU は Zenアーキテクチャ、2-Core/4-Thread、CPU L3cache 4MB、  
+GPU は Vega/GCN5アーキテクチャ [(gfx909)](/tags/gfx909)、総CU数 3基、総RB(RenderBackend)数 1基(4-ROP相当)、GPU L2cache 512KB。  
 製造プロセスは Global Foundries 14nm FinFet (14LP)。  
-パッケージにはBGAタイプの *FT5 パッケージ* が使われる。[^7]  
+
+パッケージには現状、BGAタイプの *FT5 パッケージ* が使われることが確認されている。[^7]  
 TDP は *FT5 パッケージ* で 4.8W。[^1]  
 ブースト時の電力リミットの仕様は、デフォルトで 4.8W、ピーク時で 9W、ピークからデフォルト移行時で 6W。[^1]  
 
@@ -49,13 +50,15 @@ Linux Kernel へのパッチに初めて *Pollock* という名が出てきた�
 
 [^12]: [soc/amd/common: Determine # of i2c controllers at runtime (I397b074e) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2057468)
 
-## Pollock 仕様(推測) {#plk-spec}
+`x86_model` は `20h` となる。  
+
+## Pollock 仕様 (推測) {#plk-spec}
 
 | AMD Pollock | |
 | :-- | :--: |
 | Socket | FT5 |
 | Memory Interface | 64-bit (1ch) |
-| CPU | *Zen* |
+| CPU | *Zen* <br>(Family 17h, Model 20h) |
 | &emsp;Max CPU Core/Thread | 2/4 |
 | &emsp;CPU L3cache | 4 MB |
 | &emsp;CPU Base Clock | (1.0 ~ 1.2 GHz) |
@@ -63,11 +66,11 @@ Linux Kernel へのパッチに初めて *Pollock* という名が出てきた�
 | GPU | *Vega (gfx909)* |
 | &emsp;Max GPU CU | 3 |
 | &emsp;Max GPU SP | 192 |
-| &emsp;Max ROP | 4(== 1-RB) |
+| &emsp;Max ROP | 4<br>(== 1-RB) |
 | &emsp;GPU L2cache | 512 KB |
 | &emsp;GPU Clock | 800 MHz [^6] |
 | Process | GF 14nm |
-| TDP | 4.8 W |
+| TDP | 4.8W |
 
 CPUのクロック仕様は主に Geekbenchの結果を元にしている。  
 末尾に `.gb5` を付けることで詳細を見ることができ、そこで大体の最大クロックがわかる。  

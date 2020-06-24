@@ -68,6 +68,13 @@ DAL は *Dali* の略称。
 
 Chromebook向け以外で *Dali* だとはっきり言えるのは現状 **AMD 3020e** のみ[^10]、**Athlon Silver 3050e** も *Dali* である可能性は高いが確認できていない。  
 
+{{< ins >}}
+
+**Athlon Silver 3050e** も x86\_Model `20h` であることが Geekbench の結果から確認できた。  
+{{< link >}}[HC HCAR357-MI - Geekbench Browser](https://browser.geekbench.com/v4/cpu/15554063){{< /link >}}
+
+{{< /ins >}}
+
 [^10]: [HP HP Laptop 15-ef1xxx - Geekbench Browser](https://browser.geekbench.com/v4/cpu/15465129)
 
 ……何があった？ GPUの Device ID だけでなく、CPU の判定までもややこしいなんて。  

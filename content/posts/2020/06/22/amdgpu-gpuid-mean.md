@@ -11,7 +11,7 @@ noindex: false
 AMD GPU を話題にすると時々出てくる *gfx908* だとか *gfx1012* といった文字列。  
 これが何を意味するかと言うと、AMD GPUのマシンタイプ、アーキテクチャであり、そのアーキテクチャが対応する命令や機能、存在するバグを示すために使われる。  
 
-ちなみに *gfx908* は [Arcturus](/tags/arcturus)、*gfx1012* は [Navi14](/tags/navi14)のアーキテクチャを示す。  
+ちなみに *gfx908* は [Arcturus](/tags/arcturus)、*gfx1012* は [Navi14](/tags/navi14) に採用されているアーキテクチャを示す。  
 
 {{< pindex >}}
 

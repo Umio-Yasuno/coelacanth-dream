@@ -136,8 +136,8 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | CF | R1305G | (6W[^8]) |
 | | DE[^9] | | |
 | | DF[^9] | | |
-| | E3 | | (6W[^8] Vega 3) |
-| | E4 | R1102G[^11] | (6W[^8] Vega 3) |
+| | E3[^9] | | (6W[^8] Vega 3) |
+| | E4[^9] | R1102G[^11] | (6W[^8] Vega 3) |
 | | | 3020e | |
 | | | 3050e | |
 
@@ -211,9 +211,9 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | DC | | (B8B 35W AM4) |
 | | DD | | (B6B 35W AM4) |
 | | DE | | (B4B 35W AM4) |
-| | E1 | | <!-- Acton --> |
-| | E2 | | <!-- Acton --> |
-| | E3 | | <!-- Acton --> |
+| | E1 | | Acton |
+| | E2 | | Acton |
+| | E3 | | Acton |
 
 <!--
 	VANGOGH 163F:00
