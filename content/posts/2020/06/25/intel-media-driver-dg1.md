@@ -1,5 +1,5 @@
 ---
-title: "Intel、media-driver に DG1 へ向けたパッチを投稿 ――GPGPUに傾いた DG1 のキャッシュ設定"
+title: "Intel、media-driver に DG1 へ向けたパッチを投稿  ―― GPGPUに傾いた DG1 のキャッシュ設定"
 date: 2020-06-25T10:11:44+09:00
 draft: false
 tags: [ "DG1", "Gen12" ]

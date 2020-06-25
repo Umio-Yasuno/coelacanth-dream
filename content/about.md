@@ -27,9 +27,8 @@ noindex: false
 自分が言いたいのは、自分は何も独占していないし、最も価値があるのは公式が公開してくれている情報であり、  
 そして、自分がペタペタ貼りまくっている脚注、リンクは是非確認してほしい、ということです。  
 
-
+## 連絡先 {#contact}
 <address>
-連絡先:  
 &emsp;Github: [Issues · Umio-Yasuno/umio-yasuno.github.io](https://github.com/Umio-Yasuno/umio-yasuno.github.io/issues)  
 &emsp;&emsp;Mail: <span class="mail"></span>
 </address><br>
