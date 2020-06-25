@@ -1,5 +1,5 @@
 ---
-title: "Intel、DG1 において OpenCL と oneAPI Level Zero をサポート ――巨大なキャッシュを持つ DG1"
+title: "Intel、DG1 において OpenCL と oneAPI Level Zero をサポート　―― 巨大なキャッシュを持つ DG1"
 date: 2020-06-20T06:56:57+09:00
 draft: false
 tags: [ "DG1", "Gen12" ]
