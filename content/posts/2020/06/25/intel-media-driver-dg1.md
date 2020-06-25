@@ -1,5 +1,5 @@
 ---
-title: "Intel、media-driver に DG1 へ向けたパッチを投稿 ――DG1 のキャッシュ設定"
+title: "Intel、media-driver に DG1 へ向けたパッチを投稿 ――GPGPUに傾いた DG1 のキャッシュ設定"
 date: 2020-06-25T10:11:44+09:00
 draft: false
 tags: [ "DG1", "Gen12" ]
@@ -12,6 +12,15 @@ Intel は、動画のデコード/エンコード/ポストプロセッシング
 {{< link >}}[[Upstream] DG1 open source stage 1 · intel/media-driver@de48276](https://github.com/intel/media-driver/commit/de482769db4f94a99d672c82dd250c9ea484b52a){{< /link >}}
 
 部分的なサポートということもあり、*DG1* サポートを有効にするビルドオプションはまだ無く、*DG1* がどの程度動画のデコード/エンコード/ポストプロセッシングをサポートするかは明らかにされていない。  
+
+{{< ins >}}
+
+*DG1* に向けたパッチ第2弾が投稿された。  
+{{< link >}}[[Upstream] DG1 open source stage 2 · intel/media-driver@bcfaf0b](https://github.com/intel/media-driver/commit/bcfaf0b43e02d14b373995523c1475d07442c1f9?short_path=acd8702){{< /link >}}
+動画のデコード/エンコード/ポストプロセッシングの概要が追加されたが、特別強化されている様ではなく、*Tiger Lake* と同等の機能となるようだ。  
+{{< link >}}<https://github.com/intel/media-driver/commit/bcfaf0b43e02d14b373995523c1475d07442c1f9?short_path=acd8702#diff-acd87025799e24be8c7e5078baa32897>{{< /link >}}
+
+{{< /ins >}}
 
 しかし、追加されたファイル/コードにより、[前回](/posts/2020/06/20/intel-dg1-support-opencl-levelzero/)判明した *DG1* が持つ大きなキャッシュが内部でどのように割り振られてるかがわかった。  
 
