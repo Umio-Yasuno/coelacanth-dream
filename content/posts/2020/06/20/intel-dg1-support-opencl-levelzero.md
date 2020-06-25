@@ -4,7 +4,7 @@ date: 2020-06-20T06:56:57+09:00
 draft: false
 tags: [ "DG1", "Gen12" ]
 keywords: [ "", ]
-categories: [ "Intel", "GPU", "Intel" ]
+categories: [ "Hardware", "GPU", "Intel" ]
 noindex: false
 ---
 

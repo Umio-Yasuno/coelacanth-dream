@@ -117,6 +117,12 @@ Linux Kernel へのパッチに初めて *Dali* という名前が出てきた�
 
 *Raven2* とその別リビジョンである *Dali* 、*Pollock* は当然違う `x86_Model` が与えられるべきなのだが、*Raven2* は *Picasso* と同じ `18h` となり、CPUID も共有する。  
 それだけでなく、*Dali* は製品によって `18h` 、または `20h` と分かれており、Chromebook向けでない製品の、またその一部が `18h` となる。[^16]  
+
+ > some non-Chrome OPN Dali APU use the same CPUID with Picasso.
+ > to identify those APU via reading the opn spare fuse from smu.
+ >
+ > 引用元: <cite>[soc/amd/picasso: load RV2 VBIOS with rv2 family OPN (I21f317e1) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2033051)</cite>
+
 *Picasso* とは違う `20h` が本来 *Raven2* に与えられるべき値と考えているのだが、何故そうなったのかは不明。  
 *Dali* がすべて `20h` となるならば、それが *Dali* が *Raven2* の別リビジョンとされることの理由としてまだ考えられたのだが。  
 *Pollock* はまだ実際の製品が確認できていないが、すべて `20h` となることを願う。  
