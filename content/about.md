@@ -7,6 +7,8 @@ tag: ""
 noindex: false
 ---
 
+<p></p>
+
 ## このサイトについて
 <img src="/image/site-image.webp" title="sleeping coelacanth" style="max-width: 48%;max-height: 64%; float:left; margin:.3em .5em 0 0; background-color: #556F6F">
 個人的にまとめたハードウェア系の情報や **"推測"** を公開するブログ的なもの。  

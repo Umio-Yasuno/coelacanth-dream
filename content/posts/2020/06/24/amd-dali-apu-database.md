@@ -31,8 +31,8 @@ GPU は Vega/GCN5アーキテクチャ [(gfx909)](/tags/gfx909)、総CU数 3基�
 [^4]: [AMD 3020e | AMD](https://www.amd.com/en/products/apu/amd-3020e#product-specs)
 [^5]: [AMD Ryzen™ 3 3250U | AMD](https://www.amd.com/en/products/apu/amd-ryzen-3-3250u#product-specs)
 
-コードネーム *Dali* の略称は *DAL* 。[^1]  
-Linux Kernel へのパッチに初めて *Dali* という名前が出てきたのは、2019/09/09 とされる。[^2]  
+コードネーム *Dali* の略称は *DAL* 。[^2]  
+Linux Kernel へのパッチに初めて *Dali* という名前が出てきたのは、2019/09/09 とされる。[^1]  
 
 [^1]: [[PATCH 0/2] Enable Dali for DC](https://lists.freedesktop.org/archives/amd-gfx/2019-September/039775.html)
 [^2]: [AMD Announces World’s Highest Performance Desktop and Ultrathin Laptop Processors at CES 2020 | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/amd-announces-worlds-highest-performance-desktop-and-ultrathin)

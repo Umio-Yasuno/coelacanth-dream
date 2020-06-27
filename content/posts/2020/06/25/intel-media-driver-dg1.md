@@ -17,6 +17,7 @@ Intel は、動画のデコード/エンコード/ポストプロセッシング
 
 *DG1* に向けたパッチ第2弾が投稿された。  
 {{< link >}}[[Upstream] DG1 open source stage 2 · intel/media-driver@bcfaf0b](https://github.com/intel/media-driver/commit/bcfaf0b43e02d14b373995523c1475d07442c1f9?short_path=acd8702){{< /link >}}
+
 動画のデコード/エンコード/ポストプロセッシングの概要が追加されたが、特別強化されている様ではなく、*Tiger Lake* と同等の機能となるようだ。  
 {{< link >}}<https://github.com/intel/media-driver/commit/bcfaf0b43e02d14b373995523c1475d07442c1f9?short_path=acd8702#diff-acd87025799e24be8c7e5078baa32897>{{< /link >}}
 
