@@ -8,7 +8,7 @@ categories: [ "Intel", "Hardware", "CPU" ]
 noindex: false
 ---
 
-先日、*Rocket Lake* の Geekbench 実行結果が登場、それを [APISAKさん (@TUM_APISAK) / Twitter](https://twitter.com/TUM_APISAK) を発見した。  
+先日、*Rocket Lake* の Geekbench 実行結果が登場、それを [APISAKさん (@TUM_APISAK) / Twitter](https://twitter.com/TUM_APISAK) 氏が発見し、話題となった。  
 {{< link >}} <https://twitter.com/TUM_APISAK/status/1276482336683511810> {{< /link >}}
 {{< link >}} [Intel Corporation Rocket Lake Client Platform - Geekbench Browser](https://browser.geekbench.com/v5/compute/1124595) {{< /link >}}
 
