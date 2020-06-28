@@ -407,14 +407,14 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | | F1 | | |
 | | F3 | | |
 | 7360 &darr; | 40 | | |
-| | 41 | Pro 5600M[^14] | |
+| | 41 | Pro 5600M[^pro5600m-youtube] | |
 | | C1 | | |
 | | C3 | | |
 | 7362 | | | (Navi12 VF) |
 
 [Page Top](#page_index)
 
-[^14]: <https://www.youtube-nocookie.com/embed/unG5uGqefmA>
+[^pro5600m-youtube]: <https://www.youtube-nocookie.com/embed/unG5uGqefmA>
 
 #### Navi21 / Sienna Cichlid ( gfx1030 ) {#navi21-gfx1030}
 Navi21: gfx1030 [^12]
