@@ -19,6 +19,14 @@ noindex: false
 GPU に関しては既出であるため、今回は特に触れない。  
 {{< link >}} [Intel、オープンソースドライバーに DG1 と Rocket Lake の関するコードを追加 ――DG1 は 96EU、RKL は 16EU または 32EU | Coelacanth's Dream](/posts/2020/05/08/intel-add-dg1-rkl-oss-driver/) {{< /link >}}
 
+{{< pindex >}}
+
+ * [推測](#guess)
+   * [コアあたりの容量が増やされていない L3キャッシュ](#rkl-l3cache)
+   * [Rocket Lake は AVX512 に対応するか？](#rkl-avx)
+
+{{< /pindex >}}
+
 ## 推測 {#guess}
 あくまでこうなる可能性があるという **推測** であり、*Rocket Lake* に関しては示した以上の情報は持ち合わせていない。  
 
