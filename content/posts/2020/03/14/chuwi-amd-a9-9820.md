@@ -2,7 +2,7 @@
 title: "CHUWIよりAMD A9-9820搭載MiniPC発売予定 & 推測"
 date: 2020-03-14T23:50:38+09:00
 draft: false
-# tags: [ "", ]
+tags: [ "Cato", ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU" ]
 noindex: false
