@@ -84,6 +84,13 @@ AVX512 に対応しないのであれば、L1データキャッシュ帯域を *
 *Rocket Lake* にはまだまだ謎があり、気になる点も多い。今後出てくる情報が楽しみだ。  
 個人的には、*Rocket Lake* への最適化のためのコードがコンパイラ、バックエンドに追加されれば対応する命令範囲も判明するため、それを待ち遠しく思っている。  
 
+| Data Cache | Skylake (Client) | Skylake (Server) | Ice Lake (Client) | Rocket Lake |
+| :-- | :--: | :--: | :--: | :--: |
+| L1D$ Size | 32KB | 32KB | 48KB | 48KB |
+| L1D$ Bandwidth<br>(byte/cycle) | 96B<br>(Load:2x32B)<br>(Store:1x32B) | 192B<br>(Load:2x64B?)<br>(Store:1x64B?) | 192B<br>(Load:2x64B)<br>(Store:1x64B or 2x32B) | 96B??(guess)<br>(Load:2x32B??)<br>(Store:1x32B??) |
+| L2$ Size | 256KB | 1024KB | 512KB | 512KB |
+| L2$ Peak Bandwidth (byte/cycle) | 64B | 64B | 64B | 64B? |
+| L3$ Size (per Core) | 2MB | 1.375MB | 2MB | 2MB |
 
 {{< ref >}}
 
