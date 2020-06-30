@@ -8,7 +8,7 @@ categories: [ "Intel", "Hardware", "CPU" ]
 noindex: false
 ---
 
-先日、*Rocket Lake* の Geekbench 実行結果が登場、それを [APISAKさん (@TUM_APISAK) / Twitter](https://twitter.com/TUM_APISAK) 氏が発見し、話題となった。  
+先日、*Rocket Lake* の Geekbench 実行結果が登場、それを [APISAK (@TUM_APISAK) / Twitter](https://twitter.com/TUM_APISAK) 氏が発見し、話題となった。  
 {{< link >}} <https://twitter.com/TUM_APISAK/status/1276482336683511810> {{< /link >}}
 {{< link >}} [Intel Corporation Rocket Lake Client Platform - Geekbench Browser](https://browser.geekbench.com/v5/compute/1124595) {{< /link >}}
 
@@ -49,7 +49,7 @@ AMD自身は増やした目的を明らかにしていないが、Hot Chips 31 �
 
 キャッシュ構成が *Ice Lake (Client)* と同じだとして、アーキテクチャ、実行ポートの構成もまた同じかは気になるところだ。  
 
-*Ice Lake (Client)* は AVX512命令が Port0 で実行可能となっており、[^icl-arch]  
+*Ice Lake (Client)* は AVX512命令が Port0 で実行可能となっており、  
 L1データキャッシュの帯域が、ロード 2x 64Byte、ストア 1x 64Byte(or 2x 32Byte) となっている。[^icl-arch]  
 
 [^icl-arch]: [Intel® 64 and IA-32 Architectures Optimization Reference Manual](https://software.intel.com/content/www/us/en/develop/download/intel-64-and-ia-32-architectures-optimization-reference-manual.html)
@@ -70,6 +70,8 @@ L1データキャッシュ帯域は、AVX512 実行においてデータ供給�
 
 *Ice Lake (Client)* アーキテクチャの CPUを 14nmプロセスで製造するとしたら、同様の問題が発生すると考えられ、*Rocket Lake* はデスクトップ向けとしては高いTDP枠を取るか、動作クロックを抑える必要が出てくるだろう。  
 AVX512 に対応しないのであれば、L1データキャッシュ帯域を *Ice Lake (Client)* や *Skylake (Server)* と同じものにする必要性は薄まり、そして *Skylake (Client)* と同じ帯域にすれば問題は回避できる。  
+また、実装に必要とされるリソースを節約することができる。  
+
 欠点として、当然 AVX512 に対応しないのだから、*Ice Lake* 等に用いたアピールを使えなくなる。  
 ただそれに関しては前例があり、*Sunny Cove* コアを搭載する *Lakefield* は対応しているはずの AVX/2/512 命令への対応が無効化されていた。  
 そして、*Ice Lake* の特徴の1つである、`AVX512-VNNI` 命令による高速な推論 **Intel DL Boost** の代わりか、GPU による推論の実行性能がアピールされていた。  
