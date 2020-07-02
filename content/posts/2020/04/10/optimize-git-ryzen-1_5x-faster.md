@@ -2,7 +2,7 @@
 title: "SHA-NI命令セットへの対応で最大1.5倍 Git の高速化が可能"
 date: 2020-04-10T10:56:35+09:00
 draft: false
-tags: [ "Zen", "Zen2", ]
+tags: [ "Zen", "Zen_2", ]
 keywords: [ "", ]
 categories: [ "Software", ]
 noindex: false

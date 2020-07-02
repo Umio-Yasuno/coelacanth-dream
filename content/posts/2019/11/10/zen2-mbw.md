@@ -2,7 +2,7 @@
 title: "Zen2のメモリ帯域"
 date: 2019-11-10T00:08:05+09:00
 draft: false
-tags: [ "Ryzen", "Zen2" ]
+tags: [ "Ryzen", "Zen_2" ]
 keywords: [ "Ryzen", "Zen2" ]
 categories: [ "Hardware", "AMD", "CPU" ]
 ---

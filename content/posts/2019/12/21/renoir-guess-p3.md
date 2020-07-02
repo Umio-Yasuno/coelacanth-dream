@@ -2,7 +2,7 @@
 title: "Renoirの情報アップデート&推測 Part3"
 date: 2019-12-21T00:27:47+09:00
 draft: false
-tags: ["Radeon", "GCN", "Raven", "GFX9", "gfx909", "Renoir", "Dali", "Zen2" ]
+tags: ["Radeon", "GCN", "Raven", "GFX9", "gfx909", "Renoir", "Dali", "Zen_2" ]
 keywords: [ "Radeon", "Renoir", "APU" ]
 categories: [ "Hardware", "AMD", "APU", "GPU" ]
 ---

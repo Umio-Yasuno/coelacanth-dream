@@ -2,7 +2,7 @@
 title: "Renoirの構造推測 Part2"
 date: 2019-12-02T23:51:20+09:00
 draft: false
-tags: ["Radeon", "GCN", "Raven", "GFX9", "gfx909", "Renoir", "Zen2" ]
+tags: ["Radeon", "GCN", "Raven", "GFX9", "gfx909", "Renoir", "Zen_2" ]
 keywords: [ "Radeon", "Renoir", "APU" ]
 categories: [ "Hardware", "AMD", "APU", "GPU" ]
 ---

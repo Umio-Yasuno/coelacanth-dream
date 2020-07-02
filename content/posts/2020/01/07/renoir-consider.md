@@ -3,7 +3,7 @@ title: "Ryzen 4000 U/H-Series (Renoir) 考察"
 date: 2020-01-07T21:25:17+09:00
 draft: true
 draft: false
-tags: ["Radeon", "GCN", "Raven", "GFX9", "gfx909", "Renoir", "Zen2" ]
+tags: ["Radeon", "GCN", "Raven", "GFX9", "gfx909", "Renoir", "Zen_2" ]
 keywords: [ "Radeon", "Renoir", "APU" ]
 categories: [ "Hardware", "AMD", "APU", "GPU" ]
 ---

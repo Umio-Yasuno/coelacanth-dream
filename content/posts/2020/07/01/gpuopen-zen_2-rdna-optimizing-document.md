@@ -2,7 +2,7 @@
 title: "AMD GPUOpen、Zen 2 CPU、RDNA GPU へのソフトウェア最適化資料を公開"
 date: 2020-07-01T17:40:02+09:00
 draft: false
-tags: [ "Zen2", "RDNA" ]
+tags: [ "Zen_2", "RDNA" ]
 keywords: [ "", ]
 categories: [ "Hardware", "CPU", "GPU" ]
 noindex: false
@@ -10,7 +10,7 @@ noindex: false
 
 AMD GPUOpen は *Zen 2 アーキテクチャ* 、 *RDNA アーキテクチャ* へ向けたソフトウェア最適化のための資料を公開した。  
 {{< link >}}[Let's build... 2020 - GPUOpen](https://gpuopen.com/lets-build/){{< /link >}}
-内容としては、以前より Let's Build…2020 と称し、Youtube で公開されたプレゼンテーション動画と同じであるが、PDF/PPTX ファイルも公開されたことでより資料として確認しやすく、そして使いやすくなった。  
+内容としては、以前より **Let's Build…2020** と称し、Youtube で公開したプレゼンテーション動画と同じであるが、PDF/PPTX ファイルも公開されたことでより資料として確認しやすく、そして使いやすくなった。  
 {{< link >}}[AMD Ryzen™ Processor Software Optimization - GPUOpen_Let’sBuild2020_AMD Ryzen™ Processor Software Optimization.pdf](http://gpuopen.com/wp-content/uploads/slides/GPUOpen_Let%E2%80%99sBuild2020_AMD%20Ryzen%E2%84%A2%20Processor%20Software%20Optimization.pdf){{< /link >}}
 {{< link >}}[Optimizing for the Radeon RDNA architecture - GPUOpen_Let’sBuild2020_Optimizing for the Radeon RDNA Architecture.pdf](http://gpuopen.com/wp-content/uploads/slides/GPUOpen_Let%E2%80%99sBuild2020_Optimizing%20for%20the%20Radeon%20RDNA%20Architecture.pdf){{< /link >}}
 
