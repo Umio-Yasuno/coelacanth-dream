@@ -71,7 +71,8 @@ SIMDユニットの使用率は変わらないが、low の命令群を処理し
 上記画像を見てわかるように、*RDNA* は CU内にスカラユニット(SALU) を SIMDユニットと同数備えるため、Wave64 を 2つの Wave32 として実行するなら、スカラ命令も 2回発行できていいように思うが、実際は Wave64(64スレッド) に対して 1回だけとなる。  
 
 スカラユニットは条件分岐や割り込み、アドレス計算等の制御処理を担当し、その点では前世代の *GCN* と変わらない。  
-ベクタでは 2つの Wave32 に分けて実行するが、制御は Wave あたりで行なわれるため、スカラ命令は 1回だけ、ということなのかもしれないが、それがどのように効果的までかは自分の頭が及ばない。上記のスレッド数の件と合わせて、詳しい方、ご教授お願いします。  
+ベクタでは 2つの Wave32 に分けて実行するが、制御は Wave あたりで行なわれるため、スカラ命令は 1回だけ、ということなのかもしれないが、それ自体がどのように効果的までかは自分の頭が及ばない。上記のスレッド数の件と合わせて、詳しい方、ご教授お願いします。  
+シェーダーの実行に細かい制御はそこまで必要でないとか？  
 
 {{< ref >}}
  * [Optimizing for the Radeon RDNA architecture - GPUOpen_Let’sBuild2020_Optimizing for the Radeon RDNA Architecture.pdf](http://gpuopen.com/wp-content/uploads/slides/GPUOpen_Let%E2%80%99sBuild2020_Optimizing%20for%20the%20Radeon%20RDNA%20Architecture.pdf)
