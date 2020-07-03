@@ -59,7 +59,7 @@ AMDは以前3D積層によってコンピュータを1つのパッケージに�
 
 {{< ins datetime="2020-03-07T13:20:40" >}}
 
-しかし従来AMDが用いていた '7nm+' という表記を使わなかったことは、必ずしもTSMC N7+を採用するとは限らないことを意味する、と[AnandTech](anandtech.com)は指摘している。  
+しかし従来AMDが用いていた '7nm+' という表記を使わなかったことは、必ずしもTSMC N7+を採用するとは限らないことを意味する、と[AnandTech](https://www.anandtech.com)は指摘している。  
 [AMD Clarifies Comments on 7nm / 7nm+ for Future Products: EUV Not Specified](https://www.anandtech.com/show/15589/amd-clarifies-comments-on-7nm-7nm-for-future-products-euv-not-specified)  
 そのため、N7プロセスを改良したN7Pプロセスを採用する可能性もある。  
 *N7P* はN7とデザインに互換性があるものの、EUV露光技術は使われない。  

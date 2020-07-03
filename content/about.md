@@ -17,6 +17,8 @@ noindex: false
 ネット上で広まっている噂を積極的に取り上げることはありません、たぶん。  
 速報性には期待しないでください。  
 
+ただのオタク。  
+
 <div style="clear:left"></div>
 
 このサイトは Markdown で記事を書き、[Hugo](https://github.com/gohugoio/hugo)でビルド、そして Github Page のサービスを利用して公開しています。  

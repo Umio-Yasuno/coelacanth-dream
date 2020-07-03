@@ -30,6 +30,7 @@ Wave は コンピュートユニット(CU) 内の SIMDユニットが実行す�
 ## Wave64 で実行する理由 {#why-wave64}
 
 以前より、通常 Pixel Shader は Wave64、Vertex/Tess/Geometry Shader は Wave32 で実行するようにしていたのを、後者も Wave64 で実行するようにしたのが今回の変更点となる。  
+また、[RDNA_Architecture_public.pdf](https://gpuopen.com/wp-content/uploads/2019/08/RDNA_Architecture_public.pdf) には Compute Shader は Wave32 とあるが、何か問題が発生するらしく、**RadeonSI** では Wave64 となっている。  
 
 Vertex/Tess/Geometry Shader も Wave64 で実行する方が良いと考える理由に、GPUドライバーの開発者である [Marek Olšák](https://gitlab.freedesktop.org/mareko) 氏は以下の項目をあげている。  
 
@@ -73,6 +74,12 @@ SIMDユニットの使用率は変わらないが、low の命令群を処理し
 スカラユニットは条件分岐や割り込み、アドレス計算等の制御処理を担当し、その点では前世代の *GCN* と変わらない。  
 ベクタでは 2つの Wave32 に分けて実行するが、制御は Wave あたりで行なわれるため、スカラ命令は 1回だけ、ということなのかもしれないが、それ自体がどのように効果的までかは自分の頭が及ばない。上記のスレッド数の件と合わせて、詳しい方、ご教授お願いします。  
 シェーダーの実行に細かい制御はそこまで必要でないとか？  
+
+終わりに、*RDNA アーキテクチャ* は Wave32 と Wave64 のどちらにも対応し、それぞれに利点がある。処理によってどちらが優れているかは検証を重ねる必要がある。よって、今回のようなチューニングがこれからも続けられると思われる。  
+これは、*RDNA アーキテクチャ* には柔軟性があり、それだけ性能を引き出す余地があると言える。  
+今後のさらなる *RDNA GPU* に向けた最適化に期待したい。  
+
+そして、その様子をオープンソースであることにより追えるのは、自分のようなオタクにとってありがたい話だ。  
 
 {{< ref >}}
  * [Optimizing for the Radeon RDNA architecture - GPUOpen_Let’sBuild2020_Optimizing for the Radeon RDNA Architecture.pdf](http://gpuopen.com/wp-content/uploads/slides/GPUOpen_Let%E2%80%99sBuild2020_Optimizing%20for%20the%20Radeon%20RDNA%20Architecture.pdf)
