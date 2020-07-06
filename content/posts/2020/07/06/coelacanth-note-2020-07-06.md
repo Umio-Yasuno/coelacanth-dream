@@ -54,16 +54,17 @@ UEFI設定、CPU/GPUのクロック、電圧設定だって、どこまでも自
 
 何にしたって人の価値観を簡単に変えられる訳がないため、自分は自分なりの価値観で好きなことをやり続けるしかない。  
 
- > &ensp;しかし貧しい私は夢を見るしかない  
- > &ensp;それを代わりにあなたの足元に広げよう  
- > &ensp;そっと踏んでほしい、それは私の夢だから  
+ > &ensp;&ensp;&ensp;&ensp;しかし貧しい私は夢を見るしかない  
+ > &ensp;&ensp;&ensp;&ensp;それを代わりにあなたの足元に広げよう  
+ > &ensp;&ensp;&ensp;&ensp;そっと踏んでほしい、それは私の夢だから  
  >
  > 一部訳  
  > 原文全体: [Public Domain Poetry - Aedh Wishes For The Cloths Of Heaven by William Butler Yeats](http://public-domain-poetry.com/william-butler-yeats/aedh-wishes-for-the-cloths-of-heaven-99)
 
 映画「リベリオン」で知った好きな詩。映画のアクションも最高だった。  
 まぁ自分というのはそういう性分だし、そうありたいと思っているのだろう。  
-<span class="hide">こんな所で書くのもあれだけど、サイト名の *Coelacanth's Dream* にはそういう意味を込めている。</span>
+<span class="hide">こんな所で書くのもあれだけど、サイト名の *Coelacanth's Dream* にはそういう意味も込めている。</span>
 
 それでもサイト自体の改善策等は考え続けているため、意見や提案がありましたら [Contact](/about/#contact) より連絡下さると嬉しいです。  
 ……今時連絡手段が Github とメールしか無いってのが根本的な問題かもしれない。  
+ただ自分にはコミュニティの形成もそういった場として機能させる気もないため、それだけの方が合っているように思う。  
