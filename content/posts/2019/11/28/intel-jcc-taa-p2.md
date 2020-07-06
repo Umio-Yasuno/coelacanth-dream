@@ -1,7 +1,7 @@
 ---
 title: "PhoronixによるJCCエラッタ、TAAのベンチマーク結果まとめ"
 date: 2019-11-28T05:53:29+09:00
-draft: false
+draft: true
 tags: [ "Errata", "Vulnerability" ]
 keywords: [ "Intel", "JCC", "Errata", "TAA", "Vulnerability"  ]
 categories: [ "Hardware", "Intel", "CPU", "Security" ]
