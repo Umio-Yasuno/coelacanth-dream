@@ -23,7 +23,7 @@ CPU は 2-Core/4-Thread、Base 1.0GHz、Boost 2.3GHz、GPU は 3CU、1.1GHz(1100
 **AMD 3020e** 、**AMD 3015e** はそこに含まれるらしい。  
 
 **AMD 3000 Series Mobile Processors with Radeon™ Graphics** の SKU が大々的に発表されないのは、Intel の 10nm Tremontコア採用のモバイル向けプロセッサ *Jasper Lake* への対抗とするため、まだ今は隠し玉、カウンターとして持っているのではないかという気がする。  
-*Jasper Lake* も TDP(PL1) が同じ 6W に対応することがわかっており、搭載製品はぶつかり合う[^jsl-pl1]。  
+*Jasper Lake* も TDP(PL1) が同じ 6W に対応することがわかっており、搭載製品はぶつかり合うことが予想される[^jsl-pl1]。  
 *Jasper Lake* はある程度のプロセッサの情報は出ており、登場が待ち遠しいが、実際の製品情報に関しては中々に焦らされている。  
 
 [^jsl-pl1]: [jasperlake: enable DPTF functionality for dedede (I17b6e4e9) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/41668)
@@ -40,6 +40,8 @@ CPU は 2-Core/4-Thread、Base 1.0GHz、Boost 2.3GHz、GPU は 3CU、1.1GHz(1100
 
 [^plk-4_8W]: [mb/google/zork: update power parameters to 4.8w for dalboz (I711d1109) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2135098)
 
+ * [AMD Pollock APU Database | Coelacanth's Dream](/posts/2020/06/14/amd-pollock-apu-database/)  
+ * [AMD Dali APU Database | Coelacanth's Dream](/posts/2020/06/24/amd-dali-apu-database/)  
 
 | Product (Fam17h Model20h) | Core/Thread | CPU Base/Boost | GPU CU | GPU Clock | TDP |
 | :-- | :--: | :--: | :--: | :--: | :--: |
