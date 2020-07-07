@@ -13,9 +13,16 @@ TDP は 4.8-6W の範囲にあり、Zen系APUとしては最も低いTDPとな�
 {{< link >}}[AMD 3015e | AMD](https://www.amd.com/en/product/10161){{< /link >}}
 {{< link >}}[Processor Specifications | AMD](https://www.amd.com/en/products/specifications/processors/){{< /link >}}
 
+{{< ins datetime="2020-07-08T01:08:31" >}}
+
+再度確認したところサイトから記載が消されていたため、現在では信頼できる情報元を示すことができない記事となっています。  
+
+{{< /ins >}}
+
 ## AMD 3015e 仕様
-CPU は 2-Core/4-Thread、Base 1.0GHz、Boost 2.3GHz、GPU は 3CU、1.1GHz(1100MHz)、  
-メモリは DDR4 2667MHz、デュアルチャネルに対応している。  
+CPU は 2-Core/4-Thread、Base 1.0GHz、Boost 2.3GHz、GPU は 3CU、1.1GHz(1100MHz)、メモリは DDR4 2667MHz、デュアルチャネルに対応している。  
+プロセスルールは 14nm。  
+
 似た製品名である **AMD 3020e** と比較すると、製品のセグメントナンバーこそ小さいが、SMTが有効、GPUクロックも 0.1GHz(100MHz) と勝り、ただCPUクロックのみが **AMD 3020e** より抑えられている。  
 恐らく TDP 6W時の仕様が表記していると思われ、CPUクロックが抑えられている分GPUクロックを上げる余地があり、それが **AMD 3020e** より 0.1GHz 高いGPUクロックに繋がっているのだろう。  
 
