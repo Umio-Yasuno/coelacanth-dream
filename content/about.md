@@ -33,6 +33,8 @@ noindex: false
 そして、自分がペタペタ貼りまくっている脚注、リンクは是非確認してほしい、ということです。  
 
 ## 連絡先 {#contact}
+サイトへの意見、要望等がありましたらこちらからお願いします。  
+
 <address>
 &emsp;Github: [Issues · Umio-Yasuno/umio-yasuno.github.io](https://github.com/Umio-Yasuno/umio-yasuno.github.io/issues)  
 &emsp;&emsp;Mail: <span class="mail"></span>
