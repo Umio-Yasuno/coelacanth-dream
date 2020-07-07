@@ -40,6 +40,16 @@ CPU は 2-Core/4-Thread、Base 1.0GHz、Boost 2.3GHz、GPU は 3CU、1.1GHz(1100
 
 [^plk-4_8W]: [mb/google/zork: update power parameters to 4.8w for dalboz (I711d1109) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2135098)
 
+{{< ins >}}
+
+**AMD 3015e** の名を調べたところ、[The National Grid for Learning - Devices](https://onboarding.lgfl.net/smartbuy/devices)が引っ掛かり、そして搭載される製品のPDFを見ると Chipset に *AMD Pollock Platform* とある。また、メモリは 4GB Soldered LPDDR4-2400。  
+ファイルの日付は 2020/06/11 であるため、こちらの方が AMD が公開した仕様より前のものではある。  
+
+なおも複雑。  
+
+
+{{< /ins >}}
+
  * [AMD Pollock APU Database | Coelacanth's Dream](/posts/2020/06/14/amd-pollock-apu-database/)  
  * [AMD Dali APU Database | Coelacanth's Dream](/posts/2020/06/24/amd-dali-apu-database/)  
 
