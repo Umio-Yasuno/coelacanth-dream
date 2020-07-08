@@ -61,7 +61,7 @@ UEFI設定、CPU/GPUのクロック、電圧設定だって、どこまでも自
  > 一部訳  
  > 原文全体: [Public Domain Poetry - Aedh Wishes For The Cloths Of Heaven by William Butler Yeats](http://public-domain-poetry.com/william-butler-yeats/aedh-wishes-for-the-cloths-of-heaven-99)
 
-映画「リベリオン」で知った好きな詩。映画のアクションも最高だった。  
+映画「リベリオン」で知った好きな詩。映画のアクションも最高だった。クリスチャン・ベールがイケメン。  
 まぁ自分というのはそういう性分だし、そうありたいと思っているのだろう。  
 <span class="hide">こんな所で書くのもあれだけど、サイト名の *Coelacanth's Dream* にはそういう意味も込めている。</span>
 

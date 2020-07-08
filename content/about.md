@@ -32,6 +32,18 @@ noindex: false
 自分が言いたいのは、自分は何も独占していないし、最も価値があるのは公式が公開してくれている情報であり、  
 そして、自分がペタペタ貼りまくっている脚注、リンクは是非確認してほしい、ということです。  
 
+## 寄付、支援 {#support}
+率直に言うと、寄付、支援してくれた方に特別見返りを約束することは出来ません。  
+ですが、支援自体は活動のモチベーションとなり、このサイトが存続する確率が高まります。  
+そして、自分が行なっている活動の価値を推し量るための指標にもなります。  
+
+頂いた支援金の用途には、OSSプロジェクトへの支援、ドメイン等サイト管理、検証用ハードウェアの購入を想定しています。  
+
+決済方法には [Stripe](https://stripe.com/)、[PayPal](https://www.paypal.com)が使用できます。金額は *&yen;1、 $0.01* から選べます。  
+
+<a href="https://liberapay.com/Umio-Yasuno/donate" target="_blank"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg" style="border:none;margin:0;"></a>
+<img src="https://img.shields.io/liberapay/patrons/Umio-Yasuno.svg?logo=liberapay" style="border:none;margin:0;">
+
 ## 連絡先 {#contact}
 サイトへの意見、要望等がありましたらこちらからお願いします。  
 
