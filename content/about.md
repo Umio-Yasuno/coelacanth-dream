@@ -39,14 +39,13 @@ noindex: false
 
 頂いた支援金の用途には、OSSプロジェクトへの支援、ドメイン等サイト管理、検証用ハードウェアの購入を想定しています。  
 
-決済方法には [Stripe](https://stripe.com/)、[PayPal](https://www.paypal.com)が使用できます。金額は *&yen;1、 $0.01* から選べます。  
+決済方法には [Stripe](https://stripe.com/)、[PayPal](https://www.paypal.com)が使用できます。金額は *&yen;1* または *$0.01* から選ぶことが出来ます。  
 {{< link >}}[Liberapay を使って Umio-Yasuno に寄付する](https://liberapay.com/Umio-Yasuno/donate){{< /link >}}
 
-<a href="https://liberapay.com/Umio-Yasuno/donate" target="_blank"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg" style="border:none;margin:0;"></a>
+<a href="https://liberapay.com/Umio-Yasuno/donate" target="_blank"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg" style="border:none;margin:0;" width="83px" height="30px"></a>
 
 ## 連絡先 {#contact}
-サイトへの意見、要望等がありましたらこちらからお願いします。  
-
+サイトへの意見、要望等がありましたらこちらからお願いします。
 <address>
 &emsp;Github: [Issues · Umio-Yasuno/umio-yasuno.github.io](https://github.com/Umio-Yasuno/umio-yasuno.github.io/issues)  
 &emsp;&emsp;Mail: <span class="mail"></span>
