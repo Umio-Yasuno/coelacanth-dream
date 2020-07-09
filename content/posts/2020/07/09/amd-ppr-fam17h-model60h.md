@@ -69,6 +69,9 @@ AMD は ISSCC 2020 にて、*Zen 2 アーキテクチャ* の CCX構成に、*Ra
 [^isscc-2020-zen2]: [Zen 2: The AMD 7nm Energy-Efficient High-Performance x86-64 Microproc…](https://www.slideshare.net/AMD/zen-2-the-amd-7nm-energyefficient-highperformance-x8664-microprocessor-core),<br> <https://image.slidesharecdn.com/isscc2020zen2finalfordistribution-20200224-200224225255/95/zen-2-the-amd-7nm-energyefficient-highperformance-x8664-microprocessor-core-9-638.jpg?cb=1582584849>
  
 結局の所、今回の `Model 60-67h` プロセッサが TDP 4.5W から対応可能というのは、意図が読み切れないところがある。  
+また、Device ID も `0x1636` だけでは足りなくなるはずだ。  
+
+この世代のAPUも複雑になる気がしてきた。  
 
 | Family17h Processor | CPU Arch | x86\_Model |
 | :-- | :--: | :--: |

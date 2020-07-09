@@ -1,7 +1,7 @@
 ---
 title: "【雑記】 シーラカンスが見た夢　―― Firefoxの設定とかお金とか 【2020-07-06】"
 date: 2020-07-06T07:12:47+09:00
-draft: false
+draft: true
 # tags: [ "", ]
 keywords: [ "", ]
 categories: [ "Diary", ]
