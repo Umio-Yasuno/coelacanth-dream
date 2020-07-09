@@ -12,7 +12,7 @@ noindex: false
 ## このサイトについて
 <img src="/image/site-image.webp" title="sleeping coelacanth" style="max-width: 48%;max-height: 64%; float:left; margin:.3em .5em 0 0; background-color: #556F6F">
 個人的にまとめたハードウェア系の情報や **"推測"** を公開するブログ的なもの。  
-公式がまだ正式発表していなかったり、決して大きな声ではしてくれない話を語ってみたくて活動を始めました。  
+公式がまだ正式発表していなかったり、決して大きな声ではしてくれない話を語り、ハードウェアの魅力を伝えたいと思い活動を始めました。  
 情報元は、信頼できる公式のオープンソースコード等や公式資料。  
 知識はAMD CPU/GPUに偏っています。Intel CPU/GPUは少しだけ。NVIDIAはさっぱり。  
 ネット上で広まっている噂を積極的に取り上げることはありません、たぶん。  
@@ -40,9 +40,9 @@ noindex: false
 頂いた支援金の用途には、OSSプロジェクトへの支援、ドメイン等サイト管理、検証用ハードウェアの購入を想定しています。  
 
 決済方法には [Stripe](https://stripe.com/)、[PayPal](https://www.paypal.com)が使用できます。金額は *&yen;1、 $0.01* から選べます。  
+{{< link >}}[Liberapay を使って Umio-Yasuno に寄付する](https://liberapay.com/Umio-Yasuno/donate){{< /link >}}
 
 <a href="https://liberapay.com/Umio-Yasuno/donate" target="_blank"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg" style="border:none;margin:0;"></a>
-<img src="https://img.shields.io/liberapay/patrons/Umio-Yasuno.svg?logo=liberapay" style="border:none;margin:0;">
 
 ## 連絡先 {#contact}
 サイトへの意見、要望等がありましたらこちらからお願いします。  
