@@ -11,7 +11,7 @@ noindex: false
 AMD は 2020/07/08付で **Processor ProgrammingReference (PPR)for AMD Family 17h Model 60h, Revision A1 Processors** を公開した。  
 {{< link >}}[Tech Docs | AMD](https://www.amd.com/en/support/tech-docs?keyword=family+17h+model+60h){{< /link >}}
 
-`Family 17h Model 60h` は、TSMC 7nmプロセスで製造される、CPU は *Zen 2 アーキテクチャ* 最大 8-Core/16-Thread、GPU は *Vega アーキテクチャ (gfx908)* 最大 8CU、最大 2-Render Backend(8-ROP相当)の APU、*Renoir* を指す。  
+`Family 17h Model 60h` は *Renoir* APU を指し、CPU は *Zen 2 アーキテクチャ* 最大 8-Core/16-Thread、GPU は *Vega アーキテクチャ (gfx908)* 最大 8CU、最大 2-Render Backend(8-ROP相当)、TSMC 7nmプロセスで製造される。  
 
 `Model 60-67h` プロセッサ、*Renoir* は高いエネルギー効率と優れた性能を実現し、ラップトップ、デスクトップ環境のニーズを満たすため開発された、第9世代APUとしている。  
 特長として、内部バスに *AMD Infinity Fabric (Scalable Data Fabric/SDF)* を採用しており、それによって最小限のレイテンシ、最大化された帯域幅の利用効率を可能とし、システム全体の性能を向上させている。  
@@ -34,6 +34,12 @@ TDP は、モバイル向けのソリューションで {{< comple >}}Ryzen Mobi
 
 今回公開された資料で気になるのは、x86\_Model の範囲を `Model 60-67h` としている点、対応TDP の範囲を 4.5W-55W としている点だ。  
 そして、ここから先は個人の推測、妄想が多分に含まれることを留意していただきたい。  
+
+{{< ins >}}
+
+それと、PCIe の Gen が明記されていなかったが、これ以上言ってもどうにもならん。  
+
+{{< /ins >}}
 
 ### x86\_Model から見えること {#rn-x86_model}
 x86_Model が `Model 60-6Fh` ではなく、`Model 60-67h` と若干中途半端になっていることには心当たりがあり、恐らく *Raven* と *Picasso* と同じパターンと思われる。  
