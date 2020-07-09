@@ -8,7 +8,7 @@ categories: [ "Hardware", "AMD", "APU" ]
 noindex: false
 ---
 
-AMD は 2020/07/08付で **Processor ProgrammingReference (PPR)for AMD Family 17h Model 60h, Revision A1 Processors** を公開した。  
+AMD は 2020/07/08付で **Processor ProgrammingReference (PPR) for AMD Family 17h Model 60h, Revision A1 Processors** を公開した。  
 {{< link >}}[Tech Docs | AMD](https://www.amd.com/en/support/tech-docs?keyword=family+17h+model+60h){{< /link >}}
 
 `Family 17h Model 60h` は *Renoir* APU を指し、CPU は *Zen 2 アーキテクチャ* 最大 8-Core/16-Thread、GPU は *Vega アーキテクチャ (gfx908)* 最大 8CU、最大 2-Render Backend(8-ROP相当)、TSMC 7nmプロセスで製造される。  
