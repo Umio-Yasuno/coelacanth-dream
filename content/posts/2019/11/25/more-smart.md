@@ -1,7 +1,7 @@
 ---
 title: "もっとスマートを"
 date: 2019-11-25T04:28:59+09:00
-draft: false
+draft: true
 tags: [ "Hugo", ]
 keywords: [ "Hugo", "Theme" ]
 categories: [ "Diary", ]

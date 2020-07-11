@@ -1,7 +1,7 @@
 ---
 title: "米AmazonにSapphire Nitro+ RX 5500 XT Special Edition現る"
 date: 2019-12-10T15:25:27+09:00
-draft: false
+draft: true
 tags: [ "Radeon", "RDNA", "Navi14", "GFX10", "gfx1012" ]
 keywords: [ "Radeon", "Navi14" ]
 categories: [ "Hardware", "AMD", "GPU" ]

@@ -1,7 +1,7 @@
 ---
 title: "もっとクールを"
 date: 2019-11-18T19:06:20+09:00
-draft: false
+draft: true
 tags: [ "Hugo", ]
 keywords: [ "Hugo", "Theme" ]
 categories: [ "Diary", ]

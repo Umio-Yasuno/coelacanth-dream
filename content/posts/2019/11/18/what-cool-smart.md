@@ -1,7 +1,7 @@
 ---
 title: "クールとかスマートとか"
 date: 2019-11-18T00:00:57+09:00
-draft: false
+draft: true
 tags: [ "Hugo", ]
 keywords: [ "Hugo", "Theme" ]
 categories: [ "Diary", ]

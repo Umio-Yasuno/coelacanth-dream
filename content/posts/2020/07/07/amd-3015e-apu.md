@@ -1,5 +1,5 @@
 ---
-title: "AMD、TDP 4.8-6W の AMD 3015e APU の仕様をひっそりと公開"
+title: "AMD、TDP 4.8-6W の AMD 3015e APU の仕様をひっそりと公開 【追記: クロック、メモリ仕様が修正され、TDP も 6Wに】"
 date: 2020-07-07T20:34:52+09:00
 draft: false
 tags: [ "Raven2", "Dali", "Pollock" ]
@@ -9,8 +9,10 @@ noindex: false
 ---
 
 AMDの新たな省電力モバイル向けAPU、**AMD 3015e** の仕様が公式サイトより公開されていた。  
-TDP は 4.8-6W の範囲にあり、Zen系APUとしては最も低いTDPとなっている。  
-{{< link >}}[AMD 3015e | AMD](https://www.amd.com/en/product/10161){{< /link >}}
+<del>TDP は 4.8-6W の範囲にあり、Zen系APUとしては最も低いTDPとなっている。</del>  
+情報が更新され、再度掲載されたが TDP 6W になっている。  
+以前のバージョンで掲載されたのは別の *Pollock* の仕様だったのかもしれない。  
+{{< link >}}[AMD 3015e | AMD](https://www.amd.com/en/products/apu/amd-3015e#product-specs){{< /link >}}
 {{< link >}}[Processor Specifications | AMD](https://www.amd.com/en/products/specifications/processors/){{< /link >}}
 
 {{< ins datetime="2020-07-08T01:08:31" >}}
@@ -20,11 +22,14 @@ TDP は 4.8-6W の範囲にあり、Zen系APUとしては最も低いTDPとな�
 {{< /ins >}}
 
 ## AMD 3015e 仕様
-CPU は 2-Core/4-Thread、Base 1.0GHz、Boost 2.3GHz、GPU は 3CU、1.1GHz(1100MHz)、メモリは DDR4 2667MHz、デュアルチャネルに対応している。  
-プロセスルールは 14nm。  
+<del>CPU は 2-Core/4-Thread、Base 1.0GHz、Boost 2.3GHz、GPU は 3CU、1.1GHz(1100MHz)、メモリは DDR4 2667MHz、デュアルチャネルに対応している。</del>  
+CPU は 2-Core/4-Thread、Base 1.2GHz、Boost 2.3GHz、GPU は 3CU、600MHz(!)、メモリは DDR4 1600MHz(!) シングルチャネル。  
+ソケットは *FT5* であり、プロセスルールは 14nm。  
 
-似た製品名である **AMD 3020e** と比較すると、製品のセグメントナンバーこそ小さいが、SMTが有効、GPUクロックも 0.1GHz(100MHz) と勝り、ただCPUクロックのみが **AMD 3020e** より抑えられている。  
-恐らく TDP 6W時の仕様が表記していると思われ、CPUクロックが抑えられている分GPUクロックを上げる余地があり、それが **AMD 3020e** より 0.1GHz 高いGPUクロックに繋がっているのだろう。  
+<del>似た製品名である **AMD 3020e** と比較すると、製品のセグメントナンバーこそ小さいが、SMTが有効、GPUクロックも 0.1GHz(100MHz) と勝り、ただCPUクロックのみが **AMD 3020e** より抑えられている。  
+恐らく TDP 6W時の仕様が表記していると思われ、CPUクロックが抑えられている分GPUクロックを上げる余地があり、それが **AMD 3020e** より 0.1GHz 高いGPUクロックに繋がっているのだろう。</del>  
+
+GPUクロックがかなり抑えられており、前情報からは確認されなかった 600MHzとなっている。  
 
 また、今回初めて気付いたが、製品ラインに **AMD 3000 Series Mobile Processors with Radeon™ Graphics** が追加されており、  
 **AMD 3020e** 、**AMD 3015e** はそこに含まれるらしい。  
@@ -42,8 +47,9 @@ CPU は 2-Core/4-Thread、Base 1.0GHz、Boost 2.3GHz、GPU は 3CU、1.1GHz(1100
 
 [^ft5-sc]: [soc/amd/picasso: Add Kconfig option for chip footprint (Ia4663d38) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/39867/4)
 
-このあたりはなおも複雑であり、個人的に TDP 4.8W の領域は *Pollock* が担当するものと思っていたため[^plk-4_8W]、**AMD 3015e** の登場には驚かされた。  
-*FT5 BGAパッケージ* は省電力というよりは低コストに傾けられているのだろうか？  
+<del>このあたりはなおも複雑であり、個人的に TDP 4.8W の領域は *Pollock* が担当するものと思っていたため[^plk-4_8W]、**AMD 3015e** の登場には驚かされた。  
+*FT5 BGAパッケージ* は省電力というよりは低コストに傾けられているのだろうか？</del>  
+
 
 [^plk-4_8W]: [mb/google/zork: update power parameters to 4.8w for dalboz (I711d1109) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2135098)
 
@@ -57,6 +63,8 @@ CPU は 2-Core/4-Thread、Base 1.0GHz、Boost 2.3GHz、GPU は 3CU、1.1GHz(1100
 
 {{< /ins >}}
 
+*FT5 BGAパッケージ* であることから、**AMD 3015e** は正しく *Pollock* と見られる。  
+
  * [AMD Pollock APU Database | Coelacanth's Dream](/posts/2020/06/14/amd-pollock-apu-database/)  
  * [AMD Dali APU Database | Coelacanth's Dream](/posts/2020/06/24/amd-dali-apu-database/)  
 
@@ -66,7 +74,7 @@ CPU は 2-Core/4-Thread、Base 1.0GHz、Boost 2.3GHz、GPU は 3CU、1.1GHz(1100
 | Athlon Gold 3150U [^t3150u] | 2/4 | 2.4GHz/3.3GHz | 3 | 1.0GHz | 15(12-25)W |
 | Ryzen 3 3250U [^t3250u] | 2/4 | 2.6GHz/3.5GHz | 3 | 1.2GHz | 15(12-25)W |
 | AMD 3020e [^t3020e] | 2/2 | 1.2GHz/2.6GHz | 3 | 1.0GHz | 6W |
-| *AMD 3015e* | *2/4* | *1.0GHz/2.3GHz* | *3* | *1.1GHz* | *4.8-6W* |
+| *AMD 3015e* | *2/4* | *1.2GHz/2.3GHz* | *3* | *0.6GHz* | *6W* |
 | Athlon Silver 3050e [^t3050e] | 2/4 | (1.4GHz?)/2.8GHz | 3 | 1.0GHz | 6W |
 | Athlon Silver 3050C | |
 | Athlon Gold 3150C | |

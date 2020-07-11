@@ -1,7 +1,7 @@
 ---
 title: "たぶんクール、きっとスマート"
 date: 2019-11-21T08:54:58+09:00
-draft: false
+draft: true
 tags: [ "Hugo", ]
 keywords: [ "Hugo", "Theme" ]
 categories: [ "Diary", ]

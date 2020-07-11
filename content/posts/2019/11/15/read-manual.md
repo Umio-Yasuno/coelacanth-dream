@@ -1,7 +1,7 @@
 ---
 title: "デフォルト放置は時に悪、マニュアル読まずは常に悪"
 date: 2019-11-15T00:19:57+09:00
-draft: false
+draft: true
 tags: [ "Hugo" ]
 keywords: [ "Hugo", ]
 categories: [ "Diary" ]

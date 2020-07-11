@@ -1,7 +1,7 @@
 ---
 title: "見た目から実用性と速度へ"
 date: 2020-01-23T03:56:12+09:00
-draft: false
+draft: true
 tags: [ "Hugo", "CSS" ]
 keywords: [ "", ]
 categories: [ "Diary", ]
