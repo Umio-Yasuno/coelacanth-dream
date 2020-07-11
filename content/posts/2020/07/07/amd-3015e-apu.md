@@ -64,6 +64,7 @@ GPUクロックがかなり抑えられており、前情報からは確認さ�
 {{< /ins >}}
 
 *FT5 BGAパッケージ* であることから、**AMD 3015e** は正しく *Pollock* と見られる。  
+TDP 6Wという点は少し怪しいが。  
 
  * [AMD Pollock APU Database | Coelacanth's Dream](/posts/2020/06/14/amd-pollock-apu-database/)  
  * [AMD Dali APU Database | Coelacanth's Dream](/posts/2020/06/24/amd-dali-apu-database/)  

@@ -1,14 +1,21 @@
 ---
-title: "AMD Renoir の兄弟？ 現れるは Lucianne"
+title: "AMD Renoir の兄弟？ 現れるは Lucienne"
 date: 2020-06-20T00:46:19+09:00
 draft: false
-tags: [ "Renoir", "Zen_2" ]
+tags: [ "Renoir", "Zen_2", "Lucienne" ]
 keywords: [ "", ]
 categories: [ "Hardware", "APU", "AMD" ]
 noindex: false
 ---
 
 新たな AMD APUのコードネームに *Lucianne* の名前が浮かび上がってきた。  
+
+{{< ins >}}
+
+Coreboot のメインレポジトリでは *Lucienne* となっていた。  
+[Lucienne Bisson - Wikipedia](https://en.wikipedia.org/wiki/Lucienne_Bisson)という画家がいるため、*Lucienne* が正しいコードネームだろう。  
+
+{{< /ins >}}
 
 ChromiumOSを構成する Coreboot へのパッチの中で、[Matt Papageorge](https://chromium-review.googlesource.com/q/owner:matt.papageorge%2540amd.corp-partner.google.com) 氏は Zen系 APU をサポートするコードを追加し、  
 その中で *Renoir* に関係した APU として *LCN* という略称が現れた。  

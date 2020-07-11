@@ -2,7 +2,7 @@
 title: "AMD、「PPR for Family 17h Model 60h, Revision A1 Processor」を公開"
 date: 2020-07-09T22:35:22+09:00
 draft: false
-tags: [ "Renoir", "Zen_2" ]
+tags: [ "Renoir", "Zen_2", "Lucienne" ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU" ]
 noindex: false
@@ -45,10 +45,10 @@ TDP は、モバイル向けのソリューションで {{< comple >}}Ryzen Mobi
 x86_Model が `Model 60-6Fh` ではなく、`Model 60-67h` と若干中途半端になっていることには心当たりがあり、恐らく *Raven* と *Picasso* と同じパターンと思われる。  
 
 まず、*Raven* の x86_Model は `Model 11h` となっており、その後継であり、内部構成はほとんど変わらない *Picasso* は `Model 18h` となっている。  
-`Model 11-18h` と `Model 60-67h` の間隔は一致し、そして *Raven* に対する *Picasso* のような関係を *Renoir* に持つ APU には、つい最近名を現した *Lucianne* がいる。{{< comple >}}何か言われそうだけど、あれから特に新情報も無いため、この名で統一する。{{< /comple >}}  
-{{< link >}}[AMD Renoir の兄弟？ 現れるは Lucianne | Coelacanth's Dream](/posts/2020/06/20/amd-lucianne-apu/){{< /link >}}
+`Model 11-18h` と `Model 60-67h` の間隔は一致し、そして *Raven* に対する *Picasso* のような関係を *Renoir* に持つ APU には、つい最近名を現した *Lucienne* がいる。  
+{{< link >}}[AMD Renoir の兄弟？ 現れるは Lucienne | Coelacanth's Dream](/posts/2020/06/20/amd-lucianne-apu/){{< /link >}}
 
-要は、やはり内部構成、アーキテクチャは *Renoir* と変わらず、プロセスを最適化または進めた APU(*Lucianne*) がロードマップ上に存在し、それが `Model 67h` とされるのではないかということを主張したい。  
+要は、やはり内部構成、アーキテクチャは *Renoir* と変わらず、プロセスを最適化または進めた APU(*Lucienne*) がロードマップ上に存在し、それが `Model 67h` とされるのではないかということを主張したい。  
 
 TSMC 7nmプロセス(*N7*) と物理設計に互換性を持つプロセスには、TSMC の第2世代 7nmプロセス(*N7P*)、6nmプロセス(*N6*) がある。  
 *N7* と比較して、*N7P* は同じ消費電力なら最大で 7% 性能向上、同じクロックなら 10% 省電力。  
@@ -84,7 +84,7 @@ AMD は ISSCC 2020 にて、*Zen 2 アーキテクチャ* の CCX構成に、*Ra
 | Matisse | Zen 2 | 71h |
 | Castle Peak<br> /Rome | Zen 2 | 31h |
 | Renoir | Zen 2 | 60h
-| Lucianne? | Zen 2 | 67h? |
+| Lucienne? | Zen 2 | 67h? |
 
 {{< ref >}}
 
