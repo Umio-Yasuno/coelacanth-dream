@@ -13,6 +13,8 @@ noindex: false
 {{< ins >}}
 
 Coreboot のメインレポジトリでは *Lucienne* となっていた。  
+{{< link >}}[…/amdfwtool.c · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/42566/5/util/amdfwtool/amdfwtool.c#218){{< /link >}}
+
 [Lucienne Bisson - Wikipedia](https://en.wikipedia.org/wiki/Lucienne_Bisson)という画家がいるため、*Lucienne* が正しいコードネームだろう。  
 
 {{< /ins >}}
