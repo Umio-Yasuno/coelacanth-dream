@@ -14,7 +14,7 @@ noindex: false
 
  * [Dali 概要](#dali-summay)
  * [Dali 仕様 (推測)](#dali-spec)
- * [Dali 製品](#dali-product)
+ * [Dali SKU](#dali-sku)
  * [x86\_Model について ――Picasso と呼ばれる Dali](#dali-x86model)
 
 {{< /pindex >}}
@@ -67,7 +67,7 @@ Linux Kernel へのパッチに初めて *Dali* という名前が出てきた�
 | Process | GF 14nm |
 | TDP | 6 ~ 25W |
 
-## Dali 製品 {#dali-product}
+## Dali SKU {#dali-sku}
 
 <!--
 
@@ -82,7 +82,7 @@ Linux Kernel へのパッチに初めて *Dali* という名前が出てきた�
 
 -->
 
-| Product | Core/Thread | CPU Base/Boost | GPU CU | GPU Clock | TDP |
+| Dali SKU | Core/Thread | CPU Base/Boost | GPU CU | GPU Clock | TDP |
 | :-- | :--: | :--: | :--: | :--: | :--: |
 | Athlon Silver 3050U [^t3050u] | 2/2 | 2.3GHz/3.2GHz | 2 | 1.1GHz | 15(12-25)W |
 | Athlon Gold 3150U [^t3150u] | 2/4 | 2.4GHz/3.3GHz | 3 | 1.0GHz | 15(12-25)W |

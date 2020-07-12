@@ -62,15 +62,15 @@ Linux Kernel へのパッチに初めて *Pollock* という名が出てきた�
 | &emsp;Max CPU Core/Thread | 2/4 |
 | &emsp;CPU L3cache | 4 MB |
 | &emsp;CPU Base Clock | (1.0 ~ 1.2 GHz) |
-| &emsp;CPU Boost Clock | (2.35 ~ 2.4 GHz) |
+| &emsp;CPU Boost Clock | 2.3-(2.35 ~ 2.4 GHz) |
 | GPU | *Vega (gfx909)* |
 | &emsp;Max GPU CU | 3 |
 | &emsp;Max GPU SP | 192 |
 | &emsp;Max ROP | 4<br>(== 1-RB) |
 | &emsp;GPU L2cache | 512 KB |
-| &emsp;GPU Clock | 800 MHz [^6] |
+| &emsp;GPU Clock | 600-800 MHz [^6] |
 | Process | GF 14nm |
-| TDP | 4.8W |
+| TDP | 4.8-6W |
 
 CPUのクロック仕様は主に Geekbenchの結果を元にしている。  
 末尾に `.gb5` を付けることで詳細を見ることができ、そこで大体の最大クロックがわかる。  
@@ -99,3 +99,10 @@ AMD が提供する *Pollock* 搭載のリファレンスボードのコード�
 [^3]: [mb/google/zork: add dalboz baseboard option (I646d9ad1) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2055651)
 [^4]: [vilboz: Initial EC image (I511548fb) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/platform/ec/+/2224680)
 
+## Pollock SKU {#plk-sku}
+
+| Pollock SKU | Core/Thread | CPU Base/Boost | GPU CU | GPU Clock | TDP |
+| :-- | :--: | :--: | :--: | :--: | :--: |
+| AMD 3015e[^amd-3015e] | 2/4 | 1.2GHz/2.3GHz | 3 | 0.6GHz | 6W |
+
+[^amd-3015e]: [AMD 3015e | AMD](https://www.amd.com/en/products/apu/amd-3015e#product-specs)
