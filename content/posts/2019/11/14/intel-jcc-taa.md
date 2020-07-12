@@ -1,7 +1,7 @@
 ---
 title: "Intel CPUのエラッタJCC、脆弱性TAAが公表される"
 date: 2019-11-14T16:26:23+09:00
-draft: false
+draft: true
 tags: [ "Errata", "Vulnerability" ]
 keywords: [ "Intel", "JCC", "Errata", "TAA", "Vulnerability"  ]
 categories: [ "Hardware", "Intel", "CPU", "Security" ]

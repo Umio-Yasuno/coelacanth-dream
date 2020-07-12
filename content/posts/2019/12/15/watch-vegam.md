@@ -4,7 +4,7 @@ date: 2019-12-15T11:24:34+09:00
 draft: false
 tags: [ "Radeon", "GCN", "VegaM", "GFX8", "gfx804", "Kabylake-G", "DieShot" ]
 keywords: [ "Radeon", "VegaM" ]
-categories: [ "Hardware", "GPU", "AMD", "Database" ]
+categories: [ "Hardware", "GPU", "AMD" ]
 ---
 
 VegaMのダイを観察、ブロックの分析をしてみた。  

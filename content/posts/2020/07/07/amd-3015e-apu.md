@@ -15,12 +15,6 @@ AMDの新たな省電力モバイル向けAPU、**AMD 3015e** の仕様が公式
 {{< link >}}[AMD 3015e | AMD](https://www.amd.com/en/products/apu/amd-3015e#product-specs){{< /link >}}
 {{< link >}}[Processor Specifications | AMD](https://www.amd.com/en/products/specifications/processors/){{< /link >}}
 
-{{< ins datetime="2020-07-08T01:08:31" >}}
-
-再度確認したところサイトから記載が消されていたため、現在では信頼できる情報元を示すことができない記事となっています。  
-
-{{< /ins >}}
-
 ## AMD 3015e 仕様
 <del>CPU は 2-Core/4-Thread、Base 1.0GHz、Boost 2.3GHz、GPU は 3CU、1.1GHz(1100MHz)、メモリは DDR4 2667MHz、デュアルチャネルに対応している。</del>  
 CPU は 2-Core/4-Thread、Base 1.2GHz、Boost 2.3GHz、GPU は 3CU、600MHz(!)、メモリは DDR4 1600MHz(!) シングルチャネル。  
