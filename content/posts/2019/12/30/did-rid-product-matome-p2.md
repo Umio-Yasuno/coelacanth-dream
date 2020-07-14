@@ -419,6 +419,8 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 #### Navi21 / Sienna Cichlid ( gfx1030 ) {#navi21-gfx1030}
 Navi21: gfx1030 [^12]
 
+#### Navi22 / Navy Flounder ( gfx1031? ) {#navi22-gfx1031}
+
 [^12]: [P4 to Git Change 1759681 by asalmanp@asalmanp-ocl-stg on 2019/03/21 1… · ROCm-Developer-Tools/ROCclr@42c005d](https://github.com/ROCm-Developer-Tools/ROCclr/commit/42c005d656a8bd99f87fa4fc86ad086701c59a86)
 
 <!--
