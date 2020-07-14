@@ -90,23 +90,23 @@ waifu2x-ncnn-vulkan のような一般ユーザーにとって実用的なソフ
 
 | benchncnn<br>Result (.avg)<br>(lower is better) | Ryzen 5 2600<br>(6-Core, AVX2) | RX 560<br>RADV/LLVM | RX 560<br>RADV/ACO |
 | :--- | :---: | :---: | :---: |
-| squeezenet | 8.13 | 6.91 | 3.16 |
-| mobilenet | 8.45 | 8.67 | 3.90 |
-| mobilenet\_v2 | 9.88 | 8.71 | 4.75 |
-| mobilenet\_v3 | 60.50 | 14.27 | 6.69 |
-| shufflenet | 14.93 | 4.43 | 3.00 |
-| shufflenet\_v2 | 5.66 | 6.08 | 3.90 |
-| mnasnet | 112.48 | 11.02 | 5.39 |
-| proxylessnasnet | 168.46 | 11.61 | 5.42 |
-| googlenet | 32.74 | 28.76 | 12.15 |
-| resnet18 | 25.59 | 23.13 | 7.58 |
-| alexnet | 14.51 | 22.73 | 12.42 |
-| vgg16 | 174.78 | 161.59 | 38.17 |
-| resnet50 | 73.55 | 54.83 | 18.83 |
-| squeezenet_ssd | 30.50 | 32.41 | 13.46 |
-| mobilenet_ssd | 20.53 | 18.85 | 9.24 |
-| mobilenet_yolo | 41.87 | 36.49 | 14.38 |
-| mobilenetv2_yolov3 | 28.60 | 18.58 | 8.88 |
+| squeezenet | 8.13 | 6.91 | *3.16* |
+| mobilenet | 8.45 | 8.67 | *3.90* |
+| mobilenet\_v2 | 9.88 | 8.71 | *4.75* |
+| mobilenet\_v3 | 60.50 | 14.27 | *6.69* |
+| shufflenet | 14.93 | 4.43 | *3.00* |
+| shufflenet\_v2 | 5.66 | 6.08 | *3.90* |
+| mnasnet | 112.48 | 11.02 | *5.39* |
+| proxylessnasnet | 168.46 | 11.61 | *5.42* |
+| googlenet | 32.74 | 28.76 | *12.15* |
+| resnet18 | 25.59 | 23.13 | *7.58* |
+| alexnet | 14.51 | 22.73 | *12.42* |
+| vgg16 | 174.78 | 161.59 | *38.17* |
+| resnet50 | 73.55 | 54.83 | *18.83* |
+| squeezenet_ssd | 30.50 | 32.41 | *13.46* |
+| mobilenet_ssd | 20.53 | 18.85 | *9.24* |
+| mobilenet_yolo | 41.87 | 36.49 | *14.38* |
+| mobilenetv2_yolov3 | 28.60 | 18.58 | *8.88* |
 
 ### 感想 {#feel}
 waifu2x-ncnn-vulkan でも見られたように、やはり *RADV/LLVM* より *RADV/ACO* が高速結果を出した。  
