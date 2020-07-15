@@ -10,7 +10,7 @@ noindex: false
 <p></p>
 
 ## このサイトについて
-<img src="/image/site-image.webp" title="sleeping coelacanth" style="max-width: 48%;max-height: 64%; float:left; margin:.3em .5em 0 0; background-color: #556F6F">
+<img src="/image/coelacanth_dream.webp" title="sleeping coelacanth" style="max-width: 48%;max-height: 64%; float:left; margin:.3em .5em 0 0; background-color: #556F6F">
 個人的にまとめたハードウェア系の情報や **"推測"** を公開するブログ的なもの。  
 公式がまだ正式発表していなかったり、決して大きな声ではしてくれない話を語り、ハードウェアの魅力を伝えたいと思い活動を始めました。  
 情報元は、信頼できる公式のオープンソースコード等や公式資料。  
