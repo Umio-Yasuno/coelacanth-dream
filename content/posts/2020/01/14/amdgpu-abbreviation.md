@@ -104,6 +104,11 @@ noindex: false
 | VPG | Video Package ganerator | |
 | SPL | Security patch level | |
 | PC_LINES | Parameter Cache Lines? | |
+| HPD | Host Data Path[^hpd] | |
+| MGCG | Medium Grain Clock Gating | |
+| MGLS | Medium Grain Light Sleep | |
+
+[^hpd]: [drm/amdgpu: add the HDP 4.0 register headers](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd?h=amd-staging-drm-next&id=bcfb47cdd76a20b3c596981ea7b35fa23abac4c8)
 
 
 

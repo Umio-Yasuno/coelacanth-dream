@@ -22,6 +22,24 @@ OEM向けとされ、製品は [Lenovo ThinkStation P620](https://thinkstation-s
 | Ryzen Threadripper<br>Pro 3955WX | 16/32 | 3.9/4.3 GHz | 72 MB | 280 W | 128-Lane |
 | Ryzen Threadripper<br>Pro 3945WX | 12/24 | 4.0/4.3 GHz | 70 MB | 280 W | 128-Lane |
 
+{{< ins >}}
+
+
+ * [AMD Ryzen™ Threadripper™ PRO 3995WX | AMD](https://www.amd.com/en/products/cpu/amd-ryzen-threadripper-pro-3995wx#product-specs)
+ * [AMD Ryzen™ Threadripper™ PRO 3975WX | AMD](https://www.amd.com/en/products/cpu/amd-ryzen-threadripper-pro-3975wx#product-specs)
+ * [AMD Ryzen™ Threadripper™ PRO 3955WX | AMD](https://www.amd.com/en/products/cpu/amd-ryzen-threadripper-pro-3955wx#product-specs)
+ * [AMD Ryzen™ Threadripper™ PRO 3945WX | AMD](https://www.amd.com/en/products/cpu/amd-ryzen-threadripper-pro-3945wx#product-specs)
+
+AMD公式サイトに記載されている仕様が、ニュースリリースと [Lenovo ThinkStation P620](https://thinkstation-specs.com/thinkstation/p620/) の仕様で異なり、公式サイトの仕様の方が高いクロックとなっているが、  
+どっちが正しいのか。  
+
+ * Pro 3995WX: 2.7/4.3 GHz
+ * Pro 3975WX: 3.5/4.35 GHz
+ * Pro 3955WX: 3.9/4.4 GHz
+ * Pro 3945WX: 4.0/4.4 GHz
+
+{{< /ins >}}
+
 ## 帯域は 4ch相当までとなる Pro 3955WX と Pro 3945WX
 **EPYC 7002シリーズ** 同等のメモリと PCIe Gen4レーンを持ち、サーバ向けI/Oダイ(sIOD) とソケット仕様をフルスペックで解放した **Ryzen Threadripper Pro** だが、当然制約も引き継がれている。  
 

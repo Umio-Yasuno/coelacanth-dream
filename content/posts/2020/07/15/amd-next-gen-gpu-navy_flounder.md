@@ -8,7 +8,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
 ---
 
-AMDの次世代 RDNA 2 GPU、*Navy Flounder* をサポートする最初のLinux Kernelパッチ一連が投稿された。  
+AMDの次世代 [RDNA 2](/tags/rdna_2) GPU、*Navy Flounder* をサポートする最初のLinux Kernelパッチ一連が投稿された。  
 {{< link >}} [[PATCH 00/42] Navy Flounder support](https://lists.freedesktop.org/archives/amd-gfx/2020-July/051526.html) {{< /link >}}
 
 *Navy Flounder* は [Sienna Cichlid](/tags/sienna_cichlid)と同じ世代(GFX10)、同じメジャーバージョンである GFX10.3 となっている。  
