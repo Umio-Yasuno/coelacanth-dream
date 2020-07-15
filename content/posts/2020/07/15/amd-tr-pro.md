@@ -17,10 +17,10 @@ OEM向けとされ、製品は [Lenovo ThinkStation P620](https://thinkstation-s
 
 | Model | Core/Thread | Base/Boost Clock | Total Cache | TDP | PCIe Gen4 |
 | :-- | :--: | :--: | :--: | :--: | :--: |
-| Ryzen Threadripper<br>Pro 3995WX | 64/128 | 2.7/4.2 | 288 MB | 280 W | 128-Lane |
-| Ryzen Threadripper<br>Pro 3975WX | 32/64 | 3.5/4.2 | 144 MB | 280 W | 128-Lane |
-| Ryzen Threadripper<br>Pro 3955WX | 16/32 | 3.9/4.3 | 72 MB | 280 W | 128-Lane |
-| Ryzen Threadripper<br>Pro 3945WX | 12/24 | 4.0/4.3 | 70 MB | 280 W | 128-Lane |
+| Ryzen Threadripper<br>Pro 3995WX | 64/128 | 2.7/4.2 GHz | 288 MB | 280 W | 128-Lane |
+| Ryzen Threadripper<br>Pro 3975WX | 32/64 | 3.5/4.2 GHz | 144 MB | 280 W | 128-Lane |
+| Ryzen Threadripper<br>Pro 3955WX | 16/32 | 3.9/4.3 GHz | 72 MB | 280 W | 128-Lane |
+| Ryzen Threadripper<br>Pro 3945WX | 12/24 | 4.0/4.3 GHz | 70 MB | 280 W | 128-Lane |
 
 ## 帯域は 4ch相当までとなる Pro 3955WX と Pro 3945WX
 **EPYC 7002シリーズ** 同等のメモリと PCIe Gen4レーンを持ち、サーバ向けI/Oダイ(sIOD) とソケット仕様をフルスペックで解放した **Ryzen Threadripper Pro** だが、当然制約も引き継がれている。  
@@ -35,7 +35,11 @@ AMD はサーバ向け **EPYC 7002シリーズ (Rome)**、デスクトップ向�
 Read 帯域も *4 CCDs* 未満の場合は満たすことができず、4ch相当の帯域となる。  
 *sIOD* は 2つの Data Fabric を持ち、*CCD* 数は対称的となるため、*3 CCDs* の構成を取ることは出来ず、*4 CCDs* 未満のパターンには *2 CCDs* 、*1 CCD* があたる。  
 
-*2 CCDs* 構成である **EPYC 7282 /7272 /7252 7232P** はその旨が記載されており[^rome-2ccd]、性能は 4ch DDR4-2667MHz に最適化され、搭載DIMM数を増やしても帯域は増えないとある。  
+*2 CCDs* 構成である **EPYC 7282 /7272 /7252 /7232P** はその旨が記載されており[^rome-2ccd]、性能は 4ch DDR4-2667MHz に最適化され、搭載DIMM数を増やしても帯域は増えないとある。  
+**EPYC 7232P** は L3cache 32MB だが、[ServeTheHome](https://www.servethehome.com)によるレビュー記事内の `lstopo` コマンド実行結果を見ると、L3cache 8MB が 4基存在することがわかる。[^sth-epyc-7232p-topo]  
+このことから **EPYC 7232P** は *2 CCDs* 構成だが、*CCX* あたりの L3cache を半分に制限していると考えられる。  
+
+[^sth-epyc-7232p-topo]: [AMD EPYC 7232P In GB NVMe Server Topology | ServeTheHome](https://www.servethehome.com/amd-epyc-7232p-review-hard-to-buy-but-solid-part/amd-epyc-7232p-in-gb-nvme-server-topology/)
 
 [^rome-2ccd]: [2nd Gen AMD EPYC™ 7282 | Server Processor | AMD](https://www.amd.com/en/products/cpu/amd-epyc-7282#product-specs)<br>[2nd Gen AMD EPYC™ 7272 | Server Processor | AMD](https://www.amd.com/en/products/cpu/amd-epyc-7272#product-specs)<br>[2nd Gen AMD EPYC™ 7252 | Server Processor | AMD](https://www.amd.com/en/products/cpu/amd-epyc-7252#product-specs)<br>[2nd Gen AMD EPYC™ 7232P | Server Processor | AMD](https://www.amd.com/en/products/cpu/amd-epyc-7232p#product-specs)
 
