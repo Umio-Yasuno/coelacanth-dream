@@ -40,6 +40,14 @@ AMDの次世代 [RDNA 2](/tags/rdna_2) GPU、*Navy Flounder* をサポートす�
 VCN3 が内部的に 2インスタンスとなっているのか、それともやはり *Sienna Cichlid* は 2インスタンス持ち、*Navy Flounder* は 1インスタンス持つ構成になっているのか、イマイチはっきりしない。  
 各IPが *Sienna Cichlid* と共通するためか、*Navy Flounder* の一連のパッチは *Sienna Cichlid* ほど巨大ではなく、VCN3 のインスタンスがどうなっているかを示すコードは今回追加されていなかった。  
 
+{{< ins >}}
+
+VCN3.0部のコードを見るに、2インスタンス持つ場合に実行する制御文の式が、*Sienna Cichlid* かどうかで判定されており、それとそれ以降の GPU という書き方ではないため、  
+VCN3.0 を、*Sienna Cichlid* は 2インスタンス、*Navy Flounder* は 1インスタンスを持つようになっていると思われる。  
+{{< link >}} <https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/amdgpu/vcn_v3_0.c?h=amd-staging-drm-next-navy-flounder&id=d5ba938e1cdda54b4fb2ca2c676a77b4d887f055> {{< /link >}}
+
+{{< /ins >}}
+
 [^sienna_cichlid-vcn]: [[PATCH 152/207] drm/amdgpu/vcn3.0: schedule instance 0 for decode and 1 for encode](https://lists.freedesktop.org/archives/amd-gfx/2020-June/050116.html)
 [^navy_flounder_vcn_1]: [[PATCH 38/42] drm/amd/powerplay: set VCN1 pg only for sienna_cichlid](https://lists.freedesktop.org/archives/amd-gfx/2020-July/051564.html)
 
