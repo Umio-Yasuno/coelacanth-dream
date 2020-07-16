@@ -8,7 +8,7 @@ categories: [ "Hardware", "AMD", "CPU" ]
 noindex: false
 ---
 
-―― ただし一部モデルのメモリ帯域は4chまで  
+―― ただし一部モデルのメモリ帯域は4chまでか  
 
 AMD は、2020/07/14付で、PCIe Gen4 128レーンを備え、メモリは 8チャネル ECC RIMM、LRIMM、UDIMM DDR4-3200、容量 2TB まで対応した、*Zen 2 アーキテクチャ* 採用のワークステーション向けプロセッサ、**Ryzen Threadripper Pro** を 4モデル発表した。  
 メモリのデータを暗号化する **AMD Memory Guard** にも対応し、ビジネス向けのサポートも付く。  
