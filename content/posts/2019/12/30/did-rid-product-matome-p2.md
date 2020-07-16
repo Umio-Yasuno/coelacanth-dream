@@ -30,7 +30,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
       * [Navi10](#navi10-gfx1010)
       * [Navi14](#navi14-gfx1012)
       * [Navi12](#navi12-gfx1011)
- * [参考リンク](#ref-title)
+ * [参考リンク](#reference_title)
 
 {{< /pindex >}}
 
