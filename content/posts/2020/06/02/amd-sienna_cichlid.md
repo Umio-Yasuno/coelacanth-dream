@@ -60,13 +60,13 @@ VRAMには Navi1x から続いて GDDR6 を採用すると見られる。[^11]
 
 ## インデックス
 
-   * [GFX](#gfx)
-   * [SDMA](#sdma)
-   * [VCN 3.0](#vcn3)
-   * [DCN 3](#dcn3)
+   * [Async Ring のサポートが追加された GFX](#gfx)
+   * [従来から倍に増やされている SDMAコントローラ](#sdma)
+   * [非対称構成な 2つの VCN 3.0](#vcn3)
+   * [詳細は不明なDCN3](#dcn3)
    * [余談](#aside)
 
-## GFX
+## Async Ring のサポートが追加された GFX {#gfx}
 Navi1x では無効化されていた 3D pipe、Async ring が *Sienna Cichlid* ではサポートされている。[^8]  
 ring とは CP(Command Processor) が各ユニットへコマンドを発行する単位。  
 
@@ -77,7 +77,7 @@ Navi1x で無効化したのはユースケースがないため、という理�
 
 [^9]: <https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/amdgpu/gfx_v10_0.c?h=amd-staging-drm-next&id=f091c1c70e89adca93c4f4f35dfa0abf90611453>
 
-## SDMA
+## 従来から倍に増やされている SDMAコントローラ {#sdma}
 *Sienna Cichlid* は SDMAコントローラを 4基持ち、これは従来の一般向けGPUの倍の数だ。[^5]\(HPC向けの *Arcturus* は 8基)  
 コントローラあたりのキュー数が減らされていないため、純粋に倍となる。[^7]  
 増やした意図ははっきりせず、*Arctturus* のように XGMI/マルチGPU に最適化された SDMAコントローラという訳でもないようだ。  
@@ -99,7 +99,7 @@ SMU(System Management Unit) のバージョンが *Sienna Cichlid* と *Arcturus
 [^7]: [[PATCH 116/207] drm/amdkfd: Support Sienna_Cichlid KFD v4](https://lists.freedesktop.org/archives/amd-gfx/2020-June/050080.html)
 [^11]: <https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/include/atomfirmware.h?h=amd-staging-drm-next-sienna_cichlid&id=4c35e77865a9037c32b0354663d23c33b08ae188>
 
-## VCN 3.0 {#vcn3}
+## 非対称構成な 2つの VCN 3.0 {#vcn3}
 動画のデコード/エンコードを担当するマルチメディア部の VCN も更新されている。  
 *Sienna Cichlid* は 2つの VCN3インスタンスを持つが、それらは非対称であり、片方がデコードのみ、もう片方がエンコードのみを担当する。[^1]  
 
@@ -110,7 +110,7 @@ VCN3 ではデコード担当とエンコード担当がはっきり分かれる
 
 [^2]: <https://www.x.org/wiki/RadeonFeature/#radeonuvdunifiedvideodecoderhardware>
 
-## DCN3
+## 詳細は不明なDCN3 {#dcn3}
 DCN も更新され、DCN3 となった。  
 どういった新機能があるかはまだ不明。(読み取れていない)  
 

@@ -22,6 +22,17 @@ AMDの次世代 [RDNA 2](/tags/rdna_2) GPU、*Navy Flounder* をサポートす�
 [^navi22-e_rev_id]: [pal/amdgpu_asic_addr.h at 39abe2297ca58a2b84dcd9bc5e238fbc399bd6e0 · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/39abe2297ca58a2b84dcd9bc5e238fbc399bd6e0/src/core/imported/addrlib/src/amdgpu_asic_addr.h#L111)
 
 ## Sienna Cichlid と規模が異なる Navy Flounder
+上述したように、*Navy Flounder* は *Sienna Cichlid* と各IPが共通しており、VCN3 と SDMAコントローラの規模が異なっている。順当に考えればこれは GPU としての規模、シェーダープロセッサや RenderBackend、メモリバス幅の規模を表しているように考えられる。  
+
+また、*Sienna Cichlid* では GFX Pipe に Async ring のサポートが追加されていたが[^sienna_cichlid-async-ring]、後のパッチにて現時点ではそれを無効化し、Primary ring のみとしている。[^sienna_cichlid-one-pipe]  
+
+[^sienna_cichlid-async-ring]: [[PATCH 113/207] drm/amdgpu: enable 3D pipe 1 on Sienna_Cichlid](https://lists.freedesktop.org/archives/amd-gfx/2020-June/050077.html)
+[^sienna_cichlid-one-pipe]: [[PATCH 162/207] drm/amdgpu: only use one gfx pipe for Sienna_Cichlid](https://lists.freedesktop.org/archives/amd-gfx/2020-June/050126.html)
+
+そして *Navy Flounder* は GFX Pipe のコードにて分岐先を *Sienna Cichlid* と共通しているため[^navy_flounder-switch]、*Navy Flounder* もハードとしては Async ring をサポートしているものと思われる。  
+
+[^navy_flounder-switch]: [[PATCH 15/42] drm/amdgpu: add gfx ip block for navy_flounder](https://lists.freedesktop.org/archives/amd-gfx/2020-July/051541.html)
+
 ### 1インスタンスの VCN3?
 まず、*Sienna Cichlid* は非対称の VCN3 を 2インスタンス持ち、片方がデコードを、片方がエンコードのみを担当する形となっていた。[^sienna_cichlid-vcn]  
 しかし今回のパッチでは、*Navy Flounder* は 1インスタンスだけ持つとされている。[^navy_flounder_vcn_1]  
