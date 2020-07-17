@@ -1,7 +1,7 @@
 ---
 title: "このページは移動しました"
 date: 2020-07-10T23:37:18+09:00
-draft: false
+draft: true
 # tags: [ "", ]
 # keywords: [ "", ]
 # categories: [ "", ]
