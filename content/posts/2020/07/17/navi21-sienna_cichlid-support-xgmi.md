@@ -18,7 +18,7 @@ AMD の次世代 [RDNA 2](/tags/rdna_2) GPU、*Navi21 /Sienna Cichlid* が高速
 
 従来の AMD GPU と比べて多い *Sienna Cichlid* の SDMAコントローラについて、疑うようなことばかり書いてきたが、*Sienna Cichlid* が **XGMI** をサポートすることが明らかになった以上、つまるところ SDMAコントローラは **XGMI** のために増やされたのだろう。  
 
-[The amd-gfx Archives](https://lists.freedesktop.org/archives/amd-gfx/) でのレビューを通らずに(見つけられなかった) 組み込まれたパッチを見るに、*Sienna Cichlid* は最大 4基の GPUとの接続を可能とするようだ。  
+[The amd-gfx Archives](https://lists.freedesktop.org/archives/amd-gfx/) でのレビューを通らずに(見つけられなかった) 組み込まれたパッチを見るに、*Sienna Cichlid* は最大 4GPU との接続を可能とするようだ。  
 {{< link >}}[drm/amdgpu: add XGMI support for sienna cichlid](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/amdgpu/gfxhub_v2_1.c?h=amd-staging-drm-next&id=57bde5ec6ffbeb984981ab1a38d85b07df651bd2){{< /link >}}
 
  >       +	switch (adev->asic_type) {
@@ -28,7 +28,7 @@ AMD の次世代 [RDNA 2](/tags/rdna_2) GPU、*Navi21 /Sienna Cichlid* が高速
  >       +		break;
  > 引用元: <cite>[drm/amdgpu: add XGMI support for sienna cichlid](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/amdgpu/gfxhub_v2_1.c?h=amd-staging-drm-next&id=57bde5ec6ffbeb984981ab1a38d85b07df651bd2)</cite>
 
-この最大 4基というのは *Vega20* と同数であり[^vega20-max-nodes]、*Vega20* の場合は 3GPU以上での接続はリングバスの構成を取ることになり、それによって GPU間のデータ転送に幾許かの遅延が発生しうるものとなっていた。  
+この最大 4GPUというのは *Vega20* と同数であり[^vega20-max-nodes]、*Vega20* の場合は 3GPU以上での接続はリングバスの構成を取ることになり、それによって GPU間のデータ転送に幾許かの遅延が発生しうるものとなっていた。  
 
 [^vega20-max-nodes]: [drm/amdgpu: Added ASIC specific checks in gfxhub V1.1 get XGMI info](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/amdgpu/gfxhub_v1_1.c?h=amd-staging-drm-next&id=f0312f45a0540a1551ca4644ff2461250520111a)
 
@@ -39,8 +39,24 @@ AMD の次世代 [RDNA 2](/tags/rdna_2) GPU、*Navi21 /Sienna Cichlid* が高速
 
 もしかしたらリングバス構成を取らずに 4GPU との接続が可能 *かもしれない* 。未来のことだから、本当に断言できることなんてない。  
 
+ちなみに *Arcturus* は最大 8GPUとの接続を可能とし、SDMAコントローラは **XGMI** に最適化されたものを 6基、そうでない、他の AMDGPU 同様の SDMAコントローラを 2基持つ[^arcturus-sdma-controllers]。  
+
+[^arcturus-sdma-controllers]: [kfd_device.c\amdkfd\amd\drm\gpu\drivers - ~agd5f/linux - Unnamed repository; edit this file 'description' to name the repository.](https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/amdkfd/kfd_device.c?h=amd-staging-drm-next&id=3ace943f8f8158ee2b0fed8482edb37245b28f45#n374)
+
+ >       +	switch (adev->asic_type) {
+ >       +	case CHIP_VEGA20:
+ >       +		max_num_physical_nodes   = 4;
+ >       +		max_physical_node_id     = 3;
+ >       +		break;
+ >       +	case CHIP_ARCTURUS:
+ >       +		max_num_physical_nodes   = 8;
+ >       +		max_physical_node_id     = 7;
+ >       +		break;
+ >
+ > 引用元: <cite>[drm/amdgpu: Added ASIC specific checks in gfxhub V1.1 get XGMI info](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/amdgpu/gfxhub_v1_1.c?h=amd-staging-drm-next&id=f0312f45a0540a1551ca4644ff2461250520111a)</cite>
+
 ## 詳細はまだまだ不明 {#detail-unknown}
-高速なGPU間通信 **XGMI** をサポートするといっても、帯域はどうなるかや、*Arcturus* のように、増やした 2基の SDMAコントローラを **XGMI** に最適化されたものにしなかったのは何故か等、不明な点はある。  
+高速なGPU間通信 **XGMI** をサポートするといっても、ネットワーク構成と帯域はどうなるかや、*Arcturus* のように、増やした 2基の SDMAコントローラを **XGMI** に最適化されたものにしなかったのは何故か等、不明な点はある。  
 想像するならば、**XGMI** に最適化しなかったのは *Arcturus* 程、マルチGPUを前提にした構成ではなく、1GPUでの構成を普通に取るためだろうか。*Navi21 /Sienna Cichlid* は *Arcturus* のように GPGPU へ振り切ったものではなく、コンシューマ向けとして出ることが考えられる。  
 
 マルチGPU構成を取るとして、Apple Mac Pro向けの **Radeon Pro Vega II Duo** のように、1カード上で 2GPUを *Infinity Fabric Link* で接続する形を取るのか[^radeon-pro-vega-ii-duo]、 **Radeon Pro VII** のように 2カードを専用ブリッジで接続する形を取るのかもまだわからない[^radeon-pro-vii]。  
