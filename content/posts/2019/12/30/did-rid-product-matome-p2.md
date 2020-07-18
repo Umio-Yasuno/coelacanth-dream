@@ -103,7 +103,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | D4 | | (Vega 3) |
 | | D8 | | (AM4 Vega 11) |
 | | D9 | | (AM4 Vega 8) |
-| | DA | | (AM4 Vega 11) |
+| | DA | PRO 3400GE | (AM4 Vega 11) |
 | | DB | | (AM4 Vega 8) |
 | | DC | | (AM4 Vega 3) |
 | | E1 | 3780U | Winston (Surface Edition Vega 11) |
