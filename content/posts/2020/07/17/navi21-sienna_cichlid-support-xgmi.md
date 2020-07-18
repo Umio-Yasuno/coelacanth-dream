@@ -49,7 +49,7 @@ AMD の次世代 [RDNA 2](/tags/rdna_2) GPU、*Navi21 /Sienna Cichlid* が高速
 [^radeon-pro-vega-ii-duo]: [Radeon™ Pro Vega II Graphics | AMD](https://www.amd.com/en/graphics/workstations-radeon-pro-vega-ii)
 [^radeon-pro-vii]: [AMD Radeon™ Pro VII Graphics | AMD](https://www.amd.com/en/products/professional-graphics/radeon-pro-vii)
 
-*Navi21 /Sienna Cichlid* は、まだまだ何かしら夢を持ちながら付き合う存在だ。  
+*Navi21 /Sienna Cichlid* は、まだしばらくは何かしら夢を持ちながら付き合う存在だ。  
 
 {{< ref >}}
 
