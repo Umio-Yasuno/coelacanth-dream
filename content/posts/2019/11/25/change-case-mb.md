@@ -1,7 +1,7 @@
 ---
 title: "ケース&M/B交換記録"
 date: 2019-11-26T03:57:41+09:00
-draft: false
+draft: true
 tags: [ "Case", ]
 keywords: [ "PC Case", "IW-EM002" ]
 categories: [ "Diary", ]

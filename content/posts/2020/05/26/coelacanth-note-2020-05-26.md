@@ -1,7 +1,7 @@
 ---
 title: "【雑記】シーラカンスが見た夢【2020-05-26】"
 date: 2020-05-26T21:25:19+09:00
-draft: false
+draft: true
 # tags: [ "", ]
 keywords: [ "", ]
 categories: [ "Diary", ]

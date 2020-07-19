@@ -4,7 +4,7 @@ date: 2020-04-04T01:24:50+09:00
 draft: false
 #	tags: [ "", ]
 keywords: [ "", ]
-categories: [ "Diary", ]
+# categories: [ "Diary", ]
 noindex: true
 ---
 

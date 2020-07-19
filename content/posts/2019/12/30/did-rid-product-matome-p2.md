@@ -184,7 +184,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | :--- | :--- | :---: | :---: |
 | 1636 &darr; | 00 | | (BringUp FP6) |
 | | C1 | 4800U | (B12 15W FP6) |
-| | C2 | | (B10 15W FP6) |
+| | C2 | 4700U | (B10 15W FP6) |
 | | C3 | 4500U | (B8 15W FP6) |
 | | C4 | | (B6 15W FP6) |
 | | C5 | 4900HS | (B12 45W FP6) |

@@ -1,7 +1,7 @@
 ---
 title: "私的conkyrc"
 date: 2020-03-12T20:06:41+09:00
-draft: false
+draft: true
 # tags: [ "", ]
 keywords: [ "", ]
 categories: [ "Diary", "Software" ]

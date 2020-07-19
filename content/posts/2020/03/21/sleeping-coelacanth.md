@@ -1,7 +1,7 @@
 ---
 title: "更新再開のお知らせ & 今後の方針"
 date: 2020-03-21T13:37:50+09:00
-draft: false
+draft: true
 # tags: [ "", ]
 keywords: [ "", ]
 categories: [ "Diary", ]

@@ -1,7 +1,7 @@
 ---
 title: "更新休止のお知らせ"
 date: 2020-03-14T16:36:09+09:00
-draft: false
+draft: true
 # tags: [ "", ]
 keywords: [ "", ]
 categories: [ "Diary", ]

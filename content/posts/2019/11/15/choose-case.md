@@ -1,7 +1,7 @@
 ---
 title: "私的PCケースの選び方"
 date: 2019-11-15T09:50:24+09:00
-draft: false
+draft: true
 tags: [ "Case", ]
 keywords: [ "PC Case", ]
 categories: [ "Diary", ]

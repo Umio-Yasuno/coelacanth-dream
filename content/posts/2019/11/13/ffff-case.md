@@ -1,7 +1,7 @@
 ---
 title: "メンテのモチベはケース次第"
 date: 2019-11-13T15:53:56+09:00
-draft: false
+draft: true
 tags: [ "Case", ]
 keywords: [ "PC Case", ]
 categories: [ "Diary", ]
