@@ -22,7 +22,7 @@ noindex: true
 
 <div style="clear:left"></div>
 
-このサイトは Markdown で記事を書き、[Hugo](https://github.com/gohugoio/hugo)でビルド、そして AWS S3 と CloudFront を利用して公開しています。  
+このサイトは Markdown で記事を書き、[Hugo](https://github.com/gohugoio/hugo)でビルド、そして Github Page のサービスを利用して公開しています。  
 
 ## 情報元について
 自分がソースとしている情報は[一部](/posts/2019/12/30/did-rid-product-matome-p2/)を除き、オープンソースとして公開されているため誰でも簡単にアクセスすることができます。  
