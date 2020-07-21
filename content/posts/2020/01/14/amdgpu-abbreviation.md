@@ -17,7 +17,7 @@ noindex: false
 | KMD | Kernel Mode graphics Drivers | |
 | KDG | Kernel Graphics Driver | |
 | KMS | Kernal Mode Setting | drm[^1] |
-| TMM | Translation Table Maps | drm[^1] |
+| TTM | Translation Table Maps | drm[^1] |
 | MMU | Memory Managiment Unit | |
 | MN | MMU Notifier | drm[^1] |
 | GEM | Graphics Execution Manager | drm[^1] |
