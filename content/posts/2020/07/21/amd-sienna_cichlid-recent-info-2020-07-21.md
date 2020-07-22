@@ -25,12 +25,12 @@ noindex: false
 {{< link >}} [[PATCH 095/207] drm/amdgpu: add vram_info v2_5 in atomfirmware header](https://lists.freedesktop.org/archives/amd-gfx/2020-June/050059.html) {{< /link >}}
 VBIOS から情報を読み取る部分のコード[atomfirmware.h](https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/include/atomfirmware.h&h=amd-staging-drm-next) に、*Sienna Cichlid* をサポートするため追加されたコードには GDDR6メモリ関連のパラメータが記述されている。  
 
-先日、*Sienna Cichlid* は **XGMI** をサポートするという記事を書いたが、コストは掛かるが実装面積は小さく収められる HBM2 ではなく、GDDR6メモリを使うのであれば、1カード上に 2GPUを搭載、マルチGPUとして接続する形よりも、専用ブリッジを用いて 2カードを接続する形のが現実的かもしれない。  
+先日、*Sienna Cichlid* は **XGMI** をサポートするという記事を書いたが、コストは掛かるが実装面積は小さく収められる HBM2 ではなく、{{< comple >}} バス幅は不明なものの {{< /comple >}}GDDR6メモリを使うのであれば、1カード上に 2GPUを搭載、マルチGPUとして接続する形よりも、専用ブリッジを用いて 2カードを接続する形のが現実的かもしれない。  
 {{< link >}} [Navi21 /Sienna Cichlid は高速なGPU間通信 XGMI をサポート | Coelacanth's Dream](/posts/2020/07/17/navi21-sienna_cichlid-support-xgmi/) {{< /link >}}
 
 ## AVFSモジュール と Graphics Power Optimizer {#sienna-avfs-gpo}
 ### Navi10 から倍近い数の AVFSモジュール {#avfs-module-2x-navi10}
-**AVFS** とは、dGPU では *Polaris* 世代から導入された技術であり、シリコン製造における微妙にばらつきが存在する GPUの動作を測定し、それぞれにより優れた電圧と周波数を選択する。  
+**AVFS** とは、dGPU では *Polaris* 世代から導入された技術であり、GPUの動作を測定し、シリコン製造における微妙にばらつきが存在する、それぞれの GPU により優れた電圧と周波数を選択する。  
 これにより GPUのある周波数における電圧をより低いものに設定し、消費電力を削減することができる。  
 
 その AVFSモジュールが *Navi10* で 36モジュール[^navi10-avfs]、*Navi14* で 28モジュール[^navi14-avfs] だったのが、*Sienna Cichlid* では 67モジュールとなる[^sienna-avfs]。  
@@ -39,11 +39,12 @@ VBIOS から情報を読み取る部分のコード[atomfirmware.h](https://cgit
 [^navi14-avfs]: [smu11_driver_if_navi10.h\inc\powerplay\amd\drm\gpu\drivers - ~agd5f/linux](https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/powerplay/inc/smu11_driver_if_navi10.h?h=amd-staging-drm-next&id=54c96f8679520b9e15a4960fce03e3b757ef08e3#n914)
 [^sienna-avfs]: [smu11_driver_if_sienna_cichlid.h\inc\powerplay\amd\drm\gpu\drivers - ~agd5f/linux](https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/powerplay/inc/smu11_driver_if_sienna_cichlid.h?h=amd-staging-drm-next&id=5c23cc5c1c5f436270d301c3081541f1364b240c#n1119)
 
-一応、*Arcturus* は 75モジュールと読める。[^arcturus-avfs]  
+*Arcturus* は 75モジュールと読める。[^arcturus-avfs]  
+モジュール数が GPUの規模を表しているように見えてしまうが、*Navi10* と *Navi14* の数があまり変わらないことから、ある世代の GPU でどれだけ省電力機能に力を入れているか次第なようにも思う。  
+[Navy Flounder](/tags/navy_flounder)用の値が設定されていないため、規模に関しては何とも言えない。  
 
 [^arcturus-avfs]: [smu11_driver_if_arcturus.h\inc\powerplay\amd\drm\gpu\drivers - ~agd5f/linux](https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/powerplay/inc/smu11_driver_if_arcturus.h?h=amd-staging-drm-next&id=f75c8c018d7c3d2e6300d3762ba2e2f8e77eba99#n787)
 
-モジュール数が GPUの規模を表しているように見えてしまうが、*Navi10* と *Navi14* の数があまり変わらないことから、ある世代の GPU でどれだけ省電力機能に力を入れているか次第なようにも思う。  
 
 ### GPO {#gpo}
 *Sienna Cichlid* では GPO(Graphics Power Optimizer) と称す新機能が追加されており、機能の中身としては SMU(System Management Unit) が CU数やメモリ状況に応じて、GPUクロックに 16個の V/F(Voltage /Frequency?) ポイントを作成、RLC がデータ転送に要求されるメモリ速度に応じて 16個のポイントから 1個を選択する。[^sienna-gpo]  
@@ -64,18 +65,22 @@ VBIOS から情報を読み取る部分のコード[atomfirmware.h](https://cgit
 
 RAS機能の中で EEPROM は VRAM の ECCエラー(2-bitエラー?) が発生した不良ページを記録するのに使われる。  
 記録された不良ページは R/P/F 3つのフラグで分けられ、F のフラグが立ったものは予約しないように設定される。[^amdgpu-ras]  
-NVIDIA の [Dynamic Page Retirement](https://docs.nvidia.com/deploy/dynamic-page-retirement/index.html) 機能と似たものなのだろうか？  
+これにより、将来的なさらなるメモリエラーを減らすことができる。  
+不揮発性メモリである EEPROM を使うため、再起動しても記録された値は残り続ける。
+
+同じような機能に、NVIDIA の [Dynamic Page Retirement](https://docs.nvidia.com/deploy/dynamic-page-retirement/index.html)がある。  
 
 [^amdgpu-ras]: [drm/amdgpu AMDgpu driver — The Linux Kernel documentation](https://www.kernel.org/doc/html/latest/gpu/amdgpu.html#amdgpu-ras-support)
 
-それとして、RAS機能と EEPROM を使った不良ページの記録は GPU で数値計算等を行なうサーバ向けの機能であり、それを *Sienna Cichlid* がサポートするというのは、*Sienna Cichlid* をベースとしたサーバ向け製品の登場予測に繋がる。  
-*Sienna Cichlid* は MxGPU といった VF(Virtual Function) 機能もサポートしており、記述からそれ用の Device ID も用意されているものと思われる。[^sienna-vf]  
+それとして、RAS機能と EEPROM を使った不良ページの記録は信頼性を確保したい、GPU を使うサーバ向けの機能であり、それを *Sienna Cichlid* がサポートするというのは、*Sienna Cichlid* をベースとしたサーバ向け製品の登場予測に繋がる。  
+*Sienna Cichlid* は MxGPU といった VF(Virtual Function) 機能もサポートしており、記述からそのための Device ID も用意されているものと思われる。[^sienna-vf]  
 
 [^sienna-vf]: [drm/amdkfd: sienna_cichlid virtual function support](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/amdkfd/kfd_device.c?h=amd-staging-drm-next&id=9110b6c1cbcd98a39134273f321691d7729dd72a)
 
 *Sienna Cichlid* は [RDNA 2](/tags/rdna_2) GPU としてグラフィクス向け機能が強化されるだけでなく、XGMI によるマルチGPUサポート、サーバ向け機能もサポートと、厚い構成のコアを持って広くに活躍する GPU となる *かもしれない* 。あくまで個人的な推測。  
 
-しかし、RDNA系 GPU がサーバ向けもカバーするのであれば、今後 CDNA系 GPU は HPC向けといった感じになるのだろうか。  
+しかし、RDNA系 GPU がサーバ向けもカバーするのであれば、今後 CDNA系 GPU は数値計算等の HPC向けといった感じになるのだろうか。  
+自分の推測であるし、クラウドゲーミングやサーバ向けとして出るんじゃないかと推測した *Navi12* も現状 Apple向けの **Radeon Pro 5600M** しか出ていないため、普通に外している可能性もある。  
 
 {{< ref >}}
 
