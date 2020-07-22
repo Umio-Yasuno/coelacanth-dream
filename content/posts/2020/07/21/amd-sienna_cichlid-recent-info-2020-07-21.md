@@ -23,14 +23,14 @@ noindex: false
 
 根拠となるのは以下のパッチであり、  
 {{< link >}} [[PATCH 095/207] drm/amdgpu: add vram_info v2_5 in atomfirmware header](https://lists.freedesktop.org/archives/amd-gfx/2020-June/050059.html) {{< /link >}}
-VBIOS から情報を読み取る部分のコード[atomfirmware.h](https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/include/atomfirmware.h&h=amd-staging-drm-next) に、*Sienna Cichlid* をサポートするため追加されたコードには GDDR6メモリ関連のパラメータが記述されている。  
+VBIOS から情報を読み取るコード[atomfirmware.h](https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/include/atomfirmware.h&h=amd-staging-drm-next) に、*Sienna Cichlid* をサポートするため追加された部分には GDDR6メモリ関連のパラメータが記述されている。  
 
 先日、*Sienna Cichlid* は **XGMI** をサポートするという記事を書いたが、コストは掛かるが実装面積は小さく収められる HBM2 ではなく、{{< comple >}} バス幅は不明なものの {{< /comple >}}GDDR6メモリを使うのであれば、1カード上に 2GPUを搭載、マルチGPUとして接続する形よりも、専用ブリッジを用いて 2カードを接続する形のが現実的かもしれない。  
 {{< link >}} [Navi21 /Sienna Cichlid は高速なGPU間通信 XGMI をサポート | Coelacanth's Dream](/posts/2020/07/17/navi21-sienna_cichlid-support-xgmi/) {{< /link >}}
 
 ## AVFSモジュール と Graphics Power Optimizer {#sienna-avfs-gpo}
 ### Navi10 から倍近い数の AVFSモジュール {#avfs-module-2x-navi10}
-**AVFS** とは、dGPU では *Polaris* 世代から導入された技術であり、GPUの動作を測定し、シリコン製造における微妙にばらつきが存在する、それぞれの GPU により優れた電圧と周波数を選択する。  
+**AVFS** とは、dGPU では *Polaris* 世代から導入された技術であり、シリコン製造における微妙にばらつきが存在する個々の GPU に対して、動作を測定し、それぞれにより優れた電圧と周波数を選択する。  
 これにより GPUのある周波数における電圧をより低いものに設定し、消費電力を削減することができる。  
 
 その AVFSモジュールが *Navi10* で 36モジュール[^navi10-avfs]、*Navi14* で 28モジュール[^navi14-avfs] だったのが、*Sienna Cichlid* では 67モジュールとなる[^sienna-avfs]。  

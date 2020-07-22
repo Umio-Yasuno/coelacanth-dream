@@ -92,10 +92,13 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | C1 | 3700C/U[^7] /3750H | (Vega 10) |
 | | C2 | 3500C/U[^7] /3550H | (Vega 8) |
 | | C3 | | (Vega 6) |
+| | C4 | &rarr; [Raven2](#raven2-gfx909) 3200U | |
+| | C5 | &rarr; [Raven2](#raven2-gfx909) 300U | |
 | | C8 | 3400G | (AM4 Vega 11) |
 | | C9 | 3200G | (AM4 Vega 8) |
 | | CA | | (AM4 Vega 11) |
 | | CB | | (AM4 Vega 8) |
+| | CC | &rarr; [Raven2](#raven2-gfx909) 3000G | |
 | | CD | | (AM4 Vega 2) |
 | | D1 | PRO 3700U | (Vega 10) |
 | | D2 | PRO 3500U | (Vega 8) |
@@ -156,6 +159,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | E9 | | (Samples FT5)[^7] |
 | | EA | | (Production FT5)[^7] |
 | | EB | | |
+| | | 3015e | |
 
 [Page Top](#page_index)
 
@@ -185,8 +189,8 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | 1636 &darr; | 00 | | (BringUp FP6) |
 | | C1 | 4800U | (B12 15W FP6) |
 | | C2 | 4700U | (B10 15W FP6) |
-| | C3 | 4500U | (B8 15W FP6) |
-| | C4 | | (B6 15W FP6) |
+| | C3 | 4500U[^rn-4500u] | (B8 15W FP6) |
+| | C4 | 4300U[^rn-4300u] | (B6 15W FP6) |
 | | C5 | 4900HS | (B12 45W FP6) |
 | | C6 | 4800HS | (B10 45W FP6) |
 | | C7 | | (B8 45W FP6) |
@@ -196,7 +200,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | CB | | (B10 35W AM4) |
 | | CC | | (B8 35W AM4) |
 | | CD | | (B6 35W AM4) |
-| | CE | | (B4 35W AM4) |
+| | CE | 4600U?[^rn-4600u] | (B4 35W AM4) |
 | | D1 | | (B12B 15W FP6) |
 | | D2 | | (B10B 15W FP6) |
 | | D3 | | (B8B 15W FP6) |
@@ -214,6 +218,10 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | E1 | | Acton |
 | | E2 | | Acton |
 | | E3 | | Acton |
+
+[^rn-4500u]: [[Solved] strange BackLight problom on Acer swift 314-42(AMD 4500U) / Laptop Issues / Arch Linux Forums](https://bbs.archlinux.org/viewtopic.php?id=254614)
+[^rn-4300u]: [Review IdeaPad Slim 3 – AMD Ryzen 3 4300U | Jagat Review](http://www.jagatreview.com/2020/07/review-ideapad-slim-3-amd-ryzen-3-4300u/)
+[^rn-4600u]: [No second monitor (#31) · Issues · Xfce / exo · GitLab](https://gitlab.xfce.org/xfce/exo/-/issues/31)
 
 <!--  Lucianne (gfx909?)  -->
 
