@@ -46,7 +46,7 @@ VBIOS から情報を読み取る部分のコード[atomfirmware.h](https://cgit
 [^arcturus-avfs]: [smu11_driver_if_arcturus.h\inc\powerplay\amd\drm\gpu\drivers - ~agd5f/linux](https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/powerplay/inc/smu11_driver_if_arcturus.h?h=amd-staging-drm-next&id=f75c8c018d7c3d2e6300d3762ba2e2f8e77eba99#n787)
 
 
-### GPO {#gpo}
+### GPO {#sienna-gpo}
 *Sienna Cichlid* では GPO(Graphics Power Optimizer) と称す新機能が追加されており、機能の中身としては SMU(System Management Unit) が CU数やメモリ状況に応じて、GPUクロックに 16個の V/F(Voltage /Frequency?) ポイントを作成、RLC がデータ転送に要求されるメモリ速度に応じて 16個のポイントから 1個を選択する。[^sienna-gpo]  
 
 [^sienna-gpo]: [[PATCH 135/207] drm/amd/powerplay: enable GPO](https://lists.freedesktop.org/archives/amd-gfx/2020-June/050099.html)
@@ -81,6 +81,7 @@ RAS機能の中で EEPROM は VRAM の ECCエラー(2-bitエラー?) が発生�
 
 しかし、RDNA系 GPU がサーバ向けもカバーするのであれば、今後 CDNA系 GPU は数値計算等の HPC向けといった感じになるのだろうか。  
 自分の推測であるし、クラウドゲーミングやサーバ向けとして出るんじゃないかと推測した *Navi12* も現状 Apple向けの **Radeon Pro 5600M** しか出ていないため、普通に外している可能性もある。  
+基本、根拠とソースはすべて示しているので、自分の考えはあくまで一個人のものであり、後は個々人で考えて頂ければ、というのが当サイトのスタンス。  
 
 {{< ref >}}
 
