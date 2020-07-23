@@ -84,7 +84,7 @@ Navi1x で無効化したのはユースケースがないため、という理�
 追加された `atom_smc_dpm_info_v4_9` には XGMIに関するコードがあるが[^6]、*Arcturus* の v4_6 と同一であることから流用したものと思われ、*Sienna Cichlid* が実際にサポートしているかは定かでない。[^11]  
 
 SMU(System Management Unit) のバージョンが *Sienna Cichlid* と *Arcturus* とで同じであるため、コードの流用は普通だ。  
-しかし、`arcturus_ppt.c` と `sienna_ciclid_ppt.c` を見比べると、(ppt = PPTable)  
+しかし、`arcturus_ppt.c` と `sienna_cichlid_ppt.c` を見比べると、(ppt = PPTable)  
 後者は `SMC_DPM_FEATURE` に `FEATURE_DPM_XGMI_MASK` が無い、message_map に SetXgmiMode が無いといった違いがある。[^12][^13]  
 そのため、やはり *Sienna Cichlid* が XGMI /Inifnity Fabric を介したマルチGPUをサポートするかは微妙、というのが現在の個人的姿勢だ。  
 

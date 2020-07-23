@@ -41,7 +41,7 @@ VBIOS から情報を読み取るコード[atomfirmware.h](https://cgit.freedesk
 
 *Arcturus* は 75モジュールと読める。[^arcturus-avfs]  
 モジュール数が GPUの規模を表しているように見えてしまうが、*Navi10* と *Navi14* の数があまり変わらないことから、ある世代の GPU でどれだけ省電力機能に力を入れているか次第なようにも思う。  
-[Navy Flounder](/tags/navy_flounder)用の値が設定されていないため、規模に関しては何とも言えない。  
+同世代であっても、[Navy Flounder](/tags/navy_flounder)用の値が設定されていないため、規模に関しては何とも言えない。  
 
 [^arcturus-avfs]: [smu11_driver_if_arcturus.h\inc\powerplay\amd\drm\gpu\drivers - ~agd5f/linux](https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/powerplay/inc/smu11_driver_if_arcturus.h?h=amd-staging-drm-next&id=f75c8c018d7c3d2e6300d3762ba2e2f8e77eba99#n787)
 
