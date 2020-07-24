@@ -23,7 +23,7 @@ noindex: false
  > 引用元: <cite>[[Bug][RKL]FW load failed · Issue #3173 · thesofproject/sofL](https://github.com/thesofproject/sof/issues/3173)</cite>  
  > &emsp;&emsp;&emsp;&emsp;\> <https://github.com/thesofproject/sof/files/4917659/dmesg.txt>
 
-情報元は [thesofproject/sof: Sound Open Firmware](https://github.com/thesofproject/sof) であり、*Sound Open Firmware* は Intelプロセッサやそれとペアになる PCH に内蔵される音声処理用のDSPのサポートを提供するため、Intel がオープンソースでファームウェアとドライバーを開発するプロジェクトである。[^intel-sof]  
+情報元は [thesofproject/sof: Sound Open Firmware](https://github.com/thesofproject/sof) であり、*Sound Open Firmware* は Intelプロセッサやそれとペアになる PCH に内蔵される音声処理用のDSPのサポートを提供するため、Intel がオープンソースで開発しているプロジェクトである。[^intel-sof]  
 上記 `dmesg` のログもバグ報告のためアップロードされたもの。  
 
 [^intel-sof]: [Designing Firmware for an Open World](https://software.intel.com/content/www/us/en/develop/articles/designing-firmware-for-an-open-world.html)

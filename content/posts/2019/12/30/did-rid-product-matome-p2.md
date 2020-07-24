@@ -104,14 +104,22 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | D2 | PRO 3500U | (Vega 8) |
 | | D3 | (PRO) 3300U | (Vega 6) |
 | | D4 | | (Vega 3) |
-| | D8 | | (AM4 Vega 11) |
-| | D9 | | (AM4 Vega 8) |
+| | D8 | PRO 3400G?? | (AM4 Vega 11) |
+| | D9 | PRO 3200G?? | (AM4 Vega 8) |
 | | DA | PRO 3400GE | (AM4 Vega 11) |
-| | DB | | (AM4 Vega 8) |
-| | DC | | (AM4 Vega 3) |
+| | DB | PRO 3200GE?? | (AM4 Vega 8) |
+| | DC | PRO 300/320GE?? | (AM4 Vega 3) |
 | | E1 | 3780U | Winston (Surface Edition Vega 11) |
 | | E2 | 3580U | Winston (Surface Edition Vega 8) |
+||
 | | ? | 300UGE | (65W AM4 Vega 3) |
+| | ? | 3150G | (65W AM4 Vega 3) |
+| | ? | 3150GE | (35W AM4 Vega 3) |
+| | ? | PRO 3125GE | (35W AM4 Vega 3) |
+| | ? | PRO 3150G | (65W AM4 Vega 3) |
+| | ? | PRO 3150GE | (35W AM4 Vega 3) |
+| | ? | PRO 3350G | (65W AM4 Vega 10) |
+| | ? | PRO 3350GE | (35W AM4 Vega 10) |
 
 [Page Top](#page_index)
 
@@ -141,8 +149,9 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | DF[^9] | | |
 | | E3[^9] | | (6W[^8] Vega 3) |
 | | E4[^9] | R1102G[^11] | (6W[^8] Vega 3) |
-| | | 3020e | |
-| | | 3050e | |
+| | ? | 3020e | |
+| | ? | 3050e | |
+| | ? | 3050GE | (35W AM4 Vega 3) |
 
 [Page Top](#page_index)
 
@@ -192,7 +201,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | C3 | 4500U[^rn-4500u] | (B8 15W FP6) |
 | | C4 | 4300U[^rn-4300u] | (B6 15W FP6) |
 | | C5 | 4900HS | (B12 45W FP6) |
-| | C6 | 4800HS | (B10 45W FP6) |
+| | C6 | 4800H/HS[^rn-4800h] | (B10 45W FP6) |
 | | C7 | | (B8 45W FP6) |
 | | C8 | | (B10 65W AM4) |
 | | C9 | | (B8 65W AM4) |
@@ -222,6 +231,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 [^rn-4500u]: [[Solved] strange BackLight problom on Acer swift 314-42(AMD 4500U) / Laptop Issues / Arch Linux Forums](https://bbs.archlinux.org/viewtopic.php?id=254614)
 [^rn-4300u]: [Review IdeaPad Slim 3 – AMD Ryzen 3 4300U | Jagat Review](http://www.jagatreview.com/2020/07/review-ideapad-slim-3-amd-ryzen-3-4300u/)
 [^rn-4600u]: [No second monitor (#31) · Issues · Xfce / exo · GitLab](https://gitlab.xfce.org/xfce/exo/-/issues/31)
+[^rn-4800h]: [Suspend/resume issue for RX5600M/4800H (Dell G5 SE) (#1222) · Issues · drm / amd · GitLab](https://gitlab.freedesktop.org/drm/amd/-/issues/1222)
 
 <!--  Lucianne (gfx909?)  -->
 
@@ -300,7 +310,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | :--- | :--- | :---: | :---: |
 | 66A0 | 00 | Radeon Instinct | |
 | 66A1 &darr; | 00 | | (Server XT 32GB) |
-| | 02 | | |
+| | 02 | MI50 32GB? | |
 | | 03 | | |
 | | 06 | Radeon Pro VII | (Vega20 WKS GL-XE) |
 | 66A2 &darr; | 00 | | |
@@ -327,7 +337,7 @@ categories: [ "Hardware", "AMD", "GPU" ]
 
 ### FAMILY_NV {#family_nv}
 <!--
-Navi LITE 13E9:00
+Navi LITE 13///\\\E9:00
 -->
 
 #### Navi10 ( gfx1010 ) {#navi10-gfx1010}
@@ -447,4 +457,4 @@ Navi21: gfx1030 [^12]
 
  * [DeviceInfoUtils.cpp - GPUOpen-Tools/common-src-DeviceInfo](https://github.com/GPUOpen-Tools/common-src-DeviceInfo/blob/master/DeviceInfoUtils.cpp)
 
-{{< /ref >}}
+{{< /ref >}} 
