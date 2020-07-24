@@ -83,3 +83,4 @@ TSMC 7nm の効力だけでなく、AMD の設計における努力が窺える�
 *Renoir* と他 2つの違いには、LPDDR4xメモリの対応があげられる。  
 *DDR4 128-bit PHY* のダイ面積を測定してみたところ、CPU Core等ほどは小さくなっておらず、やはり I/O の物理層は微細化効果が効きにくいと思わせるが、同時に LPDDR4 対応によるダイ面積への影響はさほどないことがわかる。  
 それと、*Display PHY* の形状、配線が大きく異なるように見えたが、これは *Renoir* で *Navi1x* と同世代の DCN2.1 となり、DSC に対応したことが影響していると思われる。  
+{{< link >}} [AMD Renoir のダイ観察 & 推測 | Coelacanth's Dream](/posts/2020/06/19/renoir-dieshot-guess/) {{< /link >}}
