@@ -50,3 +50,13 @@ noindex: false
 
 まだ今回追加された **3050GE** を除く **Athlon 3000シリーズ** が *Picassoシリコン* ベースの *Dali APU* と確定した訳ではないが、そうであったらわかりやすいな、というのが本音。  
 というより、中身としては *Picasso* であるから CPU/GPU の情報から *Dali* と知ることはできず、何かしら外部 I/O を制限されていることが通知されるのを待つしかなかったりする。  
+
+{{< ins >}}
+
+AMD から今回追加されたデスクトップ/プロ向け **Athlon 3000Gシリーズ** の PCIeレーンについて通知されたらしいのだが、**Gold** と **Silver** でレーンの設定が異なるため、  
+**Gold** は普通の、有効PCIeレーンが少し減らされた *Picasso* であり、ただ **Athlon Silver Pro 3125GE** のみが *Picassoシリコン* ベースで、*Raven2シリコン* 同等まで減らした *Dali* であるかもしれない。  
+
+<https://twitter.com/IanCutress/status/1286577147063275520>  
+[AMD Launches 12 Desktop Renoir Ryzen 4000G Series APUs: But You Can’t Buy Them](https://www.anandtech.com/show/15921/amd-launches-12-desktop-renoir-ryzen-4000g-series-apus-but-you-cant-buy-them)
+
+{{< /ins >}}
