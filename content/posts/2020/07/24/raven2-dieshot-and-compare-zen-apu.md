@@ -60,7 +60,7 @@ CPU Core、CPU L3$ (4MB)、GPU CU は自分が画像から割り出したもの�
 | Die Size | 208.84mm<sup>2</sup> | 148.55mm<sup>2</sup> | 155.01.mm<sup>2</sup> |
 ||
 | CPU Arch | Zen | Zen | Zen 2 |
-| CPU Core Area<br>(non include L2$) | 5.18mm<sup>2</sup> | 5.18mm<sup>2</sup> | 2.37mm<sup>2</sup>  |
+| CPU Core Area<br>(non include L2$) | 5.18mm<sup>2</sup> | 5.18mm<sup>2</sup> | 2.73mm<sup>2</sup>  |
 | CPU Core | 4-Core | 2-Core | 8-Core |
 | Total CPU L3$ | 4MB | 4MB | 8MB |
 | L3$ (4MB) Area | 10.91mm<sup>2</sup> | 10.91mm<sup>2</sup> | 5.39mm<sup>2</sup> |
@@ -73,11 +73,18 @@ CPU Core、CPU L3$ (4MB)、GPU CU は自分が画像から割り出したもの�
 ||
 | DDR4 128-bit PHY Area | 16.50mm<sup>2</sup> | 16.50mm<sup>2</sup> | 15.74mm<sup>2</sup>  |
 
+{{< ins >}}
+
+以前のバージョンにて、*Renoir* の *CPU Core Area* の値を間違えていたことをここにお詫び致します。  
+以前は 2.37mm<sup>2</sup>と表記していましたが、2.73mm<sup>2</sup> が正しい値となります。  
+
+{{< /ins >}}
+
 GPUアーキテクチャとしては *gfx902* と *gfx909* の間に違いはあまり存在しないが、*Raven2* GPU CU のダイ面積が同じプロセスの *RavenRidge* から微増している。  
 理由としては 3CU で共有する L1K/L1I Cache 部が考えられ、何でか少し縦に伸びている。  
 ただ、測定誤差の分が理由として大きいだろう。  
 
-*Renoir* は CPU Core、CPU L3$ (4MB)、GPU CU のダイ面積すべてで *RavenRidge*、*Raven2* から半分近く、半分より若干小さい面積を達成している。  
+*Renoir* は CPU Core、CPU L3$ (4MB)、GPU CU のダイ面積すべてで *RavenRidge*、*Raven2* から半分近い面積を達成している。  
 TSMC 7nm の効力だけでなく、AMD の設計における努力が窺える。  
 
 *Renoir* と他 2つの違いには、LPDDR4xメモリの対応があげられる。  

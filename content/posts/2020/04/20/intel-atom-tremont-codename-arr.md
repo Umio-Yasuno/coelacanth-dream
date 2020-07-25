@@ -89,15 +89,6 @@ CPUコア数に関しては若干情報があるのだが、正直怪しいと�
 [^10]: <https://github.com/coreboot/coreboot/blob/aa56c11b1911fa49e53a145926b00670f9939f27/src/mainboard/google/dedede/Kconfig#L59>
 [^11]: [mb/intel/jasperlake_rvp: Add initial mainboard code · coreboot/coreboot@630aa4b](https://github.com/coreboot/coreboot/commit/630aa4b3db1b7fa459380ec52328d632b53b22de)
 
-{{< ins >}}
-
-**Dedede** に搭載される *Jasper Lake* に関しては 2-Core/4-Thread と確認できる記述が見つかった。  
-
-{{< link >}}[UPSTREAM: ASoC: SOF: Intel: initial support to JasperLake. (I0aa932c4) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/kernel/+/1993735){{< /link >}}
-{{< link >}}<https://github.com/coreboot/coreboot/blob/a02bf7468a5bb22f47be2aaf6186f2c835710fbc/src/mainboard/google/dedede/Kconfig#L60>{{< /link >}}
-
-{{< /ins >}}
-
 *Jasper Lake* はGPUに関連するソフトウェア、[intel/media-driver](https://github.com/intel/media-driver) や [Mesa3D](https://gitlab.freedesktop.org/mesa/mesa) 等では *Elkhart Lake* として扱われており、両者の間にGPUの仕様違いは規模以外にないものと思われる。[^12][^13]  
 そして *Jasper Lake* GPUの規模は、総EU数 24基、L3cacheバンク 4基(1280KB)[^19]。  
 
