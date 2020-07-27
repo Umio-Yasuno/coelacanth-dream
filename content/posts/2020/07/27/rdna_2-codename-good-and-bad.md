@@ -43,7 +43,7 @@ AMD が *RDNA 2* にこうしたコードネームを付けるようになった
 *nv12* の混同による影響は実際にあり、同ファイル上ではないが、あるパッチに記述された *nv12* を *Navi12* と勘違いし、「*Navi12* は APU」なんて記事を書いた海外サイトもある。  
 {{< link >}} [Is the AMD Navi 12 GPU actually powering the Ryzen 4000 APUs after all? | PCGamesN](https://www.pcgamesn.com/amd-navi-12-ryzen-4000-renoir-apu-display-engine) {{< /link >}}
 *Sienna Cichlid* のパッチが初めて投稿された時にも思ったが[^sienna-first-patch]、オープンソースコードを読むのって自分含めたオタクだけで、あまり読まれないものなのだろうか。  
-自分も誤解釈をしない訳ではないため、あまり言えないが。  
+自分も誤解釈をしない訳ではないため、あまり人のことを言えないが。  
 
 [^sienna-first-patch]: [AMD の次世代GPU、Sienna Cichlid の Linux Kernelパッチが投稿される | Coelacanth's Dream](/posts/2020/06/02/amd-sienna_cichlid/)
 
