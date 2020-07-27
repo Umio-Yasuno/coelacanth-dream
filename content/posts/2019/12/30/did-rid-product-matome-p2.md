@@ -343,23 +343,23 @@ Navi LITE 13///\\\E9:00
 #### Navi10 ( gfx1010 ) {#navi10-gfx1010}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 66AF &darr; | 70 | | (Fake DID?) |
+| 66AF &darr; | 70 | | (Navi10 XTA, Fake DID?) |
 | | 71 | | (Fake DID?) |
 | | 72 | | (Fake DID?) |
 | | 73 | | (Fake DID?) |
-| | F0 | | (Navi10 XTX Fake DID?[^2]) |
-| | F1 | | (Navi10 XT Fake DID?[^2]) |
-| | F2 | | (Navi10 XL Fake DID?[^2]) |
-| | F3 | | (12Gbps, Fake DID?) |
+| | F0 | | (Navi10 XTX, Fake DID?[^2]) |
+| | F1 | | (Navi10 XT, Fake DID?[^2]) |
+| | F2 | | (Navi10 XL, Fake DID?[^2]) |
+| | F3 | | (Navi10 XM, 12Gbps, Fake DID?) |
 | | F4 | | (12Gbps, Fake DID?) |
 | | F5 | | (12Gbps, Fake DID?) |
 | | F6 | | (Navi10 XME Fake DID?[^2]) |
-| 7310 | 00 | Radeon Pro W5700X |  |
-| 7312 | 00 | Radeon Pro W5700 | (Navi10 Pro XL?[^4]) |
-| 7318 | 40 | | |
-| 7319 | 40 | Radeon Pro 5700 XT | |
+| 7310 | 00 | Radeon Pro W5700X | (Navi10 GL-XTA) |
+| 7312 | 00 | Radeon Pro W5700 | (Navi10 Pro-XL[^4]) |
+| 7318 | 40 | | (Navi10 XTA) |
+| 7319 | 40 | Radeon Pro 5700 XT | (Navi10 XTMA) |
 | 731A | 40 | | |
-| 731B | 40 | Radeon Pro 5700 | |
+| 731B | 40 | Radeon Pro 5700 | (Navi10 XGA) |
 | 731F &darr; | C0 | RX 5700 XT 50th | (Navi10 XTX) |
 | | C1 | RX 5700 XT | (Navi10 XT) |
 | | C2 | RX 5600M | (Navi10 XME) |
