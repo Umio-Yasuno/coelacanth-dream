@@ -57,10 +57,11 @@ AMDGPU向けオープンソース・ドライバー、**RadeonSI (OpenGL)** と 
 同じ *Navi1x /GFX10.1* 世代であっても、命令の対応範囲が *Navi10* と *Navi12 /Navi14* で異なり、*Navi10* は一部命令に対応していないことは、これまで何度か触れたことがあったが、  
 {{< link >}} [Navi12情報近況 (2020-03-09) & 推測 | Coelacanth's Dream](/posts/2020/03/09/navi12-recent-info/) {{< /link >}}
 RenderBackendの機能にも差異があるらしく、DCC(Delta Color Compression) 機能の一部を *Navi12 /Navi14* はサポートし、*Navi10* はサポートしないとなっている。[^navi12-14-dcc]  
+*RDNA 2/GFX10.3* 世代はすべてサポートするとして判定が行なわれている。  
 
 [^navi12-14-dcc]: <https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6100/diffs?commit_id=2ba4fe2f1f1d7bcfc1222d3141b4ce981455d498>
 
-その機能についてコードを漁ってみると、独立した 64Byte のブロックで DCC を行なうものらしいことがわかる。[^dcc-64b-block]  
-それと、*RDNA 2 /GFX10.3* 世代、*Sienna Cichlid* と *Navy Flounder* ではそのブロックサイズの対応が拡張され、128B のブロックもサポートするとなっている。  
+その機能についてコードを漁ってみると、独立した 64Byte のブロックで DCC を実行するものらしいことがわかる。[^dcc-64b-block]  
+それと、*RDNA 2 /GFX10.3* 世代ではそのブロックサイズの対応が拡張され、128B のブロックもサポートされる。  
 
 [^dcc-64b-block]: [src/amd/common/ac_surface.c · 87ecfdfbf0a8448d1475e6da15175e68bdeb933b · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/87ecfdfbf0a8448d1475e6da15175e68bdeb933b/src/amd/common/ac_surface.c#L1991)
