@@ -217,9 +217,9 @@ categories: [ "Hardware", "AMD", "GPU" ]
 | | D5 | | (B12B 45W FP6) |
 | | D6 | | (B10B 45W FP6) |
 | | D7 | | (B8B 45W AM4) |
-| | D8 | | (B10B 65W AM4) |
-| | D9 | | (B8B 65W AM4) |
-| | DA | | (B6B 65W AM4) |
+| | D8 | PRO 4750G | (B10B 65W AM4) |
+| | D9 | PRO 4650G | (B8B 65W AM4) |
+| | DA | PRO 4350G | (B6B 65W AM4) |
 | | DB | | (B10B 35W AM4) |
 | | DC | | (B8B 35W AM4) |
 | | DD | | (B6B 35W AM4) |
