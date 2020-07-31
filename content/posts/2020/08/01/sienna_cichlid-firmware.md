@@ -8,6 +8,12 @@ categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
 ---
 
+{{< pindex >}}
+
+ * [ファームウェアの雑な読み方](#how-to-read)
+
+{{< /pindex >}}
+
 AMD が、2020/07/30付で、**Radeon™ Software for Linux® 20.30** を公開した。  
 {{< link >}} [Radeon™ Software for Linux® 20.30 Release Notes | AMD](https://www.amd.com/en/support/kb/release-notes/rn-amdgpu-unified-linux-20-30) {{< /link >}}
 
@@ -29,6 +35,8 @@ AMD が、2020/07/30付で、**Radeon™ Software for Linux® 20.30** を公開�
 だからフリーで広めるし、個人が独占するくらいなら一次情報元もそれの読み方も公開する。  
 自分はタイミングをうまく読めるエンターテイナーでもない。  
 ただ、同時に情報を守りたい、クローズドソースで提供する側の立場も理解はしているつもりだから、一言やめてくれと提供する側に言われればこの記事は消すし、これまでのようにオープンソースコードをネタにしていく。  
+
+## ファームウェアの雑な読み方 {#how-to-read}
 
 前置きが長くなったが、前述したようなリスクがあるため、*Sienna Cichlid* のファームウェアから何が読めるかではなく、*Navi10* の `${ASIC}_gpu_info.bin` を元に読み方のみを記す。  
 また、自分も深くは理解していないため、解析の結果こうなっている、というだけであり間違っている可能性も当然存在する。  
