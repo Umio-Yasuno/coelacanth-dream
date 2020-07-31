@@ -126,7 +126,8 @@ noindex: false
 | RAS | Reliability, Availability, Serviceability | |
 | HDCP | Highbandwidth Digital Content Protection | |
 | TA | Texture Address /Trusted Application?[^trusted-application] | |
-| TC | Texture Cache | |
+| TC | Texture Cache? | |
+| TCC | Texture Channel Cache? | |
 | BACO | Bus Active, Chip Off[^2] | |
 | BOCO | Bus Off, Chip Off[^2] | |
 | OPN | ordering Part Number | |
