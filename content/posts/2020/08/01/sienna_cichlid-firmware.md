@@ -2,7 +2,7 @@
 title: "Radeon™ Software for Linux® 20.30 が公開 & ファームウェアの雑な読み方"
 date: 2020-08-01T00:19:19+09:00
 draft: false
-tags: [ "Sienna_Cichlid", "Navi21" ]
+# tags: [ "Sienna_Cichlid", "Navi21" ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
