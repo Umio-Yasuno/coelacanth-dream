@@ -6,7 +6,7 @@ tags: [ "Zen", "Zen_2" ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "CPU" ]
 noindex: false
-summary: "AMD の公式サイトにて EPYC Embedded 7001/7002 シリーズ のページが追加、モデルの仕様が記載されていた。モデルナンバーとそれに対応する仕様は、基本現行のサーバー向け EPYC 7001/7002 シリーズ のものと変わらない。"
+summary: "AMD の公式サイトにて EPYC Embedded 7001/7002 シリーズ のページが追加、モデルの仕様が記載されていた。"
 ---
 
 AMD の公式サイトにて **EPYC Embedded 7001/7002 シリーズ** のページが追加、モデルの仕様が記載されていた。  
