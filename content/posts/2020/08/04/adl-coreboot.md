@@ -38,12 +38,12 @@ Intel 次世代のデスクトップ向けプロセッサと見込まれてい�
 
 ## Alder Lake PCH PCIe {#adl-pcie}
 *Alder Lake-S* と *Alder Lake-P* で PCH(Platform Controller Hub) が持つ PCIe RP(Root Port) の DeviceID 数が異なり、  
-*ADP_S (Alder Lake PCH S)* は 28-RP、*ADP_P (Alder Lake PCH P)* は 12-RP となっている。  
+*ADP_S (Alder Lake PCH S /Alder Point S?)* は 28-RP、*ADP_P (Alder Lake PCH P /Alder Point?)* は 12-RP となっている。  
 
 *Comet Lake* 世代のものと比較すると、デスクトップ向けである *Comet Lake-S* の PCH、 *CMP_H* は 24-RP、モバイル向けの *CMP_LP* は 16-RP であり、  
 *Alder Lake-S* は末尾、GPU部規模からも推測されるようにデスクトップ向けのプロセッサと考えられ、*Alder Lake-P* はモバイル向け、または組み込み向けといった小規模なシステム向けのプロセッサと考えられる。  
 
-次世代 Atom系プロセッサにおいて、モバイル向けとなる *JSP (Jasper Lake PCH)* は 8-RP、組み込み向けの *MCC (Mule Creek Canyon, Elkhart Lake PCH)* は 7-RP であり、*ADP_P* は Core系 と Atom系の中間の PCIe RP(Root Port) を持つと言える。  
+次世代 Atom系プロセッサにおいて、モバイル向けとなる *JSP (Jasper Lake PCH /Jasper Point?)* は 8-RP、組み込み向けの *MCC (Mule Creek Canyon, Elkhart Lake PCH)* は 7-RP であり、*ADP_P* は Core系 と Atom系の中間の PCIe RP(Root Port) を持つと言える。  
 しかし、Linux Kernel へのあるパッチで、*Alder Lake(-S)* のモデルナンバー(`x86_Model`) が明らかになると共に、[Lakefield](/tags/lakefiled)同様に Core系と Atom系の両方のコアを持つハイブリッド構成を取ることが確かとなったが、  
 *Alder Lake-P* もまたハイブリッド構成を取るかどうかは朧気である。  
 {{< link >}} [Intel Alder Lake が ハイブリッドコア構成を取ることが確かに | Coelacanth's Dream](/posts/2020/07/21/intel-adl-hybrid-core/) {{< /link >}}
@@ -71,6 +71,6 @@ Intel 次世代のデスクトップ向けプロセッサと見込まれてい�
 | &ensp;EUs | 16 | 32 | 96 | 96 |
 | &ensp;&ensp;SPs | 128 | 256 | 768 | 768 |
 | GPU L3$ | 1536KB? | 1536KB? | 3072KB | 16384KB[^dg1-l3] |
-| | RKL | TGL /RKL<br>/ADL(-S/P)? | TGL /ADL-P? | DG1 |
+| | RKL | TGL /RKL<br>/ADL-S? | TGL /ADL-P? | DG1 |
 
 [^dg1-l3]: [Intel、DG1 において OpenCL と oneAPI Level Zero をサポート　―― 巨大なキャッシュを持つ DG1 | Coelacanth's Dream](/posts/2020/06/20/intel-dg1-support-opencl-levelzero/)
