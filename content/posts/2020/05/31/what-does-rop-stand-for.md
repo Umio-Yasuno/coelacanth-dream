@@ -2,7 +2,7 @@
 title: "ROP は何の略"
 date: 2020-05-31T20:12:14+09:00
 draft: false
-# tags: [ "", ]
+tags: [ "Database", ]
 keywords: [ "", ]
 categories: [ "Hardware", "GPU" ]
 noindex: false
