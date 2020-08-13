@@ -17,7 +17,7 @@ AMD もまたハイブリッドコア技術に関する特許を提出してお�
 性能、機能面では `big /High /Core`コアより劣るが、電力比性能で優れ、占有するダイエリアが小さいコア(`small /Low /Atom`コア) の 2種類を用いて構成される。  
 
 このハイブリッド技術に関して、ただ私見を書いていく。  
-先に書くと、以前書いた *Alder Lake* の推測と被る部分が多い。[^adl-cd-guess]  
+先に書くと、以前書いた *Alder Lake* の推測だいぶ被る内容となっている。[^adl-cd-guess]  
 
 [^adl-cd-guess]: [Alder Lake の噂と推測 ――Alder Lake は現実に向けたプロセッサか | Coelacanth's Dream](/posts/2020/05/07/alderlake-rumor-guess/)
 
