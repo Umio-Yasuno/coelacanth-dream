@@ -24,6 +24,7 @@ Intel は 2020/08/13 にバーチャルイベント「Architecture Day 2020」�
    * [Alder Lake は Golden Cove と Gracemont のハイブリッド構成](#adl)
  * [GPU](#gpu)
    * [{{< xe class="HP" >}} は 1-Tile 512EU](#xe-hp-1t-512eu)
+   * [ゲーミング向け Intel GPU {{< xe class="HPG" >}}](#xe-hpg)
    * [{{< xe class="lp" >}} アーキテクチャ詳細](#xe-lp-detail)
    * [{{< xe class="lp" >}}ベースのサーバー向けGPU SG1](#sg1)
 
@@ -45,8 +46,7 @@ Intel は 2020/08/13 にバーチャルイベント「Architecture Day 2020」�
 
 {{< figure src="/image/2020/08/14/xe-hp-scaling.webp" caption="画像出典: [VimeoArchitecture Day 2020 (Event Replay)](https://vimeo.com/intelpr/review/447304765/179933d14f)" >}}
 
-ログの内容から、実行しているソフトウェアは [clpeak](https://github.com/krrishnarraj/clpeak) は思われる。  
-[先日、自分が **RX 560** で CU数のスケーリング性能を調査した時](/posts/2020/08/06/polaris11-cu-scaling-test/)にも使ったもので、ログのフォーマットが一致する。  
+ログの内容から、実行しているソフトウェアは [clpeak](https://github.com/krrishnarraj/clpeak) は思われる。[先日、自分が **RX 560** で CU数のスケーリング性能を調査した時](/posts/2020/08/06/polaris11-cu-scaling-test/)にも使ったもので、ログのフォーマットが一致する。  
 
  >       Platform: AMD Accelerated Parallel Processing
  >         Device: gfx803
@@ -61,12 +61,19 @@ Intel は 2020/08/13 にバーチャルイベント「Architecture Day 2020」�
  >             float8  : 2248.82
  >             float16 : 2207.62
 
-この時 `Compute units` の行に表示されるのは、シェーダープロセッサ数ではなくそれを多数内包する *CU (AMDGPU)、EU (Intel GPU)* の数である。  
-このことから、{{< xe class="hp" >}} は 1-Tile 512EU と思われる。  
+この時 `Compute units` の行に表示されるのは、シェーダープロセッサ数ではなくそれを多数内包する *CU (AMDGPU)、EU (Intel GPU)* の数だ。  
+よって、{{< xe class="hp" >}} は 1-Tile 512EU と考えられる。  
 
 ただ、**RX 560** を使った調査の時にも書いたが、`clpeak` はメモリ性能が影響しないベンチマークソフトウェアであり、それもあって性能が単純にスケーリングしやすくなっている。  
 マルチGPU構成であっても性能がスケーリングすることを示す目的があるのかもしれないが、もっと大規模な、メモリが重要となるソフトウェアの場合、どこまでスケーリングするかはデモから測ることができない。  
 
+### ゲーミング向け Intel GPU {{< xe class="HPG" >}} {#xe-hpg}
+ゲーミング向けに最適化された {{< xe >}}系アーキテクチャ、{{< xe class="hpg" >}} の存在が明らかにされた。  
+{{< xe class="lp" >}}の優れた電力比グラフィック性能、{{< xe class="hp" >}}のスケーリング性能、{{< xe class="hpc" >}}の最適化された周波数を組み合わせたアーキテクチャとしている。  
+メモリには帯域と帯域あたりの消費電力に優れる HBM系ではなく、コスト比に優れる GDDR6 を採用するとしている。  
+ハードウェアレイトレーシングもサポートし、その他グラフィック向けの機能も多くサポートする。  
+
+外部ファウンダリによって製造され、2021年に出荷予定。  
 
 
 ### {{< xe class="lp" >}} アーキテクチャ詳細 {#xe-lp-detail}
@@ -77,7 +84,7 @@ EU部は前世代の *Gen11アーキテクチャ* が以下のように、Thread
 {{< figure src="/image/2020/08/14/gen11-eu.webp" caption="画像出典: [VimeoArchitecture Day 2020 (Event Replay)](https://vimeo.com/intelpr/review/447304765/179933d14f)" >}}
 
 *Gen12アーキテクチャ* では、Thread Control が 2つ EU をペアとし、またがるものとなった。  
-演算部は、*8-wide FP/INT ALU* で SIMD8 を構成するものとなり、データ精度 INT16 を INT32時の 2倍、INT8 は 4倍で処理可能となった。複雑な計算を処理する *Extend Math ALU* は EU ごとに 2-wide となり、そこは *Gen11アーキテクチャ* より減っている。  
+演算部は、*8-wide FP/INT ALU* で SIMD8 を構成するものとなり、データ精度 INT16 を INT32時の 2倍、INT8 は 4倍のスループットで処理可能となった。複雑な計算を処理する *Extend Math ALU* は EU ごとに 2-wide となり、そこは *Gen11アーキテクチャ* より減っている。  
 
 {{< figure src="/image/2020/08/14/gen12-eu.webp" caption="画像出典: [VimeoArchitecture Day 2020 (Event Replay)](https://vimeo.com/intelpr/review/447304765/179933d14f)" >}}
 
