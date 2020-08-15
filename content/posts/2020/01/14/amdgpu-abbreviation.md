@@ -6,6 +6,7 @@ tags: [ "Database", ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
+summary: " "
 ---
 
 個人的なメモ
