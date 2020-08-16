@@ -34,15 +34,10 @@ noindex: true
 
 記事に書く自分の考えはあくまでも一個人のものです。  
 
-## 寄付、支援 {#support}
-率直に言うと、寄付、支援してくれた方に特別見返りを約束することは出来ません。  
-ですが、支援自体は活動のモチベーションとなり、このサイトが存続する確率が高まります。  
-そして、自分が行なっている活動の価値を推し量るための指標にもなります。  
-
-頂いた支援金の用途には、OSSプロジェクトへの支援、ドメイン等サイト管理、検証用ハードウェアの購入を想定しています。  
-
-決済方法には [Stripe](https://stripe.com/)、[PayPal](https://www.paypal.com)が使用できます。金額は *&yen;1* または *$0.01* から選ぶことが出来ます。  
-{{< link >}}[Liberapay を使って Umio-Yasuno に寄付する](https://liberapay.com/Umio-Yasuno/donate){{< /link >}}
+## 支援、サポート {#support}
+自分の生存率が高まります。  
+{{< link >}} [Liberapay を使って Umio-Yasuno に寄付する](https://liberapay.com/Umio-Yasuno/donate) {{< /link >}}
+{{< link >}} [Umio Yasuno is creating Hardware info blog | Patreon](https://www.patreon.com/user?u=39671252&fan_landing=true) {{< /link >}}
 
 ## 連絡先 {#contact}
 サイトへの意見、要望等がありましたらこちらからお願いします。
