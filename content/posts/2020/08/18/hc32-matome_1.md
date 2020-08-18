@@ -52,8 +52,21 @@ Zen系APU (*Raven, Raven2, Renoir*)と比較した表が以下となる。
 | Die Size | 208.84mm<sup>2</sup> | 148.55mm<sup>2</sup> | 155.01.mm<sup>2</sup> | 360.4mm<sup>2</sup>
 ||
 | CPU Arch | Zen | Zen | Zen 2 | Zen 2 | 
-| CPU Core Area<br>(non include L2$) | 5.18mm<sup>2</sup> | 5.18mm<sup>2</sup> | 2.73mm<sup>2</sup>  | *2.59mm<sup>2</sup>*
+| CPU Core Area<br>(non include L2$) | 5.18mm<sup>2</sup> | 5.18mm<sup>2</sup> | 2.73mm<sup>2</sup>  | *2.59mm<sup>2</sup>?*
 | Total CPU L3$ | 4MB | 4MB | 8MB | 8MB |
-| L3$ (4MB) Area | 10.91mm<sup>2</sup> | 10.91mm<sup>2</sup> | 5.39mm<sup>2</sup> | *4.53mm<sup>2</sup>* |
+| L3$ (4MB) Area | 10.91mm<sup>2</sup> | 10.91mm<sup>2</sup> | 5.39mm<sup>2</sup> | *4.53mm<sup>2</sup>?* |
 
 *Renoir* と比較して、CPUコアは 約94%、L3キャッシュ(4MB) は 約84%のダイエリアとなっており、確かに `7nm Enhanced` であるように見える。  
+
+## {{< xe class="lp" >}}アーキテクチャ {#xe-lp}
+[Hot Chips 2020 Live Blog: Intel's Xe GPU Architecture (5:30pm PT)](https://www.anandtech.com/show/15993/hot-chips-2020-live-blog-intels-xe-gpu-architecture-530pm-pt)  
+
+Architecture Day 2020 でも {{< xe class="lp" >}}アーキテクチャの詳細は発表されていたが、  
+{{< link >}} [Intel Architecture Day 2020 個人的まとめ　―― XeHP は 1-Tile 512EU、XeLPアーキテクチャ詳細 | Coelacanth's Dream](/posts/2020/08/14/intel-architecture-day-2020/) {{< /link >}}
+今回は {{< xe >}}共通の部分も一部解説されており、任意で追加されるユニットとして、`FP64` と `Matrix Extension (XMX)` をあげている。  
+恐らく 2つは {{< xe class="hpc" >}}に向けたもので、後者は Intel 次世代サーバー向けプロセッサ [Sapphire Rapids](/tags/sapphire_rapids) が対応するアクセラレーター向け命令 `AMX(Advanced Matrix Extension)` と連携するためのユニットとされる。[^spr-amx]  
+
+
+[^spr-amx]: [ASCII.jp：性能が70%向上するCooper Lakeと200Topsの性能を持つPonte Vecchio　インテル CPUロードマップ　 (2/3)](https://ascii.jp/elem/000/004/017/4017807/2/)
+
+他は {{< xe class="hp" >}} が HBM2e を採用することが明言されたくらい？  
