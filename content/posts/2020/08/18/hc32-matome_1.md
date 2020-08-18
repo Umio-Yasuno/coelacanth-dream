@@ -1,7 +1,7 @@
 ---
 title: "Hot Chips 32 個人的まとめ"
 date: 2020-08-18T18:19:52+09:00
-draft: true
+draft: false
 tags: [ "RDNA_2", ]
 keywords: [ "", ]
 # categories: [ "", ]
