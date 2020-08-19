@@ -34,7 +34,7 @@ WGPの内部構成、そして レイ計算ユニットの概要が明かされ�
 ごく小さい(Very small) ダイエリアコストで、テクスチャーを解像度に最適化する MIP maps を効率的に行なう *Sampler Feedback Streaming* を導入しており、これによって最大 60% の I/O を減らせるとしている。  
 
 ゲームにも使われるような機械学習の推論でも、ごく小さいダイエリアコストで 3~10倍の性能向上を達成している。  
-性能に関しては何との比較かが不明だが、性能向上の中身は *Navi12 /Navi14* も対応している混合積演算ではないかと思う。  
+性能に関しては何との比較かが不明だが、性能向上の中身は *Navi12 /Navi14* も対応している混合積演算命令ではないかと思う。  
 それらは 8個の INT4 をまとめて(パックド) 計算する命令に対応している。  
 コストの小ささから特別ユニットを搭載したものではないだろう。  
 
@@ -70,3 +70,9 @@ Architecture Day 2020 でも {{< xe class="lp" >}}アーキテクチャの詳細
 [^spr-amx]: [ASCII.jp：性能が70%向上するCooper Lakeと200Topsの性能を持つPonte Vecchio　インテル CPUロードマップ　 (2/3)](https://ascii.jp/elem/000/004/017/4017807/2/)
 
 他は {{< xe class="hp" >}} が HBM2e を採用することが明言されたくらい？  
+
+## Ice Lake (Server) {#ice_lake-server}
+*Ice Lake (Client)* も *Sunny Cove* コアではあるが、`AVX-512` の実行は `Port 0` のみとなっており、  
+*Ice Lake (Server)* は `Port 0` と `Port 1` を束ねての実行と、`Port 5` での実行が可能となっている。  
+
+{{< figure src="/image/2020/07/23/ice_lake-client-arch.webp" title="Ice Lake (Client) Microarchitecture" caption="画像出典: <cite>[Intel® 64 and IA-32 Architectures Optimization Reference Manual](https://software.intel.com/content/www/us/en/develop/download/intel-64-and-ia-32-architectures-optimization-reference-manual.html)</cite>" >}}

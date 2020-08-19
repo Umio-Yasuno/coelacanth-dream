@@ -46,7 +46,7 @@ noindex: false
 この実装方式の利点としては、AVX-512 をサポートでき、それに必要とされる変更は主にベクトルレジスタの増量とアクセスポート部であるため、演算器も対応させる方式と比べて、割かなければならないリソース、ダイエリアはずっと小さくて済む。  
 欠点としては、若干でも必要とするリソースは増えるのに、ピーク性能は変わらないことがあげられるが、これに関してはサポートすることの意味が Intel にとっては大きいだろうから、あまり気にならないように思う。  
 
-*Ice Lake (Client)* のマイクロアーキテクチャは以下の画像の様になっており、AVX-512 を処理できるのは `Port 1` のみである。  
+*Ice Lake (Client)* のマイクロアーキテクチャは以下の画像の様になっており、AVX-512 を処理できるのは `Port 0` のみである。  
 
 {{< figure src="/image/2020/07/23/ice_lake-client-arch.webp" title="Ice Lake (Client) Microarchitecture" caption="画像出典: <cite>[Intel® 64 and IA-32 Architectures Optimization Reference Manual](https://software.intel.com/content/www/us/en/develop/download/intel-64-and-ia-32-architectures-optimization-reference-manual.html)</cite>" >}}
 
