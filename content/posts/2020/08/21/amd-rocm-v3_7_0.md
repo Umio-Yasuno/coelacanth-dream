@@ -29,3 +29,8 @@ AMD が [Financial Analyst Day 2020](https://ir.amd.com/events/event-details/fin
 
 {{< figure src="/image/2020/08/21/rocm-4_0_0.webp" caption="画像出典: [Driving GPU Leadership](https://ir.amd.com/static-files/321c4810-ffe2-4d6c-863f-690464c033a9)" >}}
 
+
+余談だが、`rocm-dkms-firmware_3.7-20_all.deb` パッケージには既に次世代 AMD GPU [Arcturus](/tags/arcturus)、[Sienna Cichlid](/tags/sienna_cichlid) のファームウェアが含まれている。  
+ただ、GPU ASIC の情報が一部組み込まれている `*gpu_info.bin` は含まれておらず、個人的な憶測では、ファームウェアのリバースエンジニアリングや逆アセンブルを防ぐためではないかと思われる。  
+どの口が言うんだと自分でも思いはするが、ファームウェアから GPU 情報を読み取った結果が話題になり過ぎたのかもしれない。  
+一応同梱されているライセンスにはリバース・エンジニアリングや逆アセンブルは許されていないが、ライセンスにはあまり詳しくない。ただ、オープンに出来ない理由がどこかしらあるわけで、やはりオープンソースコードのみをネタにするのが安全なように思う。

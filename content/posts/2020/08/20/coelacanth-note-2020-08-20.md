@@ -5,7 +5,7 @@ draft: false
 # tags: [ "", ]
 keywords: [ "", ]
 categories: [ "Diary", ]
-noindex: true
+noindex: false
 # summary: "チラシの裏"
 ---
 
