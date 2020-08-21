@@ -10,13 +10,14 @@ noindex: false
 ---
 
 AMD は 大規模GPUコンピューティングのオープンソースプラットフォーム **ROCm** の ver3.7.0 をリリースした。  
+{{< link >}} [RadeonOpenCompute/ROCm at roc-3.7.x](https://github.com/RadeonOpenCompute/ROCm/tree/roc-3.7.x) {{< /link >}}
 
 Ubuntu 20.04 をサポートし、  
 マルチスレッドによる並列プログラミングAPIである [OpenMP](https://www.openmp.org/) の AMDGPU にオフロードする機能をサポートするオープンソースコンパイラ [AOMP](https://github.com/ROCm-Developer-Tools/aomp) の機能強化や、  
 GPU間通信に用いられる [RCCL(ROCm Communications Collective Library)](https://github.com/ROCmSoftwarePlatform/rccl) で *NCCL(NVIDIA Communications Collective Library) API* との互換性を確保、  
 [rocSOLVER](https://github.com/ROCmSoftwarePlatform/rocSOLVER) での二対角行列の特異値分解や、[rocSPARSE](https://github.com/ROCmSoftwarePlatform/rocSPARSE)での疎な行列の実行のサポートが、今回のリリースにおける主な更新内容となる。  
 
-
+## 今後のリリース予定
 
 また、開発者の [mvermeulen](https://github.com/mvermeulen)氏は [ROCmSoftwarePlatform/AMDMIGraphX](https://github.com/ROCmSoftwarePlatform/AMDMIGraphX) の中で、今後のリリース目標を挙げており、**ROCm 3.9** は September 9th (2020/09/09) に、**ROCm 3.10** は October 7th (2020/10/07) と設定している。[^rocm-3_9-10]  
 
