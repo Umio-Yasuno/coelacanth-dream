@@ -130,7 +130,7 @@ summary: " "
 | 15DD &darr; | E1 | | (15W FP5 Vega 3) |
 | | E2 | | (35W AM4 Vega 3) |
 | 15D8 &darr; | 91[^10] | R1606G | Embedded |
-| | 92 | R1505G? | Embedded |
+| | 92 | R1505G | Embedded |
 | | C4 | 3200U | (FP5 15W Vega 3), == 3250C? |
 | | C5 | 300U | (Vega 3) |
 | | CC | 3000G | (AM4 Vega 3) |
@@ -457,5 +457,6 @@ Navi21: gfx1030 [^12]
 {{< ref >}}
 
  * [DeviceInfoUtils.cpp - GPUOpen-Tools/common-src-DeviceInfo](https://github.com/GPUOpen-Tools/common-src-DeviceInfo/blob/master/DeviceInfoUtils.cpp)
+ * [data/amdgpu.ids · master · Mesa / drm · GitLab](https://gitlab.freedesktop.org/mesa/drm/blob/master/data/amdgpu.ids)
 
 {{< /ref >}} 
