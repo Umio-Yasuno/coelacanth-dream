@@ -2,7 +2,7 @@
 title: "Intel Architecture Day 2020 個人的まとめ　―― XeHP は 1-Tile 512EU、XeLPアーキテクチャ詳細"
 date: 2020-08-14T04:24:22+09:00
 draft: false
-tags: [ "DG1", "Alder_Lake", "Tiger_Lake", "Gen12" ]
+tags: [ "SG1", "DG1", "Alder_Lake", "Tiger_Lake", "Gen12" ]
 keywords: [ "", ]
 categories: [ "Intel", "Hardware", "CPU", "GPU" ]
 noindex: false
@@ -115,3 +115,11 @@ Texture Sampler は 12 Sub-Slices (6 Dual Sub-Slices) 相当であるため、�
 
 今年後半に出荷される予定であり、まもなく生産を開始するとしている。  
 
+{{< ins >}}
+
+[AnandTech](https://www.anandtech.com) によると、**SG1** は **DG1** と同じシリコンダイ 4個を 1つのボードに搭載する形で製品化されるとのこと。  
+{{< link >}} [Intel’s SG1 is 4x DG1: Xe-LP Graphics for Server Video Acceleration and Streaming](https://www.anandtech.com/show/16017/intels-sg1-discrete-xe-lp-graphics-for-server-video-acceleration-and-streaming) {{< /link >}}
+
+<span class="hide">てっきりメディア部を異常に強化させた{{< xe class="lp" >}}ベース GPU かと思っていた。</span>
+
+{{< /ins >}}
