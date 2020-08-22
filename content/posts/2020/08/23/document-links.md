@@ -67,7 +67,7 @@ summary: " "
    * [The amd-gfx Archives](https://lists.freedesktop.org/archives/amd-gfx/)
    * <https://cgit.freedesktop.org/~agd5f/linux/?h=amd-staging-drm-next>
    * [AMD X.Org drivers - Patchwork](https://patchwork.freedesktop.org/project/amd-xorg-ddx/patches/)
- * Mesa3D (User Mode Driver)
+ * [Mesa3D (User Mode Driver)](https://gitlab.freedesktop.org/mesa/mesa)
    * RadeonSI (OpenGL)
    * RADV (Vulkan)
    * [src/amd/common/ac_gpu_info.c · master · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/blob/master/src/amd/common/ac_gpu_info.c)
@@ -111,7 +111,8 @@ summary: " "
 
  * Linux Kernel (KMD)
    * [The Intel-gfx Archives](https://lists.freedesktop.org/archives/intel-gfx/)
- * Mesa3D (User Mode Driver)
+ * [Mesa3D (User Mode Driver)](https://gitlab.freedesktop.org/mesa/mesa)
+   * ANV (Vulkan)
    * [include/pci_ids/i965_pci_ids.h · master · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/blob/master/include/pci_ids/i965_pci_ids.h)
       * 〜 Gen11 PCI ID
    * [include/pci_ids/iris_pci_ids.h · master · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/blob/master/include/pci_ids/iris_pci_ids.h)
