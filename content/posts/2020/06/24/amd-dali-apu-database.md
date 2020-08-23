@@ -12,14 +12,14 @@ noindex: false
 
 {{< pindex >}}
 
- * [Dali 概要](#dali-summay)
- * [Dali 仕様 (推測)](#dali-spec)
- * [Dali SKU](#dali-sku)
+ * [Dali Summary /概要](#dali-summay)
+ * [Dali Spec /仕様 (推測)](#dali-spec)
+ * [Dali APU 製品 /Product](#dali-product)
  * [x86\_Model について ――Picasso と呼ばれる Dali](#dali-x86model)
 
 {{< /pindex >}}
 
-## Dali 概要 {#dali-summay}
+## Dali Summary /概要 {#dali-summay}
 コードネーム *Dali* は [Raven2](/tags/raven2) をベースとする省電力APU。  
 アーキテクチャと規模は、CPU は Zenアーキテクチャ、2-Core/4-Thread、CPU L3cache 4MB、  
 GPU は Vega/GCN5アーキテクチャ [(gfx909)](/tags/gfx909)、総CU数 3基、総RB(RenderBackend)数 1基(4-ROP相当)、GPU L2cache 512KB。  
@@ -39,15 +39,17 @@ Linux Kernel へのパッチに初めて *Dali* という名前が出てきた�
 
 双子の弟的な存在に、コードネーム [Pollock](/tags/pollock) がいるが、それぞれの i2cコントローラ数が異なり、  
 *Dali* は 3基、*Pollock* は 5基持つとされている。[^12]  
-他に違いとしては、ターゲットとする TDP帯が考えられ、*Dali* が 6〜15(25)W、*Pollock* が (4.5〜) 4.8W となる。  
-
-*Dali* と *Pollock* は *Raven2* の別リビジョンとなるが、それらを分ける決定的なもの、*Dali* を *Dali* 足らしめるものはまだはっきりとしていない。  
+また、*Dali* は *FP5 /AM4 パッケージ* を採用し、*Pollock* は *FT5 パッケージ* を採用したものと分けられ、そこで *Dali* と *Pollock* とを区別することができる。  
 
 [^12]: [soc/amd/common: Determine # of i2c controllers at runtime (I397b074e) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2057468)
 
+*Dali* と *Pollock* は *Raven2* の別リビジョンとなるが、それらを分ける決定的なもの、*Dali* を *Dali* 足らしめるものはまだはっきりとしていない。  
+ただ、*Dali, Pollock* が登場してからは *Raven2* GPU に新たな DeviceID が割り振られることはなく、*Raven2* が元いた位置は完全に *Dali* へ引き継がれたものと認識している。  
+
+
 一部製品で `x86_model` が異なり、*Picasso* と同じ `18h` と、*Pollock* と同じ `20h` に分かれる。  
 
-## Dali 仕様 (推測) {#dali-spec}
+## Dali Spec /仕様 (推測) {#dali-spec}
 
 | AMD Dali | |
 | :-- | :--: |
@@ -61,13 +63,13 @@ Linux Kernel へのパッチに初めて *Dali* という名前が出てきた�
 | GPU | *Vega (gfx909)* |
 | &emsp;Max GPU CU | 3 |
 | &emsp;Max GPU SP | 192 |
-| &emsp;Max ROP | 4<br>(== 1-RB) |
+| &emsp;Max RB | 1<br>(== 1-ROP) |
 | &emsp;GPU L2cache | 512 KB |
 | &emsp;GPU Clock | 800 ~ 1200 MHz |
 | Process | GF 14nm |
 | TDP | 6 ~ 25W |
 
-## Dali SKU {#dali-sku}
+## Dali Product /製品 {#dali-product}
 
 <!--
 
@@ -107,11 +109,11 @@ Linux Kernel へのパッチに初めて *Dali* という名前が出てきた�
 
 まず、GF 12nmプロセスで製造される Zen+ APU、*Picasso* はプロセッサの判別にも使われる `x86_Model` の値が `18h (24)` となっている。  
 
- >     switch (boot_cpu_data.x86_model) { 
- >     case 0x1:	/* Zen */
- >     case 0x8:	/* Zen+ */
- >     case 0x11:	/* Zen APU */
- >     case 0x18:	/* Zen+ APU */
+ >       switch (boot_cpu_data.x86_model) { 
+ >       case 0x1:	/* Zen */
+ >       case 0x8:	/* Zen+ */
+ >       case 0x11:	/* Zen APU */
+ >       case 0x18:	/* Zen+ APU */
  >
  > 引用元: <cite>[linux/k10temp.c at b02c6857389da66b09e447103bdb247ccd182456 · torvalds/linux](https://github.com/torvalds/linux/blob/b02c6857389da66b09e447103bdb247ccd182456/drivers/hwmon/k10temp.c#L587)</cite>
 

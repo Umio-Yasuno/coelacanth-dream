@@ -46,9 +46,12 @@ Linux Kernel へのパッチに初めて *Pollock* という名が出てきた�
 
 双子の兄的な存在に、コードネーム [Dali](/tags/dali) がいるが、それぞれの i2cコントローラ数が異なり、  
 *Dali* は 3基、*Pollock* は 5基持つとされている。[^12]  
-他に違いとしては、ターゲットとするTDP帯が考えられ、*Dali* が 6〜15(25)W、*Pollock* が (4.5〜) 4.8W となる。  
+また、*Dali* は *FP5 /AM4 パッケージ* を採用し、*Pollock* は *FT5 パッケージ* を採用したものと分けられ、そこで *Dali* と *Pollock* とを区別することができる。  
 
 [^12]: [soc/amd/common: Determine # of i2c controllers at runtime (I397b074e) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2057468)
+
+*Dali* と *Pollock* は *Raven2* の別リビジョンとなるが、それらを分ける決定的なもの、*Dali* を *Dali* 足らしめるものはまだはっきりとしていない。  
+ただ、*Dali, Pollock* が登場してからは *Raven2* GPU に新たな DeviceID が割り振られることはなく、*Raven2* が元いた位置は完全に *Dali* へ引き継がれたものと認識している。  
 
 `x86_model` は `20h` となる。  
 
@@ -66,9 +69,9 @@ Linux Kernel へのパッチに初めて *Pollock* という名が出てきた�
 | GPU | *Vega (gfx909)* |
 | &emsp;Max GPU CU | 3 |
 | &emsp;Max GPU SP | 192 |
-| &emsp;Max ROP | 4<br>(== 1-RB) |
+| &emsp;Max RB | 1<br>(== 4-ROP) |
 | &emsp;GPU L2cache | 512 KB |
-| &emsp;GPU Clock | 600-800 MHz [^6] |
+| &emsp;GPU Clock | 600-800 MHz<br>[^6] |
 | Process | GF 14nm |
 | TDP | 4.8-6W |
 
