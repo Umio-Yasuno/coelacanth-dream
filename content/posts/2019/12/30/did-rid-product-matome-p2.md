@@ -197,13 +197,13 @@ summary: " "
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 1636 &darr; | 00 | | (BringUp FP6) |
-| | C1 | 4800U | (B12 15W FP6) |
+| | C1 | Extrem Edition /4800U | (B12 15W FP6) |
 | | C2 | 4700U | (B10 15W FP6) |
 | | C3 | 4500U[^rn-4500u] | (B8 15W FP6) |
 | | C4 | 4300U[^rn-4300u] | (B6 15W FP6) |
 | | C5 | 4900HS | (B12 45W FP6) |
 | | C6 | 4800H/HS[^rn-4800h] | (B10 45W FP6) |
-| | C7 | | (B8 45W FP6) |
+| | C7 | 4600H[^rn-4600h] | (B8 45W FP6) |
 | | C8 | | (B10 65W AM4) |
 | | C9 | | (B8 65W AM4) |
 | | CA | | (B6 65W AM4) |
@@ -233,6 +233,7 @@ summary: " "
 [^rn-4300u]: [Review IdeaPad Slim 3 – AMD Ryzen 3 4300U | Jagat Review](http://www.jagatreview.com/2020/07/review-ideapad-slim-3-amd-ryzen-3-4300u/)
 [^rn-4600u]: [No second monitor (#31) · Issues · Xfce / exo · GitLab](https://gitlab.xfce.org/xfce/exo/-/issues/31)
 [^rn-4800h]: [Suspend/resume issue for RX5600M/4800H (Dell G5 SE) (#1222) · Issues · drm / amd · GitLab](https://gitlab.freedesktop.org/drm/amd/-/issues/1222)
+[^rn-4600h]: [Dell G5 15 SE SMU crash after switching from iGPU to dGPU (#1269) · Issues · drm / amd · GitLab](https://gitlab.freedesktop.org/drm/amd/-/issues/1269)
 
 <!--  Lucianne (gfx909?)  -->
 
