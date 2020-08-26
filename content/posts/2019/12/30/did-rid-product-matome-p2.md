@@ -211,7 +211,7 @@ summary: " "
 | | CC | | (B8 35W AM4) |
 | | CD | | (B6 35W AM4) |
 | | CE | 4600U?[^rn-4600u] | (B4 35W AM4) |
-| | D1 | | (B12B 15W FP6) |
+| | D1 | PRO 4750U | (B12B 15W FP6) |
 | | D2 | | (B10B 15W FP6) |
 | | D3 | | (B8B 15W FP6) |
 | | D4 | | (B6B 15W FP6) |
