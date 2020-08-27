@@ -37,11 +37,11 @@ noindex: false
 [^cd-aco-ncnn]: [RADV/ACO 検証: waifu2x-ncnn-vulakan の実行が最大3倍近く高速に | Coelacanth's Dream](/posts/2020/04/26/waifu2x-ncnn-vulkan-speedup-aco/)
 
 そして、2020/06 には *ACO バックエンド* がデフォルトで有効にされるパッチがメインラインに組み込まれている。[^radv-aco-default]  
-それまでは実験的な機能としてオプションから有効にする必要があった *ACO バックエンド* だが、*LLVM バックエンド* 同等の安定性と機能を得たということだ。  
+これは、それまで実験的な機能としてオプションから有効にする必要があった *ACO バックエンド* が、*LLVM バックエンド* 同等の安定性と機能を得たことを意味する。  
 
 [^radv-aco-default]: [radv: enable ACO by default (63e1e720) · Commits · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/commit/63e1e7209c2bf7d8bbce18380d4f1b2cff4c0bbb?merge_request_iid=5445)
 
-また、*ACO* を [RadeonSI](/tags/radeonsi) (オープンソース OpenGL ドライバー) のバックエンドにも採用するプランがあることも **RADV** 開発者の Samuel Pitoiset 氏から明かされている。[^radeonsi-aco]  
+また、*ACO* を [RadeonSI](/tags/radeonsi) (オープンソース OpenGL ドライバー) のバックエンドにも採用するプランがあることが **RADV** 開発者の Samuel Pitoiset 氏から明かされている。[^radeonsi-aco]  
 
 [^radeonsi-aco]: [RADV/ACO をデフォルトで有効にする動き、RadeonSIに ACO を バックエンドに用いる計画も | Coelacanth's Dream](/posts/2020/06/14/radv-aco-default-and-radeonsi-aco-plan/)
 
