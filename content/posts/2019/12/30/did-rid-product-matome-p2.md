@@ -228,12 +228,14 @@ summary: " "
 | | E1 | | Acton |
 | | E2 | | Acton |
 | | E3 | | Acton |
+| | F0 | 4900H[^rn-4900h] | |
 
 [^rn-4500u]: [[Solved] strange BackLight problom on Acer swift 314-42(AMD 4500U) / Laptop Issues / Arch Linux Forums](https://bbs.archlinux.org/viewtopic.php?id=254614)
 [^rn-4300u]: [Review IdeaPad Slim 3 – AMD Ryzen 3 4300U | Jagat Review](http://www.jagatreview.com/2020/07/review-ideapad-slim-3-amd-ryzen-3-4300u/)
 [^rn-4600u]: [No second monitor (#31) · Issues · Xfce / exo · GitLab](https://gitlab.xfce.org/xfce/exo/-/issues/31)
 [^rn-4800h]: [Suspend/resume issue for RX5600M/4800H (Dell G5 SE) (#1222) · Issues · drm / amd · GitLab](https://gitlab.freedesktop.org/drm/amd/-/issues/1222)
 [^rn-4600h]: [Dell G5 15 SE SMU crash after switching from iGPU to dGPU (#1269) · Issues · drm / amd · GitLab](https://gitlab.freedesktop.org/drm/amd/-/issues/1269)
+[^rn-4900h]: [Screen flickering with ASUS TUF GAMING A15 laptop (FX506IV) (#1271) · Issues · drm / amd · GitLab](https://gitlab.freedesktop.org/drm/amd/-/issues/1271)
 
 <!--  Lucianne (gfx909?)  -->
 
