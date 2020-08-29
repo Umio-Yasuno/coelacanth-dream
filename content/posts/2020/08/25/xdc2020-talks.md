@@ -2,9 +2,9 @@
 title: "XDC2020 注目の講演　―― ACO, P2P DMA, レイトレーシング……"
 date: 2020-08-25T12:54:19+09:00
 draft: false
-tags: [ "ACO", ]
+tags: [ "ACO", "Linux_Kernel" ]
 # keywords: [ "", ]
-categories: [ "Software", "AMD", "GPU" ]
+categories: [ "Software", "AMD", "Intel", "GPU" ]
 noindex: false
 # summary: ""
 ---

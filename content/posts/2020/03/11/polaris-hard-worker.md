@@ -2,9 +2,9 @@
 title: "働き者のPolaris"
 date: 2020-03-11T01:31:11+09:00
 draft: false
-tags: [ "GFX8", ]
+tags: [ "GFX8", "Polaris10" ]
 keywords: [ "", ]
-categories: [ "Hardware", "GPU" ]
+categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
 ---
 
