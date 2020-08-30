@@ -60,8 +60,8 @@ summary: " "
 | | CA | 2200GE? | (35W AM4 Vega 8) |
 | | CB | 200GE /220GE /240GE | (35W AM4 Vega 3) |
 | | CC | 2300U | (15W FP5 Vega 6) |
-| | CE | 2200U? | (15W FP5 Vega 3) |
-| | D0 | PRO 2700U? | (15W FP5 Vega 10) |
+| | CE |  | (15W FP5 Vega 3) |
+| | D0 | PRO 2700U[^rv-pro-2700u] | (15W FP5 Vega 10) |
 | | D1 | PRO 2500U | (15W FP5 Vega 8) |
 | | D2 | | (B4 15W FP5) |
 | | D3 | PRO 2400G? | (65W AM4 Vega 11) |
@@ -70,11 +70,13 @@ summary: " "
 | | D6 | PRO 2400GE[^13] | (35W AM4 Vega 11) |
 | | D7 | PRO 2200GE? | (35W AM4 Vega 8) |
 | | D8 | | (35W AM4 Vega 3) |
-| | D9 | | (15W FP5 Vega 6) |
+| | D9 | PRO 2300U[^rv-pro-2300u] | (15W FP5 Vega 6) |
 | | ? | V1404I | (15W FP5 Vega 8) |
 
 [Page Top](#page_index)
 
+[^rv-pro-2300u]: <https://bugs.freedesktop.org/attachment.cgi?id=144502>
+[^rv-pro-2700u]: [LKML: Ignat Insarov: Non-deterministically boot into dark screen with \`amdgpu\`](https://lkml.org/lkml/2020/8/9/70)
 [^13]: [207899 – AMDGPU large block noise in chrome, on streaming video pages. CS:GO freezes.](https://bugzilla.kernel.org/show_bug.cgi?id=207899)
 
 #### Picasso ( gfx902 ) {#picasso-gfx902}
