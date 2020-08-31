@@ -129,6 +129,7 @@ summary: " "
 | TA | Texture Address /Trusted Application?[^trusted-application] | |
 | TC | Texture Cache? | |
 | TCC | Texture Channel Cache? | |
+| TCP | | GCN L1$, RDNA L0$ |
 | BACO | Bus Active, Chip Off[^2] | |
 | BOCO | Bus Off, Chip Off[^2] | |
 | OPN | ordering Part Number | |

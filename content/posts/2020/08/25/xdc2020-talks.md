@@ -32,8 +32,9 @@ noindex: false
 
  [ACO バックエンド](/tags/aco) は AMD GPU (GCN/RDNA) の新たなシェーダーコンパイラバックエンドとして、Valve の支援を受けて開発が行なわれ、約1年前に実験的な機能として [RADV](/tags/radv) (オープンソース Vulkan ドライバー) に導入された。  
 
-コンパイラバックエンドとしての性能は確かなものであり、それまでの *LLVM バックエンド* と比較して、最大でグラフィクス処理では約1.2倍近くの性能向上、個人的に行なった検証ではコンピュート処理で約3倍の性能向上を実現している。[^cd-aco-ncnn]  
+コンパイラバックエンドとしての性能は確かなものであり、それまでの *LLVM バックエンド* と比較して、最大でグラフィクス処理では約1.2倍近くの性能向上[^xdc2019-aco]、個人的に行なった検証ではコンピュート処理で約3倍の性能向上を実現している。[^cd-aco-ncnn]  
 
+[^xdc2019-aco]: <https://xdc2019.x.org/event/5/contributions/334/attachments/431/683/ACO_XDC2019.pdf>
 [^cd-aco-ncnn]: [RADV/ACO 検証: waifu2x-ncnn-vulakan の実行が最大3倍近く高速に | Coelacanth's Dream](/posts/2020/04/26/waifu2x-ncnn-vulkan-speedup-aco/)
 
 そして、2020/06 には *ACO バックエンド* がデフォルトで有効にされるパッチがメインラインに組み込まれている。[^radv-aco-default]  
