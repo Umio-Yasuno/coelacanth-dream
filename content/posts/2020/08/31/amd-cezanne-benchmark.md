@@ -19,7 +19,7 @@ CPUクロックは 3.6GHz とされ、8-Core/16-Thread となっている。
 マイクロコードの表記は、Zen/+/2 系に見られる `0x8` で始まるものと異なるため、それよりも新しい世代の CPU、*Zen 3 アーキテクチャ* の可能性が高い。  
 
 GPU部は *Renoir* と同一とされ、GPUクロックは 1800MHz。  
-Chipset と Audio の項目を見るに、GPU部だけでなく I/O部も *Renoir* と同一ではないかと思われる。  
+Chipset と Audio の項目を見るに、GPU 内部の AudioCoProcessor や SoC として I/O部も *Renoir* と共通ではないかと思われる。  
 
 AMD の次世代 APU には他に [Lucienna](/tags/lucienne) が確認されており、ソフトウェア開発者のコメントから[^lucienne-renoir]、*Renoir* 同様に **Zen 2 + Vega(gfx909)** の構成を取る APU と考えている。  
 対し、*Cezanne* は今回確認できた情報から、**Zen 3 + Vega(gfx909?)** の構成であると考えられる。  

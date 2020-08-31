@@ -133,27 +133,30 @@ summary: " "
 | | E2 | | (35W AM4 Vega 3) |
 | 15D8 &darr; | 91[^10] | R1606G | Embedded |
 | | 92 | R1505G | Embedded |
-| | C4 | 3200U | (FP5 15W Vega 3), == 3250C? |
-| | C5 | 300U | (Vega 3) |
-| | CC | 3000G | (AM4 Vega 3) |
+| | C4 | 3200U[^rv2-3200u] | (FP5 15W Vega 3), == 3250C? |
+| | C5 | 300U[^rv2-300u] | (Vega 3) |
+| | CC | 3000G[^rv2-3000g] | (AM4 Vega 3) |
 
 [Page Top](#page_index)
 
+[^rv2-3200u]: [FS#65359 : Wireless AC 3168 fails to initialize](https://bugs.archlinux.org/task/65359)
+[^rv2-300u]: [HP Laptop 15-db1001nt DxDiag - Technopat Sosyal](https://www.technopat.net/sosyal/konu/hp-laptop-15-db1001nt-dxdiag.769397/)
+[^rv2-3000g]: [LKML: A L: Re: AMDGPU crash on 5.4.7 on AMD Athlon 3000G APU](https://lkml.org/lkml/2020/1/3/224)
 [^10]: [Core i7並みのRyzen搭載で、4万円台＆片手サイズ⁉ 〝Ryzen Embedded”搭載の超小型PCベアボーン「4×4 BOX」が超お得 (3/3) | AMD HEROES](https://amd-heroes.jp/article/2020/03/0364/3/)
 
 ##### Dali ( gfx909 ) {#dali-gfx909}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 15D8 &darr; | C4 | 3250C[^7] | (Vega 3) |
-| | CD | 3050C[^7] | (Vega 2) |
-| | CE | 3150C[^7] | (Vega 3) |
+| | CD | Silver 3050C[^7] | (Vega 2) |
+| | CE | Gold 3150C[^7] | (Vega 3) |
 | | CF | R1305G | (6W[^8]) |
 | | DE[^9] | | |
 | | DF[^9] | | |
 | | E3[^9] | | (6W[^8] Vega 3) |
 | | E4[^9] | R1102G[^11] | (6W[^8] Vega 3) |
 | | ? | 3020e | |
-| | ? | 3050e | |
+| | ? | Silver 3050e | |
 | | ? | 3050GE | (35W AM4 Vega 3) |
 
 [Page Top](#page_index)
@@ -199,12 +202,12 @@ summary: " "
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 1636 &darr; | 00 | | (BringUp FP6) |
-| | C1 | Extrem Edition /4800U | (B12 15W FP6) |
-| | C2 | 4700U | (B10 15W FP6) |
+| | C1 | Extreme Edition /4800U[^rn-4800u] | (B12 15W FP6) |
+| | C2 | 4700U[^rn-4700u] | (B10 15W FP6) |
 | | C3 | 4500U[^rn-4500u] | (B8 15W FP6) |
 | | C4 | 4300U[^rn-4300u] | (B6 15W FP6) |
-| | C5 | 4900HS | (B12 45W FP6) |
-| | C6 | 4800H/HS[^rn-4800h] | (B10 45W FP6) |
+| | C5 | 4900HS[^rn-4900hs] | (B12 45W FP6) |
+| | C6 | 4800H[^rn-4800h]/HS[^rn-4800hs] | (B10 45W FP6) |
 | | C7 | 4600H[^rn-4600h] | (B8 45W FP6) |
 | | C8 | | (B10 65W AM4) |
 | | C9 | | (B8 65W AM4) |
@@ -220,9 +223,9 @@ summary: " "
 | | D5 | | (B12B 45W FP6) |
 | | D6 | | (B10B 45W FP6) |
 | | D7 | | (B8B 45W AM4) |
-| | D8 | PRO 4750G | (B10B 65W AM4) |
-| | D9 | PRO 4650G | (B8B 65W AM4) |
-| | DA | PRO 4350G | (B6B 65W AM4) |
+| | D8 | PRO 4750G[^pro-desktop-65w-rn] | (B10B 65W AM4) |
+| | D9 | PRO 4650G[^pro-desktop-65w-rn] | (B8B 65W AM4) |
+| | DA | PRO 4350G[^pro-desktop-65w-rn] | (B6B 65W AM4) |
 | | DB | | (B10B 35W AM4) |
 | | DC | | (B8B 35W AM4) |
 | | DD | | (B6B 35W AM4) |
@@ -231,13 +234,29 @@ summary: " "
 | | E2 | | Acton |
 | | E3 | | Acton |
 | | F0 | 4900H[^rn-4900h] | |
+| | ? | 4700G |
+| | ? | 4600G |
+| | ? | 4300G |
+| | ? | 4700GE |
+| | ? | 4600GE |
+| | ? | 4300GE |
+| | ? | PRO 4700GE |
+| | ? | PRO 4600GE |
+| | ? | PRO 4300GE |
+| | ? | PRO 4650U |
+| | ? | PRO 4450U |
 
+[^rn-4800u]: [New Ryzen 4800U Laptop with Radeon RX 5500M kernel freezes / Kernel & Hardware / Arch Linux Forums](https://bbs.archlinux.org/viewtopic.php?id=257345)
+[^rn-4700u]: <https://www.mail-archive.com/tech@openbsd.org/msg59151.html>
+[^rn-4900hs]: [Folding Forum • View topic - Ryzen 4900HS Renoir iGPU Not Receiving Work](https://foldingforum.org/viewtopic.php?f=108&t=35623)
 [^rn-4500u]: [[Solved] strange BackLight problom on Acer swift 314-42(AMD 4500U) / Laptop Issues / Arch Linux Forums](https://bbs.archlinux.org/viewtopic.php?id=254614)
 [^rn-4300u]: [Review IdeaPad Slim 3 – AMD Ryzen 3 4300U | Jagat Review](http://www.jagatreview.com/2020/07/review-ideapad-slim-3-amd-ryzen-3-4300u/)
 [^rn-4600u]: [No second monitor (#31) · Issues · Xfce / exo · GitLab](https://gitlab.xfce.org/xfce/exo/-/issues/31)
 [^rn-4800h]: [Suspend/resume issue for RX5600M/4800H (Dell G5 SE) (#1222) · Issues · drm / amd · GitLab](https://gitlab.freedesktop.org/drm/amd/-/issues/1222)
+[^rn-4800hs]: [ASUS Zephyrus G GA401IV DxDiag - Technopat Sosyal](https://www.technopat.net/sosyal/konu/asus-zephyrus-g-ga401iv-dxdiag.804989/)
 [^rn-4600h]: [Dell G5 15 SE SMU crash after switching from iGPU to dGPU (#1269) · Issues · drm / amd · GitLab](https://gitlab.freedesktop.org/drm/amd/-/issues/1269)
 [^rn-4900h]: [Screen flickering with ASUS TUF GAMING A15 laptop (FX506IV) (#1271) · Issues · drm / amd · GitLab](https://gitlab.freedesktop.org/drm/amd/-/issues/1271)
+[^pro-desktop-65w-rn]: [ASCII.jp：Renoirのデスクトップ版「Ryzen PRO 4000Gシリーズ」3モデルの性能を検証 (4/5)](https://ascii.jp/elem/000/004/021/4021569/4/)
 
 <!--  Lucianne (gfx909?)  -->
 
