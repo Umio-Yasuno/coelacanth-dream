@@ -2,7 +2,7 @@
 title: "AMD Navi21 /Sienna Cichlid 情報近況　―― GDDR6と省電力とサーバ向けと 【2020/07/21】"
 date: 2020-07-21T21:14:59+09:00
 draft: false
-tags: [ "Sienna_Cichlid", "Navi21" ]
+tags: [ "Sienna_Cichlid", "Navi21", "RDNA_2" ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
