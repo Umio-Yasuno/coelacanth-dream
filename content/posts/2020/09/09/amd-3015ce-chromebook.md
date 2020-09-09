@@ -16,14 +16,26 @@ Geekbench の実行結果から、Chromebook向けとなる[AMD Pollock APU](/ta
 
 これまでの振り返りとなるが、**AMD 3015Ce** という名前が出てくるまでにはだいぶ時間が掛かっている。  
 
-Chromebook向けとなる Zen系APU の SKU名は [Picasso](/tags/picasso)、[Dali](/tags/dali) をベースとする APU は以前(約半年前) より判明していたが、[^fp5-chromebook-sku]  
-その際、*Pollock* のSKU名はまだ不明となっており、`Samples` または `Production` とあるだけだった。[^plk-samples-production]  
+まず、*Pollock* というコードネームが OSS 上で初めて出てきたのは、2020/01/08 に投稿された Linux Kernel へのパッチである。  
+{{< link >}} [[PATCH] drm/amd/display: add Pollock IDs, fix Pollock & Dali clk mgr construct](https://lists.freedesktop.org/archives/amd-gfx/2020-January/044548.html) {{< /link >}}
+この時は [Raven2](/tags/raven2) の別リビジョンということくらいしか分からず、何が *Pollock* たらしめるのかは不明だった。  
+その約一ヶ月後、Chromebook向けの [Picasso](/tags/picasso)、[Dali](/tags/dali) をベースとする Zen/+ APU が判明し[^fp5-chromebook-sku]、その中に *Pollock* も含まれてはいた。しかし、SKU名は無く、`Samples` または `Production` とあるだけだった。[^plk-samples-production]  
+それから *FT5 BGA パッケージ* の一部仕様と、その *FT5 BGA* を採用する APU こそが *Pollock* であると判明した。[^plk-ft5]  
+それでもまだ *Pollock* の具体的な SKU名は不明なままにあり、  
 *Pollock* を搭載するChromebookボード、コードネーム **Dalboz** の実行結果も以前より Geekbench 上に出現していたが、CPU名は `Intel Pentium II/III` となっていた。恐らくサンプル品を用いたものだろう。[^gb5-dalboz-samples]  
-現地時間 2020/08/04 には Lenovo より **AMD 3015e** を搭載する教育機関向けのラップトップが発表された。[^lenovo-amd-3015e]  
-*Pollock APU* と *FT5 BGA パッケージ* の存在は Coreboot や ChromiumOS関連のプロジェクトへのパッチから判明していたが、これが初の正式な製品としての登場となる。  
+
+[^plk-ft5]: [Chromebookに搭載されるPollockはFT5ソケット ――DDR4シングルチャネル、SATA無し | Coelacanth's Dream](/posts/2020/02/12/amd-pollock-ft5/)
+
+Chromebook から少し外れて、現地時間 2020/08/04 に Lenovo より **AMD 3015e** を搭載する教育機関向けのラップトップが発表された。[^lenovo-amd-3015e]  
+現状 *Pollock* を搭載する製品は、その時 Lenovo から発表された **Lenovo 100e 2nd Gen** 、**Lenovo 300e 2nd Gen** のみとなっている。  
 
 そして今回 **AMD 3015Ce** という具体的な SKU名を伴う結果が現れた。  
 これにより、ようやく Zen系APU (*Picasso /Dali /Pollock*) を搭載するChromebook製品登場の予感がしてくる。  
+
+Intel は既に [Jasper Lake](/tags/jasper_lake)、[Tiger Lake](/tags/tiger_lake) の Corebootサポートを進めており、それらのリファレンスボードを元に派生ボードを開発されている。  
+{{< link >}} [Intel 10nm プロセッサを搭載した Chromebook ボード | Coelacanth's Dream](/posts/2020/05/13/intel-10nm-processor-chromebook/) {{< /link >}}
+それと比べると、最新世代の 7nm [AMD Renoir](/tags/renoir) ではなく、12/14nm の *Picasso /Dali /Pollock* 搭載 Chromebook が開発中というのは少し遅れているようにも思えるが、Chromebookの主なターゲット層を考えれば、性能、コスト的にちょうど良いのだろう。  
+*Renoir* よりダイサイズの小さい、コストが小さい APU が出てくれば、次世代 AMD プロセッサ搭載 Chromebook の登場に期待が持てるはずだ。  
 
 [^fp5-chromebook-sku]: [AMD Zen APUを搭載したChromebook登場か ――Ryzen 7 3700C、Ryzen 5 3500C | Coelacanth's Dream](/posts/2020/02/09/amd-zen-chromebook/)
 [^plk-samples-production]: […/northbridge.c · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2040455/3/src/soc/amd/picasso/northbridge.c#320)
