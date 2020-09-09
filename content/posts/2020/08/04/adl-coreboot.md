@@ -24,6 +24,22 @@ noindex: false
 
 *Alder Lake* の GPU部に付けられたマクロ名から、*Alder Lake* GPU には **GT0、GT1、GT2** の 3種類が存在し、*Alder Lake-S* は最大で **GT1** 、*Alder Lake-P* は最大で **GT2** の規模を持つことがわかる。[^adl-gpu-deviceid]  
 
+ >       #define PCI_DEVICE_ID_INTEL_ADL_GT0			0x46ff
+ >       #define PCI_DEVICE_ID_INTEL_ADL_GT1			0x4600
+ >       #define PCI_DEVICE_ID_INTEL_ADL_GT1_1			0x4601
+ >       #define PCI_DEVICE_ID_INTEL_ADL_GT1_2			0x4602
+ >       #define PCI_DEVICE_ID_INTEL_ADL_GT1_3			0x4603
+ >       #define PCI_DEVICE_ID_INTEL_ADL_GT1_4			0x4610
+ >       #define PCI_DEVICE_ID_INTEL_ADL_GT1_5			0x4611
+ >       #define PCI_DEVICE_ID_INTEL_ADL_GT1_6			0x4612
+ >       #define PCI_DEVICE_ID_INTEL_ADL_GT1_7			0x4613
+ >       #define PCI_DEVICE_ID_INTEL_ADL_GT1_8			0x4618
+ >       #define PCI_DEVICE_ID_INTEL_ADL_GT1_9			0x4619
+ >       #define PCI_DEVICE_ID_INTEL_ADL_P_GT2			0x46a0
+ >       #define PCI_DEVICE_ID_INTEL_ADL_S_GT1			0x4680
+ >
+ > {{< quote >}} [soc/intel/common: Include Alderlake device IDs (I17ce56a2) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/44108) {{< /quote >}}
+
 [^adl-gpu-deviceid]: <https://review.coreboot.org/c/coreboot/+/44108/1/src/include/device/pci_ids.h#3607>
 
 Intel 次世代のデスクトップ向けプロセッサと見込まれている [Rocket Lake](/tags/rocket_lake) もまた GPU部の規模は最大で **GT1** までとなっている。  

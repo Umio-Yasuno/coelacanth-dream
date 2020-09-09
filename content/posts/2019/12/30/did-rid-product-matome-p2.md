@@ -68,7 +68,7 @@ summary: " "
 | | D4 | | (B8 65W AM4) |
 | | D5 | PRO 2200G? | (65W AM4 Vega 8) |
 | | D6 | PRO 2400GE[^13] | (35W AM4 Vega 11) |
-| | D7 | PRO 2200GE? | (35W AM4 Vega 8) |
+| | D7 | PRO 2200GE[^rv-pro-2200ge] | (35W AM4 Vega 8) |
 | | D8 | | (35W AM4 Vega 3) |
 | | D9 | PRO 2300U[^rv-pro-2300u] | (15W FP5 Vega 6) |
 | | ? | V1404I | (15W FP5 Vega 8) |
@@ -78,6 +78,7 @@ summary: " "
 [^rv-pro-2300u]: <https://bugs.freedesktop.org/attachment.cgi?id=144502>
 [^rv-pro-2700u]: [LKML: Ignat Insarov: Non-deterministically boot into dark screen with \`amdgpu\`](https://lkml.org/lkml/2020/8/9/70)
 [^13]: [207899 – AMDGPU large block noise in chrome, on streaming video pages. CS:GO freezes.](https://bugzilla.kernel.org/show_bug.cgi?id=207899)
+[^rv-pro-2200ge]: [AMDGPU Linux Driver Preparing To Better Support Modern HDR/OLED Displays - Phoronix Forums](https://www.phoronix.com/forums/forum/linux-graphics-x-org-drivers/open-source-amd-linux/1158423-amdgpu-linux-driver-preparing-to-better-support-modern-hdr-oled-displays)
 
 #### Picasso ( gfx902 ) {#picasso-gfx902}
 | Device ID | Revision ID | Product Name | Memo |
@@ -196,6 +197,8 @@ summary: " "
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 15FF | 00 | Fenghuang (Zhongshan Subor Z+) | Radeon Vega 28 Mobile |
+
+DG02SRTBP4MFA
 -->
 
 ### Renoir ( gfx909 ) {#renoir-gfx909}
@@ -258,7 +261,17 @@ summary: " "
 [^rn-4900h]: [Screen flickering with ASUS TUF GAMING A15 laptop (FX506IV) (#1271) · Issues · drm / amd · GitLab](https://gitlab.freedesktop.org/drm/amd/-/issues/1271)
 [^pro-desktop-65w-rn]: [ASCII.jp：Renoirのデスクトップ版「Ryzen PRO 4000Gシリーズ」3モデルの性能を検証 (4/5)](https://ascii.jp/elem/000/004/021/4021569/4/)
 
-<!--  Lucianne (gfx909?)  -->
+<!--  Lucienne (gfx909?)  -->
+<!--  Cezanne (gfx909?) -->
+<!--
+   Board:
+      Celadon: AMD Mobile Reference Board?
+         > AMD Celadon reference board (AMD Ryzen™ 5 4500U)
+         <https://www.amd.com/en/processors/laptop-processors-for-business>
+      Myrtle: AMD AM4 Platform code-name
+         <https://drivers.amd.com/relnotes/amd_nvme_sata_raid_quick_start_guide_for_windows_operating_systems.pdf>
+      Artic: Desktop? (PRO565?)
+-->
 
 <!--
 	VANGOGH 163F:00

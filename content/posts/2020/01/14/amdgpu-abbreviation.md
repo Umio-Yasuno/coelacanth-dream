@@ -105,11 +105,13 @@ summary: " "
 | VPG | Video Package ganerator | |
 | SPL | Security patch level | |
 | PC_LINES | Parameter Cache Lines? | |
-| HPD | Host Data Path[^hpd] | |
+| HDP | Host Data Path[^hpd] | |
 | MGCG | Medium Grain Clock Gating | |
 | MGLS | Medium Grain Light Sleep | |
+| IH | Interrupt Handler[^ih] | |
 
 [^hpd]: [drm/amdgpu: add the HDP 4.0 register headers](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd?h=amd-staging-drm-next&id=bcfb47cdd76a20b3c596981ea7b35fa23abac4c8)
+[^ih]: [drm/amdgpu: add navi10 ih ip block (v3)](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/amdgpu/navi10_ih.c?h=amd-staging-drm-next&id=edc611475a8adbdea8ce358216c5b1a9d710049c)
 
 
 

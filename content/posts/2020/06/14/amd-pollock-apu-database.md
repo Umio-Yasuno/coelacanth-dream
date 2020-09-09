@@ -107,5 +107,7 @@ AMD が提供する *Pollock* 搭載のリファレンスボードのコード�
 | Pollock SKU | Core/Thread | CPU Base/Boost | GPU CU | GPU Clock | TDP |
 | :-- | :--: | :--: | :--: | :--: | :--: |
 | AMD 3015e[^amd-3015e] | 2/4 | 1.2GHz/2.3GHz | 3 | 0.6GHz | 6W |
+| AMD 3015Ce[^amd-3015ce-gb5] | 2/4 | 1.2GHz/2.3GHz | 3 | 0.6GHz | |
 
 [^amd-3015e]: [AMD 3015e | AMD](https://www.amd.com/en/products/apu/amd-3015e#product-specs)
+[^amd-3015ce-gb5]: [Google zork - Geekbench Browser](https://browser.geekbench.com/v5/cpu/3664531)

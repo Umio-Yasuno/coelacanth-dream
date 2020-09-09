@@ -10,7 +10,7 @@ noindex: true
 <p></p>
 
 ## このサイトについて
-<img src="/image/coelacanth_dream.webp" title="sleeping coelacanth" style="max-width: 48%;max-height: 64%; float:left; margin:.3em .5em 0 0; background-color: #556F6F">
+<img src="/image/coelacanth_dream.webp" title="waitng coelacanth" style="max-width: 48%;max-height: 64%; float:left; margin:.3em .5em 0 0; background-color: #556F6F">
 個人的にまとめたハードウェア系の情報や **"推測"** を公開するブログ的なもの。  
 公式がまだ正式発表していなかったり、決して大きな声ではしてくれない話を語り、ハードウェアの魅力を伝えたいと思い活動を始めました。  
 情報元は、信頼できる公式のオープンソースコード等や公式資料。  
@@ -37,7 +37,6 @@ noindex: true
 ## 支援、サポート {#support}
 自分の生存率が高まります。  
 {{< link >}} [Liberapay を使って Umio-Yasuno に寄付する](https://liberapay.com/Umio-Yasuno/donate) {{< /link >}}
-{{< link >}} [Umio Yasuno is creating Hardware info blog | Patreon](https://www.patreon.com/user?u=39671252&fan_landing=true) {{< /link >}}
 
 ## 連絡先 {#contact}
 サイトへの意見、要望等がありましたらこちらからお願いします。
@@ -47,6 +46,5 @@ noindex: true
 </address><br>
 
 <!--
-      Is all that we see or seem
-      But a dream within a dream?
+   make me mad. make me sad. meka me feel alright?
 -->
