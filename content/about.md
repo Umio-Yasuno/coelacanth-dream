@@ -37,7 +37,7 @@ noindex: true
 ## 支援、サポート {#support}
 自分の生存率が高まります。  
 {{< link >}} [Liberapay を使って Umio-Yasuno に寄付する](https://liberapay.com/Umio-Yasuno/donate) {{< /link >}}
-{{< link >}} [Umio Yasuno is creating Hardware info blog | Patreon](https://www.patreon.com/user?u=39671252&fan_landing=true) {{< /link >}}
+{{< link >}} [Umio Yasuno is creating Hardware info blog | Patreon](https://www.patreon.com/user?u=39671252) {{< /link >}}
 
 ## 連絡先 {#contact}
 サイトへの意見、要望等がありましたらこちらからお願いします。
