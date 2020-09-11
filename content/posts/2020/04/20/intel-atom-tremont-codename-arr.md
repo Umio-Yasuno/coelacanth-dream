@@ -2,7 +2,7 @@
 title: "Intel Atom Tremont関連のコードネームを整理する"
 date: 2020-04-20T14:17:24+09:00
 draft: false
-tags: [ "Tremont", "Gen11", "Lakefield" ]
+tags: [ "Tremont", "Gen11", "Lakefield", "Jasper_Lake", "Elkhart_Lake" ]
 keywords: [ "", ]
 categories: [ "Hardware", "Intel", "CPU" ]
 noindex: false

@@ -2,7 +2,7 @@
 title: "Intel 10nm プロセッサを搭載した Chromebook ボード"
 date: 2020-05-13T09:44:09+09:00
 draft: false
-tags: [ "Chromebook", "Tremont", "Tiger_Lake" ]
+tags: [ "Chromebook", "Tremont", "Tiger_Lake", "Jasper_Lake" ]
 keywords: [ "", ]
 categories: [ "Hardware", "Intel", "CPU" ]
 noindex: false
