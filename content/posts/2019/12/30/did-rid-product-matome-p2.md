@@ -56,15 +56,15 @@ summary: " "
 | | C6 | 2400G | (65W AM4 Vega 11) |
 | | C7 | | (B8 65W AM4) |
 | | C8 | 2200G | (65W AM4 Vega 8) |
-| | C9 | 2400GE? | (35W AM4 Vega 11) |
+| | C9 | 2400GE[^rv-2400ge] | (35W AM4 Vega 11) |
 | | CA | 2200GE? | (35W AM4 Vega 8) |
 | | CB | 200GE /220GE /240GE | (35W AM4 Vega 3) |
 | | CC | 2300U | (15W FP5 Vega 6) |
 | | CE |  | (15W FP5 Vega 3) |
 | | D0 | PRO 2700U[^rv-pro-2700u] | (15W FP5 Vega 10) |
-| | D1 | PRO 2500U | (15W FP5 Vega 8) |
+| | D1 | PRO 2500U[^rv-pro-2500u] | (15W FP5 Vega 8) |
 | | D2 | | (B4 15W FP5) |
-| | D3 | PRO 2400G? | (65W AM4 Vega 11) |
+| | D3 | PRO 2400G[^rv-pro-2400g] | (65W AM4 Vega 11) |
 | | D4 | | (B8 65W AM4) |
 | | D5 | PRO 2200G? | (65W AM4 Vega 8) |
 | | D6 | PRO 2400GE[^13] | (35W AM4 Vega 11) |
@@ -79,6 +79,9 @@ summary: " "
 [^rv-pro-2700u]: [LKML: Ignat Insarov: Non-deterministically boot into dark screen with \`amdgpu\`](https://lkml.org/lkml/2020/8/9/70)
 [^13]: [207899 – AMDGPU large block noise in chrome, on streaming video pages. CS:GO freezes.](https://bugzilla.kernel.org/show_bug.cgi?id=207899)
 [^rv-pro-2200ge]: [AMDGPU Linux Driver Preparing To Better Support Modern HDR/OLED Displays - Phoronix Forums](https://www.phoronix.com/forums/forum/linux-graphics-x-org-drivers/open-source-amd-linux/1158423-amdgpu-linux-driver-preparing-to-better-support-modern-hdr-oled-displays)
+[^rv-pro-2400g]: [Question #692387 : Questions : Ubuntu](https://answers.launchpad.net/ubuntu/+question/692387)
+[^rv-2400ge]: <https://forum.openmandriva.org/uploads/default/original/2X/5/5b23ce7e839de8a27f84040eb6a779afe7e19fe7.txt>
+[^rv-pro-2500u]: [openbsd dev - bugs - Hibernate/Suspend not working with AMD Ryzen 5](http://openbsd-archive.7691.n7.nabble.com/Hibernate-Suspend-not-working-with-AMD-Ryzen-5-td367226.html)
 
 #### Picasso ( gfx902 ) {#picasso-gfx902}
 | Device ID | Revision ID | Product Name | Memo |
@@ -102,16 +105,16 @@ summary: " "
 | | C9 | 3200G | (AM4 Vega 8) |
 | | CA | | (AM4 Vega 11) |
 | | CB | | (AM4 Vega 8) |
-| | CC | &rarr; [Raven2](#raven2-gfx909) 3000G | |
+| | CC | &rarr; [Raven2](#raven2-gfx909) 300GE /3000G | |
 | | CD | | (AM4 Vega 2) |
 | | D1 | PRO 3700U | (Vega 10) |
 | | D2 | PRO 3500U | (Vega 8) |
 | | D3 | (PRO) 3300U | (Vega 6) |
 | | D4 | | (Vega 3) |
-| | D8 | PRO 3400G?? | (AM4 Vega 11) |
-| | D9 | PRO 3200G?? | (AM4 Vega 8) |
-| | DA | PRO 3400GE | (AM4 Vega 11) |
-| | DB | PRO 3200GE?? | (AM4 Vega 8) |
+| | D8 | PRO 3400G[^pco-pro-3400g] | (AM4 Vega 11) |
+| | D9 | PRO 3200G[^pco-pro-3200g] | (AM4 Vega 8) |
+| | DA | PRO 3400GE[^pco-pro-3400ge] | (AM4 Vega 11) |
+| | DB | PRO 3200GE[^pco-pro-3200ge] | (AM4 Vega 8) |
 | | DC | PRO 300/320GE?? | (AM4 Vega 3) |
 | | E1 | 3780U | Winston (Surface Edition Vega 11) |
 | | E2 | 3580U | Winston (Surface Edition Vega 8) |
@@ -127,6 +130,11 @@ summary: " "
 
 [Page Top](#page_index)
 
+[^pco-pro-3400ge]: [PassMark Software - Display Baseline ID# 1308142](https://www.passmark.com/baselines/V8/display.php?id=130814241228)
+[^pco-pro-3200ge]: [PassMark Software - Display Baseline ID# 1300484](https://www.passmark.com/baselines/V8/display.php?id=130048431252)
+[^pco-pro-3400g]: <http://www.ozone3d.net/gpudb/score.php?which=900474>
+[^pco-pro-3200g]: <https://gpuscore.top/msi/kombustor/show.php?id=505043>
+
 #### Raven2 ( gfx909 ) {#raven2-gfx909}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
@@ -136,7 +144,7 @@ summary: " "
 | | 92 | R1505G | Embedded |
 | | C4 | 3200U[^rv2-3200u] | (FP5 15W Vega 3), == 3250C? |
 | | C5 | 300U[^rv2-300u] | (Vega 3) |
-| | CC | 3000G[^rv2-3000g] | (AM4 Vega 3) |
+| | CC | 300GE[^rv2-300ge] /3000G[^rv2-3000g] | (AM4 Vega 3) |
 
 [Page Top](#page_index)
 
@@ -144,6 +152,7 @@ summary: " "
 [^rv2-300u]: [HP Laptop 15-db1001nt DxDiag - Technopat Sosyal](https://www.technopat.net/sosyal/konu/hp-laptop-15-db1001nt-dxdiag.769397/)
 [^rv2-3000g]: [LKML: A L: Re: AMDGPU crash on 5.4.7 on AMD Athlon 3000G APU](https://lkml.org/lkml/2020/1/3/224)
 [^10]: [Core i7並みのRyzen搭載で、4万円台＆片手サイズ⁉ 〝Ryzen Embedded”搭載の超小型PCベアボーン「4×4 BOX」が超お得 (3/3) | AMD HEROES](https://amd-heroes.jp/article/2020/03/0364/3/)
+[^rv2-300ge]: [PassMark Software - Display Baseline ID# 1314532](https://www.passmark.com/baselines/V8/display.php?id=131453210324)
 
 ##### Dali ( gfx909 ) {#dali-gfx909}
 | Device ID | Revision ID | Product Name | Memo |
@@ -243,9 +252,9 @@ DG02SRTBP4MFA
 | | ? | 4700GE |
 | | ? | 4600GE |
 | | ? | 4300GE |
-| | ? | PRO 4700GE |
-| | ? | PRO 4600GE |
-| | ? | PRO 4300GE |
+| | ? | PRO 4750GE |
+| | ? | PRO 4650GE |
+| | ? | PRO 4350GE |
 | | ? | PRO 4650U |
 | | ? | PRO 4450U |
 
