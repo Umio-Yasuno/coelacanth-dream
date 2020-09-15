@@ -9,7 +9,8 @@ noindex: false
 # summary: ""
 ---
 
-CPU部は *Golden Coce (Core)* と *Gracemont (Atom)* のハイブリッド構成を取ることが明かされている *Alder Lake* だが、[intel/gmmlib](https://github.com/intel/gmmlib) に組み込まれた変更から、デスクトップ向けとされる *Alder Lake-S* の GPU部は [Tiger Lake](/tags/tiger_lake)、[Rocket Lake](/tags/rocket_lake)、[DG1](/tags/dg1)等と同じ [Gen12アーキテクチャ](/tags/gen12) であることが分かった。  
+CPU部は *Golden Coce (Core)* と *Gracemont (Atom)* のハイブリッド構成を取ることが明かされている *Alder Lake* だが、[intel/gmmlib](https://github.com/intel/gmmlib) に組み込まれた変更から、  
+デスクトップ向けとされる *Alder Lake-S* の GPU部は [Tiger Lake](/tags/tiger_lake)、[Rocket Lake](/tags/rocket_lake)、[DG1](/tags/dg1)等と同じ [Gen12アーキテクチャ](/tags/gen12) であることが分かった。  
 {{< link >}} [Added the ADL-S device ID's and phyAddr support · intel/gmmlib@2072b0d](https://github.com/intel/gmmlib/commit/2072b0d1e8ba2cba2f94bc2c1fda89d6e457a50b) {{< /link >}}
 
 *Alder Lake-S* に関するコードが `gmmlib/GmmGen12Platform.cpp` に追加されている。  
@@ -76,8 +77,19 @@ CPU部は *Golden Coce (Core)* と *Gracemont (Atom)* のハイブリッド構�
 [^adl-mc]: <https://review.coreboot.org/c/coreboot/+/45192/7/src/soc/intel/alderlake/meminit.c#109>
 
 *Alder Lake* は 2021年の後半に市場へ投入されると Intel は発表している。  
+それまでは *Gen12アーキテクチャ* 、より正確に言えば *{{< xe class="lp" >}}アーキテクチャ* がクライアント向けプロセッサの iGPU として継続される。  
+期間で言えば、*Gen9アーキテクチャ* は *Skylake* から *Comet Lake* まで続けて採用され、その間には *Kaby Lake (Amber Lake)* 、*Coffee Lake* 、*Whiskey Lake* 、Atom系プロセッサでは *Apollo Lake* 、*Gemini Lake* が存在する。  
+Core系はプロセス更新失敗とそれに伴う *Cannon Lake* のキャンセルといった事情が絡み、*Skylakeアーキテクチャ* と共に *Gen9アーキテクチャ* がここまで続くこととなった。  
+しかし、*Gen12アーキテクチャ /{{< xe class="lp" >}}* はプロセスも CPUアーキテクチャも異なる 3種のプロセッサ (*Tiger Lake /Rocket Lake /Alder Lake-S*) での採用となり、*Gen9アーキテクチャ* とは理由を全く異にする。  
+これは *Gen12アーキテクチャ /{{< xe class="lp" >}}* の優秀さ {{< comple >}} 将来を見据えた細部に渡る拡張、メディア部の強化 (AV1 HWデコード)…… {{< /comple >}} を示していると言える。  
+
+<!--
+
+*Alder Lake* は 2021年の後半に市場へ投入されると Intel は発表している。  
 それまでは *Gen12アーキテクチャ* 、より正確に言えば *{{< xe class="lp" >}}アーキテクチャ* が継続される訳だが、{{< xe class="lp" >}} は性能向上と用途拡大のため前世代から細部に渡って拡張が施され、メディア部では AV1 HWデコードに対応と、将来を見据えた設計になっている。  
-そう陳腐化することもないだろう。  
+そう陳腐化してしまうこともないだろう。  
+
+-->
 
 | Intel Gen12 | GT0.5 | GT1 | GT2 | GT2 (DG1) |
 | :-- | :--: | :--: | :--: | :--: |
