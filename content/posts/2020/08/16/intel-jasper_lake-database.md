@@ -2,9 +2,9 @@
 title: "Intel Jasper Lake Database"
 date: 2020-08-16T07:18:46+09:00
 draft: false
-tags: [ "Database", "Tremont", "Jasper_Lake", "Gen11" ]
+tags: [ "Tremont", "Jasper_Lake", "Gen11" ]
 keywords: [ "", ]
-categories: [ "Hardware", "Intel", "CPU" ]
+categories: [ "Hardware", "Intel", "CPU", "Database" ]
 noindex: false
 # summary: ""
 ---

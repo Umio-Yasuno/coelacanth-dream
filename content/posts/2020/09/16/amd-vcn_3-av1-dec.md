@@ -19,8 +19,12 @@ AV1 のHWデコードと次世代 GPUに関しては、以前より Intel の次
 だが、今回のパッチでサポートすることが判明し、不安は払拭された。  
 VCN 3 は *RDNA 2* でないと搭載できない、といった理由は無いため、今後登場する AMD の次世代 APU に搭載される可能性も考えられる。  
 
-
 [^gen12-av1-dec]: [Intel Gen12 GPU は AV1コーディックのHWデコードをサポート | Coelacanth's Dream](/posts/2020/07/09/intel-gen12-av1-decode/)
+
+また、今回のパッチは Linux Kernel側の対応で、実際に AV1 HWデコードを実行するには libdrm や UMD(User Mode Driver) である [RadeonSI](/tags/radeonsi) の対応も必要となる。  
+VRS(Variable Rate Shader) の対応を示すレジスタ情報も追加されているが[^gfx103-vrs]、こちらも同様に UMD側の対応が必要である。  
+
+[^gfx103-vrs]: [[PATCH 1/4] drm/amdgpu: add the GC 10.3 VRS registers](https://lists.freedesktop.org/archives/amd-gfx/2020-September/053778.html)
 
 *Sienna Cichlid* の DeviceID もようやく? 追加されており、以下 6個がそうなる。  
 実験的なサポートを意味するフラグ `AMD_EXP_HW_SUPPORT` が無いため、Linux Kernel (amd-gfx) への DeviceID 追加は意図的に遅らせたと考えられるが、まあ個人の邪推である。  

@@ -2,9 +2,9 @@
 title: "いかに Zen APU は複雑か"
 date: 2020-02-16T02:32:47+09:00
 draft: false
-tags: [ "Zen", "Raven", "Picasso", "Raven2", "Dali", "Pollock", "Renoir", "Database" ]
+tags: [ "Zen", "Raven", "Picasso", "Raven2", "Dali", "Pollock", "Renoir" ]
 keywords: [ "", ]
-categories: [ "Hardware", "AMD", "APU" ]
+categories: [ "Hardware", "AMD", "APU", "Database" ]
 noindex: false
 ---
 

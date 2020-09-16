@@ -2,9 +2,9 @@
 title: "AMDGPU関連用語略称まとめ"
 date: 2020-01-14T23:38:40+09:00
 draft: false
-tags: [ "Database", ]
+# tags: [ "Database", ]
 keywords: [ "", ]
-categories: [ "Hardware", "AMD", "GPU" ]
+categories: [ "Hardware", "AMD", "GPU", "Database" ]
 noindex: false
 summary: " "
 ---

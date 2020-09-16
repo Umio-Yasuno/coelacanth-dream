@@ -2,9 +2,10 @@
 title: "Vegaの新機能今いずこ"
 date: 2019-12-07T05:13:46+09:00
 draft: false
-tags: [ "Radeon", "GCN", "GFX9", "Database" ]
+tags: [ "Radeon", "GCN", "GFX9" ]
 keywords: [ "Radeon", "Vega" ]
-categories: [ "Hardware", "AMD", "GPU" ]
+categories: [ "Hardware", "AMD", "GPU", "Database" ]
+
 ---
 
 色々と新機能をアピールしながら登場したVegaだったが、その新機能はどうなったのか？  

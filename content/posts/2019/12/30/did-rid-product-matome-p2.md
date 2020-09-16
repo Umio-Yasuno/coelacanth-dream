@@ -2,9 +2,9 @@
 title: "AMDGPU Database: Device ID/ Revision ID/ Product Name"
 date: 2019-12-30T10:59:25+09:00
 draft: false
-tags: [ "Radeon", "Database" ]
+tags: [ "Radeon" ]
 keywords: [ "Radeon", "AMDGPU" , "Device ID", "Revision ID", "Product Name" ]
-categories: [ "Hardware", "AMD", "GPU" ]
+categories: [ "Hardware", "AMD", "GPU", "Database" ]
 summary: " "
 ---
 
@@ -482,7 +482,18 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 [^pro5600m-youtube]: <https://www.youtube-nocookie.com/embed/unG5uGqefmA>
 
 #### Navi21 / Sienna Cichlid ( gfx1030 ) {#navi21-gfx1030}
-Navi21: gfx1030 [^12]
+
+| Device ID | Revision ID | Product Name | Memo |
+| :--- | :--- | :---: | :---: |
+| 73A0 | | |
+| 73A2 | | |
+| 73A3 | | |
+| 73AB | | |
+| 73AE | | |
+| 73BD | | |
+
+
+<!--  Navi21: gfx1030 [^12]   -->
 
 #### Navi22 / Navy Flounder ( gfx1031? ) {#navi22-gfx1031}
 

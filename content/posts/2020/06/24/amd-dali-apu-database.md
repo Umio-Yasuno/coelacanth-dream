@@ -2,9 +2,9 @@
 title: "AMD Dali APU Database"
 date: 2020-06-24T19:52:05+09:00
 draft: false
-tags: [ "Database", "Dali", "gfx909", "Raven2", "Zen" ]
+tags: [ "Dali", "gfx909", "Raven2", "Zen" ]
 keywords: [ "", ]
-categories: [ "AMD", "APU", "Hardware" ]
+categories: [ "AMD", "APU", "Hardware", "Database" ]
 noindex: false
 ---
 
