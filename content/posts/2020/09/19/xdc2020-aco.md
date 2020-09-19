@@ -7,6 +7,7 @@ tags: [ "ACO", "RadeonSI", "RADV" ]
 categories: [ "Software", "AMD", "GPU" ]
 noindex: false
 # summary: ""
+toc: true
 ---
 
 先日より **XDC 2020** が開催され、オープンソース・グラフィックに関する発表が数々行なわれている。  
@@ -19,7 +20,7 @@ noindex: false
 
  * [今後の計画と機能](#future-plan)
    * [RDNA 2/GFX10.3 サポート](#rdna_2-support)
-   * [RadeonSI(OpenGL) でも ACOバックエンドを](#radeonsi-aco)
+   * [RadeonSI(OpenGL) でも ACOバックエンドをサポート](#radeonsi-aco)
    * [レイトレーシング](#rt)
    * [Mesh Shader は NGG で実行可能か](#ms-on-ngg)
    * [さらなる最適化](#more-optim)
@@ -30,18 +31,18 @@ noindex: false
 ### RDNA 2/GFX10.3 サポート {#rdna_2-support}
 *RDNA 2 /GFX10.3* のサポートは進行中だが、次世代 GPU であるためまだ公式のISAドキュメントがリリースされておらず、AMD の開発者が公式にパッチを投稿する *RadeonSI (OpenGL)* ドライバーや LLVM の変更に追従する形を取っているとのこと。(Page51)  
 
-### RadeonSI(OpenGL) でも ACOバックエンドを {#radeonsi-aco}
+### RadeonSI(OpenGL) でも ACOバックエンドをサポート {#radeonsi-aco}
 現在 *ACOバックエンド* は *RADV(Vulkan)* ドライバーのみをサポートしているが、*RadeonSI(OpenGL)* のサポートも計画されている。(Page52)  
 それに向けたコードのシェーダーの引数部の統合、I/O操作部の統合作業は始まっているが、元は *RADV(Vulkan)* への実装だったこともあり、サポートまで長い道のりであると述べている。  
 
 ### レイトレーシング {#rt}
-Vulkan API でレイトレーシングをサポートする拡張仕様はドラフト(草稿)の段階にあり、先日には、*RDNA 2 /GFX10.3* がサポートするレイトレーシング関連の命令が LLVM に追加されているため、*ACO* でもサポートされる日はそう遠くない……が肝心のハードウェア、*RDNA 2 /GFX10.3* GPU そのものがまだリリースされていない。  
+Vulkan API でレイトレーシングをサポートする拡張仕様はドラフト(草稿)の段階にあり、[先日](/posts/2020/09/17/llvm-amd-gfx1030-rt-inst/)には、*RDNA 2 /GFX10.3* がサポートするレイトレーシング関連の命令が LLVM に追加されているため、*ACO* でもサポートされる日はそう遠くない……が肝心のハードウェア、*RDNA 2 /GFX10.3* GPU そのものがまだリリースされていない。  
 
 ### Mesh Shader は NGG で実行可能か {#ms-on-ngg}
 
 NVIDIA が Turing 世代で新設したプログラムシェーダー、Mesh Shader だが、スライド内にて *RDNA /GFX10* からハードウェア側でサポートされている NGG(Next Generation Geometory) で実行できる *可能性* があると述べている。(Page54)  
 まだ Vulkan API での拡張機能がリリースされていないため実装、テストは行なわれていないが、  
-もし実行可能であるとして、次世代コンソール機でサポートが分かれていた、PS5 のプリミティブシェーダー、Xbox Series X/S でサポートされている Mesh Shader が、ハードウェア側としてはどちらも NGG によって実行されていることとなる。  
+もし実行可能であるならば、次世代コンソール機でサポートが分かれていた、PS5 のプリミティブシェーダー、Xbox Series X/S でサポートされている Mesh Shader が、ハードウェア側としてはどちらも NGG によって実行されている可能性が考えられる。  
 
 NGG 自体は *Vega /GFX9* から始まったものだが、*RDNA /GFX10* で設計が変更され、*Vega /GFX9* でのサポートは廃止された[^remove-gfx9-ngg]という背景がある。  
 これはあくまでも個人の推測であるが、*RDNA /GFX10* で NGG の設計変更を行なった理由の1つに、Mesh Shader のサポートが含まれていたのかもしれない。  
