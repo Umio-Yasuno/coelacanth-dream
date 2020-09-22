@@ -29,7 +29,7 @@ AMD は現地時間 2020/09/22 付で、*Zenアーキテクチャ* をベース�
 **3700C, 3500C** が [12nm Picasso APU](/tags/picasso)を、**3250C, 3150C, 3050C** が [14nm Raven2/Dali APU](/tags/dali)をベースとする点は変わらない。  
 
 発表が唐突なものに思えるが、Google が日本時間では 2020/10/01 の午前3時に [Launch Night In](https://launchnightin.withgoogle.com/jp/) というイベントを予定しているため、それに合わせたのかもしれない。  
-より省電力、低コストな [Pollock APU](/tags/pollock) をベースとし、この前 SKU名が判明した**AMD 3015Ce** が見当たらないが、  
+それと、より省電力、低コストな [Pollock APU](/tags/pollock) をベースとし、この前 SKU名が判明した**AMD 3015Ce** が見当たらないが、  
 {{< link >}} [Chromebook向け Pollock APU、AMD 3015Ce | Coelacanth's Dream](/posts/2020/09/09/amd-3015ce-chromebook/) {{< /link >}}
 同じく [Pollock APU](/tags/pollock) をベースとする **AMD 3015e** も搭載製品の発表と同時に AMD公式サイトにスペックが記載される、という感じであったため、**AMD 3015Ce** も **Ryzen & Athlon C-Series** 搭載製品と一緒にちゃっかり出てくるかもしれない。  
 
