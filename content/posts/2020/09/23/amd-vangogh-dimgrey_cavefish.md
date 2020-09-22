@@ -30,7 +30,7 @@ OSS にこれらチップの名前が追加されたのは初であり、珍し�
  > {{< quote >}} [pal/amdgpu_asic_addr.h at 39abe2297ca58a2b84dcd9bc5e238fbc399bd6e0 · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/39abe2297ca58a2b84dcd9bc5e238fbc399bd6e0/src/core/imported/addrlib/src/amdgpu_asic_addr.h#L115) {{< /quote >}}
 
 *Dimgrey Cavefish* 、*VanGogh* は、[Sienna Cichlid](/tags/sienna_cichlid)、[Navy Flounder](/tags/navy_flounder) 同様 `gfx1030` に関連付けられ、*RDNA 2 /GFX10.3* GPU とされる。  
-*VanGogh* は画家系のコードネームであることから APU と考えられ、伝え聞こえてくる話もそのようになっている。  
+*VanGogh* は画家系のコードネームであることから APU と考えられ、聞こえ伝わってくる話もそのようである。  
 NGG(Next Generation Geometory) が使用可能かの判定に専用VRAMを持っているかが追加されており、現時点で *VanGogh* で NGG が使えないようになっている。今後 NGG のサポートが追加されるかは不明。  
 また、GPU部が *Vega /GFX9* 世代から進んだことで新たに *VanGoghファミリー* が作られたが、`chipRevision` の範囲が `0x01, 0xFF` と既に埋まっており、そのファミリーに属するのは *VanGogh* のみとなる可能性が考えられる。  
 
