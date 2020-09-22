@@ -11,6 +11,7 @@ toc: false
 ---
 
 Mesa3D に、新たな *RDNA 2 /GFX10.3* GPU、*Dimgrey Cavefish* と *Van Gogh* のサポートを追加されたマージリクエストが投稿された。  
+OSS にこれらチップの名前が追加されたのは初であり、珍しく UMD(User Mode Driver) である Mesa3D が先行した。Linux Kernel(amd-gfx) に、サポートするためのパッチが投稿される日も近いはずだ。  
 
  * [amd: add support for more chips - Dimgrey Cavefish and VanGogh (!6820) · Merge Requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6820)
 
@@ -29,7 +30,7 @@ Mesa3D に、新たな *RDNA 2 /GFX10.3* GPU、*Dimgrey Cavefish* と *Van Gogh*
  > {{< quote >}} [pal/amdgpu_asic_addr.h at 39abe2297ca58a2b84dcd9bc5e238fbc399bd6e0 · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/39abe2297ca58a2b84dcd9bc5e238fbc399bd6e0/src/core/imported/addrlib/src/amdgpu_asic_addr.h#L111) {{< /quote >}}
 
 *Dimgrey Cavefish* 、*VanGogh* は、[Sienna Cichlid](/tags/sienna_cichlid)、[Navy Flounder](/tags/navy_flounder) 同様 `gfx1030` に関連付けられ、*RDNA 2 /GFX10.3* GPU と考えられる。  
-*VanGogh* は画家系のコードネームであり APU と考えられ、伝え聞こえてくる話もそのようになっている。  
+*VanGogh* は画家系のコードネームであることから APU と考えられ、伝え聞こえてくる話もそのようになっている。  
 NGG(Next Generation Geometory) が使用可能かの判定に専用VRAMを持っているかが追加されており、現時点で *VanGogh* で NGG が使えないようになっている。今後 NGG のサポートが追加されるかは不明。  
 
 *Cavefish* は、洞窟の生活に適応したドウクツギョ科の英名であり、硬骨魚の *Cichlid* や *Flounder* とは大きく異なっている。これが意味する所は。  
