@@ -36,7 +36,7 @@ NGG(Next Generation Geometory) が使用可能かの判定に専用VRAMを持っ
 
 *RDNA 2/GFX10.3* 世代の dGPU には他に、[Sienna Cichlid](/tags/sienna_cichlid) 、[Navy Flounder](/tags/navy_flounder) がおり、*色 + 魚* のコードネームとなっている。  
 *Cichlid* はカワスズメ科の硬骨魚、*Flounder* は砂底に生息する硬骨魚ヒラメの英名である。  
-そして *Cavefish* は、洞窟の生活に適応したドウクツギョ科の英名であり、硬骨魚の *Cichlid* や *Flounder* とは大きく異なっている。果たしてこれが意味する所は。いや特に意味は無い、というのも十分ありうるけれども。  
+そして *Cavefish* は、洞窟の生活に適応したドウクツギョ科の英名らしく、硬骨魚の *Cichlid* や *Flounder* とは大きく異なっている。果たしてこれが意味する所は。いや特に意味は無い、というのも十分ありうるけれども。  
 
 ちなみに *Dimgrey* は <span style="color: dimgrey;">こんな感じの色</span>。  
 *Sienna* は <span style="color: #882D17">こんな感じ</span>。  

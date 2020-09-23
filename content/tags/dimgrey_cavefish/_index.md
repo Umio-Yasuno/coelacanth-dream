@@ -4,7 +4,7 @@ title: "Dimgrey Cavefish"
 # draft: true
 tags: [ "Radeon", "RDNA_2", "Navi23" ]
 keywords: [ "", ]
-categories: [ "Hardware", "AMD", "GPU" ]
+# categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
 ---
 

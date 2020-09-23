@@ -28,6 +28,8 @@ AMD は現地時間 2020/09/22 付で、*Zenアーキテクチャ* をベース�
 **Athlon Gold 3150U** では GPUクロックが最大 1000MHz となっているが、**3150C** では 1100MHz と、細かな違いが存在する。  
 **3700C, 3500C** が [12nm Picasso APU](/tags/picasso)を、**3250C, 3150C, 3050C** が [14nm Raven2/Dali APU](/tags/dali)をベースとする点は変わらない。  
 
+前世代からはプロセッサの性能だけでなくマルチメディアエンジンも世代が進み、HEVCデコード/エンコード、VP9デコードに対応しているため使い勝手はかなり良くなっているように思う。  
+
 発表が唐突なものに思えるが、Google が日本時間では 2020/10/01 の午前3時に [Launch Night In](https://launchnightin.withgoogle.com/jp/) というイベントを予定しているため、それに合わせたのかもしれない。  
 それと、より省電力、低コストな [Pollock APU](/tags/pollock) をベースとし、この前 SKU名が判明した**AMD 3015Ce** が見当たらないが、  
 {{< link >}} [Chromebook向け Pollock APU、AMD 3015Ce | Coelacanth's Dream](/posts/2020/09/09/amd-3015ce-chromebook/) {{< /link >}}
