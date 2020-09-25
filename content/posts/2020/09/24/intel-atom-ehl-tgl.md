@@ -42,3 +42,6 @@ Hyper-Threading は有効にされておらず、2コアのSKUであっても 2C
 
 TDP(PL1) は 4.5W-12W の範囲に対応し、Burst(Turbo) Mode の最大クロックは共通して 3.0GHz。  
 GPU EU数は 16EU または 32EU となり、最大クロックは 850MHz。  
+
+GPU部の仕様は基本 *Jasper Lake* と共通している。  
+{{< link >}} [Intel Jasper Lake Database | Coelacanth's Dream](/posts/2020/08/16/intel-jasper_lake-database/) {{< /link >}}
