@@ -13,15 +13,18 @@ toc: false
 GPU部が *RDNA 2/GFX10.3* となる AMD の次世代 APU *VanGogh* をサポートするパッチが Linux Kernel(amd-gfx) に投稿された。  
 {{< link >}} [[PATCH 00/45] Add support for vangoh](https://lists.freedesktop.org/archives/amd-gfx/2020-September/054216.html) {{< /link >}}
 
+先日には Linux Kernel に先行して Mesa3D(UMD) に *VanGogh* のサポートが追加されている。  
+{{< link >}} [新たな AMD RDNA 2 GPU、"Dimgrey Cavefish" & "VanGogh" | Coelacanth's Dream](/posts/2020/09/23/amd-vangogh-dimgrey_cavefish/) {{< /link >}}
+
 ## DCN3.01
-DCN3.01 と、*RDNA 2 dGPU* よりほんの少し進んだバージョンとなるが、違いとしては eDP に対応したくらいではないかと思う。  
-*Raven* 、*Renoir* 同様にディスプレイコントローラーは 4基とされる。[^vgh-dc4]  
+ディスプレイ部には DCN3.01 を搭載し、*RDNA 2 dGPU* の DCN3.0 よりほんの少し進んだバージョンとなるが、違いもそれに沿って eDP とメモリの対応を追加したくらいではないかと思う。  
+*Raven APU* 、*Renoir APU* 同様にディスプレイコントローラーは 4基とされ、DSC の数も *Renoir* から変わらず 3基となっている。[^vgh-dc4]  
 {{< link >}} [[PATCH 43/45] drm/amd/display: Add dcn3.01 support to DC](https://lists.freedesktop.org/archives/amd-gfx/2020-September/054258.html) {{< /link >}}
 
 [^vgh-dc4]: <https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/display/dc/dcn301/dcn301_resource.c?h=amd-staging-drm-next-vangogh#n770>
 
 ## VCN3.0 {#vgh-vcn3}
-*VanGogh* は他 *RDNA 2 dGPU* 、*Sienna Cichlid* 、*Navy Flounder* と同じくマルチメディアエンジンには VCN3.0 を搭載する。  
+*VanGogh* は *RDNA 2 dGPU* 、*Sienna Cichlid* 、*Navy Flounder* と同じくマルチメディアエンジンには VCN3.0 を搭載する。  
 VCN3.0 は AV1 HWデコードに対応するため[^vcn3-av1]、後述の LPDDR5メモリ対応と合わせて、機能面で *Intel Tiger Lake* に追い付いたと考えられる。  
 {{< link >}} [[PATCH 23/45] drm/amdgpu: enable vcn3.0 for van gogh](https://lists.freedesktop.org/archives/amd-gfx/2020-September/054237.html) {{< /link >}}
 
@@ -36,3 +39,9 @@ VCN3.0 は AV1 HWデコードに対応するため[^vcn3-av1]、後述の LPDDR5
 
 [^vgh-ddr4]: <https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/display/dc/clk_mgr/dcn301/vg_clk_mgr.c?h=amd-staging-drm-next-vangogh#n545>
 
+<!--
+
+PCI ID は `0x163F` となり、AMDGPUファミリーは新たな *VanGoghファミリー* に属する。  
+{{< link >}} [[PATCH 45/45] drm/amdgpu: add van gogh pci id](https://lists.freedesktop.org/archives/amd-gfx/2020-September/054259.html) {{< /link >}}
+
+-->
