@@ -1,5 +1,5 @@
 ---
-title: "AMD Navy Flounder は gfx1031 という話"
+title: "AMD Navy Flounder は Navi22 で gfx1031 という話"
 date: 2020-09-25T15:27:24+09:00
 draft: false
 tags: [ "RDNA_2", "Navy_Flounder" ]
@@ -23,7 +23,9 @@ ROCm のデバッグツール [ROCm-Developer-Tools/ROCgdb](https://github.com/R
  >
  > {{< quote >}} [ROCdbgapi/os_driver.cpp at deb6d8ab8d62072bdc6707d157fd226da3a95691 · ROCm-Developer-Tools/ROCdbgapi](https://github.com/ROCm-Developer-Tools/ROCdbgapi/blob/deb6d8ab8d62072bdc6707d157fd226da3a95691/src/os_driver.cpp) {{< /quote >}}
 
-また、*Navi21* は `gfx1030` 、*Navi22* は `gfx1031` という記述もあったが、OSS においては *Navi2x* ではなく 色+魚 なコードネームを使う方向性でいるのだからそれで統一してほしい、とは思う。  
+また、*Sienna Cichlid* は *Navi21* で `gfx1030` 、*Navy Flounder* は *Navi22* で `gfx1031` という記述もあったが、OSS においては *Navi2x* ではなく 色+魚 なコードネームを使う方向性でいるのだからそれで統一してほしい、とは思う。  
+それはともかく、`Sienna Cichlid == Navi21 == gfx1030` 、`Navy Flounder == Navi22 == gfx1031` とされている。  
+GPU(GFX) ID は AMD GPU ISA(命令セットアーキテクチャ) を示すから、最後の部分はそうと言えないかもしれないが、少なくとも今はそれで合っている。  
 
 
  >       @c ``Navi 21'' which is displayed as @samp{sienna_cichlid} by @value{GDBN} and
