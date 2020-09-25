@@ -35,7 +35,14 @@ NGG(Next Generation Geometory) が使用可能かの判定に専用VRAMを持っ
 また、GPU部が *Vega /GFX9* 世代から進んだことで新たに *VanGoghファミリー* が作られたが、`chipRevision` の範囲が `0x01, 0xFF` と既に埋まっており、そのファミリーに属するのは *VanGogh* のみとなる可能性が考えられる。  
 
 *RDNA 2/GFX10.3* 世代の dGPU には他に、[Sienna Cichlid](/tags/sienna_cichlid) 、[Navy Flounder](/tags/navy_flounder) がおり、*色 + 魚* のコードネームとなっている。  
-*Cichlid* はカワスズメ科の硬骨魚、*Flounder* は砂底に生息する硬骨魚ヒラメの英名である。  
+*Cichlid* はカワスズメ科の硬骨魚、*Flounder* は砂底に生息する硬骨魚<del>ヒラメ</del>の英名である。  
+
+{{< ins >}}
+
+*Flounder* はカレイの意でした。大変申し訳ありません。  
+
+{{< /ins >}}
+
 そして *Cavefish* は、洞窟の生活に適応したドウクツギョ科の英名らしく、硬骨魚の *Cichlid* や *Flounder* とは大きく異なっている。果たしてこれが意味する所は。いや特に意味は無い、というのも十分ありうるけれども。  
 
 ちなみに *Dimgrey* は <span style="color: dimgrey;">こんな感じの色</span>。  

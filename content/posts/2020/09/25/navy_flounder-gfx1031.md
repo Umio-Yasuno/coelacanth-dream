@@ -10,7 +10,7 @@ noindex: false
 toc: false
 ---
 
-それだけの話なんだけど、ヒラメをカレイと間違えるようなうっかりではない方向に話が行ったりする。  
+それだけの話なんだけど、ヒラメとカレイとを間違えるようなうっかりではない方向に話が行ったりする。  
 
 ROCm のデバッグツール [ROCm-Developer-Tools/ROCgdb](https://github.com/ROCm-Developer-Tools/ROCgdb)、デバッガーAPI [ROCm-Developer-Tools/ROCdbgapi](https://github.com/ROCm-Developer-Tools/ROCdbgapi) に GPU(GFX) ID に `gfx1030`, `gfx1031` のサポートが追加された。  
 {{< link >}} [Add support for gfx1030/gfx1031 · ROCm-Developer-Tools/ROCdbgapi@deb6d8a](https://github.com/ROCm-Developer-Tools/ROCdbgapi/commit/deb6d8ab8d62072bdc6707d157fd226da3a95691) {{< /link >}}
@@ -24,8 +24,8 @@ ROCm のデバッグツール [ROCm-Developer-Tools/ROCgdb](https://github.com/R
  > {{< quote >}} [ROCdbgapi/os_driver.cpp at deb6d8ab8d62072bdc6707d157fd226da3a95691 · ROCm-Developer-Tools/ROCdbgapi](https://github.com/ROCm-Developer-Tools/ROCdbgapi/blob/deb6d8ab8d62072bdc6707d157fd226da3a95691/src/os_driver.cpp) {{< /quote >}}
 
 また、*Sienna Cichlid* は *Navi21* で `gfx1030` 、*Navy Flounder* は *Navi22* で `gfx1031` という記述もあったが、OSS においては *Navi2x* ではなく 色+魚 なコードネームを使う方向性でいるのだからそれで統一してほしい、とは思う。  
-それはともかく、`Sienna Cichlid == Navi21 == gfx1030` 、`Navy Flounder == Navi22 == gfx1031` とされている。  
-GPU(GFX) ID は AMD GPU ISA(命令セットアーキテクチャ) を示すから、最後の部分はそうと言えないかもしれないが、少なくとも今はそれで合っている。  
+それはともかくとして、`Sienna Cichlid == Navi21 == gfx1030` 、`Navy Flounder == Navi22 == gfx1031` とされている。  
+GPU(GFX) ID は AMD GPU ISA(命令セットアーキテクチャ) を示すから、最後の部分は将来的にそうと言えなくなるかもしれないが、少なくとも今は合っている。  
 
 
  >       @c ``Navi 21'' which is displayed as @samp{sienna_cichlid} by @value{GDBN} and
