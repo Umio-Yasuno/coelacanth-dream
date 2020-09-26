@@ -25,7 +25,7 @@ GPU部が *RDNA 2/GFX10.3* となる AMD の次世代 APU *VanGogh* をサポー
 
 ## VCN3.0 {#vgh-vcn3}
 *VanGogh* は *RDNA 2 dGPU* 、*Sienna Cichlid* 、*Navy Flounder* と同じくマルチメディアエンジンには VCN3.0 を搭載する。  
-VCN3.0 は AV1 HWデコードに対応するため[^vcn3-av1]、後述の LPDDR5メモリ対応と合わせて、機能面で *Intel Tiger Lake* に追い付いたと考えられる。  
+VCN3.0 は AV1 HWデコードに対応するため[^vcn3-av1]、後述の LPDDR5メモリ対応と合わせて、機能面で *Intel Tiger Lake* に追い付いたと言える。  
 {{< link >}} [[PATCH 23/45] drm/amdgpu: enable vcn3.0 for van gogh](https://lists.freedesktop.org/archives/amd-gfx/2020-September/054237.html) {{< /link >}}
 
 [^vcn3-av1]: [AMD RDNA 2 世代に搭載される VCN 3 は AV1 HWデコードをサポート | Coelacanth's Dream](/posts/2020/09/16/amd-vcn_3-av1-dec/)
@@ -33,15 +33,14 @@ VCN3.0 は AV1 HWデコードに対応するため[^vcn3-av1]、後述の LPDDR5
 ## LPDDR5メモリをサポート {#vgh-ddr5}
 *VanGogh* は LPDDR5メモリをサポートするとされる。  
 同時に DDR5 のメモリタイプが追加されているが、ドライバー部では LPDDR4 は DDR4 と、LPDDR5 は DDR5 として判定されるため、DDR5メモリまでサポートするかは不明。  
-`vg_clk_mgr.c` ファイルに DDR4 のテーブルがあるため、DDR4メモリをサポートしている可能性はある。[^vgh-ddr4]  
+まだテストが行なわれていないだけかもしれないが。  
+`vg_clk_mgr.c` ファイルに LPDDR5 と DDR4 のテーブルが用意されているため、DDR4メモリをサポートしている可能性はある。[^vgh-ddr4]  
 {{< link >}} [[PATCH 10/45] drm/amdgpu: add uapi to define van gogh memory type](https://lists.freedesktop.org/archives/amd-gfx/2020-September/054225.html) {{< /link >}}
 {{< link >}} [[PATCH 13/45] drm/amdgpu: get the correct vram type for van gogh](https://lists.freedesktop.org/archives/amd-gfx/2020-September/054227.html) {{< /link >}}
 
 [^vgh-ddr4]: <https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/display/dc/clk_mgr/dcn301/vg_clk_mgr.c?h=amd-staging-drm-next-vangogh#n545>
 
-<!--
 
 PCI ID は `0x163F` となり、AMDGPUファミリーは新たな *VanGoghファミリー* に属する。  
 {{< link >}} [[PATCH 45/45] drm/amdgpu: add van gogh pci id](https://lists.freedesktop.org/archives/amd-gfx/2020-September/054259.html) {{< /link >}}
 
--->

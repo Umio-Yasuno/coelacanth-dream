@@ -20,6 +20,8 @@ summary: " "
          * [Dali](#dali-gfx909)
          * [Pollock](#pollock-gfx909)
       * [Renoir](#renoir-gfx909)
+   * FAMILY_VGH
+      * [VanGogh](#vgh)
  * [Discrete GPU](#dgpu)
    * FAMILY_AI
       * [Vega10](#vega10-gfx900)
@@ -288,6 +290,14 @@ DG02SRTBP4MFA
 
 [^13]: [P4 to Git Change 2008166 by vsytchen@vsytchen-remote-ocl-win10 on 201… · ROCm-Developer-Tools/ROCclr@df2e0b9](https://github.com/ROCm-Developer-Tools/ROCclr/commit/df2e0b9ae27f43ba8e23a3afa185c16dd3bb5ebc)
 -->
+
+### FAMILY_VGH {#family_vgh}
+#### VanGogh {#vgh}
+
+| Device ID | Revision ID | Product Name | Memo |
+| :--- | :--- | :---: | :---: |
+| 163F &darr; | | | |
+
 
 [Page Top](#page_index)
 
