@@ -1,7 +1,7 @@
 ---
 title: "【雑記】シーラカンスが見た夢　―― コードネーム云々"
 date: 2020-09-26T04:14:12+09:00
-draft: true
+draft: false
 # tags: [ "", ]
 # keywords: [ "", ]
 categories: [ "Diary", ]
@@ -29,4 +29,14 @@ APU の世代で言えば、(恐らく) CPU と GPU 部には *Renoir* から変
 
 ## Phoronix による NCNN ベンチマーク結果 {#ncnn}
 
-自分が
+自分が以前に [ACOバックエンド](/tags/aco) の検証に用いた [Tencent/ncnn](https://github.com/Tencent/ncnn) のベンチマークプロファイルが OpenBenchmarking に追加され、Phoronix の Michael Larabel 氏が多くの GPU で実行、結果を公開している。  
+{{< link >}} [NVIDIA GeForce vs. AMD Radeon Vulkan Neural Network Performance With NCNN - Phoronix](https://www.phoronix.com/scan.php?page=article&item=realsr-ncnn-vulkan&num=1) {{< /link >}}
+
+Linux とオープンソースに理解があり、大規模なベンチマークを実行できるのは Phoronix の Michael Larabel 氏しかいないため、価値ある記事だと言える。  
+ベンチマークにおいて難しいのはシステム環境を揃えることだと思う。それに左右されないベンチマークソフトだと、単にプロセッサのピーク性能を測るものとなり、実使用とはかけ離れてしまう。  
+
+結果はと言うと、**Radeon VII** が **TITAN RTX** を追い越してトップに立っている。  
+ただピーク性能では勝っているはずの **RX Vega 56** が **RX 5700 /XT** よりも遅く、このあたりは画像の入力出力、ネットワークモデルの読み込み等でメモリバウンドなベンチとなっているような気がする。  
+しかし、メモリ帯域が同じ 448GB/s でありピーク性能で優っている **RTX 2080** よりも、**RX 5700 /XT** が速く、他社 GPU との比較ではただメモリ性能で決まる訳でもないようだ。  
+ここでは [ACOバックエンド](/tags/aco) が性能に大きく寄与しているように思える。  
+
