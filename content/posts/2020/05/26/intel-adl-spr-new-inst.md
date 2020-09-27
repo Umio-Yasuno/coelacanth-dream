@@ -14,6 +14,15 @@ noindex: false
 
 {{< /ins >}}
 
+{{< ins datetime="2020-09-26T20:54:19" >}}
+
+メールアーカイブに残ってました。  
+
+ * [[Bug 1879836] Re: [ADL]Add CPUID feature bit for AVX2 VNNI](https://www.mail-archive.com/ubuntu-bugs@lists.ubuntu.com/msg5789589.html)
+ * [[Bug 1879865] Re: [ADL] Enable 5G ISA (FP16) / HFNI](https://www.mail-archive.com/ubuntu-bugs@lists.ubuntu.com/msg5786181.html)
+
+{{< /ins >}}
+
 Intel の次世代プロセッサ、[Alder Lake](/tags/alder_lake)、[Sapphire Rapids](/tags/sapphire_rapids)では新たな拡張命令が2つ追加される。  
 そのことが新機能のバグ報告プラットフォーム、[intel in Launchpad](https://launchpad.net/intel)からわかった。  
 
