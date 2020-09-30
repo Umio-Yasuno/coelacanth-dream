@@ -23,6 +23,13 @@ CPU部は *Golden Coce (Core)* と *Gracemont (Atom)* のハイブリッド構�
  >
  > {{< quote>}} [gmmlib/GmmGen12Platform.cpp at 2072b0d1e8ba2cba2f94bc2c1fda89d6e457a50b · intel/gmmlib](https://github.com/intel/gmmlib/blob/2072b0d1e8ba2cba2f94bc2c1fda89d6e457a50b/Source/GmmLib/Platform/GmmGen12Platform.cpp) {{< /quote >}}
 
+{{< ins datetime="2020-10-01" >}}
+
+また、[Intel-Media-SDK/MediaSDK](https://github.com/Intel-Media-SDK/MediaSDK) でも *Alder Lake-S* は Gen12LP に関連付けられている。  
+{{< link >}} [[ADL-S] Enable ADL-S platform support by aidan2020sh · Pull Request #2381 · Intel-Media-SDK/MediaSDK](https://github.com/Intel-Media-SDK/MediaSDK/pull/2381/files) {{< /link >}}
+
+{{< /ins >}}
+
 
 省電力、モバイル向けとされる *Alder Lake-P* に関してはまだ確定していないが、同様に *Gen12アーキテクチャ* である可能性が高いだろう。  
 
