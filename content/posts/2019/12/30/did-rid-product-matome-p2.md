@@ -31,8 +31,11 @@ summary: " "
       * [Arcturus](#arcturus-gfx908)
    * FAMILY_NV
       * [Navi10](#navi10-gfx1010)
-      * [Navi14](#navi14-gfx1012)
       * [Navi12](#navi12-gfx1011)
+      * [Navi14](#navi14-gfx1012)
+      * [Sienna Cichlid](#sienna_cichlid-gfx1030)
+      * [Navy Flounder](#navy_flounder-gfx1031)
+      * [Dimgrey Cavefish](#dimgrey_cavefish-gfx1032)
  * [参考リンク](#reference_title)
 
 {{< /pindex >}}
@@ -437,6 +440,22 @@ Navi LITE 13///\\\E9:00
 [^2]: <https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/powerplay/navi10_ppt.c?h=amd-staging-drm-next&id=fa34520c953b57a3ace3cfb3bfa3b3f1c8e0d414#n1698>
 [^4]:[AMD Radeon Pro W5700 8 GB BIOS - TechPowerUp](https://www.techpowerup.com/vgabios/216287/216287)
 
+#### Navi12 ( gfx1011 ) {#navi12-gfx1011}
+| Device ID | Revision ID | Product Name | Memo |
+| :--- | :--- | :---: | :---: |
+| 69B0 &darr; | 71 | | |
+| | F1 | | |
+| | F3 | | |
+| 7360 &darr; | 40 | | |
+| | 41 | Pro 5600M[^pro5600m-youtube] | |
+| | C1 | | |
+| | C3 | | |
+| 7362 | | | (Navi12 VF) |
+
+[Page Top](#page_index)
+
+[^pro5600m-youtube]: <https://www.youtube-nocookie.com/embed/unG5uGqefmA>
+
 #### Navi14 ( gfx1012 ) {#navi14-gfx1012}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
@@ -475,23 +494,7 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 
 [^3]:[Apple Pro 5500M 8 GB BIOS - TechPowerUp](https://www.techpowerup.com/vgabios/216534/apple-pro5500m-8192-191010)
 
-#### Navi12 ( gfx1011 ) {#navi12-gfx1011}
-| Device ID | Revision ID | Product Name | Memo |
-| :--- | :--- | :---: | :---: |
-| 69B0 &darr; | 71 | | |
-| | F1 | | |
-| | F3 | | |
-| 7360 &darr; | 40 | | |
-| | 41 | Pro 5600M[^pro5600m-youtube] | |
-| | C1 | | |
-| | C3 | | |
-| 7362 | | | (Navi12 VF) |
-
-[Page Top](#page_index)
-
-[^pro5600m-youtube]: <https://www.youtube-nocookie.com/embed/unG5uGqefmA>
-
-#### Navi21 / Sienna Cichlid ( gfx1030 ) {#navi21-gfx1030}
+#### Sienna Cichlid ( gfx1030 ) {#sienna_cichlid-gfx1030}
 
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
@@ -505,7 +508,7 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 
 <!--  Navi21: gfx1030 [^12]   -->
 
-#### Navi22 / Navy Flounder ( gfx1031? ) {#navi22-gfx1031}
+#### Navy Flounder ( gfx1031 ) {#navy_flounder-gfx1031}
 
 [^12]: [P4 to Git Change 1759681 by asalmanp@asalmanp-ocl-stg on 2019/03/21 1… · ROCm-Developer-Tools/ROCclr@42c005d](https://github.com/ROCm-Developer-Tools/ROCclr/commit/42c005d656a8bd99f87fa4fc86ad086701c59a86)
 
@@ -520,6 +523,8 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 
 
 [^5]:<https://github.com/ROCm-Developer-Tools/aomp-extras/blob/f3d316fe64347e697a9789f0f2499fec50024db1/utils/bin/gputable.txt#L1867>
+
+#### Dimgrey Cavefish ( gfx1032? ) {#dimgrey_cavefish-gfx1032}
 
 {{< ref >}}
 

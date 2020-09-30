@@ -134,13 +134,21 @@ Intel も[Intel-graohics-compiler](https://github.com/intel/intel-graphics-compi
 4-Slice という構成から、フロントエンド部が大きく、複雑なものとなってしまったのかもしれない。  
 Gen11アーキテクチャから 1-Slice とし、内部の SubSlice を増やす方向性にシフトした。  
 
-搭載する *Cannon Lake* のCPUコア数は最大 4-Coreという仕様であったらしい。  
+搭載する *Cannon Lake* のCPUコア数は最大 4CPUという仕様であったらしい。  
 {{< link >}}[mainboard/google/zoombini/variants/meowth: enable all cpu cores (I9bbfe496) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/838502){{< /link >}}
+<del>
 書き方から物理 4コアと読めるが、*Cannon Lake* で唯一出荷された **Core i3-8121U** は 2-Core/4-Thread となっている。[^16]  
-一方で、Intel が開発するリファレンスボード、cannonlake\_rvp は最大 8-Threadとしている。[^17]  
+一方で、Intel が開発するリファレンスボード、cannonlake\_rvp は最大 8-Threadとしている。[^17]</del>  
 
-個人的には、10nmプロセスの歩留まりが非常に悪く、*Ice Lake* 同様にダイの半分近くを占めていたであろうGPUを無効化にしても数が確保できず、  
-仕方なく 4-Core中 2-Coreのみを有効にすることを仕様として何とか **Core i3-8121U** を出荷したのではないかと考えている。  
+<del>個人的には、10nmプロセスの歩留まりが非常に悪く、*Ice Lake* 同様にダイの半分近くを占めていたであろうGPUを無効化にしても数が確保できず、  
+仕方なく 4-Core中 2-Coreのみを有効にすることを仕様として何とか **Core i3-8121U** を出荷したのではないかと考えている。</del>  
+
+{{< ins >}}
+
+Kconfig における MAX_CPUS は SMT、HTT 等による仮想コア、スレッドを含めた値であるため、4コアではなく、2コア 4スレッドを想定していた可能性のが高いと思われます。  
+
+
+{{< /ins >}}
 
 [^16]: [Intel® Core™ i3-8121U Processor (4M Cache, up to 3.20 GHz) Product Specifications](https://ark.intel.com/content/www/us/en/ark/products/136863/intel-core-i3-8121u-processor-4m-cache-up-to-3-20-ghz.html)
 [^17]: [mainboard/intel/cannonlake_rvp: set Max CPUs and Mainboard Family · coreboot/coreboot@5f34b37](https://github.com/coreboot/coreboot/commit/5f34b37d80379eaf49e425719a6dffe58b9652fd#diff-b9d009c546f44ca8d481b1ae5aecf6cf)

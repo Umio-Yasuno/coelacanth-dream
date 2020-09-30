@@ -136,6 +136,9 @@ summary: " "
 | BOCO | Bus Off, Chip Off[^2] | |
 | OPN | ordering Part Number | |
 | ULV | Ultra Low Voltage |
+| GL2a | GL2 Arbiter | == TCA<br>(Navi10 = 4, Navi14 = 2)
+| GL2c | | == TCC<br>(Navi10 = 16, Navi14 = 8)
+| SC | Shader Compiler? | |
 
 [^ulv]: [drm/amd/powerplay: enable Ultra Low Voltage for sienna_cichlid](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/powerplay/sienna_cichlid_ppt.c?h=amd-staging-drm-next&id=e912f967af0182039fb9f2668c78967f0056a769)
 
