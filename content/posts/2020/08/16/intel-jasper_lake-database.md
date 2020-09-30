@@ -22,10 +22,12 @@ noindex: false
 | GPU | *Gen11* |
 | Total EU<br>(Sub-Slice x EU) | 16EU(2x8) /20EU(4x5)<br>24EU(4x6) /32EU(4x8) |
 | &emsp;GPU L3cache | 1280KB (4 Banks) |
+| GNA | GNA Gen2<br>(same TGL-U)[^gna-gen2] |
 | TDP | 6 ~ ?W<br>[^dedede-pl1] |
 
 [^intel-family]: [linux/intel-family.h at master · torvalds/linux](https://github.com/torvalds/linux/blob/master/arch/x86/include/asm/intel-family.h)
 [^dedede-pl1]: <https://review.coreboot.org/c/coreboot/+/41668/6/src/mainboard/google/dedede/variants/baseboard/devicetree.cb>
+[^gna-gen2]: [acrn-kernel/gna_pci.c at 30000faef6e05a0e2430ff2a7f61539f86970d70 · projectacrn/acrn-kernel](https://github.com/projectacrn/acrn-kernel/blob/30000faef6e05a0e2430ff2a7f61539f86970d70/drivers/misc/gna/gna_pci.c#L59)
 
 ## CPU {#jsl-cpu}
 CPUアーキテクチャに [Tremont](/tags/tremont) を採用することは判明しているが、最大コア数、CPUコア間で共有する L2キャッシュ構成等は不明。  

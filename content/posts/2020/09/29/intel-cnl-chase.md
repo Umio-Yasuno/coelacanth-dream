@@ -42,7 +42,7 @@ CPU のキャッシュ構成は *Skylake* 同様に、コア辺り L1D/Iキャ�
 GPU は *Skylake* や *Gemini Lake* 等より世代が進んだ *Gen10アーキテクチャ* となるが、採用は *Cannon Lake* のみとなった。  
 
 各バリアントでの GPU 規模は一部ソースコードに記述されているが、微妙に仕様が異なっている。  
-恐らく、Mesa3D は *Cannon Lake-U/Y (2+2)* で想定されていたバリアントが記述され、media-driver ではそれよりも上位の SKU を想定したものなのだろう。  
+恐らく、Mesa3D は *Cannon Lake-U/Y (2+2)* で想定されていたバリアントが記述され、media-driver ではそれよりも上位の SKU、例えば *Cannon Lake-H(仮)* 等も想定したものなのだろう。  
 
 | Gen10 GPU<br>(Mesa3D) | GT0.5 | GT1 | GT1.5 | GT2 |
 | :-- | :--: | :--: | :--: | :--: |
@@ -63,7 +63,10 @@ GPU は *Skylake* や *Gemini Lake* 等より世代が進んだ *Gen10アーキ�
 
 出典: [media-driver/media_sysinfo_g10.cpp at bdbce9ce524e1aaa2a5c9770899d4762f443e0b4 · intel/media-driver](https://github.com/intel/media-driver/blob/bdbce9ce524e1aaa2a5c9770899d4762f443e0b4/media_driver/linux/gen10/ddi/media_sysinfo_g10.cpp)
 
-*Gen10アーキテクチャ* の詳細もまた明かされていないが、その規模、構成から、*Gen9アーキテクチャ* よりも Slice数、L3キャッシュを増やし、グラフィクス性能の向上を図ったものと思われる。  
+*Cannon Lake GT3/e* の 9Sub-Slice、72EU、eDRAM対応という点は *Skylake GT4/e* と同じだが、*Skylake GT4/e* が 3Slice、L3キャッシュサイズ 2304KB、バンクあたり 192KB だったのに対し、  
+*Cannon Lake GT3/e* では 4Slice、L3キャッシュサイズ 3072KB、バンクあたり 256KB という構成になっている。  
+
+*Gen10アーキテクチャ* の詳細もまた明かされていないが、その構成から、*Gen9アーキテクチャ* よりも Slice数、バンクあたりの L3キャッシュサイズを増やし、グラフィクス性能の向上を図ったものと思われる。  
 
 ディスプレイ部に関しては、AMD GPU では *RDNA /GFX10* 世代から対応した DSC(Display Stream Compression) に *Gen10アーキテクチャ* から対応していたことが窺える記述がある。[^gen10-dsc]  
 
