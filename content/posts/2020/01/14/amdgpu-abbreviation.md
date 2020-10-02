@@ -144,3 +144,7 @@ summary: " "
 
 [^trusted-application]: [drm/amdgpu/psp: add structure for xgmi ta and its shared buffer](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd?h=amd-staging-drm-next&id=f0cfa19579fae3bd06366ebccdba26020bb6214a)
 [^2]: [drm/amdgpu: rename amdgpu_device_is_px to amdgpu_device_supports_boco (v2)](https://cgit.freedesktop.org/~agd5f/linux/commit/?h=tmz&id=31af062acfbd5db8b0b99d0ad418b33d4458e206)
+
+<!--
+RVP (Reference Validation Platform)
+-->

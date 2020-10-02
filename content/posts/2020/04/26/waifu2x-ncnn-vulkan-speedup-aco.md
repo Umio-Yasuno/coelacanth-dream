@@ -1,5 +1,5 @@
 ---
-title: "RADV/ACO 検証: waifu2x-ncnn-vulakan の実行が最大3倍近く高速に"
+title: "RADV/ACO 検証: waifu2x-ncnn-vulkan の実行が最大3倍近く高速に"
 date: 2020-04-26T00:04:50+09:00
 draft: false
 tags: [ "ACO", "GCN", "RADV" ]
