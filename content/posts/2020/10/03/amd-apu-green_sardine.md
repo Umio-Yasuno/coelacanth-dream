@@ -33,7 +33,7 @@ CPUアーキテクチャは *Zen 3* になると噂されている [Cezanne APU]
 [^lcn]: [AMD Renoir の兄弟？ 現れるは Lucienne | Coelacanth's Dream](/posts/2020/06/20/amd-lucianne-apu/)
 [^czn]: [AMD Cezanne APU ベンチマーク結果　―― 8-Core/16-Thread, 3.6GHz、構成は Zen 3 + Vega か | Coelacanth's Dream](/posts/2020/08/31/amd-cezanne-benchmark/)
 
-ただ、*Lucienne* は、[Raven](/tags/raven) に対する *Picasso* のように GFXコア、SDMA、ディスプレイコントローラー、マルチメディアエンジン等の各IPが変わらないと考えられるが、*Cezanne* は GFXコア部(gfx909) 以外は *Renoir* からバージョンアップされる可能性がある。  
+ただ、*Lucienne* は、[Raven](/tags/raven) に対する [Picasso](/tags/picasso) のように GFXコア、SDMA、ディスプレイコントローラー、マルチメディアエンジン等の各IPが変わらないと考えられるが、*Cezanne* は GFXコア部(gfx909) 以外は *Renoir* からバージョンアップされる可能性がまだある。  
 そのため、どちらかと言えば *Lucienne* が *Green Sardine* であるように思うが、これ以上は AMD が投稿するパッチを待つ他ない。  
 
 そして、*Ravenファミリー* はまだまだややこしくなるようだ。  
