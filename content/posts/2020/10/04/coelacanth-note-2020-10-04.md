@@ -20,8 +20,10 @@ toc: false
 {{< /pindex >}}
 
 ## Alder Lake-P RVP ITE {#adlp-rvo}
-Chromium OS のプロジェクトの 1つである EC(Embedded Controller) に Alder Lake-P RVP ITE をサポートが追加された。  
+Chromium OS のプロジェクトの 1つである EC(Embedded Controller) に Alder Lake-P RVP ITE のサポートが追加された。  
 {{< link >}} [adlprvp: add Alderlake RVP support (I9d85e0cb) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/platform/ec/+/2435177) {{< /link >}}
+
+Intel Modular Embedded Controller Card (MECC) バージョンは v1.0 となる。  
 
 Tiger Lake RVP のファイルと軽く見比べたところでは、USB PD をサポートするポートが 2基から 4基に増やされているようだ。  
 また、`#define CONFIG_CHIPSET_TIGERLAKE` という記述があった。  
@@ -41,7 +43,7 @@ Tiger Lake RVP のファイルと軽く見比べたところでは、USB PD を�
 
 Intel のハイブリッドプロセッサでは既に *Lakefield* がいるが、Linux でのサポートはまだ途中段階と言え、Geekbench で *Lakefield* の結果を見ても OS は Windows ばかりである。  
 ユーザーモードの GPUドライバー、Mesa3D にも *Lakefield* をサポートするようなパッチは未だ投稿されていない。  
-Coreboot 等にも *Lakefield* のリファレンスボード関連のファイルが追加されていないあたり、特定のメーカー、特定の OS(Windows) までにしか提供できない段階にあるのかもしれない。  
+Coreboot 等にも *Lakefield* のリファレンスボード関連のファイルが追加されていないあたり、特定のメーカー、特定の OS(Windows) 向けの提供となっているのだろう。  
 
 先日、Lenovo より *Lakefield* を搭載する **ThinkPad X1 Fold** の発売が発表されたが、価格は税別で &yen;363,000 という、インターフェイス部が特殊とはいえ性能比で考えるとぶっ飛んだ価格ではある。[^lenovo-lkf]  
 また、Microsoft の同様に *Lakefield* 搭載する **Surface Neo** も 2021年以降に延期されているのを見ていると、*Lakefield* は実験的なハイブリッドプロセッサであり、*Alder Lake* から本格的な段階に入るのではないかと思える。[^ms-lkf]  
@@ -73,5 +75,4 @@ Coreboot 等にも *Lakefield* のリファレンスボード関連のファイ�
 それと、[intel/metrics-discovery](https://github.com/intel/metrics-discovery) には *Gen12LP(Gen12.1)* よりも規模が大きくなるとされる *Gen12.5* のマクロも追加されていた。  
 {{< link >}} [metrics-discovery/gen_device_info.c at f69d861459c19a9e7bddef5a05df124e182a5af4 · intel/metrics-discovery](https://github.com/intel/metrics-discovery/blob/f69d861459c19a9e7bddef5a05df124e182a5af4/external/mesa/src/intel/dev/gen_device_info.c#L1036) {{< /link >}}
 Slice数が 1 で固定されている `GEN12_GT_FEATURES` を用いていないことに加え、*Gen12LP* よりも高性能をターゲットする以上、Slice数を増やしてくると思われる。  
-
 
