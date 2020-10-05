@@ -29,12 +29,13 @@ Mesa3Dに、RADV(Vulkan) ドライバーの [ACOバックエンド](/tags/aco) �
 
 とは言っても、NGG と各シェーダーステージの関係は、*ACOバックエンド* のドキュメントに非常に分かりやすくまとめられている。  
 {{< link >}} [src/amd/compiler/README.md · master · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/master/src/amd/compiler/README.md#supported-shader-stages) {{< /link >}}
+
 ただ、ドキュメントとこの記事で解説される内容が NGG の全てではないことを留意して頂きたい。  
 
 ### ややこしくて複雑なシェーダーステージ {#complex-shader-stage}
 
 まず、ソフトウェア側で定義されているシェーダーステージの中で、オブジェクトの頂点処理を行なうバーテックスシェーダー(Vertex Shader, VS)、頂点の増減を行なうジオメトリシェーダー(Geometory Shader, GS)、そしてピクセル処理を行なうピクセルシェーダー(Pixel Shader, PS) を GPU で実行する時、VS &rarr; GS &rarr; PS という順番で実行される。  
-PS を実行する時、ハードウェア側では VSステージでのみ書き込めるバッファを PSステージで受け取るのだが、GS が間に入るとこれがスムーズにいかなくなる。  
+そして PS を実行する時、ハードウェア側では VSステージでのみ書き込めるバッファを PSステージで受け取るのだが、GS が間に入るとこれがスムーズにいかなくなる。  
 GS の処理結果は一度 VRAM に出力され、PS が受け取るバッファには書き込まれない。  
 そのため、ハードウェア側の VSステージで GS の処理結果を VRAM から読み込み、それを PS へのバッファに書き込む手間が必要となる。  
 RadeonSI(OpenGL)/RADV(Vulkan) ドライバーではこれを *GS copy シェーダー* と呼んでいる。  
@@ -44,9 +45,12 @@ RadeonSI(OpenGL)/RADV(Vulkan) ドライバーではこれを *GS copy シェー�
 
 ### 手間を解消する NGG {#ngg-gs}
 
-そして、NGG というのはハードウェア側に新設されたシェーダーステージであり、従来のの GS と VS を融合させたものである。  
+そして、NGG というのはハードウェア側に新設されたシェーダーステージであり、従来のの GS と VS を統合させたものである。  
 これによって *GS copy* の手間が必要なくなり、直接 PSステージへのバッファに処理結果を書き込めるようになる。  
-NGG の利点の 1つとして、VRAM へのトラフィック減少、それによる処理の効率化が期待できる。  
+*Vega /GFX9* 世代と NGG を使わない場合の *RDNA /GFX10* 世代でのグラフィクスパイプラインにおいても、一部ハードウェア側のシェーダーステージの統合が行なわれているが、VRAM に処理結果を書き込むステージがあり、まだ *GS copy* が必要とされている。  
+
+NGG の利点の 1つとして、*GS copy* が必要なくなったことによる VRAM へのトラフィック減少、それとジオメトリシェーダーが間に入ってもバッファに書き込めることによる処理の高速化が期待できる。  
+
 また、NGGステージでは テッセレーション評価シェーダー(Direct3Dにおけるドメインシェーダー) も実行される。  
 
 NVIDIA が Turing 世代で新設したプログラムシェーダー、Mesh Shader も近い仕組みとなっており、*ACOバックエンド* を開発する Valve の Timur Kristóf 氏は **XDC2020** での発表の中で、NGGステージで Mesh Shader も実行可能ではないかと述べている。[^xdc2020-aco]  
@@ -80,18 +84,23 @@ LDS は *GCNアーキテクチャ* では CU あたり 64KB(32バンク) とな�
 
 {{< figure src="/image/2020/10/04/rdna-lds.webp" title="Dual Compute Units memories" caption="画像出典: <cite><https://www.amd.com/system/files/documents/rdna-whitepaper.pdf></cite> (Page14)" >}}
 
-*RDNAアーキテクチャ* には LDS の割り当てにおいて 2つのモードがあり、AMD は **CU Mode** 、**WGP Mode** としている。  
+*RDNAアーキテクチャ* には LDS の割り当てにおいて 2つのモードがあり、AMD は **CU Mode** 、**WGP Mode** としている。[^rdna-shader-isa]  
+
+[^rdna-shader-isa]: [RDNA_Shader_ISA.pdf](https://developer.amd.com/wp-content/resources/RDNA_Shader_ISA.pdf) (Page18, 91)
+
 **CU Mode** では、L0キャッシュ、テクスチャユニットを共有する 2基の SIMD32ユニット、ざっくりと言えば WGP の片方の CU 側の LDS 64KB(32バンク) のみが割り当てられる。  
 **WGP Mode** では、WGP 1基(CU 2基、SIMD32 4基) に LDS 128KB(64バンク) が割り当てられ、**CU Mode** より広いローカルメモリを扱うことができる。  
-しかし、上述したように、LDS 64KB(32バンク) 2基がクロスバー接続されているという形であるため、ある SIMD32ユニットから見た時、近い LDS と遠い LDS が存在することになる。  
+しかし、上述したように、LDS 64KB(32バンク) 2基がクロスバー接続されているという形であるため、ある SIMD32ユニットから見た時、近い LDS と遠い LDS が存在することになる。そして、遠い LDS の帯域は近い LDS より劣る。  
 これにより、**WGP Mode** では LDS 全体の帯域が下がり、性能が低下する場合がある。  
 **CU Mode** では近い LDS のみを割り当てるため、扱えるローカルメモリの範囲は狭まるが、常に **WGP Mode** よりも高い帯域でアクセスできる。  
+だが **WGP Mode** にも、LDS を共有する単位{{< comple >}} 少なくとも 4-Wave と記されている {{< /comple >}}において、多くの SIMD32ユニットを扱え、テクスチャメモリへの帯域幅を増やせるという利点がある。  
 
 性能の最適化において、2つのモードのどちらを選択するかが関わってくると思われるが、RadeonSI/RADV ドライバー ではどうしているのかは不明。  
 
 *RDNAアーキテクチャ* はスレッドをまとめた Wave という単位において、ネイティブでは 32スレッド(Wave32) とし、*GCNアーキテクチャ* と同じスレッド数である 64スレッド(Wave64) にも対応する。  
-混同してしまいがちだが、これら Wave は、LDS の割り当てにおける 2つのモードとはまた別であるようだ。  
-
+**CU Mode** 、**WGP Mode** ということから混同してしまいがちだが、これら Wave は、LDS の割り当てにおける 2つのモードとはまた別であるようだ。  
+また、同じスレッド数とは言うものの、*RDNAアーキテクチャ* では Wave64 を 2つの Wave32 に分解して発行されるため、*GCNアーキテクチャ* 同様に実行される訳ではないとされている。  
+{{< link  >}} [RadeonSI ドライバーでは RDNA GPU も Wave64モードで各シェーダーを実行するように | Coelacanth's Dream](/posts/2020/07/02/radeonsi-shader-wave64-with-rdna/) {{< /link >}}
 
 {{< ref >}}
 
