@@ -18,6 +18,7 @@ toc: false
 
  * [Alder Lake-S の構成推測](#adl-s-spec-guess)
  * [有効にされている HTT](#enable-htt)
+ * [Alder Lake のメモリと GPU](#adl-memory-gpu)
 
 {{< /pindex >}}
 
@@ -57,7 +58,30 @@ Intel が以前公開した CPU Core Roadmap でも、*Willow Cove* には "Cach
 
 ## 有効にされている HTT {#enable-htt}
 
-そして、キャッシュ構成以外に注目されるのがスレッド数であり、*Lakefield* では無効化されていた HTT(Hyper Threading Technology) が *Alder Lake-S* では有効化されている。  
+そして、キャッシュ構成以外に注目されるのがスレッド数であり、*Lakefield* では両アーキテクチャコアで無効化されていた HTT(Hyper Threading Technology) が *Alder Lake-S* では有効化されている。  
 *Alder Lake* ではハイブリッドの構成に関して、*Lakefield* よりも拡張されたハードウェアベースのスケジューラーを実装していることが Intel Architecture Day 2020 にて Raja Koduri 氏より語られており、その効果が HTT有効化に繋がっているのかもしれない。  
+
+## Alder Lake のメモリと GPU {#adl-memory-gpu}
+
+今回の情報ではメモリが DDR4 とされているが、*Alder Lake* は DDR4/LPDDR4/LPDDR5/DDR5 に対応するため、特におかしいところはない。[^adl-mc]  
+それに現時点で DDR5メモリを検証に使うにしても、それもまたサンプル品となってしまうのではないかと思う。  
+
+ >       +-------------+--------+---------+
+ >       | Memory Type | Max Ch | Max DPC |
+ >       +-------------+--------+---------+
+ >       | DDR4        |      1 |       2 |
+ >       | LPDDR4(X)   |      4 |       1 |
+ >       | LPDDR5      |      4 |       1 |
+ >       | DDR5        |      2 |       1 |
+ >       +-------------+--------+---------+
+ >
+ >    These numbers are for a single memory controller. Since ADL has two memory controllers, there's twice as many channels in total. DPC stays the same.
+ >
+ >
+ > {{< quote>}} <https://review.coreboot.org/c/coreboot/+/45192/7/src/soc/intel/alderlake/meminit.c#109> {{< /quote >}}
+
+[^adl-mc]: <https://review.coreboot.org/c/coreboot/+/45192/7/src/soc/intel/alderlake/meminit.c#109>
+
+
 
 それと実行結果で GPU が *AlderLake-S Mobile Graphics* となっているのは、*Tiger Lake-U* と同じ *Gen12LPアーキテクチャ* だからではないかと思われる。  
