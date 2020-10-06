@@ -36,7 +36,7 @@ toc: false
 
 [^adl-core-atom-config]: [Coreboot へのパッチから Intel Alder Lake-S/P のコア構成が判明か | Coelacanth's Dream](/posts/2020/08/04/intel-adl-core-config/)
 
-10基の L2キャッシュに関してだが、現 *Atom系アーキテクチャ* の [Tremont](/tags/tremont) では、4-Core とそれらで共有する L2キャッシュでクラスタ(またはタイル) を構成している。  
+10基の L2キャッシュに関してだが、現 *Atom系アーキテクチャ* の [Tremont](/tags/tremont) では、4-Core とそれらで共有する L2キャッシュでタイル(またはクラスタ) を構成している。  
 恐らく、この構成が次 *Atom系アーキテクチャ* である *Gracemont* でも引き継がれており、*Golden Cove 8-Core (8x L2) + Gracemont 2-Tile(8-Core, 2x L2)* 、合わせて L2キャッシュ 10基として認識されたものと思われる。  
 
 *Tremont* では共有する L2キャッシュ容量を 1MB から 4.5MB までの範囲で選択可能となっており、現世代のハイブリッドプロセッサ [Lakefield](/tags/lakefield) では 1.5MB としている。  
@@ -63,8 +63,7 @@ Intel が以前公開した CPU Core Roadmap でも、*Willow Cove* には "Cach
 
 ## Alder Lake のメモリと GPU {#adl-memory-gpu}
 
-今回の情報ではメモリが DDR4 とされているが、*Alder Lake* は DDR4/LPDDR4/LPDDR5/DDR5 に対応するため、特におかしいところはない。[^adl-mc]  
-それに現時点で DDR5メモリを検証に使うにしても、それもまたサンプル品となってしまうのではないかと思う。  
+今回の情報ではメモリが DDR4 とされているが、*Alder Lake* は DDR4/LPDDR4/LPDDR5/DDR5 に対応するため、{{< comple >}} DRR4 とあること以外には {{< /comple >}}特におかしいところはない。[^adl-mc]  
 
  >       +-------------+--------+---------+
  >       | Memory Type | Max Ch | Max DPC |
