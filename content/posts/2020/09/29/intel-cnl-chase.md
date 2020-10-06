@@ -1,6 +1,6 @@
 ---
 title: "Cannon Lake を追う"
-# date: 2020-09-29T18:02:08+09:00
+date: 2020-09-29T18:02:08+09:00
 draft: false
 # tags: [ "", ]
 # keywords: [ "", ]
