@@ -1,5 +1,5 @@
 ---
-title: "Intel Alder Lake-S のベンチマーク結果から読むキャッシュ構成"
+title: "Intel Alder Lake-S のベンチマーク結果から読むキャッシュ構成　【追記 2020-10-07】16-Core/24-Thread?"
 date: 2020-10-06T19:36:35+09:00
 draft: false
 tags: [ "Alder_Lake", ]
@@ -27,6 +27,12 @@ toc: false
 発見された *Alder Lake-S* の構成は、16-Core/32-Thread、L2キャッシュ 10x1.25MB、L3キャッシュ 30MB となっている。  
 16-Core に対して L2キャッシュ 10基という一見奇妙なものだが、これまでの情報から詳細を推測することが可能だ。  
 
+{{< ins datetime="2020-10-07" >}}
+
+SiSoftware の実行結果において、CPU系ベンチマークの行の Capacity 部が 24T(Thread) となっており、どちらかのコアは HTT が無効化されているものと思われます。  
+
+{{< /ins >}}
+
 まず、*Alder Lake* は *Core系アーキテクチャ: Golden Cove* と *Atom系アーキテクチャ: Gracemont* を組み合わせたハイブリッド構成であることが、Intel Architecture Day 2020 にて明かされている。[^intel-arch-day-2020]  
 
 [^intel-arch-day-2020]: [Intel Architecture Day 2020 個人的まとめ　―― XeHP は 1-Tile 512EU、XeLPアーキテクチャ詳細 | Coelacanth's Dream](/posts/2020/08/14/intel-architecture-day-2020/#adl)
@@ -52,7 +58,7 @@ Intel が以前公開した CPU Core Roadmap でも、*Willow Cove* には "Cach
 
 | Alder Lake-S | Golden Cove<br>(Core) | Gracemont<br>(Atom) |
 | :-- | :--: | :--: |
-| Core/Thread | 8/16 | 8/16 |
+| Core/Thread | 8/16 | 8/8? |
 | L2cache | 8x 1.25MB?<br>(per Core) | 2x 1.25MB???<br>(per Tile) |
 | LLC | 8x 3MB?<br>(per Core) | 2x 3MB?<br>(per Tile) |
 
