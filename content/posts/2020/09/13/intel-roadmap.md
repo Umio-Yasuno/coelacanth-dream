@@ -13,7 +13,8 @@ noindex: false
 | :-- | :--: | :--: | :--: | :--: |
 | 2020 Q3 | *Tiger Lake (TGL-U)*<br>10nm SF / Willow Cove / Gen12<br>DDR4/LPDDR4/LPDDR5<br>*Ice Lake-SP (ICX)*<br>Whitley<br>10nm / Sunny Cove<br>DDR4<br> |
 | 2020 Q4? |  | *Jasper Lake (JSL) / Elkhart Lake? (EHL)*<br>10nm / Tremont / Gen11<br>DDR4/LPDDR4 |
-| 2020 sometime? | *Rocket Lake?? (RKL-S)*<br>Gen12 | | | *DG1/SG1*<br>10nm {{< xe class="lp" >}} Gen12<br>GDDR6? |
+| 2020 sometime? |  | | | *DG1/SG1*<br>10nm {{< xe class="lp" >}} Gen12<br>GDDR6? |
+| 2021 Q1 | *Rocket Lake-S (RKL-S)*<br>Gen12 |
 | 2021 Q2 ~ Q3 | *Sapphire Rapids (SPR-SP)*<br>Eagle Stream (Server), Fishhawk Fail (HEDT/WKS?)<br>10nm eSF / Golden Cove?<br>DDR4/DDR5/HBM2E? 8ch<br>~ 4-Die?<br>*Ice Lake-D(ICX-D)*<br>Idaville | | *Alder Lake? (ADL-S/ADL-P)*<br>10nm eSF? / Golde Cove + Gracemont / Gen12<br>DDR4/LPDDR4/LPDDR5/DDR5  |
 | 2021 sometime? | *Tiger Lake-H?? (TGL-H)*<br>Tatlow<br>10nm SF / Willow Cove / Gen12 | *Tanner Ridge (TNR)??* | | {{< xe class="hpg" >}}<br>GDDR6 |
 | 2022 sometime? | | *Grand Ridge (GNR)?*<br>Loganville? | |
