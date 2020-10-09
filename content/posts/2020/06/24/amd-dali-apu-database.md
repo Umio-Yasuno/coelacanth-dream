@@ -91,9 +91,9 @@ Linux Kernel へのパッチに初めて *Dali* という名前が出てきた�
 | Ryzen 3 3250U [^t3250u] | 2/4 | 2.6GHz/3.5GHz | 3 | 1.2GHz | 15(12-25)W |
 | AMD 3020e [^t3020e] | 2/2 | 1.2GHz/2.6GHz | 3 | 1.0GHz | 6W |
 | Athlon Silver 3050e [^t3050e] | 2/4 | (1.4GHz?)/2.8GHz | 3 | 1.0GHz | 6W |
-| Athlon Silver 3050C | |
-| Athlon Gold 3150C | |
-| Ryzen 3 3250C | |
+| Athlon Silver 3050C [^t3050c] | 2/2 | 2.3GHz/3.2GHz | 3 | 1.1GHz | 15(12-25)W |
+| Athlon Gold 3150C [^t3150c] | 2/4 | 2.4GHz/3.3GHz | 3 | 1.1GHz | 15(12-25)W |
+| Ryzen 3 3250C [^t3250c] | 2/4 | 2.6GHz/3.5GHz | 3 | 1.2GHz | 15(12-25)W |
 | Ryzen Embedded R1102G [^t1102g] | 2/2 | 1.2GHz/2.6GHz | 3 | 1.0GHz | 6W |
 | Ryzen Embedded R1305G [^t1305g] | 2/4 | 1.5GHz/2.8GHz | 3 | 1.0GHz | 8-10W |
 
@@ -104,6 +104,9 @@ Linux Kernel へのパッチに初めて *Dali* という名前が出てきた�
 [^t3020e]: [AMD 3020e | AMD](https://www.amd.com/en/products/apu/amd-3020e#product-specs)
 [^t1102g]: [AMD Ryzen™ Embedded R1102G with Radeon™ Vega 3 Graphics | AMD](https://www.amd.com/en/product/9226)
 [^t1305g]: [AMD Ryzen™ Embedded R1305G with Radeon™ Vega 3 Graphics | AMD](https://www.amd.com/en/product/9221)
+[^t3250c]: [AMD Ryzen™ 3 3250C | AMD](https://www.amd.com/en/products/apu/amd-ryzen-3-3250c#product-specs)
+[^t3150c]: [AMD Athlon Gold 3150C | AMD](https://www.amd.com/en/products/apu/amd-athlon-gold-3150c#product-specs)
+[^t3050c]: [AMD Athlon Silver 3050C | AMD](https://www.amd.com/en/products/apu/amd-athlon-silver-3050c#product-specs)
 
 ## x86\_Model について ――Picasso と呼ばれる Dali {#dali-x86model}
 
