@@ -130,13 +130,13 @@ summary: " "
 | HDCP | Highbandwidth Digital Content Protection | |
 | TA | Texture Address /Trusted Application?[^trusted-application] | |
 | TC | Texture Cache? | |
-| TCA | <!-- Texture Cache Arbiter ??? --> | |
-| TCC | <!-- Texture Cache Channel ??? --> | == L2cache |
-| TCP | <!-- Texture Cache Private ??? --> | GCN L1$, RDNA L0$ |
+| TCA | Texture Cache Arbiter ??? | |
+| TCC | Texture Cache Channel ??? | == L2cache |
+| TCP | Texture Cache Private ??? | GCN L1$, RDNA L0$ |
 | BACO | Bus Active, Chip Off[^2] | |
 | BOCO | Bus Off, Chip Off[^2] | |
 | OPN | ordering Part Number | |
-| ULV | Ultra Low Voltage |
+| ULV | Ultra Low Voltage[^ulv] |
 | GL2a | GL2 Arbiter[^gl2a] | == TCA[^gl2a-eq-tca]<br>(Navi10 = 4, Navi14 = 2)
 | GL2c | <!-- GL2 Cache ??? --> | == TCC[^gl2a-eq-tca]<br>(Navi10 = 16, Navi14 = 8)
 | SC | Shader Compiler? | |

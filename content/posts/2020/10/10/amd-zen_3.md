@@ -49,5 +49,5 @@ Ryzen 5000シリーズの発売までの間か、*Milan* の発表時あたり�
 
 {{< figure src="/image/2020/10/10/zen_2-arch.webp" title="Zen 2 マイクロアーキテクチャ" caption="画像出典: [AMD Ryzen™ Processor Software Optimization - GPUOpen_Let’sBuild2020_AMD Ryzen™ Processor Software Optimization.pdf](http://gpuopen.com/wp-content/uploads/slides/GPUOpen_Let%E2%80%99sBuild2020_AMD%20Ryzen%E2%84%A2%20Processor%20Software%20Optimization.pdf)" >}}
 
-ゆるく推測するならば、内訳に Front End があるため、デコード幅または Opキャッシュからキューに送り込む命令数を増やした可能性が考えられる。  
+ゆるく推測するならば、内訳に Front End があるため、デコード幅や Opキャッシュからキューに送り込む命令数、キューから各スケジューラー (Int/FP) にディスパッチする命令数を増やした可能性が考えられる。  
 Execute Engine に関しては、実行ユニットやリオーダーバッファを増やしたと考えられるが、それらをどれだけ増やしたかはやはり AMD による発表を待つしかない。  
