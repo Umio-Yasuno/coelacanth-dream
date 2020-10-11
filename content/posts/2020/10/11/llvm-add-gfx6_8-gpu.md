@@ -13,6 +13,7 @@ toc: false
 AMD GPU のコンパイラバックエンドとして用いられる LLVM に、現行よりも二世代から四世代前の GPUID を一部整理するためのパッチが投稿された。製品が出た年で言えば、4〜7年前の AMD GPU が対象となる。(R7 250 は1スロットLPカードとして需要があるのか未だに出てきたりするが。)  
 
 これまではある GPU の GPUID を、細かな違いを無視して他の GPUID とまとめて認識、コンパイラバックエンドとして最適化処理を行なっていたが、無視することをやめ、細かな違いを区別するため GPUID を追加、GPU の割り当てを行なったのが今回のパッチとなる。  
+追加された GPUID は、*gfx602, gfx705, gfx805* 。  
 {{< link >}} [[AMDGPU] Add gfx602, gfx705, gfx805 targets · llvm/llvm-project@666ef0d](https://github.com/llvm/llvm-project/commit/666ef0db208bb3880115bdc133e72e954ed55300) {{< /link >}}
 {{< link >}} [Add new targets for a few cases in old hardware by trenouf · Pull Request #994 · GPUOpen-Drivers/llpc](https://github.com/GPUOpen-Drivers/llpc/pull/994) {{< /link >}}
 
