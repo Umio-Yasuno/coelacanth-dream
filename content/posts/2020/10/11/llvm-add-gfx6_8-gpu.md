@@ -1,5 +1,5 @@
 ---
-title: "LLVM に旧世代の GPUID を整理するパッチが投稿される"
+title: "LLVM に旧世代の AMD GPU に向けた GPUID が追加される"
 date: 2020-10-11T17:34:21+09:00
 draft: false
 # tags: [ "", ]

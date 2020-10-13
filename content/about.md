@@ -42,7 +42,7 @@ noindex: true
 サイトへの意見、要望等がありましたらこちらからお願いします。
 <address>
 &emsp;Github: [Issues · Umio-Yasuno/umio-yasuno.github.io](https://github.com/Umio-Yasuno/umio-yasuno.github.io/issues)  
-&emsp;&emsp;Mail: <a href="mailto:coelacanth_dream@pm.me" class="mail"></a>
+&emsp;&emsp;Mail: <a href="mailto:coelacanth_dream@pm.me" class="mail">coelacanth_dream@pm.me</a>
 </address><br>
 
 <!--
