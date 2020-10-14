@@ -11,6 +11,7 @@ toc: false
 ---
 
 Intel GPU のオープンソースドライバーに、*Tiger Lake* GPU における L1キャッシュに対応するマージリクエストが投稿されている。  
+その中で、L1キャッシュ対応による性能への効果について触れられていた。  
 
  * [WIP: intel: Enable L1/HDC caches on Tigerlake (!7104) · Merge Requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/7104)
    * [isl: Enable Tigerlake HDC:L1 caches via MOCS in various cases.](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/7104/diffs?commit_id=758bc2daeb21e2972f985d199d2b162b6cacb8e0)
@@ -36,6 +37,7 @@ MOCS は Memory Object Control State の略。GPU部の L3キャッシュや LLC
 今回のマージリクエストでは、テクスチャやイメージの格納、データの移動に用いることを想定した L1 + L3 と、  
 フレームバッファや定数を想定した L1 + L3 + LLC の MOCS が追加されている。  
 ここに L2 が無いのは、Intel GPU では L3キャッシュバンクそれぞれの内部を用途別に割り当てる形式を採っており、その中でテクスチャサンプラー等がアクセスするリードオンリーキャッシュ部を L2キャッシュとしているためである。  
+L3キャッシュの一部が実質 L2キャッシュと扱われ、メモリ階層としてそれ以上は CPU と共有する LLC、次に eDRAM や DRAM となる。  
 
 コメントによると、Windows の Vulkan/OpenGL ドライバーでも近い対応 (全く同じではない) を行なっているようだ。  
 
@@ -46,6 +48,7 @@ GFXBench5 では Vulkan、OpenGL 関係無く小さい性能向上に留まり�
 
 <br>
 L1データキャッシュへの対応で最大で 12% 近く性能が向上するというのは、アーキテクチャの改良においてかなり効果的であるように思える。  
+ますますキャッシュサイズ、帯域が気になる所だ。  
 中には逆に性能低下しているゲームタイトルもあるが、L1データキャッシュは *{{< xe class="lp" >}}/Gen12.1 アーキテクチャ* で増設されたメモリ階層であり、今後の最適化での解消が期待される。  
 
 また、L1データキャッシュはコンピュート処理にも効果的と思われるが、[compute-runtime](https://github.com/intel/compute-runtime) では現在無効化されているようだ。[^disable-l1]  

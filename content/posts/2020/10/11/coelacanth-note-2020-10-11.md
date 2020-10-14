@@ -25,3 +25,18 @@ toc: false
 だが、*RDNA 2 /GFX10.3* GPU のメモリに関してははっきりしない所があり[^sienna_cichlid-mem]、また現時点ではエミュレーションモードで dGPU をテストする場合、メモリタイプに GDDR6 をセットしているため、これだけで *Navy Flounder* は GDDR6 をサポートとは言い切れない。  
 
 [^sienna_cichlid-mem]: [Navi21 /Sienna Cichlid のメモリは GDDR6 か HBM2 か、新たに出てきたパッチを読む | Coelacanth's Dream](/posts/2020/07/27/what-sienna_cichlid-hbm2/)
+
+## Radeon Pro 5600M
+
+LLVM のドキュメント内にて gfx1011 を採用している製品に **Radeon Pro 5600M** が記載されていたのだが、それを gfx1010 に移すパッチが投稿され、組み込まれている。  
+
+[[AMDGPU] Correct processor names for gfx1010 and gfx1011 · llvm/llvm-project@fe145b6](https://github.com/llvm/llvm-project/commit/fe145b66ecfd98769feef496d47e49781efd6a2e)
+
+まず Mesa3D から、*Navi12* は *gfx1011* とされている。  
+<https://gitlab.freedesktop.org/mesa/mesa/-/blob/283686ad6762182037b708f1b5187129aff0a5dd/src/amd/llvm/ac_llvm_util.c#L173>  
+
+そして、Geekbench の結果から **Radeon Pro 5600M** は *gfx1011* と認識されている。  
+[Apple Inc. MacBookPro16,4 - Geekbench Browser](https://browser.geekbench.com/v5/compute/1599856)  
+
+パッチの意味する所は不明。  
+
