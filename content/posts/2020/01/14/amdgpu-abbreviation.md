@@ -139,7 +139,7 @@ summary: " "
 | ULV | Ultra Low Voltage[^ulv] |
 | GL2a | GL2 Arbiter[^gl2a] | == TCA[^gl2a-eq-tca]<br>(Navi10 = 4, Navi14 = 2)
 | GL2c | <!-- GL2 Cache ??? --> | == TCC[^gl2a-eq-tca]<br>(Navi10 = 16, Navi14 = 8)
-| SC | Shader Compiler? | |
+| SC | Shader Compiler? / Scalar? | |
 | GPA | Guest Pysical Address[^gpa] | |
 
 [^ulv]: [drm/amd/powerplay: enable Ultra Low Voltage for sienna_cichlid](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/powerplay/sienna_cichlid_ppt.c?h=amd-staging-drm-next&id=e912f967af0182039fb9f2668c78967f0056a769)
