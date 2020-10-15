@@ -43,7 +43,7 @@ ESRAM の無効化が可能かどうかについては、HotChips 25 (2013) の�
 [先日](/posts/2020/10/11/llvm-add-gfx6_8-gpu/) LLVM に追加された GPUID *gfx705* はやはり *Cato APU* に向けたものだったのかもしれない。  
 
 次に何故 APU の GPU部に dGPU に付けた製品名を使ったかについてを考えると、GIGABYTE を出している **R7 350** は 28nmプロセス、970MHz(標準: 925MHz)、DDR3-1600 128-bit というスペックであり、  
-対し **Xbox One SoC** は 28nmプロセス(TSMC 28nm HP)、853MHz、DDR3-1066 256-bit となる。  
+対し **Xbox One SoC** は 28nmプロセス(TSMC 28nm HP)、853MHz、DDR3-2133 256-bit となる。  
 **R7 350** の CU数、ROP数が記載されていないが、TechPowerUp GPU Database にある GDDR5版には 8CU(512SP)、16ROP とある。[^tpu-r7-350]  
 そして **Xbox One SoC** は、ダイ自体には 14CU(896SP)、16ROP を持つ。  
 
