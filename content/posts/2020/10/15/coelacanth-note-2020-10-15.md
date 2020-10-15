@@ -1,8 +1,8 @@
 ---
-title: "【シーラカンスノート】 【2020/10/11】"
-date: 2020-10-11T04:38:04+09:00
-draft: true
-tags: [ "Green_Sardine", ]
+title: "【シーラカンスノート】 Green Sardine DCN2.1、gfx1011、RADV/ACO NGG は一旦無効化 【2020/10/15】"
+date: 2020-10-15T10:17:44+09:00
+draft: false
+tags: [ "Green_Sardine", "ACO" ]
 # keywords: [ "", ]
 categories: [ "Note", ]
 noindex: false

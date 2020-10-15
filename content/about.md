@@ -34,10 +34,6 @@ noindex: true
 
 記事に書く自分の考えはあくまでも一個人のものです。  
 
-## 支援、サポート {#support}
-自分の生存率が高まります。  
-{{< link >}} [Liberapay を使って Umio-Yasuno に寄付する](https://liberapay.com/Umio-Yasuno/donate) {{< /link >}}
-
 ## 連絡先 {#contact}
 サイトへの意見、要望等がありましたらこちらからお願いします。
 <address>
