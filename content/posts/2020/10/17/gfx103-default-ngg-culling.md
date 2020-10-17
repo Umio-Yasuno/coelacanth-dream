@@ -34,14 +34,14 @@ NGGカリングは、{{< comple >}} 結局その世代で有効化されるこ�
  >       // Represents configuration of static registers relevant to hardware primitive shader (NGG).
  > {{< quote >}} [llpc/Gfx9Chip.h at 93e40124f5067c8e932398204077843fb8445594 · GPUOpen-Drivers/llpc](https://github.com/GPUOpen-Drivers/llpc/blob/93e40124f5067c8e932398204077843fb8445594/lgc/patch/Gfx9Chip.h#L316) {{< /quote >}}
 
-NGGカリング/プリミティブシェーダーは、レンダリングパイプラインにおいて、後に描画されずに破棄される対象を、計算する前に破棄する早期カリング機能の 1つ。従来のレンダリングパイプラインでは、頂点処理を行なった後に破棄するため、演算リソースが無駄になっていた  
+NGGカリング/プリミティブシェーダーは、レンダリングパイプラインにおいて、後に描画されずに破棄される対象を、計算する前に破棄する早期カリング機能の 1つ。従来のレンダリングパイプラインでは、頂点処理を行なった後に破棄するため、演算リソースが無駄となりやすい。  
 
 今回のパッチでは *「for better performance」* とあるだけで具体的な性能向上の度合いには触れられていないが、  
 *Vega /GFX9* の資料には、従来のパイプラインと比較して、カリング処理の速度をサイクルあたり 4倍以上に引き上げられたとある。[^vega-whitepaper]  
 
 [^vega-whitepaper]: <https://en.wikichip.org/w/images/a/a1/vega-whitepaper.pdf> (Page7)
 
-ゲームにおける効果等はまだ不明だが、*Vega /GFX9* から約 3年越しで *RDNA /GFX10* 、*RDNA 2 /GFX10.3* 世代でついにデフォルトで有効化されるというのは感慨深いものがある。  
+最終的な性能への影響、ゲームにおける効果等はまだ不明だが、*Vega /GFX9* から約 3年越しで *RDNA /GFX10* 、*RDNA 2 /GFX10.3* 世代でついにデフォルトで有効化されるというのは感慨深いものがある。  
 
 {{< ref >}}
 
