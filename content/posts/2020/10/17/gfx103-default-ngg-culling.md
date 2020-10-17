@@ -15,7 +15,7 @@ AMD GPU のオープンソースドライバー **RadeonSI (OpenGL)** に、*RDN
 他にも性能最適化のため、LDS のバンクコンフリクト (同一バンクにアクセスが集中してしまうこと) を解消するパッチも組み込まれている。  
 
 また、*Navi1x* ベースの **Radeon Pro** カードでもデフォルトで NGGカリングが有効化されるようになった。[^navi1x-pro-nggc]  
-その理由としては恐らく、非同期コンピュートでのカリング処理が実装された時もそうだったが[^pd-cs]、ゲーム等ではまだ効果が小さく、**Radeon Pro** がターゲットとするワークステーション用途におけるソフトウェアでは効果が大きいからと思われる。  
+Proカードのみの理由は恐らく、非同期コンピュートでのカリング処理が実装された時もそうだったが[^pd-cs]、ゲーム等ではまだ効果が小さく、**Radeon Pro** がターゲットとするワークステーション用途におけるソフトウェアでは効果が大きいからと思われる。  
 
 [^navi1x-pro-nggc]: [radeonsi: enable NGG culling by default on Navi1x PRO cards (57d31786) · Commits · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/commit/57d317865e7bee02a17efcde8beeb6a220f900f1)
 [^pd-cs]: [[Mesa-dev] [PATCH 00/26] RadeonSI: Primitive culling with async compute](https://lists.freedesktop.org/archives/mesa-dev/2019-February/215085.html) <br> [RadeonSI Picks Up Primitive Culling With Async Compute For Performance Wins - Phoronix](https://www.phoronix.com/scan.php?page=news_item&px=RadeonSI-Prim-Culling-Async-Com)
