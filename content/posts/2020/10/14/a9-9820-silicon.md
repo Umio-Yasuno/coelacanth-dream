@@ -46,7 +46,7 @@ ESRAM の無効化が可能かどうかについては、HotChips 25 (2013) の�
 次に何故 APU の GPU部に dGPU に付けた製品名を使ったかについてを考えると、GIGABYTE を出している **R7 350** は 28nmプロセス、970MHz(標準: 925MHz)、DDR3-1600 128-bit というスペックであり、  
 対し **Xbox One SoC** は 28nmプロセス(TSMC 28nm HP)、853MHz、DDR3-2133 256-bit となる。  
 **R7 350** の CU数、ROP数が記載されていないが、TechPowerUp GPU Database にある GDDR5版には 8CU(512SP)、16ROP とある。[^tpu-r7-350]  
-そして **Xbox One SoC** は、ダイ自体には 14CU(896SP)、16ROP を持つ。  
+そして **Xbox One SoC** は、ダイ自体は 14CU(896SP)、16ROP を持つ。  
 
 [^gigabyte-r7-350]: [GV-R735OC-2GI (rev. 1.0) スペック | グラフィックスカード - GIGABYTE Japan](https://www.gigabyte.com/jp/Graphics-Card/GV-R735OC-2GI-rev-10/sp#sp)
 [^tpu-r7-350]: [AMD Radeon R7 350 Specs | TechPowerUp GPU Database](https://www.techpowerup.com/gpu-specs/radeon-r7-350.c3135)

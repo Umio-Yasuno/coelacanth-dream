@@ -141,11 +141,13 @@ summary: " "
 | GL2c | <!-- GL2 Cache ??? --> | == TCC[^gl2a-eq-tca]<br>(Navi10 = 16, Navi14 = 8)
 | SC | Shader Compiler? / Scalar? | |
 | GPA | Guest Pysical Address[^gpa] | |
+| EDC | Error Correction and Detection[^edc] | |
 
 [^ulv]: [drm/amd/powerplay: enable Ultra Low Voltage for sienna_cichlid](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/powerplay/sienna_cichlid_ppt.c?h=amd-staging-drm-next&id=e912f967af0182039fb9f2668c78967f0056a769)
 [^gl2a]: [pal/gfx9PerfCtrInfo.cpp at c9937b277c491a55c689eec7cdd48fb238b8004c · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/c9937b277c491a55c689eec7cdd48fb238b8004c/src/core/hw/gfxip/gfx9/gfx9PerfCtrInfo.cpp#L1488)
 [^gl2a-eq-tca]: [pal/devDriverUtil.cpp at a3a42838c576cc219e61500bc469a4a05ce0db68 · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/a3a42838c576cc219e61500bc469a4a05ce0db68/src/core/devDriverUtil.cpp#L94)
 [^gpa]: [drm/amdgpu: use gpu virtual address for interrupt packet write space for vangogh](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd?h=amd-staging-drm-next&id=bb627a32a69ed19c8ac14e386b674266061b8bb3)
+[^edc]: [drm/amdgpu: add EDC support for CZ (v3)](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd?h=amd-staging-drm-next&id=ccba7691a580a0967f60a512473ce699b9edac0d)
 
 [^trusted-application]: [drm/amdgpu/psp: add structure for xgmi ta and its shared buffer](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd?h=amd-staging-drm-next&id=f0cfa19579fae3bd06366ebccdba26020bb6214a)
 [^2]: [drm/amdgpu: rename amdgpu_device_is_px to amdgpu_device_supports_boco (v2)](https://cgit.freedesktop.org/~agd5f/linux/commit/?h=tmz&id=31af062acfbd5db8b0b99d0ad418b33d4458e206)
