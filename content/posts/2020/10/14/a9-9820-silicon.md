@@ -48,11 +48,15 @@ ESRAM の無効化が可能かどうかについては、HotChips 25 (2013) の�
 **R7 350** の CU数、ROP数が記載されていないが、TechPowerUp GPU Database にある GDDR5版には 8CU(512SP)、16ROP とある。[^tpu-r7-350]  
 そして **Xbox One SoC** は、ダイ自体は 14CU(896SP)、16ROP を持つ。  
 
+**A9-9820** の最大GPUクロックだけは判明しており、CHUWI の AeroBox 製品ページによると最大 985MHz で動作する。[^chuwi-aerobox]  
+
 [^gigabyte-r7-350]: [GV-R735OC-2GI (rev. 1.0) スペック | グラフィックスカード - GIGABYTE Japan](https://www.gigabyte.com/jp/Graphics-Card/GV-R735OC-2GI-rev-10/sp#sp)
 [^tpu-r7-350]: [AMD Radeon R7 350 Specs | TechPowerUp GPU Database](https://www.techpowerup.com/gpu-specs/radeon-r7-350.c3135)
 
-**A9-9820** の仕様詳細が分かるまではっきりとはしないが、有効 CU数等の調整で **R7 350** 同等の性能に設定することは可能だろう。  
+**A9-9820** の仕様詳細が分かるまではっきりとはしないが、GPUクロックが **R7 350** の 970MHz に近いため、後は有効 CU数を 8CU とする等の調整を行なえば **R7 350** 同等の性能に設定することは可能だろう。  
 これが **R7 350** の名を使った理由と考える。自分には他のうまい理由が思いつかない。  
+
+[^chuwi-aerobox]: [Chuwi AeroBox](https://www.chuwi.com/jp/product/items/Chuwi-AeroBox.html)
 
 外部チップセットについては、**Xbox One** もシステムとしては HDMI入力、SATA、USB 等を出すサウスブリッジを搭載していたが、それも一緒に転用しているかどうかはやっぱり不明。  
 既に **Xbox One** で検証が行なわれているのだから、使い回すのが妥当なように思う。  

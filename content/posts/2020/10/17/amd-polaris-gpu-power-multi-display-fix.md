@@ -24,7 +24,7 @@ Linux Kernel (amd-gfx) に、*Polaris1x* GPU の電力管理を改良、修正�
 {{< link >}} [[PATCH 01/40] drm/amd/pm: correct the checks for polaris kickers](https://lists.freedesktop.org/archives/amd-gfx/2020-October/054853.html) {{< /link >}}
 
 そして、今回のパッチで知ったのだが *Polaris31* も存在するという。ただ、ベースに使われているのは **RX 560X** のみとなる。[^rx-560x]  
-**RX 560** と **RX 560X** の違いは正直よく分からず、AMD 公式サイトを見てもベース/ブーストクロックは同じであり、TDP、製造プロセスは記載されていない。[^560-560x]  
+**RX 560** と **RX 560X** の違いは正直よく分からず、AMD 公式サイトを見てもベース/ブーストクロックは同じであり、違いとなり得そうな TDP、製造プロセスは記載されていない。[^560-560x]  
 一応、*Polaris30/31* の SMC(System Management Controller?) ファームウェアはそれ以外と分けられている。  
 さらに、*Polaris30* をベースとするのは **RX 590** だけではなく、**Radeon RX P30PH** も該当するらしいのだが、この **RX P30PH** についての情報が他に無い。[^rx-p30ph]  
 
