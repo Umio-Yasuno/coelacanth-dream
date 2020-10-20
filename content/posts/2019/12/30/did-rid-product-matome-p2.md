@@ -76,6 +76,7 @@ summary: " "
 | | D7 | PRO 2200GE[^rv-pro-2200ge] | (35W AM4 Vega 8) |
 | | D8 | | (35W AM4 Vega 3) |
 | | D9 | PRO 2300U[^rv-pro-2300u] | (15W FP5 Vega 6) |
+||
 | | ? | V1404I | (15W FP5 Vega 8) |
 
 [Page Top](#page_index)
@@ -170,6 +171,7 @@ summary: " "
 | | DF[^9] | | |
 | | E3[^9] | | (6W[^8] Vega 3) |
 | | E4[^9] | R1102G[^11] | (6W[^8] Vega 3) |
+||
 | | ? | 3020e | |
 | | ? | Silver 3050e | |
 | | ? | 3050GE | (35W AM4 Vega 3) |
@@ -233,10 +235,10 @@ DG02SRTBP4MFA
 | | CC | | (B8 35W AM4) |
 | | CD | | (B6 35W AM4) |
 | | CE | 4600U?[^rn-4600u] | (B4 35W AM4) |
-| | D1 | PRO 4750U | (B12B 15W FP6) |
+| | D1 | PRO 4750U[^rn-pro-4750u] | (B12B 15W FP6) |
 | | D2 | | (B10B 15W FP6) |
 | | D3 | | (B8B 15W FP6) |
-| | D4 | | (B6B 15W FP6) |
+| | D4 | PRO 4450U[^rn-pro-4450u] | (B6B 15W FP6) |
 | | D5 | | (B12B 45W FP6) |
 | | D6 | | (B10B 45W FP6) |
 | | D7 | | (B8B 45W AM4) |
@@ -251,6 +253,7 @@ DG02SRTBP4MFA
 | | E2 | | Acton |
 | | E3 | | Acton |
 | | F0 | 4900H[^rn-4900h] | |
+||
 | | ? | 4700G |
 | | ? | 4600G |
 | | ? | 4300G |
@@ -261,7 +264,6 @@ DG02SRTBP4MFA
 | | ? | PRO 4650GE |
 | | ? | PRO 4350GE |
 | | ? | PRO 4650U |
-| | ? | PRO 4450U |
 
 [^rn-4800u]: [New Ryzen 4800U Laptop with Radeon RX 5500M kernel freezes / Kernel & Hardware / Arch Linux Forums](https://bbs.archlinux.org/viewtopic.php?id=257345)
 [^rn-4700u]: <https://www.mail-archive.com/tech@openbsd.org/msg59151.html>
@@ -274,6 +276,8 @@ DG02SRTBP4MFA
 [^rn-4600h]: [Dell G5 15 SE SMU crash after switching from iGPU to dGPU (#1269) · Issues · drm / amd · GitLab](https://gitlab.freedesktop.org/drm/amd/-/issues/1269)
 [^rn-4900h]: [Screen flickering with ASUS TUF GAMING A15 laptop (FX506IV) (#1271) · Issues · drm / amd · GitLab](https://gitlab.freedesktop.org/drm/amd/-/issues/1271)
 [^pro-desktop-65w-rn]: [ASCII.jp：Renoirのデスクトップ版「Ryzen PRO 4000Gシリーズ」3モデルの性能を検証 (4/5)](https://ascii.jp/elem/000/004/021/4021569/4/)
+[^rn-pro-4450u]: [ThinkPad L14 Ryzen 3 Pro - lspci - OpenBenchmarking.org](https://openbenchmarking.org/system/2010191-NE-TPL14GPUT90/ThinkPad%20L14%20Ryzen%203%20Pro/lspci)
+[^rn-pro-4750u]: [Problem with GPU drivers on ThinkPad L15 Gen 1 (AMD) / Laptop Issues / Arch Linux Forums](https://bbs.archlinux.org/viewtopic.php?id=259892)
 
 <!--  Lucienne (gfx909?)  -->
 <!--  Cezanne (gfx909?) -->

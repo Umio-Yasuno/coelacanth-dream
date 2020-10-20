@@ -142,7 +142,10 @@ summary: " "
 | SC | Shader Compiler? / Scalar? | |
 | GPA | Guest Pysical Address[^gpa] | |
 | EDC | Error Correction and Detection[^edc] | |
+| SPM | Streaming Performance Counter[^spm] | |
+| ICD | Installable Client Driver | |
 
+[^spm]: <https://github.com/GPUOpen-Drivers/pal/blob/477c8e78bc4f8c7f8b4cd312e708935b0e04b1cc/inc/core/palPerfExperiment.h#L92>
 [^ulv]: [drm/amd/powerplay: enable Ultra Low Voltage for sienna_cichlid](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/powerplay/sienna_cichlid_ppt.c?h=amd-staging-drm-next&id=e912f967af0182039fb9f2668c78967f0056a769)
 [^gl2a]: [pal/gfx9PerfCtrInfo.cpp at c9937b277c491a55c689eec7cdd48fb238b8004c · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/c9937b277c491a55c689eec7cdd48fb238b8004c/src/core/hw/gfxip/gfx9/gfx9PerfCtrInfo.cpp#L1488)
 [^gl2a-eq-tca]: [pal/devDriverUtil.cpp at a3a42838c576cc219e61500bc469a4a05ce0db68 · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/a3a42838c576cc219e61500bc469a4a05ce0db68/src/core/devDriverUtil.cpp#L94)
