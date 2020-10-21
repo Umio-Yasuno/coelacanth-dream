@@ -24,6 +24,8 @@ Phoronix の Michael Larabel 氏によるとディスプレイコントローラ
 確かによく読んでみると `dcn30_apply_idle_power_optimizations` 関数にコードが追加されている。  
 {{< link >}} [Radeon Linux Driver Seeing "MALL" Feature For Big Navi - Phoronix](https://www.phoronix.com/scan.php?page=news_item&px=Radeon-Big-Navi-MALL-Linux) {{< /link >}}
 
+氏も指摘しているが、DCN3.0 に向けた機能であるのに、サポートするのは *Sienna Cichlid* のみであり、同じく DCN3.0 を搭載する *Navy Flounder* は対象となっていない。  
+ただこれもパッチのコメントでそう述べられているだけで、*Sienna Cichlid* のみとする判定文は追加されていないため、実際は *Navy Flounder* でも MALL 機能のサポートが為されていると考えられる。  
+
 {{< /ins >}}
 
-後は今後 AMD がその内明かしてくれるだろう情報を待つ。  
