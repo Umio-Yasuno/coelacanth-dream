@@ -33,11 +33,11 @@ CPUマイクロコードは `0xa50000b` 。前回は `0xa500009` だった。CPU
 [^artic-pro565]: [What's PROMONTORY 1.05V current requirement... | Community](https://community.amd.com/thread/243920)
 
 ベンチマークには Blender が実行されているが、*1 x 16384 MB* とのことから、メモリはシングルチャネルと考えられるため、スコアは特に気にしない。  
-ただ DDR4メモリということと、`Artic` という名から AM4 プラットフォームで検証されていると思われる。   
+ただ DDR4メモリということと、`Artic` という名から AM4 プラットフォームで検証されていると推測される。   
 
 気になるのは CPUクロックであり、前回の *Cezanne (ES) 8-Core/16-Thread* (3.6GHz) は、デスクトップ向け *Renoir* と比較すると同コア同スレッド数の **Ryzen 7 4700G, PRO 4750G** (3.6GHz) と同じクロックだが[^rn-4700g-4750g]、  
 今回の *Cezanne (ES) 4-Core/8-Thread* (3.5GHz) は **Ryzen 3 4300G, PRO 4350G** のクロック (3.8GHz) とは一致せず、デスクトップ向けでも TDP 35W の SKU **Ryzen 3 4300GE, PRO 4350GE** (3.5GHz) と一致する。[^rn-4300ge-4350ge]  
-このことから、今回の *Cezanne (ES) 4-Core/8-Thread* は TDP 35W の SKU であることが考えられる。  
+このことから、今回の *Cezanne (ES) 4-Core/8-Thread* は TDP 35W の SKU である可能性が考えられる。  
 
 [^rn-4700g-4750g]: [AMD Ryzen™ 7 4700G | AMD](https://www.amd.com/en/products/apu/amd-ryzen-7-4700g#product-specs) <br> [AMD Ryzen™ 7 PRO 4750G | AMD](https://www.amd.com/en/products/apu/amd-ryzen-7-pro-4750g#product-specs)
 [^rn-4300ge-4350ge]: [AMD Ryzen™ 3 4300GE | AMD](https://www.amd.com/en/products/apu/amd-ryzen-3-4300ge#product-specs) <br> [AMD Ryzen™ 3 PRO 4350GE | AMD](https://www.amd.com/en/products/apu/amd-ryzen-3-pro-4350ge#product-specs)
