@@ -13,7 +13,7 @@ toc: false
 Linux Kenrel (intel-gfx) に、*Alder Lake-S* の GPU部をサポートする 18個のパッチが投稿された。  
 {{< link >}} [[Intel-gfx] [PATCH 00/18] Introduce Alderlake-S](https://lists.freedesktop.org/archives/intel-gfx/2020-October/251057.html) {{< /link >}}
 
-GPUアーキテクチャの世代はこれまでの情報同様 [Gen12](/tags/gen12) となる。  
+GPUアーキテクチャの世代はこれまでの情報通り [Gen12](/tags/gen12) となる。  
 *Rocket Lake* は *Comet Lake PCH* と *Tiger Lake LP PCH* の両方に対応するように記述されているが、[^rkl]  
 *Alder Lake-S* は *Alder Point PCH (600 Series)*[^adp-600] のみに対応する。[^adp]  
 
@@ -22,7 +22,8 @@ GPUアーキテクチャの世代はこれまでの情報同様 [Gen12](/tags/ge
 [^adp]: [[Intel-gfx] [PATCH 03/18] drm/i915/adl_s: Add PCH support](https://lists.freedesktop.org/archives/intel-gfx/2020-October/251060.html)
 
 ディスプレイ出力において、*Alder Lake-S* はコンボPHYを 5基持ち、1 eDP、2 HDMI、2 DP の出力構成に対応する。[^adls-display]  
-*Alder Lake-S* はメモリコントローラーを 2基持ち、DDR4/LPDDR4(X)/LPDDR5/DDR5 に対応する。[^adl-mem]  
+
+また、Coreboot での開発者のコメントから、*Alder Lake-S* はメモリコントローラーを 2基持ち、DDR4/LPDDR4(X)/LPDDR5/DDR5 に対応するとされる。[^adl-mem]  
 
 [^adls-display]: [[Intel-gfx] [PATCH 08/18] drm/i915/adl_s: Setup display outputs and HTI support for ADL-S](https://lists.freedesktop.org/archives/intel-gfx/2020-October/251066.html)
 [^adl-mem]: [Intel Alder Lake-S の GPU は Gen12アーキテクチャ | Coelacanth's Dream](/posts/2020/09/14/intel-adls-gen12-gpu/#adls-gt1_adlp-gt2)
