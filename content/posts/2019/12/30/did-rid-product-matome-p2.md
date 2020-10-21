@@ -423,6 +423,8 @@ Navi LITE 13///\\\E9:00
 | 7319 | 40 | Radeon Pro 5700 XT | (Navi10 XTMA) |
 | 731A | 40 | | |
 | 731B | 40 | Radeon Pro 5700 | (Navi10 XGA) |
+| 731E &darr; | C6 | | for blockchain |
+| | C7 | | for blockchain |
 | 731F &darr; | C0 | RX 5700 XT 50th | (Navi10 XTX) |
 | | C1 | RX 5700 XT | (Navi10 XT) |
 | | C2 | RX 5600M | (Navi10 XME) |
