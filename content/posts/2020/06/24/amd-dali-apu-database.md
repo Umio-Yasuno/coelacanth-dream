@@ -1,5 +1,5 @@
 ---
-title: "AMD Dali APU Database"
+title: "AMD Dali APU データベース"
 date: 2020-06-24T19:52:05+09:00
 draft: false
 tags: [ "Dali", "gfx909", "Raven2", "Zen" ]

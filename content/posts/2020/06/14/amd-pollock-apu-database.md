@@ -1,5 +1,5 @@
 ---
-title: "AMD Pollock APU Database"
+title: "AMD Pollock APU データベース"
 date: 2020-06-14T00:07:27+09:00
 draft: false
 tags: [ "Raven2", "Pollock", "gfx909", "Zen" ]

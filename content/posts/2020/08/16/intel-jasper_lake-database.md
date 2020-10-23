@@ -1,5 +1,5 @@
 ---
-title: "Intel Jasper Lake Database"
+title: "Intel Jasper Lake データベース"
 date: 2020-08-16T07:18:46+09:00
 draft: false
 tags: [ "Tremont", "Jasper_Lake", "Gen11" ]
