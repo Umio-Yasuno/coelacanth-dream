@@ -36,7 +36,7 @@ PCI ID には `0x4680, 0x4681, 0x4682, 0x4683, 0x4690, 0x4691, 0x4692, 0x4693, 0
 | Dual-Sub Slices | 1 | 2 | 6 | 6 |
 | &ensp;EUs | 16 | 32 | 96 | 96 |
 | &ensp;&ensp;SPs | 128 | 256 | 768 | 768 |
-| GPU L3$ | 1536KB? | 1536KB? | 3072KB | 16384KB[^dg1-l3] |
+| GPU L3$ | 1536KB? | 1920KB | 3072KB | 16384KB[^dg1-l3] |
 | | RKL | TGL /RKL<br>/ADL-S | TGL /ADL-P? | DG1 |
 
 [^dg1-l3]: [Intel、DG1 において OpenCL と oneAPI Level Zero をサポート　―― 巨大なキャッシュを持つ DG1 | Coelacanth's Dream](/posts/2020/06/20/intel-dg1-support-opencl-levelzero/)

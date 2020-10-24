@@ -40,7 +40,9 @@ summary: " "
 | VF | Virtual Function | MxGPU |
 | DPBB | Deferred Primitive Batch Binning | DSBR, partial primitive binning |
 | DFSM | Deterministic Finite State Machine | DSBR, full primitive binning |
+| PBB | Pipeline Binning[^pbb] |
 
+[^pbb]: [xgl/settings_xgl.json at 0d602bbcfa1a86fd52f66966554b05e384a10d38 · GPUOpen-Drivers/xgl](https://github.com/GPUOpen-Drivers/xgl/blob/0d602bbcfa1a86fd52f66966554b05e384a10d38/icd/settings/settings_xgl.json#L5132)
 [^1]:[drm/amdgpu AMDgpu driver — The Linux Kernel documentation](https://www.kernel.org/doc/html/latest/gpu/amdgpu.html)
 
 ## Hardware

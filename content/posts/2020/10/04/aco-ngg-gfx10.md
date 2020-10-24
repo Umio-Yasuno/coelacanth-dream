@@ -97,6 +97,13 @@ LDS は *GCNアーキテクチャ* では CU あたり 64KB(32バンク) とな�
 
 性能の最適化において、2つのモードのどちらを選択するかが関わってくると思われるが、RadeonSI/RADV ドライバー ではどうしているのかは不明。  
 
+{{< ins >}}
+
+**RadeonSI/RADV** ドライバーでは **WGP Mode** を採用していた。  
+{{< link >}} [src/amd/common/ac_gpu_info.c · 3c2489d2e45b3013361c7284ed9de14fe40554cc · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/3c2489d2e45b3013361c7284ed9de14fe40554cc/src/amd/common/ac_gpu_info.c#L572) {{< /link >}}
+
+{{< /ins >}}
+
 *RDNAアーキテクチャ* はスレッドをまとめた Wave という単位において、ネイティブでは 32スレッド(Wave32) とし、*GCNアーキテクチャ* と同じスレッド数である 64スレッド(Wave64) にも対応する。  
 **CU Mode** 、**WGP Mode** ということから混同してしまいがちだが、これら Wave は、LDS の割り当てにおける 2つのモードとはまた別であるようだ。  
 また、同じスレッド数とは言うものの、*RDNAアーキテクチャ* では Wave64 を 2つの Wave32 に分解して発行されるため、*GCNアーキテクチャ* 同様に実行される訳ではないとされている。  
