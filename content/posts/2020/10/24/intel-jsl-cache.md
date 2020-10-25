@@ -1,5 +1,5 @@
 ---
-title: "気になる Jasper Lake のキャッシュ構成"
+title: "気になってた Jasper Lake のキャッシュ構成  ―― L3キャッシュを搭載か"
 date: 2020-10-24T22:47:40+09:00
 draft: false
 tags: [ "Jasper_Lake", "Tremont", "Gen11" ]

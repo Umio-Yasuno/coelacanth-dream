@@ -19,6 +19,8 @@ noindex: false
 | Memory Interface | LP/DDR4 128-bit? |
 | CPU | *Tremont*<br>(Family: 0x6, Model 0x9C)<br>[^intel-family] |
 | &emsp;CPU Core/Thread | (4/4?) |
+| &emsp;L2cache (shared 4-Core) | 1.5MB |
+| &emsp;L3cache/LLC | 4MB |
 | GPU | *Gen11* |
 | Total EU<br>(Sub-Slice x EU) | 16EU(2x8) /20EU(4x5)<br>24EU(4x6) /32EU(4x8) |
 | &emsp;GPU L3cache | 1280KB (4 Banks) |
