@@ -1,5 +1,5 @@
 ---
-title: "気になってた Jasper Lake のキャッシュ構成  ―― L3キャッシュを搭載か"
+title: "気になる Jasper Lake のキャッシュ構成　―― 【追記】 Snow Ridge と Elkhart Lake について訂正"
 date: 2020-10-24T22:47:40+09:00
 draft: false
 tags: [ "Jasper_Lake", "Tremont", "Gen11" ]
@@ -22,6 +22,24 @@ Geekbench に *Jasper Lake* による実行結果が現れたことでキャッ�
 
 [^intel-arch-manual]: [Intel® 64 and IA-32 Architectures Optimization Reference Manual](https://software.intel.com/content/www/us/en/develop/download/intel-64-and-ia-32-architectures-optimization-reference-manual.html) (Page 146)
 
+{{< ins datetime="2020-10-26" >}}
+
+記事の以前のバージョンでは、*Snow Ridge* と *Elkhart Lake* は L3キャッシュ/LLC を持たないように書いたが、実際に持っている、または持たせることが可能なようである。  
+
+*Snow Ridge* にあたる **Atom P5900シリーズ** は、最大 15MB の LLC を共有するとあり、  
+{{< link >}} [Product Fact Sheet: Accelerating 5G Network Infrastructure, from the Core to the Edge | Intel Newsroom](https://newsroom.intel.com/news/product-fact-sheet-accelerating-5g-network-infrastructure-core-edge/) {{< /link >}}
+*Elkhart Lake* 、**Atom x6000Eシリーズ** を搭載するボードを販売する [TQ](https://www.tq-group.com/en/) では 4MB の LLC を追加できるとしている。  
+[TQ | Elkhart Lake | Intel Atom 6th generation x6000E](https://www.tq-group.com/en/products/tq-embedded/elkhart-lake/)
+{{< link >}} [TQ | Elkhart Lake | Intel Atom 6th generation x6000E](https://www.tq-group.com/en/products/tq-embedded/elkhart-lake/) {{< /link >}}
+
+[ark.intel.com](https://ark.intel.com) では、L2キャッシュ容量しか記載されていないが、  
+考えるに、用途に応じた、搭載製品の設定によっては有効可能ということなのかもしれない。  
+
+つまり、自分が下記にあげている Geekbench 5 の実行結果から言えるのは、**Celeron N4500** と **Celeron N5100** では L3キャッシュ/LLC が有効化されていることと、  
+それがモバイル向けプロセッサとしてどのように効果するか、ということになる。  
+
+{{< /ins >}}
+
 ### Jasper Lake は L3キャッシュを搭載か {#jsl-l3}
 
 以下が、*Jasper Lake* である **Intel Celeron N4500** 、**Intel Celeron N5100** のGeekbench 5 実行結果となる。  
@@ -41,7 +59,7 @@ CPU の x86\_Model が 156(0x9C) となっており、これを Linux Kernel に
 | Intel Tremont | Snow Ridge | Lakefield | Elkhart Lake | Jasper Lake |
 | :-- | :--: | :--: | :--: | :--: |
 | L2cache (per Tile) | 4.5 MB | 1.5 MB | 1.5 MB | 1.5MB |
-| L3cache/LLC (per Tile) | N/A | 2MB | N/A | 4MB |
+| L3cache/LLC (Up to) | 15MB | 4MB | 4MB  | 4MB |
 
 ここで疑問に思うのは、4コアで共有する L2キャッシュ容量は *Lakefield* 、*Elkhart Lake* と同じ 1.5MB なのに、L3キャッシュ 4MB を搭載していることだ。L2キャッシュを 1.5MB より多くには設定しなかった。`L2 Cache 1.50 MB x 1` とあることから、Tremont コアそれぞれが L2キャッシュを別に持ってはいない。  
 そのことから、ただ CPU性能の向上を目的としている訳ではないと思われる。  
