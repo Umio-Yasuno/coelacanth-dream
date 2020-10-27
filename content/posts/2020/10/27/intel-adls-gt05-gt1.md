@@ -36,11 +36,11 @@ toc: false
 *Alder Lake-S* では DDR5メモリサポートによるメモリ帯域向上といった、GPU 性能の向上にも繋がる要素があるが、デスクトップ向けとして *Rocket Lake* から GPU の規模は増やされないと考えられる。  
 2021年中にはエンスージアスト向けのディスクリート GPU **DG2 / {{< xe class="hpg" >}}** が投入されるため、統合 GPU を強化する必要がそうない、というのもあるだろう。  
 
-*Rocket Lake* は 2021Q1 に市場へ投入される予定と発表されており[^rkl-2021q1]、*Alder Lake* は 2021年の後半 (2021Q2 - 2021Q3) に投入される予定にある。[^adl-2021q2-q3]  
+*Rocket Lake* は 2021Q1 に市場へ投入される予定と発表されており[^rkl-2021q1]、*Alder Lake* は 2021年の後半 (2021Q3 - 2021Q4) に投入される予定にある。[^adl-2021]  
 ただ、これでもあまりにも間がないため、2021年後半に投入される *Alder Lake* はモバイル向け (*Alder Lake-P*) であり、デスクトップ向け (*Alder Lake-S*) はもう少し後になる、といった話もある。  
 
 [^rkl-2021q1]: [Intel’s Commitment to Gaming, and a Sneak Peek at Intel Technology to Come | by Intel Author | Intel Tech | Oct, 2020 | Medium](https://medium.com/intel-tech/intels-commitment-to-gaming-and-a-sneak-peek-at-intel-technology-to-come-83677833be7f)
-[^adl-2021q2-q3]: [Intel Reports Second-Quarter 2020 Financial Results :: Intel Corporation (INTC)](https://www.intc.com/news-events/press-releases/detail/1402/intel-reports-second-quarter-2020-financial-results)
+[^adl-2021]: [Intel Reports Second-Quarter 2020 Financial Results :: Intel Corporation (INTC)](https://www.intc.com/news-events/press-releases/detail/1402/intel-reports-second-quarter-2020-financial-results)
 
 | Intel Gen12 | GT0.5 | GT1 | GT2 | GT2 (DG1) |
 | :-- | :--: | :--: | :--: | :--: |
