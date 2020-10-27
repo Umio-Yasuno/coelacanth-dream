@@ -24,7 +24,7 @@ Geekbench に *Jasper Lake* による実行結果が現れたことでキャッ�
 
 {{< ins datetime="2020-10-26" >}}
 
-記事の以前のバージョンでは、*Snow Ridge* と *Elkhart Lake* は L3キャッシュ/LLC を持たないように書いたが、実際に持っている、または持たせることが可能なようである。  
+記事の以前のバージョンでは、*Snow Ridge* と *Elkhart Lake* は L3キャッシュ/LLC を持たないように書いたが、それは間違いで、実際には持っている、または持たせることが可能なようである。  
 
 *Snow Ridge* にあたる **Atom P5900シリーズ** は、最大 15MB の LLC を共有するとあり、  
 {{< link >}} [Product Fact Sheet: Accelerating 5G Network Infrastructure, from the Core to the Edge | Intel Newsroom](https://newsroom.intel.com/news/product-fact-sheet-accelerating-5g-network-infrastructure-core-edge/) {{< /link >}}
