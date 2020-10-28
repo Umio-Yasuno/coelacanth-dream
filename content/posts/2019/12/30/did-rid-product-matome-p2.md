@@ -483,6 +483,7 @@ Navi LITE 13///\\\E9:00
 | | C3 | RX 5300M | (Navi14 XLM) |
 | | C5 | RX 5500 XT | (Navi14 XTX) |
 | | C7 | RX 5500 | (Navi14 XT) |
+| | C9 | | headless (for blockchain?) |
 | | CF | RX 5300? | (Navi14 XL?) |
 | | F2 | | |
 | | F3 | | |

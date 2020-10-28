@@ -21,7 +21,7 @@ DID (DeviceID) はこれまでに使用されていなかった `0x731E` が使�
 [^mining-rx470]: [在庫は大量、マイニング向けの格安Radeon RX 570/470が一部ショップに再入荷 （取材中に見つけた○○なもの） - AKIBA PC Hotline!](https://akiba-pc.watch.impress.co.jp/docs/wakiba/find/1165171.html)
 
 さて、同じく *Navi10* をベースとするコンシューマ向けの **RX 5700/XT** には今月 (2020/10) の初めに近く生産終了 (End Of Life) し、AIB仕様もそれに沿うという話が出てきた。[^rx-5700-eol]  
-その後、話が更新され、**RX 5700 XT** は 2020Q1 まで製造されるが、対し **RX 5700** は実際に流通が減少しており、特別な注文には対応するとのことだった。  
+その後、話が更新され、**RX 5700 XT** は 2021Q1 まで製造されるが、対し **RX 5700** は実際に流通が減少しており、特別な注文には対応するとのことだった。  
 
 [^rx-5700-eol]: [AMD Radeon RX 5700 series reach end of life - VideoCardz.com](https://videocardz.com/newz/amd-radeon-rx-5700-series-reach-end-of-life) <br> [Les cartes graphiques AMD RADEON RX 5700 Custom sont passées en fin de vie - Cartes graphiques](https://www.cowcotland.com/news/73563/les-cartes-graphiques-amd-radeon-rx-5700-custom-sont-passees-en-fin-de-vie.html)
 
