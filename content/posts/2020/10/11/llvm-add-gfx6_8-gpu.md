@@ -30,4 +30,4 @@ GPUID については以下を参照。
 
 それにしても発端であり、*Cato APU* をベースとする **A9-9820** を搭載するミニPC、AeroBox は 2020/03 に発表されて以降、発売開始の音沙汰が特に無いが、今どこにいるのだろう。  
 
-[^gfx705-unknown]: <https://github.com/llvm/llvm-project/commit/666ef0db208bb3880115bdc133e72e954ed55300#diff-fc410247cc52875daa3b6a3f8a49e32d>
+[^gfx705-unknown]: <https://github.com/llvm/llvm-project/commit/666ef0db208bb3880115bdc133e72e954ed55300#diff-e60878666958a89628598e321bbd8dca134904a69313d8afb07aa6771945fc3f>

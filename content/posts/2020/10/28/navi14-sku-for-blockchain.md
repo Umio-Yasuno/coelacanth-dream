@@ -1,5 +1,5 @@
 ---
-title: "Navi14 でもブロックチェーン/マイニング向け SKU が追加か"
+title: "Navi14 でもブロックチェーン/マイニング向け SKU が追加される"
 date: 2020-10-28T15:23:42+09:00
 draft: false
 tags: [ "Navi14", ]
