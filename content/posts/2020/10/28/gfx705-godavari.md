@@ -2,7 +2,7 @@
 title: "gfx705 には Godavari が該当"
 date: 2020-10-28T17:50:25+09:00
 draft: false
-# tags: [ "", ]
+tags: [ "Cato", ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU" ]
 noindex: false
@@ -11,17 +11,16 @@ toc: false
 ---
 
 以前、[LLVM に旧世代の AMD GPU に向けた GPUID が追加された](/posts/2020/10/11/llvm-add-gfx6_8-gpu/) 際、*gfx703* から分化し、ある APU の GPUコア、ISA とされるが、具体的な採用製品は謎の *gfx705* があった。  
-自分はそれを最近出てきた、**Xbox One SoC** と同一のダイとなる異質の APU **A9-9820 )
-Cato APU** が当たるのではないかと考えていたが、実際には 2015年頃に登場した *Godavari APU* が該当するようだ。  
+自分はそれを最近出てきた、**Xbox One SoC** と同一のダイとなる異質の APU **A9-9820 (Cato APU)** が当たるのではないかと考えていたが、  
+[GPUOpen-Drivers/pal: Platform Abstraction Library](https://github.com/GPUOpen-Drivers/pal) に組み込まれた新たなパッチによると、実際には 2015年頃に登場した *Godavari APU* が該当するようだ。  
 {{< link >}} [pal/ndDevice.cpp at 007816f4bd2fd3ace30f8af9629cff7ec1dcb998 · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/007816f4bd2fd3ace30f8af9629cff7ec1dcb998/src/core/os/nullDevice/ndDevice.cpp#L123) {{< /link >}}
 
-**A9-9820** の GPU部に付けられた **R7 350** の謎はそのままだが、  
-**A9-9820** のある Geekbench 5 実行結果によると、どうやら **A9-9820** でも Linux環境を動かすことが可能らしい。[^cato-gb5]  
+**A9-9820** の GPU部に付けられた **R7 350** の謎はそのままだが、**A9-9820** のある Geekbench 5 実行結果によると、どうやら **A9-9820** でも Linux環境を動かすことが可能らしい。[^cato-gb5]  
 
 [^cato-gb5]: [AMD X64 - Geekbench Browser](https://browser.geekbench.com/v5/cpu/4318888)
 
 また、**A9-9820** を搭載するボードには複数の種類が確認でき、  
-AliExpress で販売されているボード[^cato-ali]、CHUWI AeroBox に組み込まれているボード[^cato-aerobox]、Geekbench 5 の実行結果にある AMD_BL2 を検索すると出てくる PDFファイルに掲載されているボード[^cato-bl2]の 3種類となる。  
+AliExpress で販売されているボード[^cato-ali]、CHUWI AeroBox に組み込まれているボード[^cato-aerobox]、Geekbench 5 の実行結果にある AMD_BL2 を検索すると出てくる PDFファイルに掲載されているボード[^cato-bl2]の 3種類がある。他にも存在しているかもしれない。  
 
 [^cato-ali]: <https://aliexpress.com/item/1005001340237782.html>
 [^cato-aerobox]: [CHUWI AeroBox 実機レビュー － CHUWIのスリムなデスクトップPC。「謎のAMD製CPUと外部GPU」はホーム・オフィス向けの性能](https://win-tab.net/imported/chuwi_areobox_review_2010142/)
