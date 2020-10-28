@@ -16,6 +16,7 @@ toc: false
 {{< link >}} [pal/ndDevice.cpp at 007816f4bd2fd3ace30f8af9629cff7ec1dcb998 · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/007816f4bd2fd3ace30f8af9629cff7ec1dcb998/src/core/os/nullDevice/ndDevice.cpp#L123) {{< /link >}}
 
 **A9-9820** の GPU部に付けられた **R7 350** の謎はそのままだが、**A9-9820** のある Geekbench 5 実行結果によると、どうやら **A9-9820** でも Linux環境を動かすことが可能らしい。[^cato-gb5]  
+CPU ベンチマークであるため GPU がどうなっているかは不明。  
 
 [^cato-gb5]: [AMD X64 - Geekbench Browser](https://browser.geekbench.com/v5/cpu/4318888)
 
@@ -28,6 +29,8 @@ AliExpress で販売されているボード[^cato-ali]、CHUWI AeroBox に組�
 
 それぞれの違いは、CPU補助電源が 4-pin か 8-pin か、PCIe x1スロットの有無または数、mSATA、M.2スロットの数等、同じ **A9-9820** を搭載するため仕方ないかもしれないが、微妙なものとなる。  
 だが、全く同じボードを使っていないというのは少し意外で、**Xbox One SoC / A9-9820** のストックは結構あるのかもしれない。  
+そして、AMD_BL2 ボードには PCIe x16 が無く、一般的な GPU は差せないため、GPU 部も既存のドライバーで動作している可能性がある。(PCIe x1 の GPU があるにはあるが)  
+その場合、どういった APU/GPU、各 IP としてドライバーが適用されているのかは気になる所だ。  
 
 Linux が動作可能ということもあり、その内さらなる **A9-9820** の詳細が明らかになるのではないかと期待している。  
 

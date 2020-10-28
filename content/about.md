@@ -11,14 +11,7 @@ noindex: true
 
 ## このサイトについて
 <img src="/image/coelacanth_dream.webp" title="waitng coelacanth" style="max-width: 48%;max-height: 64%; float:left; margin:.3em .5em 0 0; background-color: #556F6F">
-個人的にまとめたハードウェア系の情報や **"推測"** を公開するブログ的なもの。  
-公式がまだ正式発表していなかったり、決して大きな声ではしてくれない話を語り、ハードウェアの魅力を伝えたいと思い活動を始めました。  
-情報元は、信頼できる公式のオープンソースコード等や公式資料。  
-知識はAMD CPU/GPUに偏っています。Intel CPU/GPUは少しだけ。NVIDIAはさっぱり。  
-ネット上で広まっている噂を積極的に取り上げることはありません、たぶん。  
-速報性には期待しないでください。  
-
-ただのオタク。  
+オタクの日記であり、データベースであり、その時見た夢。  
 
 <div style="clear:left"></div>
 
