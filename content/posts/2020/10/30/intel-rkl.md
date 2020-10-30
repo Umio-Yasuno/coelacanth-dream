@@ -40,9 +40,9 @@ I/O周りも強化され、PCIe Gen4に対応し、レーン数は GPU (x16) + S
 [^sunnycove-avx512]: [Intel Rocket Lake は AVX-512 をサポート & 推測 | Coelacanth's Dream](/posts/2020/07/23/intel-rocket_lake-support-avx512/)
 
 そのため、どこまでが *Sunny Cove* で、どこから *Crypress Cove* であるか、というのは曖昧な話である。  
+*Ice Lake (Client/Server), Lakefield* は全て Intel 10(+)nm プロセスで製造されているため、  
 単に Intel 10nmプロセスで製造されれば *Sunny Cove* で、14nmプロセスならば *Crypress Cove* 、といったマーケティング的な意味合いも考えられる。  
-*Ice Lake (Client/Server), Lakefield* は全て Intel 10(+)nm プロセスで製造されている。  
-そうなると *Rocket Lake-S* は 14nmで製造されているとなるが、Intel 的にはまだ新しい部分だけを推していきたいのかもしれない。  
+そうなると *Rocket Lake-S* は 14nmで製造されているとなるが、それを明言しなかったあたり、Intel 的にはまだ新しい部分だけを推していきたいのかもしれない。  
 
 [^rkl-cache]: [Intel Rocket Lake のキャッシュ構成は Ice Lake と同様か & 推測 | Coelacanth's Dream](/posts/2020/06/28/intel-rocketlake-cache-guess/)
 
@@ -50,13 +50,12 @@ I/O周りも強化され、PCIe Gen4に対応し、レーン数は GPU (x16) + S
 
 AV1 HWエンコードに関しては、各メディアが資料中から抜粋した画像には 4K60 10b 4:2:0 AV1 でのエンコードに対応するように記述されており[^rkl-av1-enc]、自分も最初資料を見た時はそのようになっていたと記憶している。  
 だが後になってから再度資料をダウンロードすると、メディア部の記述が変更されており、デコーダー/エンコーダーに分けられ、エンコーダーに AV1 は無い。  
-
-AV1 HWエンコードは [intel/media-driver](https://github.com/intel/media-driver) のコードを見ても対応してないように思われ[^av1-media-driver]、GPU部が同じ *Tiger Lake* 発表時にも AV1 HWエンコード対応は謳われなかった。  
+[intel/media-driver](https://github.com/intel/media-driver) のコードを見ても AV1 Hwエンコードには対応してないように読め[^av1-media-driver]、GPU部が同じ *Tiger Lake* 発表時にも AV1 HWエンコード対応は謳われなかった。  
 Hot Chips 32 にて行なわれた **{{< xe class="lp" >}}アーキテクチャ** の発表でも、AV1 HWデコードだけがスライドに記載されている。[^hc32-xe]  
 
 [^rkl-av1-enc]: [Intel、デスクトップ向け第11世代Core「Rocket Lake-S」の詳細を発表 ～CPUはIPCを大幅向上させたCypress Cove、GPUにXe Graphicsを採用 - PC Watch](https://pc.watch.impress.co.jp/docs/news/1286191.html)<br>[ASCII.jp：Rocket Lake-S概要発表！Xe LP＆PCIe 4.0×20、IPCは10％以上GPU性能は50％向上](https://ascii.jp/elem/000/004/032/4032293/)
 [^av1-media-driver]: [media-driver/media_libva_caps_g12.cpp at d934d6c48644227ab066d013a105335ad25ce2bc · intel/media-driver](https://github.com/intel/media-driver/blob/d934d6c48644227ab066d013a105335ad25ce2bc/media_driver/linux/gen12/ddi/media_libva_caps_g12.cpp)
 [^hc32-xe]: [Hot Chips 2020 Live Blog: Intel's Xe GPU Architecture (5:30pm PT)](https://www.anandtech.com/show/15993/hot-chips-2020-live-blog-intels-xe-gpu-architecture-530pm-pt)
 
-そのため、実は *Rocket Lake-S* GPU部は AV1 HWエンコードに対応していない、ということに思われるが、Intel は各メディアに通知していないのだろうか？  
+そのため、実際は *Rocket Lake-S* GPU部は AV1 HWエンコードに対応していない、ということに思われるが、Intel は各メディアに通知していないのだろうか？  
 
