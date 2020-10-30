@@ -92,7 +92,7 @@ summary: " "
 | SGPR | Scalar General-Purpose Register | |
 | VGPR | Vector General-Purpose Register | |
 | ALU | Arithmetc Logic Unit | |
-| SPI | Shader Processor Interpolator | |
+| SPI | Shader Processor Interpolator / Shader Processor Input | |
 | PRT | Partially Resident Textures | |
 | DIO | Display IO | DCN3 |
 | OPP | Output Plane Processing | DCN3 |
@@ -145,12 +145,14 @@ summary: " "
 | ULV | Ultra Low Voltage[^ulv] |
 | GL2a | GL2 Arbiter[^gl2a] | == TCA[^gl2a-eq-tca]<br>(Navi10 = 4, Navi14 = 2)
 | GL2c | <!-- GL2 Cache ??? --> | == TCC[^gl2a-eq-tca]<br>(Navi10 = 16, Navi14 = 8)
-| SC | Shader Compiler? / Scalar? | |
+| SC | Shader Compiler? / Scan Converter[^scan-converter] | Rasterizer |
+| SX | Shader Export[^scan-converter]t| |
 | GPA | Guest Pysical Address[^gpa] | |
 | EDC | Error Correction and Detection[^edc] | |
 | SPM | Streaming Performance Counter[^spm] | |
 | ICD | Installable Client Driver | |
 
+[^scan-converter]: [AMD PowerPoint- White Template - nordic-game-2019-triangles-are-precious.pdf](https://gpuopen.com/presentations/2019/nordic-game-2019-triangles-are-precious.pdf)
 [^spm]: <https://github.com/GPUOpen-Drivers/pal/blob/477c8e78bc4f8c7f8b4cd312e708935b0e04b1cc/inc/core/palPerfExperiment.h#L92>
 [^ulv]: [drm/amd/powerplay: enable Ultra Low Voltage for sienna_cichlid](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/powerplay/sienna_cichlid_ppt.c?h=amd-staging-drm-next&id=e912f967af0182039fb9f2668c78967f0056a769)
 [^gl2a]: [pal/gfx9PerfCtrInfo.cpp at c9937b277c491a55c689eec7cdd48fb238b8004c · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/c9937b277c491a55c689eec7cdd48fb238b8004c/src/core/hw/gfxip/gfx9/gfx9PerfCtrInfo.cpp#L1488)

@@ -19,7 +19,7 @@ summary: " "
       * [Raven2](#raven2-gfx909)
          * [Dali](#dali-gfx909)
          * [Pollock](#pollock-gfx909)
-      * [Renoir](#renoir-gfx909)
+      * [Renoir](#renoir-gfx90c)
    * FAMILY_VGH
       * [VanGogh](#vgh)
  * [Discrete GPU](#dgpu)
@@ -217,7 +217,7 @@ summary: " "
 DG02SRTBP4MFA
 -->
 
-### Renoir ( gfx909 ) {#renoir-gfx909}
+### Renoir ( gfx90c ) {#renoir-gfx90c}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 1636 &darr; | 00 | | (BringUp FP6) |
@@ -279,8 +279,8 @@ DG02SRTBP4MFA
 [^rn-pro-4450u]: [ThinkPad L14 Ryzen 3 Pro - lspci - OpenBenchmarking.org](https://openbenchmarking.org/system/2010191-NE-TPL14GPUT90/ThinkPad%20L14%20Ryzen%203%20Pro/lspci)
 [^rn-pro-4750u]: [Problem with GPU drivers on ThinkPad L15 Gen 1 (AMD) / Laptop Issues / Arch Linux Forums](https://bbs.archlinux.org/viewtopic.php?id=259892)
 
-<!--  Lucienne (gfx909?)  -->
-<!--  Cezanne (gfx909?) -->
+<!--  Lucienne (gfx90c?)  -->
+<!--  Cezanne (gfx90c?) -->
 <!--
    Board:
       Celadon: AMD Mobile Reference Board?
