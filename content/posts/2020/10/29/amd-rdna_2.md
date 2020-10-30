@@ -40,12 +40,6 @@ Shader Engine、Shader Array は GPU の各ユニットをある程度まとめ�
 
 [^navi10-dieshot]: [AMD Navi10のダイ観察 & 推測 | Coelacanth's Dream](/posts/2020/01/22/navi10-dieshot-and-guess/)
 
-**RX 6800** は他 2製品よりも ROP 数が 32基少ないものとなるが、ROP/RB 周りの仕様が *RDNA アーキテクチャ* と同じであるならば無効化する必要は無いはずで、製品の差別化のため意図的に無効化しているか、  
-全体のおおまかな構成が他 2製品と異なり、4 Shader Engine の内 1 Shader Engine を無効化して製品化しているのではないかと思われる。  
-4 Shader Engine のまま 30WGP を実現するには Shader Engine を非対称としなければならず、これは従来の AMD GPU の構成から外れたものになり、スケジューリングに問題が出ると思われる。そのため、1 Shader Engine を無効化している可能性が高い。  
-ただ、それならば 32WGP(64CU)、Shader Engine あたり 8WGP(16CU) とした方が製品化において余裕があり、歩留まり的には有利なように思う。  
-30WGP(60CU) という構成では、3 Shader Engine 内の WGP(CU) がすべて有効な必要がある。  
-**RX 6800** と **RX 6800 XT** の中間に位置する製品を計画しているのだろうか？  
 
 *RA (Ray Accelarator)* は CU数と同数であり、レイトレーシングユニットに関しては **Xbox Series X** と同様の構成を取っているものと思われる。  
 
@@ -75,6 +69,13 @@ HDMI 2.1 VRR、AV1 HWデコードにも対応する。
 ||
 | Typical GPU Power | 250 W | 300 W | 300 W |
 
+**RX 6800** は他 2製品よりも ROP 数が 32基少ないものとなるが、ROP/RB 周りの仕様が *RDNA アーキテクチャ* と同じであるならば無効化する必要は無いはずで、製品の差別化のため意図的に無効化しているか、  
+全体のおおまかな構成が他 2製品と異なり、4 Shader Engine の内 1 Shader Engine を無効化して製品化しているのではないかと思われる。  
+4 Shader Engine のまま 30WGP を実現するには Shader Engine を非対称としなければならず、これは従来の AMD GPU の構成から外れたものになり、スケジューリングに問題が出ると思われる。そのため、1 Shader Engine を無効化している可能性が高い。  
+ただ、それならば 32WGP(64CU)、Shader Engine あたり 8WGP(16CU) とした方が製品化において余裕があり、歩留まり的には有利なように思う。  
+30WGP(60CU) という構成では、3 Shader Engine 内の WGP(CU) がすべて有効な必要がある。  
+**RX 6800** と **RX 6800 XT** の中間に位置する製品を計画しているのだろうか？  
+
 ## Infinity Cache {#if-cache}
 
 今回発表された 3製品に *Infinity Cache* は 128MB 搭載されている。  
@@ -86,7 +87,7 @@ AMD GPU におけるデータキャッシュ階層は、*RDNA アーキテクチ
 また、16ch というのは GDDR6 256-bit のチャネル数と一致し (GDDR6 はチップあたり 16-bit のメモリチャネルを持つ)、他の *RDNA 2* GPU ではメモリバス幅に合わせて、*Infinity Cache* の容量も変更されると思われる。  
 GPU部が *RDNA 2* となる [VanGogh APU](/tags/vangogh) にも搭載されるかは不明だが、APU の性質上、コストを減らすため搭載しないことも考えられる。  
 
-上述した **Radeon RX 6000 Series** のダイショットでは、動画内で示されていた *Infinity Cache* とされる部分はそれ程大きく占めてはいないように見える。  
+上述した **Radeon RX 6000 Series** のダイショットでは、動画内で示されていた *Infinity Cache* とされる部分は 128MB という容量に対してそれ程大きく占めてはいないように見える。  
 これは AMD によると、*Zen 3 アーキテクチャ* の L3キャッシュデザインをベースにしているとのこと。  
 
 *Infinity Cache* により、GDDR6メモリのみで構成された *RDNA アーキテクチャ* ベースの GPU と比較して、電力あたりのメモリ帯域は最大 2.4倍になるとしている。  
