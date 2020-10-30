@@ -23,8 +23,8 @@ GPU ID の数値は上から、主要なバージョン `pGfxIpMajorVer` 、補�
 *gfx909* から進んだとはいえ、そう大きな変更は行なわれてはいないだろう。  
 
 *gfx90c* はある APU の GPUコア部の GPU ID とされる。  
-将来的に登場する APU であり、GPUアーキテクチャの世代が *Vega /GFX9* となるものには *Lucienne* 、*Green Sardine* 、*Cezanne* がいる。  
-その中の *Lucienne* 、*Green Sardine* は、CPU/GPUアーキテクチャは *Renoir* と同じだが、プロセスは進んだものになると考えていたが、  
+将来的に登場する APU であり、GPUアーキテクチャの世代が *Vega /GFX9* となるものには *Lucienne (Zen 2? + Vega?)* 、*Green Sardine (Zen 2? + Vega?)* 、*Cezanne (Zen 3? + Vega?)* がいる。  
+その中の *Lucienne /Green Sardine* は、CPU/GPUアーキテクチャは *Renoir (Zen 2 + Vega)* と同じだが、プロセスは進んだものになると考えていたが、  
 **Ryzen 5000 シリーズ** 、**Radeon RX 6000 シリーズ** がその前世代と同じ 7nmプロセスノードで製造されるという話から、実際はアーキテクチャに若干の変更が施されている可能性が出てきた。  
 続き、*gfx90c* がそれら APU に採用されているのではないかと考えられる。  
 
