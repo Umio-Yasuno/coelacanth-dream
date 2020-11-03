@@ -1,5 +1,5 @@
 ---
-title: "Intel Rocket Lake-S の概要を発表　―― Cypress Cove の詳細はまだ、AV1 HWエンコードに非対応"
+title: "Intel Rocket Lake-S の概要を発表　―― Cypress Cove の詳細はまだ、AV1 HWエンコードには非対応"
 date: 2020-10-30T10:53:31+09:00
 draft: false
 tags: [ "Rocket_Lake", "Gen12" ]

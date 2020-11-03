@@ -146,7 +146,7 @@ summary: " "
 | GL2a | GL2 Arbiter[^gl2a] | == TCA[^gl2a-eq-tca]<br>(Navi10 = 4, Navi14 = 2)
 | GL2c | <!-- GL2 Cache ??? --> | == TCC[^gl2a-eq-tca]<br>(Navi10 = 16, Navi14 = 8)
 | SC | Shader Compiler? / Scan Converter[^scan-converter] | Rasterizer |
-| SX | Shader Export[^scan-converter]t| |
+| SX | Shader Export[^scan-converter] | |
 | GPA | Guest Pysical Address[^gpa] | |
 | EDC | Error Correction and Detection[^edc] | |
 | SPM | Streaming Performance Counter[^spm] | |
