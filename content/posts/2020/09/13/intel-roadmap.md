@@ -12,8 +12,8 @@ noindex: false
 | Intel Roadmap | Core | Atom | Hybrid | GPU |
 | :-- | :--: | :--: | :--: | :--: |
 | 2020 Q3 | *Tiger Lake (TGL-U)*<br>10nm SF / Willow Cove / Gen12 / GNA 2.0<br>DDR4/LPDDR4/LPDDR5<br>Mobile |
-| 2020 Q4? |  | *Jasper Lake (JSL)*<br>10nm / Tremont / Gen11 / GNA 2.0<br>DDR4/LPDDR4<br>Mobile |
-| 2020 sometime? |  | | | *DG1/SG1*<br>10nm {{< xe class="lp" >}} Gen12<br>GDDR6? |
+| 2020 Q4? |  | *Jasper Lake (JSL)*<br>10nm / Tremont / Gen11 / GNA 2.0<br>DDR4/LPDDR4<br>Mobile | | *Iris Xe MAX*<br>10nm SuperFin / Gen12 {{< xe class="lp" >}}<br>LPDDR4 / Mobile
+| 2020 sometime? |  | | | *DG1/SG1*<br>10nm SuperFin / Gen12 {{< xe class="lp" >}} |
 | 2021 Q1 | *Rocket Lake-S (RKL-S)*<br>Gen12<br>Desktop<br><br>*Ice Lake-SP (ICX)*<br>Whitley<br>10nm / Sunny Cove<br>DDR4<br>Server | *Elkhart Lake (EHL)* <br> 10nm / Tremont / Gen11 / GNA 1.0<br>DDR4/LPDDR4<br>Embedded |
 | 2021 Q3 ~ Q4 | *Sapphire Rapids (SPR-SP)*<br>Eagle Stream (Server), Fishhawk Fail (HEDT/WKS?)<br>10nm eSF / Golden Cove?<br>DDR4/DDR5/HBM2E? 8ch<br>~ 4-Die?<br><br>*Ice Lake-D(ICX-D)*<br>Idaville | | *Alder Lake? (ADL-S/ADL-P)*<br>10nm eSF? / Golde Cove + Gracemont / Gen12<br>DDR4/LPDDR4/LPDDR5/DDR5  |
 | 2021 sometime? | *Tiger Lake-H?? (TGL-H)*<br>Tatlow<br>10nm SF / Willow Cove / Gen12 | *Tanner Ridge (TNR)??* | | *DG2*<br>{{< xe class="hpg" >}}<br>GDDR6 |
