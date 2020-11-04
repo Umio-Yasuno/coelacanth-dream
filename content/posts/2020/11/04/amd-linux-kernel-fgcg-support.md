@@ -23,7 +23,7 @@ FGCG は *RDNA / GFX10* の機能としているが、現在有効のフラグ�
 
 *RDNA 2 / GFX10.3* 世代で追加された省電力機能には、Shader Array が非対称である場合の効率を上げるというものがある。  
 {{< link >}} [AMD RDNA 2 ノート　―― 非対称な ShaderArray、gpu_info、XSS 【2020/09/23】 | Coelacanth's Dream](/posts/2020/09/23/rdna_2-note-2020-09-23/#shader-array) {{< /link >}} 
-Shader Engine 内の Shader Array 2基それぞれの CU数が非対称である場合、Wave の発行を少ない方に合わせることで、稼働させる CU数を同じに、Shader Array を実質対称とすることで効率を上げられる。  
+Pixel Shader を処理する時に、Shader Engine 内の Shader Array 2基それぞれの CU数が非対称である場合、Wave の発行を少ない方に合わせることで、稼働させる CU数を同じに、Shader Array を実質対称とすることで効率を上げられる。  
 その CU 分の消費電力は減らせ、他の CU のクロック向上に回すこともできる。  
 FGCG はこうした機能とも組み合わせられ、より活用できるのではないかと思われる。  
 
