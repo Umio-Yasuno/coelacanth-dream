@@ -37,3 +37,8 @@ noindex: true
 <!--
    make me mad. make me sad. meka me feel alright?
 -->
+
+<!--
+   We are blest by everything.
+   Everything we look upon is blest.
+-->
