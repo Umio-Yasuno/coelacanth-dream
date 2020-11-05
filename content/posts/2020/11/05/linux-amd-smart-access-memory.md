@@ -21,10 +21,9 @@ toc: false
  * [Linux では既にサポート済み](#already)
    * [いざ有効化](#enable)
  * [効果の程は](#effect)
-   * [waifu2x-ncnn-vulkan](#waifu2x-ncnn-vulkan)
-      * [環境](#env)
-      * [計測方法](#how)
-      * [結果](#result)
+   * [環境](#env)
+   * [計測方法](#how)
+   * [結果](#result)
 
 {{< /pindex >}}
 
@@ -69,9 +68,8 @@ AMD が示している **AMD Smart Access Memory** 機能による性能向上�
 そして、AMD はボトルネックを削減できるとしているが、どういった処理がボトルネックになっていて、何のソフトウェアであればそれを検証できるか、という問題もある。  
 自分は Linux でも動作する Vulkan ゲームなんて所有しておらず、現実的な使用状況を高度に再現できる Vulkan ベンチマークソフトというのもない。  
 
-### waifu2x-ncnn-vulkan {#waifu2x-ncnn-vulkan}
-
-一応、VRAM をそれなりに使うソフトとしては [waifu2x-ncnn-vulkan](https://github.com/nihui/waifu2x-ncnn-vulkan) が思い浮かんだため、試してはみた。waifu2x-ncnn-vulkan は **RX 560** の VRAM 4GB をちゃんと使い切ってくれる。  
+それでも一応、VRAM をそれなりに使うソフトとしては [waifu2x-ncnn-vulkan](https://github.com/nihui/waifu2x-ncnn-vulkan) が思い浮かんだため、試してはみた。waifu2x-ncnn-vulkan は **RX 560** の VRAM 4GB をちゃんと使い切ってくれる。  
+それと、グラフィクス系として vkmark (1920x1080) を実行したが、vkmark はあまり VRAM を使わないため、CPU からアクセスすることもあまり無いのではないかと思われる。  
 
 #### 環境 {#env}
 
@@ -87,7 +85,11 @@ AMD が示している **AMD Smart Access Memory** 機能による性能向上�
 
 実行コマンド:
 
-      $ time -p <waifu2x-ncnn-vulkan binary> -i "<input dir>" -o "<output dir>" -n 1 -s 2 -m "<waifu2x-ncnn-vulkan model>"
+      waifu2x-ncnn-vulkan:
+         $ time -p <waifu2x-ncnn-vulkan binary> -i "<input dir>" -o "<output dir>" -n 1 -s 2 -m "<waifu2x-ncnn-vulkan model>"
+
+      vkmark (1920x1080):
+         $ ./vkmark -s 1920x1080
 
 いつかに RADV/ACO の検証した時とハードウェア構成は変わらず、Linux Kenrel や Mesa のバージョンだけが上がっている。[^radv-aco-test]  
 実行コマンドも変わらず、/tmp 下に置いた入力用の画像 5枚を収めたディレクトリを指定し、出力画像も /tmp 下に作成したディレクトリを指定している。  
@@ -95,7 +97,10 @@ AMD が示している **AMD Smart Access Memory** 機能による性能向上�
 waifu2x-ncnn-vulkan の設定はデノイズレベルは 1、拡大率は 2x、tile-size はデフォルトの 400、load:proc:save もデフォルトの 1:2:2。
 使用画像の解像度は全て 1136x640。  
 
+
+
 [^radv-aco-test]: [RADV/ACO 検証: waifu2x-ncnn-vulkan の実行が最大3倍近く高速に | Coelacanth's Dream](/posts/2020/04/26/waifu2x-ncnn-vulkan-speedup-aco/)
+
 
 #### 結果 {#result}
 
@@ -104,14 +109,18 @@ waifu2x-ncnn-vulkan の設定はデノイズレベルは 1、拡大率は 2x、t
 | cunet | 14.27s | 12.71s<br>(+12%) |
 | upconv_7_anime_style_art_rgb | 5.93s | 5.90s<br>(+0.5%) |
 
-cunet モデルでの結果は *AMD Smart Access Memory* 有効で 12% の性能向上が確認できたが、正直有意な性能向上が確認できたのはこれくらいで、他の vkmark 等は誤差程度かかえって性能が低下した場合もあった。  
-しかし、上述したように、システム構成がアレであるため、その構成でまともに検証できるかは怪しく、これ以上に労力を掛ける気が起きない。
-AMD が **Zen 3 + RDNA 2** の構成に限定しているのは、こうしたことがあるからなのかもしれない。  
+| vkmark<br>1920x1080 | SAM Off | SAM On |
+| :-- | :--: | :--: |
+| Score | 4729 | 4748<br>(+0.4%) |
 
-もっとまともなシステムを持ち、経験豊富な方が検証を行なってくれることを願う。  
+cunet モデルでの結果は *AMD Smart Access Memory* 有効で 12% の性能向上が確認できたが、正直有意な性能向上が確認できたのはこれくらいで、他の upconv_7_anime_style_art_rgb モデルでの結果と vkmark の結果は誤差だろう。  
+AMD が **Zen 3 + RDNA 2** の構成に限定しているのは、安定して性能向上の効果を得られないからなのかもしれない。  
+あるいはアクセス可能なサイズを大きくする以外に、別の工夫を施しているか。  
 
+ただ、上述したように、システム構成がアレであるため、自分の構成でまともに検証できるかは怪しく、また、これ以上に労力を掛ける気が起きない。  
 現実的なゲームに近いベンチマークとなると、モデルやテクスチャの格納で必要なファイルサイズもいやに大きくなり、テストに使う時間もかなり掛かる。  
 自分でハードウェア/ソフトウェアの検証というものをやってみると、いかにテクニカルライターの方々は忍耐強いかが身に沁みてくる。  
+もっとまともなシステムを持ち、経験豊富な方が検証を行なってくれることを願う。  
 
 また、`Above 4G Decoding` を有効にすると、Linux Kenrel をブートし、ログイン時間に辿り着くまでの時間が若干増えた。精々 1秒前後だが。  
 そういうことで、自分の用途では `Above 4G Decoding` を有効にする意味はほとんど無いのだが、  
