@@ -54,7 +54,7 @@ toc: false
 [^vram_vis_size]: [src/gallium/winsys/radeon/drm/radeon_drm_winsys.c · d8ea50996580a34b17059ec5456c75bb0d1f8750 · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/d8ea50996580a34b17059ec5456c75bb0d1f8750/src/gallium/winsys/radeon/drm/radeon_drm_winsys.c#L364) <br> [src/amd/common/ac_gpu_info.c · 3c2489d2e45b3013361c7284ed9de14fe40554cc · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/3c2489d2e45b3013361c7284ed9de14fe40554cc/src/amd/common/ac_gpu_info.c#L345)
 
 次に BIOS側の設定となるが、`>4GB MMIO` といったオプションは `Above 4G Decoding` という名前で存在している。自分が持っている **MSI B450 GAMING PLUS**、**GIGABYTE GA-A320-HD2 (rev. 1.0)** (現在のメイン機) ではそのようになっており、他社製のマザーボードでもそのようになっているのではないかと思われる。  
-それを Enable に設定して起動、上述したようなコマンドで確かめた結果、`vram_vis_size` の値は、搭載している **RX 560 (Polaris11)** が持つ VRAM と同じサイズである 4096MB となっていた。  
+それを Enabled に設定して起動、上述したようなコマンドで確かめた結果、`vram_vis_size` の値は、搭載している **RX 560 (Polaris11)** が持つ VRAM と同じサイズである 4096MB となっていた。  
 
 [Alex Deucher](https://gitlab.freedesktop.org/agd5f) 氏のコメント通り、Linux環境では既にサポートされており、**Ryzen 5 2600 (Zen+)** と **RX 560** という構成でも有効化が可能だった。  
 
@@ -63,7 +63,7 @@ toc: false
 有効化できたとして、その効果が気になる所だが、まず検証環境に問題がある。  
 
 AMD が示している **AMD Smart Access Memory** 機能による性能向上は、**Ryzen 9 5900X** と **RX 6800 XT** というハードウェア構成で、現実的な使用状況、Vulkan/DX12 のゲームを 4K Ultra 設定で実行している。  
-対し自分の環境は **Ryzen 5 2600** と **RX 560** という構成で、絶対的な性能に圧倒的な性能差があり、CPU-GPU のインターフェイスも **RX 560** が Gen3 x8、**RX 6800 XT** は Gen4 x16 だろうから、帯域では **RX 6800 XT** が 4倍広い。  
+対し自分のハードウェア構成は **Ryzen 5 2600** と **RX 560** という構成で、絶対的な性能に圧倒的な差があり、CPU-GPU のインターフェイスも **RX 560** が Gen3 x8、**RX 6800 XT** は Gen4 x16 だろうから、**RX 6800 XT** の PCIe帯域は 4倍広い。  
 
 そして、AMD はボトルネックを削減できるとしているが、どういった処理がボトルネックになっていて、何のソフトウェアであればそれを検証できるか、という問題もある。  
 自分は Linux でも動作する Vulkan ゲームなんて所有しておらず、現実的な使用状況を高度に再現できる Vulkan ベンチマークソフトというのもない。  
