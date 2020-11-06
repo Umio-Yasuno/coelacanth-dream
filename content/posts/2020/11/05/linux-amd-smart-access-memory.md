@@ -1,5 +1,5 @@
 ---
-title: "Linux環境と Ryzen 5 2600、RX 560 で \"Smart Access Memory\" 機能を試す"
+title: "Linux環境と Ryzen 5 2600、Radeon RX 560 で \"Smart Access Memory\" 機能を試す"
 date: 2020-11-05T05:14:49+09:00
 draft: false
 tags: [ "Linux Kernel", "RADV", "RadeonSI", ]
@@ -51,10 +51,14 @@ toc: false
 
 自分が最初確認した時は、BIOS のあるオプションを有効化していなかったため、256MB と表示されていた。AMD が解説している通りのサイズだ。  
 
+      vram_vis_size = 256 MB
+
 [^vram_vis_size]: [src/gallium/winsys/radeon/drm/radeon_drm_winsys.c · d8ea50996580a34b17059ec5456c75bb0d1f8750 · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/d8ea50996580a34b17059ec5456c75bb0d1f8750/src/gallium/winsys/radeon/drm/radeon_drm_winsys.c#L364) <br> [src/amd/common/ac_gpu_info.c · 3c2489d2e45b3013361c7284ed9de14fe40554cc · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/3c2489d2e45b3013361c7284ed9de14fe40554cc/src/amd/common/ac_gpu_info.c#L345)
 
-次に BIOS側の設定となるが、`>4GB MMIO` といったオプションは `Above 4G Decoding` という名前で存在している。自分が持っている **MSI B450 GAMING PLUS**、**GIGABYTE GA-A320-HD2 (rev. 1.0)** (現在のメイン機) ではそのようになっており、他社製のマザーボードでもそのようになっているのではないかと思われる。  
+次に BIOS側の設定となるが、`>4GB MMIO` といったオプションは `Above 4G Decoding` という名前で存在している。自分が持っている **GIGABYTE GA-A320-HD2 (rev. 1.0)** (現在のメイン機) ではそのようになっており、他社製のマザーボードでもそのようになっているのではないかと思われる。  
 それを Enabled に設定して起動、上述したようなコマンドで確かめた結果、`vram_vis_size` の値は、搭載している **RX 560 (Polaris11)** が持つ VRAM と同じサイズである 4096MB となっていた。  
+
+      vram_vis_size = 4096 MB
 
 [Alex Deucher](https://gitlab.freedesktop.org/agd5f) 氏のコメント通り、Linux環境では既にサポートされており、**Ryzen 5 2600 (Zen+)** と **RX 560** という構成でも有効化が可能だった。  
 
@@ -76,6 +80,7 @@ AMD が示している **AMD Smart Access Memory** 機能による性能向上�
 | Hardware/Software | Desc |
 | :-- | :--: |
 | CPU | AMD Ryzen 5 2600<br>(6-Core/12-Thread, 3.4GHz) |
+| M/B | GIGABYTE GA-A320-HD2 (rev 1.0) |
 | Memory | DDR4-2933 16GB |
 | GPU | AMD Radeon RX 560<br>(16CU/1024SP, 1080MHz,<br>VRAM 4GB, 7Gbps<br>PCIe Gen3 x8) |
 | Linux Kernel | 5.9.1 |
@@ -97,23 +102,20 @@ AMD が示している **AMD Smart Access Memory** 機能による性能向上�
 waifu2x-ncnn-vulkan の設定はデノイズレベルは 1、拡大率は 2x、tile-size はデフォルトの 400、load:proc:save もデフォルトの 1:2:2。
 使用画像の解像度は全て 1136x640。  
 
-
-
 [^radv-aco-test]: [RADV/ACO 検証: waifu2x-ncnn-vulkan の実行が最大3倍近く高速に | Coelacanth's Dream](/posts/2020/04/26/waifu2x-ncnn-vulkan-speedup-aco/)
-
 
 #### 結果 {#result}
 
 | waifu2x-ncnn-vulkan<br>(real time) | SAM Off | SAM On |
 | :-- | :--: | :--: |
 | cunet | 14.27s | 12.71s<br>(+12%) |
-| upconv_7_anime_style_art_rgb | 5.93s | 5.90s<br>(+0.5%) |
+| upconv\_7\_anime\_style\_art\_rgb | 5.93s | 5.90s<br>(+0.5%) |
 
 | vkmark<br>1920x1080 | SAM Off | SAM On |
 | :-- | :--: | :--: |
 | Score | 4729 | 4748<br>(+0.4%) |
 
-cunet モデルでの結果は *AMD Smart Access Memory* 有効で 12% の性能向上が確認できたが、正直有意な性能向上が確認できたのはこれくらいで、他の upconv_7_anime_style_art_rgb モデルでの結果と vkmark の結果は誤差だろう。  
+cunet モデルでの結果は *AMD Smart Access Memory* 有効で 12% の性能向上が確認できたが、正直有意な性能向上が確認できたのはこれくらいで、他の upconv\_7\_anime\_style\_art\_rgb モデルでの結果と vkmark の結果は誤差だろう。  
 AMD が **Zen 3 + RDNA 2** の構成に限定しているのは、安定して性能向上の効果を得られないからなのかもしれない。  
 あるいはアクセス可能なサイズを大きくする以外に、別の工夫を施しているか。  
 
