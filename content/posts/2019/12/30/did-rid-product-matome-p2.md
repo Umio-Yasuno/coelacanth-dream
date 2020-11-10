@@ -133,6 +133,7 @@ summary: " "
 | | ? | PRO 3150GE | (35W AM4 Vega 3) |
 | | ? | PRO 3350G | (65W AM4 Vega 10) |
 | | ? | PRO 3350GE | (35W AM4 Vega 10) |
+| | ? | 3450U | |
 
 [Page Top](#page_index)
 
@@ -237,7 +238,7 @@ DG02SRTBP4MFA
 | | CE | 4600U?[^rn-4600u] | (B4 35W AM4) |
 | | D1 | PRO 4750U[^rn-pro-4750u] | (B12B 15W FP6) |
 | | D2 | | (B10B 15W FP6) |
-| | D3 | | (B8B 15W FP6) |
+| | D3 | PRO 4650U[^rn-pro-4650u] | (B8B 15W FP6) |
 | | D4 | PRO 4450U[^rn-pro-4450u] | (B6B 15W FP6) |
 | | D5 | | (B12B 45W FP6) |
 | | D6 | | (B10B 45W FP6) |
@@ -263,8 +264,8 @@ DG02SRTBP4MFA
 | | ? | PRO 4750GE |
 | | ? | PRO 4650GE |
 | | ? | PRO 4350GE |
-| | ? | PRO 4650U |
 
+[^rn-pro-4650u]: [Panic on boot with Renoir when testing drm-live-devel-20200906.img · Issue #23 · freebsd/drm-kmod](https://github.com/freebsd/drm-kmod/issues/23)
 [^rn-4800u]: [New Ryzen 4800U Laptop with Radeon RX 5500M kernel freezes / Kernel & Hardware / Arch Linux Forums](https://bbs.archlinux.org/viewtopic.php?id=257345)
 [^rn-4700u]: <https://www.mail-archive.com/tech@openbsd.org/msg59151.html>
 [^rn-4900hs]: [Folding Forum • View topic - Ryzen 4900HS Renoir iGPU Not Receiving Work](https://foldingforum.org/viewtopic.php?f=108&t=35623)

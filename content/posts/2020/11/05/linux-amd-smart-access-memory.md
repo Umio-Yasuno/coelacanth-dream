@@ -51,14 +51,19 @@ toc: false
 
 自分が最初確認した時は、BIOS のあるオプションを有効化していなかったため、256MB と表示されていた。AMD が解説している通りのサイズだ。  
 
-      vram_vis_size = 256 MB
+ >       vram_vis_size = 256 MB
 
 [^vram_vis_size]: [src/gallium/winsys/radeon/drm/radeon_drm_winsys.c · d8ea50996580a34b17059ec5456c75bb0d1f8750 · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/d8ea50996580a34b17059ec5456c75bb0d1f8750/src/gallium/winsys/radeon/drm/radeon_drm_winsys.c#L364) <br> [src/amd/common/ac_gpu_info.c · 3c2489d2e45b3013361c7284ed9de14fe40554cc · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/3c2489d2e45b3013361c7284ed9de14fe40554cc/src/amd/common/ac_gpu_info.c#L345)
 
 次に BIOS側の設定となるが、`>4GB MMIO` といったオプションは `Above 4G Decoding` という名前で存在している。自分が持っている **GIGABYTE GA-A320-HD2 (rev. 1.0)** (現在のメイン機) ではそのようになっており、他社製のマザーボードでもそのようになっているのではないかと思われる。  
-それを Enabled に設定して起動、上述したようなコマンドで確かめた結果、`vram_vis_size` の値は、搭載している **RX 560 (Polaris11)** が持つ VRAM と同じサイズである 4096MB となっていた。  
+`Above 4G Decoding` は複数の GPUカード、またはコプロセッサーである **Xeon Phi** や、GPUアクセラレーターである **NVIDIA Tesla** を搭載したシステムを扱う際にも有効にする必要があったらしい。[^asus-above-4g-decoding]  
+一部の Intelプラットフォームでもサポートされていると思われるが、確証はない。  
 
-      vram_vis_size = 4096 MB
+[^asus-above-4g-decoding]: [拡張カードを複数取り付けた場合に正しく認識されない | サポート 公式 | ASUS 日本](https://www.asus.com/jp/support/FAQ/1017190/
+
+`Above 4G Decoding` を Enabled に設定して起動、上述したようなコマンドで確かめた結果、`vram_vis_size` の値は、搭載している **RX 560 (Polaris11)** が持つ VRAM と同じサイズである 4096MB となっていた。  
+
+ >       vram_vis_size = 4096 MB
 
 [Alex Deucher](https://gitlab.freedesktop.org/agd5f) 氏のコメント通り、Linux環境では既にサポートされており、**Ryzen 5 2600 (Zen+)** と **RX 560** という構成でも有効化が可能だった。  
 
