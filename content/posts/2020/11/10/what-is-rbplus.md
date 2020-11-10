@@ -1,5 +1,5 @@
 ---
-title: "一部の AMD GPU で実装、有効化されている RB+"
+title: "一部の AMD GPU で実装、有効化されている RB+ とは何か"
 date: 2020-11-10T20:09:50+09:00
 draft: false
 tags: [ "RDNA_2" ]
@@ -26,6 +26,7 @@ RB はクロックあたり 4ピクセルを処理することができ (4 pixel
 dGPU では *Vega12 (gfx904)* 、*RDNA 2 / GFX10.3* 世代である [Sienna Cichlid](/tags/sienna_cichlid) 、[Navy Flounder](/tags/navy_flounder) 、[Dimgrey Cavefish](/tags/dimgrey_cavefish) が該当する。  
 
 機能的には持っているはずだが、無効化されている GPU には、*Vega10 (gfx900)* 、 *Vega20 (gfx908)* 、*Navi10 (gfx1010)* 、*Navi12 (gfx1011)* 、 *Navi14 (gfx1012)* がある。  
+これらの GPU で無効化されている理由は不明。  
 
  >       info->has_rbplus = info->family == CHIP_STONEY || info->chip_class >= GFX9;
  >    
