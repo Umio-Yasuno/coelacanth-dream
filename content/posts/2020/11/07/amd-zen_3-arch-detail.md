@@ -86,7 +86,7 @@ Load/Store を発行する AGU (Address Generation Unit) は *Zen 2アーキテ�
 *Zen 2アーキテクチャ* ではサイクルあたり 256-bit幅の 2x Loads、1x Store となっていたのが、  
 *Zen 3アーキテクチャ* ではサイクルあたり 最大で 3x Loads、または 2x Store となった。また、2x 128-bit か 1x 256-bit を個別にロードすることが可能となった。また、3基の AGU は対称で、全てが Load/Store キュー、L1/L2 TLB にアクセス可能。  
 最大で 2x Store を発行することが可能だが、データ幅が 128-bit または 256-bit の場合は最大 1つまでとなる。  
-Load/Store は、*Zen 2アーキテクチャ* よりも Load のスループットを高めつつ、より柔軟に扱えるよう拡張したと言える。  
+Load/Store は *Zen 2アーキテクチャ* から、より柔軟に扱えるよう拡張したと言える。  
 
 ### 浮動小数点/Floating-Point {#fp}
 

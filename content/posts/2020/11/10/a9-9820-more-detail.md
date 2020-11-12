@@ -39,7 +39,8 @@ toc: false
 そして、フルスペックでは各 Shader Engine は CU を 7基ずつ持つ。  
 6CU, 8ROP という構成を取るとき、各 Shader Engine の CU を 3基ずつ、RB (Render Backend, ROP 4基相当) は 1基ずつ有効にする方法と、  
 片方の Shader Engine を無効化し、もう片方の、CU 6基と RB 2基を有効にするという方法がある。  
+AMD GPU の構成上、各 Shader Engine の CU を 3基ずつ、RB (Render Backend, ROP 4基相当) は 1基ずつ有効にしているとは思われる。  
 
-どちらの方法を取っているかは、Linuxのドライバーで確認するのが手っ取り早いように思うが、`DeviceID: 0x154C` というのはコードには無く、Linux環境でまともに動作するか、認識するかは怪しい。  
+実際にどちらの方法を取っているかは、Linuxのドライバーで確認するのが手っ取り早いように思うが、`DeviceID: 0x154C` というのはコードには無く、Linux環境でまともに動作するか、認識するかは怪しい。  
 Windowsドライバーでは *Kaveri APU* として認識させているようなので、Linux でもドライバーに一部変更を加えてビルドすれば動作させられるかもしれないが、あくまで可能性の話である。  
 
