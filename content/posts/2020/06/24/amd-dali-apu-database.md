@@ -63,7 +63,7 @@ Linux Kernel へのパッチに初めて *Dali* という名前が出てきた�
 | GPU | *Vega (gfx909)* |
 | &emsp;Max GPU CU | 3 |
 | &emsp;Max GPU SP | 192 |
-| &emsp;Max RB | 1<br>(== 1-ROP) |
+| &emsp;Max RB+ | 1<br>(== 8-ROP) |
 | &emsp;GPU L2cache | 512 KB |
 | &emsp;GPU Clock | 800 ~ 1200 MHz |
 | Process | GF 14nm |
