@@ -15,9 +15,7 @@ Intel は [oneAPI Level Zero](https://spec.oneapi.com/versions/latest/elements/l
 
 ## 巨大なキャッシュ、より多くのスレッド
 
-*DG1* は *Tiger Lake GT2* と同様に、  
-EU数 96基、L3cacheバンク 8基、最大Pixel Fill Rate 16/clock (16ROP相当)、  
-EUをまとめる Sub-Slice内の共有キャッシュ(SLM)のサイズ 64KB、EUあたりが保持するスレッド数 7スレッド、という構成になる。[^2][^3]  
+*DG1* は *Tiger Lake GT2* と同様に、EU数 96基、L3cacheバンク 8基、EUをまとめる Sub-Slice内の共有キャッシュ(SLM)のサイズ 64KB、EUあたりが保持するスレッド数 7スレッド、という構成になる。[^2][^3]  
 
 しかし、*DG1* の L3cacheバンクあたりの容量は大幅に増量され、*Tiger Lake GT2* がバンクあたり 480KB、計 3840KB であるのに対し、  
 *DG1* はバンクあたり 2048KB(2MB)、計 16384KB(16MB) となっている。  
@@ -28,7 +26,7 @@ EUをまとめる Sub-Slice内の共有キャッシュ(SLM)のサイズ 64KB、E
 [^2]: [compute-runtime/hw_cmds_dg1.h at 3029db07c3135ec5fde55de369ead2c14f9b3f9c · intel/compute-runtime](https://github.com/intel/compute-runtime/blob/3029db07c3135ec5fde55de369ead2c14f9b3f9c/shared/source/gen12lp/hw_cmds_dg1.h)
 [^3]: [compute-runtime/hw_cmds_tgllp.h at 3029db07c3135ec5fde55de369ead2c14f9b3f9c · intel/compute-runtime](https://github.com/intel/compute-runtime/blob/3029db07c3135ec5fde55de369ead2c14f9b3f9c/shared/source/gen12lp/hw_cmds_tgllp.h)
 
-96EU(768SP)、16ROP相当というのは、AMD GPU では *Polaris11 (1024SP, 4RB/16ROP)* 、*Polaris12 (640SP, 4RB/16ROP)* なんかが近い規模となる。  
+96EU(768SP) というのは、AMD GPU では *Polaris11 (1024SP, 4RB/16ROP)* 、*Polaris12 (640SP, 4RB/16ROP)* なんかが近い規模となる。  
 Intel GPUアーキテクチャでは L3cacheバンク内で、バッファとして機能する URB、DC(Data Cluster)、Color/Zキャッシュ等それぞれに容量を割り振るため、データキャッシュのサイズはその設定次第となる。  
 また、キャッシュ階層等が異なるため単純な性能比較は難しいが、それでもキャッシュサイズ自体がかなり大きいことは確かだ。  
 設定次第というのも、言い換えれば巨大なキャッシュをグラフィック処理向けにも、GPGPU向けにも設定できる。  
