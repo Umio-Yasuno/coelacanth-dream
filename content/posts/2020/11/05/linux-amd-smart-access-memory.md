@@ -59,7 +59,7 @@ toc: false
 `Above 4G Decoding` は複数の GPUカード、またはコプロセッサーである **Xeon Phi** や、GPUアクセラレーターである **NVIDIA Tesla** を搭載したシステムを扱う際にも有効にする必要があったらしい。[^asus-above-4g-decoding]  
 一部の Intelプラットフォームでもサポートされていると思われるが、確証はない。  
 
-[^asus-above-4g-decoding]: [拡張カードを複数取り付けた場合に正しく認識されない | サポート 公式 | ASUS 日本](https://www.asus.com/jp/support/FAQ/1017190/
+[^asus-above-4g-decoding]: [拡張カードを複数取り付けた場合に正しく認識されない | サポート 公式 | ASUS 日本](https://www.asus.com/jp/support/FAQ/1017190/)
 
 `Above 4G Decoding` を Enabled に設定して起動、上述したようなコマンドで確かめた結果、`vram_vis_size` の値は、搭載している **RX 560 (Polaris11)** が持つ VRAM と同じサイズである 4096MB となっていた。  
 

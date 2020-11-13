@@ -15,7 +15,7 @@ AMD の次世代モバイル向けプロセッサの 1つ、**Ryzen 7 5700U** �
 
  * [HP HP Pavilion Laptop 15-eh1xxx - Geekbench Browser](https://browser.geekbench.com/v5/compute/1804236)
 
-それと、まだ確証は無いが、この記事では **Ryzen 7 5700U** のベースとなる APU を便宜的に [Lucienne APU](/tags/lucienne) とする。  
+それと、まだ確証は出てきていないが、この記事では **Ryzen 7 5700U** のベースとなる APU を便宜的に [Lucienne APU](/tags/lucienne) とする。  
 *Lucienne* は *Renoir* と同じ **Zen 2 + Vega** の構成を取る。  
 
 {{< pindex >}}
