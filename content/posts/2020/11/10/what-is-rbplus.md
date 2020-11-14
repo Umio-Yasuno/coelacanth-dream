@@ -25,7 +25,7 @@ RB はクロックあたり 4ピクセルを処理することができ (4 pixel
 有効可能なものには、APU だと *Stony* 、[Raven/Picasso (gfx902)](/tags/raven)、[Raven2 (gfx909)](/tags/raven2)、[Renoir (gfx90c)](/tags/renoir)、[VanGogh](/tags/vangogh) が、  
 dGPU では *Vega12 (gfx904)* 、*RDNA 2 / GFX10.3* 世代である [Sienna Cichlid](/tags/sienna_cichlid) 、[Navy Flounder](/tags/navy_flounder) 、[Dimgrey Cavefish](/tags/dimgrey_cavefish) が該当する。  
 
-機能的には持っているはずだが、無効化されている GPU には、*Vega10 (gfx900)* 、 *Vega20 (gfx908)* 、*Navi10 (gfx1010)* 、*Navi12 (gfx1011)* 、 *Navi14 (gfx1012)* がある。  
+機能的には持っているはずだが、無効化されている GPU には、*Vega10 (gfx900)* 、 *Vega20 (gfx906)* 、*Navi10 (gfx1010)* 、*Navi12 (gfx1011)* 、 *Navi14 (gfx1012)* がある。  
 これらの GPU で無効化されている理由は不明。  
 
  >       info->has_rbplus = info->family == CHIP_STONEY || info->chip_class >= GFX9;
