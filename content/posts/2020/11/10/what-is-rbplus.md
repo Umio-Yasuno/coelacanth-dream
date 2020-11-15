@@ -21,8 +21,8 @@ RB はクロックあたり 4ピクセルを処理することができ (4 pixel
 
 ## 一部の APU/GPU に実装、有効化 {#some-gpu}
 
-*RB+ / RB Plus* は、オープンソースドライバーの [src/amd/common/ac_gpu_info.c](https://gitlab.freedesktop.org/mesa/mesa/blob/master/src/amd/common/ac_gpu_info.c) によると、*Stony APU (gfx810)* と GFX9 とそれ以降世代の APU/GPU に実装されているが、すべてが有効にできるのではなく、一部のみとなっている。  
-有効可能なものには、APU だと *Stony* 、[Raven/Picasso (gfx902)](/tags/raven)、[Raven2 (gfx909)](/tags/raven2)、[Renoir (gfx90c)](/tags/renoir)、[VanGogh](/tags/vangogh) が、  
+*RB+ / RB Plus* は、オープンソースドライバーの [src/amd/common/ac_gpu_info.c](https://gitlab.freedesktop.org/mesa/mesa/blob/master/src/amd/common/ac_gpu_info.c) によると、*Stoney APU (gfx810)* と GFX9 とそれ以降世代の APU/GPU に実装されているが、すべてが有効にできるのではなく、一部のみとなっている。  
+有効可能なものには、APU だと *Stoney* 、[Raven/Picasso (gfx902)](/tags/raven)、[Raven2 (gfx909)](/tags/raven2)、[Renoir (gfx90c)](/tags/renoir)、[VanGogh](/tags/vangogh) が、  
 dGPU では *Vega12 (gfx904)* 、*RDNA 2 / GFX10.3* 世代である [Sienna Cichlid](/tags/sienna_cichlid) 、[Navy Flounder](/tags/navy_flounder) 、[Dimgrey Cavefish](/tags/dimgrey_cavefish) が該当する。  
 
 機能的には持っているはずだが、無効化されている GPU には、*Vega10 (gfx900)* 、 *Vega20 (gfx906)* 、*Navi10 (gfx1010)* 、*Navi12 (gfx1011)* 、 *Navi14 (gfx1012)* がある。  

@@ -55,9 +55,18 @@ toc: false
 
 [^vram_vis_size]: [src/gallium/winsys/radeon/drm/radeon_drm_winsys.c · d8ea50996580a34b17059ec5456c75bb0d1f8750 · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/d8ea50996580a34b17059ec5456c75bb0d1f8750/src/gallium/winsys/radeon/drm/radeon_drm_winsys.c#L364) <br> [src/amd/common/ac_gpu_info.c · 3c2489d2e45b3013361c7284ed9de14fe40554cc · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/3c2489d2e45b3013361c7284ed9de14fe40554cc/src/amd/common/ac_gpu_info.c#L345)
 
+また、スーパーユーザー権限が必要となるが `dmesg` コマンドでも確認することができる。  
+
+       % dmesg | grep "Detected VRAM"
+
+BAR の値が CPU から VRAM へアクセス可能なサイズとなる。  
+
+ >       [    2.565379] [drm] Detected VRAM RAM=4096M, BAR=256M
+
+
 次に BIOS側の設定となるが、`>4GB MMIO` といったオプションは `Above 4G Decoding` という名前で存在している。自分が持っている **GIGABYTE GA-A320-HD2 (rev. 1.0)** (現在のメイン機) ではそのようになっており、他社製のマザーボードでもそのようになっているのではないかと思われる。  
 `Above 4G Decoding` は複数の GPUカード、またはコプロセッサーである **Xeon Phi** や、GPUアクセラレーターである **NVIDIA Tesla** を搭載したシステムを扱う際にも有効にする必要があったらしい。[^asus-above-4g-decoding]  
-一部の Intelプラットフォームでもサポートされていると思われるが、確証はない。  
+一部の Intelプラットフォームでもサポートされていると思われるが、確証はない、というより試せない。  
 
 [^asus-above-4g-decoding]: [拡張カードを複数取り付けた場合に正しく認識されない | サポート 公式 | ASUS 日本](https://www.asus.com/jp/support/FAQ/1017190/)
 
