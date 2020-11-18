@@ -2,7 +2,7 @@
 title: "【シーラカンスノート】 RadeonSI が VRS に対応、他 RDNA 2 dGPU の DeviceID 【2020/11/18】"
 date: 2020-11-18T15:47:28+09:00
 draft: false
-tags: [ "RadeonSI", "RDNA_2", "Navy_Flounder", "Dimgrey Cavefish" ]
+tags: [ "RadeonSI", "RDNA_2", "Navy_Flounder", "Dimgrey_Cavefish" ]
 # keywords: [ "", ]
 categories: [ "Note", "Hardware", "AMD", "GPU" ]
 noindex: false
