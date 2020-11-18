@@ -515,23 +515,37 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 
 <!--  Navi21: gfx1030 [^12]   -->
 
+[^12]: [P4 to Git Change 1759681 by asalmanp@asalmanp-ocl-stg on 2019/03/21 1… · ROCm-Developer-Tools/ROCclr@42c005d](https://github.com/ROCm-Developer-Tools/ROCclr/commit/42c005d656a8bd99f87fa4fc86ad086701c59a86)
+
 #### Navy Flounder ( gfx1031 ) {#navy_flounder-gfx1031}
 
-[^12]: [P4 to Git Change 1759681 by asalmanp@asalmanp-ocl-stg on 2019/03/21 1… · ROCm-Developer-Tools/ROCclr@42c005d](https://github.com/ROCm-Developer-Tools/ROCclr/commit/42c005d656a8bd99f87fa4fc86ad086701c59a86)
+| Device ID | Revision ID | Product Name | Memo |
+| :--- | :--- | :---: | :---: |
+| 73C0 | | |
+| 73C1 | | |
+| 73C3 | | |
+| 73DF | | |
 
 <!--
     Nav\i2\2: gf\x 10/3\ 1?
     Na/vi\23: gf\x 10\32?
 
     M\I20\0: gf\x9\0\9??? maybe temp id
-
-[^14]: [P4 to Git Change 2042212 by kjayapra@1_HIPWS_LNX1_PAL on 2019/12/06 1… · ROCm-Developer-Tools/ROCclr@a35c1d2](https://github.com/ROCm-Developer-Tools/ROCclr/commit/a35c1d2f2d954363c7d2121d5334f9e7766beeae)
 -->
 
 
+[^14]: [P4 to Git Change 2042212 by kjayapra@1_HIPWS_LNX1_PAL on 2019/12/06 1… · ROCm-Developer-Tools/ROCclr@a35c1d2](https://github.com/ROCm-Developer-Tools/ROCclr/commit/a35c1d2f2d954363c7d2121d5334f9e7766beeae)
 [^5]:<https://github.com/ROCm-Developer-Tools/aomp-extras/blob/f3d316fe64347e697a9789f0f2499fec50024db1/utils/bin/gputable.txt#L1867>
 
 #### Dimgrey Cavefish ( gfx1032? ) {#dimgrey_cavefish-gfx1032}
+
+| Device ID | Revision ID | Product Name | Memo |
+| :--- | :--- | :---: | :---: |
+| 73E0 | | |
+| 73E1 | | |
+| 73E2 | | |
+| 73FF | | |
+
 
 {{< ref >}}
 
