@@ -1,5 +1,5 @@
 ---
-title: "Coreboot に Renoir/Lucienne/Cezanne らしき DeviceID が追加される"
+title: "Coreboot に Renoir と Lucienne/Cezanne らしき DeviceID が追加される"
 date: 2020-11-18T22:00:24+09:00
 draft: false
 tags: [ "Renoir", "Lucienne", "Cezanne" ]

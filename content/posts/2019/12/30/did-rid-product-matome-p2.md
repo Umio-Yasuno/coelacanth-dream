@@ -432,6 +432,7 @@ Navi LITE 13///\\\E9:00
 | | C3 | RX 5700M | |
 | | C4 | RX 5700 | (Navi10 XL) |
 | | C5 | RX 5700 XT | |
+| | C6 | RX 5700XTB | for Blockchain |
 | | C7 | | |
 | | CA | RX 5600 XT | (Navi10 XLE) |
 | | CB | RX 5600 | (Navi10 XE) |
@@ -484,7 +485,7 @@ Navi LITE 13///\\\E9:00
 | | C3 | RX 5300M | (Navi14 XLM) |
 | | C5 | RX 5500 XT | (Navi14 XTX) |
 | | C7 | RX 5500 | (Navi14 XT) |
-| | C9 | | headless (for blockchain?) |
+| | C9 | RX 5500XTB | for Blockchain |
 | | CF | RX 5300? | (Navi14 XL?) |
 | | F2 | | |
 | | F3 | | |
