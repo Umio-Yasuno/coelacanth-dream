@@ -151,7 +151,13 @@ summary: " "
 | EDC | Error Correction and Detection[^edc] | |
 | SPM | Streaming Performance Counter[^spm] | |
 | ICD | Installable Client Driver | |
+| MALL | Memory Access (at) Last Level[^mall] | GFX10.3+ |
+| SRD | Shader Resource Descriptor[^srd] | |
+| PRT | Partially Resident Texture[^prt] | |
 
+[^prt]: [pal/palDeveloperHooks.h at c9937b277c491a55c689eec7cdd48fb238b8004c · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/c9937b277c491a55c689eec7cdd48fb238b8004c/inc/core/palDeveloperHooks.h#L325)
+[^srd]: [pal/palCodingStandards.md at 4ae736bdbc5d5dee59851ac564c5e21d807b44b0 · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/4ae736bdbc5d5dee59851ac564c5e21d807b44b0/doc/process/palCodingStandards.md)
+[^mall]: [[PATCH 2/3] drm/amdgpu: add support to configure MALL for sienna_cichlid (v2)](https://lists.freedesktop.org/archives/amd-gfx/2020-October/055006.html)
 [^scan-converter]: [AMD PowerPoint- White Template - nordic-game-2019-triangles-are-precious.pdf](https://gpuopen.com/presentations/2019/nordic-game-2019-triangles-are-precious.pdf)
 [^spm]: <https://github.com/GPUOpen-Drivers/pal/blob/477c8e78bc4f8c7f8b4cd312e708935b0e04b1cc/inc/core/palPerfExperiment.h#L92>
 [^ulv]: [drm/amd/powerplay: enable Ultra Low Voltage for sienna_cichlid](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/powerplay/sienna_cichlid_ppt.c?h=amd-staging-drm-next&id=e912f967af0182039fb9f2668c78967f0056a769)

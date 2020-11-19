@@ -433,7 +433,7 @@ Navi LITE 13///\\\E9:00
 | | C4 | RX 5700 | (Navi10 XL) |
 | | C5 | RX 5700 XT | |
 | | C6 | RX 5700XTB | for Blockchain |
-| | C7 | | |
+| | C7 | RX 5700B | for Blockchain |
 | | CA | RX 5600 XT | (Navi10 XLE) |
 | | CB | RX 5600 | (Navi10 XE) |
 | | E1 | | |
