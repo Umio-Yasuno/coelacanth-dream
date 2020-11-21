@@ -27,6 +27,9 @@ dGPU では *Vega12 (gfx904)* 、*RDNA 2 / GFX10.3* 世代である [Sienna Cich
 
 機能的には持っているはずだが、無効化されている GPU には、*Vega10 (gfx900)* 、 *Vega20 (gfx906)* 、*Navi10 (gfx1010)* 、*Navi12 (gfx1011)* 、 *Navi14 (gfx1012)* がある。  
 これらの GPU で無効化されている理由は不明。  
+APU では基本有効化されていることから、メモリ帯域が関係していると考えられる。  
+ただ *GFX9 / Vega* 世代以上の dGPU では、HBM2 2048-bit を備える *Vega10* 、HBM2 4096-bit の *Vega20* では無効化され、HBM2 1024-bit である *Vega12* では有効化され、  
+*RDNA / GFX10* 世代の *Navi10* GDDR6 256-bit、*Navi14* GDDR6 128-bit では無効化されているあたり、単純にメモリ帯域で決めているようにも思えない。  
 
  >       info->has_rbplus = info->family == CHIP_STONEY || info->chip_class >= GFX9;
  >    
