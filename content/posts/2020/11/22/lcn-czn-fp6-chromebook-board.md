@@ -17,9 +17,10 @@ toc: false
 {{< link >}} [Guybrush: Add initial Guybrush overlay (I33a515e8) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/overlays/board-overlays/+/2546293) {{< /link >}}
 {{< link >}} [Mancomb: Add initial Mancomb overlay (I8d2b7384) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/overlays/board-overlays/+/2546294) {{< /link >}}
 
-`chipset-cezanne` という書き方ではあるが、意味としては *FP6パッケージ* を指し、*Cezanne* に限らず、*Lucienne* も搭載可能と思われる。  
+`chipset-cezanne` という書き方ではあるが、意味としては *FP6パッケージ* を指し、*Cezanne* に限らず、*Lucienne* も搭載可能と思われる。2つの APU は主に CPUアーキテクチャが異なるが、同時期に登場すると見られている。  
 *FP6パッケージ* を採用し、*Renoir* を搭載したノートPC製品が既に出ているが、それよりも前世代の Chromebook向け AMD APU では、*Raven* をスキップし、*Picasso (12nm)* と *Raven2 (Dali/Pollock, 14nm)* を採用したことから、  
 同様に *Renoir* をスキップ、*Lucienne* と *Cezanne* を Chromebook に採用するのだろう。  
+*Lucienne/Cezanne* は、I/O、GPU部は *Renoir* とほとんど変わらず、パッケージについても特に変わらないとされる。  
 
 TDP 6W以下をターゲットとしたパッケージと APU(SoC) には、*FT5パッケージ* と [Pollock](/tags/pollock) がいるが、これらの後継については現時点で自分が持っている情報は無い。  
 {{< link >}} [AMD Pollock APU データベース | Coelacanth's Dream](/posts/2020/06/14/amd-pollock-apu-database/) {{< /link >}}
