@@ -1,5 +1,5 @@
 ---
-title: "Lucienne/Cezanne を搭載する Chromebookボード　―― Guybrush、Mancomb"
+title: "Lucienne/Cezanne APU を搭載する Chromebookボード　―― Guybrush、Mancomb"
 date: 2020-11-22T04:43:01+09:00
 draft: false
 tags: [ "Lucienne", "Cezanne", "Chromebook", ]
