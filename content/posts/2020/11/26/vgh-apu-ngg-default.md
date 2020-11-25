@@ -36,5 +36,6 @@ dGPU と比べてメモリ帯域がずっと狭い APU では、このことに�
 *VanGogh* は LPDDR4/xメモリよりも高速かつ省電力な LPDDR5メモリをサポートするとされている。*VanGogh* が LPDDR5-5500 128-bit をサポートすると *仮定* して、*Renoir* と比較すると、ピークメモリ帯域は約 1.3倍となる。(88.0 GB/s vs 68.3 GB/s)  
 {{< link >}} [Linux Kernel に AMD の次世代 APU "VanGogh" をサポートするパッチが投稿される | Coelacanth's Dream](/posts/2020/09/26/amd-vgh-linux-kernel-patch/) {{< /link >}}
 また、*VanGogh* は *Vega /GFX9* 世代以降の GPU を搭載する {{< comple >}} Xbox Series X|S、PS5 のゲーム機向け APU を除けば  {{< /comple >}} 初の APU である。 APU は *Raven* からしばらく、GPU の世代は *Vega /GFX9* から進まなかった。  
+*RDNA 2 /GFX10.3* 世代となることで、グラフィクス性能だけでなく、混合精度関連の命令サポートによるコンピュート性能の向上も期待できる。  
 
 そのため、メモリの高速化、GPU部に *RDNA 2 /GFX10.3* 世代の採用、*NGG* サポートによる GPU性能の向上、初の *RDNA系アーキテクチャ* 採用 APU としてその構成等、*VanGogh* には期待点、未知の部分が多く {{< comple >}} これらはそのまま魅力とも言い換えられる {{< /comple >}}、個人的に *VanGogh* は特に正式発表が待ち遠しい APU である。  
