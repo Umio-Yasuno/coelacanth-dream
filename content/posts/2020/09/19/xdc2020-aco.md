@@ -40,7 +40,7 @@ Vulkan API でレイトレーシングをサポートする拡張仕様はドラ
 
 ### Mesh Shader は NGG で実行可能か {#ms-on-ngg}
 
-NVIDIA が Turing 世代で新設したプログラムシェーダー、Mesh Shader だが、スライド内にて *RDNA /GFX10* からハードウェア側でサポートされている NGG(Next Generation Geometory) で実行できる *可能性* があると述べている。(Page54)  
+NVIDIA が Turing 世代で新設したプログラムシェーダー、Mesh Shader だが、スライド内にて *RDNA /GFX10* からハードウェア側でサポートされている NGG(Next Generation Geometry) で実行できる *可能性* があると述べている。(Page54)  
 まだ Vulkan API での拡張機能がリリースされていないため実装、テストは行なわれていないが、  
 もし実行可能であるならば、次世代コンソール機でサポートが分かれていた、PS5 のプリミティブシェーダー、Xbox Series X/S でサポートされている Mesh Shader が、ハードウェア側としてはどちらも NGG によって実行されている可能性が考えられる。  
 

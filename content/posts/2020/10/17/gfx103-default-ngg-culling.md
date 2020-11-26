@@ -22,7 +22,7 @@ Proカードのみの理由は恐らく、非同期コンピュートでのカ�
 
 ## NGGカリング / プリミティブシェーダー {#nggc}
 
-[以前](/posts/2020/10/04/aco-ngg-gfx10/) NGG(Next Genaration Geometory) の機能を紹介した時に、ハードウェア側のシェーダーステージ統合とそれによる効率化が NGG の全てではないと断ったが、その時触れなかった NGG の目玉機能がこの NGGカリングである。  
+[以前](/posts/2020/10/04/aco-ngg-gfx10/) NGG(Next Genaration Geometry) の機能を紹介した時に、ハードウェア側のシェーダーステージ統合とそれによる効率化が NGG の全てではないと断ったが、その時触れなかった NGG の目玉機能がこの NGGカリングである。  
 
 NGGカリングは、{{< comple >}} 結局その世代で有効化されることは無かったが {{< /comple>}} *Vega /GFX9* の新機能として実装され、PS5 でも採用が発表された プリミティブシェーダー/Primitive Shader の名でも呼べるだろう。  
 [GPUOpen Drivers](https://github.com/GPUOpen-Drivers) を構成するソフトウェアにはそのように記述されている。  

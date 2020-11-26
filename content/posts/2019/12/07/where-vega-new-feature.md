@@ -96,7 +96,7 @@ Vega20ではINT4のPacked、INT4/8、FP16/32/64の混合演算にも対応した
 それとNaviでは呼び方がNCUではなくCUと戻った。  
 もう Next-Generation ではないから？  
 
-## NGG（Next Generation Geometory） / Primitive Shader
+## NGG（Next Generation Geometry） / Primitive Shader
 解説に関しては、こちらの4Gamer.netの記事を見るのが早い。  
 {{< link >}}[西川善司の3DGE：新設の「プリミティブシェーダ」を搭載し，Radeon RX Vegaはどこへ行く？](https://www.4gamer.net/games/337/G033714/20170804085/){{< /link >}}
 

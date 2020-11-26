@@ -42,7 +42,7 @@ noindex: false
 CPU部は特にわかりやすく、2-Core に対し、*RavenRidge* や *Renoir* と同容量である L3cache 4MB が付いている。  
 ダイエリアとしては、Zen 2-Core と L3cache 4MB がほぼ同じ面積であり、こうして見ると *Zen アーキテクチャ* が小規模であるように見えてしまう。  
 GPU部は、CU は 3基、L1K/L1I Cache は 1基で、他の [GFX9](/tags/gfx9) 系同様に CU 3基で共有する構成を取っている。その点で言えば、*Raven2* の GPU部は [GFX9](/tags/gfx9) 系で可能な最小規模であるかもしれない。  
-*ACE /Rasterizer /Geometory /RenderBackend* 部は正直適当。RenderBackend も 1基のみであるため、自分には判別が付かない。  
+*ACE /Rasterizer /Geometry /RenderBackend* 部は正直適当。RenderBackend も 1基のみであるため、自分には判別が付かない。  
 次にわかりやすいのは *Display PHY(物理層)* だろうか。他の AMDGPU と似た形をしている。左端下に 2基が固まっており、中央下の右寄りに *PCIe PHY* 等と組み合わされた *Display PHY* が 1基ある。恐らくそれが DisplayPort-Altmode に対応した部分なのだろう。1ポートのみというのにも一致する。  
 さらにその右にある 6基の PHY が *USB PHY* であり、USB2 6ポートという話と一致する。  
 

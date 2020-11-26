@@ -10,14 +10,14 @@ noindex: false
 toc: false
 ---
 
-Mesa3Dに、RADV(Vulkan) ドライバーの [ACOバックエンド](/tags/aco) においても NGG(Next Generation Geometory) をサポート、そしてデフォルトで有効にするマージリクエストが投稿された。  
+Mesa3Dに、RADV(Vulkan) ドライバーの [ACOバックエンド](/tags/aco) においても NGG(Next Generation Geometry) をサポート、そしてデフォルトで有効にするマージリクエストが投稿された。  
 {{< link >}} [aco: Implement NGG GS (!6964) · Merge Requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6964) {{< /link >}}
 
 ここで一度、NGG について整理も兼ねて解説を試みてみる。  
 
 {{< pindex >}}
 
- * [NGG (Next Generation Geometory)](#ngg)
+ * [NGG (Next Generation Geometry)](#ngg)
     * [ややこしくて複雑なシェーダーステージ](#complex-shader-stage)
     * [手間を解消する NGG](#ngg-gs)
     * [NGG をサポートする GPU](#ngg-support-gpu)
@@ -25,7 +25,7 @@ Mesa3Dに、RADV(Vulkan) ドライバーの [ACOバックエンド](/tags/aco) �
 
 {{< /pindex >}}
 
-## NGG (Next Generation Geometory) {#ngg}
+## NGG (Next Generation Geometry) {#ngg}
 
 とは言っても、NGG と各シェーダーステージの関係は、*ACOバックエンド* のドキュメントに非常に分かりやすくまとめられている。  
 {{< link >}} [src/amd/compiler/README.md · master · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/master/src/amd/compiler/README.md#supported-shader-stages) {{< /link >}}
@@ -34,7 +34,7 @@ Mesa3Dに、RADV(Vulkan) ドライバーの [ACOバックエンド](/tags/aco) �
 
 ### ややこしくて複雑なシェーダーステージ {#complex-shader-stage}
 
-まず、ソフトウェア側で定義されているシェーダーステージの中で、オブジェクトの頂点処理を行なうバーテックスシェーダー(Vertex Shader, VS)、頂点の増減を行なうジオメトリシェーダー(Geometory Shader, GS)、そしてピクセル処理を行なうピクセルシェーダー(Pixel Shader, PS) を GPU で実行する時、VS &rarr; GS &rarr; PS という順番で実行される。  
+まず、ソフトウェア側で定義されているシェーダーステージの中で、オブジェクトの頂点処理を行なうバーテックスシェーダー(Vertex Shader, VS)、頂点の増減を行なうジオメトリシェーダー(Geometry Shader, GS)、そしてピクセル処理を行なうピクセルシェーダー(Pixel Shader, PS) を GPU で実行する時、VS &rarr; GS &rarr; PS という順番で実行される。  
 そして PS を実行する時、ハードウェア側では VSステージでのみ書き込めるバッファを PSステージで受け取るのだが、GS が間に入るとこれがスムーズにいかなくなる。  
 GS の処理結果は一度 VRAM に出力され、PS が受け取るバッファには書き込まれない。  
 そのため、ハードウェア側の VSステージで GS の処理結果を VRAM から読み込み、それを PS へのバッファに書き込む手間が必要となる。  
