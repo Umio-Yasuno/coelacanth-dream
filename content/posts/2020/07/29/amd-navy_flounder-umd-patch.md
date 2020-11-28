@@ -2,7 +2,7 @@
 title: "RadeonSI、RADV が AMD Navy Flounder をサポート"
 date: 2020-07-29T01:56:12+09:00
 draft: false
-tags: [ "RDNA_2", "Navy_Flounder", "Navi22" ]
+tags: [ "RDNA_2", "Navy_Flounder", "Navi22", "Navi10", "RDNA" ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
