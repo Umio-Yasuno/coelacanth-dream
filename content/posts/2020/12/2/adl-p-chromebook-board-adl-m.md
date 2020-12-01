@@ -43,8 +43,16 @@ ERB は "Early Engineering Reference Board" の略。[^erb]
 [^erb]: [2nd Generation Intel Core Processor Family with Intel 6 Series Chipset Development Kit User Guide - 2nd-gen-core-6-series-chipset-dev-kit.pdf](https://www.intel.com/content/dam/www/public/us/en/documents/guides/2nd-gen-core-6-series-chipset-dev-kit.pdf)
 
 *Alder Lake-M* のサポートは *tglrvp (Tiger Lake RVP)* をベースとし、ドライバー等も *Tiger Lake* となっていることは特筆すべきだろう。*adlrvp (Alder Lake-P)* を見るとドライバーはしっかり *Alder Lake* のものとなっている。[^adlrvp]  
+最初のパッチセットでは ALDERLAKE となっていた部分を、後のバージョンで TIGERLAKE に修正しているため、誤字ということはないだろう。  
 
 [^adlrvp]: [src/board/adlrvp: Add ADL-P RVP board support (I745fc592) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/platform/depthcharge/+/2525915)
+
+ >        CONFIG_DRIVER_SOC_TIGERLAKE=y
+ >        ~~~
+ >        CONFIG_DRIVER_GPIO_TIGERLAKE=y
+ >
+ > {{< quote >}} (https://chromium-review.googlesource.com/c/chromiumos/platform/depthcharge/+/2565086/5/board/adlmerb/defconfig) {{< /quote >}}
+
 
 突然現れた *Alder Lake-M* について考えると、まずパッチが depthcharge に投稿されたことから、*Alder Lake-P* と同様のプラットフォームに向けた、CPU と PCH を 1パッケージに統合した形式ということが浮かぶ。  
 そしてドライバーの違いから、*Alder Lake-P* とは異なり、*Tiger Lake PCH* と組み合わされる CPU が *Alder Lake-M* ではないか、となるが、まだ初期的なパッチが投稿されたばかりの段階であり、あくまでも個人の推測である。  
