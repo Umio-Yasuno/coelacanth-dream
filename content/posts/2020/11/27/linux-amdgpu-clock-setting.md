@@ -1,5 +1,5 @@
 ---
-title: "Linux環境で AMDGPU のクロック、電圧を調節　―― OC, UV"
+title: "Linux環境で AMDGPU のクロック、電圧を調節　―― OC/UV"
 date: 2020-11-27T23:34:37+09:00
 draft: false
 tags: [ "Linux_Kernel", ]
