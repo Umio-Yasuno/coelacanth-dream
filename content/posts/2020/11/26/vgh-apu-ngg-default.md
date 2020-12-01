@@ -12,8 +12,9 @@ toc: false
 
 オープンソースドライバーである **RadeonSI (OpenGL)** 、**RADV (Vulkan)** は、*RDNA /GFX10* 世代からの GPU に実装されている *NGG (Next Generation Geometry)/プリミティブシェーダー* をサポートし、一部を除いたほとんどはデフォルトで有効にされる。  
 *RDNA 2 / GFX10.3* 世代の GPU を持つ *VanGogh APU* はこれまでその一部に含まれ、専用 VRAM を持つかどうかの判定で弾かれてドライバー部分では無効化されていたが、[^vgh-disable-ngg]  
-その判定を取り払い、*VanGogh APU* でもデフォルトで *NGG* を有効にするパッチが投稿されている。  
+その判定を取り払い、*VanGogh APU* でもデフォルトで *NGG* を有効にするパッチが投稿されている。この変更は **RadeonSI (OpenGL)** 、**RADV (Vulkan)** 両方に適用されている。  
 {{< link >}} [radv: enable NGG on GFX10.3 APUs by default (9f0133d9) · Commits · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/commit/9f0133d961fe44f3057821b596c58c71557ab595?merge_request_iid=7769) {{< /link >}}
+{{< link >}} [radeonsi: tiny miscellaneous changes, NGG enabled on VanGogh, 1 optimization for dead PS outputs (!7721) · Merge Requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/7721/diffs?commit_id=de799b2270f5342c2c108488c2c694412b06c945) {{< /link >}}
 
 [^vgh-disable-ngg]: [新たな AMD RDNA 2 GPU、"Dimgrey Cavefish" & "VanGogh" | Coelacanth's Dream](/posts/2020/09/23/amd-vangogh-dimgrey_cavefish/)
 

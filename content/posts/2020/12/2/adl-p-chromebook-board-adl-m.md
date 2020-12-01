@@ -34,7 +34,8 @@ Coreboot 内のコードに記述されている、下記 *Alder Lake-S/P* の C
 
 ## Alder Lake-M
 
-そしてもう 1つ、*Alder Lake-M* が現れた。  
+そうして *Alder Lake-S/P* の立ち位置がはっきりした中で、もう 1つ、*Alder Lake-M* が現れた。  
+
 *Alder Lake-M* を搭載したボードをサポートする初期のパッチが ChromiumOS関連のレポジトリに投稿されている。  
 {{< link >}} [adlerb:[TEST] Add new board config for ADL-M (I6b2cfa13) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/platform/depthcharge/+/2565086/) {{< /link >}}
 パッチの投稿先のレポジトリ、depthcharge は ChromeOS に採用されているブートローダーであり、まさに初期的なサポートと言える。  
