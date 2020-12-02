@@ -2,7 +2,7 @@
 title: "AWS、RDNAアーキテクチャ GPU 「Radeon Pro V520」を採用する G4adインスタンスを発表"
 date: 2020-12-02T20:06:58+09:00
 draft: false
-tags: [ "Navi12", ]
+tags: [ "Navi12", "RDNA" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
@@ -10,10 +10,12 @@ noindex: false
 toc: false
 ---
 
-AWS(Amazon Web Servises) は新たなコンピュートインスタンスを複数発表した。  
+AWS(Amazon Web Servises) は EC2 の新たなコンピュートインスタンスを複数発表した。  
 その中の G4adインスタンスは、第二世代 AMD EPYC プロセッサ (*Rome*) と *RDNAアーキテクチャ* を採用する **AMD Radeon Pro V520** で構築されている。  
 {{< link >}} [AWS Announces Multiple New Compute Innovations, Including Five New Instance Types for Amazon EC2, Two New AWS Outposts SKUs, and Three New AWS Local Zones Locations Across the US | Amazon.com, Inc. - Press Room](https://press.aboutamazon.com/news-releases/news-release-details/aws-announces-multiple-new-compute-innovations-including-five) {{< /link >}}
 {{< link >}} [Amazon EC2 G4 Instances — Amazon Web Services (AWS)](https://aws.amazon.com/jp/ec2/instance-types/g4/) {{< /link >}}
+
+Amazon AWS は 2020/11/30 から 2020/12/18 に掛けて、バーチャルイベント [AWS re:Invent](https://reinvent.awsevents.com/) を開催している。  
 
 G4adインスタンスも近日提供が開始され、クラウド上でグラフィクス処理を行なうアプリケーションにとって最高のコストパフォーマンスを実現するとしている。  
 インスタンスは最大で 64 vCPU、256GB Memory、4 GPU、NVMeストレージ 2.4TB の規模を選択可能。  
