@@ -23,10 +23,10 @@ G4adインスタンスも近日提供が開始され、クラウド上でグラ�
 ## AMD Radeon Pro V520
 
 今回発表された **AMD Radeon Pro V520** についてまだ仕様等は AMD、AWS どちらからも明かされていないが、  
-*RDNAアーキテクチャ*、クラウド向け GPU として仮想化機能に対応しているであろうことから、[Navi12 (gfx1011)](/tags/navi12) ベースではないかと思われる。  
+*RDNAアーキテクチャ* 、クラウド向け GPU として仮想化機能に対応しているであろうことから、[Navi12 (gfx1011)](/tags/navi12) ベースではないかと思われる。  
 *Navi12* は、*RDNAアーキテクチャ* を採用する GPU の中では唯一 SR-IOV (Single-Root I/O Virtualization)[^mxgpu] に対応し、また専用の DeviceID も持つ。  
 {{< link >}} [Navi12情報近況 (2020-03-09) & 推測 | Coelacanth's Dream](/posts/2020/03/09/navi12-recent-info/) {{< /link >}}
-また、AMD が Github上で公開している、[AMD-CloudGPU/Gibraltar-LinuxGuestKernel-Public](https://github.com/AMD-CloudGPU/Gibraltar-LinuxGuestKernel-Public/tree/2020_Q3_Release) レポジトリを見ても、*Navi12* に向けた対応が継続的に行なわれている。  
+AMD が Github上で公開している、[AMD-CloudGPU/Gibraltar-LinuxGuestKernel-Public](https://github.com/AMD-CloudGPU/Gibraltar-LinuxGuestKernel-Public/tree/2020_Q3_Release) レポジトリを見ても、*Navi12* に向けた対応が継続的に行なわれている。  
 
 クラウド向け AMD GPU としては、[Vega10](/tags/vega10) をベースとする **Instinct MI25**[^mi25] ことが多かった。{{< comple >}}*Vega20* ベースの **Instinct MI50** を採用した話はほとんど聞かない。グラフィクス処理よりもコンピュート処理に向いた製品だからだろうか。{{< /comple >}}  
 *Navi12* はメモリインターフェイスに HBM2 2048-bit を採用しており、この点では *Vega10* と一致するため、グラフィクス性能の向上、省電力化を目的としたリプレース先として優秀なのだと思われる。  
