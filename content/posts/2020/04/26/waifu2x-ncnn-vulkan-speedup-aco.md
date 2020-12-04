@@ -4,7 +4,7 @@ date: 2020-04-26T00:04:50+09:00
 draft: false
 tags: [ "ACO", "GCN", "RADV" ]
 keywords: [ "waifu2x-ncnn-vulkan" ]
-categories: [ "Software", "AMD", "GPU" ]
+categories: [ "Software", "AMD", "GPU", "Experiment" ]
 noindex: false
 ---
 

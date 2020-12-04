@@ -10,7 +10,7 @@ noindex: false
 toc: false
 ---
 
-*RDNA 2 / GFX10.3* 世代の GPU、**Radeon RX 6000シリーズ** が発表された際、一緒にソフトウェアの新機能 *AMD Smart Access Memory* が発表されていた。  
+*RDNA 2 / GFX10.3* 世代の GPU、**Radeon RX 6000シリーズ** が発表された際、一緒にソフトウェアの新機能 *AMD Smart Access Memory* が発表された。  
 {{< link >}} [AMD Smart Access Memory | AMD](https://www.amd.com/en/technologies/smart-access-memory) {{< /link >}}
 *AMD Smart Access Memory* は、従来の Windows OS をベースとするシステムでは、CPU から GPU VRAM へは一度に 256MB までしかアクセス出来なかったが、その制限を取り払うことでボトルネックを減らし、ゲームにおける性能を高めるというもの。AMD が示している結果では、API に Vulkan または DX12 を用いるゲームで 5〜11% の性能向上となっている。  
 
@@ -55,15 +55,6 @@ toc: false
 
 [^vram_vis_size]: [src/gallium/winsys/radeon/drm/radeon_drm_winsys.c · d8ea50996580a34b17059ec5456c75bb0d1f8750 · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/d8ea50996580a34b17059ec5456c75bb0d1f8750/src/gallium/winsys/radeon/drm/radeon_drm_winsys.c#L364) <br> [src/amd/common/ac_gpu_info.c · 3c2489d2e45b3013361c7284ed9de14fe40554cc · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/3c2489d2e45b3013361c7284ed9de14fe40554cc/src/amd/common/ac_gpu_info.c#L345)
 
-また、スーパーユーザー権限が必要となるが `dmesg` コマンドでも確認することができる。  
-
-       % dmesg | grep "Detected VRAM"
-
-BAR の値が CPU から VRAM へアクセス可能なサイズとなる。  
-
- >       [    2.565379] [drm] Detected VRAM RAM=4096M, BAR=256M
-
-
 次に BIOS側の設定となるが、`>4GB MMIO` といったオプションは `Above 4G Decoding` という名前で存在している。自分が持っている **GIGABYTE GA-A320-HD2 (rev. 1.0)** (現在のメイン機) ではそのようになっており、他社製のマザーボードでもそのようになっているのではないかと思われる。  
 `Above 4G Decoding` は複数の GPUカード、またはコプロセッサーである **Xeon Phi** や、GPUアクセラレーターである **NVIDIA Tesla** を搭載したシステムを扱う際にも有効にする必要があったらしい。[^asus-above-4g-decoding]  
 一部の Intelプラットフォームでもサポートされていると思われるが、確証はない、というより試せない。  
@@ -73,6 +64,16 @@ BAR の値が CPU から VRAM へアクセス可能なサイズとなる。
 `Above 4G Decoding` を Enabled に設定して起動、上述したようなコマンドで確かめた結果、`vram_vis_size` の値は、搭載している **RX 560 (Polaris11)** が持つ VRAM と同じサイズである 4096MB となっていた。  
 
  >       vram_vis_size = 4096 MB
+
+また、スーパーユーザー権限が必要となるが `dmesg` コマンドでも確認することができる。  
+
+       % dmesg | grep "Detected VRAM"
+
+BAR の値が CPU から VRAM へアクセス可能なサイズとなる。以下は `Above 4G Decoding` 無効時の実行結果。有効時は `BAR=4096M` となっていた。  
+
+ >       [    2.565379] [drm] Detected VRAM RAM=4096M, BAR=256M
+
+
 
 [Alex Deucher](https://gitlab.freedesktop.org/agd5f) 氏のコメント通り、Linux環境では既にサポートされており、**Ryzen 5 2600 (Zen+)** と **RX 560** という構成でも有効化が可能だった。  
 

@@ -2,9 +2,9 @@
 title: "Zen検証 ―― 物理6-Core 2CCX vs 6-Thread 1CCX"
 date: 2020-03-13T01:41:46+09:00
 draft: false
-tags: [ "Ryzen" ]
+tags: [ "Ryzen", "Zen" ]
 keywords: [ "", ]
-categories: [ "Hardware", "CPU" ]
+categories: [ "Hardware", "CPU", "Experiment" ]
 noindex: false
 ---
 

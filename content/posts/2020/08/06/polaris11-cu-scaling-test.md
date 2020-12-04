@@ -4,7 +4,7 @@ date: 2020-08-06T19:21:54+09:00
 draft: false
 tags: [ "GCN", "GFX8" ]
 keywords: [ "", ]
-categories: [ "AMD", "GPU", "Software" ]
+categories: [ "AMD", "GPU", "Software", "Experiment" ]
 noindex: false
 # summary: ""
 ---
