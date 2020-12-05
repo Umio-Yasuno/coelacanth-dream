@@ -76,3 +76,10 @@ PCI部への最初のパッチは 2015/12 に投稿されていた。
 または以下のコマンドで確認できる。上記の場合は値が VRAM と同じサイズとなっていれば、下記の場合は `BAR=` の後の値が VRAM と同じサイズであれば有効化されている。  
 
     % dmesg | grep "Detected VRAM"
+
+## 個人的結論
+
+ * Smart Access Memory は PCI Express に存在する Re-Size/Resizeable PCI BAR を有効活用したもの
+ * Windowsの実装は不明
+ * AMD の言う VRAM への CPU フルアクセスは Linux では既に実装されていた
+ * それは Bulldozer(15h) 世代 から有効可能
