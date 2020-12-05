@@ -1,5 +1,5 @@
 ---
-title: "AMD Smart Memory Access 再調査"
+title: "AMD Smart Memory Access 再調査　―― Bulldozer世代の CPU/APU でも有効可能"
 date: 2020-12-05T20:28:15+09:00
 draft: false
 # tags: [ "", ]
@@ -23,7 +23,7 @@ toc: false
     * [[PATCH 4/4] drm/amdgpu: resize VRAM BAR for CPU access](https://lists.freedesktop.org/archives/amd-gfx/2017-March/006320.html)
 
 一連のパッチを投稿した Christian König 氏は AMD GPU のオープンソースドライバー等を長年担当しているソフトウェアエンジニアである。[^christian]  
-氏は Resizeable PCI BAR を実装する構想から 1年以上経って、ようやく完成させることができた、とコメントしている。  
+氏は Resizeable PCI BAR を実装する構想を持ってから、1年以上経ってようやく完成させることができた、とコメントしている。  
 従来の PCI BAR は 32-bit システムとの互換性を理由に、CPU から GPU へ一度にアクセス可能なサイズを 256MB としていたが、Resizeable PCI BAR をサポートすることにより、GPU が持つ数GBのローカルメモリに CPU がアクセス可能となる。  
 また、Christian König 氏はドライバー側のリサイズ機能と同時に、AMD Family 15h (*Bulldozer* 世代の CPU/APU) で 64-bit bar を有効する機能も追加しており、。現時点のコードを見てもそれは残っている。[^fam15h-large-bar]  
 {{< link >}} [[PATCH 3/4] x86/PCI: Enable a 64bit BAR on AMD Family 15h (Models 30h-3fh) Processors](https://lists.freedesktop.org/archives/amd-gfx/2017-March/006318.html) {{< /link >}}
