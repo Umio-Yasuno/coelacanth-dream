@@ -1,5 +1,5 @@
 ---
-title: "AMD Smart Memory Access 再調査　―― Bulldozer世代の CPU/APU でも有効可能"
+title: "AMD Smart Access Memory 再調査　―― Bulldozer世代の CPU/APU でも有効可能"
 date: 2020-12-05T20:28:15+09:00
 draft: false
 # tags: [ "", ]
@@ -22,6 +22,13 @@ toc: false
     * [[PATCH 1/4] PCI: add resizeable BAR infrastructure v3](https://lists.freedesktop.org/archives/amd-gfx/2017-March/006319.html)
     * [[PATCH 4/4] drm/amdgpu: resize VRAM BAR for CPU access](https://lists.freedesktop.org/archives/amd-gfx/2017-March/006320.html)
 
+{{< ins >}}
+
+上記パッチはバージョン3だが、最初のパッチは 2015/12 に投稿されていた。  
+{{< link >}} [Resizeable PCI BAR support - Patchwork](https://patchwork.kernel.org/project/linux-pci/patch/5662C61F.50303@amd.com/) {{< /link >}}
+
+{{< /ins >}}
+
 一連のパッチを投稿した Christian König 氏は AMD GPU のオープンソースドライバー等を長年担当しているソフトウェアエンジニアである。[^christian]  
 氏は Resizeable PCI BAR を実装する構想を持ってから、1年以上経ってようやく完成させることができた、とコメントしている。  
 従来の PCI BAR は 32-bit システムとの互換性を理由に、CPU から GPU へ一度にアクセス可能なサイズを 256MB としていたが、Resizeable PCI BAR をサポートすることにより、GPU が持つ数GBのローカルメモリに CPU がアクセス可能となる。  
@@ -33,7 +40,7 @@ toc: false
 
 
 *RDNA /GFX10* 世代以降で有効にするパッチは 2020/05 に投稿されていた。[^gfx10-large-bar]  
-それと同時期に一度、`Above 4G decoding` のような 64-bit bar が無効になっている場合、Linux Kernel にメッセージを出力するパッチが投稿されたが、多くの人にとってはスパムになってしまうだろう、という理由から組み込まれずにドロップしている。[^drop]  
+それと同時期に一度、`Above 4G decoding` のような 64-bit bar が無効になっている場合、Linux Kernel にメッセージを出力するパッチが投稿されたが、多くの人にとってはスパムになってしまうだろう、という理由から組み込まれずに取り下げられている。[^drop]  
 また、APU {{< comple >}} 厳密には APU 内の統合 GPU {{< /comple >}} に対してはこの機能が有効とされないよう判定が行なわれている。  
 
  >        	if (!(adev->flags & AMD_IS_APU)) {
