@@ -24,8 +24,13 @@ toc: false
 
 {{< ins >}}
 
-上記パッチはバージョン3だが、最初のパッチは 2015/12 に投稿されていた。  
+PCI部への最初のパッチは 2015/12 に投稿されていた。  
 {{< link >}} [Resizeable PCI BAR support - Patchwork](https://patchwork.kernel.org/project/linux-pci/patch/5662C61F.50303@amd.com/) {{< /link >}}
+だがその時は組み込まれず、AMD GPUドライバーに合わせた 2017/03 にまたパッチが投稿されたようだ。  
+{{< link >}} [[1/5] PCI: add resizeable BAR infrastructure v2 - Patchwork](https://patchwork.kernel.org/project/linux-pci/patch/1488800428-2854-1-git-send-email-deathsimple@vodafone.de/) {{< /link >}}
+
+その後もバージョンを重ね、Linux Kernel のレポジトリを検索したところでは、2017/12 頃メインラインに組み込まれている。  
+{{< link >}} [Merge branch 'drm-next-4.16' of git://people.freedesktop.org/~agd5f/linux into drm-next](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?h=v5.10-rc6&id=9c606cd4117a3c45e04a6616b1a0dbeb18eeee62) {{< /link >}}
 
 {{< /ins >}}
 
