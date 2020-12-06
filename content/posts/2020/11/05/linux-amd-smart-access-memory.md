@@ -2,7 +2,7 @@
 title: "Linux環境と Ryzen 5 2600、Radeon RX 560 で \"Smart Access Memory\" 機能を試す"
 date: 2020-11-05T05:14:49+09:00
 draft: false
-tags: [ "Linux Kernel", "RADV", "RadeonSI", ]
+tags: [ "Linux Kernel", "RADV", "RadeonSI", "Smart_Access_Memory" ]
 # keywords: [ "", ]
 categories: [ "Software", "AMD", "GPU" ]
 noindex: false
