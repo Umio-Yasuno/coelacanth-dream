@@ -13,7 +13,7 @@ toc: false
 AMD GPU のオープンソース OpenGL ドライバー **RadeonSI** に、*Smart Access Memory / Resizeable PCI BAR* に向けた最適化パッチが投稿された。  
 {{< link >}} [ac,radeonsi: optimizations for Smart Access Memory (all VRAM visible) (!7951) · Merge Requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/7951/commits) {{< /link >}}
 
-パッチを投稿した AMD の [Marek Olšák](https://gitlab.freedesktop.org/mareko) 氏は、CPU から一度に GPU VRAM へのアクセスが可能 (CPU から見えている) な状態を *Smart Access Memory* としている。  
+パッチを投稿した AMD の [Marek Olšák](https://gitlab.freedesktop.org/mareko) 氏は、CPU から一度に GPU VRAM へのアクセスが可能な (CPU から見えている) 状態を *Smart Access Memory* としている。  
 既に各メディア、テクニカルライターへの AMD による説明から、PCI Express の仕様に存在する *Resizeable PCI BAR* を利用したものという話が出ていたが、それは Linux環境においても同様で、*Smart Access Memory* 自体は *Resizeable PCI BAR* 以上に特別なことはしていないと捉えてよさそうだ。  
 
 今回 **RadeonSI** ドライバーには、一度に最大 256MB までしかアクセスできない状況を想定した、バッファを確保するコードを *Smart Access Memory / Resizeable PCI BAR* が有効な場合はスキップするといった最適化が行なわれている。  
