@@ -2,7 +2,7 @@
 title: "AMD Smart Access Memory 再調査　―― Bulldozer世代の CPU/APU でも有効可能"
 date: 2020-12-05T20:28:15+09:00
 draft: false
-tags: [ "Smart_Memory_Access", ]
+tags: [ "Smart_Access_Memory", ]
 # keywords: [ "", ]
 categories: [ "AMD", "GPU" ]
 noindex: false
