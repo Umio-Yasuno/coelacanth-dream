@@ -1,5 +1,5 @@
 ---
-title: "新たな APU、\"Yellow Carp\"　―― SMU は v13 に"
+title: "新たな AMD APU、\"Yellow Carp\"　―― SMU は v13 に"
 date: 2020-12-08T15:26:55+09:00
 draft: false
 tags: [ "Yellow_Carp", ]
@@ -33,9 +33,9 @@ GPUコア部の世代等はまだ不明。
 
 SMU は最近の AMD GPU/APU に限って言えば、v11 と v12 に分かれており、  
 *RDNA / GFX10* 世代の dGPU、[Navi10](/tags/navi10) / [Navi12](/tags/navi12) / [Navi14](/tags/navi14)、*RDNA 2 / GFX10.3* 世代の dGPU/APU、[Sienna Cichlid](/tags/sienna_cichlid)、[Navy Flounder](/tags/navy_flounder)、[Dimgrey Cavefish](/tags/dimgrey_cavefish)、[VanGogh](/tags/vangogh)、それと [Arcturus](/tags/arcturus) は SMU v11、  
-[Renoir](/tags/renoir) は SMU v12 となる。  
+[Renoir](/tags/renoir) は SMU v12 となる。[Green Sardine](/tags/green_sardine) は不明だが、恐らく Renoir と同じ SMU v12 と思われる。  
 
-コードネームについては、[Sienna Cichlid](/tags/sienna_cichlid) から始まる X11 color + 魚 を組み合わせたものとなっている。  
+コードネームについては、{{< comple >}} VanGogh は外れているが {{< /comple >}} [Sienna Cichlid](/tags/sienna_cichlid) から始まる X11 color + 魚 を組み合わせたものとなっている。  
 <span style="color:yellow">Yellow はここの文字の色。 Carp は日本だと馴染みのあるコイの英名。</span>
 
 
