@@ -2,7 +2,7 @@
 title: "ACOバックエンドでも NGG をサポートする動き"
 date: 2020-10-04T16:39:52+09:00
 draft: false
-tags: [ "ACO", "RADV" ]
+tags: [ "ACO", "RADV", "NGG" ]
 # keywords: [ "", ]
 categories: [ "Software", "AMD", "GPU" ]
 noindex: false

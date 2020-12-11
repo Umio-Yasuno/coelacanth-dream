@@ -2,7 +2,7 @@
 title: "【XDC2020】 ACOバックエンドの今後の計画 ―― RDNA 2, RT, Mesh Shader"
 date: 2020-09-19T09:51:24+09:00
 draft: false
-tags: [ "ACO", "RadeonSI", "RADV" ]
+tags: [ "ACO", "RadeonSI", "RADV", "NGG" ]
 # keywords: [ "", ]
 categories: [ "Software", "AMD", "GPU" ]
 noindex: false

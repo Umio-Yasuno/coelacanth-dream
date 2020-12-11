@@ -2,7 +2,7 @@
 title: "RadeonSIドライバー + RDNA 2 では NGGカリング/プリミティブシェーダー がデフォルトで有効に"
 date: 2020-10-17T11:34:57+09:00
 draft: false
-tags: [ "RDNA_2", "RadeonSI", "GFX10" ]
+tags: [ "RDNA_2", "RadeonSI", "GFX10", "NGG" ]
 # keywords: [ "", ]
 categories: [ "Software", "AMD", "GPU" ]
 noindex: false

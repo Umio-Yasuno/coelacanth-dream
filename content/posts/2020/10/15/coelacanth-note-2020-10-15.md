@@ -2,7 +2,7 @@
 title: "【シーラカンスノート】 Green Sardine DCN2.1、gfx1011、RADV/ACO NGG は一旦無効化 【2020/10/15】"
 date: 2020-10-15T10:17:44+09:00
 draft: false
-tags: [ "Green_Sardine", "ACO" ]
+tags: [ "Green_Sardine", "ACO", "NGG" ]
 # keywords: [ "", ]
 categories: [ "Note", ]
 noindex: false

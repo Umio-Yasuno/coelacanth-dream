@@ -2,7 +2,7 @@
 title: "VanGogh APU でも NGG/プリミティブシェーダーがデフォルトで有効に"
 date: 2020-11-26T05:02:03+09:00
 draft: false
-tags: [ "VanGogh", "RDNA_2" ]
+tags: [ "VanGogh", "RDNA_2", "NGG" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU" ]
 noindex: false
