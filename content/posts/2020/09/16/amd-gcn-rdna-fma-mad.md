@@ -2,7 +2,7 @@
 title: "AMD GPU の世代における FMA、MAD 命令の微妙な仕様と違い"
 date: 2020-09-18T09:45:41+09:00
 draft: false
-tags: [ "RadeonSI", "RADV" ]
+tags: [ "RadeonSI", "RADV", "RDNA_2" ]
 # keywords: [ "", ]
 categories: [ "Software", "AMD", "GPU" ]
 noindex: false

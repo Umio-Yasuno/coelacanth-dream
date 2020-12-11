@@ -19,6 +19,20 @@ RDNA 2 Instruction Set Architecture Reference Guide がいつの間にか公開�
 
 [^gpuopen-isa-doc]: [AMD ISA Documentation - GPUOpen](https://gpuopen.com/documentation/amd-isa-documentation/)
 
+{{< ins datetime="2020/12/10" >}}
+
+GPUOpen の方にも反映された。  
+
+ * [AMD RDNA™ 2 Instruction Set Architecture reference guide is now available - GPUOpen](https://gpuopen.com/rdna2-isa-available/)  
+ * [Documentation - GPUOpen](https://gpuopen.com/documentation/)
+
+{{< /ins >}}
+
+RDNA 2 ISA Reference Guide の公開により、オープンソースドライバーの開発、特に [ACOバックエンド](/tags/aco) の *RDNA 2 アーキテクチャ* 最適化が進むと思われる。  
+HWレイトレーシング実行のための命令とその仕様も公開された。Windowsドライバーでは既に Vulkan のレイトレーシング拡張に対応しており、オープンソースドライバーもそれに続くことが期待される。[^vk-ray]  
+
+[^vk-ray]: [Vulkan® ray tracing extension support in our latest AMD Radeon™ Adrenalin driver 20.11.3 - GPUOpen](https://gpuopen.com/vulkan-ray-tracing-extensions/)
+
 ## RDNA 2 アーキテクチャの変更点 {#rdna_2-change}
 
 ### レイトレーシング {#rt}
@@ -67,6 +81,13 @@ RadeonSIドライバーに、*RDNA アーキテクチャ* でも Wave64 (Wave32x
 <br>
 他には、1つのコンポーネントに対して最大 4つのサンプルを、サンプラーを用いずに読み込む `IMAGE_MSAA_LOAD`、  
 グローバルメモリへの TID (Thread-ID) によるアドレッシング等が新たにサポートされている。  
+
+以前にそのような話はあったが、*RDNA 2 アーキテクチャ* では MAD を使わず FMA のみを使うようになり、以下の命令は置き換えられた。  
+{{< link >}} [AMD GPU の世代における FMA、MAD 命令の微妙な仕様と違い | Coelacanth's Dream](/posts/2020/09/16/amd-gcn-rdna-fma-mad/) {{< /link >}}
+
+ >  * V_MAC_LEGACY_F32 (replaced by V_FMAC_LEGACY_F32)
+ >  * V_MAD_LEGACY_F32 (replaced by V_FMA_LEGACY_F32)
+ >  * V_MAC_F32, V_MADMK_F32, V_MADAK_F32 (replaced by FMA equivalents)
 
 {{< ref >}}
 
