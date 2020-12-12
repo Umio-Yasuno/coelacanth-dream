@@ -1,5 +1,5 @@
 ---
-title: "Next Generation Geometry / Primitive Shader"
+title: "NGG"
 # date: 2020-01-29T19:30:39+09:00
 # draft: true
 # tags: [ "", ]
