@@ -36,7 +36,7 @@ SMU は最近の AMD GPU/APU に限って言えば、v11 と v12 に分かれて
 [Renoir](/tags/renoir) は SMU v12 となる。[Green Sardine](/tags/green_sardine) は不明だが、恐らく Renoir と同じ SMU v12 と思われる。  
 [VanGogh](/tags/vangogh) も SMU v11 とされてはいるが厳密には SMU v11.5 であり、ISP (Image Signal Processing?) を内蔵しており、他の SMU v11 を搭載する GPU とは大きく異なっている。[^vgh_smu]
 
-[^vgh_smu]: [smu11_driver_if_vangogh.h\inc\pm\amd\drm\gpu\drivers - ~agd5f/linux - Unnamed repository; edit this file 'description' to name the repository.]
+[^vgh_smu]: [smu11_driver_if_vangogh.h\inc\pm\amd\drm\gpu\drivers](https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/pm/inc/smu11_driver_if_vangogh.h?h=amd-staging-drm-next)
 
 コードネームについては、{{< comple >}} VanGogh は外れているが {{< /comple >}} [Sienna Cichlid](/tags/sienna_cichlid) から始まる X11 color + 魚 を組み合わせたものとなっている。  
 <span style="color:yellow">Yellow はここの文字の色。 Carp は日本だと馴染みのあるコイの英名。</span>

@@ -1,7 +1,7 @@
 ---
 title: "プライバシーポリシー"
 date: 2020-07-18T17:06:37+09:00
-draft: false
+draft: true
 # tags: [ "", ]
 # keywords: [ "", ]
 # categories: [ "", ]
