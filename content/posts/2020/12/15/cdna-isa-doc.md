@@ -30,7 +30,7 @@ miSIMD は主に 4-way のドット積を処理し、この時の入力値は全
 (GCN: SIMDユニットあたり 64KB、CUあたり 256KB, CDNA: SIMDユニットあたり 128KB、CUあたり 512KB)  
 今回公開された SIMDユニットと VGPR との帯域、データポートを示したダイアグラムによると、通常の VGPR は *GCNアーキテクチャ* から変わらず 64KB となっており、AccVGPR 64KB と合わせて SIMDユニットあたり 128KB、CU あたり 512KB となる。  
 
-{{< figure src="/image/2020/12/15/cdna-vgpr.webp" >}}
+{{< figure src="/image/2020/12/15/cdna-vgpr.webp" caption="<cite>画像出典: [\"AMD Instinct MI100\" Instruction Set Architecture: Reference Guide - CDNA1_Shader_ISA_14December2020.pdf](https://developer.amd.com/wp-content/resources/CDNA1_Shader_ISA_14December2020.pdf)</cite>" >}}
 
 ダイアグラムを見る限り、AccVGPR は通常の SIMDユニットである shSIMD (shader SIMD) からは利用することができないものと思われる。そういった点で shSIMD と VGPR は *GCNアーキテクチャ* からほとんど変わりない。  
 miSIMD からは VGPR の一部ポートを利用してデータを読み込めるが、AccVGPR への移動のためとされる。  
@@ -41,5 +41,5 @@ miSIMD で処理した結果は直接 LDS (Local Data Share) やキャッシュ�
 shSIMD と VGPR、miSIMD と AccVGPR は非対称で役割は異なるが、それぞれ独立している訳ではなく、shSIMD と VGPR をメインに組み合わされた形となる。  
 当初 [amd-cdna-whitepaper.pdf](https://www.amd.com/system/files/documents/amd-cdna-whitepaper.pdf) の *MI100/Arcturus* 全体ダイアグラムには、特別説明も無しに CU ではなく XCU と記載されていたが、  
 miSIMD と AccVGPR を組み合わせた意味での XCU だったのかもしれない。  
-現在では CU に修正されているため、それ以上の意味を推し量ることはできない。  
+現在では CU に修正されているため、それ以上の意味を推し量ることはできなくなってしまったが。  
 
