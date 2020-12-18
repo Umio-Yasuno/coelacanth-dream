@@ -2,7 +2,7 @@
 title: "Cezanne の Coreboot 対応が進行中　―― MI200, Mero, Rembrandt のネームプレート"
 date: 2020-12-16T05:08:29+09:00
 draft: false
-tags: [ "Cezanne", "VanGogh", "Mero", "Rembrandt" ]
+tags: [ "Cezanne", "VanGogh", "Mero", "Rembrandt", "Yellow_Carp" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU", "GPU" ]
 noindex: false
