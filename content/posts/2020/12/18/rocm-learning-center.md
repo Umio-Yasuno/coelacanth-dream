@@ -1,5 +1,5 @@
 ---
-title: "AMD、GPGPU開発者向けの資料を公開するサイト 「ROCm Learning Center」を開設"
+title: "AMD、GPGPU開発者向けの資料集 「ROCm Learning Center」を開設"
 date: 2020-12-18T12:26:38+09:00
 draft: false
 tags: [ "ROCm", ]
