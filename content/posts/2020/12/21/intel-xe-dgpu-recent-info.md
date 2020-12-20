@@ -2,7 +2,7 @@
 title: "Intel Xe GPU 近況　――  Xe-HPのメモリリージョン, PXP, Iris Xe MAX のサポート状況"
 date: 2020-12-21T04:09:59+09:00
 draft: false
-tags: [ "XeHP", "DG1", "SG1", "Gen12" ]
+tags: [ "Xe-HP", "DG1", "SG1", "Gen12" ]
 # keywords: [ "", ]
 categories: [ "Intel", "GPU" ]
 noindex: false
