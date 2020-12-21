@@ -24,8 +24,16 @@ toc: false
 そのため、マルチコアGPUとしてもメモリに異なる層、リージョンが存在する。  
 パッチではそれを区別するため、LMEM とは別に SHMEM のバッファーオブジェクト (BO, GPU メモリ管理の単位) のサポート準備が含まれている。  
 
-他社の GPU間接続には、NVIDIA は NVLink、AMD は Infinity Fabric (xGMI) といった名前が付いているが、Intel のそれにはまだマーケティング的な名前は見受けられない。  
+他社の GPU間接続には、NVIDIA は NVLink、AMD は Infinity Fabric (xGMI) といった名前があり、そして Intel には *{{< xe class="hpc" >}}* に採用される、CXL をベースとした Xe Link がある。その Xe Link が *{{< xe class="hp" >}}* に置いても使われるかは不明。  
 
+メモリ帯域と GPU間接続の関係について **AMD Instinct MI100** を例に挙げると、  
+**MI100** はメモリに HBM2 32GB を採用しており、メモリバス幅は 4096-bit、ピークメモリ帯域は 1228.8 GB/s にもなる。  
+対し Infinity Fabric はリンクあたり 92 GB/s、**MI100** は 3リンク持っているため、それらを合わせても 276 GB/s と、メモリ帯域の 2割程しかない。  
+**MI100** は実際には GPUカード間の接続となるが、*{{< xe class="hp" >}}* はパッケージ内での接続となるため、もっと高速に接続できると思われる。  
+Intel Architecture Day 2020 での発表においても、スケーリング性能に自信がある様子だった。[^intel-arch-day2020]  
+それでも、消費電力や発熱等の制約や、異なる GPU に接続されたメモリへのアクセスに発生するレイテンシにより、結局はローカルな HBMメモリを活用することが重要となる。  
+
+[^intel-arch-day2020]: [Intel Architecture Day 2020 個人的まとめ　―― XeHP は 1-Tile 512EU、XeLPアーキテクチャ詳細 | Coelacanth's Dream](/posts/2020/08/14/intel-architecture-day-2020/)
 [^dg1-lmem]: [[Intel-gfx] [RFC PATCH 000/162] DG1 + LMEM enabling](https://lists.freedesktop.org/archives/intel-gfx/2020-November/254003.html)
 [^sg1-xg310]: [Intel、サーバー向け GPU 「SG1」 と搭載カードを正式発表 | Coelacanth's Dream](/posts/2020/11/12/intel-sg1/)
 
