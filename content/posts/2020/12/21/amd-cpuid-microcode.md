@@ -70,7 +70,7 @@ Base と Ext を合わせることで、Family と Model が求められる。
 | Zen3 APU | 0xA | 0x5 | 0x0 | 0x0 | 0x0 | 0x09 |
 
 ここでも *Cezanne* は `Model: 0x50 (80)` となった。  
-訂正といのはこのことで、*Cezanne* は `Model: 0x51 (81)` ではなく、`Model: 0x50 (80)` 可能性のが高く、Coreboot のは誤字かもしれない。{{< comple >}} あるいは *Cezanne* とは別の APU に向けたものである可能性もあるが、それは GPU部に *Cezanne* と同じ DeviceIDを用い 、Model は 1 違いというややこしいものになる。{{< /comple >}} [^czn-vbios]  
+訂正といのはこのことで、*Cezanne* は `Model: 0x51 (81)` ではなく、`Model: 0x50 (80)` 可能性のが高く、Coreboot のは誤字かもしれない。{{< comple >}} あるいは *Cezanne* とは別の APU に向けたものである可能性もあるが、それは GPU部に *Cezanne* と同じ DeviceIDを用い 、Model は 1 違いというややこしいものとなる。{{< /comple >}} [^czn-vbios]  
 
 `Stepping 0` であるから `Model: 0x51 (81)` となっていないのではないか、とも書いたが、*Zen 2 EPYC (Rome)* も *Zen 2 Ryzen (Matisse)* も `Stepping 0` であるため根拠にはなり得ず、思い切り外した推測であった。  
 マイクロコードバージョンの読み方を知っていたら、少しはまともな見方が出来ただろう、という後悔。  
