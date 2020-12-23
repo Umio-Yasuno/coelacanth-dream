@@ -58,7 +58,7 @@ Intel は既にモバイル向けの *Tiger Lake_L (Model: 0x8c)* をリリー�
  > {{< quote >}} [[BUG] Dell TGL-H Machine failed to load sof-tgl.ri · Issue #3711 · thesofproject/sof](https://github.com/thesofproject/sof/issues/3711) {{< /quote >}}
 
 lscpu の実行結果を見ると、まず `Family: 0x6(6), Model: 0x8d(141)` と、既にリリースされているモバイル向けの *Tiger Lake_L* ではなく、*Tiger Lake (Model: 0x8d)* であることは確かだ。[^intel-fam]  
-モデル名からも察せされるように、サンプル段階のシリコンであり、Stepping 0 となっている。  
+モデル名からも察せられるように、サンプル段階のシリコンであり、Stepping 0 となっている。  
 
 [^intel-fam]: [linux/intel-family.h at master · torvalds/linux](https://github.com/torvalds/linux/blob/master/arch/x86/include/asm/intel-family.h)
 
@@ -92,7 +92,7 @@ iGPU については、lspci の実行結果に `DeviceID: 0x96a0` の記述が�
 | &ensp;&ensp;SPs | 128 | 256 | 768 | 768 |
 | GPU L3$ Banks | 4 | 4 | 8 | 8 |
 | GPU L3$ Size | 1920KB? | 1920KB | 3072KB | 16384KB[^dg1-l3] |
-| | RKL / ADL-S | TGL /RKL<br>/ADL-S | TGL /ADL-P | DG1/SG1 |
+| | RKL / ADL-S | TGL-U / TGL-H<br>/RKL / ADL-S | TGL /ADL-P | DG1/SG1 |
 
 [^dg1-l3]: [Intel、DG1 において OpenCL と oneAPI Level Zero をサポート　―― 巨大なキャッシュを持つ DG1 | Coelacanth's Dream](/posts/2020/06/20/intel-dg1-support-opencl-levelzero/)
 
