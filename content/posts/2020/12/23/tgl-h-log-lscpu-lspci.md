@@ -96,9 +96,16 @@ iGPU については、lspci の実行結果に `DeviceID: 0x96a0` の記述が�
 
 [^dg1-l3]: [Intel、DG1 において OpenCL と oneAPI Level Zero をサポート　―― 巨大なキャッシュを持つ DG1 | Coelacanth's Dream](/posts/2020/06/20/intel-dg1-support-opencl-levelzero/)
 
+今月の初め、2020/12/04 には Dell がイーサネットコントローラーの電力管理に関するパッチを、リリース予定にある、デスクトップ向け *Tiger Lake* 搭載システムのため投稿している。[^tgl-desktop-eth]
+今回の各ファイルをアップロードしたのも Dell に所属するエンジニアによるものだ。*Tiger Lake-H* 搭載製品の開発が、ある程度表に出して良いレベルまで進んでいると推測される。  
+*Tiger Lake-H* のベールが取り払われる日はそう遠くないだろう。  
+
+
+[^tgl-desktop-eth]: [[Intel-wired-lan] [PATCH v3 6/7] e1000e: Add Dell TGL desktop systems into S0ix heuristics](https://lists.osuosl.org/pipermail/intel-wired-lan/Week-of-Mon-20201130/022476.html)
 
 {{< ref >}}
 
  * [Intel Releases New Technology Specification for Memory Encryption](https://software.intel.com/content/www/us/en/develop/blogs/intel-releases-new-technology-specification-for-memory-encryption.html)
+ * [Dell Getting Linux Power Management Optimized For Their Latest Systems + Upcoming Tiger Lake Desktop - Phoronix](https://www.phoronix.com/scan.php?page=news_item&px=Dell-S0ix-i219LM-Fixing)
 
 {{< /ref >}}
