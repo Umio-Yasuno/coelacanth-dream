@@ -1,7 +1,7 @@
 ---
 title: "RadeonSI では Smart Access Memory をオプションで切り替える方式に、 Zen 3 + RDNA 2 ではデフォルトで有効"
 date: 2020-12-24T22:53:44+09:00
-draft: true
+draft: false
 tags: [ "RadeonSI","Smart_Access_Memory" ]
 # keywords: [ "", ]
 categories: [ "Software", "AMD", "GPU" ]
@@ -27,7 +27,7 @@ toc: false
 
 *Smart Access Memory* の中身である *Resizeable PCI BAR* は、2017年には Linux Kernel に実装されていたが、  
 {{< link >}} [AMD Smart Access Memory 再調査　―― Bulldozer世代の CPU/APU でも有効可能 | Coelacanth's Dream](/posts/2020/12/05/amd-sam-fact/) {{< /link >}}
-性能への最適化やサポートの強化は最近になって集中的に行なわれており、[^resizeable-bar]
+性能への最適化やサポートの強化は、Windows OS でのサポートに合わせてか、最近になって集中的に行なわれており、BAR のサイズを適切取得できない一部 GPU VBIOS に対処するパッチなどが投稿されている。[^resizeable-bar]
 
 
 [^resizeable-bar]: [[PATCH 0/7] amdgpu, pci: improved BAR resizing support](https://lists.freedesktop.org/archives/amd-gfx/2020-December/057339.html)
