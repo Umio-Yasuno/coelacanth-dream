@@ -1,5 +1,5 @@
 ---
-title: "Tiger Lake-H の起動ログ、lscpu、lspci ……"
+title: "Tiger Lake-H のブートログ、lscpu、lspci ……"
 date: 2020-12-23T18:11:19+09:00
 draft: false
 tags: [ "Tiger_Lake", "Gen12" ]
@@ -11,13 +11,11 @@ toc: false
 ---
 
 Intel は既にモバイル向けの *Tiger Lake_L (Model: 0x8c)* をリリースし、各社から採用製品が出されている。  
-その上位プロセッサ、(バリアント的には) デスクトップ向けにあり、ハイエンドモバイル (H Series) にも採用される *Tiger Lake (Model: 0x8d)* を搭載した Dell PC の Linux Kernel の起動ログ、lscpu、lspci の実行結果がアップロードされている。  
+その上位プロセッサ、(バリアント的には) デスクトップ向けにあり、ハイエンドモバイル (H Series) にも採用される *Tiger Lake (Model: 0x8d)* を搭載した Dell PC の Linux Kernel のブートログ、lscpu、lspci の実行結果がアップロードされている。  
 
  * [[BUG] Dell TGL-H Machine failed to load sof-tgl.ri · Issue #3711 · thesofproject/sof](https://github.com/thesofproject/sof/issues/3711)
 
 *Tiger Lake-H* の各ログ、実行結果がアップロードされたのは [thesofproject/sof: Sound Open Firmware](https://github.com/thesofproject/sof) レポジトリで、Sound Open Firmware は Intelプロセッサやそれとペアになる PCH に内蔵される音声処理用のDSPのサポートを提供するため、Intel がオープンソースで開発しているプロジェクト。バグ報告のため各ファイルがアップロードされた。  
-以前には *Rocket Lake* の起動ログが投稿され、そこから AVX-512 のサポートが判明したこともある。  
-{{< link >}} [Intel Rocket Lake は AVX-512 をサポート & 推測 | Coelacanth's Dream](/posts/2020/07/23/intel-rocket_lake-support-avx512/) {{< /link >}}
 
  >        Architecture:                    x86_64
  >        CPU op-mode(s):                  32-bit, 64-bit
