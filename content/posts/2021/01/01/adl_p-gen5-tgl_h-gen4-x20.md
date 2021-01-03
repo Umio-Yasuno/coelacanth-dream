@@ -44,7 +44,7 @@ Coreboot の *Alder Lake-P* サポートに向けたあるパッチが投稿さ�
 PCIe Gen5 8-Lane の目的を考えると、4-Lane x2 のような分割に対応せず、かつ NVMe SSD 向けに最大 4-Lane としなかったことから、dGPU も想定したもの、というのが浮かぶ。  
 一応、分割に対応しないと言っても使い切れないだけで、NVMe SSD 4-Lane を接続することはできる。  
 
-2021年が始まったばかりなのに、こんな事を言うのは少し気が引けるが、*Alder Lake* (-S と -P のどちらかは不明) は 2021年後半に市場へ投入される予定にある。  
+2021年が始まったばかりなのに、こんな事を言うのはどこか少し気が引けるが、*Alder Lake* (-S と -P のどちらかは不明) は 2021年後半に市場へ投入される予定にある。  
 サーバー向けである *Sapphire Rapids* も同時期に出荷予定とされ、*Sapphire Rapids* は PCIe Gen5 をベースとする CXL (Compute Express Link) に対応し、スーパーコンピューター Aurora は CXL で構築される。
 {{< comple>}} 厳密に言うと、Aurora に用いられるのは、これまた CXL をベースとした {{< xe >}} Link だが、ややこしい。{{< /comple >}}  
 そのため *{{< xe class="hpc" >}}* もまた PCIe Gen5/CXL に対応しており、同時期に登場する他の Intel dGPU も PCIe Gen5 に対応している可能性がある。あくまで可能性。  
