@@ -1,9 +1,9 @@
 ---
-title: "Radeon向けMesaビルド方法"
+title: "Radeon向けMesaビルド方法　―― RadeonSI, RADV"
 date: 2019-12-04T21:00:00+09:00
 draft: false
 tags: [ "Radeon", "RadeonSI", "Mesa" ]
-keywords: [ "Mesa", "RadeonSI", "OpenGL" ]
+# keywords: [ "Mesa", "RadeonSI", "OpenGL" ]
 categories: [ "Software", "AMD", "GPU" ]
 ---
 

@@ -4,7 +4,7 @@ date: 2020-11-05T05:14:49+09:00
 draft: false
 tags: [ "Linux_Kernel", "RADV", "RadeonSI", "Smart_Access_Memory" ]
 # keywords: [ "", ]
-categories: [ "Software", "AMD", "GPU" ]
+categories: [ "Software", "AMD", "GPU", "Experiment" ]
 noindex: false
 # summary: ""
 toc: false
