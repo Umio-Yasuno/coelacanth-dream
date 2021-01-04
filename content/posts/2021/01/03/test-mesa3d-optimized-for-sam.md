@@ -1,5 +1,5 @@
 ---
-title: "Smart Access Memory への最適化は本当に逆効果だったのかを確かめる"
+title: "Smart Access Memory への最適化は本当に逆効果だったのかを確かめる　【追記】RADVに最適化が適用されてなかったため加筆修正"
 date: 2021-01-03T18:12:11+09:00
 draft: false
 tags: [ "Smart_Access_Memory", "RadeonSI", "RADV" ]
@@ -28,6 +28,7 @@ toc: false
  * [結果](#result)
  * [考察](#consider)
     * [Zen 3 + RDNA 2 以前の環境で SAM を有効にする意義](#significance)
+ * [加筆 [2020/01/05]](#revise)
 
 {{< /pindex >}}
 
@@ -87,41 +88,15 @@ vkmark は 1920x1080 の解像度設定で実行している。
 
 ## 結果 {#result}
 
-| glxgears | (FPS) |
-| :-- | :--: |
-| Prev ver<br>(SAM ON) | 14353.595<br>(100%) |
-| Recent ver<br>(SAM ON) | 12140.448<br>(84.5%) |
-| Recent ver<br>(SAM OFF) | 14296.476<br>(99.6%) |
+| SAM | Prev ver<br>(SAM ON) | Recent ver<br>(SAM ON) | Recent ver<br>(SAM OFF) |
+| :-- | :--: | :--: | :--: |
+| glxgears (FPS) | 14353.595<br>(100%) | 12140.448<br>(84.5%) | 14296.476<br>(99.6%) |
+| waifu2x-ncnn-vulkan (real sec)<br>(model: cunet) | 26.73s<br>(100%) | 26.69s<br>(100.1%) | 26.70s<br>(100.1%) |
+| waifu2x-ncnn-vulkan (real sec)<br>(model: upconv_7_anime_style_art_rgb) | 10.71s<br>(100%) | 10.70s<br>(100.1%) | 10.70s<br>(100.1%) |
+| vkfft (score) | 4204<br>(100%) | 4207<br>(100.1%) | 4237<br>(100.7%) |
+| vkmark (score)<br>(1920x1080) | 4531<br>(100%) | 4534<br>(100.1%) | 4511<br>(100.4%) |
+| Basemark GPU Vulkan (score)<br>(Medium, 1920x1080) | 23568<br>(100%) | 23797<br>(101.0%) | 23651<br>(100.3%) |
 
-| waifu2x-ncnn-vulkan<br>(model: cunet) | (real time) |
-| :-- | :--: |
-| Prev ver<br>(SAM ON) | 26.73s<br>(100%) |
-| Recent ver<br>(SAM ON) | 26.69s<br>(100.1%) |
-| Recent ver<br>(SAM OFF) | 26.70s<br>(100.1%) |
-
-| waifu2x-ncnn-vulkan<br>(model: upconv_7_anime_style_art_rgb) | (real time) |
-| :-- | :--: |
-| Prev ver<br>(SAM ON) | 10.71s<br>(100%) |
-| Recent ver<br>(SAM ON) | 10.70s<br>(100.1%) |
-| Recent ver<br>(SAM OFF) | 10.70s<br>(100.1%) |
-
-| vkfft | (score) |
-| :-- | :--: |
-| Prev ver<br>(SAM ON) | 4204<br>(100%) |
-| Recent ver<br>(SAM ON) | 4207<br>(100.1%) |
-| Recent ver<br>(SAM OFF) | 4237<br>(100.7%)
-
-| vkmark<br>(1920x1080) | (score) |
-| :-- | :--: |
-| Prev ver<br>(SAM ON) | 4531<br>(100%) |
-| Recent ver<br>(SAM ON) | 4534<br>(100.1%) |
-| Recent ver<br>(SAM OFF)|  4511<br>(100.4%) |
-
-| Basemark GPU Vulkan<br>(Medium, 1920x1080) | (score) |
-| :-- | :--: |
-| Prev ver<br>(SAM ON) | 23568<br>(100%) |
-| Recent ver<br>(SAM ON) | 23797<br>(101.0%) |
-| Recent ver<br>(SAM OFF)|  23651<br>(100.3%) |
 
 ## 考察 {#consider}
 
@@ -143,6 +118,7 @@ glxgears では明確な差が出ており、{{< comple >}} と言っても性�
 glxgears を検証に用いた場合の特性と、他では性能がここまで露骨に下がってはいないことから、GPU 以外で部分でオーバーヘッドが増加していると思われる。  
 また、ドライバーが最近のバージョンであっても、*SAM* を無効化すると以前のバージョンと同等の性能に戻ることから、ここが最適化が逆に働いてしまった部分なのだろう。  
 上述したように、glxgears は基本的な動作をするデモアプリケーションであるから、PCIe経由の転送ではなく CPU部でオーバーヘッドが増加したと考えられる。  
+繰り返しになるが、glxgears はベンチマークではないし、現実的なアプリケーションに則さない。だが、傾向を見ることはできるだろう。  
 
 DX12、Vulkan API を用いるベンチマーク、ゲームでは効果が出やすいことは、API として層が薄く、OpenGL API より CPU部がボトルネックとなりにくいからかもしれない。  
 
@@ -152,17 +128,36 @@ DX12、Vulkan API を用いるベンチマーク、ゲームでは効果が出�
 GPU性能と VRAM に余裕のあるものでは、*SAM* の効果がほとんど無いか、性能が低下することが考えられる。  
 
 *SAM* の最適化は *Zen 3 + RDNA 2* であればデフォルトで適用され、他はオプションで有効化する形となったが、*Zen 3 + RDNA 2* なら確実に効果が出るとも考えにくく、アプリケーションと解像度等の設定によっては逆効果になるのではないだろうか  
-
+*SAM* 自体、ピーク性能を引き上げる機能というより、極端に性能が下がるのを防ぐものに見える。  
 今後ミドル帯をターゲットとした *RDNA 2/GFX10.3* GPU が出たとして、そこでも同様に *SAM* 最適化がデフォルトで有効化、推奨されるかは気になる所ではある。  
 
-*Zen 3 + RDNA 2* 以前の環境で *SAM* を有効にすることの意義だが、やはり無いと言える。  
+*Zen 3 + RDNA 2* 以前の環境で *SAM* を有効にすることの意義だが、特別性能向上の効果は見られないが、*SAM* によるデメリットも特に無い。  
+glxgears では *SAM ON + 最適化* だと明確に FPS が低下していたが、それは極端な例で、あくまでも傾向。  
+また、それは最適化が逆効果だったことによるもので、今後追加のパッチが適用されればオプションで最適化を切り換えられるようになるため、目立った問題にはならない。  
+
 組み合わせというより、**RX 560 (Polairs11)** のようなエントリー向け GPU では多くで効果が見られない。上と関連して、GPU性能に余裕がある状況が少なく、先に GPU がボトルネックとなりやすい。  
 GPU性能に余裕があれば CPU によらず効果を発揮する余地があるとも考えられ、  
 この点、Linux では *Above 4G Decoding* を有効にすれば *SAM* が使えることや、各社 M/Bベンダーの UEFI/BIOSアップデートにより、*Zen 2* や Intel CPU でも Windows環境で *SAM* を有効化可能となっていることは喜ばしい状況と言える。  
 
-*SAM* 自体、ピーク性能を引き上げる機能というより、極端に性能が下がるのを防ぐものに見える。  
+## 加筆 [2021/01/05] {#revise}
 
-落ちとなるが、最初検証した時、最新世代の組み合わせで利用できる新機能として謳われるものを、そうでない自環境で有効にできるのは面白い状況に思えるため、しばらくは有効にしておくとしたが、  
-今回の検証の結果等を受けて、今は無効化してる。  
-マーケティング要素が強い機能であっても、当初システムを制限したことにはそれなりに意味があるのだと感じた次第。  
+**RADV (Vulkan)** ドライバーでも **RadeonSI (OpenGL)** ドライバー同様の最適化が既に組み込まれているものとして上文章を書きましたが、  
+実際には検証時まだ組み込まれておらず、つい先程組み込まれました。  
+
+ * [radv: Use VRAM for CS & upload buffer if all VRAM is CPU-visible. (!7979) · Merge Requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/7979#note_7eccb93bedebb695d0056565fe17f3cbc30978d1)
+
+検証のほとんどに Vulkan アプリケーションを用いながら、ドライバー側に適用されているかの確認を怠っていたこと、申し訳ありませんでした。  
+
+RADVドライバーでは、環境変数 `RADV_PERFTEST=nosam` で *SAM* への最適化を無効化できるようにされており、最適化の有無を切り換えて再度検証を行ないました。  
+
+| SAM | Optimization | No Optimization |
+| :-- | :--: | :--: |
+| waifu2x-ncnn-vulkan (real sec)<br>(Model: cunet) | 26.68s | 26.69s |
+| waifu2x-ncnn-vulkan (real sec)<br>(Model: upconv_7_anime_style_art_rgb) | 10.68s | 10.69s |
+| vkfft (score) | 4229 | 4232 |
+| vkmark (score)<br>(1920x1080) | 4605<br>(101.4%) | 4540<br>(100%) |
+| Basemark GPU (score)<br>(Medium, 1920x1080) | 23970<br>(100.7%) | 23802<br>(100%) |
+
+コンピュート系では最適化の効果が見られないが、グラフィクス系では約1%の効果が出ている、という結果となりました。  
+Vulkan ゲームを普段プレイする人は、*Zen 3 + RDNA 2* 以前の CPU/GPU 環境であっても *SAM* を有効にする価値があるかもしれません。  
 
