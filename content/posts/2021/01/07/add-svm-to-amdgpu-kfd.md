@@ -1,7 +1,7 @@
 ---
 title: "Linux Kernel に CPU + GPU の統合メモリ空間をサポートする最初のパッチが投稿される"
 date: 2021-01-07T17:51:16+09:00
-draft: true
+draft: false
 tags: [ "Arcturus", ]
 # keywords: [ "", ]
 categories: [ "AMD", "CPU", "GPU", "Software" ]
@@ -16,16 +16,31 @@ Linux Kernel (amd-gfx) に、HMM (Heterogeneous Memory Management) をベース�
 
 最初のパッチということで、まだ IOMMU が有効だと動作しなかったり、バグや性能への問題があるとしており、正式なサポートがメインラインに組み込まれるまでは時間が掛かると見られる。  
 
+## 3rd Gen AMD Infinity Architecture
+
+AMD は **3rd Gen AMD Infinity Architecture** で CPU と GPU のメモリ空間を統合する構想を明らかにしており、今回のパッチはそれに向けたものと思われる。  
+*Arcturus/MI100* は 2nd Gen となり、最大 8 GPUでの接続をサポートするが、CPU と GPU のメモリ空間は独立しており、*CDNA 2 アーキテクチャ* から 3rd Gen AMD Infinity Architecture が実装される。  
+*CDNA 2* については、GPU コードネームはまだ出てきておらず、Linux Kernel へのパッチも投稿されていないが、**MI200** という製品名はちらほら出てきている。  
+
+{{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_6.webp" title="3rd Gen AMD Infinity Architecture" >}}
+
+メモリ空間が統合されることの意義は、メモリ管理やデータの同期等をプログラム側で意識する必要性が減ることにあり、より広い用途での GPU の活用が期待される。  
+
+3rd Gen ではメモリ空間の統合だけでなく、CPU と GPU 間の帯域が向上し、レイテンシも削減されるとしている。  
+画像では PCIe Gen4 の倍近い帯域となっており、PCIe Gen5 での実装を想定していると思われる。  
+
+{{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_10.webp" title="AMD 3rd Gen Infinity Architecture Enables Accelerated Computing" >}}
+
 ## SVM
 
-*Vega/GFX9* から搭載されている HBCC (High-Bandwidth Cache Controller) は 49-bit アドレッシングをサポートしており、それにより最大 512TB の仮想アドレス空間の確保が可能となっている。  
+*Vega/GFX9* に搭載されている HBCC (High-Bandwidth Cache Controller) は 49-bit アドレッシングをサポートしており、それにより最大 512TB の仮想アドレス空間の確保が可能となっている。  
 最新の CPU でも、仮想アドレス空間は 48-bit までというのがほとんどであり、HBCC はそれを十分にカバーできる。  
 *GFX8* とそれ以前の AMD GPU では HBCC も無く、49-bit アドレッシングもサポートしていないため、今回のパッチの対象からは外れる。  
+また、マーケティング的な理由から HBCC の名は使われなくなったが、*Vega10* 以降の *Vega20* や *Arcturus/MI100* 、RDNA系となる *Navi1x/Navi2x* でも 49-bitアドレッシングはサポートしていると思われる。  
 
- * [[PATCH 06/35] drm/amdkfd: register svm range](https://lists.freedesktop.org/archives/amd-gfx/2021-January/057897.html)
-
-仮想メモリ空間には、複数の GPU も含まれており、GPU間での移行もサポートされているが、ある GPU から別の GPU にアクセスできない場合があるとして、システムメモリをブリッジとして使用して移行する方法を採っている。  
-ただコード内のコメントから、移行先と移行元の GPU 両方が *PCIe large bar* {{< comple >}} Above 4G Decoding、最近 Smart Access Memory を切っ掛けに話題となった Resizable PCI BAR のことと思われる {{< /comple >}} を有効にされている場合、または *XGMI / Infinity Fabric Link* で接続され、同じトポロジ内の Hive にある場合は、  
+仮想メモリ空間には、複数の GPU も含まれており、GPU間での移行もサポートされている。  
+だが、ある GPU から別の GPU にアクセスできない場合があるとして、システムメモリをブリッジとして使用して移行する方法を採っている。  
+コード内のコメントから、移行先と移行元の GPU 両方が *PCIe large bar* {{< comple >}} Above 4G Decoding、最近 Smart Access Memory を切っ掛けに話題となった Resizable PCI BAR のことと思われる {{< /comple >}} を有効にされている場合、または *XGMI / Infinity Fabric Link* で接続され、同じトポロジ内の Hive にある場合は、  
 ブリッジにシステムメモリを使うことなく移行するように今後変更されると思われる。  
 
  >        +	 * TODO: for both devices with PCIe large bar or on same xgmi hive, skip
@@ -53,20 +68,9 @@ APU では *GFX8* 世代から、dGPU では *Vega/GFX9* 世代からサポー�
 
 [^gfxid-xnack]: [AMDGPU: Remove remnants of gfx901 (it was deprecated some time ago) · llvm/llvm-project@1501af4](https://github.com/llvm/llvm-project/commit/1501af4846791c3b52b812c41ec540081343ba38)
 
+`XNACK` は APU ではデフォルトで有効となっており[^llvm-xnack-apu]、そういった点も合わせ、CPU と GPU のメモリ空間の統合、**3rd Gen AMD Infinity Architecture** はサーバー向けプロセッサと GPU をまとめあげることで巨大な APU のように見せ、HPC等への活用を可能とする機能とも言える。  
 
-## 3rd Gen AMD Infinity Architecture
-
-AMD は **3rd Gen AMD Infinity Architecture** で CPU と GPU のメモリ空間を統合する構想を明らかにしており、今回のパッチはそれに向けたものと思われる。  
-*CDNA 1 アーキテクチャ* を採用する *Arcturus/MI100* は 2nd Gen となり、*CDNA 2 アーキテクチャ* から 3rd Gen AMD Infinity Architecture が実装される。  
-
-{{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_6.webp" title="3rd Gen AMD Infinity Architecture" >}}
-
-メモリ空間が統合されることで、メモリ管理やデータの同期等をプログラム側で意識する必要性が減り、より広い GPU の活用が期待される。  
-3rd Gen ではメモリ空間の統合だけでなく、CPU と GPU 間の帯域が向上し、レイテンシも削減されるとしている。  
-
-{{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_10.webp" title="AMD 3rd Gen Infinity Architecture Enables Accelerated Computing" >}}
-
-[[PATCH 05/35] drm/amdkfd: Add SVM API support capability bits](https://lists.freedesktop.org/archives/amd-gfx/2021-January/057896.html)
+[^llvm-xnack-apu]: [llvm-project/AMDGPU.td at master · llvm/llvm-project](https://github.com/llvm/llvm-project/blob/master/llvm/lib/Target/AMDGPU/AMDGPU.td)
 
 {{< ref >}}
 
