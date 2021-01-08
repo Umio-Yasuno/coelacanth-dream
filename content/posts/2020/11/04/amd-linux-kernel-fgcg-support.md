@@ -4,7 +4,7 @@ date: 2020-11-04T17:22:25+09:00
 draft: false
 tags: [ "RDNA_2", "VanGogh" ]
 # keywords: [ "", ]
-categories: [ "Hardware", "AMD", "APU", "AMD" ]
+categories: [ "Hardware", "AMD", "APU" ]
 noindex: false
 # summary: ""
 toc: false
