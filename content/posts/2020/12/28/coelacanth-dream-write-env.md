@@ -15,7 +15,7 @@ toc: false
 
 ## 端末エミュレータ/ターミナル
 
-端末エミュレータにはそれ程拘りが無く、[lxterminal](https://github.com/lxde/lxterminal) を使っている。  
+{{< comple >}} コマンドを実行したり、Vim を操作したり、各種操作を行ない、長い間見つめ続けることになる {{< /comple >}} 端末エミュレータにはそれ程拘りが無く、[lxterminal](https://github.com/lxde/lxterminal) を使っている。  
 最低限の機能 (ウィンドウサイズ、フォントの設定) は備えているし、タブ機能もある。  
 
 端末エミュレータでは、GPU (OpenGL API) による高速な描画を特徴とする [Alacritty](https://github.com/alacritty/alacritty) が人気だ。  
