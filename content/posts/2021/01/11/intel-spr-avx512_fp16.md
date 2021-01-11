@@ -41,7 +41,7 @@ AVX512、FP16 というキーワードで、過去にバグ報告プラットフ
 
 ## Intel AVX サポート表
 
-CPUマイクロアーキテクチャの違いと併せて、対応範囲が混沌としている AVX512命令群だが、GCC 等コンパイラの情報を元に頑張って整理したのが下の表となる。  
+CPUマイクロアーキテクチャの違いと併せて、対応範囲が混沌としている AVX512命令群だが、GCC 等コンパイラのドキュメントを頼りに頑張って整理したのが下の表となる。  
 プロセッサのコードネームを略称で記載しているが、一応書いておくと、*SKX (Skylake server)* 、*CNL (Cannon Lake)* 、*CLX (Cascade Lake)* 、*CPX (Cooper Lake)* 、*ICL (Ice Lake client)* 、*ICX (Ice Lake server)* 、*TGL (Tiger Lake)* 、*SPR (Sapphire Rapids)* 、*ADL (Alder Lake)* と対応している。  
 また、*Alder Lake* に関しては、[Intel® Architecture Instruction Set Extensions Programming Reference](https://software.intel.com/content/www/us/en/develop/download/intel-architecture-instruction-set-extensions-programming-reference.html) に 「Intel Hybrid Technology は AVX512 をサポートしない」とあり、そのためアーキテクチャ自体がサポートしていない場合と区別してある。  
 
@@ -50,10 +50,10 @@ AVX512命令は **Xeon Phi シリーズ** 、*Knight’s Landing* 、*Knights Mi
 
 | Intel AVX | SKX | CNL | CLX | CPX | ICL | ICX | TGL | SPR | ADL |
 | :-- | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| AVX512F (Foundation)<br>AVX512CD (Conflict Detection)<br>AVX512BW (Byte and Word)<br>AVX512DQ (Doubleword and Quadword)<br>AVX512VL (Vector Length) | Y | Y | Y | Y | Y | Y | Y | Y | - |
-| AVX512_IFMA (Integer Fused Multiply-Add)<br>AVX512_VBMI (Vector Byte Manipulation Instructions) |  | Y | Y | Y | Y | Y | Y | Y | - |
+| AVX512F (Foundation),<br>AVX512CD (Conflict Detection),<br>AVX512BW (Byte and Word),<br>AVX512DQ (Doubleword and Quadword),<br>AVX512VL (Vector Length) | Y | Y | Y | Y | Y | Y | Y | Y | - |
+| AVX512_IFMA (Integer Fused Multiply-Add),<br>AVX512_VBMI (Vector Byte Manipulation Instructions) |  | Y | Y | Y | Y | Y | Y | Y | - |
 | AVX512_VNNI |  |  | Y | Y | Y | Y | Y | Y | - |
-| AVX512_VBMI2 (Vector Byte Manipulation Instructions 2)<br>AVX512_VPOPCNTDQ<br>AVX512_BITALG (Bit Algorithms)<br>GFNI 512-bit (Galois Field New Instructions)<br>VAES 512-bit (Vector AES instructions) |  |  |  |  | Y | Y | Y | Y | - |
+| AVX512_VBMI2 (Vector Byte Manipulation Instructions 2),<br>AVX512_VPOPCNTDQ,<br>AVX512_BITALG (Bit Algorithms),<br>GFNI 512-bit (Galois Field New Instructions),<br>VAES 512-bit (Vector AES instructions) |  |  |  |  | Y | Y | Y | Y | - |
 | AVX512_BF16 |  |  |  | Y |  |  |  | Y | - |
 | AVX512_VP2INTERSECT |  |  |  |  |  |  | Y | Y | - |
 | AVX512_FP16 |  |  |  |  |  |  |  | Y | - |
