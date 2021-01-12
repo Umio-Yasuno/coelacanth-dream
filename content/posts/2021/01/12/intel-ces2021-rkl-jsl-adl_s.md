@@ -1,7 +1,7 @@
 ---
 title: "Intel、Rocket Lake、Tiger Lake-H、Jasper Lake など新世代プロセッサを正式発表"
 date: 2021-01-12T16:30:17+09:00
-draft: true
+draft: false
 tags: [ "Rocket_Lake", "Jasper_Lake", "Alder_Lake" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "Intel", "CPU" ]
