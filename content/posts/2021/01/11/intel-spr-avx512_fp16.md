@@ -22,9 +22,8 @@ Linux Kernel に投稿されたパッチのコメントによれば、`AVX512_FP
  >
  > {{< quote >}} [LKML: Kyung Min Park: [PATCH 2/2] x86: Expose AVX512_FP16 for supported CPUID](https://lkml.org/lkml/2020/12/7/1443) {{< /quote >}}
 
-AVX512系命令では、`AVX512_VNNI` にて精度を下げて複数の要素を扱うことで処理性能を向上させることができ、データ精度 FP32 の場合に対してピーク理論性能が、 Int8 では 4倍、Int16 では 2倍となる。  
-ただし、メモリ性能がボトルネックとなるため、実際の性能はそれより低くなる可能性がある。  
-`AVX512_FP16` はこれを拡張したものと思われ、ピーク理論性能は Int16 と同じとなるが、FP16 であれば Int16 よりも広い範囲が保持される。  
+AVX512系命令では、`AVX512_VNNI` にて精度を下げて複数の要素を扱うことで処理性能を向上させることができ、データ精度 FP32 の場合に対してピーク理論性能が、 Int8 では 4倍、Int16 では 2倍となる。(ただし、メモリ性能がボトルネックとなるため、実際の性能はそれより低くなる可能性がある。)  
+`AVX512_FP16` はこれを拡張したものと思われ、ピーク理論性能は Int16 と同じとなるが、FP16 であれば Int16 よりも数値が広い範囲で保持される。  
 
 AVX512、FP16 というキーワードで、過去にバグ報告プラットフォームである [intel in Launchpad](https://launchpad.net/intel) にちらと出てきた `HFNI` 命令が思い出される。  
 {{< link >}} [Intel Alder Lake、Sapphire Rapids にて追加される2つの命令 ――AVX2 VNNI /HFNI | Coelacanth's Dream](/posts/2020/05/26/intel-adl-spr-new-inst/) {{< /link >}}
