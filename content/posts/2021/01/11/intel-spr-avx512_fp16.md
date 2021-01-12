@@ -45,8 +45,8 @@ CPUマイクロアーキテクチャの違いと併せて、対応範囲が混�
 プロセッサのコードネームを略称で記載しているが、一応書いておくと、*SKX (Skylake server)* 、*CNL (Cannon Lake)* 、*CLX (Cascade Lake)* 、*CPX (Cooper Lake)* 、*ICL (Ice Lake client)* 、*ICX (Ice Lake server)* 、*TGL (Tiger Lake)* 、*SPR (Sapphire Rapids)* 、*ADL (Alder Lake)* と対応している。  
 また、*Alder Lake* に関しては、[Intel® Architecture Instruction Set Extensions Programming Reference](https://software.intel.com/content/www/us/en/develop/download/intel-architecture-instruction-set-extensions-programming-reference.html) に 「Intel Hybrid Technology は AVX512 をサポートしない」とあり、そのためアーキテクチャ自体がサポートしていない場合と区別してある。  
 
-AVX512命令は **Xeon Phi シリーズ** 、*Knight’s Landing* 、*Knights Mill* でも一部サポートされているが、それも含めるとさらに表が肥大化してしまうため省いた。  
-それと *Rocket Lake* も無いが、その *Crypress Cove アーキテクチャ* は *Ice Lake (client)* と同じ機能を備えることから、AVX512命令の範囲も同様と思われる。  
+AVX512命令は **Xeon Phi シリーズ** 、*Knight’s Landing* 、*Knights Mill* でも一部サポートされているが、それも含めるとさらに表が肥大化してしまうため省いた。5つの命令をまとめている 2行目を細かく分ける必要が出てしまう。  
+それと *Rocket Lake* も省いているが、その *Crypress Cove アーキテクチャ* は *Ice Lake (client)* と同じ機能を備えることから、AVX512命令の範囲も同様と思われる。  
 
 | Intel AVX | SKX | CNL | CLX | CPX | ICL | ICX | TGL | SPR | ADL |
 | :-- | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |

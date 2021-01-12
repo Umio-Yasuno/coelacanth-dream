@@ -42,7 +42,7 @@ Dynamic Power Share についてすっかり言ってしまうなら、Intel版 
 
 また、**Iris {{< xe >}} MAX** は PCIe Gen4 に対応し、*Tiger Lake-U/UP3* とは PCIe Gen4 x4 で接続される。  
 ただ、ベースとする GPUチップ/ダイが共通であろう **DG1 SDV** のカードには、PCIe x8 分が配線されていたため[^dg1-sdv]、PCIe Gen4 x4 で接続というのは *Tiger Lake-U/UP3* 側の仕様に引っ張られていると思われる。  
-11th Generation Intel® Core™ Processor (UP3 and UP4)[^tgl-up3-doc] には、PCIe Gen4 x8 (x4 \*2) が、NVMe SSD と dGPU にそれぞれ x4 ずつ割り振られるとある。  
+11th Generation Intel® Core™ Processor (UP3 and UP4)[^tgl-up3-doc] には、PCIe Gen4 x8 (x4 \*2) が、NVMe SSD と dGPU にそれぞれ x4 ずつ割り振られ、そのどちらかを利用できるとある。  
 
 dGPU ながら、メモリに GDDR系ではなく LPDDR4x を採用したのは製造プロセスと関係していると思われる。  
 *Tiger Lake* と同じ LPDDR4xメモリ対応とすれば、メモリコントローラー、PHY (物理層) 等の設計をそのまま持ってくることが可能であり、メモリとディスプレイ出力部との調節を行なう手間も減らせる。  

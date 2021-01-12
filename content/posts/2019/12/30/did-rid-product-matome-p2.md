@@ -424,16 +424,15 @@ Navi LITE 13///\\\E9:00
 | 7319 | 40 | Radeon Pro 5700 XT | (Navi10 XTMA) |
 | 731A | 40 | | |
 | 731B | 40 | Radeon Pro 5700 | (Navi10 XGA) |
-| 731E &darr; | C6 | | for blockchain |
-| | C7 | | for blockchain |
+| 731E &darr; | C6 | RX 5700XTB | for Blockchain |
+| | C7 | RX 5700B | for Blockchain |
 | 731F &darr; | C0 | RX 5700 XT 50th | (Navi10 XTX) |
 | | C1 | RX 5700 XT | (Navi10 XT) |
 | | C2 | RX 5600M | (Navi10 XME) |
 | | C3 | RX 5700M | |
 | | C4 | RX 5700 | (Navi10 XL) |
 | | C5 | RX 5700 XT | |
-| | C6 | RX 5700XTB | for Blockchain |
-| | C7 | RX 5700B | for Blockchain |
+| | C7 |  | |
 | | CA | RX 5600 XT | (Navi10 XLE) |
 | | CB | RX 5600 | (Navi10 XE) |
 | | E1 | | |
@@ -454,7 +453,7 @@ Navi LITE 13///\\\E9:00
 | | F1 | | |
 | | F3 | | |
 | 7360 &darr; | 40 | | |
-| | 41 | Pro 5600M[^pro5600m-youtube] | |
+| | 41 | Pro 5600M | |
 | | C1 | | |
 | | C3 | | |
 | 7362 | 71 | | (Navi12 VF) |
