@@ -2,9 +2,9 @@
 title: "【雑記】シーラカンスが見た夢　―― コードネーム云々"
 date: 2020-09-26T04:14:12+09:00
 draft: false
-# tags: [ "", ]
+tags: [ "Lucienne", ]
 # keywords: [ "", ]
-categories: [ "Diary", ]
+categories: [ "Diary", "Note" ]
 noindex: false
 # summary: ""
 toc: false
