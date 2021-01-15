@@ -1,5 +1,5 @@
 ---
-title: "Green Sardine APU の PCI ID が追加　―― 正体は Cezanne APU だったか"
+title: "Green Sardine APU の PCI ID が追加、正体は Cezanne APU だったか"
 date: 2021-01-14T11:36:51+09:00
 draft: false
 tags: [ "Green_Sardine", "Cezanne", "Renoir", "Lucienne" ]
