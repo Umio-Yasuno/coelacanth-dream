@@ -22,6 +22,17 @@ GPUスペックは **[RX 5700 XT (Navi10)](https://www.amd.com/en/products/graph
 そういった市場に出すかはびみょうだが、ファンレスモデルは GPUカードの中で故障しやすい可動部であるファンを搭載していないため、信頼性は高いという点や、小型ファンがないため、静粛性に優れるという特徴がある。  
 2スロットであるから普通のケースにも搭載でき、需要自体はあるように思われる。  
 
+**IPC-EP3000-SPH** に **GPRO X070** を 10基搭載したブロックチェーンサーバー **INCA EP-10** もリリースされている。  
+
+ * [INCA EP-10 Blockchain System](https://www.sapphiretech.com/en/commercial/inca-ep_10-blockchain-server)
+
+SoC には組み込み向けである **AMD EPYC™ Embedded 3251 (8-Core/16-Thread)** が採用されており、**GPRO X070** 10基はそれぞれ PCIe Gen3 8-Lane で接続されている。  
+ただ **EPYC 3251** が備えている PCIeインターフェイスは、PCIe Gen3 32-Lane までであるから、スイッチを経由して接続しているのかもしれない。[^epyc-3251]  
+**EPYC 3251** は TDP 55W と低く、GPUを中心としたサーバーを構成するのに適していると考えられ、調べた所、AMD が Radeon ProRender 2.0 の GPUスケーリンク性能を検証するのにも用いられていた。[^gpuopen-prorender]  
+
+[^epyc-3251]: [AMD EPYC™ Embedded 3251 | AMD](https://www.amd.com/en/product/7251)
+[^gpuopen-prorender]: [RPR 2.0 GPUOpen Presentation for Nov 24 Legal Approved v2 - AMD_RDNA2_Radeon_ProRender_HardwareRayTracing.pdf](https://gpuopen.com/wp-content/uploads/slides/AMD_RDNA2_Radeon_ProRender_HardwareRayTracing.pdf)
+
 以前、Linux Kernel (amd-gfx) に *Navi10* のブロックチェーン向け SKU をサポートするパッチが投稿されていたが、その 1つが **GPRO X070** かどうかは不明。  
 {{< link >}} [ブロックチェーン向けの Navi10 SKU とそこから読める文脈 | Coelacanth's Dream](/posts/2020/10/21/navi10-sku-for-blockchain/) {{< /link >}}
 映像出力が実装されていることから、既存のカードのクーラーを換えたモデルなのかもしれない。  
