@@ -16,6 +16,7 @@ AMD の AIB (Add-in-Board) パートナーである [Sapphire](https://www.sapph
 
 GPUスペックは **[RX 5700 XT (Navi10)](https://www.amd.com/en/products/graphics/amd-radeon-rx-5700-xt#product-specs)** をベースとしており、WGP 20基 (CU 40基)、GDDR6メモリ、メモリバス幅 256-bit、メモリ速度 14Gbps となっている。  
 補助電源には 8-pin + 6-pin を必要とする。  
+BIOS/UEFI {{< comple >}} クロックテーブル {{< /comple >}} は 2種類あり、Default Mode ではリファレンスと同じ仕様だが、もう一つの効率を重視した Efficiency Mode では、Boost Clock: 1750MHz、Game Clock: 1700MHz、Base Clock: 1500MHz と若干低めに設定されている。  
 
 冷却には、ファンを搭載しないパッシブクーリングを採用している。  
 さらにブロックチェーン向けであるが、映像出力が 4本実装されており (1x HDMI, 3x DP)、一般用途においても問題無く使えるカードとなっている。  
@@ -38,7 +39,7 @@ SoC には組み込み向けである **AMD EPYC™ Embedded 3251 (8-Core/16-Thr
 映像出力が実装されていることから、既存のカードのクーラーを換えたモデルなのかもしれない。  
 ただこうしたブロックチェーン向けのモデルを Sapphire が用意したコンテクストは一緒だろう。  
 
-TSMC の 7nmプロセスは *Zen 2/3 CPU* 、*Renoir/Lucienne/Cezanne APU* 、 *RDNA/2 GPU* 、 *MI100 GPU* 、 *PS5 SoC* 、*XSX/S SoC* 、*NVIDIA A100 GPU* ……等、多くのプロセッサが採用しており、  
+余談だが、TSMC の 7nmプロセスは *Zen 2/3 CPU* 、*Renoir/Lucienne/Cezanne APU* 、 *RDNA/2 GPU* 、 *MI100 GPU* 、 *PS5 SoC* 、*XSX/S SoC* 、*NVIDIA A100 GPU* ……等、多くのプロセッサが採用しており、  
 それらが、パッケージに使われる材料の供給不足により生産が遅れているという話が出ている。[^tsmc]  
 そんな中でビットコインを始めとした仮想通貨の価格が上昇してきた。  
 ビットコインは専用ASIC によるマイニングが主流になったが、イーサリウムは ASIC耐性があることから、マイニングには GPU が使われる。  
