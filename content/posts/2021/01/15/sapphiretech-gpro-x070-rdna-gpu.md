@@ -1,5 +1,5 @@
 ---
-title: "Sapphire がファンレス RDNA GPU、GPRO X070 をリリースしていた"
+title: "Sapphire からファンレス RDNA GPU、GPRO X070 をリリースされていた"
 date: 2021-01-15T19:49:44+09:00
 draft: false
 tags: [ "RDNA", "Navi10" ]
@@ -10,7 +10,7 @@ noindex: false
 toc: false
 ---
 
-AMD の AIB (Add-in-Board) パートナーである [Sapphire](https://www.sapphiretech.com/en) がブロックチェーン、GPUコンピューティング向けにファンレス RDNA GPU、**GPRO X070 8GB GDDR6** をリリースしていた。  
+AMD の AIB (Add-in-Board) パートナーである [Sapphire](https://www.sapphiretech.com/en) よりブロックチェーン、GPUコンピューティング向けにファンレス RDNA GPU、**GPRO X070 8GB GDDR6** がリリースされていた。  
 
  * [GPRO X070 8GB GDDR6 GPU Compute](https://www.sapphiretech.com/en/commercial/gpro-x070-gpu-compute-graphics)
 
