@@ -73,6 +73,13 @@ I/O も 1つのダイに収めず、CPU と PCH に分離したのは 10nmプロ
 CPUダイ自体は *Elkhart Lake* と同一で、PCH とパッケージを変えている可能性も考えられるが、*Elkhart Lake* と *Jasper Lake* で GNA (Gaussian mixture model and Neural network Acceleration unit) の世代が異なり、  
 *Elkhart Lake* は *Ice Lake* や *Gemini Lake* と同じ Gen1 だが、*Jasper Lake* は *Tiger Lake* と同じ Gen2 となる。  
 
+{{< ins >}}
+
+言い換えれば、*Jasper Lake* と *Elkhart Lake* は GNA にしか違いが無く、GNA が実際には同じであればダイも同一である可能性が高い。  
+GNA Gen1 と Gen2 の違いは扱える最大レイヤー数しかないため、Gen2 を Gen1 として動作させることは可能なはず。  
+
+{{< /ins >}}
+
 Intel サイトのスペックシートには、1.5M Cache と Cache 4 MB の両方が記載されているが、これは L2キャッシュ 1.5MB、L3キャッシュ (LLC) 4MB の意で、*Tremont アーキテクチャ* では 4コアとそれらで共有する L2キャッシュでクラスタ (タイルとも呼ばれる) を構成する。  
 L2キャッシュは CPUコアのみが使用可能だが、L3キャッシュは GPU からも使用できるという違いがある。  
 {{< link >}} [気になる Jasper Lake のキャッシュ構成　―― 【追記】 Snow Ridge と Elkhart Lake について訂正 | Coelacanth's Dream](/posts/2020/10/24/intel-jsl-cache/) {{< /link >}}

@@ -1,5 +1,5 @@
 ---
-title: "Alder Lake-M 関連のパッチが Coreboot に投稿される、ADL-M は ADL-P の I/O 縮小版か"
+title: "Alder Lake-M 関連のパッチが Coreboot に投稿される　―― ADL-M は ADL-P の I/O 縮小版か"
 date: 2021-01-21T00:32:24+09:00
 draft: false
 tags: [ "Alder_Lake", ]
@@ -16,7 +16,7 @@ CPU は *Golden Cove (Core)* と *Gracemont (Atom)* のハイブリッド、GPU 
 
 ## Alder Lake-P の I/O 縮小版？
 
-*Alder Lake-M* の CPUID が追加されており、*Alder Lake-P* と末尾 1桁以外一致することから、*Alder Lake-M* は *Alder Lake-P* と同じコアであることが推測される。  
+*Alder Lake-M* の CPUID が追加されており、*Alder Lake-P* と末尾 1桁以外一致することから、*Alder Lake-M* は CPU として *Alder Lake-P* と同じバリアントであることが推測される。  
 この CPUID には、`x86_Family` 、`X86_Model` といった情報を意味している。末尾 1桁は `Stepping` となり、CPU について判断する上で他よりはそれほど大きい意味ではないと思っている。  
 読み取り方とかは以下リンクを参照。  
 {{< link >}} [Alder Lake-P を搭載する Chromebookボード 「Brya」、そして Alder Lake-M | Coelacanth's Dream](/posts/2020/12/02/adl-p-chromebook-board-adl-m/) {{< /link >}}
