@@ -18,9 +18,13 @@ Intel の現チーフアーキテクトである [Raja Koduri](https://newsroom.
 
 ## {{< xe class="hpc" >}} のチップ構成
 
-{{< xe class="hpc" >}} は Base Tile、Compute Tile、Rambo Cache Tile、{{< xe >}} Link I/O Tile、それと HBM2メモリで構成され、それらは 3Dパッケージング技術 Forveros、Forverosパッケージを複数組み合わせる Co-EMIB によってパッケージングされる。  
-より詳細な構成を言えば、Base Tile、Compute Tile、Rambo Cache Tile を Forveros技術で積層、それに HBM2メモリ、{{< xe >}} Link I/O Tile が EMIB で接続される。  
+{{< xe class="hpc" >}} は *Base Tile* 、 *Compute Tile* 、 *Rambo Cache Tile* 、 *{{< xe >}} Link I/O Tile* 、それと HBM2メモリで構成され、それらは 3Dパッケージング技術 Forveros、Forverosパッケージを複数組み合わせる Co-EMIB によってパッケージングされる。  
+より詳細な構成を言えば、*Base Tile* 、 *Compute Tile* 、 *Rambo Cache Tile* を Forveros技術で積層、それに HBM2メモリ、 *{{< xe >}} Link I/O Tile* が EMIB で接続される。  
 そして、それらをもう 1セット Co-EMIB で互いを接続したものが、コードネーム **Ponte Vecchio** 1パッケージとなる。  
+
+また、各チップ (Tile) はそれぞれ別のプロセスで製造され、  
+*Base Tile* は Intel 10nm SuperFin、 *Compute Tile* は Intel の次世代プロセス {{< comple >}} 恐らくは 7nm {{< /comple >}} と外部ファウンダリ、*Rambo Cache Tile* は Intel 10nm Enhanced SuperFin、 *{{< xe >}} Link I/O Tile* は外部ファウンダリのプロセスのみを採用している。  
+Intel 7nmプロセスは 2023年頃に製品が出てくる予定にあるため、画像の *Compute Tile* は外部ファウンダリで製造されたものである可能性が高いと思われる。  
 
 Raja氏が公開した画像から、各チップの配置を推測したものが以下。  
 一見 HBM2メモリの大きさが合ってないように思えるが、これは画像が真上ではなくそこから少し右から撮影されたからで、縦幅は一致した。  
@@ -29,9 +33,12 @@ Raja氏が公開した画像から、各チップの配置を推測したもの�
 
 {{< xe class="hpc">}} と HBM2メモリに間にあるチップを Rambo Cache と判断したのは、Intel は以前 XeMF (Xe Memory Fabric) と Rambo Cache がセットであるように発表しており、  
 XeMF は 8x {{< xe class="hpc">}}用ともう片方のタイルとの接続用とで計 6基確認でき、Rambo Cache の数と一致するからだ。  
-Rambo Cache の容量等は明かされていないが、帯域については、GPU内のキャッシュ (SRAM) と HBM2メモリの間に位置し、2つのギャップを埋める程であることが発表されている。  
+Rambo Cache の容量等は明かされていないが、帯域については、GPU内のキャッシュ (SRAM) と HBM2メモリの間に位置し、2つのギャップを埋める程であることが発表されている。[^rambo-cache]  
 
 [^rambo-cache]: [NVMe® Technology Powering the Connected Universe](https://nvmexpress.org/wp-content/uploads/NVMe-Technology-Powering-the-Connected-Universe.pdf)
+
+{{< xe class="hpc" >}} の規模もまた不明だが、アーキテクチャの特徴として HPC、機械学習に最適化されており、{{< xe class="lp"  >}}アーキテクチャには搭載されていない FP64ユニットと Matrix Extension (XMX) が {{< xe class="hpc" >}} では搭載されている。  
+マルチメディアエンジンの有無についてもこれまでに触れられていないが、**AMD MI100** が機械学習時のオブジェクト検出等を想定してエンジンを搭載していたことを考えると、{{< xe class="hpc"  >}} でも最低限搭載している可能性はある。  
 
 エクサスケールスパコン Aurora は、ノードを *Sapphire Rapids* CPU 2基、*Ponte Vecchio* GPU 6基で構成し、今年 2021年に納入予定にある。  
 *Sapphire Rapids* のパッケージ等はまだ公開されていないが、Linux Kernel へのパッチにログの一部があり、そちらも既に Intelラボ内部では動作していると思われる。[^idxd-spr]  
