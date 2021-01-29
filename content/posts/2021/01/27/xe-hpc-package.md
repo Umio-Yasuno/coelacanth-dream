@@ -21,10 +21,11 @@ Intel の現チーフアーキテクトである [Raja Koduri](https://newsroom.
 {{< xe class="hpc" >}} は *Base Tile* 、 *Compute Tile* 、 *Rambo Cache Tile* 、 *{{< xe >}} Link I/O Tile* 、それと HBM2メモリで構成され、それらは 3Dパッケージング技術 Forveros、Forverosパッケージを複数組み合わせる Co-EMIB によってパッケージングされる。  
 より詳細な構成を言えば、*Base Tile* 、 *Compute Tile* 、 *Rambo Cache Tile* を Forveros技術で積層、それに HBM2メモリ、 *{{< xe >}} Link I/O Tile* が EMIB で接続される。  
 そして、それらをもう 1セット Co-EMIB で互いを接続したものが、コードネーム **Ponte Vecchio** 1パッケージとなる。  
-
 また、各チップ (Tile) はそれぞれ別のプロセスで製造され、  
 *Base Tile* は Intel 10nm SuperFin、 *Compute Tile* は Intel の次世代プロセス {{< comple >}} 恐らくは 7nm {{< /comple >}} と外部ファウンダリ、*Rambo Cache Tile* は Intel 10nm Enhanced SuperFin、 *{{< xe >}} Link I/O Tile* は外部ファウンダリのプロセスのみを採用している。  
 Intel 7nmプロセスは 2023年頃に製品が出てくる予定にあるため、画像の *Compute Tile* は外部ファウンダリで製造されたものである可能性が高いと思われる。  
+
+{{< figure src="/image/2021/01/27/xe-building.webp" caption="画像出典: [HotChips2020_GPU_Intel_Xe_David_Blythe.pdf](https://www.hotchips.org/assets/program/conference/day1/HotChips2020_GPU_Intel_Xe_David_Blythe.pdf)" >}}
 
 Raja氏が公開した画像から、各チップの配置を推測したものが以下。  
 一見 HBM2メモリの大きさが合ってないように思えるが、これは画像が真上ではなくそこから少し右から撮影されたからで、縦幅は一致した。  
