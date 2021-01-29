@@ -23,7 +23,8 @@ Intel の現チーフアーキテクトである [Raja Koduri](https://newsroom.
 そして、それらをもう 1セット Co-EMIB で互いを接続したものが、コードネーム **Ponte Vecchio** 1パッケージとなる。  
 また、各チップ (Tile) はそれぞれ別のプロセスで製造され、  
 *Base Tile* は Intel 10nm SuperFin、 *Compute Tile* は Intel の次世代プロセス {{< comple >}} 恐らくは 7nm {{< /comple >}} と外部ファウンダリ、*Rambo Cache Tile* は Intel 10nm Enhanced SuperFin、 *{{< xe >}} Link I/O Tile* は外部ファウンダリのプロセスのみを採用している。  
-Intel 7nmプロセスは 2023年頃に製品が出てくる予定にあるため、画像の *Compute Tile* は外部ファウンダリで製造されたものである可能性が高いと思われる。  
+Intel 7nmプロセスは 2023年頃に製品が出てくる予定にあるため、画像の *Compute Tile/Xe HPC* は外部ファウンダリで製造されたものである可能性が高い。  
+また、{{< xe >}} MF については、恐らく *Base Tile* に含まれているものと思われる。  
 
 {{< figure src="/image/2021/01/27/xe-building.webp" caption="画像出典: [HotChips2020_GPU_Intel_Xe_David_Blythe.pdf](https://www.hotchips.org/assets/program/conference/day1/HotChips2020_GPU_Intel_Xe_David_Blythe.pdf)" >}}
 
@@ -32,8 +33,7 @@ Raja氏が公開した画像から、各チップの配置を推測したもの�
 
 {{< figure src="/image/2021/01/27/xe-hpc-package.webp" title="Xe-HPC / Ponte Vecchio" caption="画像元: <https://twitter.com/Rajaontheedge/status/1354103878426324994>" >}}
 
-{{< xe class="hpc">}} と HBM2メモリに間にあるチップを Rambo Cache と判断したのは、Intel は以前 XeMF (Xe Memory Fabric) と Rambo Cache がセットであるように発表しており、  
-XeMF は 8x {{< xe class="hpc">}}用ともう片方のタイルとの接続用とで計 6基確認でき、Rambo Cache の数と一致するからだ。  
+{{< xe class="hpc">}} と HBM2メモリに間にあるチップを Rambo Cache と判断したのは、Intel は以前 XeMF (Xe Memory Fabric) と Rambo Cache がセットであるように発表しており、それでいて Rambo Cache は Intel 10nm eSF で製造され、別チップとなる。そして、XeMF は 8x {{< xe class="hpc">}}用ともう片方のタイルとの接続用とで計 6基確認でき、Rambo Cache の数と一致するため。  
 配置については過去に発表された時の CG 等を元に推測したが、それがどこまで実物に忠実かは定かでない。  
 Rambo Cache の容量等も明かされていないが、帯域については、GPU内のキャッシュ (SRAM) と HBM2メモリのようなインパッケージメモリとの間に位置し、2つのギャップを埋める程であることが発表されている。[^rambo-cache]  
 
