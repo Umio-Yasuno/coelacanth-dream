@@ -33,7 +33,8 @@ Raja氏が公開した画像から、各チップの配置を推測したもの�
 
 {{< xe class="hpc">}} と HBM2メモリに間にあるチップを Rambo Cache と判断したのは、Intel は以前 XeMF (Xe Memory Fabric) と Rambo Cache がセットであるように発表しており、  
 XeMF は 8x {{< xe class="hpc">}}用ともう片方のタイルとの接続用とで計 6基確認でき、Rambo Cache の数と一致するからだ。  
-Rambo Cache の容量等は明かされていないが、帯域については、GPU内のキャッシュ (SRAM) と HBM2メモリの間に位置し、2つのギャップを埋める程であることが発表されている。[^rambo-cache]  
+配置については過去に発表された時の CG 等を元に推測したが、それがどこまで実物に忠実かは定かでない。  
+Rambo Cache の容量等も明かされていないが、帯域については、GPU内のキャッシュ (SRAM) と HBM2メモリのようなインパッケージメモリとの間に位置し、2つのギャップを埋める程であることが発表されている。[^rambo-cache]  
 
 [^rambo-cache]: [NVMe® Technology Powering the Connected Universe](https://nvmexpress.org/wp-content/uploads/NVMe-Technology-Powering-the-Connected-Universe.pdf)
 

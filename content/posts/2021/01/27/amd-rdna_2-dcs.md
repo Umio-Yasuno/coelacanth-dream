@@ -1,5 +1,5 @@
 ---
-title: "AMD RDNA 2 GPU は\"Duty Cycle Scaling\" をサポート"
+title: "AMD RDNA 2 GPU は \"Duty Cycle Scaling\" をサポート"
 date: 2021-01-27T13:55:36+09:00
 draft: false
 tags: [ "RDNA_2", "Navy_Flounder", "Dimgrey_Cavefish", "Sienna_Cichlid" ]
@@ -24,7 +24,6 @@ DCS は *RDNA 2/GFX10.3* 世代の GPU に実装されているが、その有�
 DCS の機能は、高負荷な処理中、電流/電力/温度が設定された制限を超える時に働き、一時的に GPUコアの電源を切ったり入れたりすることでそれ以上超えることを抑え、電流/電力/温度を枠内に再度収めようとする。  
 
 一時的に GPUコアの電源を切る機能には他にもう 1つ、*Raven APU* からサポートされている `GFXOFF` があるが[^gfxoff]、`DCS` とは機能する状況が真逆で、`GFXOFF` は負荷がほとんど無いアイドル状態時、さらに消費電力を減らすための機能だが、`DCS` は負荷が高いビジー状態時、制限を超えさせないための機能となる。  
-*Duty (義務)* が名前にあることからもそうした機能の特徴が窺える。  
 
 [^gfxoff]: [[PATCH 00/20] drm/amdgpu: gfx off support](https://lists.freedesktop.org/archives/amd-gfx/2018-April/021499.html)
 
@@ -58,5 +57,5 @@ AMD は **Ryzen 4000シリーズ (Renoir APU)** 発表時に Radeon dGPU と組�
 `DCS` はより厳格に GPU の制限を守ることで、そうしたノートPCにおける性能最適化を推し進める機能なのだと考えられる。  
 
 [^smartshift]: [SmartShift Technology | AMD](https://www.amd.com/en/technologies/smartshift)
-[^dynamic-boost] : [NVIDIA Details Dynamic Boost Tech & Advanced Optimus (G-Sync & Optimus At Last)](https://www.anandtech.com/show/15692/nvidia-details-dynamic-boost-tech-and-advanced-optimus)
+[^dynamic-boost]: [NVIDIA Details Dynamic Boost Tech & Advanced Optimus (G-Sync & Optimus At Last)](https://www.anandtech.com/show/15692/nvidia-details-dynamic-boost-tech-and-advanced-optimus)
 [^dynamic-power-share]: [Innovation Extends with Intel Iris Xe MAX Graphics and Deep Link | Intel Newsroom](https://newsroom.intel.com/news/iris-xe-max-discrete-graphics-deep-link/)
