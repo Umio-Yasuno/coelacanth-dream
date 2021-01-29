@@ -20,6 +20,8 @@ summary: " "
          * [Dali](#dali-gfx909)
          * [Pollock](#pollock-gfx909)
       * [Renoir](#renoir-gfx90c)
+      * [Lucienne](#lucienne-gfx90c)
+      * [Cezanne](#cezanne-gfx90c)
    * FAMILY_VGH
       * [VanGogh](#vgh)
  * [Discrete GPU](#dgpu)
@@ -281,7 +283,16 @@ DG02SRTBP4MFA
 [^rn-pro-4750u]: [Problem with GPU drivers on ThinkPad L15 Gen 1 (AMD) / Laptop Issues / Arch Linux Forums](https://bbs.archlinux.org/viewtopic.php?id=259892)
 
 <!--  Lucienne (gfx90c?)  -->
+### Lucienne ( gfx90c ) {#lucienne-gfx90c}
+| Device ID | Revision ID | Product Name | Memo |
+| :--- | :--- | :---: | :---: |
+| 164C &darr; | | | |
+
 <!--  Cezanne (gfx90c?) -->
+### Cezanne ( gfx90c ) {#cezanne-gfx90c}
+| Device ID | Revision ID | Product Name | Memo |
+| :--- | :--- | :---: | :---: |
+| 1638 &darr; | | | |
 <!--
    Board:
       Celadon: AMD Mobile Reference Board?
