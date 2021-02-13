@@ -4,7 +4,7 @@ date: 2020-11-10T20:09:50+09:00
 draft: false
 tags: [ "RDNA_2" ]
 # keywords: [ "", ]
-categories: [ "Hardware", "AMD", "GPU", "Note" ]
+categories: [ "Hardware", "AMD", "GPU", "Database" ]
 noindex: false
 # summary: ""
 toc: false

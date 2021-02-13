@@ -69,7 +69,7 @@ CPU Core、CPU L3$ (4MB)、GPU CU は自分が画像から割り出したもの�
 | GPU CU | 11CU | 3CU | 8CU |
 | GPU CU Area | 3.79mm<sup>2</sup> | 3.96mm<sup>2</sup> | 1.68mm<sup>2</sup> |
 | GPU RB | 2RB | 1RB | 2RB |
-| GPU L2$ | 1024KB | 512KB | 1024KB |
+| GPU L2$ | 1024KB | <del>512KB</del><br>128KB | 1024KB |
 ||
 | DDR4 128-bit PHY Area | 16.50mm<sup>2</sup> | 16.50mm<sup>2</sup> | 15.74mm<sup>2</sup>  |
 
