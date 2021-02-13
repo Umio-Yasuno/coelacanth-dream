@@ -137,7 +137,7 @@ summary: " "
 | TA | Texture Address /Trusted Application?[^trusted-application] | |
 | TC | Texture Cache? | |
 | TCA | Texture Cache Arbiter ??? | |
-| TCC | Texture Cache Channel ??? | == L2cache |
+| TCC | Texture Channel  Cache?[^tcc] | == L2cache |
 | TCP | Texture Cache Private ??? | GCN L1$, RDNA L0$ |
 | BACO | Bus Active, Chip Off[^2] | |
 | BOCO | Bus Off, Chip Off[^2] | |
@@ -155,6 +155,7 @@ summary: " "
 | SRD | Shader Resource Descriptor[^srd] | |
 | PRT | Partially Resident Texture[^prt] | |
 
+[^tcc]: [[radeonsi] Tahiti LE: GFX block is not functional, CP is okay (#1208) · Issues · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/issues/1208#note_240161)
 [^prt]: [pal/palDeveloperHooks.h at c9937b277c491a55c689eec7cdd48fb238b8004c · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/c9937b277c491a55c689eec7cdd48fb238b8004c/inc/core/palDeveloperHooks.h#L325)
 [^srd]: [pal/palCodingStandards.md at 4ae736bdbc5d5dee59851ac564c5e21d807b44b0 · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/4ae736bdbc5d5dee59851ac564c5e21d807b44b0/doc/process/palCodingStandards.md)
 [^mall]: [[PATCH 2/3] drm/amdgpu: add support to configure MALL for sienna_cichlid (v2)](https://lists.freedesktop.org/archives/amd-gfx/2020-October/055006.html)
