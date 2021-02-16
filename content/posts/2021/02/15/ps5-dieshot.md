@@ -29,6 +29,8 @@ toc: false
 コアの外側端、*Renoir* と比較して *PS5 CPU* の面積が少なくなっている部分は、AMD が ISSCC 2020 にて発表した *Zen 2* コアの概要によると、FPU (Floating Point Unit) にあたり、[^isscc-2020]  
 撮影を行った [Fritzchens Fritz](https://www.flickr.com/photos/130561288@N04/) 氏が言及したように、*PS5* では FPU の規模を小さくした設計となっている。  
 恐らくは FPU のデータ幅を *Zen 2* の 256-bit から 128-bit にしたものと考えられる。FPU の演算パイプ数を減らすと各 FPU の構成やスケージューラーを変える必要が出てしまうし、コンパイラ側の最適化等も変えなければならない。  
+*Zen 2 アーキテクチャ* では、FPU に演算パイプを 4本持ち、MUL 2本、ADD 2本と一見対称になっているが、「[Software Optimization Guide for AMD Family 17h  Models 30h and Greater Processors (Page36)](https://www.amd.com/en/support/tech-docs?keyword=Software+Optimization+Guide+Family+17h+Models+30h)」 を見るに実際は完全に対称ではなく、ある処理を行えるのが 1本だけということがある。  
+これを変えて再構成するのは手間だろう。  
 FPU を減らしたこと自体については、FP性能が必要であれば GPU で処理すればよく、CPU側の FP性能はあまり必要無いと考えたのかもしれない。前世代の *PS4/Pro* は CU、演算ユニットの規模に対し、フロントエンドの ACE (Asynchronous Compute Engine) を多く搭載し、GPU をより汎用的に使いやすくした設計だった。  
 *PS4/Pro* で採用された *Jaguar* コアもまた FPU のデータ幅は 128-bit であるため、互換性を取る上で *Zen 2* コアの FPU は無駄があると考えた可能性もある。  
 
