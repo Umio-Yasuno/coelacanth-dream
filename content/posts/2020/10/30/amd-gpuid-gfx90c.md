@@ -2,7 +2,7 @@
 title: "LLVM に 新たな GPU ID \"gfx90c\" が追加される"
 date: 2020-10-30T08:58:37+09:00
 draft: false
-tags: [ "Renoir", "Lucienne", "Cezanne", "Green_Sardine" ]
+tags: [ "Renoir", "Lucienne", "Cezanne", "Green_Sardine", "gfx90c" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU" ]
 noindex: false

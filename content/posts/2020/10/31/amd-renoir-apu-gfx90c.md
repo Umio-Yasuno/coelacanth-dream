@@ -2,7 +2,7 @@
 title: "AMD Renoir APU の GPU ID が \"gfx90c\" に"
 date: 2020-10-31T00:24:51+09:00
 draft: false
-tags: [ "Renoir", "VanGogh" ]
+tags: [ "Renoir", "VanGogh", "gfx90c" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU" ]
 noindex: false
