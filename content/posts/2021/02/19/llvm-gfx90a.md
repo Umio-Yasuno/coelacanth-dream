@@ -75,7 +75,6 @@ MFMA (Matrix Fused Multiply-Add) 命令も拡張され、強化された演算�
 
 **MI200** の CU数等は当然まだ不明だが、CUあたりの演算性能は向上しており、*Arcturus/MI100* と変わらないか多少少ない CU数だとしても、全体的なピーク演算性能は大きく向上すると考えられ、 **CDNA 2/MI200** はよりコンピュート性能に重きを置いた GPU となることが予想される。  
 
-
 ## TgSplit {#tgsplit}
 
 *gfx90a* ではフロントエンド部の新たな機能として *TgSplit* モードがサポートされている。  
@@ -83,15 +82,16 @@ MFMA (Matrix Fused Multiply-Add) 命令も拡張され、強化された演算�
  * [llvm-project/AMDGPUUsage.rst at a8d9d50762c42d726274d3f1126ec97ff96e2a22 · llvm/llvm-project](https://github.com/llvm/llvm-project/blob/a8d9d50762c42d726274d3f1126ec97ff96e2a22/llvm/docs/AMDGPUUsage.rst#memory-model-gfx90a)
 
 *TgSplit* は *Thread group Split* の略とされる。  
-1つの Workgroup は通常同じ CU に割り振られ、CU内の異なる SIMDユニットで実行されるが
-{{< comple >}}GCNアーキテクチャでは CUあたり 4 SIMDユニット、RDNA では 2 SIMDユニット){{< /comple >}}
-*TGsplit* では Workgroup を分割し、異なる CU で実行することが可能となる。  
+1つの Workgroup は通常同じ CU に割り振られ、CU内の異なる SIMDユニットで実行されるが、 *TgSplit* では Workgroup を分割し、異なる CU で実行することが可能となる。  
+CU内の SIMDユニット数は、GCNアーキテクチャでは CUあたり 4 SIMDユニット、RDNA では 2 SIMDユニットとなる。  
 Workgroup は GPU が処理するカーネル内のブロックであり、スレッドの塊である Wavefront が最大 16個格納されている。Wavefront の単位は GCN では 64スレッド、RDNA では 32スレッド。RDNA は 64スレッドにも対応している。  
 
-少ない Workgroup 数であっても CU の稼働率を引き上げられる機能に見えるが、CU内の高速なローカルメモリ、LDS (Local Data Share) は 1つの Workgroup内のスレッド間で共有するため、Workgroup を分割し、異なる CU で実行する *TgSplit* モードでは LDS が割り当てられない場合があるとしている。  
+*TgSplit* モードは少ない Workgroup 数であっても CU の稼働率を引き上げられる機能に見えるが、CU内の高速なローカルメモリ、LDS (Local Data Share) は 1つの Workgroup内のスレッド間で共有するため、Workgroup を分割し、異なる CU で実行する *TgSplit* モードでは LDS が割り当てられない場合があるとしている。  
 そのため、*TgSplit* モードを活用し、性能を引き出すにはソフトウェア側の新たな最適化が必要と考えられるが、そこは ROCmソフトウェアが担当するのだろう。  
 
 実行フローにおける新たな *TgSplit* モードの追加は、AMD GPUアーキテクチャとして大きな変更点だと言える。  
+*gfx90a* では演算部が大きく強化されているが、それはユニット面積、GPUチップの製造コストにも響く。*gfx90a* の CU はこれまでの AMD GPU より大きくなるだろう。*Arcturus/gfx908* から増設された miSIMDユニット (Machine Intelligence SIMD) と AccVGPR (Accumulation VGPR) の存在もある。  
+そういった点では、*TgSplit* モードは増強された CU の稼働率を上げ、ダイに掛かるコストパフォーマンスを高めるために必要だったのではないか、という見方もできる。  
 
 また、 *XGMI/Infinity Fabric Link* によるメモリ共有が可能なマルチGPU構成時のメモリモデルも改良され、仮想アドレスが割り当てられている L2キャッシュを、必要以上に無効化することを減らす工夫が採り入れられている。  
 
@@ -104,7 +104,7 @@ Workgroup は GPU が処理するカーネル内のブロックであり、ス�
 | Vega20 | gfx906 |
 | Arcturus | gfx908 |
 | Raven2 | gfx909 |
-| *MI200* | *gfx90a?* |
+| *MI200?* | *gfx90a?* |
 | Renoir/Lucienne<br>/Green Sardine (Cezanne) | gfx90c |
 | Navi10 | gfx1010 |
 | Navi12 | gfx1011 |
