@@ -1,7 +1,7 @@
 ---
 title: "Intel、DG1/Iris Xe Max PRM を公開"
 date: 2021-02-20T15:20:22+09:00
-draft: true
+draft: false
 tags: [ "DG1", "Gen12" ]
 # keywords: [ "", ]
 categories: [ "Intel", "Hardware", "GPU" ]
