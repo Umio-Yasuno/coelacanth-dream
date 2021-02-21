@@ -466,7 +466,7 @@ Navi LITE 13///\\\E9:00
 | 7360 &darr; | 40 | | |
 | | 41 | Pro 5600M | |
 | | C1 | | |
-| | C3 | | |
+| | C3 | Radeon Pro V520 | |
 | 7362 | 71 | | (Navi12 VF) |
 | | C1 | | (Navi12 VF) |
 | | C3 | | (Navi12 VF) |
