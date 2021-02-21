@@ -53,14 +53,17 @@ CPU にはどちらにも *Trento* の名があるが、そのコードネーム
 前述したように、*LUMI-G* は他のパーテーションよりも遅れて 2021Q4 から運用が開始される。  
 
 *LUMI-C* は補助的なパーテーションとなり、GPU は搭載せず、CPU のみで構成される。  
-上に載せた画像中に *AMD Milan + Torento* と書かれてあったが、恐らくは CPU + GPU のノードには *Trento* を採用し、CPU のみとなる *LUMI-C* には *Milan* が採用されるのだろう。  
 *LUMI-C* には 64-Core の *AMD EPYC CPU* を搭載することがすでに語られており、*LUMI-C* に搭載される総CPUコア数は 〜200,000コア (〜3125 EPYC CPU) にもなる。  
+上に載せた画像中に *AMD Milan + Torento* と書かれてあったが、恐らくは CPU + GPU のノードには *Trento* を採用し、CPU のみとなる *LUMI-C* には *Milan* が採用されるのだろう。  
 
 [^lumi-g-node]: [LUMI resource allocation (Finland) - Webinar_LUMI_040221.pdf](https://www.deic.dk/sites/default/files/uploads/PDF/Webinar_LUMI_040221.pdf)
 
 *LUMI-D* は巨大なデータ解析や前後処理用のパーテーションとされ、32TBのメモリと 64 GPU が搭載される。  
 32TB のメモリというのは CPU と GPU のメモリを合わせた容量となる。GPU のメモリサイズについて、仕様がまだ固まっていない頃の発言だが、少なくとも 40GB以上はあることが語られている。[^lumi-gpu-memory]  
-このことから、**MI100** は HBM2 4096-bit 32GB (4スタック、スタックあたり 8GB) というメモリ仕様だったが、**MI200** ではスタックあたり 16GB の容量が可能で、より高速な HBM2e を採用すると思われる。メモリバス幅を広げる、あるいは両方を採用する可能性もあるが、NVIDIA GA100 GPU がチップとしては HBM2e 6144-bit (6スタック) を持つが、製品としては歩留まり等から 1スタックを無効化していたことを考えると若干薄い可能性のように思える。チップレットアーキテクチャなどである程度軽減可能な問題ではあるが。[^mcm]  
+このことから、**MI100** は HBM2 4096-bit 32GB (4スタック、スタックあたり 8GB) というメモリ仕様だったが、**MI200** ではスタックあたり 16GB の容量が可能で、より高速な HBM2e を採用すると思われる。メモリバス幅を広げる、あるいは両方を採用する可能性もあるが、NVIDIA GA100 GPU がチップとしては HBM2e 6144-bit (6スタック) を持つが、製品としては歩留まり等から 1スタックを無効化していたことを考えると若干薄い可能性のように思える。  
+チップレットアーキテクチャなどである程度軽減可能な問題ではあるが。  
+ちょうど HPE の製品名に **AMD Instinct MI200 OAM x1 MCM Special FIO Accelerator for HPE Cray EX** があったことが話題になっている。[^mcm]  
+{{< link >}} [Intel OneAPI - a50002555enw](https://assets.ext.hpe.com/is/content/hpedam/a50002555enw) {{< /link >}}
 64 GPUs が 64GB のメモリを持つとして 4TB、残り 28TB は CPU が持つものと思われる。  
 CPU と GPU のメモリ空間の統合は *CDNA 2 アーキテクチャ* と *3rd Gen Infinity Architecture* で可能となることが以前に発表されている。  
 CPU + GPU という構成であっても *LUMI-G* と *LUMI-D* とで使い分けているのは *LUMI* システムの特徴的で面白い点と言える。  
@@ -73,7 +76,7 @@ CPU + GPU という構成であっても *LUMI-G* と *LUMI-D* とで使い分�
 
 ### CUDAコードから HIPコードへの変換 {#hip}
 
-ちょうど *LUMI* システムに向けたソフトウェア対応、最適化作業、具体的には CUDA用のコードを AMD GPU に対応している HIP (Heterogeneous Interface for Portability) コードに変換や移植する際の手順、性能についての発表が Fosdem 2021 で行われた。  
+ちょうど *LUMI* システムに向けた、CUDA用のコードを AMD GPU に対応している HIP (Heterogeneous Interface for Portability) コードに変換や移植する際の手順、性能についての発表が Fosdem 2021 で行われた。  
 発表内容は以下のリンク先で PDFと動画形式で公開されている。  
 
  * [FOSDEM 2021 - Getting ready for the AMD GPUs](https://fosdem.org/2021/schedule/event/amd_gpus/)
