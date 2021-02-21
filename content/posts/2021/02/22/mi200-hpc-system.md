@@ -10,10 +10,10 @@ noindex: false
 toc: false
 ---
 
-先日、LLVM にサポートが追加された GPUID *gfx90a* を用いると思われる **MI200** だが、  
+先日、LLVM にサポートが追加された GPUID *gfx90a* を用いると思われる **MI200** だが、すでにスーパーコンピューター *Frontier* と *LUMI* へ採用されており、2021年中に納入、一部運用を開始する予定にある。  
 {{< link >}} [LLVM に GFX90A のサポートが追加される　―― CDNA 2/MI200 か | Coelacanth's Dream](/posts/2021/02/19/llvm-gfx90a/) {{< /link >}}
-既にスーパーコンピューター *Frontier* と *LUMI* へ採用される予定にある。  
-*Frontier* は 2021年にシステムを納入予定としているが、*LUMI* は 2021半ばに運用を開始する予定で進められている。  
+
+*Frontier* は 2021年にシステムを納入予定としているが、*LUMI* は 2021半ばから運用を開始する予定で進められている。  
 
 {{< pindex >}}
  * [Frontier と LUMI](#frontier-and-lumi)
