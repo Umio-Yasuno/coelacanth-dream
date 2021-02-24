@@ -467,13 +467,15 @@ Navi LITE 13///\\\E9:00
 | | 41 | Pro 5600M | |
 | | C1 | | |
 | | C3 | Radeon Pro V520 | |
+| | C7 | | (no video support)[^no-video-navi12] |
 | 7362 | 71 | | (Navi12 VF) |
 | | C1 | | (Navi12 VF) |
-| | C3 | | (Navi12 VF) |
+| | C3 | | (Navi12 VF) (AWS) |
 
 [Page Top](#page_index)
 
 [^pro5600m-youtube]: <https://www.youtube-nocookie.com/embed/unG5uGqefmA>
+[^no-video-navi12]: [[PATCH] drm/amdgpu: disable VCN for Navi12 SKU](https://lists.freedesktop.org/archives/amd-gfx/2021-February/059663.html)
 
 #### Navi14 ( gfx1012 ) {#navi14-gfx1012}
 | Device ID | Revision ID | Product Name | Memo |
