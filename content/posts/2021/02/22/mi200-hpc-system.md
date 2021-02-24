@@ -38,7 +38,8 @@ CPU にはどちらにも *Trento* の名があるが、そのコードネーム
 他の情報にも触れると、*Frontier* の納入先は米エレルギー省管轄下にあるオークリッジ国立研究所、*LUMI* はフィンランドに拠点を置く EuroHPC JU (European High Performance Computer Joint Undertaking) となる。*LUMI* は欧州10ヶ国 (ベルギー、チェコ共和国、デンマーク、エストニア、フィンランド、アイスランド、ノルウェー、ポーランド、スウェーデン、スイス) で共有される。  
 契約の総額は *Frontier* が $600M (6億ドル)、*LUMI* が $160M (1億6,000万ドル)。  
 
-
+*LUMI* は予定通り 2021年中に運用が開始されれば、ピークFP64性能では現在世界最速のスパコン、富嶽 (Fugaku) の 513 PetaFlops を越すとされる。  
+しかし、*LUMI* の HPL (Linpack) での性能は 375 PF とされ、対して富嶽は 442.01 PF の性能を発揮しており、実行性能や実行効率では富嶽がまだ勝っている。  
 
 [^frontier-schedule]: [Frontier: OLCF’S Exascale Future – Oak Ridge Leadership Computing Facility](https://www.olcf.ornl.gov/2018/02/13/frontier-olcfs-exascale-future/)
 [^lumi-schedule]: [LUMI resource allocation (Finland) - lumi-businessoulu_pekka_manninen_2020-11-26.pdf](https://www.businessoulu.com/media/2019/pdf/lumi-businessoulu_pekka_manninen_2020-11-26.pdf)

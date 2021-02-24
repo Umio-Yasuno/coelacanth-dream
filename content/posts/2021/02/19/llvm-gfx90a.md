@@ -12,7 +12,7 @@ toc: false
 
 AMDGPU のコンパイラバックエンドとしても用いられる LLVM に、GPUID *gfx90a* のサポートを追加するパッチが投稿された。  
 {{< link >}} [[AMDGPU] gfx90a support · llvm/llvm-project@a8d9d50](https://github.com/llvm/llvm-project/commit/a8d9d50762c42d726274d3f1126ec97ff96e2a22) {{< /link >}}
-*Vega/GFX9* 世代であること、*Arcturus/MI100/gfx908* と同様に SRAM ECC、MFMA命令等をサポートしていることから、次世代 *CDNA* GPU、**MI200** の GPUID ではないかと思われる。  
+*Vega/GFX9* 世代であること、*Arcturus/MI100/gfx908* と同様に SRAM ECC、MFMA命令等をサポートしていることから、 *CDNA 2* (次世代 *CDNA* )  GPU、**MI200** の GPUID ではないかと思われる。  
 
 {{< pindex >}}
 
