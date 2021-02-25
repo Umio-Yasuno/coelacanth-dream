@@ -104,7 +104,7 @@ HBM2メモリではスタックあたり最大 8GB までだったが、HBM2Eメ
 [^arcturus-sdma]: [Navi21 /Sienna Cichlid は高速なGPU間通信 XGMI をサポート | Coelacanth's Dream](/posts/2020/07/17/navi21-sienna_cichlid-support-xgmi/)
 [^mi100-links]: [AMD、初の CDNAアーキテクチャ GPU 「MI100」 を発表 | Coelacanth's Dream](/posts/2020/11/17/amd-cdna-arch-mi100-arcturus/)
 
-コード中には *Alderbaran* が最大 8-GPU に対応するように記述されているが、今の所はサポートのため (*Arcturus* の) 設定を使い回しているだけで、後で書き直す必要があるとしている。  
+コード中には *Aldebaran* が最大 8-GPU に対応するように記述されているが、今の所はサポートのため (*Arcturus* の) 設定を使い回しているだけで、後で書き直す必要があるとしている。  
 
  >        	switch (adev->asic_type) {
  >        	case CHIP_VEGA20:
