@@ -24,7 +24,7 @@ toc: false
  > {{< quote >}} [[PATCH 017/159] drm/amdgpu: add gfx v9 block support for aldebaran](https://lists.freedesktop.org/archives/amd-gfx/2021-February/059701.html) {{< /quote >}}
 
 そしてその特徴等から、*CDNA 2アーキテクチャ* を採用する **MI200** のコードネームではないかと考えられる。  
-**MI200** をサポートするパッチは最近になって投稿され始め、先日には対応すると思われる GPUID *gfx90a* のサポートが LLVM に追加されている。  
+**MI200** に関連するパッチは最近になって投稿され始め、先日には対応すると思われる GPUID *gfx90a* のサポートが LLVM に追加されている。  
 {{< link >}} [LLVM に GFX90A のサポートが追加される　―― CDNA 2/MI200 か | Coelacanth's Dream](/posts/2021/02/19/llvm-gfx90a/) {{< /link >}}
 
 {{< pindex >}}
@@ -33,6 +33,9 @@ toc: false
  * [少ない SDMAエンジン](#sdma)
  * [Aldebaran では GDS が削除](#removed-gds)
  * [CPU との XGMI/Infinity Fabric Link 接続に対応](#xgmi-to-cpu)
+ * [Aldebaran は複数ダイ構成 (MCM) か](#multi-die)
+ * [SMUv13、VCN 2.6、DeviceID](#other)
+ * [コードネーム: Aldebaran](#codename)
 
 {{< /pindex >}}
 
@@ -149,13 +152,83 @@ GDS を削除した理由としてはアトミック操作/使用のためとし
 
 {{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_10.webp" title="AMD 3rd Gen Infinity Architecture Enables Accelerated Computing" caption="画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Mark Papermaster: Future of High Performance](https://ir.amd.com/static-files/ccef22f0-f641-4fc5-861f-cb3d7d125a68)" >}}
 
+## Aldebaran は複数ダイ構成 (MCM) か {#multi-die}
+
+先日、HPE の資料に、製品名 **AMD Instinct MI200 OAM x1 MCM Special FIO Accelerator for HPE Cray EX** があったことが話題となり[^mcm]、**MI200** は MCM 構成ではないかとされたが、それを裏付けるようなパッチとコメントがあった。  
+{{< link >}} [Intel OneAPI - a50002555enw](https://assets.ext.hpe.com/is/content/hpedam/a50002555enw) {{< /link >}}
+
+*Aldebaran* はに複数の die ID が割り振られ、GPU と CPU (ホスト) とのリンクタイプを得るのに使われ、  
+
+ >        is_host_gpu_xgmi_supported is used to query gpu and
+ >        cpu/host link type. get_die_id is used to query die
+ >        ids.
+ >
+ > {{< quote >}} [[PATCH 036/159] drm/amdgpu: add new smuio callbacks for aldebaran](https://lists.freedesktop.org/archives/amd-gfx/2021-February/059719.html) {{< /quote >}}
+
+新たなクロック調節機能である "Performance Determinism" はダイごとに有効可能だとしている。  
+
+ >        Performance Determinism is a new mode in Aldebaran where PMFW tries to
+ >        maintain sustained performance level. It can be enabled on a per-die
+ >        basis on aldebaran.
+ >
+ > {{< quote >}} [[PATCH 124/159] drm/amd/pm: Enable performance determinism on aldebaran](https://lists.freedesktop.org/archives/amd-gfx/2021-February/059807.html) {{< /quote >}}
+
+また、*Aldebran* の SMUv13 (System Management Unit) のファイルにはマクロ名に `MCM` が付くものがあり、それはダイ、パッケージ、ソケット、トポロジ等に関係している。  
+
+ >        //SMUIO_MCM_CONFIG
+ >        #define SMUIO_MCM_CONFIG__DIE_ID__SHIFT                                                                       0x0
+ >        #define SMUIO_MCM_CONFIG__PKG_TYPE__SHIFT                                                                     0x1
+ >        #define SMUIO_MCM_CONFIG__SOCKET_ID__SHIFT                                                                    0x4
+ >        #define SMUIO_MCM_CONFIG__PKG_SUBTYPE__SHIFT                                                                  0x8
+ >        #define SMUIO_MCM_CONFIG__TOPOLOGY_ID__SHIFT                                                                  0xa
+ >        #define SMUIO_MCM_CONFIG__DIE_ID_MASK                                                                         0x00000001L
+ >        #define SMUIO_MCM_CONFIG__PKG_TYPE_MASK                                                                       0x0000000EL
+ >        #define SMUIO_MCM_CONFIG__SOCKET_ID_MASK                                                                      0x000000F0L
+ >        #define SMUIO_MCM_CONFIG__PKG_SUBTYPE_MASK                                                                    0x00000300L
+ >        #define SMUIO_MCM_CONFIG__TOPOLOGY_ID_MASK                                                                    0x00007C00L
+ >
+ > {{< quote >}} [drivers/gpu/drm/amd/include/asic_reg/smuio/smuio_13_0_2_offset.h · amd-staging-drm-next-aldebaran · Alex Deucher / linux · GitLab](https://gitlab.freedesktop.org/agd5f/linux/-/blob/amd-staging-drm-next-aldebaran/drivers/gpu/drm/amd/include/asic_reg/smuio/smuio_13_0_2_offset.h) {{< /quote >}}
+
+*Aldebaran/MI200* が MCM構成だとして、そこで出てくるのは、上述した SDMAエンジンの数がダイごとのものなのか、GPU全体なのか、ダイ同士の接続は SDMAエンジンを用いる *XGMI* 接続なのかそうでないか、それぞれが I/O やメディアエンジンを持つ独立可能な複数のダイで構成されるのか、といった疑問が出てくるが、  
+まあそれは今後パッチという形か、あるいは正式発表時に明かされるだろうから、それを待つこととする。  
+
+
+## SMUv13、VCN 2.6、DeviceID {#other}
+
+既に触れたが、*Aldebran* の SMU は Version13 となり、これは以前ひょっこりと出てきてそれきりな [Yellow Carp APU](/tags/yellow_carp) と同じ世代となる。  
+{{< link >}} [新たな AMD APU、"Yellow Carp"　―― SMU は v13 に | Coelacanth's Dream](/posts/2020/12/08/amd-yellow-carp-apu/) {{< /link >}}
+さらに言えば、*MI200* が SMUv13 となるのは、以前ファームウェアバイナリに混じってアップロードされた更新履歴にあった情報だ。  
+{{< link >}} [Cezanne の Coreboot 対応が進行中　―― MI200, Mero, Rembrandt のネームプレート | Coelacanth's Dream](/posts/2020/12/16/czn-coreboot-mi200-mero-rmb/) {{< /link>}}
+
+しかし、対応するプラットフォームや時期の違いから、それぞれの SMUv13 は全く同じではなく、*Yellow Carp* は SMU v13.0.1、*Aldebaran* は SMU v13.0.2 となっている。  
+
+デコード/エンコードを処理する VCN は *Arcturus* からわずかにバージョンが進んだ VCN 2.6 を搭載しているが、VCN 2.5 との違いは不明。  
+また、*Arcturus* 同様に VCN を 2基搭載するが、片方は VCN 2.6、もう片方は VCN 2.5 としている。配置される MMHUB (MultiMedia Hub) は異なるが、やはりこちらも違いは不明。[^vcn-2_6]  
+*Navi21/Sienna Cichlid* のようにエンコードとデコードで役割を分けているようでもない。  
+
+[^vcn-2_6]: [[PATCH 044/159] drm/amdgpu/vcn2.6: Add vcn2.6 support](https://lists.freedesktop.org/archives/amd-gfx/2021-February/059730.html)
+
+*Aldebaran* の DeviceID (PCI ID) には現在 3種リストされているが、*Arcturus* の例から、2種はエンジニアサンプリングか予約用と思われる。  
+
+
+ >        +	/* Aldebaran */
+ >        +	{0x1002, 0x7408, PCI_ANY_ID, PCI_ANY_ID, 0, 0, CHIP_ALDEBARAN},
+ >        +	{0x1002, 0x740C, PCI_ANY_ID, PCI_ANY_ID, 0, 0, CHIP_ALDEBARAN},
+ >        +	{0x1002, 0x740F, PCI_ANY_ID, PCI_ANY_ID, 0, 0, CHIP_ALDEBARAN},
+ >        +
+ >
+ > {{< quote >}} [[PATCH 067/159] drm/amdgpu: Add DID for aldebaran](https://lists.freedesktop.org/archives/amd-gfx/2021-February/059750.html) {{< /quote >}}
+
 ## コードネーム: Aldebaran {#codename}
 
 *Aldebaran (アルデバラン)* はおうし座で最も明るい恒星 (首星)、α星の固有名である。  
 *RDNA 2 アーキテクチャ* からは **色+魚** をコードネームにするようになったが、*CDNA アーキテクチャ* では引き続き恒星をコードネームに採用するようだ。  
 
 *Vega (ベガ)* 、*Arcturus (アークトゥルス)* もまた α星の固有名で、*Vega* はこと座、*Arcturus* はうしかい座に位置する。  
-星には詳しくないし、参考資料によって異なったりであやふやだが、地球から *Vega* は 25光年、*Arcturus* は 36光年、*Aldebaran* は 65光年離れており、最新の世代ほど地球から遠くなっている。  
+星には詳しくない上、参考資料によって異なったりであやふやだが、地球から *Vega* は 25光年、*Arcturus* は 36光年、*Aldebaran* は 65光年離れており、最新の世代ほど地球から遠くなっている。  
 
-ランダムで選ばれている可能性もあるが、*Arcturus* は大きな固有運動を示す高速度星でもあり、*GCNアーキテクチャ* から *CDNA アーキテクチャ* への転換を象徴する GPU のコードネームとしてはぴったりと言えるだろう。  
+ランダムで選ばれている可能性もあるが、*Arcturus* は大きな固有運動を示す高速度星でもあり、*GCNアーキテクチャ* から *CDNA アーキテクチャ* への転換を象徴する GPU のコードネームとしてはぴったりと言える。  
+そして、*Aldebaran* はアラビア語で「後に続くもの」の意で、同じおうし座に位置するプレアデス (和名: すばる) よりも遅れて昇ってくることからその名が付けられている。  
+こちらも、*Arcturus/CDNA 1* から続く第2世代 *CDNA アーキテクチャ* 、*CDNA 2* GPU に付けられたコードネームとして合っている。  
+
 

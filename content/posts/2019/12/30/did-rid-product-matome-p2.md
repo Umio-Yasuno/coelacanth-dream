@@ -403,8 +403,8 @@ DG02SRTBP4MFA
 #### Arcturus ( gfx908 ) {#arcturus-gfx908}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 738C | | MI100[^5] | |
 | 7388 | | | |
+| 738C | | MI100[^5] | |
 | 738E | | | |
 | 7390 | | | (Arcturus VF) |
 
