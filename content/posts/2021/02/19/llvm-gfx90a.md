@@ -82,9 +82,10 @@ MFMA (Matrix Fused Multiply-Add) 命令も拡張され、強化された演算�
  * [llvm-project/AMDGPUUsage.rst at a8d9d50762c42d726274d3f1126ec97ff96e2a22 · llvm/llvm-project](https://github.com/llvm/llvm-project/blob/a8d9d50762c42d726274d3f1126ec97ff96e2a22/llvm/docs/AMDGPUUsage.rst#memory-model-gfx90a)
 
 *TgSplit* は *Thread group Split* の略とされる。  
-1つの Workgroup は通常同じ CU に割り振られ、CU内の異なる SIMDユニットで実行されるが、 *TgSplit* では Workgroup を分割し、異なる CU で実行することが可能となる。  
-CU内の SIMDユニット数は、GCNアーキテクチャでは CUあたり 4 SIMDユニット、RDNA では 2 SIMDユニットとなる。  
-Workgroup は GPU が処理するカーネル内のブロックであり、スレッドの塊である Wavefront が最大 16個格納されている。Wavefront の単位は GCN では 64スレッド、RDNA では 32スレッド。RDNA は 64スレッドにも対応している。  
+1つの Workgroup は通常同じ CU に割り振られ、CU内の異なる SIMDユニットで実行されるが、  
+*TgSplit* では Workgroup を分割、異なる CU での実行を可能とする。  
+(CU内の SIMDユニット数は、GCNアーキテクチャでは CUあたり 4 SIMDユニット、RDNA では 2 SIMDユニット。  
+Workgroup は GPU が処理するカーネル内のブロックであり、スレッドの塊である Wavefront が最大 16個格納されている。Wavefront の単位は GCN では 64スレッド、RDNA では 32スレッド。RDNA は 64スレッドにも対応している。)  
 
 *TgSplit* モードは少ない Workgroup 数であっても CU の稼働率を引き上げられる機能に見えるが、CU内の高速なローカルメモリ、LDS (Local Data Share) は 1つの Workgroup内のスレッド間で共有するため、Workgroup を分割し、異なる CU で実行する *TgSplit* モードでは LDS が割り当てられない場合があるとしている。  
 そのため、*TgSplit* モードを活用し、性能を引き出すにはソフトウェア側の新たな最適化が必要と考えられるが、そこは ROCmソフトウェアが担当するのだろう。  
