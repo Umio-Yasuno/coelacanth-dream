@@ -73,6 +73,7 @@ summary: " "
 | MES | Micro Engine Scheduler | GFX10? |
 | MEC | Micro Engine Compute? | |
 | PSP | Platform Security Processor | |
+| RAP | Register Access Policy[^rap] | |
 | SDP | Scalable Data Port | |
 | PA | Primitive Assembly  | |
 | IA | Input Assembly | |
@@ -114,6 +115,7 @@ summary: " "
 | IH | Interrupt Handler[^ih] | |
 | TMR | Trust Memory Region[^tmr] | |
 
+[^rap]: [drm/amdgpu: add RAP TA header file](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd?h=amd-staging-drm-next&id=a189d0ae0cd68643204cbe9b11e824414b2b06c9)
 [^dmub]: [drm/amd/display: Add DCN3 DMUB](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd?h=amd-staging-drm-next&id=5baebf61ba0ce14253a513ac92be661b35a19676)
 [^tmr]: [drm/amdgpu:add tmr mc address into amdgpu_firmware_info](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd?h=amd-staging-drm-next&id=abf412b3efb2f943d9b98a489e9aca836be21333)
 [^hpd]: [drm/amdgpu: add the HDP 4.0 register headers](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd?h=amd-staging-drm-next&id=bcfb47cdd76a20b3c596981ea7b35fa23abac4c8)

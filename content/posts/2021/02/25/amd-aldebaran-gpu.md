@@ -12,6 +12,8 @@ toc: false
 
 新たな AMD GPU、*Aldebaran* をサポートするためのパッチ 159個が Linux Kernel (amd-gfx) に投稿された。  
 
+ * [[PATCH 000/159] Aldebaran support](https://lists.freedesktop.org/archives/amd-gfx/2021-February/059694.html)
+
 *Aldebaran* は *Arcturus/MI100/CDNA 1* 同様に GFX Ring を持たない。グラフィクス処理を行うための固定機能 {{< comple >}} Rasterizer, RenderBackend, Geometry Engine ... {{< /comple >}} も搭載していないと思われる。  
 
 
@@ -135,10 +137,12 @@ GDS を削除した理由としてはアトミック操作/使用のためとし
 それと、追加された実行フローにおける新モード *TgSplit* の存在が関係している可能性もある。  
 
 そして今になって調べて気付いたが、GDS の変更は *Arcturus/MI100* の時点で行われていた。  
-*Vega10/Vega20* は GDS 64KB を持っていたが、*Arcturus/MI100* では 4KB に減らされている。また、帯域やバンク数も資料中には記述されなくなった。[^gds-size]
+*Vega10/Vega20* は GDS 64KB を持っていたが、*Arcturus/MI100* では 4KB (4バンク) に減らされている。[^arct-gds]帯域やバンク数は資料に記述されなくなった。[^gds-size]
 一応、*RDNA 2/GFX10.3* も確認したが、そちらは 64KB のままであり、*CDNA アーキテクチャ* 特有の変更点と言える。  
 
 [^gds-size]: [Vega_7nm_Shader_ISA_26November2019.pdf](https://gpuopen.com/wp-content/uploads/2019/11/Vega_7nm_Shader_ISA_26November2019.pdf) ["AMD Instinct MI100" Instruction Set Architecture: Reference Guide - CDNA1_Shader_ISA_14December2020.pdf](https://developer.amd.com/wp-content/resources/CDNA1_Shader_ISA_14December2020.pdf)
+[^arct-gds]: [[PATCH 089/102] drm/amdgpu: init gds config for arct](https://lists.freedesktop.org/archives/amd-gfx/2019-July/036836.html)
+
 
 ## CPU との XGMI/Infinity Fabric Link 接続に対応 {#xgmi-to-cpu}
 

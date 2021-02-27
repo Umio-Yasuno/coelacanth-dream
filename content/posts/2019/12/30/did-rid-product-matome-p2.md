@@ -31,6 +31,7 @@ summary: " "
       * [Vega20](#vega20-gfx906)
    * FAMILY_AR
       * [Arcturus](#arcturus-gfx908)
+      * [Aldebaran](#aldebaran-gfx90a)
    * FAMILY_NV
       * [Navi10](#navi10-gfx1010)
       * [Navi12](#navi12-gfx1011)
@@ -407,6 +408,15 @@ DG02SRTBP4MFA
 | 738C | | MI100[^5] | |
 | 738E | | | |
 | 7390 | | | (Arcturus VF) |
+
+[Page Top](#page_index)
+
+#### Aldebara ( gfx90a ) {#aldebaran-gfx90a}
+| Device ID | Revision ID | Product Name | Memo |
+| :--- | :--- | :---: | :---: |
+| 7408 | | | |
+| 740C | | | |
+| 740F | | | |
 
 [Page Top](#page_index)
 
