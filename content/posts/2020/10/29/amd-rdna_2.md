@@ -4,7 +4,7 @@ date: 2020-10-29T01:14:51+09:00
 draft: false
 tags: [ "RDNA_2", ]
 # keywords: [ "", ]
-categories: [ "Hardware", "AMD", "APU" ]
+categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
 # summary: ""
 toc: false
@@ -62,7 +62,7 @@ HDMI 2.1 VRR、AV1 HWデコードにも対応する。
 | Memory Bus Width | 256-bit | 256-bit | 256-bit |
 | Max Memory Size | 16 GB | 16 GB | 16 GB |
 | Memory Bandwidth | 512 GB/s | 512 GB/s | 512 GB/s |
-| Infinith Cache | 128 MB | 128 MB | 128 MB |
+| Infinity Cache | 128 MB | 128 MB | 128 MB |
 ||
 | Peak FP16 (TFLOPS) | 32.34 | 41.47 | 46.08 |
 | Peak FP32 (TFLOPS) | 16.17 | 20.74 | 23.04 |
