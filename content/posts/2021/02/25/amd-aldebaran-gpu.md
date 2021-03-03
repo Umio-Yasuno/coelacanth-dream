@@ -2,7 +2,7 @@
 title: "Linux Kernel に 「Aldebaran」 GPU をサポートするパッチが投稿される　―― CDNA 2/MI200 のコードネーム?"
 date: 2021-02-25T13:40:22+09:00
 draft: false
-tags: [ "MI200", "CDNA_2", "gfx90a" ]
+tags: [ "MI200", "CDNA_2", "gfx90a", "Aldebaran" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false

@@ -114,6 +114,7 @@ summary: " "
 | MGLS | Medium Grain Light Sleep | |
 | IH | Interrupt Handler[^ih] | |
 | TMR | Trust Memory Region[^tmr] | |
+| SQ | (Distributed) Sequencer | |
 
 [^rap]: [drm/amdgpu: add RAP TA header file](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd?h=amd-staging-drm-next&id=a189d0ae0cd68643204cbe9b11e824414b2b06c9)
 [^dmub]: [drm/amd/display: Add DCN3 DMUB](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd?h=amd-staging-drm-next&id=5baebf61ba0ce14253a513ac92be661b35a19676)

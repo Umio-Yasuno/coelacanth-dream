@@ -2,7 +2,7 @@
 title: "MI200 は Frontier、LUMI に採用され、LUMI は 2021年半ばから運用開始予定"
 date: 2021-02-22T01:59:53+09:00
 draft: false
-tags: [ "gfx90a", "MI200", "CDNA_2" ]
+tags: [ "gfx90a", "MI200", "CDNA_2", "Aldebaran" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
