@@ -57,14 +57,13 @@ GPUID *gfx90a* では、LLVM に投稿されたパッチの内容から、`FullR
  >
  > {{< quote >}} [ac: handle bigger instruction prefetch for Aldebaran](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/9389/diffs?commit_id=4b1325902be3d22386b79929987f57dd95d6ac75#diff-content-4ebf7901a3eaa2bb371e22bccfbed14df52e0608) {{< /quote >}}
 
-ここでの命令のプリフェッチ機能は *RDNA/GFX10* から追加された機能であり、*RDNA/GFX10* では命令を、現在の PC (Program Counter)[^pc] から最大 3個のキャッシュライン (各 64 Bytes) 分プリフェッチすることができる。  
+ここでの命令のプリフェッチ機能は *RDNA/GFX10* から追加された機能であり、*RDNA/GFX10* では命令を、現在の PC (Program Counter)[^pc] から最大 3個のキャッシュライン分 (各 64 Bytes) プリフェッチすることができる。  
 それが *Aldebaran* では最大 16個のキャッシュライン分プリフェッチできるよう強化されている。  
 命令のプリフェッチがうまく働ければ、命令のロードを短縮することができ、演算速度の向上に繋がる。  
 
 [^pc]: (PC, Program Counter: 次に実行する命令のアドレスを格納しているレジスタ)
 
-この機能は *CDNA 1 アーキテクチャ* 、 *Arcturus/MI100* ではサポートされていなかったため、CDNA 系では *CDNA 2 アーキテクチャ* から追加された機能と言え、  
-*RDNA/2 アーキテクチャ* とのプリフェッチの規模の違いはそれぞれの特徴を表しているとも言える。  
+この機能は *CDNA 1 アーキテクチャ* 、 *Arcturus/MI100* ではサポートされていなかったため、CDNA 系では *CDNA 2 アーキテクチャ* から追加された機能と言え、*RDNA/2 アーキテクチャ* とのプリフェッチの規模の違いはそれぞれの特徴を表しているとも言える。  
 
 *Alderbaran* で *RDNA/2* よりも強化した理由については、*TgSplit* モードと同様に、`FullRate64Ops` の対応によって規模が大きくなった演算部の使用率/稼働率を高める目的があるのではないかと思われる。  
 
@@ -78,7 +77,7 @@ GPUID *gfx90a* では、LLVM に投稿されたパッチの内容から、`FullR
  >
  > {{< quote >}} [ac: set the TCC line size for Aldebaran](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/9389/diffs?commit_id=1a03a53c51911cf48d6007ee5745643a836a4a72#diff-content-c3cf206d71203e77a4252c3915daf913c9251dc3) {{< /quote >}}
 
-これまでの *GCN アーキテクチャ* と *Arcturus/MI100* では L2キャッシュのキャッシュラインサイズは 64 Bytes だったが、*Aldebaran* では 128 Bytes となる。  
+これまでの *GCN アーキテクチャ* と *Arcturus/MI100* では L2キャッシュのキャッシュラインサイズは基本 64 Bytes だったが、*Aldebaran* では 128 Bytes となる。  
 上の引用部では見切れてしまっているが (含めようとすると今回のパッチで削除された部分も入ってしまう)、*RDNA アーキテクチャ* では *RDNA/GFX10* からキャッシュラインサイズは 128 Bytes となっており、命令のプリフェッチ機能のように、 *CDNA 2 アーキテクチャ* が *RDNA アーキテクチャ* から取り込んだ部分と言えなくもない。  
 単に開発時期の違いから *RDNA* が先に採り入れていた、というだけのこととも考えられるが。  
 
@@ -108,6 +107,8 @@ GPUID *gfx90a* では、LLVM に投稿されたパッチの内容から、`FullR
  > {{< quote >}} [ac,radeonsi: use correct VGPR granularity on Aldebaran](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/9389/diffs?commit_id=93c29b82e026e67ad5399864a3779d6f6841fb74) {{< /quote >}}
 
 これは LLVM の記述と合わせて、 *Arcturus/MI100* ではドット積の演算を主に処理する miSIMDユニット側からのみ扱えた AccVGPR を、通常の SIMDユニット shSIMD (shader SIMD) からも扱えるよう変更したのではないかと考えられる。  
+shSIMD から扱えるベクタレジスタ数が増えることで、通常の処理において、レジスタから追い出されること (再割り当て) の頻度を減らすことができる。  
+上 2つは *RDNA アーキテクチャ* から採り入れたようにも見える機能だったが、この改良については *CDNA アーキテクチャ* から続くものだろう。  
 
  >          SQ_MAX_PGM_VGPRS = 512, // Maximum programmable VGPRs across all targets.
  >          AGPR_OFFSET = 226, // Maximum programmable ArchVGPRs across all targets.
