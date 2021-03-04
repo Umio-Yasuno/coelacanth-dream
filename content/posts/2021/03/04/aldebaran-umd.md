@@ -11,7 +11,10 @@ noindex: false
 toc: false
 ---
 
-オープンソースで開発される AMD GPU 向け OpenGLドライバー **RadeonSI** に、*CDNA 2 アーキテクチャ* を採用すると思われる *Aldebran* GPU のサポートを追加するパッチが投稿された。  
+AMD の [Marek Olšák](https://gitlab.freedesktop.org/mareko) 氏より、オープンソースで開発される AMD GPU 向け OpenGLドライバー **RadeonSI** に、*CDNA 2 アーキテクチャ* を採用するとされる *Aldebran* GPU のサポートを追加するパッチが投稿された。  
+
+ * [amd: add support for Aldebaran (!9389) · Merge Requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/9389)
+
 *Aldebaran* はグラフィクス機能を持たないコンピュート専用 GPU だが、マルチメディアエンジンを搭載する関係でサポートが **RadeonSI** にも追加される。  
 それは *Arcturus/MI100* でも同様で、マルチメディアエンジンの用途には機械学習におけるオブジェクト検出等が想定されている。  
 {{< link >}} [Linux Kernel に 「Aldebaran」 GPU をサポートするパッチが投稿される　―― CDNA 2/MI200 のコードネーム? | Coelacanth's Dream](/posts/2021/02/25/amd-aldebaran-gpu/) {{< /link >}}
