@@ -28,7 +28,7 @@ toc: false
 以下に引用した部分のコードは、DCN 3.02 関連のファイルに追加されたもので、そして DCN 3.02 は *Dimgrey Cavefish/Navi23* に搭載されるディスプレイエンジンIPとなる。  
 {{< link >}} [Linux Kernel に RDNA 2 GPU "Dimgrey Cavefish" をサポートするパッチが投稿される | Coelacanth's Dream](/posts/2020/10/08/amd-dimgrey_cavefish-linux-kernel-patch/) {{< /link >}}
 `caps.mall_size_per_mem_channel` に 4 が代入され、`caps.mall_size_total` を `dc->caps.mall_size_per_mem_channel * dc->ctx->dc_bios->vram_info.num_chans * 1048576` 、  
-わかりやすく言い換えれば、*MALL* の総サイズを `メモリチャネルあたりの MALL サイズ * メモリチャネル数 * 1048576 [2^20]` で求めている。その時の単位は 1048576 [2^20] で除算しているため、MiB となる。  
+わかりやすく言い換えれば、*MALL* の総サイズを `メモリチャネルあたりの MALL サイズ * メモリチャネル数 * 1048576 [2^20]` で求めている。  
 
  >        --- a/drivers/gpu/drm/amd/display/dc/dcn302/dcn302_resource.c
  >        +++ b/drivers/gpu/drm/amd/display/dc/dcn302/dcn302_resource.c
