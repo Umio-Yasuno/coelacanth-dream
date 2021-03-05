@@ -62,8 +62,8 @@ toc: false
 
 以上のことから、*Dimgrey Cavefish/Navi23* のメモリチャネルあたりの *MALL/Infinity Cache* は、 *Sienna Cichlid/Navi21* 、 *Navy Flounder/Navi22* よりも半分のサイズとなる 4 [MiB] だと考えられる。  
 
-また、*RDNA 2 アーキテクチャ* を採用する APU に [VanGogh](/tags/vangogh) がいるが、*VanGogh APU* が搭載する DCN 3.01 の関連ファイルには *MALL/Infinity Cache* の記述が無いため、*RDNA 2* ではあるが *MALL/Infinity Cache* を省いていると思われる。  
-APU がターゲットとする性能帯とコストから搭載しないのではないかと考えられる。  
+また、*RDNA 2 アーキテクチャ* を採用する APU に [VanGogh](/tags/vangogh) がいるが、*VanGogh APU* が搭載する DCN 3.01 の関連ファイルには *MALL/Infinity Cache* の記述が無い。*RDNA 2* ではあるが *MALL/Infinity Cache* を省いていると思われる。  
+APU がターゲットとする性能帯とコストから省いたのではないかと考えられる。  
 
 ## ディスプレイエンジン数も 1基少ない Dimgrey Cavefish {#disp-engine}
 
