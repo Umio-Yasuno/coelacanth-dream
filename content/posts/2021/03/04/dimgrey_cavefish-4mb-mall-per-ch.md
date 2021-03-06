@@ -53,6 +53,7 @@ toc: false
  > {{< quote >}} [pal/gfx9Device.cpp at c9d1904b35ac5eb70bd4738a5bf5e537adbf5ab0 · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/c9d1904b35ac5eb70bd4738a5bf5e537adbf5ab0/src/core/hw/gfxip/gfx9/gfx9Device.cpp) {{< /quote >}}
 
 そして、*Sienna Cichlid/Navi21* と *Navy Flounder/Navi22* が搭載する DCN 3.0 関連ファイルの同様の部分は 8 [MiB] となっており、これは発表済みの **Radeon RX 6000 シリーズ** の仕様と一致する。  
+*Sienna Cichlid/Navi21* は GDDR6 256-bit に対して *MALL/Infinity Cache* は 128MiB、*Navy Flounder/Navi22* は 192-bit に対して 96MiB となっている。(厳密に言えば、**Radeon RX 6700 XT** == *Navy Flounder/Navi22* というのはまだ確認できていないが。だが恐らくそうだろう)  
 
  >        	dc->caps.mall_size_per_mem_channel = 8;
  >        	/* total size = mall per channel * num channels * 1024 * 1024 */
@@ -89,4 +90,6 @@ Linux Kernel (amd-gfx) に *Dimgrey Cavefish/Navi23* をサポートする最初
 ディスプレイエンジンの数を減らすのは、*Polaris10* に対する *Polaris11/12* 、*Navi10* に対する *Navi14* のように、エントリー市場をターゲットとする GPU にはよく見られる設計点である。  
 メモリチャネルあたりの *MALL/Infinity Cache* サイズを減らしたのも、*Dimgrey Cavefish/Navi23* はエントリー市場向けの *RDNA 2* GPU であり、製造コストの削減を意識した結果と思われる。  
 あるいは、ターゲットの性能帯 {{< comple >}} 1080p と考えられる {{< /comple >}} では、メモリチャネルあたり 8 [MiB] の *MALL/Infinity Cache* を持っても効果が小さかった、4 [MiB] でも十分効果を発揮したため、最適なサイズ 4 [MiB] を選択した、という可能性もある。  
+
+[^cache-rate]: [[画像] 「Radeon RX 6800」の秘密兵器はCPU由来の「Infinity Cache」だ (15/22) - PC Watch](https://pc.watch.impress.co.jp/img/pcw/docs/1289/828/html/15_o.jpg.html)
 

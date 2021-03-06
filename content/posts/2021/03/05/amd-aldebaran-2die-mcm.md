@@ -11,7 +11,7 @@ toc: false
 ---
 
 改めて *Aldebaran* GPU 関連のパッチを読んでいた所、以下のような記述が見つかった。  
-レジスタに特定の値をセットし、GPU の内部設定を行う部分が 2種類のダイ分用意されている。  
+レジスタに特定の値をセットし、GPU の内部設定を行う部分がダイ 2種類分用意されている。  
 
  >        +static const struct soc15_reg_golden golden_settings_gc_9_4_2_alde_die_0[] = {
  >        +	SOC15_REG_GOLDEN_VALUE(GC, 0, regTCP_CHAN_STEER_0, 0x3fffffff, 0x141dc920),

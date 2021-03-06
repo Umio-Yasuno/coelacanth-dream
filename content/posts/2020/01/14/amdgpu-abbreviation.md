@@ -157,7 +157,9 @@ summary: " "
 | MALL | Memory Access (at) Last Level[^mall] | GFX10.3+ |
 | SRD | Shader Resource Descriptor[^srd] | |
 | PRT | Partially Resident Texture[^prt] | |
+| TDR | Timeout Detection and Recovery ?[^tdr] | |
 
+[^tdr]: [AMD_APP_SDK_Release_Notes_Developer.fm - AMD_APP_SDK_Release_Notes_Developer.pdf](http://developer.amd.com/download/AMD_APP_SDK_Release_Notes_Developer.pdf)
 [^tcc]: [[radeonsi] Tahiti LE: GFX block is not functional, CP is okay (#1208) · Issues · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/issues/1208#note_240161)
 [^prt]: [pal/palDeveloperHooks.h at c9937b277c491a55c689eec7cdd48fb238b8004c · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/c9937b277c491a55c689eec7cdd48fb238b8004c/inc/core/palDeveloperHooks.h#L325)
 [^srd]: [pal/palCodingStandards.md at 4ae736bdbc5d5dee59851ac564c5e21d807b44b0 · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/4ae736bdbc5d5dee59851ac564c5e21d807b44b0/doc/process/palCodingStandards.md)
