@@ -1,5 +1,5 @@
 ---
-title: "Intel Meteor Lake の次世代は Lunar Lake"
+title: "Intel Meteor Lake の次世代は Lunar Lake、Ethernetコントローラーの初期サポートパッチが投稿される"
 date: 2021-03-07T08:47:46+09:00
 draft: false
 tags: [ "Meteor_Lake", "Lunar_Lake", "Alder_Lake" ]
@@ -13,8 +13,7 @@ toc: false
 Intel Ethernetデバイス関連の新たなパッチにて、将来のクライアント向け Intel CPU のコードネームが *Lunar Lake* であることが明かされた。  
 [Intel-wired-lan](https://lists.osuosl.org/pipermail/intel-wired-lan/) メーリングリストは、Intel Ethernetデバイス関連のパッチが投稿、公開される場である。  
 
-パッチでは、*Lunar Lake* 世代の PCH に統合されている Ethernetコントローラーの名前、DeviceID を追加する初期サポートが行われている。  
-*Lunar* は *LN* と略されるらしい。  
+パッチでは、*Lunar Lake* 世代の PCH に統合されている Ethernetコントローラーの名前、DeviceID を追加する初期サポートが行われている。*Lunar* は *LN* と略されるらしい。  
 
  * [[Intel-wired-lan] [PATCH v1 1/1] e1000e: Add support for Lunar Lake](https://lists.osuosl.org/pipermail/intel-wired-lan/Week-of-Mon-20210301/023498.html)
 
