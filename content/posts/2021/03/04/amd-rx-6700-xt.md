@@ -1,5 +1,5 @@
 ---
-title: "AMD、RDNA 2 GPU \"RX 6700 XT\" を正式発表"
+title: "AMD、RDNA 2 GPU 「RX 6700 XT」 を正式発表"
 date: 2021-03-04T01:22:18+09:00
 draft: false
 tags: [ "RDNA_2", ]

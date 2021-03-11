@@ -2,7 +2,7 @@
 title: "Intel Sapphire Rapids は AVX512_FP16 をサポート"
 date: 2021-01-11T10:24:10+09:00
 draft: false
-tags: [ "Sapphire_Rapids", ]
+tags: [ "Sapphire_Rapids", "Alder_Lake" ]
 # keywords: [ "", ]
 categories: [ "Intel", "CPU", "Hardware" ]
 noindex: false
