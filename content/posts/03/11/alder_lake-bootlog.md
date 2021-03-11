@@ -38,10 +38,10 @@ CPU の Family、Model は `Family: 0x6, Model: 0x9a` となっており、こ�
 [^shadowmountain]: [mb/intel/shadowmountain: Add Intel Pre-CEP shadowmountain board (I9cb650c8) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/48685)
 
 CPU の機能に目を向けると、コンパイラ等へのパッチから判明していたように、AVX/2 をサポートしていることが分かる。  
-AVX-512 命令は非対応とされているが、これは [Intel® Architecture Instruction Set Extensions Programming Reference](https://software.intel.com/content/www/us/en/develop/download/intel-architecture-instruction-set-extensions-programming-reference.html) では *「Intel Hybrid Technology は AVX512 をサポートしない」* とあり、そのためアーキテクチャ自体がサポートしていない場合と区別してある。  
+AVX-512 命令は非対応とされているが、これは [Intel® Architecture Instruction Set Extensions Programming Reference](https://software.intel.com/content/www/us/en/develop/download/intel-architecture-instruction-set-extensions-programming-reference.html) では *「Intel Hybrid Technology は AVX512 をサポートしない」* とあり、今回はそのハイブリッドプロセッサとして動作している状態であるため、無効化されていると考えられる。  
 Intel ハイブリッドプロセッサでは、非対称な CPUアーキテクチャを搭載していても両方が対応している命令のみが有効化され、命令の対応レベルでは対称的となる。  
 
-しかし、*Alder Lake* に採用される Atom (Small) コア *Gracemont* は *Atom系アーキテクチャ* としては初めて AVX/2 をサポートしていることとなり、大きな変化と言えるだろう。  
+しかし、*Alder Lake* に採用される Atom (Small) コア *Gracemont* は *Atom系アーキテクチャ* としては初めて AVX/2 をサポートしており、大きな変化と言えるだろう。  
 同時に新たに追加された AVX-VNNI (Vector Neural Network Instructions) も *Gracemont* ではサポートされている。  
 
  >        [    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
