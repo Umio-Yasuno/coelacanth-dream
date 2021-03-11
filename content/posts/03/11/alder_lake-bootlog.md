@@ -38,10 +38,11 @@ CPU の Family、Model は `Family: 0x6, Model: 0x9a` となっており、こ�
 [^shadowmountain]: [mb/intel/shadowmountain: Add Intel Pre-CEP shadowmountain board (I9cb650c8) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/48685)
 
 CPU の機能に目を向けると、コンパイラ等へのパッチから判明していたように、AVX/2 をサポートしていることが分かる。  
-AVX-512 命令は非対応とされているが、これは [Intel® Architecture Instruction Set Extensions Programming Reference](https://software.intel.com/content/www/us/en/develop/download/intel-architecture-instruction-set-extensions-programming-reference.html) で *「Intel Hybrid Technology は AVX512 をサポートしない」* とあり、そのためアーキテクチャ自体がサポートしていない場合と区別してある。  
+AVX-512 命令は非対応とされているが、これは [Intel® Architecture Instruction Set Extensions Programming Reference](https://software.intel.com/content/www/us/en/develop/download/intel-architecture-instruction-set-extensions-programming-reference.html) では *「Intel Hybrid Technology は AVX512 をサポートしない」* とあり、そのためアーキテクチャ自体がサポートしていない場合と区別してある。  
 Intel ハイブリッドプロセッサでは、非対称な CPUアーキテクチャを搭載していても両方が対応している命令のみが有効化され、命令の対応レベルでは対称的となる。  
 
 しかし、*Alder Lake* に採用される Atom (Small) コア *Gracemont* は *Atom系アーキテクチャ* としては初めて AVX/2 をサポートしていることとなり、大きな変化と言えるだろう。  
+同時に新たに追加された AVX-VNNI (Vector Neural Network Instructions) も *Gracemont* ではサポートされている。  
 
  >        [    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
  >        [    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
@@ -85,10 +86,16 @@ CPU の `em_pd (energy model performance domain)` は、CPU[0-7] と CPU[8-15] �
 
  > {{< quote >}} [KWD not detecting on ADL · Issue #2782 · thesofproject/linux](https://github.com/thesofproject/linux/issues/2782) {{< /quote >}}
 
-ハードウェア側では、*Alder Lake* からサポートしている `HFI (Hardware Feedback Interface)` が機能している。  
-`HFI` は OS のソフトウェアスケジューラーを手助けする機能と言え、メモリに配置されるテーブルとそのテーブルのインデックスから、あるソフトウェアスレッドを性能重視の CPU (Core [Big]) と電力効率重視の CPU (Atom [Small]) のどちらに割り当てるかを OS に指示する。  
-以前、Intel Architecture Day 2020 にて Raja Koduri 氏は、「 *Alder Lake* は *Lakefield* よりも拡張されたハードウェアベースのスケジューラーを実装している」と語っていたが、その中身が `HFI (Hardware Feedback Interface)` ではないかと思われる。  
+ハードウェア側では、*Alder Lake* からサポートしている `HFI/EFHI (Enhanced/ Hardware Feedback Interface)` が機能している。  
+`HFI/EHFI` は OS のソフトウェアスケジューラーを手助けする機能と言え、メモリに配置されるテーブルとそのテーブルのインデックスから、あるソフトウェアスレッドを性能重視の CPU (Core [Big]) と電力効率重視の CPU (Atom [Small]) のどちらに割り当てるかを OS にアドバイスする。  
+OSスケジューラーはそれを元に、性能比あるいは電力効率比を計算し、スレッドを割り当てる。OS として性能を重視するか、電力効率を重視するかの設定も影響する。  
+また、テーブルは CPU の消費電力等、状況に応じて動的に更新される。[^ehfi]  
 
-今調べた限りでは、`HFI` をサポートするパッチはまだ Linux Kernel に投稿されておらず、Intel 内部でまだ開発中のハードウェアと、それをサポートする Linux Kernel のログを読めるのは中々珍しい機会だと言えるかもしれない。  
+[^ehfi]: [Intel® Architecture Instruction Set Extensions Programming Reference](https://software.intel.com/content/www/us/en/develop/download/intel-architecture-instruction-set-extensions-programming-reference.html) (Page 191)
 
+以前、Intel Architecture Day 2020 にて Raja Koduri 氏は、「 *Alder Lake* は *Lakefield* よりも拡張されたハードウェアベースのスケジューラーを実装している」と語っていたが、その中身が `HFI/EHFI (Enhanced/ Hardware Feedback Interface)` ではないかと思われる。  
 
+今調べた限りでは、`HFI/EHFI` をサポートするパッチはまだ Linux Kernel に投稿されておらず、Intel 内部でまだ開発中のハードウェアと、それをサポートする Linux Kernel のログを読めるのは中々珍しい機会だと言えるかもしれない。  
+
+`HFI` と `HEFI` の違いについては、`HFI` は物理コアのみをサポートするが、`EHFI` は SMT による論理コアもサポートする、ということと思われる、たぶん。  
+恐らく、正式にパッチが投稿された時、パッチのコメントと実装されたコードから、*Alder Lake* のスケジュラーについてより詳細が明らかにされるだろう。  
