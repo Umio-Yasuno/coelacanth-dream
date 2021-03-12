@@ -2,7 +2,7 @@
 title: "Intel、Display13 改め \"XE_LPD\" をサポートするパッチを投稿　―― 今後は独立して各 IP が更新されるように"
 date: 2021-03-12T02:09:49+09:00
 draft: false
-tags: [ "Gen13", ]
+tags: [ "Gen13", "XE_LPD" ]
 # keywords: [ "", ]
 categories: [ "Intel", "GPU", "Hardware" ]
 noindex: false

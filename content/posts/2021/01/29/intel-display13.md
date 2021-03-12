@@ -2,7 +2,7 @@
 title: "Linux Kernel に Intel \"Display13\" をサポートする最初のパッチが投稿される"
 date: 2021-01-29T23:33:20+09:00
 draft: false
-tags: [ "Gen13", ]
+tags: [ "Gen13", "XE_LPD" ]
 # keywords: [ "", ]
 categories: [ "Intel", "GPU" ]
 noindex: false
