@@ -43,12 +43,14 @@ noindex: false
 `VDMADDWD` 命令はそれで得られた *s16* の値をもう 1つ、ペアで *符号付き 32-bit 整数/signed int32 (s32)* に合計して結果を出力する。  
 `VPADDD` 命令はその *s32* の値を、ソースとなるもう 1つの *s32* と加算する。  
 こうして INT8 の乗算から INT32 に結果を累算する、畳み込み処理を行える。  
-自分では非常にざっくりとした説明しかできないため、より正確な内容は参考リンク先を参照して頂きたい。  
+ただ、自分では非常にざっくりとした説明しかできないため、より正確な内容は参考リンク先を参照して頂きたい。  
 
-これら 3つの命令と処理フローをまとめた命令が `AVX512_VNNI/VPDPBUSD` 命令であり、Intel プロセッサでは *Cascade Lake* から対応している。[^avx512] マーケティング的には **Intel DL Boost** とも呼ばれている。  
+従来の *Zen/2 アーキテクチャ* では `VPMADDUBSW/VPMADDWD` 命令のスループットが 1 で、上記の処理を行う時ボトルネックとなっていたのが、*Zen 3 アーキテクチャ* では軽減され、倍のスループットを得ている。  
+それと、`VPMADDUBSW/VPMADDWD/VPADDD` 命令 3個と処理フローをまとめた命令が `AVX512_VNNI/VPDPBUSD` 命令であり、Intel プロセッサでは *Cascade Lake* から対応している。[^avx512] マーケティング的には **Intel Deep Learning Boost** という名もある。[^dl-boost]  
 `AVX512_VNNI/VPDPBUSD` 命令に対応していない CPU では `VPMADDUBSW/VPMADDWD/VPADDD` 3個の命令が必要だが、対応している CPU では 1個だけでいいため、理論上のピーク性能は 3倍となる。  
 
 [^avx512]: [Intel Sapphire Rapids は AVX512_FP16 をサポート | Coelacanth's Dream](/posts/2021/01/11/intel-spr-avx512_fp16/)
+[^dl-boost]: [Intel® Deep Learning Boost - Intel® AI](https://www.intel.com/content/www/us/en/artificial-intelligence/deep-learning-boost.html)
 
 まとめると、*Zen 3 アーキテクチャ* では FPユニットの実装と対応が拡張されたことで INT8 精度の演算を行う一部命令が高速化されており、これが INT8 スループット 2倍の根拠と考えられる。  
 **Ryzen 5000シリーズ** 発表時にはアピールされなかった点が今回 **EPYC 7003シリーズ** で強調されたのは、Intel Xeonプロセッサを意識したからだろう。  
