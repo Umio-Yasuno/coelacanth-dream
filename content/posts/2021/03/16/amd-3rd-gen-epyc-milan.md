@@ -46,15 +46,16 @@ noindex: false
 ただ、自分では非常にざっくりとした説明しかできないため、より正確な内容は参考リンク先を参照して頂きたい。  
 
 従来の *Zen/2 アーキテクチャ* では `VPMADDUBSW/VPMADDWD` 命令のスループットが 1 で、上記の処理を行う時ボトルネックとなっていたのが、*Zen 3 アーキテクチャ* では軽減され、倍のスループットを得ている。  
-それと、`VPMADDUBSW/VPMADDWD/VPADDD` 命令 3個と処理フローをまとめた命令が `AVX512_VNNI/VPDPBUSD` 命令であり、Intel プロセッサでは *Cascade Lake* から対応している。[^avx512] マーケティング的には **Intel Deep Learning Boost** という名もある。[^dl-boost]  
-`AVX512_VNNI/VPDPBUSD` 命令に対応していない CPU では `VPMADDUBSW/VPMADDWD/VPADDD` 3個の命令が必要だが、対応している CPU では 1個だけでいいため、理論上のピーク性能は 3倍となる。  
+それと、`VPMADDUBSW/VPMADDWD/VPADDD` 命令 3個と処理フローをまとめた命令が `AVX-VNNI/VPDPBUSD` 命令であり、Intel プロセッサでは *Cascade Lake* から 512-bit幅 (`AVX512`) で対応している。[^avx512] マーケティング的には **Intel Deep Learning Boost** という名もある。[^dl-boost]  
+*Alder Lake* に搭載される *Golden Cove (Core/Big)* 、*Gracemont (Atom/Small)* からは 128-bit幅、256-bit幅の `AVX-VNNI/VPDPBUSD` 命令に対応している。  
+`AVX-VNNI/VPDPBUSD` 命令に対応していない CPU では `VPMADDUBSW/VPMADDWD/VPADDD` 3個の命令が必要だが、対応している CPU では 1個だけでいいため、理論上のピーク性能は 3倍となる。  
 
 [^avx512]: [Intel Sapphire Rapids は AVX512_FP16 をサポート | Coelacanth's Dream](/posts/2021/01/11/intel-spr-avx512_fp16/)
 [^dl-boost]: [Intel® Deep Learning Boost - Intel® AI](https://www.intel.com/content/www/us/en/artificial-intelligence/deep-learning-boost.html)
 
 まとめると、*Zen 3 アーキテクチャ* では FPユニットの実装と対応が拡張されたことで INT8 精度の演算を行う一部命令が高速化されており、これが INT8 スループット 2倍の根拠と考えられる。  
 **Ryzen 5000シリーズ** 発表時にはアピールされなかった点が今回 **EPYC 7003シリーズ** で強調されたのは、Intel Xeonプロセッサを意識したからだろう。  
-*Zen 3 アーキテクチャ* ではまだ `AVX512_VNNI/VPDPBUSD` 命令は実装されていないが、AMD も CPU による推論処理の高速化を念頭に置いており、そこでもある程度 Intel Xeon と対抗は可能ということと、今後の CPUアーキテクチャで強化していく方向性を持っていることを示したかったのではないかと思われる。  
+*Zen 3 アーキテクチャ* ではまだ `AVX-VNNI/VPDPBUSD` 命令は実装されていないが、AMD も CPU による推論処理の高速化を念頭に置いており、そこでもある程度 Intel Xeon と対抗は可能ということと、今後の CPUアーキテクチャで強化していく方向性を持っていることを示したかったのではないかと思われる。  
 
 
 {{< ref >}}
