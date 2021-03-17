@@ -76,9 +76,9 @@ CPUスレッド数は 8-Thread 認識されており、以前 Linux Kernel (amd-
  > {{< quote >}} [slow boot with 7fef431be9c9 ("mm/page_alloc: place pages to tail in __free_pages_core()")](https://lists.freedesktop.org/archives/amd-gfx/2021-March/060563.html) {{< /quote >}}
 
 メモリバス幅とメモリタイプも出力されているが、これは明らかに怪しい情報である。  
-DDR5 という点は、Linux Kernel (amd-gfx) に投稿された *VanGogh* 関連のパッチから、*VanGogh* は LPDDR5メモリをサポートすることが分かっており、そして Kernelドライバー部では LPDDR5 も DDR5 も、メモリタイプとしては両方 DDR5 として認識されるため、おかしくはない。  
+DDR5 という点は、Linux Kernel (amd-gfx) に投稿された *VanGogh* 関連のパッチから、*VanGogh* は LPDDR5メモリをサポートすることが分かっている。そして Kernelドライバー部では LPDDR5 も DDR5 も、メモリタイプとしては両方 DDR5 として認識されるため、搭載しているのがどちらかはともかく、表示自体はおかしくない。。  
 怪しいのは 256-bit幅というので、ブートログから搭載されているメモリサイズは 7200304K {{< comple >}} 約 8 GB/7.45 GiB、予約分等があるため若干少なく表示される {{< /comple >}} と読み取れるのに、メモリバス幅が 256-bit とやけに広いのは不自然だ。  
-メモリバス幅は VBIOS から読み取った値を表示するため、VBIOS が開発途中で、間違った値が表示されている可能性がある。他のブートログでは GPUドライバーが無効化されているため、開発途中である可能性は高い。  
+メモリバス幅は VBIOS から読み取った値を表示するため、VBIOS が開発途中で、間違った値が表示されている可能性がある。他のブートログでは GPUドライバーが無効化されているため、開発途中である可能性は高い。GPU部の ShaderEngine、ShareArray、CU の構成情報等、出力されていない情報がいくつかあることもそれを裏付けている。  
 一応、もっともらしいメモリ構成を考えるならば、LPDDR5 64-bit幅 (64Gb/8GB) とかだろうか。  
 
  >        [   99.984978] [drm] Detected VRAM RAM=1024M, BAR=1024M
