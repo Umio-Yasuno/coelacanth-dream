@@ -80,7 +80,8 @@ CPUスレッド数は 8-Thread 認識されており、以前 Linux Kernel (amd-
 メモリバス幅とメモリタイプも出力されているが、これは明らかに怪しい情報である。  
 DDR5 という点は、Linux Kernel (amd-gfx) に投稿された *VanGogh* 関連のパッチから、*VanGogh* は LPDDR5メモリをサポートすることが分かっており、そして Kernelドライバー部では LPDDR5 も DDR5 も、メモリタイプとしては両方 DDR5 として認識されるため、おかしくはない。  
 怪しいのは 256-bit幅というので、ブートログから搭載されているメモリサイズは 7200304K {{< comple >}} 約 8 GB/7.45 GiB、予約分等があるため若干少なく表示される {{< /comple >}} と読み取れるのに、メモリバス幅が 256-bit とやけに広いのは不自然だ。  
-もっともらしいメモリ構成を考えるならば、LPDDR5 64-bit幅 (64Gb/8GB) とかだろうか。  
+メモリバス幅は VBIOS から読み取った値を表示するため、VBIOS が開発途中で、間違った値が表示されている可能性がある。他のブートログでは GPUドライバーが無効化されているため、開発途中である可能性は高い。  
+一応、もっともらしいメモリ構成を考えるならば、LPDDR5 64-bit幅 (64Gb/8GB) とかだろうか。  
 
  >        [   99.984978] [drm] Detected VRAM RAM=1024M, BAR=1024M
  >        [   99.984981] [drm] RAM width 256bits DDR5
@@ -117,7 +118,7 @@ CVIP では、ISP が画像処理したデータを元に、スケーリング�
 4-Core/8-Thread という現行の *Renoir/Lucienne/Cezanne APU* と比較して小さい規模から、 *VanGogh* をベースに、**Ryzen Embedded R1000シリーズ** の次世代、**R2000シリーズ** を構築することも考えられる。  
 現 **R1000シリーズ** は 14nmプロセスで製造される [Raven2 APU](/tags/raven2) で構築されている。*Raven2* は、CPU Zen 2-Core/4-Thread、GPU Vega 3CU と規模が控えめの SoC であり、そうした特徴は *VanGogh* に近いものがある。  
 
-また、*VanGogh* は GPU部に *RDNA 2 アーキテクチャ* を採用しており、*RDNA 2* では INT4、INT8 といった低精度でのドット積を処理する命令がサポートされている。それらは推論処理に活用できる。  
+また、*VanGogh* は GPU部に *RDNA 2 アーキテクチャ* を採用しており、*RDNA 2* では INT4、INT8 といった低精度でのドット積を処理する命令がサポートされている。それらを推論処理に活用することも可能だろう。  
 
 [^cvip]: [CVIP | Computer Vision and Image Processing](http://cvip.computing.dundee.ac.uk/) / [Combining an ISP and Vision Processor to Implement Computer Vision - Edge AI and Vision Alliance](https://www.edge-ai-vision.com/2019/01/combining-an-isp-and-vision-processor-to-implement-computer-vision/)
 
