@@ -1,5 +1,5 @@
 ---
-title: "VanGogh APU ブートログ"
+title: "AMD VanGogh APU ブートログ"
 date: 2021-03-17T08:06:16+09:00
 draft: false
 tags: [ "VanGogh", "Zen_2", "RDNA_2" ]
@@ -39,7 +39,7 @@ Alex Deucher 氏は AMD のソフトエンジニアであり、AMD GPU の Linux
 ## Zen 2 {#zen_2}
 
 プロセッサ名は **AMD Eng Sample: 100-000000405-03_35/24_N** 、その名の通りサンプリング品とされる。  
-CPU の判別等に使われる Family, Model は `family: 0x17, model: 0x90` 。  
+CPU の判別等に使われる Family, Model は `family: 0x17 (23), model: 0x90 (144)` 。  
 
  >        [    0.353153] smpboot: CPU0: AMD Eng Sample: 100-000000405-03_35/24_N (family: 0x17, model: 0x90, stepping: 0x1)
  >
@@ -53,10 +53,8 @@ CPU の判別等に使われる Family, Model は `family: 0x17, model: 0x90` �
  > {{< quote >}} [slow boot with 7fef431be9c9 ("mm/page_alloc: place pages to tail in __free_pages_core()")](https://lists.freedesktop.org/archives/amd-gfx/2021-March/060563.html) {{< /quote >}}
 
 CPUスレッド数は 8-Thread 認識されており、以前 Linux Kernel (amd-gfx) に投稿されたパッチのコメントから[^vgh-power]、SMTを有効にした、4-Core/8-Thread 構成だと考えられる。その時投稿されたパッチは、GPUドライバー側でサポートする電力管理機能で、GPU だけでなく CPU も管理するよう対応を拡張する、というものだった。  
-
 *Zen 2 アーキテクチャ* を採用する APU には [Renoir](/tags/renoir), [Lucienne](/tags/lucienne) がいるが、両者は 8-Core/16-Thread (2-CCX) の構成を取っている。対し、*VanGogh* は 4-Core/8-Thread (1-CCX) の構成と考えられ、CCX間の通信によるレイテンシが発生しない、コンパクトな設計となる。  
-
-それと、今回の *VanGogh* はベースクロック 2.4 GHz (2400 MHz) で動作している。  
+それと、今回の *VanGogh* はベースクロック 2.4 GHz (2400 MHz) で動作している。ブーストクロックはプロセッサ名とその法則から 3.4 GHz と思われる。  
 
 [^vgh-power]: [VanGogh APU がサポートする "Fine Grain Clock Gating" は CPU にも適用　―― 最大 4コアか | Coelacanth's Dream](/posts/2021/01/08/amd-vgh-cpu-fgcg/) / [[PATCH 7/7] drm/amd/pm: implement processor fine grain feature for vangogh](https://lists.freedesktop.org/archives/amd-gfx/2021-January/058001.html)
 

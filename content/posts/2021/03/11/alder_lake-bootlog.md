@@ -1,5 +1,5 @@
 ---
-title: "Alder Lake-P のブートログ"
+title: "Intel Alder Lake-P のブートログ"
 date: 2021-03-11T15:33:38+09:00
 draft: false
 tags: [ "Alder_Lake", ]
