@@ -80,7 +80,7 @@ CPUスレッド数は 8-Thread 認識されており、以前 Linux Kernel (amd-
 メモリバス幅とメモリタイプも出力されているが、これは明らかに怪しい情報である。  
 DDR5 という点は、Linux Kernel (amd-gfx) に投稿された *VanGogh* 関連のパッチから、*VanGogh* は LPDDR5メモリをサポートすることが分かっており、そして Kernelドライバー部では LPDDR5 も DDR5 も、メモリタイプとしては両方 DDR5 として認識されるため、おかしくはない。  
 怪しいのは 256-bit幅というので、ブートログから搭載されているメモリサイズは 7200304K {{< comple >}} 約 8 GB/7.45 GiB、予約分等があるため若干少なく表示される {{< /comple >}} と読み取れるのに、メモリバス幅が 256-bit とやけに広いのは不自然だ。  
-それらしいメモリ構成を考えるならば、LPDDR5 64-bit幅 (64Gb/8GB) とかだろうか。  
+もっともらしいメモリ構成を考えるならば、LPDDR5 64-bit幅 (64Gb/8GB) とかだろうか。  
 
  >        [   99.984978] [drm] Detected VRAM RAM=1024M, BAR=1024M
  >        [   99.984981] [drm] RAM width 256bits DDR5
@@ -124,9 +124,7 @@ CVIP では、ISP が画像処理したデータを元に、スケーリング�
 ### PCI/DeviceID {#pci_id}
 
 `lspci` 実行結果から読み取れたデバイスとその PCI/DeviceID をまとめた表が以下。  
-`lspci` ではどうも[データベース](https://pci-ids.ucw.cz/read/PC/1022)に存在するものはデバイス名を表示するが、同時に PCI/DeviceID は表示しないらしく、それらはほとんど省いてある。  
-
-デバイスはいくつか *Renoir APU* と同じものが見受けられ、また各デバイスのリンク情報は PCIe Gen3 となっていた。  
+認識されているデバイスはいくつか *Renoir APU* と同じものが見受けられ、また各デバイスのリンク情報は PCIe Gen3 となっていた。  
 
 | PCI/DeviceID | VanGogh |
 | :-- | :--:         |
@@ -140,6 +138,8 @@ CVIP では、ISP が画像処理したデータを元に、スケーリング�
 | 1645 | Host bridge                   |
 | 1646 | IOMMU                         |
 | 1647 | PCI bridge                    |
+| 1648 | VanGogh Root Complex          |
+| 1649 | Encryption controller/<br>VanGogh PSP/CCP |
 | 164a | Signal processing controller  |
 | 1660 | Host bridge /<br>Data Fabric: Device 18h; Function 0 |
 | 1661 | Host bridge /<br>Data Fabric: Device 18h; Function 1 |
