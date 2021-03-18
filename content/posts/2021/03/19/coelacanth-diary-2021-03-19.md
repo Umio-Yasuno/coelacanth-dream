@@ -121,10 +121,12 @@ DDR5 128-bit (2x2ch) という可能性もあるが、*VanGogh* のディスプ�
 それに世界的に見ればマイナーな日本語で書いてるから、読む人も少ないだろう。  
 
 Linux Kernel はオープンソースであり、自分が普段記事のネタにしてるのも OSS へのパッチであり、インターネットに接続されていれば誰でもソースを確認できる。  
-そういう点で、自分は Leaker とは無縁で、パッチとコードを眺める存在である。  
+そういう点で、自分は Leaker とは無縁で、パッチとコードを眺めるだけの存在だ。  
 今回もそういう話だったが、こういう状況を見ると、そのことに興味を持って調べて、整理して、発信することを楽しんでるのは自分だけではないかと思わされる。  
 同時に、自分に対して恨みの感情を覚える。  
 あまり明確に意識したことはなかったが、薄々そう感じてたから深海(魚)をモチーフにしたのだろう。  
+
+「トレインスポッティング2」のあるシーンを思い浮かべなから雑記を書いた。  
 
 {{< ref >}}
  * [LPDRAM for Mobile and Embedded Applications - flyer_lpdram_mobile_embedded.pdf](https://media-www.micron.com/-/media/client/global/documents/products/product-flyer/flyer_lpdram_mobile_embedded.pdf?rev=2c45263239f84c7c84981870a06bb8b2)

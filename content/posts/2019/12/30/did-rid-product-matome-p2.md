@@ -399,6 +399,7 @@ DG02SRTBP4MFA
 | | C3 | | |
 | | C7 | | |
 | | CF | | |
+| | F6 | | |
 [Page Top](#page_index)
 
 #### Arcturus ( gfx908 ) {#arcturus-gfx908}
@@ -542,6 +543,7 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | 73A3 | 00 | |
 | 73AB | 00 | |
 | 73AE | | |
+| 73AF | | |
 | 73BD | | |
 | 73BF &darr; | 40 | |
 | | 41 | | |
@@ -566,7 +568,9 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | 73C0 | | |
 | 73C1 | | |
 | 73C3 | | |
-| 73DF | C1 | RX 6700 XT |
+| 73DF&darr; | C1 | RX 6700 XT |
+|            | C3 | RX 6800M |
+|            | C5 | RX 6700 XT |
 
 <!--
     Nav\i2\2: gf\x 10/3\ 1?
