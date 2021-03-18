@@ -16,9 +16,10 @@ Alex Deucher 氏は AMD のソフトエンジニアであり、AMD GPU の Linux
 
 使用しているボードは *AMD Chachani-VN/Chachani-VN* 。この名前は過去にも *VanGogh* 関連のパッチの中で登場していた。[^chachani-vn]  
 *Chachani* はプラットフォーム、開発用のリファレンスボードに対するコードネームで、*VN* は *VanGogh* の略だろう。  
-プラットフォーム・コードネームには、モバイル向けリファレンスボード (FP6パッケージ) に *Celadon* 、AM4ソケットを採用するデスクトップ向けに *Mytle* [^myrtle]、(恐らくは) デスクトップ向け APU に *Artic* 等が使われてきている。  
+プラットフォーム・コードネームには、モバイル向けリファレンスボード (FP6パッケージ) に *Celadon* または *Majolica* [^majolica] 、AM4ソケットを採用するデスクトップ向けに *Mytle* [^myrtle]、(恐らくは) デスクトップ向け APU に *Artic* 等が使われてきている。  
 
 [^myrtle]: <https://drivers.amd.com/relnotes/amd_nvme_sata_raid_quick_start_guide_for_windows_operating_systems.pdf>
+[^majolica]: [Lucienne/Cezanne APU を搭載する Chromebookボード　―― Guybrush、Mancomb | Coelacanth's Dream](/posts/2020/11/22/lcn-czn-fp6-chromebook-board/)
 
 
  >        [  135.183257] Hardware name: AMD Chachani-VN/Chachani-VN, BIOS WCH1304N 03/04/2021
@@ -76,10 +77,6 @@ CPUスレッド数は 8-Thread 認識されており、以前 Linux Kernel (amd-
  > {{< quote >}} [slow boot with 7fef431be9c9 ("mm/page_alloc: place pages to tail in __free_pages_core()")](https://lists.freedesktop.org/archives/amd-gfx/2021-March/060563.html) {{< /quote >}}
 
 メモリバス幅とメモリタイプも出力されているが、これは明らかに怪しい情報である。  
-DDR5 という点は、Linux Kernel (amd-gfx) に投稿された *VanGogh* 関連のパッチから、*VanGogh* は LPDDR5メモリをサポートすることが分かっている。そして Kernelドライバー部では LPDDR5 も DDR5 も、メモリタイプとしては両方 DDR5 として認識されるため、搭載しているのがどちらかはともかく、表示自体はおかしくない。。  
-怪しいのは 256-bit幅というので、ブートログから搭載されているメモリサイズは 7200304K {{< comple >}} 約 8 GB/7.45 GiB、予約分等があるため若干少なく表示される {{< /comple >}} と読み取れるのに、メモリバス幅が 256-bit とやけに広いのは不自然だ。  
-メモリバス幅は VBIOS から読み取った値を表示するため、VBIOS が開発途中で、間違った値が表示されている可能性がある。他のブートログでは GPUドライバーが無効化されているため、開発途中である可能性は高い。GPU部の ShaderEngine、ShareArray、CU の構成情報等、出力されていない情報がいくつかあることもそれを裏付けている。  
-一応、もっともらしいメモリ構成を考えるならば、LPDDR5 64-bit幅 (64Gb/8GB) とかだろうか。  
 
  >        [   99.984978] [drm] Detected VRAM RAM=1024M, BAR=1024M
  >        [   99.984981] [drm] RAM width 256bits DDR5
@@ -87,6 +84,25 @@ DDR5 という点は、Linux Kernel (amd-gfx) に投稿された *VanGogh* 関�
  >        [   99.985233] [drm] amdgpu: 3072M of GTT memory ready.
  >
  > {{< quote >}} [slow boot with 7fef431be9c9 ("mm/page_alloc: place pages to tail in __free_pages_core()")](https://lists.freedesktop.org/archives/amd-gfx/2021-March/060563.html) {{< /quote >}}
+
+DDR5 という点は、Linux Kernel (amd-gfx) に投稿された *VanGogh* 関連のパッチから、*VanGogh* は LPDDR5メモリをサポートすることが分かっている。そして Kernelドライバー部では LPDDR5 も DDR5 も、メモリタイプとしては両方 DDR5 として認識されるため、搭載しているのがどちらかはともかく、表示自体はおかしくない。これは誤検出などではなく、仕様である。[^vgh-ddr5]  
+
+ >        		case Ddr4MemType:
+ >        		case LpDdr4MemType:
+ >        			vram_type = AMDGPU_VRAM_TYPE_DDR4;
+ >        			break;
+ >        		case Ddr5MemType:
+ >        		case LpDdr5MemType:
+ >        			vram_type = AMDGPU_VRAM_TYPE_DDR5;
+ >        			break;
+ >
+ > {{< quote >}} [linux/amdgpu_atomfirmware.c at 12f2df72205fe348481d941c3e593e8068d2d23d · torvalds/linux](https://github.com/torvalds/linux/blob/12f2df72205fe348481d941c3e593e8068d2d23d/drivers/gpu/drm/amd/amdgpu/amdgpu_atomfirmware.c) {{< /quote >}}
+
+[^vgh-ddr5]: [drm/amdgpu: get the correct vram type for van gogh · torvalds/linux@15c90a1](https://github.com/torvalds/linux/commit/15c90a1fbcb1621be0ba492bc5d7b88edf3d2e22)
+
+怪しいのは 256-bit幅というので、ブートログから搭載されているメモリサイズは 7200304K {{< comple >}} 約 8 GB/7.45 GiB、予約分等があるため若干少なく表示される {{< /comple >}} と読み取れるのに、メモリバス幅が 256-bit とやけに広いのは不自然だ。  
+メモリバス幅は VBIOS から読み取った値を表示するため、VBIOS が開発途中で、間違った値が表示されている可能性がある。他のブートログでは GPUドライバーが無効化されているため、開発途中である可能性は高い。GPU部の ShaderEngine、ShareArray、CU の構成情報等、出力されていない情報がいくつかあることもそれを裏付けている。  
+一応、もっともらしいメモリ構成を考えるならば、LPDDR5 64-bit幅 (64Gb/8GB) とかだろうか。  
 
 また、VBIOS に *AMD Aerith* というコードネームが使われているが、*VanGogh* の名を使わなかった理由は不明。通常はシリアルナンバーのようなものか、その APU/GPU のコードネームが入ったものが使われる。  
 
