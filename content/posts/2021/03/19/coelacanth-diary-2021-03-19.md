@@ -103,6 +103,9 @@ LPDDR4/LPDDR5 は内部的には 4-Channel のインターフェイスを持つ�
 
 以上のことと合わせ、前回も書いたが、ブートログから搭載されているメモリサイズは 7200304K {{< comple >}} 約 8 GB/7.45 GiB、予約分等があるため若干少なく表示される {{< /comple >}} と読み取れるため、LPDDR5 64-bit というのが正しいメモリ構成だと考えられる。  
 それならば `[drm] RAM width 256bits DDR5` と出力されたことにも、約 8GB というメモリサイズにも説明が付く。  
+DDR5 64-bit (2ch) という可能性もあるが、*VanGogh* のディスプレイ部関連のソースファイルに、DDR4 と LPDDR5 用のパラメーターはあるのに対し、DDR5 は無いため、LPDDR5 の可能性のが高いように思う。[^vg_clk_mgr]  
+
+[^vg_clk_mgr]: [linux/vg_clk_mgr.c at 7e60e389053e59c2efc4a9a0f2da3b2c528a0d19 · torvalds/linux](https://github.com/torvalds/linux/blob/7e60e389053e59c2efc4a9a0f2da3b2c528a0d19/drivers/gpu/drm/amd/display/dc/clk_mgr/dcn301/vg_clk_mgr.c)
 
  >        [    0.044181] Memory: 6858688K/7200304K available (14345K kernel code, 9659K rwdata, 4980K rodata, 2484K init, 12292K bss, 341360K reserved, 0K cma-reserved)
  >
