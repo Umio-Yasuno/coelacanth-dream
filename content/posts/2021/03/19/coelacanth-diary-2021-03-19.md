@@ -1,5 +1,5 @@
 ---
-title: "【雑記】 VanGogh APU のメモリバス幅は (恐らく) 64-bit"
+title: "【雑記】 VanGogh APU のメモリインターフェイスは (恐らく) LPDDR5 64-bit"
 date: 2021-03-19T00:49:21+09:00
 draft: false
 tags: [ "VanGogh", ]
