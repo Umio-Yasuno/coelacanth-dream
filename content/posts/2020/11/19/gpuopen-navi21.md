@@ -2,7 +2,7 @@
 title: "AMDVLK GPUOpenドライバーが Navi21/Sienna Cichlid に対応"
 date: 2020-11-19T15:30:58+09:00
 draft: false
-tags: [ "Sienna_Cichlid", "RDNA_2" ]
+tags: [ "Sienna_Cichlid", "RDNA_2", "GPUOpen" ]
 # keywords: [ "", ]
 categories: [ "AMD", "GPU", "Hardware" ]
 noindex: false
