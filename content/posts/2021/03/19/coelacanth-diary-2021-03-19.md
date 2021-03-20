@@ -56,7 +56,7 @@ noindex: false
  >        				break;
  >        			case 2:
  >
- > {{< quote >}} [linux/amdgpu_atomfirmware.c at 5ee88057889bbca5f5bb96031b62b3756b33e164 · torvalds/linux](https://github.com/torvalds/linux/blob/5ee88057889bbca5f5bb96031b62b3756b33e164/drivers/gpu/drm/amd/amdgpu/amdgpu_atomfirmware.c) {{< /quote >}}
+ > {{< quote >}} [linux/amdgpu_atomfirmware.c at 5ee88057889bbca5f5bb96031b62b3756b33e164 · torvalds/linux](https://github.com/torvalds/linux/blob/5ee88057889bbca5f5bb96031b62b3756b33e164/drivers/gpu/drm/amd/amdgpu/amdgpu_atomfirmware.c#L207) {{< /quote >}}
 
 そして、メモリタイプ (`vram_type`) もここで取得されるが、メモリとしてのアーキテクチャに違いがあろうと、LPDDR4 は DDR4 と、LPDDR5 は DDR5 と認識される。  
 
@@ -83,7 +83,7 @@ noindex: false
  >        			break;
  >        		}
  >
- > {{< quote >}} [linux/amdgpu_atomfirmware.c at 5ee88057889bbca5f5bb96031b62b3756b33e164 · torvalds/linux](https://github.com/torvalds/linux/blob/5ee88057889bbca5f5bb96031b62b3756b33e164/drivers/gpu/drm/amd/amdgpu/amdgpu_atomfirmware.c) {{< /quote >}}
+ > {{< quote >}} [linux/amdgpu_atomfirmware.c at 5ee88057889bbca5f5bb96031b62b3756b33e164 · torvalds/linux](https://github.com/torvalds/linux/blob/5ee88057889bbca5f5bb96031b62b3756b33e164/drivers/gpu/drm/amd/amdgpu/amdgpu_atomfirmware.c#L139:) {{< /quote >}}
 
 LPDDR4/LPDDR5 は内部的には 4-Channel のインターフェイスを持つ。[^lpddr4_5]  
 そのため、ファームウェアが LPDDR5 のメモリチャネル数を正しく理解し、正直に 4-Channel だということを告げても、Linux Kenrel の GPUドライバーは今の所それに 64 を掛けてメモリバス幅としてしまう。  
