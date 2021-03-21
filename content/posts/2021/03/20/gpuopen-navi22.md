@@ -77,7 +77,8 @@ SE 1基分の規模は、**Radeon RX 6700 XT** よりも上位の **Radeon RX 68
 ```
 {{< /dia >}}
 
-また、ワークアラウンド (一時的な回避策) の設定から、*Navi21/Sienna Cichlid* に存在した一部のハードウェア的な問題が修正されていると思われる。[^wa]  
+また、ワークアラウンド (一時的な回避策) の設定から、*Navi21/Sienna Cichlid* に存在した一部のハードウェア的な問題が修正されていると思われる。
+(`waDisableFmaskNofetchOpOnFmaskCompressionDisable`, `waVgtFlushNggToLegacy`) [^wa]
 
 [^wa]: [pal/gfx9SettingsLoader.cpp at 4ea0bad02244d155423be0a77d702c3a5a6e950f · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/4ea0bad02244d155423be0a77d702c3a5a6e950f/src/core/hw/gfxip/gfx9/gfx9SettingsLoader.cpp#L490)
 
