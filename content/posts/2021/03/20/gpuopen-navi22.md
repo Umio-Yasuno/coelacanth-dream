@@ -20,7 +20,8 @@ AMD が公式に提供しているオープンソース Vulkanドライバー、
 ## Navi22/Navy Flounder 内部構成
 
 *Navi22/Navy Flounder* の内部構成は以下から読み取れ、全体の SE (ShaderEngine) 数は 2基、SE あたりの SH (ShaderArray) は 2基、SH あたりの WGP (CU) 数は 5 (10) 基となっている。RB (RenderBackend) は SE あたり 4基。  
-SE 1基分の規模は、**Radeon RX 6700 XT** よりも上位の **Radeon RX 6800/6900シリーズ** のベースとなる [Navi21](/tags/navi21)/[Sienna Cichlid](/tags/sienna_cichlid) と同じであり、全体的には GPUコア部をそこからざっくり半分にしたのが *Navi22/Navy Flounder* となる。  
+SE 1基分の規模は、**Radeon RX 6700 XT** よりも上位の **Radeon RX 6800/6900シリーズ** のベースとなる [Navi21](/tags/navi21)/[Sienna Cichlid](/tags/sienna_cichlid) と同じ。  
+GPU 全体的には、SE数を *Navi21/Sienna Cichlid* からざっくり半分にしたのが *Navi22/Navy Flounder* となる。  
 ただメモリバス幅は半分ではなく 3/4 の 192-bit で、L2キャッシュブロックもそれに合わせて 12基 (16-bit x 12ch分) 搭載している。  
 
  >                else if (AMDGPU_IS_NAVI22(pInfo->familyId, pInfo->eRevId))

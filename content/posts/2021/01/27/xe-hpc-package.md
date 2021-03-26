@@ -13,8 +13,9 @@ toc: false
 Intel の現チーフアーキテクトである [Raja Koduri](https://newsroom.intel.com/biography/raja-m-koduri/) 氏が自身の Twitterアカウントにて、**{{< xe class="hpc" >}}** が電源投入が可能な段階にあることを、**{{< xe class="hpc" >}}** のパッケージ画像と一緒にツイートした。  
 公開されたパッケージにはヒートスプレッダが無く、チップ構成も分かるものとなっている。  
 
+{{< twemb >}}
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Xe HPC ready for power on! <br>7 advanced silicon technologies in a single package<br>Silicon engineers dream<br>Thing of beauty <a href="https://twitter.com/intel?ref_src=twsrc%5Etfw">@intel</a> <a href="https://t.co/RF8Prsy05f">pic.twitter.com/RF8Prsy05f</a></p>&mdash; Raja Koduri (@Rajaontheedge) <a href="https://twitter.com/Rajaontheedge/status/1354103878426324994?ref_src=twsrc%5Etfw">January 26, 2021</a></blockquote>
-
+{{< /twemb >}}
 
 ## {{< xe class="hpc" >}} のチップ構成
 
