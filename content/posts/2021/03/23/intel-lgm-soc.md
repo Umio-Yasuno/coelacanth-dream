@@ -41,6 +41,15 @@ MaxLinear社による Intel ホームゲートウェイ部門の買収は 2020/0
 ホームゲートウェイ部門の売却と関係してか、Intel のサイトで *Lightning Mountain* を検索しても情報は得られなかった。  
 そのため、投稿されたパッチから追うことにする。  
 
+{{< ins datetime="2021/03/27" >}}
+
+Intelのサイトがアップデートされ、1件だけだが資料が出てくるようになった。  
+しかしパブリックには設定されておらず、アクセスは制限される。  
+
+ * <https://www.intel.com/content/www/us/en/search.html?ws=recent#q=%22Lightning%20Mountain%22&t=All>
+
+{{< /ins >}}
+
  >        #define INTEL_FAM6_ATOM_AIRMONT		0x4C /* Cherry Trail, Braswell */
  >        #define INTEL_FAM6_ATOM_AIRMONT_MID	0x5A /* Moorefield */
  >        #define INTEL_FAM6_ATOM_AIRMONT_NP	0x75 /* Lightning Mountain */
