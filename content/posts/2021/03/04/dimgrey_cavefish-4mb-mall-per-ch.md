@@ -2,7 +2,7 @@
 title: "Dimgrey Cavefish/Navi23 の Infinity Cache はメモリチャネルあたり 4MiB"
 date: 2021-03-04T05:15:07+09:00
 draft: false
-tags: [ "Dimgrey_Cavefish", "RDNA_2", "Navi23" ]
+tags: [ "Dimgrey_Cavefish", "RDNA_2", "Navi23", "VanGogh" ]
 # keywords: [ "", ]
 categories: [ "AMD", "GPU", "Hardware" ]
 noindex: false
