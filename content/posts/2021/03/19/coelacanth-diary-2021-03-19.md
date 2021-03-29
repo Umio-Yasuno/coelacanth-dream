@@ -113,15 +113,10 @@ DDR5 128-bit (2x2ch) という可能性もあるが、*VanGogh* のディスプ�
  >
  > {{< quote >}} [slow boot with 7fef431be9c9 ("mm/page_alloc: place pages to tail in __free_pages_core()")](https://lists.freedesktop.org/archives/amd-gfx/2021-March/060563.html) {{< /quote >}}
 
-具体的にどことか誰とかはもはや広がり過ぎてキリがない書かないが、これで間違った情報を訂正されると嬉しく思う。  
-だがほとんどはされないだろう、とも思う。  
-何故なら、今や重要なのは少ない文字数と画像でどれだけリプライ、リツイート、いいねを稼ぎ、興味を引くよう抜き出し、誇張したタイトルでいくらリンクをクリックさせ、広告を見せるかだからだ。  
-インターネット上でそうでない場所を探すのは難しくなってきた。  
-以前 Google広告を無くした時には書かなかったが、無くした理由にはそういったものに嫌気が差していた、というのもある。読み込まれるリソース量をコントロールするのが難しいのも 1つ。  
-それに世界的に見ればマイナーな日本語で書いてるから、読む人も少ないだろう。  
-
 Linux Kernel はオープンソースであり、自分が普段記事のネタにしてるのも OSS へのパッチであり、インターネットに接続されていれば誰でもソースを確認できる。  
 そういう点で、自分は Leaker とは無縁で、パッチとコードを眺めるだけの存在だ。  
+
+誰も興味がないということを知っている。  
 
 {{< ref >}}
  * [LPDRAM for Mobile and Embedded Applications - flyer_lpdram_mobile_embedded.pdf](https://media-www.micron.com/-/media/client/global/documents/products/product-flyer/flyer_lpdram_mobile_embedded.pdf?rev=2c45263239f84c7c84981870a06bb8b2)
