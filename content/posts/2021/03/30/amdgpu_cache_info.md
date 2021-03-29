@@ -77,7 +77,11 @@ L2データキャッシュは 8192KB (8MB)、CU 14基で共有すると記述さ
  > {{< quote >}} [[PATCH] drm/amdkfd: Update L1 and add L2/3 cache information](https://lists.freedesktop.org/archives/amd-gfx/2021-March/061392.html) {{< /quote >}}
 
 
-ついでだが、今回のパッチでは *Vega20* と *Arcturus* のキャッシュ情報を共通のものとしており、そのためか *Vega20* の L2キャッシュサイズが 8192KB(8MB) になっているが、*Vega20* は 4MB、*Arcturus* は 8MB というのが正しいように思われる。  
+今回のパッチでは *Vega20* と *Arcturus* のキャッシュ情報を共通のものとしており、そのためか *Vega20* の L2キャッシュサイズが 8192KB(8MB) になっているが、*Vega20* は 4MB、*Arcturus* は 8MB というのが正しいように思われる。  
+
+*Aldebaran* では *Arcturus* から L2キャッシュサイズが変わらないこととなるが、L2キャッシュラインサイズを変更することは明らかにされており、*RDNA/2 アーキテクチャ* と同じ 128Byte になる。  
+キャッシュラインサイズを大きくすることは、メモリアクセスのデータ単位を大きくすることとなり、少ないメモリリクエストで広いメモリ帯域を活用することができる。  
+{{< link >}} [RadeonSI に Aldebaran GPU のサポートを追加するパッチが投稿される | Coelacanth's Dream](/posts/2021/03/04/aldebaran-umd/#tcc-line-128B) {{< /link >}}
 
 ## VanGogh のキャッシュ構成と CU数　―― GL1キャッシュは持つが L3キャッシュは持たず {#vgh}
 
