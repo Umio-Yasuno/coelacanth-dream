@@ -1,5 +1,5 @@
 ---
-title: "AMD GPU のキャッシュ構成　―― Dimgrey Cavefish, Aldebran, VanGogh"
+title: "AMD GPU のキャッシュ構成情報　―― Dimgrey Cavefish, Aldebran, VanGogh"
 date: 2021-03-30T02:12:10+09:00
 draft: false
 tags: [ "Linux_Kernel", "Dimgrey_Cavefish", "Aldebaran", "VanGogh" ]
@@ -233,12 +233,14 @@ L2キャッシュ 2MB からも、他同様に L2キャッシュブロックあ�
 
 | AMD GPU<br>cache info | RDNA L1 (GL1) | L2 (TCC) | L3/Infinity Cache (MALL) |
 | :-- | :--: | :--: | :--: |
-| Vega20 | N/A | 4M | N/A |
-| Arcturus | N/A | 8M? | N/A |
-| Aldebaran | N/A | 8M | N/A |
-| Navi10/Navi12 | 128K | 4M | N/A |
-| Navi14 | 128K | 2M | N/A |
-| VanGogh | 128K | 1M | N/A |
+| Raven/Picasso<br>Renoir/Lucienne/Cezanne | - | 1M | - |
+| Raven2 | - | 512K | - |
+| Vega20 | - | 4M | - |
+| Arcturus | - | 8M? | - |
+| Aldebaran | - | 8M | - |
+| Navi10/Navi12 | 128K | 4M | - |
+| Navi14 | 128K | 2M | - |
+| VanGogh | 128K | 1M | - |
 | Sienna Cichlid | 128K | 4M | 128M |
 | Navy Flounder | 128K | 3M | 96M |
 | Dimgrey Cavefish | 128K | 2M | 32M |
