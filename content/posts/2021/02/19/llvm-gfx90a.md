@@ -2,7 +2,7 @@
 title: "LLVM に GFX90A のサポートが追加される　―― CDNA 2/MI200 か"
 date: 2021-02-19T13:48:59+09:00
 draft: false
-tags: [ "MI200", "gfx90a", "CDNA_2", "CDNA" ]
+tags: [ "MI200", "gfx90a", "CDNA_2", "CDNA", "Aldebaran" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false

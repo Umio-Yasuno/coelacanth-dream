@@ -2,7 +2,7 @@
 title: "AMD GPU のキャッシュ構成情報　―― Dimgrey Cavefish, Aldebran, VanGogh"
 date: 2021-03-30T02:12:10+09:00
 draft: false
-tags: [ "Linux_Kernel", "Dimgrey_Cavefish", "Aldebaran", "VanGogh" ]
+tags: [  "Aldebaran", "VanGogh", "Linux_Kernel", "Dimgrey_Cavefish" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
@@ -31,6 +31,8 @@ noindex: false
 L1データ/命令キャッシュは、*Vega/GFX9* 世代では基本 CU 3基で共有していたが、2基で共有する形となる。L1データキャッシュは 16KB、L1命令キャッシュは 32KB で、キャッシュサイズに変わりはない。  
 L2データキャッシュは 8192KB (8MB)、CU 14基で共有すると記述されているが、ここでの CU は SE (ShaderEngine) あたりの数であり、全体の規模ではないと思われる。  
 しかし、**Radeon Instinct MI50/60** のベースとなる *Vega20* や *CDNA アーキテクチャ* を採用する *Arcturus/MI100* が SE あたりの CU 16基、というバランスを採り続けてきたことを考えると、それよりもわずかに少ない CU 14基となるのは興味深い点ではある。  
+それでも、*Aldebaran* では CU あたりの演算性能が大幅に強化されており、SE あたりの CU数が前世代よりも 2基減ったとしても、SE のような広い範囲で見た演算性能は前世代よりもずっと大きくなる。  
+{{< link >}} [LLVM に GFX90A のサポートが追加される　―― CDNA 2/MI200 か | Coelacanth's Dream](/posts/2021/02/19/llvm-gfx90a/) {{< /link >}}
 
 
  >        +static struct kfd_gpu_cache_info aldebaran_cache_info[] = {
