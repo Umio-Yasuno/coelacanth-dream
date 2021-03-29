@@ -20,16 +20,16 @@ noindex: false
 
  * [Aldebaran のキャッシュ構成](#aldebaran)
  * [VanGogh のキャッシュ構成と CU数　―― GL1キャッシュは持つが L3キャッシュは持たず](#vgh)
- * [Dimgrey Cavefish/Navi23 のキャッシュ構成　―― 32MB の L3キャッシュ](#dimgrey_cavefish)
+ * [Dimgrey Cavefish/Navi23 のキャッシュ構成　―― 32MiB の L3キャッシュ](#dimgrey_cavefish)
  * [AMD GPU cache info](#cache-info)
 
 {{< /pindex >}}
 
 ## Aldebaran のキャッシュ構成 {#aldebaran}
 
-*Aldebaran* の CU はプライベートL1キャッシュ 16KB を持ち、これは他の AMD GPU アーキテクチャ、*GCN, CDNA, RDNA/2* と同じである。  
-L1データ/命令キャッシュは、*Vega/GFX9* 世代では基本 CU 3基で共有していたが、2基で共有する形となる。L1データキャッシュは 16KB、L1命令キャッシュは 32KB で、キャッシュサイズに変わりはない。  
-L2データキャッシュは 8192KB (8MB)、CU 14基で共有すると記述されているが、ここでの CU は SE (ShaderEngine) あたりの数であり、全体の規模ではないと思われる。  
+*Aldebaran* の CU はプライベートL1キャッシュ 16KiB を持ち、これは他の AMD GPU アーキテクチャ、*GCN, CDNA, RDNA/2* と同じである。  
+L1データ/命令キャッシュは、*Vega/GFX9* 世代では基本 CU 3基で共有していたが、2基で共有する形となる。L1データキャッシュは 16KiB、L1命令キャッシュは 32KiB で、キャッシュサイズに変わりはない。  
+L2データキャッシュは 8192KiB (8MiB)、CU 14基で共有すると記述されているが、ここでの CU は SE (ShaderEngine) あたりの数であり、全体の規模ではないと思われる。  
 しかし、**Radeon Instinct MI50/60** のベースとなる *Vega20* や *CDNA アーキテクチャ* を採用する *Arcturus/MI100* が SE あたりの CU 16基、というバランスを採り続けてきたことを考えると、それよりもわずかに少ない CU 14基となるのは興味深い点ではある。  
 それでも、*Aldebaran* では CU あたりの演算性能が大幅に強化されており、SE あたりの CU数が前世代よりも 2基減ったとしても、SE のような広い範囲で見た演算性能は前世代よりもずっと大きくなる。  
 {{< link >}} [LLVM に GFX90A のサポートが追加される　―― CDNA 2/MI200 か | Coelacanth's Dream](/posts/2021/02/19/llvm-gfx90a/) {{< /link >}}
@@ -77,7 +77,7 @@ L2データキャッシュは 8192KB (8MB)、CU 14基で共有すると記述さ
  > {{< quote >}} [[PATCH] drm/amdkfd: Update L1 and add L2/3 cache information](https://lists.freedesktop.org/archives/amd-gfx/2021-March/061392.html) {{< /quote >}}
 
 
-今回のパッチでは *Vega20* と *Arcturus* のキャッシュ情報を共通のものとしており、そのためか *Vega20* の L2キャッシュサイズが 8192KB(8MB) になっているが、*Vega20* は 4MB、*Arcturus* は 8MB というのが正しいように思われる。  
+今回のパッチでは *Vega20* と *Arcturus* のキャッシュ情報を共通のものとしており、そのためか *Vega20* の L2キャッシュサイズが 8192KiB(8MiB) になっているが、*Vega20* は 4MiB、*Arcturus* は 8MiB というのが正しいように思われる。  
 
 *Aldebaran* では *Arcturus* から L2キャッシュサイズが変わらないこととなるが、L2キャッシュラインサイズを変更することは明らかにされており、*RDNA/2 アーキテクチャ* と同じ 128Byte になる。  
 キャッシュラインサイズを大きくすることは、メモリアクセスのデータ単位を大きくすることとなり、少ないメモリリクエストで広いメモリ帯域を活用することができる。  
@@ -99,13 +99,13 @@ AMD GPU のキャッシュの別名は他にもあり、プライベートL1キ�
 [^tcc]: Texture Channel Cache とされることも
 
 *VanGogh* の各 L1キャッシュサイズは他と同じで、L1データ/命令キャッシュを CU 2基で共有するのは *RDNA系アーキテクチャ* で共通する特徴 (WGP) となる。  
-そして、*VanGogh* は GL1キャッシュ 128KB を持ち、これは他の *RDNA系アーキテクチャ* を採用するディスクリートGPUと同じ規模のキャッシュサイズとなる。  
-L2キャッシュは 1024KB (1MB) であり、これは近年の *Vega/GFX9* 世代 APU {{< comple >}} Raven, Picasso, Renoir, Lucienne, Cezanne {{< /comple >}} と同じサイズであり、AMD としては APU の GPU部に持たせる L2キャッシュはまだ 1MB がちょうど良いという判断なのかもしれない。  
+そして、*VanGogh* は GL1キャッシュ 128KiB を持ち、これは他の *RDNA系アーキテクチャ* を採用するディスクリートGPUと同じ規模のキャッシュサイズとなる。  
+L2キャッシュは 1024KiB (1MiB) であり、これは近年の *Vega/GFX9* 世代 APU {{< comple >}} Raven, Picasso, Renoir, Lucienne, Cezanne {{< /comple >}} と同じサイズであり、AMD としては APU の GPU部に持たせる L2キャッシュはまだ 1MiB がちょうど良いという判断なのかもしれない。  
 それでも GL1キャッシュを持つため、GPU のメモリ性能向上が期待できる。  
 
 また、CU 8基で共有するとされているが、他の RDNA系dGPU の情報を見るに、SA (ShaderArray) あたりの CU数ではないかと思われる。  
 *RDNA系アーキテクチャ* では SE あたりの SA数が 2基となっているため、*VanGogh* でもそうなるかはここでは読み取れない。  
-しかし、L2キャッシュ 1MB ということから、*Vega/GFX9* 世代 APU からそう CU数を増やすことはせず、SE あたり SA 1基という構成を採る可能性は考えられる。  
+しかし、L2キャッシュ 1MiB ということから、*Vega/GFX9* 世代 APU からそう CU数を増やすことはせず、SE あたり SA 1基という構成を採る可能性は考えられる。  
 
 そして、*VanGogh APU* は GPU部に *RDNA 2 アーキテクチャ* を採用するが、L3キャッシュ/Infinity Cache は持たない。  
 このことはディスプレイエンジン周りのドライバーコードから読み取ることができ、正確な情報と思われる。  
@@ -164,16 +164,16 @@ L2キャッシュは 1024KB (1MB) であり、これは近年の *Vega/GFX9* 世
  > {{< quote >}} [[PATCH] drm/amdkfd: Update L1 and add L2/3 cache information](https://lists.freedesktop.org/archives/amd-gfx/2021-March/061392.html) {{< /quote >}}
 
 
-## Dimgrey Cavefish/Navi23 のキャッシュ構成　―― 32MB の L3キャッシュ {#dimgrey_cavefish}
+## Dimgrey Cavefish/Navi23 のキャッシュ構成　―― 32MiB の L3キャッシュ {#dimgrey_cavefish}
 
 *Dimgrey Cavefish/Navi23* のキャッシュ情報も追加されており、そこからはメモリバス幅が読み取れる。  
 
-*Dimgrey Cavefish* は L2キャッシュ 2048KB (2MB)、L3キャッシュ/Infinity Cache 32MB を持つ。  
-L3キャッシュ/Infinity Cache については、ディスプレイエンジン周りのドライバーコードから、メモリチャネルあたり 4MB ということが読み取れ、他 *RDNA 2* dGPU同様に GDDR6メモリ (1ch == 16-bit) だとするとメモリバス幅は 128-bit だと考えられる。  
+*Dimgrey Cavefish* は L2キャッシュ 2048KiB (2MiB)、L3キャッシュ/Infinity Cache 32MiB を持つ。  
+L3キャッシュ/Infinity Cache については、ディスプレイエンジン周りのドライバーコードから、メモリチャネルあたり 4MiB ということが読み取れ、他 *RDNA 2* dGPU同様に GDDR6メモリ (1ch == 16-bit) だとするとメモリバス幅は 128-bit だと考えられる。  
 {{< link >}} [Dimgrey Cavefish/Navi23 の Infinity Cache はメモリチャネルあたり 4MiB | Coelacanth's Dream](/posts/2021/03/04/dimgrey_cavefish-4mb-mall-per-ch/#mall-size) {{< /link >}}
-L2キャッシュ 2MB からも、他同様に L2キャッシュブロックあたり 256KB とすると 8ブロック (ch) となり、ここでも 128-bit と考えられる。  
+L2キャッシュ 2MiB からも、他同様に L2キャッシュブロックあたり 256KiB とすると 8ブロック (ch) となり、ここでも 128-bit と考えられる。  
 
-既に製品が出ている *RDNA 2* dGPU、*Sienna Cichlid/Navi21* 、*Navy Flounder/Navi22* では、メモリチャネルあたり 8MB の L3キャッシュ/Infinity Cache を持ち、*Dimgrey Cavefish/Navi23* はそれよりも小さいバランスとなるが、これは製造コストを意識した結果、あるいはターゲット帯に必要な性能を考えてのものだろう。  
+既に製品が出ている *RDNA 2* dGPU、*Sienna Cichlid/Navi21* 、*Navy Flounder/Navi22* では、メモリチャネルあたり 8MiB の L3キャッシュ/Infinity Cache を持ち、*Dimgrey Cavefish/Navi23* はそれよりも小さいバランスとなるが、これは製造コストを意識した結果、あるいはターゲット帯に必要な性能を考えてのものだろう。  
 また、 *Dimgrey Cavefish* の SA あたりの CU数は 8基とされ、*Sienna Cichlid* 、*Navy Flounder* は 10基であったから、ここでも小さめバランスを取ったことが読み取れる。  
 
  >        +static struct kfd_gpu_cache_info dimgrey_cavefish_cache_info[] = {
