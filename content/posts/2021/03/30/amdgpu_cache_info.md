@@ -1,5 +1,5 @@
 ---
-title: "AMD GPU のキャッシュ構成情報　―― Dimgrey Cavefish, Aldebran, VanGogh"
+title: "AMD GPU のキャッシュ構成情報　―― Dimgrey Cavefish, Aldebaran, VanGogh"
 date: 2021-03-30T02:12:10+09:00
 draft: false
 tags: [  "Aldebaran", "VanGogh", "Linux_Kernel", "Dimgrey_Cavefish" ]
@@ -18,16 +18,16 @@ noindex: false
 
 {{< pindex >}}
 
- * [Aldebran のキャッシュ構成](#aldebran)
+ * [Aldebaran のキャッシュ構成](#aldebaran)
  * [VanGogh のキャッシュ構成と CU数　―― GL1キャッシュは持つが L3キャッシュは持たず](#vgh)
  * [Dimgrey Cavefish/Navi23 のキャッシュ構成　―― 32MB の L3キャッシュ](#dimgrey_cavefish)
  * [AMD GPU cache info](#cache-info)
 
 {{< /pindex >}}
 
-## Aldebran のキャッシュ構成 {#aldebran}
+## Aldebaran のキャッシュ構成 {#aldebaran}
 
-*Aldebran* の CU はプライベートL1キャッシュ 16KB を持ち、これは他の AMD GPU アーキテクチャ、*GCN, CDNA, RDNA/2* と同じである。  
+*Aldebaran* の CU はプライベートL1キャッシュ 16KB を持ち、これは他の AMD GPU アーキテクチャ、*GCN, CDNA, RDNA/2* と同じである。  
 L1データ/命令キャッシュは、*Vega/GFX9* 世代では基本 CU 3基で共有していたが、2基で共有する形となる。L1データキャッシュは 16KB、L1命令キャッシュは 32KB で、キャッシュサイズに変わりはない。  
 L2データキャッシュは 8192KB (8MB)、CU 14基で共有すると記述されているが、ここでの CU は SE (ShaderEngine) あたりの数であり、全体の規模ではないと思われる。  
 しかし、**Radeon Instinct MI50/60** のベースとなる *Vega20* や *CDNA アーキテクチャ* を採用する *Arcturus/MI100* が SE あたりの CU 16基、というバランスを採り続けてきたことを考えると、それよりもわずかに少ない CU 14基となるのは興味深い点ではある。  
