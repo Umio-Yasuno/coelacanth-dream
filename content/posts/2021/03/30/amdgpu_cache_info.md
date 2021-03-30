@@ -240,7 +240,7 @@ L2キャッシュ 2MiB からも、他同様に L2キャッシュブロックあ
 | AMD GPU<br>cache info | RDNA L1 (GL1) | L2 (TCC) | L3/Infinity Cache (MALL) |
 | :-- | :--: | :--: | :--: |
 | Raven/Picasso<br>Renoir/Lucienne/Cezanne | - | 1M | - |
-| Raven2 | - | 512K | - |
+| Raven2 | - | 128K[^rv2-l2c] | - |
 | Vega20 | - | 4M | - |
 | Arcturus | - | 8M? | - |
 | Aldebaran | - | 8M | - |
@@ -250,3 +250,5 @@ L2キャッシュ 2MiB からも、他同様に L2キャッシュブロックあ
 | Sienna Cichlid | 128K | 4M | 128M |
 | Navy Flounder | 128K | 3M | 96M |
 | Dimgrey Cavefish | 128K | 2M | 32M |
+
+[^rv2-l2c]: [Raven2 の GPU L2キャッシュは 128KB | Coelacanth's Dream](/posts/2021/02/11/raven2-gpu-l2c-size/)
