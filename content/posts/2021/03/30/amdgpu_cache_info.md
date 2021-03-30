@@ -1,5 +1,5 @@
 ---
-title: "AMD GPU のキャッシュ構成情報　―― Dimgrey Cavefish, Aldebaran, VanGogh"
+title: "AMD GPU のキャッシュ構成情報　―― Dimgrey Cavefish / Aldebaran / VanGogh"
 date: 2021-03-30T02:12:10+09:00
 draft: false
 tags: [  "Aldebaran", "VanGogh", "Linux_Kernel", "Dimgrey_Cavefish" ]
@@ -11,7 +11,7 @@ noindex: false
 
 *Vega10* 以降の AMD GPU のキャッシュ構成情報をドライバーに追加するパッチが Linux Kernel (amd-gfx) に投稿された。  
 キャッシュ情報が追加されたのは、Kernelドライバーでも KFD (Kernel Fusion Driver) の部分であり、KFD は各種ROCmソフトウェアを動作させるためのドライバーとして機能する。  
-これまでは CU ごとに持つプライベートな L1ベクタキャッシュの情報だけだったが、今回のパッチにより、複数の CU で共有するスカラL1データ/命令キャッシュ、L2データキャッシュ、そして *RDNA 2/GFX10.3* 世代から追加された L3データキャッシュの情報が追加された。  
+これまでは CU ごとに持つプライベートな L1ベクタキャッシュの情報だけだったが、今回のパッチにより、複数の CU で共有するスカラL1データ/命令キャッシュ、L2データキャッシュ、そして *RDNA/GFX10* 世代から追加された GL1キャッシュ、 *RDNA 2/GFX10.3* 世代から追加された L3データキャッシュ/Infinity Cache の情報が追加された。  
 
  * [[PATCH] drm/amdkfd: Update L1 and add L2/3 cache information](https://lists.freedesktop.org/archives/amd-gfx/2021-March/061392.html)
 
@@ -89,11 +89,11 @@ L2データキャッシュは 8192KiB (8MiB)、CU 14基で共有すると記述�
 プライベートL1キャッシュ、スカラL1データ/命令キャッシュは他と同様。  
 *VanGogh* において興味深いのは *RDNA/GFX10* から追加された GL1キャッシュは持つが、*RDNA 2/GFX10.3* から追加された *L3キャッシュ/Infinity Cache* は持たないことだ。  
 
-*VanGogh* の前にキャッシュの呼称についての解説を挟むと、  
+*VanGogh* の前に各キャッシュ階層の呼称について説明すると、  
 *RDNA系アーキテクチャ* では CU内のプライベートL1キャッシュ、複数の CU で共有する L1データ/命令キャッシュと、グローバルでアクセス可能な L2キャッシュの間に階層が 1つ増設された。  
 そして、*GCN/CDNA アーキテクチャ* における L1キャッシュを *RDNA アーキテクチャ* では L0キャッシュとし、新たなキャッシュ階層を L1キャッシュとした。  
-マーケティング上の資料等ではそうした呼び方で問題無いと思われるが、ドライバー等の扱いでは、呼び方が違ってもキャッシュの扱いは同じであるため、その呼び方をそのまま使うのではややこしく、問題が生じる原因となる。  
-そのため、オープンソース・ドライバーのコードを読む限りでは、*RDNA アーキテクチャ* における L1キャッシュを `GL1` としている。  
+マーケティング上の資料等ではそうした呼び方で問題無いと思われるが、ドライバー等の扱いでは、呼び方が違ってもキャッシュの扱いは同じであるため、その呼び方をそのまま使うのではややこしく、コードを複雑にし、問題が生じる原因となる。  
+そのため、オープンソース・ドライバーのコードを読む限りでは、*RDNA アーキテクチャ* における L1キャッシュを `GL1` と呼び、区別している。  
 AMD GPU のキャッシュの別名は他にもあり、プライベートL1キャッシュは `TCP (Texture Cache Private?)` 、L2キャッシュは `TCC (Total Texture Cache?)` [^tcc] 、L3キャッシュは `MALL (Memory Access at Last Level)` とされる。  
 
 [^tcc]: Texture Channel Cache とされることも
@@ -111,7 +111,7 @@ L2キャッシュは 1024KiB (1MiB) であり、これは近年の *Vega/GFX9* �
 このことはディスプレイエンジン周りのドライバーコードから読み取ることができ、正確な情報と思われる。  
 {{< link >}} [Dimgrey Cavefish/Navi23 の Infinity Cache はメモリチャネルあたり 4MiB | Coelacanth's Dream](/posts/2021/03/04/dimgrey_cavefish-4mb-mall-per-ch/#mall-size) {{< /link >}}
 
-*RDNA 2アーキテクチャ* でありながら L3キャッシュ/Infinity Cache を持たず、また SE あたり SA 1基という構成 {{< comple >}} を採る可能性がある {{< /comple >}} からは、コストを重視した APU/SoC という設計思想が垣間見えるだろう。  
+*RDNA 2アーキテクチャ* でありながら L3キャッシュ/Infinity Cache を持たず、また SE あたり SA 1基という構成 {{< comple >}} を採る可能性がある {{< /comple >}} からは、コストを重視した APU/SoC という設計思想が窺える。  
 
  >        +static struct kfd_gpu_cache_info vangogh_cache_info[] = {
  >        +	{
