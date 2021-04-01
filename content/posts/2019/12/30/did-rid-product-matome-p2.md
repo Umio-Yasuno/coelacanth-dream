@@ -565,20 +565,16 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 73C0 | | |
-| 73C1 | | |
-| 73C3 | | |
-| 73DF&darr; | C1 | RX 6700 XT |
+| 73C0 | 00 | |
+| 73C1 | 00 | |
+| 73C3 | 00 | |
+| 73DF&darr; | 40 | |
+|            | 41 | |
+|            | C1 | RX 6700 XT |
 |            | C3 | RX 6800M |
 |            | C5 | RX 6700 XT |
-
-<!--
-    Nav\i2\2: gf\x 10/3\ 1?
-    Na/vi\23: gf\x 10\32?
-
-    M\I20\0: gf\x9\0\9??? maybe temp id
--->
-
+|            | CF | |
+|            | DF | |
 
 [^14]: [P4 to Git Change 2042212 by kjayapra@1_HIPWS_LNX1_PAL on 2019/12/06 1… · ROCm-Developer-Tools/ROCclr@a35c1d2](https://github.com/ROCm-Developer-Tools/ROCclr/commit/a35c1d2f2d954363c7d2121d5334f9e7766beeae)
 [^5]:<https://github.com/ROCm-Developer-Tools/aomp-extras/blob/f3d316fe64347e697a9789f0f2499fec50024db1/utils/bin/gputable.txt#L1867>
