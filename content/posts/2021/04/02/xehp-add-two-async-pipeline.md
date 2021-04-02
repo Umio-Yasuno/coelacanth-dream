@@ -1,5 +1,5 @@
 ---
-title: "2つの非同期パイプラインが追加される XeHP EU"
+title: "2つの非同期パイプラインが追加される Xe-HP EU"
 date: 2021-04-02T16:24:19+09:00
 draft: false
 tags: [ "Xe-HP", ]
