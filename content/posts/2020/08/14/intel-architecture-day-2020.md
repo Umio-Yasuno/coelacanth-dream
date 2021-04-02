@@ -2,7 +2,7 @@
 title: "Intel Architecture Day 2020 個人的まとめ　―― XeHP は 1-Tile 512EU、XeLPアーキテクチャ詳細"
 date: 2020-08-14T04:24:22+09:00
 draft: false
-tags: [ "SG1", "DG1", "Alder_Lake", "Tiger_Lake", "Gen12" ]
+tags: [ "SG1", "DG1", "Alder_Lake", "Tiger_Lake", "Gen12", "Xe-HP" ]
 keywords: [ "", ]
 categories: [ "Intel", "Hardware", "CPU", "GPU" ]
 noindex: false
