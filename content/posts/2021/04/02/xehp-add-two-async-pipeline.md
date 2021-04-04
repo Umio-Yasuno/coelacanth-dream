@@ -44,7 +44,8 @@ noindex: false
 {{< figure src="/image/2021/04/02/xe-lp-eu.webp" title="Xe-LP Execution Unit" caption="画像出典: [HotChips2020_GPU_Intel_Xe_David_Blythe.pdf](https://www.hotchips.org/assets/program/conference/day1/HotChips2020_GPU_Intel_Xe_David_Blythe.pdf)" >}}
 
 コード内のコメントでは、(*{{< xe class="lp" >}}* から) 2つの非同期ALUパイプラインが追加されているとしており、上述の説明と合わせるに、*{{< xe class="lp" >}}* では FP/INT演算器に接続されていた Issue Port 0 を分割、それぞれに独立した Issue Port を搭載し、そして倍精度演算器と一緒に Issue Port をもう 1基搭載したのが *{{< xe class="hp" >}}* EU の構成ではないかと考えられる。  
-Issue Port が増えればその分多く演算命令を発行でき、多くの処理を行うことができる。  
+Issue Port が増えればその分多く演算命令を発行でき、多くの処理を行うことができる。また非同期に演算処理を行うことも可能になる。  
+コンパイラ側で制御する必要はあるが、パッチの日付は 1,2年前のものとなっており、だいぶ以前から取り組んでいたことが窺える。*{{< xe class="hp" >}}* について内部で開発していたものを、サポートのためオープンにする段階に来たとも言える。  
 *{{< xe class="hp" >}}* の特徴として以前より IPC の向上がアピールされていたが、そのためのアーキテクチャ改良の 1つが Issue Port の分割、増設なのだろう。[^xehp-ipc]  
 
 [^xehp-ipc]: [Intel’s Xe GPUs — from Laptops to Supercomputers | EE Times](https://www.eetimes.com/intels-xe-gpus-from-laptops-to-supercomputers/2/)
