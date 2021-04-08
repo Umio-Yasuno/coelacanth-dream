@@ -2,7 +2,7 @@
 title: "Cannon Lake を追う"
 date: 2020-09-29T18:02:08+09:00
 draft: false
-tags: [ "Gen10", ]
+tags: [ "Gen10", "Cannon_Lake" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "Intel", "CPU" ]
 noindex: false
