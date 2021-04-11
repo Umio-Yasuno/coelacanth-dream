@@ -105,7 +105,7 @@ Stepping は基本大きい程進んだものとなっており、以前の Step
  > {{< quote >}} [LKML: Peter Zijlstra: [PATCH] x86/cpu: Resort and comment Intel models](https://lkml.org/lkml/2021/3/15/2071) {{< /quote >}}
 
 ただ、パッチ内で Peter Zijlstra 氏は、*Cannon Lake (Palm Cove)* は Linux Kernel の CPU性能解析ツール `perf` コマンドのサポートがされていない、とコメントしており、それは `intel-family.h` に *Cannon Lake* のためのマクロを残す必要性が薄いことを意味する。  
-*Palm Cove* の名がようやく? Intel より出されたは、将来的には GPUドライバーのように、コードから *Cannon Lake* のための部分が削除される可能性も出てきた。  
+*Palm Cove* の名がようやく? Intel より出されたが、将来的には GPUドライバーのように、コードから *Cannon Lake* のための部分が {{< comple >}} わずかだとは思うが {{< /comple >}} 削除される可能性も出てきた。  
 {{< link >}} [Cannon Lake を追う | Coelacanth's Dream](/posts/2020/09/29/intel-cnl-chase/) {{< /link >}}
 
 ## Sapphire Rapids == Golden Cove? / Willow Cove? {#spr}
