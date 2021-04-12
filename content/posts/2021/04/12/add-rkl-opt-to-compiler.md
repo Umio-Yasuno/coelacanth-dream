@@ -1,5 +1,5 @@
 ---
-title: "GCC と LLVM に Rocket Lake のオプションが追加"
+title: "GCC、LLVM に Rocket Lake のオプションが追加"
 date: 2021-04-12T14:53:19+09:00
 draft: false
 tags: [ "Rocket_Lake", "Ice_Lake" ]
