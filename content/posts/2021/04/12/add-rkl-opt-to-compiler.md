@@ -11,7 +11,7 @@ noindex: false
 
 日本では 2021/03/30 に発売が開始された *Rocket Lake(-S)* だが、それから約 2週間経ってオープンソースで開発される C言語コンパイラ GCC とコンパイラバックエンドである LLVM に Intelのソフトウェアエンジニアより、*Rocket Lake* への最適化オプションを追加するパッチが投稿された。  
 
-*Rocket Lake* が対応する x86命令範囲について、GCC へのパッチでは、*Ice Lake (client)* をベースに SGX を引いたものだと説明されている。  
+*Rocket Lake* が対応する x86命令範囲について、GCC へのパッチでは、*Ice Lake (client)* をベースに SGX (Software Guard Extensions) を引いたものだと説明されている。  
 SGX については ark.intel.com によると、モバイル向け *Tiger Lake (Family: 0x6, Model: 0x8c)* でもサポートされていない。[^1185g7]  
 
 [^1185g7]: [Intel® Core™ i7-1185G7 Processor (12M Cache, up to 4.80 GHz, with IPU) Product Specifications](https://ark.intel.com/content/www/us/en/ark/products/208664/intel-core-i7-1185g7-processor-12m-cache-up-to-4-80-ghz-with-ipu.html)
