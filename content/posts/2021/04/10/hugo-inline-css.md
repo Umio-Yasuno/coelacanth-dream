@@ -35,7 +35,7 @@ Hugo のドキュメントにあるように、通常 SCSS から CSS に変換�
  > 		  {{- $main_style.Content | safeCSS -}}
  >        ...
  >      </style>
- >      ~~~
+ >        /* one-line */
  > 		  {{- (resources.Get "css/main.scss" | toCSS | minify).Content | safeCSS -}}
 
 これをテンプレート部に使うことで、SCSS形式で記述しながらインラインCSSとして展開でき、レンダリング開始速度を向上させることができる。速度向上には後に表示させたい要素をインラインCSS側で表示しないよう設定する必要があるが。  
