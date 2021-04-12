@@ -1,5 +1,5 @@
 ---
-title: "GCC と LLVM に Rocket Lake のオプションを追加するパッチが投稿される"
+title: "GCC と LLVM に Rocket Lake のオプションが追加"
 date: 2021-04-12T14:53:19+09:00
 draft: false
 tags: [ "Rocket_Lake", "Ice_Lake" ]
@@ -33,7 +33,7 @@ LLVM には同時に *Ice Lake (client)* は `CLWB` 命令をサポートしな�
 実際にはサポートしていないらしく、それを反映させたのがリンク先のパッチとなる。機能的に持たないのか、それとも無効化されているのかは不明。  
 
 *Ice Lake (client)* の `CLWB` 命令の非サポートについては、GCC には 2020/06 [^gcc-icl-clwb]、Intel が公開している x86命令のエンコーダー/デコーダー [intelxed/xed](https://github.com/intelxed/xed) には 2020/11 にそのことを反映させるパッチが投稿されており[^xed-icl-clwb]、LLVM だけ何故か遅れている状況にあった。  
-*Tremont* (Atom系アーキテクチャ) と *Tiger Lake* では正式に `CLWB` 命令をサポートしている。サーバー向けである *Ice Lake (server)* でも当然サポートされている。  
+*Tremont* (Atom系アーキテクチャ) と *Tiger Lake* では正式に `CLWB` 命令をサポートしている。*Ice Lake* という括りでも、サーバー向けである *Ice Lake (server)* では当然サポートされている。  
 ただ不思議なことに *Ice Lake (client)* と同じマイクロアーキテクチャのコア (*Sunny Cove*) と *Tremont* を搭載するハイブリッドプロセッサ *Lakefield* でもサポートされているようだ。 (Source: InstLatx64) [^lkf-clwb]  
 
 
