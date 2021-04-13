@@ -29,7 +29,6 @@ summary: " "
       * [Vega10](#vega10-gfx900)
       * [Vega12](#vega12-gfx904)
       * [Vega20](#vega20-gfx906)
-   * FAMILY_AR
       * [Arcturus](#arcturus-gfx908)
       * [Aldebaran](#aldebaran-gfx90a)
    * FAMILY_NV
