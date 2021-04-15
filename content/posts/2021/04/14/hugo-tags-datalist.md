@@ -30,6 +30,7 @@ noindex: false
  > 		      <option value="{{ .Title }}" data-url="{{- path.Base .RelPermalink -}}" />
  > 		    {{- end -}}
  > 		    </datalist>
+ > 		    <div id="tag-comple-error"></div>
  > 		    <button type="button" class="sb jmp_b" onclick="jump_tag(event)">Enter</button>
  > 		    <button type="button" class="sb clr_b" onclick="clear_value()">Clear</button>
  > 		  </div>
@@ -55,17 +56,30 @@ noindex: false
  > 		  if (e.key != `Enter` && e.type != `click`)
  > 		    return;
  > 		
- > 		  const tags_val = document.getElementById(`input-tag-comple`).value
- > 		                    .replace(/(^\s+|\s+$)/g, ``)
- > 		                    .replace(/\s+/, ` `);
+ > 		  const tag_val  = document.getElementById(`input-tag-comple`).value
+ > 		                    .trim().replace(/\s+/, ` `);
  > 		
- > 		  const list     = document.getElementById(`tags-list`);
- > 		  const selector = list.querySelector(`[value="` + tags_val + `"]`);
- > 		
- > 		  if(!selector)
+ > 		  if (tag_val == ``)
  > 		    return;
  > 		
- > 		  const url      = "/tags/" + selector.dataset.url + "/";
+ > 		  const list     = document.getElementById(`tags-list`);
+ > 		  const selector = list.querySelector(`[value="${tag_val}"]`);
+ > 		
+ > 		
+ > 		  if(!selector) {
+ > 		    const err_msg = document.getElementById(`tag-comple-error`);
+ > 		
+ > 		    err_msg.innerHTML = `"${tag_val}" not found`;
+ > 		    err_msg.classList.add(`toast-err`);
+ > 		
+ > 		    setTimeout( () => {
+ > 		      err_msg.classList.remove(`toast-err`);
+ > 		    }, 2000);
+ > 		
+ > 		    return;
+ > 		  }
+ > 		
+ > 		  const url      = `/tags/${selector.dataset.url}/`;
  > 		
  > 		  fetch(url, { method:         `HEAD` ,
  > 		               referrerPolicy: `no-referrer` }
