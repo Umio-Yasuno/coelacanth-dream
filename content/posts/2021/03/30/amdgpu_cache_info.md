@@ -28,11 +28,12 @@ noindex: false
 ## Aldebaran のキャッシュ構成 {#aldebaran}
 
 *Aldebaran* の CU はプライベートL1キャッシュ 16KiB を持ち、これは他の AMD GPU アーキテクチャ、*GCN, CDNA, RDNA/2* と同じである。  
-L1データ/命令キャッシュは、*Vega/GFX9* 世代では基本 CU 3基で共有していたが、2基で共有する形となる。L1データキャッシュは 16KiB、L1命令キャッシュは 32KiB で、キャッシュサイズに変わりはない。  
+スカラL1データ/命令キャッシュは、*Vega/GFX9* 世代では基本 CU 3基で共有していたが、2基で共有する形となる。L1データキャッシュは 16KiB、L1命令キャッシュは 32KiB で、キャッシュサイズに変わりはない。  
 L2データキャッシュは 8192KiB (8MiB)、CU 14基で共有すると記述されているが、ここでの CU は SE (ShaderEngine) あたりの数であり、全体の規模ではないと思われる。  
 しかし、**Radeon Instinct MI50/60** のベースとなる *Vega20* や *CDNA アーキテクチャ* を採用する *Arcturus/MI100* が SE あたりの CU 16基、というバランスを採り続けてきたことを考えると、それよりもわずかに少ない CU 14基となるのは興味深い点ではある。  
 それでも、*Aldebaran* では CU あたりの演算性能が大幅に強化されており、SE あたりの CU数が前世代よりも 2基減ったとしても、SE のような広い範囲で見た演算性能は前世代よりもずっと大きくなる。  
 {{< link >}} [LLVM に GFX90A のサポートが追加される　―― CDNA 2/MI200 か | Coelacanth's Dream](/posts/2021/02/19/llvm-gfx90a/) {{< /link >}}
+また、スカラL1データ/命令キャッシュは 2基で共有するため、それらキャッシュの総数は他 *Vega/GFX9* 系よりも増えることになる。  
 
 
  >        +static struct kfd_gpu_cache_info aldebaran_cache_info[] = {
