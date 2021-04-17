@@ -10,7 +10,7 @@ noindex: false
 ---
 
 AMDプロセッサには、メモリ暗号化等の機能を担当する PSP (Platform Security Processor)、あるいは CCP (Cryptographic Coprocessor) と呼ばれる内部デバイスが存在する。  
-そして、*Green Sardine APU* における PSP/CCP の DeviceID を追加するパッチが投稿された。  
+そして、Linux Kernel に *Green Sardine APU* に搭載された PSP/CCP の DeviceID を追加するパッチが投稿された。  
 
  * [LKML: Rijo Thomas: [PATCH] ccp: ccp - add support for Green Sardine](https://lkml.org/lkml/2021/4/16/273)
 
