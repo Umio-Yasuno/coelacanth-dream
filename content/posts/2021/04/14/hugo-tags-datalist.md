@@ -42,8 +42,12 @@ noindex: false
 
 `<input list="<name>">` と `<datalit id="<name>">` の \<name\> を同じものにすることでそれらを関連付けられる。  
 `{{ range .Pages.ByTitle }}...{{ end }}` で自動補完に使う要素をずらっと出力できるのでテンプレート部はかなり楽。 .Pages に .ByTitle を付けることでタグタイトルを昇順にソートしている。  
-`<option>` の value にタグタイトルを、拡張属性の data-url に実際のタグページに使われている URLのパス末尾を置いている。拡張属性は後述のページ偏移で使う。`<option>` の終了タグは省略可能であり、ここではそのようにしている。  
+`<option>` の value にタグタイトルを、拡張属性の data-url に実際のタグページに使われている URLのパス末尾を置いている。拡張属性は後述のページ偏移で使う。  
+パス末尾部分は `{{ path.Base ... }}` で取り出している。(`/tags/<tag name>/ -> <tag name>`) [^path-base]  
+`<option>` の終了タグは省略可能であり、ここではそのようにしている。サイトにもよるが、使われているタグすべてを出力するため、出来るだけ短くした方がいいだろう。  
 下 2つの `<button>` はページ偏移と入力欄をクリアするスクリプトを実行するためのもの。  
+
+[^path-base]: [path.Base | Hugo](https://gohugo.io/functions/path.base/)
 
 ## Javascript部 {#js}
 
