@@ -109,7 +109,7 @@ summary: " "
 | | C3 | | (Vega 6) |
 | | C4 | &rarr; [Raven2](#raven2-gfx909) 3200U | |
 | | C5 | &rarr; [Raven2](#raven2-gfx909) 300U | |
-| | C8 | 3400G | (AM4 Vega 11) |
+| | C8 | 3350G[^pco-3350g]/3400G | (AM4 Vega 11) |
 | | C9 | 3200G | (AM4 Vega 8) |
 | | CA | | (AM4 Vega 11) |
 | | CB | | (AM4 Vega 8) |
@@ -143,6 +143,7 @@ summary: " "
 [^pco-pro-3200ge]: [PassMark Software - Display Baseline ID# 1300484](https://www.passmark.com/baselines/V8/display.php?id=130048431252)
 [^pco-pro-3400g]: <http://www.ozone3d.net/gpudb/score.php?which=900474>
 [^pco-pro-3200g]: <https://gpuscore.top/msi/kombustor/show.php?id=505043>
+[^pco-3350g]: [AMD Ryzen 5 3350G - lspci - OpenBenchmarking.org](https://openbenchmarking.org/system/2103299-HA-RYZEN335050/AMD%20Ryzen%205%203350G/lspci)
 
 #### Raven2 ( gfx909 ) {#raven2-gfx909}
 | Device ID | Revision ID | Product Name | Memo |

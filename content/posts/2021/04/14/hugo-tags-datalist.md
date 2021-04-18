@@ -100,7 +100,7 @@ noindex: false
 変数 tags_val に `document.getElementById('input-tag-comple').value` で入力欄の値を取得、その後の `.trim()` で主要な文字列前後の空白を削除、 `.replace(...)` で文字間の複数の空白を 1つの空白に置き換えている。  
 `document.getElementById('tags-list')` で `datalit#tags-list` のオブジェクトを取得し変数 list に代入、`list.querySelector('[value="' + tags_val + '"]\')` で value に入力された値と一致する `<option>` 要素を取得している。  
 そして変数 url に、拡張属性 data-url に入れたタグページのパス末尾を用いて作った URL を入れる。末尾の "/" は、無いと `/tags/<tag name>` のリダイレクトで `/tags/<tag name>/` を読み込む形になってしまうため入れている。  
-その後、一応 fetch API で実際に URL先が存在するかをチェックしてから `location.href` に URL を入れてページ偏移を実行している。  
+その後、一応 fetch API で実際に URL先が存在するかをチェックしてから `location.href` に URL を入れてページ偏移を実行しているが、必要ないかもしれない。存在しないページはそもそも生成されない。  
 下の `clear_value` は入力欄を空にするだけの関数。入力欄をクリックすれば選択肢が表示されるため、選択、ページ偏移、リセットもクリックだけで行える方が便利だと考えた。  
 まあ主に使うのは自分だし、実際便利。  
 
