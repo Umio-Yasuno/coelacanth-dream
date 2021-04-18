@@ -1,5 +1,5 @@
 ---
-title: "Green Sardine/Cezanne APU の PSP デバイスID が追加される"
+title: "Green Sardine/Cezanne APU の PSP DeviceID が追加される"
 date: 2021-04-17T00:19:54+09:00
 draft: false
 tags: [ "Green_Sardine", "Cezanne", "VanGogh" ]
