@@ -9,7 +9,7 @@ noindex: false
 # summary: ""
 ---
 
-先日 Geekbench 5 に出現した謎の CPU **AMD 4700S** だが、搭載したシステムの製品ページからメインメモリに GDDR6 16GB を採用していることが判明し、コンソールゲーム機向け {{< comple >}} Xbox Series X|S, PS5 {{< /comple >}} の SoC/APU を転用したものであることがほぼ確定した。  
+先日 Geekbench 5 に出現した謎の CPU **AMD 4700S** だが、搭載したシステムの製品ページからメインメモリに GDDR6 16GB を採用していることが判明し、コンソールゲーム機向け {{< comple >}} Xbox Series X|S, PS5 {{< /comple >}} の SoC/APU を転用したものである可能性が出てきた。  
 {{< link >}} [AMD 4700S CPU 出現 | Coelacanth's Dream](/posts/2021/04/22/amd-4700s/) {{< /link >}}
 
 ## 無効化されている GPU部 {#disabled-gpu}
