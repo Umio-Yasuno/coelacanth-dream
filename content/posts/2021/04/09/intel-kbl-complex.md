@@ -95,6 +95,22 @@ Stepping は基本大きい程進んだものとなっており、以前の Step
 [^i3-10110u]: [InstLatx64/index.htm at 17ee800ec643319215d0b9cb0c59c578ca805e7d · InstLatx64/InstLatx64](https://github.com/InstLatx64/InstLatx64/blob/17ee800ec643319215d0b9cb0c59c578ca805e7d/index.htm#L548)
 [^ark-10110u]: [Intel® Core™ i3-10110U Processor (4M Cache, up to 4.10 GHz) Product Specifications](https://ark.intel.com/content/www/us/en/ark/products/196451/intel-core-i3-10110u-processor-4m-cache-up-to-4-10-ghz.html)
 
+### Skylake server {#skx}
+
+*Skylake Server* とその派生 CPU に関するコメントを追加するパッチも投稿されている。  
+
+ * [[PATCH] x86/cpu: Comment Skylake server stepping too - Andrew Cooper](https://lore.kernel.org/lkml/20210409121027.16437-1-andrew.cooper3@citrix.com/)
+
+ > 		 #define INTEL_FAM6_SKYLAKE		0x5E	/* Sky Lake             */
+ > 		 #define INTEL_FAM6_SKYLAKE_X		0x55	/* Sky Lake             */
+ > 		+/*                 CASCADELAKE_X	0x55	   Sky Lake -- s: 7     */
+ > 		+/*                 COOPERLAKE_X		0x55	   Sky Lake -- s: 11    */
+ >
+ > {{< quote >}} [[PATCH] x86/cpu: Comment Skylake server stepping too - Andrew Cooper](https://lore.kernel.org/lkml/20210409121027.16437-1-andrew.cooper3@citrix.com/) {{< /quote >}}
+
+*Cascade Lake* は *Skylake server* に推論処理に向く `AVX512_VNNI` 命令の対応を追加し、*Cooper Lake* はそこにさらに `AVX512_BF16` 命令を追加した CPU となる。  
+それと **3rd Gen Xeon Scalable Processor** には *Cooper Lake* と *Ice Lake server* の 2種類が該当するが、前者は 4-8ソケットシステム向け、後者が 1-2ソケット向けと棲み分けがなされている。  
+
 ## Palm Cove {#cnl}
 
 パッチでは *Cannon Lake* についても触れており、CPUマイクロアーキテクチャ名 *Palm Cove* をコメントに記している。  
