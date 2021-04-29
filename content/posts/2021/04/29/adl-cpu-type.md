@@ -11,6 +11,9 @@ noindex: false
 
 Intel Hybrid Technology を採用し、2種類のコア *Golden Cove (big/Core)* と *Gracemont (small/Atom)* を搭載する *Alder Lake* だが、ユーザーが選択可能なオプションとして UEFI/BIOS から一方の CPUタイプを丸々無効化する方法が提供されることがパッチ内のコメントにて明かされた。  
 
+ * [[PATCH V6 20/25] perf/x86/intel: Add Alder Lake Hybrid support - kan.liang](https://lore.kernel.org/lkml/1618237865-33448-21-git-send-email-kan.liang@linux.intel.com/)
+ * [LKML: kan.liang@linux ...: [PATCH 20/49] perf/x86/intel: Add Alder Lake Hybrid support](https://lkml.org/lkml/2021/2/8/1190)
+
  > 		Users may disable all CPUs of the same CPU type on the command line or
  > 		in the BIOS. For this case, perf still register a PMU for the CPU type
  > 		but the CPU mask is 0.
