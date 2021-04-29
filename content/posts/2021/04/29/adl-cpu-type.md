@@ -19,6 +19,7 @@ Intel Hybrid Technology を採用し、2種類のコア *Golden Cove (big/Core)*
 
 該当のパッチは Linux Kernel の性能解析ツール (`perf`) に、 *Alder Lake* が持つ 2種類の PMU (Performance Monitoring Unit) のサポートを追加するもので、同様のパッチは以前より投稿されており、何度か更新されている。  
 そして Linux Kernel のメインラインにマージされたバージョン (v6) のパッチに追加されたコメントの一部が上記引用部である。  
+コマンドラインからも無効化できることが示唆されているが、カーネルパラメーターのことと思われ、Linux ではそちらの方が UEFI/BIOS より変更が容易かもしれない。  
 
 Intel Hybrid Technology では主に AVX-512命令等、対応の有無が異なる 2種類の CPU を搭載する場合、それらの命令を無効化することにより、命令レベルでは対称的な CPU とする。  
 まだ Intel、Intel に所属するソフトウェアエンジニアより明言された訳ではないが、small/Atom 側の CPU を無効化した場合、AVX-512命令の対応が有効化すると考えられる。  
