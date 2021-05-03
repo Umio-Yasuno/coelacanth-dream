@@ -21,6 +21,14 @@ noindex: false
  * [[PATCH] drm/amdgpu: add new MC firmware for Polaris12 32bit ASIC](https://lists.freedesktop.org/archives/amd-gfx/2021-April/062711.html)
  * [amdgpu: add new polaris 12 MC firmware](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/commit/?id=3f23f5125b1fef5ed2103c0236a5657966e30e4d)
 
+| GFX8 | Polaris10 | Polaris11 | Polaris12 |
+| :--  | :--: | :--: | :--: |
+| ShaderEngine | 4 SE | 2 SE | 2 SE |
+| CU per SE / Total CU | 9 / 36 CU | 8 / 16 CU | 5 / 10 CU |
+| Toatl RB | 8 RB<br>(32 ROP) | 4 RB<br>(16 ROP) | 4 RB<br>(16 ROP) |
+| Memory Bus width | 256-bit | 128-bit | 128-bit |
+| L2cache size | 2048 KB | 1024 KB | 512 KB |
+
 メモリバス幅が 32-bit の場合、通常とは違う特殊なメモリコントローラーに関するファームウェアが必要としており、その理由については GPU のメモリコントローラーが基本 64-bit単位であることが考えられる。  
 
 dGPU であり、メモリコントローラーも 64-bit単位でありながら 32-bit構成を採ることはまさに特異だと言える。他の *Polaris12* をベースにする GPU製品を見ても、メモリバス幅は小さくて 64-bit となっている。  
