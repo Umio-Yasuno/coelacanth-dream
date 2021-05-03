@@ -37,15 +37,21 @@ NVIDIA GPU では 2006/09 の **GeForece Go 7200** が最後の 32-bit構成 dGP
 
 [^tpu-32bit-gpu]: <https://www.techpowerup.com/gpu-specs/?buswidth=32%20bit&sort=name>
 
-メモリバス幅が 32-bit だと、GDDR5 7Gbps メモリチップを使用しても、ピークメモリ帯域は 24GB/s。  
-単純に比較すれば、メモリインターフェイスに DDR4 128-bit を採る APU では、2133MT/s のメモリモジュールでもピークメモリ帯域は 32GB/s となるから、dGPU で GDDR5 32-bit というのは明らかに小さく、性能を追い求める向きは無いと見られる。恐らくは省電力で映像出力さえこなしてくれればいいような組み込み向けや、グラフィクス機能を持たない CPU と組み合わせることを想定した製品だろう。PCIeカード型ではなく、オンボード実装が主と思われる。  
+メモリバス幅が 32-bit だと、GDDR5 7Gbps メモリチップを使用しても、ピークメモリ帯域は 28GB/s。  
+単純に比較すれば、メモリインターフェイスに DDR4 128-bit を採る APU だと、2133MT/s のメモリモジュールでもピークメモリ帯域は 32GB/s となるから、dGPU で GDDR5 32-bit というのは明らかに小さく、性能を追い求める向きは無いと見られる。恐らくは省電力で映像出力さえこなしてくれればいいような組み込み向けや、グラフィクス機能を持たない CPU と組み合わせることを想定した製品だろう。PCIeカード型ではなく、オンボード実装が主と思われる。  
+サーバーやワークステーション向けのマザーボードに実装されることも考えられ、自分としてはプロトタイプでは **Radeon E8860 (10 CU, GDDR5 128-bit)** を搭載していた AM4 A320チップセットマザーボード、**Tyan Tomcat EX S8015** が思い出される。[^tyan-s8015] その後のリビジョンでは **Radeon E8860** が外されてしまったが。[^tyan-s8015-update]  
+AMD GCN GPU ということで Linux Kernel の AMD GPUドライバーを使うことができ、{{< comple >}} 有効化されていればだが {{< /comple >}} マルチメディアエンジンも利用可能ならば、安定したサポートを受けられ、映像出力以外にも活用方法がある優秀な小型 GPU となるだろう。  
 
-そういう訳でメモリバス幅 32-bit の *Polaris12* GPU が存在しても、一般に出回る可能性は低いと思われるが、32-bit幅の AMD GPU が 14年振りに登場し、さらには 14nmプロセスで製造される *Polaris12* がそのベースとなる。  
-マイニング需要、半導体製品の供給不足が影響していることもあるが、Polaris世代の GPU は長く、かつ幅広く活躍する働き者だと言えるだろう。  
+[^tyan-s8015]: [AMD Ryzen Server Motherboard Tyan Tomcat EX S8015 Spied](https://www.servethehome.com/amd-ryzen-server-motherboard-tyan-tomcat-ex-s8015-spied/)
+[^tyan-s8015-update]: [Tyan Tomcat SX S8020 AMD Ryzen Threadripper Server Motherboard](https://www.servethehome.com/tyan-tomcat-sx-s8020-amd-ryzen-threadripper-server-motherboard/)
+
+そういう訳でメモリバス幅 32-bit の *Polaris12* GPU が存在しても、一般に出回る可能性は低いと思われるが、32-bit幅の AMD GPU が 14年振りに登場し、驚くことに 14nmプロセスで製造される *Polaris12* がそのベースとなる。  
+マイニング需要、半導体製品の供給不足が影響していることもあるが、やはり Polaris世代の GPU は長く、かつ幅広く活躍する働き者だと言えるだろう。  
 {{< link >}} [働き者のPolaris | Coelacanth's Dream](/posts/2020/03/11/polaris-hard-worker/) {{< /link >}}
 
 
 {{< ref >}}
  * [pal/ndDevice.cpp at dev · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/dev/src/core/os/nullDevice/ndDevice.cpp)
  * [The Polaris Architecture | - polaris-whitepaper.pdf](https://www.amd.com/system/files/documents/polaris-whitepaper.pdf)
+ * <https://www.amd.com/system/files/documents/high-performance-gpu-product-brief.pdf>
 {{< /ref >}}
