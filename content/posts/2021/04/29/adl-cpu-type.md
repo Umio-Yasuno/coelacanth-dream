@@ -20,7 +20,7 @@ Intel Hybrid Technology を採用し、2種類のコア *Golden Cove (big/Core)*
  >
  > {{< quote >}} [[PATCH V6 20/25] perf/x86/intel: Add Alder Lake Hybrid support - kan.liang](https://lore.kernel.org/lkml/1618237865-33448-21-git-send-email-kan.liang@linux.intel.com/) {{< /quote >}}
 
-該当のパッチは Linux Kernel の性能解析ツール (`perf`) に、 *Alder Lake* が持つ 2種類の PMU (Performance Monitoring Unit) のサポートを追加するもので、同様のパッチは以前より投稿されており、何度か更新されている。  
+該当のパッチは Linux Kernel の性能解析ツール (`perf`) に、 *Alder Lake* が持つ 2種類の PMU (Performance Monitoring Unit) のサポートを追加するもので、Intel の Linux Kernel開発者である [Kan Liang](https://ca.linkedin.com/in/kan-liang-07601032) 氏より投稿された。同様のパッチは以前より投稿されており、何度か更新されている。  
 そして Linux Kernel のメインラインにマージされたバージョン (v6) のパッチに追加されたコメントの一部が上記引用部である。  
 コマンドラインからも無効化できることが示唆されているが、カーネルパラメーターのことと思われ、Linux ではそちらの方が UEFI/BIOS より変更が容易かもしれない。  
 
