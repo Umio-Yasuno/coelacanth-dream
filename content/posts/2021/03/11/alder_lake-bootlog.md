@@ -87,7 +87,7 @@ CPU の `em_pd (energy model performance domain)` は、CPU[0-7] と CPU[8-15] �
  > {{< quote >}} [KWD not detecting on ADL · Issue #2782 · thesofproject/linux](https://github.com/thesofproject/linux/issues/2782) {{< /quote >}}
 
 ハードウェア側では、*Alder Lake* からサポートしている `HFI/EFHI (Enhanced/ Hardware Feedback Interface)` が機能している。  
-`HFI/EHFI` は OS のソフトウェアスケジューラーを手助けする機能と言え、メモリに配置されるテーブルとそのテーブルのインデックスから、あるソフトウェアスレッドを性能重視の CPU (Core [Big]) と電力効率重視の CPU (Atom [Small]) のどちらに割り当てるかを OS にアドバイスする。  
+`HFI/EHFI` は OS のソフトウェアスケジューラーを手助けする機能と言え、メモリに配置されるテーブルとそのテーブルのインデックスから、あるソフトウェアスレッドを性能重視の CPU (Core [Big]) と電力効率重視の CPU (Atom [Small]) のどちらに割り当てるかを OS にヒントを提供、アドバイスをする。  
 OSスケジューラーはそれを元に、性能比あるいは電力効率比を計算し、スレッドを割り当てる。OS として性能を重視するか、電力効率を重視するかの設定も影響する。  
 また、テーブルは CPU の消費電力等、状況に応じて動的に更新される。[^ehfi]  
 

@@ -2,7 +2,7 @@
 title: "Linux Kernel に AMD Polaris GPU の電力管理を改良、修正するパッチが投稿される"
 date: 2020-10-17T08:38:11+09:00
 draft: false
-tags: [ "Polaris10", "Linux_Kernel" ]
+tags: [ "Polaris10", "Linux_Kernel", "GFX8" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
