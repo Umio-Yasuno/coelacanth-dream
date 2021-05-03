@@ -39,4 +39,5 @@ NVIDIA GPU では 2006/09 の **GeForece Go 7200** が最後の 32-bit構成 dGP
 
 {{< ref >}}
  * [pal/ndDevice.cpp at dev · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/dev/src/core/os/nullDevice/ndDevice.cpp)
+ * [The Polaris Architecture | - polaris-whitepaper.pdf](https://www.amd.com/system/files/documents/polaris-whitepaper.pdf)
 {{< /ref >}}
