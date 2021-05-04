@@ -21,6 +21,10 @@ noindex: false
  * [[PATCH] drm/amdgpu: add new MC firmware for Polaris12 32bit ASIC](https://lists.freedesktop.org/archives/amd-gfx/2021-April/062711.html)
  * [amdgpu: add new polaris 12 MC firmware](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/commit/?id=3f23f5125b1fef5ed2103c0236a5657966e30e4d)
 
+ > 		New firmware for polaris12 boards with a 32bit MC config.
+ >
+ >  {{< quote >}}[amdgpu: add new polaris 12 MC firmware](https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/commit/?id=3f23f5125b1fef5ed2103c0236a5657966e30e4d) {{< /quote >}}
+
 | GFX8 | Polaris10 | Polaris11 | Polaris12 |
 | :--  | :--: | :--: | :--: |
 | ShaderEngine | 4 SE | 2 SE | 2 SE |

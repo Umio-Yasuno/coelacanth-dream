@@ -418,8 +418,11 @@ DG02SRTBP4MFA
 | 7408 | | | |
 | 740C | | | |
 | 740F | | | |
+| 7410 | | | (Aldebaran VF)[^aldebaran-vf] |
 
 [Page Top](#page_index)
+
+[^aldebaran-vf]: [[PATCH 1/1] drm/amdgpu: Add a new device ID for Aldebaran](https://lists.freedesktop.org/archives/amd-gfx/2021-April/062817.html)
 
 ### FAMILY_NV {#family_nv}
 <!--
