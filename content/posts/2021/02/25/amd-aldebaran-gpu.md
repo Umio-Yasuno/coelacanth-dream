@@ -154,11 +154,11 @@ GDS を削除した理由としてはアトミック操作/使用のためとし
  * [[PATCH 042/159] drm/amdkfd: expose host gpu link via sysfs (v2)](https://lists.freedesktop.org/archives/amd-gfx/2021-February/059728.html)
  * [[PATCH 048/159] drm/amdgpu: new cache coherence change for Aldebaran](https://lists.freedesktop.org/archives/amd-gfx/2021-February/059733.html)
 
-{{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_10.webp" title="AMD 3rd Gen Infinity Architecture Enables Accelerated Computing" caption="画像元: <cite>[FINANCIAL ANALYST DAY 2020 - Mark Papermaster: Future of High Performance](https://ir.amd.com/static-files/ccef22f0-f641-4fc5-861f-cb3d7d125a68)" >}}
+{{< figure src="/image/2020/03/06/amd-financial-analyst-day-2020_10.webp" title="AMD 3rd Gen Infinity Architecture Enables Accelerated Computing" caption="画像元: [FINANCIAL ANALYST DAY 2020 - Mark Papermaster: Future of High Performance](https://ir.amd.com/static-files/ccef22f0-f641-4fc5-861f-cb3d7d125a68)" >}}
 
 ## Aldebaran は複数ダイ構成 (MCM) か {#multi-die}
 
-先日、HPE の資料に、製品名 **AMD Instinct MI200 OAM x1 MCM Special FIO Accelerator for HPE Cray EX** があったことが話題となり[^mcm]、**MI200** は MCM 構成ではないかとされたが、それを裏付けるようなパッチとコメントがあった。  
+先日、HPE の資料に、製品名 **AMD Instinct MI200 OAM x1 MCM Special FIO Accelerator for HPE Cray EX** があったことが話題となり、**MI200** は MCM 構成ではないかとされたが、それを裏付けるようなパッチとコメントがあった。  
 {{< link >}} [Intel OneAPI - a50002555enw](https://assets.ext.hpe.com/is/content/hpedam/a50002555enw) {{< /link >}}
 
 *Aldebaran* はに複数の die ID が割り振られ、GPU と CPU (ホスト) とのリンクタイプを得るのに使われ、  
