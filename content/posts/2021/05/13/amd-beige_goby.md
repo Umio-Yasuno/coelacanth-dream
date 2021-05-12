@@ -2,7 +2,7 @@
 title: "新たな RDNA 2 GPU、\"Beige Goby\" をサポートするパッチが投稿される"
 date: 2021-05-13T04:02:05+09:00
 draft: false
-tags: [ "Beige_Gody", "RDNA_2" ]
+tags: [ "Beige_Goby", "RDNA_2" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
@@ -143,6 +143,22 @@ dGPU としてはかなり割り切ったものになっているという印象
  > 		 		break;
  >
  > {{< quote >}} [[PATCH 13/49] drm/amd/amdgpu: add sdma ip block for beige_goby](https://lists.freedesktop.org/archives/amd-gfx/2021-May/063486.html) {{< /quote >}}
+
+*Beige Goby* は RDNA 2 dGPU の中では最も規模の小さい GPU となり、メモリバス幅は 64-bit、マルチメディア機能も一部カットされている。また、最大画面出力数は 2画面と dGPU としては異例の少なさと言える。  
+そうした *Beige Goby* のターゲット帯に考えられるのはモバイル向けだろう。モバイル向けであれば画面出力数の少なさはほとんど問題にならない。64-bit というメモリバス幅も GPU部のフットプリントを減らすのに貢献してくれる。  
+また SMU (System Management Unit) に関連したコードに、**Smart Shift** のフラグが追加されており、タイミングとしては *Beige Goby* で活用することが期待される。  
+**Smart Shift** はノートPC向けの機能であり、APU や dGPU を合わせた全体での消費電力を設定し、ワークロードに合わせて電力の割り振りを変えることで、限られた電力内で性能を最大限にするというもの。  
+
+ > 		-#define FEATURE_SPARE_50_BIT            50
+ > 		-#define FEATURE_SPARE_51_BIT            51
+ > 		+#define FEATURE_GFX_PER_PART_VMIN_BIT   50
+ > 		+#define FEATURE_SMART_SHIFT_BIT         51
+ >
+ > {{< quote >}} [[PATCH 27/49] drm/amd/pm: update smu11 driver interface header for beige_goby](https://lists.freedesktop.org/archives/amd-gfx/2021-May/063501.html) {{< /quote >}}
+
+モバイル向け Radeon Pro には、*Polaris12* をベースにした CU 8基、メモリバス幅 64-bit、TBP 35W という仕様の **Radeon Pro WX2100 (Mobile)** が存在するが[^wx2100]、こうした低消費電力の GPU製品を *Beige Goby* ベースに置き換えていくのかもしれない。  
+
+[^wx2100]: [Radeon™ Pro WX 2100 Graphics | Mobile Graphics | AMD](https://www.amd.com/en/products/professional-graphics/radeon-pro-wx-2100-mobile)
 
 ## コードネーム: Beige Goby {#codename}
 
