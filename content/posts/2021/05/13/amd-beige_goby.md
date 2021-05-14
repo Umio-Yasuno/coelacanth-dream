@@ -121,6 +121,7 @@ dGPU としてはかなり割り切ったものになっているという印象
  > 		+		.num_mpc_3dlut = 1,
  > 		+		.num_dsc = 2,
  > 		+};
+ > {{< quote >}} [[PATCH 42/49] drm/amd/display: Initial DC support for Beige Goby](https://lists.freedesktop.org/archives/amd-gfx/2021-May/063522.html) {{< /quote >}}
 
 ## エンコード機能を持たない VCN3 {#vcn3}
 割り切っているのはメモリ周りやディスプレイエンジン/コントローラー数だけでなく、他にも及ぶ。  
