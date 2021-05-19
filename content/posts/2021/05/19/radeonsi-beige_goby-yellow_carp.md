@@ -1,5 +1,5 @@
 ---
-title: "RadeonSI/RADV に Beige Goby GPU と Yellow Carp APU をサポートする最初のパッチが投稿される　―― Yellow Carp は VanGogh に続く RDNA 2 APU に"
+title: "Yellow Carp は VanGogh に続く RDNA 2 APU に"
 date: 2021-05-19T23:13:13+09:00
 draft: false
 tags: [ "Beige_Goby", "Yellow_Carp", "RDNA_2" ]
