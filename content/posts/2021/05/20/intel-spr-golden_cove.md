@@ -17,7 +17,7 @@ noindex: false
 *Alder Lake* は 2020/08/13 に開催された **Intel Architecture Day 2020** で早くに *Golden Cove (Core/big)* 、 *Gracemont (Atom/small)* という共に次世代のマイクロアーキテクチャを採用したハイブリッド構成になることが発表されていた。  
 {{< link >}} [Intel Architecture Day 2020 個人的まとめ　―― XeHP は 1-Tile 512EU、XeLPアーキテクチャ詳細 | Coelacanth's Dream](/posts/2020/08/14/intel-architecture-day-2020/#adl) {{< /link >}}
 
-用途に 5G基地局が想定されている `HFNI/AVX512_FP16` 命令を *Sapphire Rapids* がサポートすることと、*Golden Cove* の特徴に Network/5G Perf があったことを合わせれば、公式的に広く公開されている情報を元にある程度の根拠を持って、 *Sapphire Rapids* は *Willow Cove* ではなく *Golden Cove* だと推測することもできたが、やはり今まで Intel ははっきりとそう明言してくれることは無かった。  
+用途に 5G基地局が想定されている `HFNI/AVX512_FP16` 命令を *Sapphire Rapids* がサポートすることと、*Golden Cove* の特徴に Network/5G Perf があったことを合わせれば、公式的に広く公開されている情報を元にある程度の根拠を持って、 *Sapphire Rapids* は *Willow Cove* ではなく *Golden Cove* だと推測することもできた。他にも *Alder Lake* と *Sapphire Rapids* は `SERIALIZE` 、`AVX_VNNI (128/256-bit)` 命令をサポートしている点で共通している。だが、やはり今まで Intel ははっきりとそう明言してくれることは無かった。  
 {{< link >}} [Intel Sapphire Rapids は AVX512_FP16 をサポート | Coelacanth's Dream](/posts/2021/01/11/intel-spr-avx512_fp16/) {{< /link >}}
 
 さらには Intel CPU の識別に使われる `Model` 情報をまとめた、Linux Kernel に含まれる [intel-family.h](https://github.com/torvalds/linux/blob/master/arch/x86/include/asm/intel-family.h) ファイルに CPUマイクロアーキテクチャとの関係性を補完するコメントを追加するパッチが投稿された時には、*Sapphire Rapids* が *Willow Cove アーキテクチャ* ということにされており、余計曖昧となっていた。  
