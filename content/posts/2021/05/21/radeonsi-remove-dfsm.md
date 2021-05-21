@@ -64,7 +64,7 @@ DFSM に使用メモリ帯域を削減する効果があり、それはメモリ
 
 *DSBR* を部分的に適用する *DPBB (Deferred Primitive Batch Binning)* は対照的に優秀とも言え、性能向上はおとなしいが低下されることはなく、*Vega/GFX9* 世代の以降の GPU では APU、dGPU 問わずデフォルトで有効化され、*Navi2x/RDNA 2/GFX10.3* 世代でもハードウェアに機能が搭載されている。  
 ただ、ソースコードを追うと RenderBackend が 4基 (ROP 16基相当、RB+ は 32基相当[^rbplus]) 搭載されている GPU のような場合では (他の条件もあるが) 非効率なためか無効化されるようだ。  
-GPU の規模が小さく、メモリ帯域も狭い APU 向けという所は *DPBB* も同じだろ言える。  
+GPU の規模が小さく、メモリ帯域も狭い APU 向けという所は *DPBB* も同じだと言える。  
 
  > 		   /* Disable DPBB when it's believed to be inefficient. */
  > 		   if (sscreen->info.max_render_backends > 4 && ps_can_kill && db_can_reject_z_trivially &&
