@@ -73,12 +73,12 @@ ACRN Hypervisor は Intel が推進するオープンソースプロジェクト
 現世代、*Golden Cove* と *Gracemont* からすれば前世代となる *Willow Cove* 、*Tremont* と一緒にキャッシュ構成をまとめたのが以下の表となる。  
 
 
-| uArch     | Golden Cove   | Willow Cove   | Gracemont | Tremont   |
-| :--       | :--:          | :--:          | :--:      | :--:      |
-| L1 Data   | 48 KiB<br>/12-way | 48 KiB<br>/12-way | 32 KiB<br>/8-way | 32 KiB<br>/8-way 
-| L1 Inst   | 32 KiB<br>/8-way  | 32 KiB<br>/12-way | 64 KiB<br>/8-way | 32 KiB<br>/8-way
-| L2        | 1.25 MiB<br>/10-way | 1.25 MiB<br>/20-way | 2 MiB<br>/16-way<br>(per Module) | 1.5-4.5 MiB<br>/12-way<br>(per Module) |
-| L3        | 12 MiB<br>/12-way<br>(3 MiB per Core) | 12 MiB<br>/12-way<br>(3 MiB per Core) |12 MiB<br>/12-way<br>(3 MiB per Module) | 4 MiB<br>/16-way
+| uArch     | Golden Cove   | Willow Cove   | Sunny Cove | Gracemont | Tremont   |
+| :--       | :--:          | :--:          | :--:      | :--:      | :--: |
+| L1 Data   | 48 KiB<br>/12-way | 48 KiB<br>/12-way | 48 KiB<br>/12-way | 32 KiB<br>/8-way | 32 KiB<br>/8-way 
+| L1 Inst   | 32 KiB<br>/8-way  | 32 KiB<br>/12-way | 32 KiB<br>/8-way | >64 KiB<br>/8-way | 32 KiB<br>/8-way
+| L2        | 1.25 MiB<br>/10-way | 1.25 MiB<br>/20-way | 512 KiB<br>/8-way | 2 MiB<br>/16-way<br>(per Module) | 1.5-4.5 MiB<br>/12-way<br>(per Cluster/Tile) |
+| L3        | 12 MiB<br>/12-way<br>(3 MiB per Core) | 12 MiB<br>/12-way<br>(3 MiB per Core) | 2 MiB<br>/12-way  |12 MiB<br>/12-way<br>(3 MiB per Cluster/Tile) | 4 MiB<br>/16-way
 
 注目されるのは *Golden Cove* のキャッシュ構成だが、L1D/I と L2 のキャッシュサイズは *Willow Cove* と同じだが、L1I と L2 の way数を減らした興味深いものになっている。特に L2キャッシュは 半分の 10-way に減らされている。  
 [ACRN Hypervisor](https://github.com/projectacrn/acrn-hypervisor) には *Tiger Lake* の構成ファイルも存在するためそちらも確認したが、やはり *Tiger Lake/Willow Cove* は L2 1.25 MiB/20-way の構成だった。[^tgl-rvp]  
