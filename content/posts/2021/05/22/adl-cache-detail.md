@@ -76,7 +76,7 @@ ACRN Hypervisor は Intel が推進するオープンソースプロジェクト
 | uArch     | Golden Cove   | Willow Cove   | Sunny Cove | Gracemont | Tremont   |
 | :--       | :--:          | :--:          | :--:      | :--:      | :--: |
 | L1 Data   | 48 KiB<br>/12-way | 48 KiB<br>/12-way | 48 KiB<br>/12-way | 32 KiB<br>/8-way | 32 KiB<br>/8-way 
-| L1 Inst   | 32 KiB<br>/8-way  | 32 KiB<br>/12-way | 32 KiB<br>/8-way | >64 KiB<br>/8-way | 32 KiB<br>/8-way
+| L1 Inst   | 32 KiB<br>/8-way  | 32 KiB<br>/8-way | 32 KiB<br>/8-way | >64 KiB<br>/8-way | 32 KiB<br>/8-way
 | L2        | 1.25 MiB<br>/10-way | 1.25 MiB<br>/20-way | 512 KiB<br>/8-way | 2 MiB<br>/16-way<br>(per Module) | 1.5-4.5 MiB<br>/12-way<br>(per Cluster/Tile) |
 | L3        | 12 MiB<br>/12-way<br>(3 MiB per Core) | 12 MiB<br>/12-way<br>(3 MiB per Core) | 2 MiB<br>/12-way  |12 MiB<br>/12-way<br>(3 MiB per Cluster/Tile) | 4 MiB<br>/16-way
 
@@ -108,7 +108,7 @@ CPUキャッシュにおいて、メモリアドレスに対応するキャッ�
 むしろ、*Willow Cove* は *Golden Cove* や *Ice Lake* に採用されている *Sunny Cove (L2 512 KiB/8-way)* 等のマイクロアーキテクチャとは違い、サーバー向けプロセッサには採用されないことが決まっていたがためにあれだけ L2キャッシュの way数を増やすことができたのかもしれない。  
 
 また *Gracemont* では L1I キャッシュサイズが *Tremont* の 32 KiB/8-way から大幅に増量され、64 KiB/8-way となった。Core/Big側の *Golden Cove* も 32 KiB/8-way であり、*Gracemont* の L1I キャッシュは異様とも言える大きさだ。  
-これについては、*Tremont* で大幅に拡張されたデコーダーをより活用し、性能を向上させる狙いがあるのかもしれない。  
+これについては、*Tremont* で大幅に拡張されたデコーダーをより活用し、IPC と電力効率を向上させる狙いがあるのかもしれない。  
 
 *Gracemont* の L2キャッシュについては構成ファイルから得られる情報をそのまま記載したが、*Tremont* のように、プロセッサによって一定の範囲でサイズが選択可能となっている可能性もある。  
 *Tremont* では、マイクロサーバー向けの *Snow Ridge* が 4.5 MiB、他 *Lakefield* 、*Elkhart Lake* 、*Jasper Lake* が 1.5 MiB の構成を採用している。  
