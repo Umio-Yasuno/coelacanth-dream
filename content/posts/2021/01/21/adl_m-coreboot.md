@@ -75,7 +75,7 @@ Linux や Coreboot での *Lakefield* サポートがそう積極的でなかっ
 |     | Tiger Lake | Tiger Lake-H | Jasper Lake | Alder Lake-P | Alder Lake-M | Alder Lake-S |
 | :-- | :--:       | :--:         | :--:        | :--:         | :--:         | :--: |
 | GPU | Gen12 96EU | Gen12 32EU | Gen11 32EU | Gen12 96EU | Gen12 96EU? | Gen12 32EU |
-| CPU side PCIe | Gen4<br>4-Lane x2 | Gen4<br> 16-Lane + 4-Lane |  | Gen5 8-Lanea,<br>Gen4 4-Lane x2 | Gen5 8-Lane? or<br>Gen4 4-Lane? | Gen5 8-Lane x2,<br>Gen4 4-Lane x2 |
+| CPU side PCIe | Gen4<br>4-Lane x2 | Gen4<br> 16-Lane + 4-Lane |  | Gen5 8-Lane,<br>Gen4 4-Lane x2 | Gen5 8-Lane? or<br>Gen4 4-Lane? | Gen5 8-Lane x2,<br>Gen4 4-Lane x2 |
 | PCH | TGP_LP | TGP_H | JSP | ADP_P | ADP_M | ADP_S |
 | PCH PCIe Ports | 16 | ? | 8 | 12 | 10 | 28 |
 

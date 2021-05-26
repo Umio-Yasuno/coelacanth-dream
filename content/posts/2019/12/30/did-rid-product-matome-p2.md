@@ -288,6 +288,9 @@ DG02SRTBP4MFA
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 164C &darr; | | | |
+| | C2 | 5500U[^lcn-5500u] | |
+
+[^lcn-5500u]: <https://openbenchmarking.org/system/2105266-IB-5500USYNT82/1/lspci>
 
 <!--  Cezanne (gfx90c?) -->
 ### Cezanne ( gfx90c ) {#cezanne-gfx90c}

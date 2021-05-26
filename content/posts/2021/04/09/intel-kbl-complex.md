@@ -87,7 +87,7 @@ Stepping は基本大きい程進んだものとなっており、以前の Step
 
 さらには *Comet Lake-U* に *Whiskey Lake-U* が紛れ込んでいる。  
 *Comet Lake-U* の 1つに **Core i3-10110U** が存在するが、[InstLatx64](https://github.com/InstLatx64) 氏が収集、公開しているデータによれば `Family: 0x6, Model: 0x8E, Stepping: 0xC` となっており [^i3-10110u]、これは *Comet Lake-U* ではなく *Whiskey Lake-U* のものと一致する。  
-しかし ark.intel.com では *Comet Lake* としており [^ark-10110u]、iGPU の DeviceID (`0x9B41/0x9BCA/0x9BCC`) も *Comet Lake* とされている。[^cml-did]  
+また ark.intel.com では *Comet Lake* としており [^ark-10110u]、iGPU の DeviceID (`0x9B41/0x9BCA/0x9BCC`) も *Comet Lake* とされている。[^cml-did]  
 マーケティング、GPU的には *Comet Lake* とされるが、CPUID (`Family, Model, Stepping`) 的には *Whiskey Lake-U* という、曖昧で複雑な CPU だ。  
 *Coffee Lake(-S)* は脆弱性対策で、*Kaby Lake-U* と *Amber Lake-Y / Coffee Lake-U / Whiskey Lake-U* は Intel 10nmプロセスの遅延で複雑化した CPU 達とも言えるかもしれない。  
 

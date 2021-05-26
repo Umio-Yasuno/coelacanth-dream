@@ -80,6 +80,10 @@ ACRN Hypervisor は Intel が推進するオープンソースプロジェクト
 | L2        | 1.25 MiB<br>/10-way | 1.25 MiB<br>/20-way | 512 KiB<br>/8-way | 2 MiB<br>/16-way<br>(per Module) | 1.5-4.5 MiB<br>/12-way<br>(per Cluster/Tile) |
 | L3        | 12 MiB<br>/12-way<br>(3 MiB per Core) | 12 MiB<br>/12-way<br>(3 MiB per Core) | 2 MiB<br>/12-way  |12 MiB<br>/12-way<br>(3 MiB per Cluster/Tile) | 4 MiB<br>/16-way
 
+ * 表参考リンク
+    * Tremont - [Tremont: A Wider Front End and Caches - Intel's new Atom Microarchitecture: The Tremont Core in Lakefield](https://www.anandtech.com/show/15009/intels-new-atom-microarchitecture-the-tremont-core/2)
+    * Willow Cove/Sunny Cove - [Cache Architecture: The Effect of Increasing L2 and L3 - Intel’s Tiger Lake 11th Gen Core i7-1185G7 Review and Deep Dive: Baskin’ for the Exotic](https://www.anandtech.com/show/16084/intel-tiger-lake-review-deep-dive-core-11th-gen/4)
+
 注目されるのは *Golden Cove* のキャッシュ構成だが、L1D/I と L2 のキャッシュサイズは *Willow Cove* と同じだが、L1I と L2 の way数を減らした興味深いものになっている。特に L2キャッシュは 半分の 10-way に減らされている。  
 [ACRN Hypervisor](https://github.com/projectacrn/acrn-hypervisor) には *Tiger Lake* の構成ファイルも存在するためそちらも確認したが、やはり *Tiger Lake/Willow Cove* は L2 1.25 MiB/20-way の構成だった。[^tgl-rvp]  
 
@@ -114,7 +118,4 @@ CPUキャッシュにおいて、メモリアドレスに対応するキャッ�
 *Tremont* では、マイクロサーバー向けの *Snow Ridge* が 4.5 MiB、他 *Lakefield* 、*Elkhart Lake* 、*Jasper Lake* が 1.5 MiB の構成を採用している。  
 
 
-{{< ref >}}
- * [Tremont: A Wider Front End and Caches - Intel's new Atom Microarchitecture: The Tremont Core in Lakefield](https://www.anandtech.com/show/15009/intels-new-atom-microarchitecture-the-tremont-core/2)
- * [Cache Architecture: The Effect of Increasing L2 and L3 - Intel’s Tiger Lake 11th Gen Core i7-1185G7 Review and Deep Dive: Baskin’ for the Exotic](https://www.anandtech.com/show/16084/intel-tiger-lake-review-deep-dive-core-11th-gen/4)
-{{< /ref >}}
+
