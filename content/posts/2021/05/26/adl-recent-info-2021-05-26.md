@@ -22,7 +22,8 @@ noindex: false
 
  * [soc/intel/alderlake: Update CPU and IGD Device IDs (I2759a41a) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/54211/3/)
 
-Coreboot に *Alder Lake-P B0* の `Family/Model/Stepping` による判定に使われる CPUID が追加された。だが、 *A0 ステッピング* (`0x90670`) から値を 1 追加した `0x90671` ではなく、`0x90672` が *B0 ステッピング* に割り当てられている。  
+Coreboot に *Alder Lake-P B0* の `Family/Model/Stepping` による判定に使われる CPUID を追加するパッチが Maulik V Vaghela 氏により投稿された。  
+だが、 *A0 ステッピング* (`0x90670`) から値を 1 追加した `0x90671` ではなく、`0x90672` が *B0 ステッピング* に割り当てられている。  
 CPUID の末尾 1桁、正確に言えば 4-bit 分の領域はその CPU のステッピング/リビジョンを表現するのに使われている。  
 
  > 		#define CPUID_ALDERLAKE_S_A0	0x90670
@@ -48,6 +49,8 @@ CPUID の末尾 1桁、正確に言えば 4-bit 分の領域はその CPU のス
  * [mb/adlrvp: Override power limits with SKU specific values (I80ac9512) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/54926/1/)
  * [soc/intel/adl: Add SKU specific power limits support (Ic1676e2b) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/54676/4)
  * [[WIP] mb/intel/adlrvp: Enable DPTF functionality for ADL-M RVP (If7763ee2) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/54491/4)
+
+パッチは [Sumeet R Pawnikar](https://in.linkedin.com/in/sumeet-pawnikar) 氏、Anil Kumar K 氏によって作成、投稿されている。  
 
 ### Alder Lake-P PL1/PL2 {#adl_p-pl}
 
