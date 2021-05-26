@@ -107,15 +107,12 @@ ACRN Hypervisor は Intel が推進するオープンソースプロジェクト
  >
  > {{< quote >}} [acrn-hypervisor/adl-rvp.xml at 918ec7aaf316b49aba5f58ffed6513f84cc1f96f · projectacrn/acrn-hypervisor](https://github.com/projectacrn/acrn-hypervisor/blob/918ec7aaf316b49aba5f58ffed6513f84cc1f96f/misc/config_tools/data/adl-rvp/adl-rvp.xml) {{< /quote >}}
 
-CPUキャッシュにおいて、メモリアドレスに対応するキャッシュラインを複数設ける (n-way) ことは、キャッシュラインの競合 (スラッシング) が発生する確率を減らし、性能低下を防ぐ役割がある。way数を減らしたことは、逆にスラッシングが発生しやすくなるように思えるが、個人的な推測を書けば、 *Golden Cove* はサーバー向けプロセッサ *Sapphire Rapids* にも採用することがつい先日明らかにされており、way数を減らしたのはサーバー向けとしてより広いメモリを扱うことを意識した改良なのかもしれない。  
-{{< link >}} [Intel Sapphire Rapids は Golden Coveアーキテクチャ | Coelacanth's Dream](/posts/2021/05/20/intel-spr-golden_cove/) {{< /link >}}
-むしろ、*Willow Cove* は *Golden Cove* や *Ice Lake* に採用されている *Sunny Cove (L2 512 KiB/8-way)* 等のマイクロアーキテクチャとは違い、サーバー向けプロセッサには採用されないことが決まっていたがためにあれだけ L2キャッシュの way数を増やすことができたのかもしれない。  
+CPUキャッシュにおいて、メモリアドレスに対応するキャッシュラインを複数設ける (n-way) ことは、キャッシュラインの競合 (スラッシング) が発生する確率を減らし、性能低下を防ぐ役割がある。way数を減らしたことは、単純にスラッシングが発生しやすくなるようにも思えるが、キャッシュラインに設けられたタグの比較回路を小さくできるため、キャッシュ密度を高めることができる。  
 
 また *Gracemont* では L1I キャッシュサイズが *Tremont* の 32 KiB/8-way から大幅に増量され、64 KiB/8-way となった。Core/Big側の *Golden Cove* も 32 KiB/8-way であり、*Gracemont* の L1I キャッシュは異様とも言える大きさだ。  
 これについては、*Tremont* で大幅に拡張されたデコーダーをより活用し、IPC と電力効率を向上させる狙いがあるのかもしれない。  
 
 *Gracemont* の L2キャッシュについては構成ファイルから得られる情報をそのまま記載したが、*Tremont* のように、プロセッサによって一定の範囲でサイズが選択可能となっている可能性もある。  
-*Tremont* では、マイクロサーバー向けの *Snow Ridge* が 4.5 MiB、他 *Lakefield* 、*Elkhart Lake* 、*Jasper Lake* が 1.5 MiB の構成を採用している。  
-
-
+*Gracemont* では *Tremont* 同様に 4コアで L2キャッシュを共有する、タイルとも呼ばれるクラスタを構成する。  
+L2キャッシュのサイズは *Tremont* では、マイクロサーバー向けの *Snow Ridge* が 4.5 MiB、他 *Lakefield* 、*Elkhart Lake* 、*Jasper Lake* が 1.5 MiB の構成を採用している。  
 
