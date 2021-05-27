@@ -43,7 +43,7 @@ CPUID の末尾 1桁、正確に言えば 4-bit 分の領域はその CPU のス
 ## Alder Lake-P/M Power Limit {#adl-power}
 
 あくまでも **Alder Lake RVP (Reference Validation Platform)** と、*Alder Lake-P* を搭載する Chromebookボード **Brya** での例とされるが、Coreboot の *Alder Lake* に関連した部分にその PL1/PL2 の値が追加された。  
-例ではあるが、分離された別のパッチでは SKU ごとに異なる PCI ID を持つ、System Agent の部分で適用する Power Limit 設定を変えているため、実質 SKU のデフォルト設定だと言える。[^sa-pci-id]  
+例ではあるが、分離された別のパッチでは SKU ごとに異なる PCI ID を持つ、System Agent の部分で適用する Power Limit 設定を変えているため、実質 SKU のデフォルト設定だと言える。[^sa-pci-id]製品としては異なる設定も適用可能だろう。  
 
 [^sa-pci-id]: [soc/intel/adl: Add SKU specific power limits support (Ic1676e2b) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/54676/4)
 
