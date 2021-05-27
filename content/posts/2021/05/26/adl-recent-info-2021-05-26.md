@@ -157,6 +157,7 @@ PL1 からは *Tiger Lake UP4* の後継が *Alder Lake-M* になると考えら
 
 [^ascii]: [ASCII.jp：最後のAtomとなるChromebook向けプロセッサーのJasper Lake　インテル CPUロードマップ (3/3)](https://ascii.jp/elem/000/004/040/4040489/3/)
 
+ > ##### Tiger Lake UP4 PL1/PL2
  > 						## Power Limits Control
  > 						register "controls.power_limits" = "{
  > 							.pl1 = {
