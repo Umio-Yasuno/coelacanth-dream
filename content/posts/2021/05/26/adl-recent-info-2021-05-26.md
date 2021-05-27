@@ -137,6 +137,7 @@ CPUID の末尾 1桁、正確に言えば 4-bit 分の領域はその CPU のス
 *Alder Lake-M (2+8+2)* には PL1: 9W/PL2: 30W の値が設定されている。  
 小型なパッケージを採用する *Tiger Lake UP4* も同様に PL1: 9W だが、PL2 は 2-Core が 35W、4-Core は 40W となっており[^tgl_up4-pl]、*Alder Lake-M (2+8+2)* のそれは *Tiger Lake UP4* よりもわずかに低い値だ。  
 
+ > ##### Tiger Lake UP4 PL1/PL2
  > 			# Add PL1 and PL2 values
  > 			register "power_limits_config[POWER_LIMITS_U_2_CORE]" = "{
  > 				.tdp_pl1_override = 9,
@@ -157,7 +158,7 @@ PL1 からは *Tiger Lake UP4* の後継が *Alder Lake-M* になると考えら
 
 [^ascii]: [ASCII.jp：最後のAtomとなるChromebook向けプロセッサーのJasper Lake　インテル CPUロードマップ (3/3)](https://ascii.jp/elem/000/004/040/4040489/3/)
 
- > ##### Tiger Lake UP4 PL1/PL2
+ > ##### Alder Lake-M PL1/PL2 range (adlrvp)
  > 						## Power Limits Control
  > 						register "controls.power_limits" = "{
  > 							.pl1 = {
