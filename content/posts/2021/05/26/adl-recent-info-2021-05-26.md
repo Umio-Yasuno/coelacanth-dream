@@ -16,6 +16,7 @@ noindex: false
  * [Alder Lake-P/M Power Limit](#adl-power)
     * [Alder Lake-P PL1/PL2](#adl_p-pl)
     * [Alder Lake-M PL1/PL2](#adl_m-pl)
+ * [TGL/JSL/ADL](#table)
 {{< /pindex >}}
 
 ## Alder Lake-P/M は Stepping で区別されるか {#adl-step}
@@ -113,13 +114,6 @@ CPUID の末尾 1桁、正確に言えば 4-bit 分の領域はその CPU のス
 [^tgl-h]: [ASCII.jp：Core i9-11980HKやXeon W-11955Mなど、6コア/8コア版のTiger Lake-Hが正式発表 (1/3)](https://ascii.jp/elem/000/004/054/4054425/)
 
 
-|     | Tiger Lake | Tiger Lake-H | Jasper Lake | Alder Lake-P | Alder Lake-M | Alder Lake-S |
-| :-- | :--:       | :--:         | :--:        | :--:         | :--:         | :--: |
-| GPU | Gen12 96EU | Gen12 32EU | Gen11 32EU | Gen12 96EU | Gen12 96EU? | Gen12 32EU |
-| CPU side PCIe | Gen4<br>4-Lane x2 | Gen4<br> 16-Lane + 4-Lane |  | Gen5 8-Lane,<br>Gen4 4-Lane x2 | Gen5 8-Lane? or<br>Gen4 4-Lane? | Gen5 8-Lane x2,<br>Gen4 4-Lane x2 |
-| PCH | TGP_LP | TGP_H | JSP | ADP_P | ADP_M | ADP_S |
-| PCH PCIe Ports | 16 | ? | 8 | 12 | 10 | 28 |
-
 ### Alder Lake-M PL1/PL2 {#adl_m-pl}
 
 *Alder Lake-M* は 2+8+2 の構成の PL1/PL2 設定のみが追加されている。*Alder Lake-M* は *Alder Lake-P* と同じくモバイル向けだが、それよりも I/O の規模を縮小した SKU となる。  
@@ -188,6 +182,17 @@ PL1 からは *Tiger Lake UP4* の後継が *Alder Lake-M* になると考えら
 [^jsl-pl]: <https://github.com/coreboot/coreboot/blob/8e57299a0da5dc9928b97d94b0265cf6883de005/src/mainboard/intel/jasperlake_rvp/variants/jslrvp/devicetree.cb#L128>
 [^glk-pl]: <https://github.com/coreboot/coreboot/blob/2adb50d32e8cd9c61773b1d60de545255c6a4049/src/mainboard/intel/glkrvp/variants/baseboard/devicetree.cb#L58>
 
-最近、Intel は TDP として使われる PL1 の値は公開するが、ブースト機能 (Intel® Turbo Boost Technology) の維持時間等に使われる PL2 の値についてはデータシート中にも記載しなくなった。PL1 * 1.25 がハードウェアのデフォルトだとはしているが、それは上記 Coreboot に記述された設定を見てもわかるが実際の設定とはかけ離れている。  
+## TGL/JSL/ADL {#table}
+
+|     | Tiger Lake-U | Tiger Lake-H | Jasper Lake | Alder Lake-P | Alder Lake-M | Alder Lake-S |
+| :-- | :--:       | :--:         | :--:        | :--:         | :--:         | :--: |
+| GPU | Gen12 96EU | Gen12 32EU | Gen11 32EU | Gen12 96EU | Gen12 96EU? | Gen12 32EU |
+| CPU side PCIe | Gen4<br>4-Lane x2 | Gen4<br> 16-Lane + 4-Lane |  | Gen5 8-Lane,<br>Gen4 4-Lane x2 | Gen5 8-Lane? or<br>Gen4 4-Lane? | Gen5 8-Lane x2,<br>Gen4 4-Lane x2 |
+| PCH | TGP_LP | TGP_H | JSP | ADP_P | ADP_M | ADP_S |
+| PCH PCIe Ports | 16 | ? | 8 | 12 | 10 | 28 |
+| Power Limit | PL1: 15W<br>/PL2: 38W(2C), 60W(4C)<br>PL1: 9W<br>PL2: 35W(2C), 40W(4C) | PL1: 45W<br>/PL2: 107-135W | PL1: 6W<br>/PL2: 20W | PL1: 15W<br>/PL2: 55W (2+8+2)<br>PL1: 28W<br>/PL2: 64W (4+8+2)<br>PL1: 45W<br>/PL2: 115W | PL1: 9W<br>/PL2: 30W (2+8+2) | ? |
+
+
+最近、Intel は TDP として使われる PL1 の値は公開するが、ブースト機能 (Intel® Turbo Boost Technology) の維持時間等の基準に使われる PL2 の値についてはデータシート中にも記載しなくなった。PL1 * 1.25 がハードウェアのデフォルトだとはしているが、それは上記 Coreboot に記述された設定を見てもわかるが実際の設定とはかけ離れている。  
 そういう訳で、Coreboot のコードに記述され、公開されている PL1/PL2 の情報はそれなりに貴重なものだと考えている。そのままデータシートに記載するのではダメなのかと思わなくもないが。  
 
