@@ -85,7 +85,22 @@ CPUID の末尾 1桁、正確に言えば 4-bit 分の領域はその CPU のス
 
 *Alder Lake-P* においては恐らく *Golden Cove (Big/Core)* コア数で分かれており、2 (Big) + 8 (Small) + GT2 は PL1: 15W/PL2: 55W、4 + 8 + GT2 は PL1: 28W/PL2: 64W、4 + 8 + GT2 は PL1: 45W/PL2: 115W となっている。  
 この値をどう見るかはそれぞれだが、 *Tiger Lake UP3* では 2-Core が PL1: 15W/PL2: 38W、 4-Core が PL1: 15W/PL2: 60W となっており[^tgl_up3-pl]、*Alder Lake-P (2+8+2)* の PL2: 55W というのは *Golden Cove* 2-Core に加え *Gracemont (Small/Atom)* 8-Core も搭載していることを考えれば *Tiger Lake UP3* とそう変わらないように思える。  
-*Alder Lake-P (4+8+2)* の PL1: 28W/PL2: 64W については *Tiger Lake* と同じ設定となり、ここでは Bigコアの数が *Tiger Lake* と一致する。[^tgl-28w]  
+*Alder Lake-P (4+8+2)* の PL1: 28W/PL2: 64W については、Coreboot に PL1: 28W 時の PL2 は記述されていないが、*Tiger Lake UP3 28W* と同じ設定となり、ここでは設定と Bigコアの数が *Tiger Lake* と一致する。[^tgl-28w]  
+
+ > ##### Tiger Lake UP3 PL1/PL2
+ > 			# Add PL1 and PL2 values
+ > 			register "power_limits_config[POWER_LIMITS_U_2_CORE]" = "{
+ > 				.tdp_pl1_override = 15,
+ > 				.tdp_pl2_override = 38,
+ > 				.tdp_pl4 = 71,
+ > 			}"
+ > 			register "power_limits_config[POWER_LIMITS_U_4_CORE]" = "{
+ > 				.tdp_pl1_override = 15,
+ > 				.tdp_pl2_override = 60,
+ > 				.tdp_pl4 = 105,
+ > 			}"
+ >
+ > {{< quote >}} <https://github.com/coreboot/coreboot/blob/9d4d2d014c91e041cf7fb8ea593364c6644dd644/src/mainboard/intel/tglrvp/variants/tglrvp_up3/devicetree.cb#L130> {{< /quote >}}
 
 [^tgl_up3-pl]: <https://github.com/coreboot/coreboot/blob/9d4d2d014c91e041cf7fb8ea593364c6644dd644/src/mainboard/intel/tglrvp/variants/tglrvp_up3/devicetree.cb#L130>
 [^tgl-28w]: [Initial MSI Stealth 15m Review With Thermal Performance | MSI Global English Forum - Index](https://forum-en.msi.com/index.php?threads/initial-msi-stealth-15m-review-with-thermal-performance.356516/)
@@ -122,9 +137,23 @@ CPUID の末尾 1桁、正確に言えば 4-bit 分の領域はその CPU のス
 *Alder Lake-M (2+8+2)* には PL1: 9W/PL2: 30W の値が設定されている。  
 小型なパッケージを採用する *Tiger Lake UP4* も同様に PL1: 9W だが、PL2 は 2-Core が 35W、4-Core は 40W となっており[^tgl_up4-pl]、*Alder Lake-M (2+8+2)* のそれは *Tiger Lake UP4* よりもわずかに低い値だ。  
 
+ > 			# Add PL1 and PL2 values
+ > 			register "power_limits_config[POWER_LIMITS_U_2_CORE]" = "{
+ > 				.tdp_pl1_override = 9,
+ > 				.tdp_pl2_override = 35,
+ > 				.tdp_pl4 = 66,
+ > 			}"
+ > 			register "power_limits_config[POWER_LIMITS_U_4_CORE]" = "{
+ > 				.tdp_pl1_override = 9,
+ > 				.tdp_pl2_override = 40,
+ > 				.tdp_pl4 = 83,
+ > 			}"
+ >
+ > {{< quote >}} <https://github.com/coreboot/coreboot/blob/9d4d2d014c91e041cf7fb8ea593364c6644dd644/src/mainboard/intel/tglrvp/variants/tglrvp_up4/devicetree.cb#L134> {{< /quote >}}
+
 [^tgl_up4-pl]: <https://github.com/coreboot/coreboot/blob/9d4d2d014c91e041cf7fb8ea593364c6644dd644/src/mainboard/intel/tglrvp/variants/tglrvp_up4/devicetree.cb#L134>
 
-PL1 からは *Tiger Lake UP4* の後継が *Alder Lake-M* になると考えられるが、PL1 は 3-9W の範囲で設定可能であるらしく、9W より低い TDP/PL1 の製品帯も *Alder Lake-M* でカバーできる。  
+PL1 からは *Tiger Lake UP4* の後継が *Alder Lake-M* になると考えられるが、*Alder Lake-M* の PL1 は 3-9W の範囲で設定可能であるらしく、9W より低い TDP/PL1 の製品帯も *Alder Lake-M* でカバーできる。  
 
 [^ascii]: [ASCII.jp：最後のAtomとなるChromebook向けプロセッサーのJasper Lake　インテル CPUロードマップ (3/3)](https://ascii.jp/elem/000/004/040/4040489/3/)
 
