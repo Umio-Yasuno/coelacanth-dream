@@ -190,7 +190,7 @@ PL1 からは *Tiger Lake UP4* の後継が *Alder Lake-M* になると考えら
 | CPU side PCIe | Gen4<br>4-Lane x2 | Gen4<br> 16-Lane + 4-Lane |  | Gen5 8-Lane,<br>Gen4 4-Lane x2 | Gen5 8-Lane? or<br>Gen4 4-Lane? | Gen5 8-Lane x2,<br>Gen4 4-Lane x2 |
 | PCH | TGP_LP | TGP_H | JSP | ADP_P | ADP_M | ADP_S |
 | PCH PCIe Ports | 16 | ? | 8 | 12 | 10 | 28 |
-| Power Limit | PL1: 15W<br>/PL2: 38W(2C), 60W(4C)<br>PL1: 9W<br>PL2: 35W(2C), 40W(4C) | PL1: 45W<br>/PL2: 107-135W | PL1: 6W<br>/PL2: 20W | PL1: 15W<br>/PL2: 55W (2+8+2)<br>PL1: 28W<br>/PL2: 64W (4+8+2)<br>PL1: 45W<br>/PL2: 115W | PL1: 9W<br>/PL2: 30W (2+8+2) | ? |
+| Power Limit | PL1: 15W<br>/PL2: 38W(2C), 60W(4C)<br>PL1: 9W<br>PL2: 35W(2C), 40W(4C) | PL1: 45W<br>/PL2: 107-135W | PL1: 6W<br>/PL2: 20W | PL1: 15W<br>/PL2: 55W (2+8+2)<br>PL1: 28W<br>/PL2: 64W (4+8+2)<br>PL1: 45W<br>/PL2: 115W (6+8+2) | PL1: 9W<br>/PL2: 30W (2+8+2) | ? |
 
 
 最近、Intel は TDP として使われる PL1 の値は公開するが、ブースト機能 (Intel® Turbo Boost Technology) の維持時間等の基準に使われる PL2 の値についてはデータシート中にも記載しなくなった。PL1 * 1.25 がハードウェアのデフォルトだとはしているが、それは上記 Coreboot に記述された設定を見てもわかるが実際の設定とはかけ離れている。  
