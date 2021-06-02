@@ -9,12 +9,26 @@ noindex: false
 # summary: ""
 ---
 
-先日にオープンソース OpenGL ドライバー **RadeonSI** に向けて [Marek Olšák](https://github.com/marekolsak) 氏より投稿されたパッチから、*VanGogh* に続く RDNA 2 APU であることが判明した *Yellow Carp* だが、  
+先日に [Marek Olšák](https://github.com/marekolsak) 氏よりオープンソース OpenGL ドライバー **RadeonSI** に向けて投稿されたパッチから、[VanGogh](/tags/vangogh) に続く RDNA 2 APU であることが判明した *Yellow Carp* だが、  
 {{< link >}} [Yellow Carp は VanGogh に続く RDNA 2 APU に | Coelacanth's Dream](/posts/2021/05/19/radeonsi-beige_goby-yellow_carp/) {{< /link >}}
-Linux Kernel (amd-gfx) メーリングリスト、KMD (Kernel Mode Driver) 側にも *Yellow Carp* をサポートするための新たなパッチ 89個が投稿され、より詳細が明らかにされた。  
+Linux Kernel (amd-gfx) メーリングリスト、KMD (Kernel Mode Driver) 側にも *Yellow Carp* をサポートするための新たなパッチ 89個が投稿され、そのさらなる詳細が明らかにされた。  
 
  * [[PATCH 00/89] Add initial support for Yellow Carp](https://lists.freedesktop.org/archives/amd-gfx/2021-June/064672.html)
 
+*Yellow Carp* というコードネームは 2020/12 に投稿された SMUv13 (System Management Unit) に関するパッチが初出であり、そのパッチ内容から APU とされている。  
+{{< link >}} [新たな AMD APU、"Yellow Carp"　―― SMU は v13 に | Coelacanth's Dream](/posts/2020/12/08/amd-yellow-carp-apu/) {{< /link >}}
+
+ >        +void yellow_carp_set_ppt_funcs(struct smu_context *smu)
+ >        +{
+ >        +	smu->ppt_funcs = &yellow_carp_ppt_funcs;
+ >        +	smu->message_map = yellow_carp_message_map;
+ >        +	smu->table_map = yellow_carp_table_map;
+ >        +	smu->is_apu = true;
+ >        +}
+ >
+ > {{< quote >}} [[PATCH 6/8] drm/amd/pm: add yellow_carp_ppt implementation(V3)](https://lists.freedesktop.org/archives/amd-gfx/2020-December/057163.html) {{< /quote >}}
+
+Linux Kernel (amd-gfx) にサポートを追加する作業自体は以前より行われていたが、最初のパッチから半年して外部にオープンソースとして公開できる段階となったのだろう。  
 
 {{< pindex >}}
  * [Yellow Carp](#yc)
