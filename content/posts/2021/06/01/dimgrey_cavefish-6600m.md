@@ -10,7 +10,7 @@ noindex: false
 ---
 
 AMD は現地時間 2021/05/31、Computex 2021 における基調講演の中で、モバイル向け *RDNA 2* GPU **Radeon RX 6600M** を発表した。  
-他にも **Radeon RX 6800M/6700M** が発表されているが、**Radeon RX 6600M** に注目する理由は、開発コードネーム *Dimgrey Cavefish/Navi23* をベースにした初の製品と考えられるからだ。  
+他にも **Radeon RX 6800M/6700M** が発表されているが、**Radeon RX 6600M** に注目する理由は、開発コードネーム *Dimgrey Cavefish/Navi23* をベースにした初の製品とされるからだ。  
 
  * [AMD Unveils RDNA 2-Based Mobile Graphics, New AMD Advantage Laptops, Broadly Compatible Upscaling Technology and More at Computex 2021 :: Advanced Micro Devices, Inc. (AMD)](https://ir.amd.com/news-events/press-releases/detail/1006/amd-unveils-rdna-2-based-mobile-graphics-new-amd-advantage)
 
