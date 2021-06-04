@@ -1,5 +1,5 @@
 ---
-title: "VanGogh APU がサポートする \"Fine Grain Clock Gating\" は CPU にも適用　―― 最大 4コアか"
+title: "VanGogh APU がサポートする 「Fine Grain Clock Gating」 は CPU にも適用　―― 最大 4コアか"
 date: 2021-01-08T19:48:47+09:00
 draft: false
 tags: [ "VanGogh", ]

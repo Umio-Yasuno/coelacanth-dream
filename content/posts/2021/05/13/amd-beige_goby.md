@@ -1,5 +1,5 @@
 ---
-title: "新たな RDNA 2 GPU、\"Beige Goby\" をサポートするパッチが投稿される"
+title: "新たな RDNA 2 GPU、「Beige Goby」 をサポートするパッチが投稿される"
 date: 2021-05-13T04:02:05+09:00
 draft: false
 tags: [ "Beige_Goby", "RDNA_2" ]

@@ -1,5 +1,5 @@
 ---
-title: "Linux Kernel に AMD の次世代 APU \"VanGogh\" をサポートするパッチが投稿される"
+title: "Linux Kernel に AMD の次世代 APU 「VanGogh」 をサポートするパッチが投稿される"
 date: 2020-09-26T05:13:48+09:00
 draft: false
 tags: [ "VanGogh", "RDNA_2" ]

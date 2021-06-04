@@ -1,5 +1,5 @@
 ---
-title: "RDNA 2 APU \"Yellow Carp\" をサポートするパッチが Linux Kernel に投稿される　―― DCN3.1 / VanGogh より大きいキャッシュ"
+title: "RDNA 2 APU 「Yellow Carp」 をサポートするパッチが Linux Kernel に投稿される　―― DCN3.1 / VanGogh より大きいキャッシュ"
 date: 2021-06-03T03:59:37+09:00
 draft: false
 tags: [ "Yellow_Carp", "RDNA_2" ]
@@ -62,7 +62,7 @@ Linux Kernel (amd-gfx) にサポートを追加する作業自体は以前より
 *RDNA 2 dGPU* と *VanGogh* はディスプレイエンジンに DCN 3.0 系列を採用し、それらの違いは最大画面出力数数といくつかの機能のみだった。  
 *Yellow Carp APU* ではそれよりも進んだ DCN 3.1 を採用する。  
 
-DCN 3.1 では新たに ZState、あるいは z9/10 と呼ぶクロックステートが追加されている。パッチのコメントによれば他にもクロックに関する機能が DCN 3.0 から追加されており、クロックを状況に合わせて柔軟に切り替えることで APU としてさらなる省電力化を狙っているものと思われる。  
+DCN 3.1 では新たに ZState、あるいは z9/10 と呼ぶクロックステートが追加されている。パッチのコメントによれば他にもクロックに関する機能が DCN 3.0 から追加されており、クロックを状況に合わせて柔軟に切り替えることでモバイル向けをメインとする APU では重要となる、さらなる省電力化を狙っているものと思われる。  
 
  > 		
  > 		Adds support for clock requests for the various parts of the DCN3.1 IP

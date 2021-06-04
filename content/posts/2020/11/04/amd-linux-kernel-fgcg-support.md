@@ -1,5 +1,5 @@
 ---
-title: "Linux Kernel に \"Fine Grain Clock Gating\" のサポートが追加される"
+title: "Linux Kernel に 「Fine Grain Clock Gating」 のサポートが追加される"
 date: 2020-11-04T17:22:25+09:00
 draft: false
 tags: [ "RDNA_2", "VanGogh" ]

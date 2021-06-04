@@ -1,5 +1,5 @@
 ---
-title: "新たな AMD RDNA 2 GPU、\"Dimgrey Cavefish\" & \"VanGogh\""
+title: "新たな AMD RDNA 2 GPU、「Dimgrey Cavefish」 & 「VanGogh」"
 date: 2020-09-23T01:22:25+09:00
 draft: false
 tags: [ "RDNA_2", "Dimgrey_Cavefish", "VanGogh", "NGG", "Navi23" ]

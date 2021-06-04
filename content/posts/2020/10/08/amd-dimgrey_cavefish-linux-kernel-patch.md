@@ -1,5 +1,5 @@
 ---
-title: "Linux Kernel に RDNA 2 GPU \"Dimgrey Cavefish\" をサポートするパッチが投稿される"
+title: "Linux Kernel に RDNA 2 GPU 「Dimgrey Cavefish」 をサポートするパッチが投稿される"
 date: 2020-10-08T01:47:35+09:00
 draft: false
 tags: [ "Dimgrey_Cavefish", "RDNA_2", "Navi23" ]

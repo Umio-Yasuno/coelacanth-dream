@@ -1,5 +1,5 @@
 ---
-title: "AMD RDNA 2 GPU は \"Duty Cycle Scaling\" をサポート"
+title: "AMD RDNA 2 GPU は 「Duty Cycle Scaling」 をサポート"
 date: 2021-01-27T13:55:36+09:00
 draft: false
 tags: [ "RDNA_2", "Navy_Flounder", "Dimgrey_Cavefish", "Sienna_Cichlid" ]

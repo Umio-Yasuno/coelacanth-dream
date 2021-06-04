@@ -1,5 +1,5 @@
 ---
-title: "Linux Kernel に Intel Alder Lake-P をサポートするパッチが投稿される　―― ディスプレイエンジンに \"XE_LPD\""
+title: "Linux Kernel に Intel Alder Lake-P をサポートするパッチが投稿される　―― ディスプレイエンジンに 「XE_LPD」"
 date: 2021-03-12T07:46:30+09:00
 draft: false
 tags: [ "Alder_Lake", "XE_LPD" ]
