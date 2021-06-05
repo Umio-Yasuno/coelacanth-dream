@@ -1,5 +1,5 @@
 ---
-title: "RDNA世代に新たな GPUID、gfx1013?"
+title: "RDNA/GFX10.1世代に新たな GPUID、gfx1013?"
 date: 2021-06-04T23:49:17+09:00
 draft: false
 tags: [ "RDNA", "LLVM", "GFX10" ]
