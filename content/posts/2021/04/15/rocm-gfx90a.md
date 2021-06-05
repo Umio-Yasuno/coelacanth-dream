@@ -2,7 +2,7 @@
 title: "Aldebaran/gfx90a への対応を進める ROCmソフトウェア"
 date: 2021-04-15T21:15:11+09:00
 draft: false
-tags: [ "ROCm", "Aldebaran", "gfx90a", "MI200" ]
+tags: [ "ROCm", "Aldebaran", "gfx90a", "MI200", "LLVM" ]
 # keywords: [ "", ]
 categories: [ "Software", "AMD", "GPU" ]
 noindex: false

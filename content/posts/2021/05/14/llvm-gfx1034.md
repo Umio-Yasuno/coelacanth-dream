@@ -2,7 +2,7 @@
 title: "LLVM に GPUID: gfx1034 が追加される"
 date: 2021-05-14T23:38:44+09:00
 draft: false
-tags: [ "Beige_Goby", "RDNA_2" ]
+tags: [ "Beige_Goby", "RDNA_2", "LLVM" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
