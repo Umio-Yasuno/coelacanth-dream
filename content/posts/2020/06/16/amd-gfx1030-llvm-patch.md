@@ -2,7 +2,7 @@
 title: "LLVM に Navi21/GFX1030 へ向けたパッチが投稿される"
 date: 2020-06-16T22:55:37+09:00
 draft: false
-tags: [ "Navi21", "Sienna_Cichlid", "RDNA_2", "GFX10", "gfx1030" ]
+tags: [ "Navi21", "Sienna_Cichlid", "RDNA_2", "GFX10", "gfx1030", "LLVM" ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false

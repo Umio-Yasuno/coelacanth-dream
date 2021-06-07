@@ -2,7 +2,7 @@
 title: "AMDの次世代 RDNA 2 GPU、「Navy Flounder」 のLinux Kernelパッチが投稿される"
 date: 2020-07-15T03:53:22+09:00
 draft: false
-tags: [ "RDNA_2", "Navi22", "Navy_Flounder" ]
+tags: [ "RDNA_2", "Navi22", "Navy_Flounder", "Linux_Kernel" ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false

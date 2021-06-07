@@ -2,7 +2,7 @@
 title: "LLVM に RDNA 2 でレイトレーシングを実行する命令が追加される"
 date: 2020-09-17T08:19:03+09:00
 draft: false
-tags: [ "RDNA_2", "Sienna_Cichlid", "Navy_Flounder" ]
+tags: [ "RDNA_2", "Sienna_Cichlid", "Navy_Flounder", "LLVM" ]
 # keywords: [ "", ]
 categories: [ "Software", "AMD", "GPU" ]
 noindex: false

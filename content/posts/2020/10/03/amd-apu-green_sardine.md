@@ -1,8 +1,8 @@
 ---
-title: "AMD Renoir の兄弟？ Linux Kernel に \"Green Sardine\" APU をサポートするパッチが投稿される "
+title: "AMD Renoir の兄弟？ Linux Kernel に 「Green Sardine」 APU をサポートするパッチが投稿される "
 date: 2020-10-03T00:17:14+09:00
 draft: false
-tags: [ "Green_Sardine", "Renoir", "Lucienne", "Cezanne" ]
+tags: [ "Green_Sardine", "Renoir", "Lucienne", "Cezanne", "Linux_Kernel" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU" ]
 noindex: false

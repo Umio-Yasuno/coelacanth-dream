@@ -2,7 +2,7 @@
 title: "Yellow Carp は VanGogh に続く RDNA 2 APU に"
 date: 2021-05-19T23:13:13+09:00
 draft: false
-tags: [ "Beige_Goby", "Yellow_Carp", "RDNA_2" ]
+tags: [ "Beige_Goby", "Yellow_Carp", "RDNA_2", "RadeonSI" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU", "APU" ]
 noindex: false

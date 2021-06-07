@@ -2,7 +2,7 @@
 title: "RDNA 2 APU 「Yellow Carp」 をサポートするパッチが Linux Kernel に投稿される　―― DCN3.1 / VanGogh より大きいキャッシュ"
 date: 2021-06-03T03:59:37+09:00
 draft: false
-tags: [ "Yellow_Carp", "RDNA_2" ]
+tags: [ "Yellow_Carp", "RDNA_2", "Linux_Kernel" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU" ]
 noindex: false
