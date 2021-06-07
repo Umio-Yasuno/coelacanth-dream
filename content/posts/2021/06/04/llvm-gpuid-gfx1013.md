@@ -10,6 +10,8 @@ noindex: false
 ---
 
 まだレビュー段階ではあるが、LLVM に新たな GPUID: *gfx1013* を追加するパッチが投稿された。  
+LLVM は AMD GPU における GPGPUプログラムのコンパイラバックエンドとして採用されている。  
+
 投稿したのは [bcahoon (Brendon Cahoon)](https://reviews.llvm.org/p/bcahoon/) 氏であり、氏は過去にも AMDGPU に関連したパッチを投稿しており、また過去のコミットを見ればわかるが amd\\.com ドメインのメールアドレスを使用している。LLVM における AMDGPU サポートに尽力しているソフトウェアエンジニア方がレビューに参加していることもあり、私的にパッチは信頼できるものと考えている。  
  
  * [⚙ D103663 [AMDGPU] Add gfx1013 target](https://reviews.llvm.org/D103663)
