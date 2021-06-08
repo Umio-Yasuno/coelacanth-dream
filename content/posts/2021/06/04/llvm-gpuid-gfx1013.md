@@ -30,6 +30,27 @@ Major: 10, Minor: 1 (*gfx101x*) には RDNA(1) 世代、または *Navi1x* 世�
 ドット積命令は推論処理や深層学習の高速化に活用されることを想定しており、*RDNA(1)/Navi1x* 世代では前述にように対応が分かれていたが、*RDNA 2/gfx103x* 世代では確認できる限りすべての GPU/APU でドット積命令をサポートしている。  
 それらドット積命令はパックド実行に対応しており、(U)INT4/8/16,FP16 のデータならば FP32 で処理する場合と比べて理論上のピーク性能は最大2-8倍にもなる。  
 
+ > ##### gfx1010
+ > 		 def FeatureISAVersion10_1_0 : FeatureSet<
+ > 		  !listconcat(FeatureGroup.GFX10_1_Bugs,
+ > 		    [FeatureGFX10,
+ > 		     FeatureLDSBankCount32,
+ > 		     FeatureDLInsts,
+ > 		     FeatureNSAEncoding,
+ > 		     FeatureWavefrontSize32,
+ > 		     FeatureScalarStores,
+ > 		     FeatureScalarAtomics,
+ > 		     FeatureScalarFlatScratchInsts,
+ > 		     FeatureGetWaveIdInst,
+ > 		     FeatureMadMacF32Insts,
+ > 		     FeatureDsSrc2Insts,
+ > 		     FeatureLdsMisalignedBug,
+ > 		     FeatureSupportsXNACK])>;
+ >
+ > {{< quote >}} [llvm-project/AMDGPU.td at 6fb02596a2094df90e9277981aae7a06a9b6671b · llvm/llvm-project](https://github.com/llvm/llvm-project/blob/6fb02596a2094df90e9277981aae7a06a9b6671b/llvm/lib/Target/AMDGPU/AMDGPU.td) {{< /quote >}}
+
+ > ##### gfx1013
+ >
  > 		def FeatureISAVersion10_1_3 : FeatureSet<
  > 		  !listconcat(FeatureGroup.GFX10_1_Bugs,
  > 		    [FeatureGFX10,

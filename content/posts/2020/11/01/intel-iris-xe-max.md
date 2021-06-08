@@ -1,5 +1,5 @@
 ---
-title: "Intel、モバイル向け dGPU \"Iris Xe Max\" を正式発表"
+title: "Intel、モバイル向け dGPU 「Iris Xe Max」 を正式発表"
 date: 2020-11-01T04:05:29+09:00
 draft: false
 tags: [ "DG1", "Gen12" ]
