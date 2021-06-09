@@ -88,6 +88,12 @@ CPUID の末尾 1桁、正確に言えば 4-bit 分の領域はその CPU のス
 この値をどう見るかはそれぞれだが、 *Tiger Lake UP3* では 2-Core が PL1: 15W/PL2: 38W、 4-Core が PL1: 15W/PL2: 60W となっており[^tgl_up3-pl]、*Alder Lake-P (2+8+2)* の PL2: 55W というのは *Golden Cove* 2-Core に加え *Gracemont (Small/Atom)* 8-Core も搭載していることを考えれば *Tiger Lake UP3* とそう変わらないように思える。  
 *Alder Lake-P (4+8+2)* の PL1: 28W/PL2: 64W については、Coreboot に PL1: 28W 時の PL2 は記述されていないが、*Tiger Lake UP3 28W* と同じ設定となり、ここでは設定と Bigコアの数が *Tiger Lake* と一致する。[^tgl-28w]  
 
+{{< ins >}}
+新たなパッチにより、*Alder Lake-P (2+8+2)* の PL1 が 20W に変更された。  
+
+ * [soc/intel/alderlake: update pl1 to 20W (Ie297017e) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/55345)
+{{< /ins >}}
+
  > ##### Tiger Lake UP3 PL1/PL2
  > 			# Add PL1 and PL2 values
  > 			register "power_limits_config[POWER_LIMITS_U_2_CORE]" = "{
@@ -190,7 +196,7 @@ PL1 からは *Tiger Lake UP4* の後継が *Alder Lake-M* になると考えら
 | CPU side PCIe | Gen4<br>4-Lane x2 | Gen4<br> 16-Lane + 4-Lane |  | Gen5 8-Lane,<br>Gen4 4-Lane x2 | Gen5 8-Lane? or<br>Gen4 4-Lane? | Gen5 8-Lane x2,<br>Gen4 4-Lane x2 |
 | PCH | TGP_LP | TGP_H | JSP | ADP_P | ADP_M | ADP_S |
 | PCH PCIe Ports | 16 | ? | 8 | 12 | 10 | 28 |
-| Power Limit | PL1: 15W<br>/PL2: 38W(2C), 60W(4C)<br>PL1: 9W<br>PL2: 35W(2C), 40W(4C) | PL1: 45W<br>/PL2: 107-135W | PL1: 6W<br>/PL2: 20W | PL1: 15W<br>/PL2: 55W (2+8+2)<br>PL1: 28W<br>/PL2: 64W (4+8+2)<br>PL1: 45W<br>/PL2: 115W (6+8+2) | PL1: 9W<br>/PL2: 30W (2+8+2) | ? |
+| Power Limit | PL1: 15W<br>/PL2: 38W(2C), 60W(4C)<br>PL1: 9W<br>PL2: 35W(2C), 40W(4C) | PL1: 45W<br>/PL2: 107-135W | PL1: 6W<br>/PL2: 20W | PL1: <del>15W</del> 20W<br>/PL2: 55W (2+8+2)<br>PL1: 28W<br>/PL2: 64W (4+8+2)<br>PL1: 45W<br>/PL2: 115W (6+8+2) | PL1: 9W<br>/PL2: 30W (2+8+2) | ? |
 
 
 最近、Intel は TDP として使われる PL1 の値は公開するが、ブースト機能 (Intel® Turbo Boost Technology) の維持時間等の基準に使われる PL2 の値についてはデータシート中にも記載しなくなった。PL1 * 1.25 がハードウェアのデフォルトだとはしているが、それは上記 Coreboot に記述された設定を見てもわかるが実際の設定とはかけ離れている。  
