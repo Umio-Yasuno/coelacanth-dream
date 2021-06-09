@@ -1,5 +1,5 @@
 ---
-title: "Intel Xe-HP EU に追加されるパイプラインと増加するスレッド、レジスタファイル"
+title: "Intel Xe-HP EU に追加されるパイプラインと増加するスレッド/レジスタファイル"
 date: 2021-06-08T19:29:56+09:00
 draft: false
 tags: [ "Xe-HP", ]
