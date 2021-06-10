@@ -34,15 +34,15 @@ noindex: false
 プライマリーダイ/チップレット (以下資料に合わせてチップレットの語を用いる) の役割はまず CPU からのメモリリクエストを受け取ることにあり、セカンダリーチップレット等その他チップレットは直接受け取ることが無い。  
 プライマリーチップレットはメモリリクエストに対し、まずプライマリーが持つキャッシュ (ロカール) に対応したものかを確認する。対応したものであった場合は、GPUメモリにアクセスしキャッシュ、そして CPU にデータを送信する。  
 対応したものでなかった場合は、プライマリーに接続された他のチップレットにメモリリクエストを送信し、対応したキャッシュ、メモリを持つチップレットはプライマリーを経由して CPU にデータを送信することとなる。  
+パッケージを超えた GPU 間接続には、従来通り SDMA (System DMA) エンジンを通した XGMI/Infinity Fabric が使われると想像される。  
 
 {{< figure src="/image/2021/03/05/amdgpu-fabric.webp" title="GPU Memory, I/O, and Connectivity" caption="画像出典: [ORNL_Application_Readiness_Workshop-AMD_GPU_Basics.pdf](https://www.olcf.ornl.gov/wp-content/uploads/2019/10/ORNL_Application_Readiness_Workshop-AMD_GPU_Basics.pdf)" >}}
 
 また特許資料中では、同一のパッケージに搭載された複数のチップレットは、プログラムからは単一の GPU として認識され、GPU へのコンピュート処理は分散されるとしている。  
-分散処理がどう行われるかはまだ読み取れていないが、KMD (Kernel Mode Driver) 部で行われるか、あるいは CPU からのメモリリクエストをプライマリーチップレットのみが受け取ることを踏まえればプライマリーチップレットが担うことが考えられる。  
+分散処理がどう行われるかはまだ読み取れていないが、KMD (Kernel Mode Driver) 部で行われるか、あるいは CPU からのメモリリクエストをプライマリーチップレットのみが受け取ることを踏まえれば、他チップレットへの分散処理もプライマリーチップレットが担うことが考えられる。  
 
 *Aldebaran (gfx90a)* はフロントエンド部における新機能として *TgSplit (Thread group Split)* をサポートしている。  
 通常 1つの Workgroup は同じ CU に割り振られ、CU内の異なる SIMDユニットで実行されるが、*TgSplit* では Workgroup を分割し、異なる CU に割り振ることを可能とする。  
-
 Workgroup は CUDA における Thread Block に相当し、GPU 上で同時に存在する Waveflont のグループ。同 Workgroup に属するスレッドは同期とローカルメモリを介した通信が可能。また CU内の LDS (Local Data Share) は 1つの Workgroup 内のスレッド間で共有される。  
 だが *TgSplit* では Workgroup が分割され、異なる CU で実行されるため、LDS が割り当てられない場合がある。  
 
