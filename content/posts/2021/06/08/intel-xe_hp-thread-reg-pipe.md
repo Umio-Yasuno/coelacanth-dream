@@ -46,7 +46,7 @@ noindex: false
 
 パッチでは *{{< xe class="hp" >}}* EU で EU あたりのスレッド数とレジスタファイルが増量されたことが示唆されている。  
 
-画像は GDC 2019 で公開された 「The Architecture of 11th Generation Intel® Processor Graphics」のスライドで内容は Gen11アーキテクチャについてではあるが、比較的最近の Intel GPU アーキテクチャを Intel 自らが仔細に解説した素晴らしい資料であるため引用させていただいた。  
+画像は GDC 2019 で公開された 「The Architecture of 11th Generation Intel® Processor Graphics」のスライドで内容は Gen11アーキテクチャについてではあるが、比較的最近の Intel GPU アーキテクチャを Intel 自らが仔細に解説したとても参考になる資料であるため引用させていただいた。  
 
 {{< figure src="../gen11-eu-reg.webp" title="Gen11: Gen Basic Building Block: Execution Unit (EU)" caption="画像出典: [GDC 2019 Tech Sessions](https://software.intel.com/content/www/us/en/develop/articles/gdc-2019-tech-sessions.html?wapkw=gdc%202019)" >}}
 

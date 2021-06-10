@@ -1,5 +1,5 @@
 ---
-title: "プライマリーダイとセカンダリーダイで構成される Aldebaran"
+title: "プライマリーダイとセカンダリーダイで構成される Aldebaran/MI200 GPU"
 date: 2021-06-09T17:12:30+09:00
 draft: false
 tags: [ "Aldebaran", "MI200", "gfx90a", "Linux_Kernel" ]
@@ -46,7 +46,7 @@ noindex: false
 Workgroup は CUDA における Thread Block に相当し、GPU 上で同時に存在する Waveflont のグループ。同 Workgroup に属するスレッドは同期とローカルメモリを介した通信が可能。また CU内の LDS (Local Data Share) は 1つの Workgroup 内のスレッド間で共有される。  
 だが *TgSplit* では Workgroup が分割され、異なる CU で実行されるため、LDS が割り当てられない場合がある。  
 
-LLVM に *TgSplit* のサポートが追加された当初自分は CU の稼働率を引き上げる機能ではないかと推測したが、*Aldebaran (gfx90a)* が MCM/チップレット構成を採り、それに関連した特許資料に単一の GPU として認識される旨が記述されていたことから、チップレットに処理を分散するための機能だと推測される。  
+LLVM に *TgSplit* のサポートが追加された当初自分は CU の稼働率を引き上げる機能ではないかと推測したが、それよりも、*Aldebaran (gfx90a)* が MCM/チップレット構成を採り、それに関連した特許資料に単一の GPU として認識される旨が記述されていたことから、チップレットに処理を分散するための機能だと推測される。  
 異なる Workgroup をそれぞれチップレットに割り振るのでは、特定のチップレットに集中しないようにしながら稼働率を引き上げることが難しく、またプログラム側で複数のチップレットを認識し、意識したマルチGPUプログラミングが必要になってしまうと思われる。  
 {{< link >}} [LLVM に GFX90A のサポートが追加される　―― CDNA 2/MI200 か | Coelacanth's Dream](/posts/2021/02/19/llvm-gfx90a/#tgsplit) {{< /link >}}
 
