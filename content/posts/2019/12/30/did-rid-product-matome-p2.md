@@ -517,7 +517,7 @@ Navi LITE 13///\\\E9:00
 | | C5 | RX 5500 XT | (Navi14 XTX) |
 | | C7 | RX 5500 | (Navi14 XT) |
 | | C9 | RX 5500XTB | for Blockchain |
-| | CF | RX 5300? | (Navi14 XL?) |
+| | CF | RX 5300 | (Navi14 XL?) |
 | | F2 | | |
 | | F3 | | |
 | 7341 | 00 | Radeon Pro W5500 | (Navi14 Pro-XL) |
@@ -546,7 +546,7 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | 73A0 | 00 | |
 | 73A1 | 00 | |
 | 73A2 | 00 | |
-| 73A3 | 00 | |
+| 73A3 | 00 | Radeon PRO W6800 |
 | 73AB | 00 | |
 | 73AE | | |
 | 73AF | | |
