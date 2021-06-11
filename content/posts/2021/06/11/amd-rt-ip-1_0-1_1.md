@@ -51,6 +51,7 @@ AMD がオープンソースで開発し、公式的に提供している Vulkan
 
 そして、*RDNA 2/GFX10.3* とそれ以降のレイトレーシングHW が `RtIp1_1` だとされていることからは、*RDNA 2/GFX10.3* 以前は `RtIp1_0` を搭載している可能性が示される。  
 先日、LLVM に追加された [GPUID: gfx1013](/tags/gfx1013) は、*Navi10 (gfx1010)* をベースにしながら *RDNA 2/GFX10.3* でサポートされているレイトレーシング命令をサポートし、さらには APU という奇妙なものだったが、  
+{{< link >}} [GPUID: gfx1013 は APU で、レイトレーシング命令をサポートしている? | Coelacanth's Dream](/posts/2021/06/06/gfx1013-apu-rt/) {{< /link >}}
 今回 PAL に追加された内容と合わせて、 *gfx1013* で実装されているレイトレーシングHW *RDNA 2/GFX10.3* とは異なると考えられる。  
 そもそも今回追加された部分は、*gfx1013* に関する LLVM の変更に合わせたか、AMD のソフトウェアエンジニアが *gfx1013* のサポートに向けて動き始めたことによるものなのかもしれない。  
 
@@ -58,4 +59,5 @@ AMD がオープンソースで開発し、公式的に提供している Vulkan
 
 {{< ref >}}
  * ["RDNA 2" Instruction Set Architecture: Reference Guide - RDNA2_Shader_ISA_November2020.pdf](https://developer.amd.com/wp-content/resources/RDNA2_Shader_ISA_November2020.pdf)
+ * [DirectX ® Ray tracing 1.1 - AMD_RDNA2_DirectX12_Ultimate_Raytracing1_1.pdf](https://gpuopen.com/wp-content/uploads/slides/AMD_RDNA2_DirectX12_Ultimate_Raytracing1_1.pdf)
 {{< /ref >}}
