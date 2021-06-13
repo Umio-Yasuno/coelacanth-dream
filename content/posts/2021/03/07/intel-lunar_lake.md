@@ -1,5 +1,5 @@
 ---
-title: "Intel Meteor Lake の次世代は Lunar Lake、Ethernetコントローラーの初期サポートパッチが投稿される"
+title: "Intel Meteor Lake の次世代は「Lunar Lake」、Ethernetコントローラーの初期サポートパッチが投稿される"
 date: 2021-03-07T08:47:46+09:00
 draft: false
 tags: [ "Meteor_Lake", "Lunar_Lake", "Alder_Lake" ]
