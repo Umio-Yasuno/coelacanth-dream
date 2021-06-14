@@ -1,5 +1,5 @@
 ---
-title: "GPUID: gfx1013 は APU で、レイトレーシング命令をサポートしている?"
+title: "GPUID: gfx1013 は RDNA/Navi10ベースの APU で、レイトレーシング命令をサポートしている?"
 date: 2021-06-06T06:10:39+09:00
 draft: false
 tags: [ "LLVM", "GFX10", "RDNA", "gfx1013" ]

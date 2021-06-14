@@ -172,7 +172,7 @@ dGPU としてはかなり割り切ったものになっているという印象
 
 | AMD GPU<br>cache info | RDNA L1 (GL1) | L2 (TCC) | L3/Infinity Cache (MALL) |
 | :-- | :--: | :--: | :--: |
-| Raven/Picasso<br>Renoir/Lucienne/Cezanne | - | 1M | - |
+| Raven/Picasso<br>Renoir/Lucienne<br>/Cezanne(Green Sardine)[^czn] | - | 1M | - |
 | Raven2 | - | 128K[^rv2-l2c] | - |
 | Vega20 | - | 4M | - |
 | Arcturus | - | 8M? | - |
@@ -185,4 +185,5 @@ dGPU としてはかなり割り切ったものになっているという印象
 | Dimgrey Cavefish | 128K | 2M | 32M |
 | Beige Goby | 128K | 1M | 16M |
 
+[^czn]: [Green Sardine APU の PCI ID が追加、正体は Cezanne APU だったか | Coelacanth's Dream](/posts/2021/01/14/green_sardine-pciid/)
 [^rv2-l2c]: [Raven2 の GPU L2キャッシュは 128KB | Coelacanth's Dream](/posts/2021/02/11/raven2-gpu-l2c-size/)

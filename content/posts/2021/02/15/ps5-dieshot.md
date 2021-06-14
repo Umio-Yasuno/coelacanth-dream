@@ -64,49 +64,6 @@ WGP 2基で比較したのは、配置によっては一部ユニットの構造
 
 *PS5* はダイに WGP 20基を搭載しているが、2基を歩留まり向上のため冗長ユニットとし、WGP 18基の製品仕様を満たしている。これは *XSX* でも同じで、WGP 28基中 2基を冗長ユニットとしている。  
 
-## 余談: XSX の RB数
-
-| | PS5 | XSX | Navi21
-| :-- | :--: | :--: | :--: |
-| Shader Engine | 2? | 2 | 4 |
-| Shader Array per SE | 2 | 2 | 2 |
-| WGP per SA | 4/5 | 6/7 | 5 |
-| GPU WGP(CU) | 18(36) WGP | 26(52) WGP | 40(80) WGP
-| GPU Clock | 2.23 GHz | 1.825 GHz | |
-| Peak FP32 | 10.3 TFLOS | 12.1 TFLOPS | |
-| RB | 16RB? | 16RB |
-| Peak Pixel Fill-Rate | 142.72 Gpix/s? | 116.8 Gpix/s | |
-| Peak Geometry Fill-Rate | 8.92 Gtri/s | 7.3 Gtri/s |
-| Memory Bus Width | 256-bit | 320-bit |
-| Memory BW | 448 GB/s | 560 GB/s (high)<br>336 GB/s (low) |
-
-HotChips 32 のスライドを見返して気付いたが、*XSX* はメモリバス幅 320-bit に対して、最大ピクセル処理性能は 116.8 Gpix/s。RB (Render Backend) を 16基相当 *しか* 搭載していないことになる。  
-というのも、RB は最終的なピクセルを VRAM のフレームバッファに書き込む役割を持つため、メモリチャネル数に合わせて搭載、配置されることがほとんどだ。  
-例えば *Navi10* は GDDR6 256-bit (16-bit * 16ch) に対応して、RB 16基が搭載されている。  
-しかし、*XSX* は GDDR6 320-bit (16-bit * 20ch) に対し、RB 20基ではなく 16基となっている。  
-*PS5* の RB数は不明だが、規模とターゲットとする解像度、グラフィクスを考えれば *XSX* と変わらない 16基ではないかと思われる。  
-*XSX* の最大ピクセル処理性能には、特殊なメモリアーキテクチャが関係しているのかもしれないが、ピーククロックの差もあり、{{< comple >}} *PS5* が RB 16基と仮定すると {{< /comple >}} 最大ピクセル処理性能は *PS5* より約2割低いものとなっている。WGP(CU) 数が影響する FP32性能とは逆だ。
-
-*XSX* ではピクセル処理性能がボトルネックとなる懸念があるように思われるが、単純に Microsoft がこれで充分だと判断したからその規模になったのだろうという見方もできる。  
-こればかりはゲーム開発者か誰かが検証しない限り、実性能にどれだけ影響するかは分からない。  
-あるいは、*XSX* は目玉機能の 1つとして VRS (Variable Rate Shading) を打ち出しており、HotChips 32 の発表スライドには VRS対応により小さい面積コストで 10-30% の性能向上を得られるとあり、これで足りない分を埋めると考えているのかもしれない。  
-
-それと *RDNA 2* からは RB が RB+ となり、1基あたり 8-pixel の処理が可能となったが、以前まとめたように、*Vega/GFX9* 世代から RB+ のレジスタ自体は実装されているため、ダイショットから判別はできないように思う。  
-{{< link >}} [一部の AMD GPU で実装、有効化されている RB+ とは何か | Coelacanth's Dream](/posts/2020/11/10/what-is-rbplus/) {{< /link >}}
-
- >       info->has_rbplus = info->family == CHIP_STONEY || info->chip_class >= GFX9;
- >    
- >       /* Some chips have RB+ registers, but don't support RB+. Those must
- >        * always disable it.
- >        */
- >       info->rbplus_allowed =
- >          info->has_rbplus &&
- >          (info->family == CHIP_STONEY || info->family == CHIP_VEGA12 || info->family == CHIP_RAVEN ||
- >           info->family == CHIP_RAVEN2 || info->family == CHIP_RENOIR || info->chip_class >= GFX10_3);
- >
- > {{< quote >}} [src/amd/common/ac_gpu_info.c · 3c2489d2e45b3013361c7284ed9de14fe40554cc · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/3c2489d2e45b3013361c7284ed9de14fe40554cc/src/amd/common/ac_gpu_info.c) {{< /quote >}}
-
-
 {{< ref >}}
 
  * [PlayStation 5 Launches This November At $399 For PS5 Digital Edition, And $499 For PS5 With Ultra HD Blu-ray Disc Drive | Sony Corporation of America](https://www.sony.com/content/sony/en/en_us/SCA/company-news/press-releases/sony-computer-entertainment-america-inc/2020/playstation-5-launches-this-november-at-399-for-ps5-digital-edition-and-499-for-ps5-with-ultra-hd-bluray-disc-drive.html)
