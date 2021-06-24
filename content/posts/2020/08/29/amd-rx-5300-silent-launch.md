@@ -2,7 +2,7 @@
 title: "AMD、Navi14ベース、メモリ 3GB の RX 5300 を製品に追加"
 date: 2020-08-29T21:43:53+09:00
 draft: false
-tags: [ "Navi14", "gfx1011" ]
+tags: [ "Navi14", "gfx1012" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false

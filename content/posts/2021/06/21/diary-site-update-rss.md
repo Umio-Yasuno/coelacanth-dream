@@ -40,6 +40,7 @@ Intel が *Alder Lake* を 2021年後半にリリース予定にあること、 
 その点 OSS へのパッチは良い。社内である程度が開発が進んで、公開してもいい段階となっているからパッチが公開されている訳で、サポートを追加するということはそのプラットフォーム、ハードウェア (CPU/GPU) のリリースが (ある程度) 近いことも示している。  
 自分の情報元はほとんど公式のリリースや、ソフトウェアエンジニア方が公開してくれているパッチであるから、リーカー (leaker) なんて蔑称で呼ばれずに済んでいる、と思いたい。  
 雑記と言っても完全に話がずれてしまった。  
+結局何に価値を見出すかは人それぞれだ。  
 
 [^mtl]: [Intel CEO Announces ‘IDM 2.0’ Strategy for Manufacturing, Innovation,...](https://www.intel.com/content/www/us/en/newsroom/news/idm-manufacturing-innovation-product-leadership.html?wapkw=%22Meteor%20Lake%22)
 
