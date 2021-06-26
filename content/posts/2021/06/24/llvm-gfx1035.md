@@ -9,7 +9,7 @@ noindex: false
 # summary: ""
 ---
 
-AMD GPU における GPGPUプラグラムやシェーダーコンパイラのバックエンドとしての関わりを持つ LLVM に、新たな AMD GPUターゲット、 *GPUID: gfx1035* を追加するパッチが投稿、公開されている。  
+AMD GPU とは GPGPUコンパイラやシェーダーコンパイラのバックエンドとしての関わりを持つ LLVM に、新たな AMD GPUターゲット、 *GPUID: gfx1035* を追加するパッチが投稿、公開されている。  
 
  * [⚙ D104804 [AMDGPU] Add gfx1035 target](https://reviews.llvm.org/D104804)
 
