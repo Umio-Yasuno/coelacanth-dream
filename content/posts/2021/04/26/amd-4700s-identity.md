@@ -2,7 +2,7 @@
 title: "AMD 4700S の正体は GPU部を無効化したゲーム機向け APU だったか"
 date: 2021-04-26T21:58:29+09:00
 draft: false
-tags: [ "Zen_2", ]
+tags: [ "Zen_2", "AMD_4700S" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "CPU" ]
 noindex: false
