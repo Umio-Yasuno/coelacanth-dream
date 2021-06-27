@@ -38,6 +38,7 @@ noindex: false
 繰り返しになるがそれら命令は *RDNA 2/GFX10.3* 世代でサポートされた命令であり、GPUIDのフォーマット上では *RDNA/GFX10.1* 世代となる *gfx1013* がサポートしているのはやはり奇妙な話だ。  
 また、前回はどう活用されるのか不明とした `GFX_10A` 命令フォーマット (`GFX10_AEncoding`) だが、それら 2種の命令サポートの有無を判定するのに用いられている。  
 *RDNA 2/GFX10.3* 世代のサポート時には `GFX10_BEncoding` が追加されており、それが命令サポートの判定に用いられていた。また、*RDNA 2/GFX10.3* 世代では `V_MAC_LEGACY_F32/V_MAD_LEGACY_F32` 命令が削除され、`V_FMAC_LEGACY_F32/V_FMA_LEGACY_F32` に置き換わられており、その置き換え処理にも用いられている。[^legacy-inst]  
+`GFX10_BEncoding` に関する変更は無いため、*gfx1013* は *RDNA/GFX10.1* 同様に `V_MAC_LEGACY_F32/V_MAD_LEGACY_F32` をサポートしているものと思われる。  
 
 [^legacy-inst]: [[AMDGPU] Add MC layer support for v_fmac_legacy_f32 · llvm/llvm-project@edc37ba](https://github.com/llvm/llvm-project/commit/edc37baca6d6e4f28b7f4136e3263d3f1c3199f1#diff-e8cf20be79c2bb674c6c52704423cac97ac06963f6e2a6c9e77d027375080c1d)
 
