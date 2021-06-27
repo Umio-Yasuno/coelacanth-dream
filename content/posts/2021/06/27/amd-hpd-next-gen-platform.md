@@ -19,6 +19,11 @@ AMD APU において *System Management Unit (SMU)* 内部で実行される電�
  >
  > {{< quote >}} [[PATCH 0/3] Add SFH sensor support for newer AMD platforms](https://lore.kernel.org/linux-input/20210618081838.4156571-4-Basavaraj.Natikar@amd.com/T/#u) {{< /quote >}}
 
+{{< pindex >}}
+ * [Yellow Carp が次世代モバイルプラットフォーム?](#yc)
+ * [人感センサーの用途](#sensor)
+{{< /pindex >}}
+
 ## Yellow Carp が次世代モバイルプラットフォーム? {#yc}
 
 次世代プラットフォームとなる APU/SoC については、 *amd-pmc* ドライバーへの別パッチにて **YC** という APU/SoC に搭載される PMC の PCI ID, APIC ID が追加されている。
