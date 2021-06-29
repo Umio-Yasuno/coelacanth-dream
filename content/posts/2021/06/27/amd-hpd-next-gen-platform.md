@@ -85,7 +85,7 @@ AMD の次世代モバイルプラットフォームに搭載される人感セ�
  * [Video: CES 2021: Intel Visual Sensing Technology (Demo) | Intel Newsroom](https://newsroom.intel.com/video-archive/video-ces-2021-intel-visual-sensing-technology-demo/)
  * [Building the Industry's Best PC Experiences](https://www.intel.com/content/www/us/en/newsroom/opinion/building-industrys-best-pc-experiences.html)
 
-*Intel Visual Sensing Controller (Code Name: Clover Falls)* は AI機能を活用して PCプラットフォームをよりセキュアかつ高機能にするものと説明されており、Intel は例として人感を検出してディスプレイの明るさを自動的に調整する省電力機能を挙げている。  
+*Intel Visual Sensing Controller (Code Name: Clover Falls)* は AI機能を活用して PCプラットフォームをよりセキュアかつ高機能にするものと説明されており、Intel は例として人感を検出してディスプレイの明るさを自動的に調整する省電力機能を挙げている。ただその処理のどこに、どれだけ AI機能を活用しているかは不明。  
 *Intel Visual Sensing Technology* を採用する **Dell Latitude 9420** では、人感を検出するとスリープ状態を解除、顔認識によりログインを行い、ノートPCから離れた場合は PC をロックし、セキュリティを保つ、という機能も紹介されている。[^dell]  
 
 [^dell]: [New Latitude 9420 | Dell 日本](https://www.dell.com/ja-jp/work/shop/2-in-1%E3%83%8E%E3%83%BC%E3%83%88%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3/latitude-9420-%E3%83%8E%E3%83%BC%E3%83%88%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B32-in-1%E3%82%82%E9%81%B8%E6%8A%9E%E5%8F%AF/spd/latitude-14-9420-2-in-1-laptop)
