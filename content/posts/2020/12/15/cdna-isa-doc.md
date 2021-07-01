@@ -22,7 +22,7 @@ toc: false
 
 ## MFMA, miSIMD, AccVGPR
 
-*CDNAアーキテクチャ* では、通常の SIMDユニット、VGPR (Vector General-Purpose Registera, ベクタレジスタ) に加え、miSIMDユニット (Machine Intelligence SIMD) と AccVGPR (Accumulation VGPR) が増設された。これらはそれぞれ分けて配置され、データポートも非対称となる。  
+*CDNAアーキテクチャ* では、通常の SIMDユニット、VGPR (Vector General-Purpose Register, ベクタレジスタ) に加え、miSIMDユニット (Machine Intelligence SIMD) と AccVGPR (Accumulation VGPR) が増設された。これらはそれぞれ分けて配置され、データポートも非対称となる。  
 
 miSIMD は主に 4-way のドット積を処理し、この時の入力値は全て AccVGPR から読み込まれる。  
 
