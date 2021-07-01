@@ -35,9 +35,9 @@ summary: " "
       * [Navi10](#navi10-gfx1010)
       * [Navi12](#navi12-gfx1011)
       * [Navi14](#navi14-gfx1012)
-      * [Sienna Cichlid](#sienna_cichlid-gfx1030)
-      * [Navy Flounder](#navy_flounder-gfx1031)
-      * [Dimgrey Cavefish](#dimgrey_cavefish-gfx1032)
+      * [Sienna Cichlid/Navi21](#sienna_cichlid-gfx1030)
+      * [Navy Flounder/Navi22](#navy_flounder-gfx1031)
+      * [Dimgrey Cavefish/Navi23](#dimgrey_cavefish-gfx1032)
  * [参考リンク](#reference_title)
 
 {{< /pindex >}}
@@ -533,7 +533,7 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 
 [^3]:[Apple Pro 5500M 8 GB BIOS - TechPowerUp](https://www.techpowerup.com/vgabios/216534/apple-pro5500m-8192-191010)
 
-#### Sienna Cichlid ( gfx1030 ) {#sienna_cichlid-gfx1030}
+#### Sienna Cichlid/Navi21 ( gfx1030 ) {#sienna_cichlid-gfx1030}
 
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
@@ -567,7 +567,7 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 
 [^12]: [P4 to Git Change 1759681 by asalmanp@asalmanp-ocl-stg on 2019/03/21 1… · ROCm-Developer-Tools/ROCclr@42c005d](https://github.com/ROCm-Developer-Tools/ROCclr/commit/42c005d656a8bd99f87fa4fc86ad086701c59a86)
 
-#### Navy Flounder ( gfx1031 ) {#navy_flounder-gfx1031}
+#### Navy Flounder/Navi22 ( gfx1031 ) {#navy_flounder-gfx1031}
 
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
@@ -585,12 +585,13 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 [^14]: [P4 to Git Change 2042212 by kjayapra@1_HIPWS_LNX1_PAL on 2019/12/06 1… · ROCm-Developer-Tools/ROCclr@a35c1d2](https://github.com/ROCm-Developer-Tools/ROCclr/commit/a35c1d2f2d954363c7d2121d5334f9e7766beeae)
 [^5]:<https://github.com/ROCm-Developer-Tools/aomp-extras/blob/f3d316fe64347e697a9789f0f2499fec50024db1/utils/bin/gputable.txt#L1867>
 
-#### Dimgrey Cavefish ( gfx1032? ) {#dimgrey_cavefish-gfx1032}
+#### Dimgrey Cavefish/Navi23 ( gfx1032? ) {#dimgrey_cavefish-gfx1032}
 
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 73E0 | | |
 | 73E1 | | |
+| 73E2 | | |
 | 73E2 | | |
 | 73FF | | |
 
