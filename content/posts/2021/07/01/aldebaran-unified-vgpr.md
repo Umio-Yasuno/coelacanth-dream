@@ -9,7 +9,7 @@ noindex: false
 # summary: ""
 ---
 
-*CDNA 2 アーキテクチャ* を採用すると見られ、コンピュート向けに特化した次世代 AMD GPU *Aldebaran* では ArchVGPR (Architectural Vector General-Purpose Register) と AccVGPR (Accumulation VGPR) が統合され、512エントリのプールを共有することが明かされた。  
+*CDNA 2 アーキテクチャ* を採用すると見られ、コンピュート向けに特化した次世代 AMD GPU *Aldebaran* では Unified Register Files が実装されることが明かされた。ArchVGPR (Architectural Vector General-Purpose Register) と AccVGPR (Accumulation VGPR) が統合され、512エントリのプールを共有する。  
 ArchVGPR は通常のベクタレジスタ、AccVGPR は機械学習向けの行列演算命令 `MFMA (Matrix-Fused-Multiply-Add)` を処理する SIMDユニット専用のベクタレジスタとなる。  
 
  * [Refactor vgpr occupancy calculation for Aldebaran's new hardware capability Unified Register Files by jichangjichang · Pull Request #1371 · ROCmSoftwarePlatform/Tensile](https://github.com/ROCmSoftwarePlatform/Tensile/pull/1371)
@@ -31,7 +31,7 @@ SIMDユニットとレジスタファイルの関係についても、miSIMDユ�
 ArchVGPR と AccVGPR が統合されたことで、レジスタ使用率の広い最適化が可能になるだけでなく、AccVGPR が ArchVGPR を経由せずにデータの入出力できるよう制限が緩和される可能性がある。  
 ただ AccVGPR の使用にはオフセットを指定する形になっており、レジスタの衝突を防ぐためにも、shSIMDユニットが AccVGPR を直接扱えない点、MFMA命令の結果が常に AccVGPR へ出力する点は変わらないのではないかと思われる。  
 
-*CDNA アーキテクチャ* では miSIMD と AccVGPR を増設する形での実装という *GCN アーキテクチャ* をベースとする部分が存在したが、*CDNA 2 アーキテクチャ*, *Aldebaran* GPU でのレジスタファイル統合されたことで、アーキテクチャの進化が本格的に分岐したという印象を受ける。  
+*CDNA アーキテクチャ* では miSIMD と AccVGPR を増設する形での実装という *GCN アーキテクチャ* をベースとする部分を多く残す構成だったが、*CDNA 2 アーキテクチャ*, *Aldebaran* GPU で 2種のレジスタファイルが統合されたことで、アーキテクチャの進化が本格的に *GCN アーキテクチャ* からコンピュート向けへ分岐したという印象を受ける。  
 また、グラフィクス、ゲーミング向けは *RDNA系アーキテクチャ* が担っているが、それと *CDNA系アーキテクチャ* は完全に分かれている訳ではなく、命令のプリフェッチ機能や L2キャッシュラインのサイズなど、*RDNA系アーキテクチャ* から取り入れた新機能が *CDNA 2 アーキテクチャ* では実装されている。  
 {{< link >}} [RadeonSI に Aldebaran GPU のサポートを追加するパッチが投稿される | Coelacanth's Dream](/posts/2021/03/04/aldebaran-umd/#inst-prefetch) {{< /link >}}
 
