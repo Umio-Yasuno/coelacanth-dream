@@ -29,7 +29,7 @@ noindex: false
  >       +/* UMC regiser per channel offset */
  >       +#define UMC_V8_7_PER_CHANNEL_OFFSET_SIENNA	0x400
  >
- > 引用元: <cite>[[PATCH] drm/amdgpu: add support for umc 8.7 ras functions](https://lists.freedesktop.org/archives/amd-gfx/2020-July/051898.html)</cite>
+ > {{< quote >}} [[PATCH] drm/amdgpu: add support for umc 8.7 ras functions](https://lists.freedesktop.org/archives/amd-gfx/2020-July/051898.html) {{< /quote >}}
 
 UMC v8.7 については初見だが、`UMC_V8_7_PER_CHANNEL_OFFSET_SIENNA` から *Navi21 /Sienna Cichlid* に関連付けられたものと思われる。[Vega20](/tags/vega20)、[Arcturus](/tags/arcturus) に関連付けられているのは UMC v6.1 であり、バージョンナンバーが一気に飛んでいることとなる。しかし、ECCに対応した製品を出す計画が無かっただけで、内部的には *Navi1x* 系にもUMC のバージョンが割り振られていたのであれば自然と考えられる。  
 
@@ -51,7 +51,7 @@ UMC v8.7 については初見だが、`UMC_V8_7_PER_CHANNEL_OFFSET_SIENNA` か�
  >       #define UMC_V6_1_PER_CHANNEL_OFFSET_VG20	0x800
  >       #define UMC_V6_1_PER_CHANNEL_OFFSET_ARCT	0x400
  >
- > 引用元: <cite>[umc_v6_1.h\amdgpu\amd\drm\gpu\drivers - ~agd5f/linux](https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/amdgpu/umc_v6_1.h?h=amd-staging-drm-next-sienna_cichlid&id=4cf781c24c3bc8cc50f8013143aa20b26e9217e8)</cite>
+ > {{< quote >}} [umc_v6_1.h\amdgpu\amd\drm\gpu\drivers - ~agd5f/linux](https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/amdgpu/umc_v6_1.h?h=amd-staging-drm-next-sienna_cichlid&id=4cf781c24c3bc8cc50f8013143aa20b26e9217e8) {{< /quote >}}
 
 UMC v6.1 では値が `4` となっている。  
 比較できるファイルがこれしかないため、根拠とするには少し乏しいが、*Vega20* のスペックから、インターフェイス数を表しているのかもしれない。  
