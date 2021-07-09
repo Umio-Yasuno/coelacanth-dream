@@ -17,12 +17,12 @@ noindex: false
 だが、 *Sienna Cichlid/Navi21* が対応するメモリタイプは GDDR6 で、実際に発表された製品も GDDR6メモリのみを採用している。  
 
 記憶の片隅に置きながらそれ以上調べることはせず、新しい情報が公開されるのを待っていたが、現地時間 2021/06/08 付で *Sienna Cichlid/Navi21* をベースに、GDDR6メモリを採用しながら ECC機能に対応した **Radeon PRO W6800** が発表されたことから再度調べてみようという気になった。  
-*RDNA 2 アーキテクチャ* を採用する **Radeon PRO W6000 Series** の発表を、このブログで取り上げなかったのは意図あってのものだが、ここではどうでもいい話なので流す。そのうち雑記に書くかも。  
+*RDNA 2 アーキテクチャ* を採用する **Radeon PRO W6000 Series** の発表を、このブログで取り上げなかったのは方針について思うところがあり、意図あってのものだが、ここではどうでもいい話なので流す。そのうち雑記に書くかも。  
 
  * [New AMD Radeon PRO W6000 Series Workstation Graphics with AMD RDNA 2 Architecture and Massive 32GB of Memory to Power Demanding Architectural, Design and Media Workloads :: Advanced Micro Devices, Inc. (AMD)](https://ir.amd.com/news-events/press-releases/detail/1008/new-amd-radeon-pro-w6000-series-workstation-graphics-with)
 
 調べ直した結論から言えば、そのパッチから *Sienna Cichlid/Navi21* が HBM(2)メモリに対応するといったようなことは読み取れなかった。  
-つまりこの記事は、過去の自分に向かってお前はバカだと言うためのものとなる。  
+つまりこの記事は、過去の自分に向かってお前は間抜けだと言うためのものとなる。  
 
 ## 使われていない定数 {#unused}
 
