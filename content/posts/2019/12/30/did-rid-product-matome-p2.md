@@ -47,37 +47,37 @@ summary: " "
 #### Raven ( gfx902 ) {#raven-gfx902}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 15DD &darr; | 81 | V1807B | (45W FP5 Vega 11)
-|  | 82 | V1756B | (45W FP5 Vega 8)
-| | 83 | V1605B | (15W FP5 Vega 8)
-| | 84 | iTemp EMBEDDED | (15W FP5 Vega 6)
-| | 85 | V1202B | (15W FP5 Vega 3)
-| | 86 |  | (Embedded 65W AM4)
-| | 87 |  | (Embedded 65W AM4)
-| | 88 |  | (Embedded 65W AM4 Vega 8)
-| | C1 | 2800H? | (45W FP5 Vega 11) |
-| | C2 | 2600H? | (45W FP5 Vega 8) |
-| | C3 | 2700U | (15W FP5 Vega 10) |
-| | C4 | 2500U | (15W FP5 Vega 8) |
-| | C5 | 2200U | (15W FP5 Vega 3) |
-| | C6 | 2400G | (65W AM4 Vega 11) |
-| | C7 | | (B8 65W AM4) |
-| | C8 | 2200G | (65W AM4 Vega 8) |
-| | C9 | 2400GE[^rv-2400ge] | (35W AM4 Vega 11) |
-| | CA | 2200GE? | (35W AM4 Vega 8) |
-| | CB | 200GE /220GE /240GE | (35W AM4 Vega 3) |
-| | CC | 2300U | (15W FP5 Vega 6) |
-| | CE |  | (15W FP5 Vega 3) |
-| | D0 | PRO 2700U[^rv-pro-2700u] | (15W FP5 Vega 10) |
-| | D1 | PRO 2500U[^rv-pro-2500u] | (15W FP5 Vega 8) |
-| | D2 | | (B4 15W FP5) |
-| | D3 | PRO 2400G[^rv-pro-2400g] | (65W AM4 Vega 11) |
-| | D4 | | (B8 65W AM4) |
-| | D5 | PRO 2200G? | (65W AM4 Vega 8) |
-| | D6 | PRO 2400GE[^13] | (35W AM4 Vega 11) |
-| | D7 | PRO 2200GE[^rv-pro-2200ge] | (35W AM4 Vega 8) |
-| | D8 | | (35W AM4 Vega 3) |
-| | D9 | PRO 2300U[^rv-pro-2300u] | (15W FP5 Vega 6) |
+| 0x15DD &darr; | 0x81 | V1807B | (45W FP5 Vega 11)
+|  | 0x82 | V1756B | (45W FP5 Vega 8)
+| | 0x83 | V1605B | (15W FP5 Vega 8)
+| | 0x84 | iTemp EMBEDDED | (15W FP5 Vega 6)
+| | 0x85 | V1202B | (15W FP5 Vega 3)
+| | 0x86 |  | (Embedded 65W AM4)
+| | 0x87 |  | (Embedded 65W AM4)
+| | 0x88 |  | (Embedded 65W AM4 Vega 8)
+| | 0xC1 | 2800H? | (45W FP5 Vega 11) |
+| | 0xC2 | 2600H? | (45W FP5 Vega 8) |
+| | 0xC3 | 2700U | (15W FP5 Vega 10) |
+| | 0xC4 | 2500U | (15W FP5 Vega 8) |
+| | 0xC5 | 2200U | (15W FP5 Vega 3) |
+| | 0xC6 | 2400G | (65W AM4 Vega 11) |
+| | 0xC7 | | (B8 65W AM4) |
+| | 0xC8 | 2200G | (65W AM4 Vega 8) |
+| | 0xC9 | 2400GE[^rv-2400ge] | (35W AM4 Vega 11) |
+| | 0xCA | 2200GE? | (35W AM4 Vega 8) |
+| | 0xCB | 200GE /220GE /240GE | (35W AM4 Vega 3) |
+| | 0xCC | 2300U | (15W FP5 Vega 6) |
+| | 0xCE |  | (15W FP5 Vega 3) |
+| | 0xD0 | PRO 2700U[^rv-pro-2700u] | (15W FP5 Vega 10) |
+| | 0xD1 | PRO 2500U[^rv-pro-2500u] | (15W FP5 Vega 8) |
+| | 0xD2 | | 0x(B4 15W FP5) |
+| | 0xD3 | PRO 2400G[^rv-pro-2400g] | (65W AM4 Vega 11) |
+| | 0xD4 | | 0x(B8 65W AM4) |
+| | 0xD5 | PRO 2200G? | (65W AM4 Vega 8) |
+| | 0xD6 | PRO 2400GE[^13] | (35W AM4 Vega 11) |
+| | 0xD7 | PRO 2200GE[^rv-pro-2200ge] | (35W AM4 Vega 8) |
+| | 0xD8 | | (35W AM4 Vega 3) |
+| | 0xD9 | PRO 2300U[^rv-pro-2300u] | (15W FP5 Vega 6) |
 ||
 | | ? | V1404I | (15W FP5 Vega 8) |
 
@@ -94,38 +94,38 @@ summary: " "
 #### Picasso ( gfx902 ) {#picasso-gfx902}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 15D8 &darr; | 00 | | Winston (Vega 8 WS) |
-| | 93 | | (Vega 1 Raven2? /Dali? /Pollock?) |
-| | A1 | | (Vega 10) |
-| | A2 | | (Vega 8) |
-| | A3 | | (Vega 6) |
-| | A4 | | (Vega 3) |
-| | B1 | | (Vega 10) |
-| | B2 | | (Vega 8) |
-| | B3 | | (Vega 6) |
-| | B4 | | (Vega 3) |
-| | C1 | 3700C/U[^7] /3750H | (Vega 10) |
-| | C2 | 3500C/U[^7] /3550H | (Vega 8) |
-| | C3 | | (Vega 6) |
-| | C4 | &rarr; [Raven2](#raven2-gfx909) 3200U | |
-| | C5 | &rarr; [Raven2](#raven2-gfx909) 300U | |
-| | C8 | 3350G[^pco-3350g]/3400G | (AM4 Vega 11) |
-| | C9 | 3200G | (AM4 Vega 8) |
-| | CA | | (AM4 Vega 11) |
-| | CB | | (AM4 Vega 8) |
-| | CC | &rarr; [Raven2](#raven2-gfx909) 300GE /3000G | |
-| | CD | | (AM4 Vega 2) |
-| | D1 | PRO 3700U | (Vega 10) |
-| | D2 | PRO 3500U | (Vega 8) |
-| | D3 | (PRO) 3300U | (Vega 6) |
-| | D4 | | (Vega 3) |
-| | D8 | PRO 3400G[^pco-pro-3400g] | (AM4 Vega 11) |
-| | D9 | PRO 3200G[^pco-pro-3200g] | (AM4 Vega 8) |
-| | DA | PRO 3400GE[^pco-pro-3400ge] | (AM4 Vega 11) |
-| | DB | PRO 3200GE[^pco-pro-3200ge] | (AM4 Vega 8) |
-| | DC | PRO 300/320GE?? | (AM4 Vega 3) |
-| | E1 | 3780U | Winston (Surface Edition Vega 11) |
-| | E2 | 3580U | Winston (Surface Edition Vega 8) |
+| 0x15D8 &darr; | 00 | | Winston (Vega 8 WS) |
+| | 0x93 | | (Vega 1 Raven2? /Dali? /Pollock?) |
+| | 0xA1 | | (Vega 10) |
+| | 0xA2 | | (Vega 8) |
+| | 0xA3 | | (Vega 6) |
+| | 0xA4 | | (Vega 3) |
+| | 0xB1 | | (Vega 10) |
+| | 0xB2 | | (Vega 8) |
+| | 0xB3 | | (Vega 6) |
+| | 0xB4 | | (Vega 3) |
+| | 0xC1 | 3700C/U[^7] /3750H | (Vega 10) |
+| | 0xC2 | 3500C/U[^7] /3550H | (Vega 8) |
+| | 0xC3 | | (Vega 6) |
+| | 0xC4 | &rarr; [Raven2](#raven2-gfx909) 3200U | |
+| | 0xC5 | &rarr; [Raven2](#raven2-gfx909) 300U | |
+| | 0xC8 | 3350G[^pco-3350g]/3400G | (AM4 Vega 11) |
+| | 0xC9 | 3200G | (AM4 Vega 8) |
+| | 0xCA | | (AM4 Vega 11) |
+| | 0xCB | | (AM4 Vega 8) |
+| | 0xCC | &rarr; [Raven2](#raven2-gfx909) 300GE /3000G | |
+| | 0xCD | | (AM4 Vega 2) |
+| | 0xD1 | PRO 3700U | (Vega 10) |
+| | 0xD2 | PRO 3500U | (Vega 8) |
+| | 0xD3 | (PRO) 3300U | (Vega 6) |
+| | 0xD4 | | (Vega 3) |
+| | 0xD8 | PRO 3400G[^pco-pro-3400g] | (AM4 Vega 11) |
+| | 0xD9 | PRO 3200G[^pco-pro-3200g] | (AM4 Vega 8) |
+| | 0xDA | PRO 3400GE[^pco-pro-3400ge] | (AM4 Vega 11) |
+| | 0xDB | PRO 3200GE[^pco-pro-3200ge] | (AM4 Vega 8) |
+| | 0xDC | PRO 300/320GE?? | (AM4 Vega 3) |
+| | 0xE1 | 3780U | Winston (Surface Edition Vega 11) |
+| | 0xE2 | 3580U | Winston (Surface Edition Vega 8) |
 ||
 | | ? | 300UGE | (65W AM4 Vega 3) |
 | | ? | 3150G | (65W AM4 Vega 3) |
@@ -148,13 +148,13 @@ summary: " "
 #### Raven2 ( gfx909 ) {#raven2-gfx909}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 15DD &darr; | E1 | | (15W FP5 Vega 3) |
-| | E2 | | (35W AM4 Vega 3) |
-| 15D8 &darr; | 91[^10] | R1606G | Embedded |
-| | 92 | R1505G | Embedded |
-| | C4 | 3200U[^rv2-3200u] | (FP5 15W Vega 3), == 3250C? |
-| | C5 | 300U[^rv2-300u] | (Vega 3) |
-| | CC | 300GE[^rv2-300ge] /3000G[^rv2-3000g] | (AM4 Vega 3) |
+| 0x15DD &darr; | 0xE1 | | (15W FP5 Vega 3) |
+| | 0xE2 | | (35W AM4 Vega 3) |
+| 0x15D8 &darr; | 0x91[^10] | R1606G | Embedded |
+| | 0x92 | R1505G | Embedded |
+| | 0xC4 | 3200U[^rv2-3200u] | (FP5 15W Vega 3), == 3250C? |
+| | 0xC5 | 300U[^rv2-300u] | (Vega 3) |
+| | 0xCC | 300GE[^rv2-300ge] /3000G[^rv2-3000g] | (AM4 Vega 3) |
 
 [Page Top](#page_index)
 
@@ -167,14 +167,14 @@ summary: " "
 ##### Dali ( gfx909 ) {#dali-gfx909}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 15D8 &darr; | C4 | 3250C[^7] | (Vega 3) |
-| | CD | Silver 3050C[^7] | (Vega 2) |
-| | CE | Gold 3150C[^7] | (Vega 3) |
-| | CF | R1305G | (6W[^8]) |
-| | DE[^9] | | |
-| | DF[^9] | | |
-| | E3[^9] | | (6W[^8] Vega 3) |
-| | E4[^9] | R1102G[^11] | (6W[^8] Vega 3) |
+| 0x15D8 &darr; | 0xC4 | 3250C[^7] | (Vega 3) |
+| | 0xCD | Silver 3050C[^7] | (Vega 2) |
+| | 0xCE | Gold 3150C[^7] | (Vega 3) |
+| | 0xCF | R1305G | (6W[^8]) |
+| | 0xDE[^9] | | |
+| | 0xDF[^9] | | |
+| | 0xE3[^9] | | (6W[^8] Vega 3) |
+| | 0xE4[^9] | R1102G[^11] | (6W[^8] Vega 3) |
 ||
 | | ? | 3020e | |
 | | ? | Silver 3050e | |
@@ -190,11 +190,11 @@ summary: " "
 ##### Pollock ( gfx909 ) {#pollock-gfx909}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 15D8 &darr; | 94 | | |
-| | 95 | | |
-| | E9 | | (Samples FT5)[^7] |
-| | EA | | (Production FT5)[^7] |
-| | EB | | |
+| 0x15D8 &darr; | 0x94 | | |
+| | 0x95 | | |
+| | 0xE9 | | (Samples FT5)[^7] |
+| | 0xEA | | (Production FT5)[^7] |
+| | 0xEB | | |
 | | | 3015e | |
 
 [Page Top](#page_index)
@@ -206,11 +206,11 @@ summary: " "
 
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 15D9 &darr; | 91 | | **?** |
-| | 92 | | |
-| | C1 | | |
-| | C2 | | |
-| | C3 | | |
+| 0x15D9 &darr; | 0x91 | | **?** |
+| | 0x92 | | |
+| | 0xC1 | | |
+| | 0xC2 | | |
+| | 0xC3 | | |
 
 <!--
 #### FireFlight
@@ -224,39 +224,40 @@ DG02SRTBP4MFA
 ### Renoir ( gfx90c ) {#renoir-gfx90c}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 1636 &darr; | 00 | | (BringUp FP6) |
-| | C1 | Extreme Edition /4800U[^rn-4800u] | (B12 15W FP6) |
-| | C2 | 4700U[^rn-4700u] | (B10 15W FP6) |
-| | C3 | 4500U[^rn-4500u] | (B8 15W FP6) |
-| | C4 | 4300U[^rn-4300u] | (B6 15W FP6) |
-| | C5 | 4900HS[^rn-4900hs] | (B12 45W FP6) |
-| | C6 | 4800H[^rn-4800h]/HS[^rn-4800hs] | (B10 45W FP6) |
-| | C7 | 4600H[^rn-4600h] | (B8 45W FP6) |
-| | C8 | | (B10 65W AM4) |
-| | C9 | | (B8 65W AM4) |
-| | CA | | (B6 65W AM4) |
-| | CB | | (B10 35W AM4) |
-| | CC | | (B8 35W AM4) |
-| | CD | | (B6 35W AM4) |
-| | CE | 4600U?[^rn-4600u] | (B4 35W AM4) |
-| | D1 | PRO 4750U[^rn-pro-4750u] | (B12B 15W FP6) |
-| | D2 | | (B10B 15W FP6) |
-| | D3 | PRO 4650U[^rn-pro-4650u] | (B8B 15W FP6) |
-| | D4 | PRO 4450U[^rn-pro-4450u] | (B6B 15W FP6) |
-| | D5 | | (B12B 45W FP6) |
-| | D6 | | (B10B 45W FP6) |
-| | D7 | | (B8B 45W AM4) |
-| | D8 | PRO 4750G[^pro-desktop-65w-rn] | (B10B 65W AM4) |
-| | D9 | PRO 4650G[^pro-desktop-65w-rn] | (B8B 65W AM4) |
-| | DA | PRO 4350G[^pro-desktop-65w-rn] | (B6B 65W AM4) |
-| | DB | | (B10B 35W AM4) |
-| | DC | | (B8B 35W AM4) |
-| | DD | | (B6B 35W AM4) |
-| | DE | | (B4B 35W AM4) |
-| | E1 | | Acton |
-| | E2 | | Acton |
-| | E3 | | Acton |
-| | F0 | 4900H[^rn-4900h] | |
+| 0x15E7[^rn-15e7h] | | | |
+| 0x1636 &darr; | 0x00 | | (BringUp FP6) |
+| | 0xC1 | Extreme Edition /4800U[^rn-4800u] | (B12 15W FP6) |
+| | 0xC2 | 4700U[^rn-4700u] | (B10 15W FP6) |
+| | 0xC3 | 4500U[^rn-4500u] | (B8 15W FP6) |
+| | 0xC4 | 4300U[^rn-4300u] | (B6 15W FP6) |
+| | 0xC5 | 4900HS[^rn-4900hs] | (B12 45W FP6) |
+| | 0xC6 | 4800H[^rn-4800h]/HS[^rn-4800hs] | (B10 45W FP6) |
+| | 0xC7 | 4600H[^rn-4600h] | (B8 45W FP6) |
+| | 0xC8 | | (B10 65W AM4) |
+| | 0xC9 | | (B8 65W AM4) |
+| | 0xCA | | (B6 65W AM4) |
+| | 0xCB | | (B10 35W AM4) |
+| | 0xCC | | (B8 35W AM4) |
+| | 0xCD | | (B6 35W AM4) |
+| | 0xCE | 4600U?[^rn-4600u] | (B4 35W AM4) |
+| | 0xD1 | PRO 4750U[^rn-pro-4750u] | (B12B 15W FP6) |
+| | 0xD2 | | (B10B 15W FP6) |
+| | 0xD3 | PRO 4650U[^rn-pro-4650u] | (B8B 15W FP6) |
+| | 0xD4 | PRO 4450U[^rn-pro-4450u] | (B6B 15W FP6) |
+| | 0xD5 | | (B12B 45W FP6) |
+| | 0xD6 | | (B10B 45W FP6) |
+| | 0xD7 | | (B8B 45W AM4) |
+| | 0xD8 | PRO 4750G[^pro-desktop-65w-rn] | (B10B 65W AM4) |
+| | 0xD9 | PRO 4650G[^pro-desktop-65w-rn] | (B8B 65W AM4) |
+| | 0xDA | PRO 4350G[^pro-desktop-65w-rn] | (B6B 65W AM4) |
+| | 0xDB | | (B10B 35W AM4) |
+| | 0xDC | | (B8B 35W AM4) |
+| | 0xDD | | (B6B 35W AM4) |
+| | 0xDE | | (B4B 35W AM4) |
+| | 0xE1 | | Acton |
+| | 0xE2 | | Acton |
+| | 0xE3 | | Acton |
+| | 0xF0 | 4900H[^rn-4900h] | |
 ||
 | | ? | 4700G |
 | | ? | 4600G |
@@ -268,6 +269,7 @@ DG02SRTBP4MFA
 | | ? | PRO 4650GE |
 | | ? | PRO 4350GE |
 
+[^rn-15e7h]: [[PATCH] drm/amdgpu: add another Renior DID](https://lists.freedesktop.org/archives/amd-gfx/2021-July/066502.html)
 [^rn-pro-4650u]: [Panic on boot with Renoir when testing drm-live-devel-20200906.img · Issue #23 · freebsd/drm-kmod](https://github.com/freebsd/drm-kmod/issues/23)
 [^rn-4800u]: [New Ryzen 4800U Laptop with Radeon RX 5500M kernel freezes / Kernel & Hardware / Arch Linux Forums](https://bbs.archlinux.org/viewtopic.php?id=257345)
 [^rn-4700u]: <https://www.mail-archive.com/tech@openbsd.org/msg59151.html>
@@ -287,8 +289,8 @@ DG02SRTBP4MFA
 ### Lucienne ( gfx90c ) {#lucienne-gfx90c}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 164C &darr; | | | |
-| | C2 | 5500U[^lcn-5500u] | |
+| 0x164C &darr; | | | |
+| | 0xC2 | 5500U[^lcn-5500u] | |
 
 [^lcn-5500u]: <https://openbenchmarking.org/system/2105266-IB-5500USYNT82/1/lspci>
 
@@ -296,7 +298,7 @@ DG02SRTBP4MFA
 ### Cezanne ( gfx90c ) {#cezanne-gfx90c}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 1638 &darr; | | | |
+| 0x1638 &darr; | | | |
 <!--
    Board:
       Celadon: AMD Mobile Reference Board?
@@ -319,7 +321,7 @@ DG02SRTBP4MFA
 
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 163F &darr; | | | |
+| 0x163F &darr; | | | |
 
 [Page Top](#page_index)
 
@@ -328,40 +330,40 @@ DG02SRTBP4MFA
 #### Vega10 ( gfx900 ) {#vega10-gfx900}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 6860 &darr; | 00 | Radeon Instinct MI25 &darr; | (Vega10 GLXT SERVER) &darr; |
-| | 01 | | |
-| | 02 | | |
-| | 03 | Radeon Pro V340 | |
-| | 04 | Radeon Instinct MI25x2 | |
-| | 07 | Radeon Pro V320 (/V340?) [^6]| |
-| | C0 | Radeon Pro Vega 48 /56 /64 /64X[^1] | ? |
-| 6861 | 00 | Radeon Pro (TM) WX 9100 | (Vega10 GLXT) |
-| 6862 | 00 | Radeon Pro SSG | (Vega10 SSG) |
-| 6863 | 00 | Radeon Vega Frontier Edition | (Vega10 GLXTX) |
-| 6864 &darr; | 00 | | |
-| | 03 | Radeon Pro V340 | (Vega10 GLXT SERVER) &darr; |
-| | 04 | Instinct MI25x2 | |
-| | 05 | Radeon Pro V340 | |
-| 6867 | 00 | Radeon Pro Vega 56 | (Vega10 XLA) |
-| 6868 | 00 | Radeon (TM) Pro WX 8200 | (Vega10 GLXL) |
-| 6869 | 00 | | (Vega10 XGA) |
-| 686A | 00 | | (Vega10 LEA) |
-| 686B | 00 | Radeon Pro Vega 64X | (Vega10 XTXA) |
-| 686C &darr; | 00 | Radeon Instinct MI25 MxGPU &darr; | (Vega10 GLXT SERVER VF) &darr; |
-| | 01 | | |
-| | 02 | | |
-| | 03 | Radeon Pro V340 MxGPU | |
-| | 04 | Radeon Instinct MI25x2 MxGPU | |
-| | 05 | Radeon Pro V340 MxGPU | |
-| | C1 | | |
-| 686D | 00 | | (Vega10 GLXTA) |
-| 686E | 00 | | (Vega10 GLXLA) |
-| 687F &darr; | 01 | Radeon RX Vega | (Vega10 XT - Blade) |
-| | C0 | Radeon RX Vega | (Vega10 XTX) |
-| | C1 | Radeon RX Vega (64) | (Vega10 DESKTOP XT) |
-| | C3 | Radeon RX Vega (56) | (Vega10 XL) |
-| | C4 | | (Vega10 XL) |
-| | C7 | Radeon RX Vega | (Vega10 XL) |
+| 0x6860 &darr; | 0x00 | Radeon Instinct MI25 &darr; | (Vega10 GLXT SERVER) &darr; |
+| | 0x01 | | |
+| | 0x02 | | |
+| | 0x03 | Radeon Pro V340 | |
+| | 0x04 | Radeon Instinct MI25x2 | |
+| | 0x07 | Radeon Pro V320 (/V340?) [^6]| |
+| | 0xC0 | Radeon Pro Vega 48 /56 /64 /64X[^1] | ? |
+| 0x6861 | 0x00 | Radeon Pro (TM) WX 9100 | (Vega10 GLXT) |
+| 0x6862 | 0x00 | Radeon Pro SSG | (Vega10 SSG) |
+| 0x6863 | 0x00 | Radeon Vega Frontier Edition | (Vega10 GLXTX) |
+| 0x6864 &darr; | 00 | | |
+| | 0x03 | Radeon Pro V340 | (Vega10 GLXT SERVER) &darr; |
+| | 0x04 | Instinct MI25x2 | |
+| | 0x05 | Radeon Pro V340 | |
+| 0x6867 | 00 | Radeon Pro Vega 56 | (Vega10 XLA) |
+| 0x6868 | 00 | Radeon (TM) Pro WX 8200 | (Vega10 GLXL) |
+| 0x6869 | 00 | | (Vega10 XGA) |
+| 0x686A | 00 | | (Vega10 LEA) |
+| 0x686B | 00 | Radeon Pro Vega 64X | (Vega10 XTXA) |
+| 0x686C &darr; | 00 | Radeon Instinct MI25 MxGPU &darr; | (Vega10 GLXT SERVER VF) &darr; |
+| | 0x01 | | |
+| | 0x02 | | |
+| | 0x03 | Radeon Pro V340 MxGPU | |
+| | 0x04 | Radeon Instinct MI25x2 MxGPU | |
+| | 0x05 | Radeon Pro V340 MxGPU | |
+| | 0xC1 | | |
+| 0x686D | 00 | | (Vega10 GLXTA) |
+| 0x686E | 00 | | (Vega10 GLXLA) |
+| 0x687F &darr; | 01 | Radeon RX Vega | (Vega10 XT - Blade) |
+| | 0xC0 | Radeon RX Vega | (Vega10 XTX) |
+| | 0xC1 | Radeon RX Vega (64) | (Vega10 DESKTOP XT) |
+| | 0xC3 | Radeon RX Vega (56) | (Vega10 XL) |
+| | 0xC4 | | (Vega10 XL) |
+| | 0xC7 | Radeon RX Vega | (Vega10 XL) |
 
 [Page Top](#page_index)
 
@@ -371,57 +373,57 @@ DG02SRTBP4MFA
 #### Vega12 ( gfx904 ) {#vega12-gfx904}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 69A0 | 00 | | (Vega12 GL MXT) |
-| 69A1 | 00 | | (Vega12 GL MXL) |
-| 69A2 | 00 | | (Vega12 GL XL) |
-| 69A3 | 00 | | (Vega12 Reserved) |
-| 69AF &darr; | C0 | Radeon Pro Vega 20 | (Vega12 XTA) |
-| | C1 | | (Vega12 MXT) |
-| | C3 | | (Vega12 MLP) |
-| | C7 | Radeon Pro Vega 16 | (Vega12 XLA) |
-| | CF | | (Vega12 XL) |
-| | FF | | (Vega12 LE) |
+| 0x69A0 | 0x00 | | (Vega12 GL MXT) |
+| 0x69A1 | 0x00 | | (Vega12 GL MXL) |
+| 0x69A2 | 0x00 | | (Vega12 GL XL) |
+| 0x69A3 | 0x00 | | (Vega12 Reserved) |
+| 0x69AF &darr; | 0xC0 | Radeon Pro Vega 20 | (Vega12 XTA) |
+| | 0xC1 | | (Vega12 MXT) |
+| | 0xC3 | | (Vega12 MLP) |
+| | 0xC7 | Radeon Pro Vega 16 | (Vega12 XLA) |
+| | 0xCF | | (Vega12 XL) |
+| | 0xFF | | (Vega12 LE) |
 
 [Page Top](#page_index)
 
 #### Vega20 ( gfx906 ) {#vega20-gfx906}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 66A0 | 00 | Radeon Instinct | |
-| 66A1 &darr; | 00 | | (Server XT 32GB) |
-| | 02 | MI50 32GB? | |
-| | 03 | | |
-| | 06 | Radeon Pro VII | (Vega20 WKS GL-XE) |
-| 66A2 &darr; | 00 | | |
-| | 02 | | |
-| 66A3 | 00 | Radeon Pro Vega II (Duo) | |
-| 66A4 | 00 | | |
-| 66A7 | 00 | | |
-| 66AF &darr; | C0 | | |
-| | C1 | Radeon VII | (Vega20 XT) |
-| | C3 | | |
-| | C7 | | |
-| | CF | | |
-| | F6 | | |
+| 0x66A0 | 00 | Radeon Instinct | |
+| 0x66A1 &darr; | 00 | | (Server XT 32GB) |
+| | 0x02 | MI50 32GB? | |
+| | 0x03 | | |
+| | 0x06 | Radeon Pro VII | (Vega20 WKS GL-XE) |
+| 0x66A2 &darr; | 00 | | |
+| | 0x02 | | |
+| 0x66A3 | 00 | Radeon Pro Vega II (Duo) | |
+| 0x66A4 | 00 | | |
+| 0x66A7 | 00 | | |
+| 0x66AF &darr; | C0 | | |
+| | 0xC1 | Radeon VII | (Vega20 XT) |
+| | 0xC3 | | |
+| | 0xC7 | | |
+| | 0xCF | | |
+| | 0xF6 | | |
 [Page Top](#page_index)
 
 #### Arcturus ( gfx908 ) {#arcturus-gfx908}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 7388 | | | |
-| 738C | | MI100[^5] | |
-| 738E | | | |
-| 7390 | | | (Arcturus VF) |
+| 0x7388 | | | |
+| 0x738C | | MI100[^5] | |
+| 0x738E | | | |
+| 0x7390 | | | (Arcturus VF) |
 
 [Page Top](#page_index)
 
-#### Aldebara ( gfx90a ) {#aldebaran-gfx90a}
+#### Aldebaran ( gfx90a ) {#aldebaran-gfx90a}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 7408 | | | |
-| 740C | | | |
-| 740F | | | |
-| 7410 | | | (Aldebaran VF)[^aldebaran-vf] |
+| 0x7408 | | | |
+| 0x740C | | | |
+| 0x740F | | | |
+| 0x7410 | | | (Aldebaran VF)[^aldebaran-vf] |
 
 [Page Top](#page_index)
 
@@ -435,39 +437,39 @@ Navi LITE 13///\\\E9:00
 #### Navi10 ( gfx1010 ) {#navi10-gfx1010}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 66AF &darr; | 70 | | (Navi10 XTA, Fake DID?) |
-| | 71 | | (Fake DID?) |
-| | 72 | | (Fake DID?) |
-| | 73 | | (Fake DID?) |
-| | F0 | | (Navi10 XTX, Fake DID?[^2]) |
-| | F1 | | (Navi10 XT, Fake DID?[^2]) |
-| | F2 | | (Navi10 XL, Fake DID?[^2]) |
-| | F3 | | (Navi10 XM, 12Gbps, Fake DID?) |
-| | F4 | | (12Gbps, Fake DID?) |
-| | F5 | | (12Gbps, Fake DID?) |
-| | F6 | | (Navi10 XME Fake DID?[^2]) |
-| 7310 | 00 | Radeon Pro W5700X | (Navi10 GL-XTA) |
-| 7312 | 00 | Radeon Pro W5700 | (Navi10 Pro-XL[^4]) |
-| 7318 | 40 | | (Navi10 XTA) |
-| 7319 | 40 | Radeon Pro 5700 XT | (Navi10 XTMA) |
-| 731A | 40 | | |
-| 731B | 40 | Radeon Pro 5700 | (Navi10 XGA) |
-| 731E &darr; | C6 | RX 5700XTB | for Blockchain |
-| | C7 | RX 5700B | for Blockchain |
-| 731F &darr; | C0 | RX 5700 XT 50th | (Navi10 XTX) |
-| | C1 | RX 5700 XT | (Navi10 XT) |
-| | C2 | RX 5600M | (Navi10 XME) |
-| | C3 | RX 5700M | |
-| | C4 | RX 5700 | (Navi10 XL) |
-| | C5 | RX 5700 XT | |
-| | C7 |  | |
-| | CA | RX 5600 XT | (Navi10 XLE) |
-| | CB | RX 5600 | (Navi10 XE) |
-| | E1 | | |
-| | E2 | | |
-| | E3 | | |
-| | E7 | | |
-| | EB | | |
+| 0x66AF &darr; | 0x70 | | (Navi10 XTA, Fake DID?) |
+| | 0x71 | | (Fake DID?) |
+| | 0x72 | | (Fake DID?) |
+| | 0x73 | | (Fake DID?) |
+| | 0xF0 | | (Navi10 XTX, Fake DID?[^2]) |
+| | 0xF1 | | (Navi10 XT, Fake DID?[^2]) |
+| | 0xF2 | | (Navi10 XL, Fake DID?[^2]) |
+| | 0xF3 | | (Navi10 XM, 12Gbps, Fake DID?) |
+| | 0xF4 | | (12Gbps, Fake DID?) |
+| | 0xF5 | | (12Gbps, Fake DID?) |
+| | 0xF6 | | (Navi10 XME Fake DID?[^2]) |
+| 0x7310 | 0x00 | Radeon Pro W5700X | (Navi10 GL-XTA) |
+| 0x7312 | 0x00 | Radeon Pro W5700 | (Navi10 Pro-XL[^4]) |
+| 0x7318 | 0x40 | | (Navi10 XTA) |
+| 0x7319 | 0x40 | Radeon Pro 5700 XT | (Navi10 XTMA) |
+| 0x731A | 0x40 | | |
+| 0x731B | 0x40 | Radeon Pro 5700 | (Navi10 XGA) |
+| 0x731E &darr; | 0xC6 | RX 5700XTB | for Blockchain |
+| | 0xC7 | RX 5700B | for Blockchain |
+| 0x731F &darr; | 0xC0 | RX 5700 XT 50th | (Navi10 XTX) |
+| | 0xC1 | RX 5700 XT | (Navi10 XT) |
+| | 0xC2 | RX 5600M | (Navi10 XME) |
+| | 0xC3 | RX 5700M | |
+| | 0xC4 | RX 5700 | (Navi10 XL) |
+| | 0xC5 | RX 5700 XT | |
+| | 0xC7 |  | |
+| | 0xCA | RX 5600 XT | (Navi10 XLE) |
+| | 0xCB | RX 5600 | (Navi10 XE) |
+| | 0xE1 | | |
+| | 0xE2 | | |
+| | 0xE3 | | |
+| | 0xE7 | | |
+| | 0xEB | | |
 
 [Page Top](#page_index)
 
@@ -477,17 +479,17 @@ Navi LITE 13///\\\E9:00
 #### Navi12 ( gfx1011 ) {#navi12-gfx1011}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 69B0 &darr; | 71 | | |
-| | F1 | | |
-| | F3 | | |
-| 7360 &darr; | 40 | | |
-| | 41 | Pro 5600M | |
-| | C1 | | |
-| | C3 | Radeon Pro V520 | |
-| | C7 | | (no video support)[^no-video-navi12] |
-| 7362 | 71 | | (Navi12 VF) |
-| | C1 | | (Navi12 VF) |
-| | C3 | | (Navi12 VF) (AWS) |
+| 0x69B0 &darr; | 0x71 | | |
+| | 0xF1 | | |
+| | 0xF3 | | |
+| 0x7360 &darr; | 0x40 | | |
+| | 0x41 | Pro 5600M | |
+| | 0xC1 | | |
+| | 0xC3 | Radeon Pro V520 | |
+| | 0xC7 | | (no video support)[^no-video-navi12] |
+| 0x7362 | 0x71 | | (Navi12 VF) |
+| | 0xC1 | | (Navi12 VF) |
+| | 0xC3 | | (Navi12 VF) (AWS) |
 
 [Page Top](#page_index)
 
@@ -497,33 +499,33 @@ Navi LITE 13///\\\E9:00
 #### Navi14 ( gfx1012 ) {#navi14-gfx1012}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 67DF &darr; | 3C | | (Navi14 Pro-? Fake DID?) |
-|  | 3D | | (Navi14 Pro-? Fake DID?) |
-|  | 3E | | (Navi14 Pro-? Fake DID?) |
-|  | 3F | | (Navi14 Pro-XLM Fake DID?) |
-|  | F2 | | (Navi14 XTM Fake DID?[^2]) |
-|  | F3 | | (Navi14 XLM Fake DID?[^2]) |
-|  | F4 | | (Navi14 XT Fake DID?[^2]) |
-|  | F5 | | (Navi14 XL Fake DID??) |
-|  | F6 | | (Navi14 XTX Fake DID?[^2]) |
-| 7340 &darr; | 00 | Radeon Pro W5500X | Falcon GL-XTA |
-| | 40 | Radeon Pro 5500M | (Navi14 ULA[^3]) |
-| | 41 | Radeon Pro 5500 XT | Falcon XTA 8G |
-| | 43 | Radeon Pro 5300M | |
-| | 47 | Radeon Pro 5300 | Falcon XLXA | 
-| | 70 | | |
-| | C1 | RX 5500M | (Navi14 XTM) |
-| | C3 | RX 5300M | (Navi14 XLM) |
-| | C5 | RX 5500 XT | (Navi14 XTX) |
-| | C7 | RX 5500 | (Navi14 XT) |
-| | C9 | RX 5500XTB | for Blockchain |
-| | CF | RX 5300 | (Navi14 XL?) |
-| | F2 | | |
-| | F3 | | |
-| 7341 | 00 | Radeon Pro W5500 | (Navi14 Pro-XL) |
-| 7343 | 00 | | |
-| 7347 | 00 | Radeon Pro W5500M | (Navi14 Pro-XTM) |
-| 734F | 00 | Radeon Pro W5300M | (Navi14 Pro-XLM) |
+| 0x67DF &darr; | 0x3C | | (Navi14 Pro-? Fake DID?) |
+| | 0x3D | | (Navi14 Pro-? Fake DID?) |
+| | 0x3E | | (Navi14 Pro-? Fake DID?) |
+| | 0x3F | | (Navi14 Pro-XLM Fake DID?) |
+| | 0xF2 | | (Navi14 XTM Fake DID?[^2]) |
+| | 0xF3 | | (Navi14 XLM Fake DID?[^2]) |
+| | 0xF4 | | (Navi14 XT Fake DID?[^2]) |
+| | 0xF5 | | (Navi14 XL Fake DID??) |
+| | 0xF6 | | (Navi14 XTX Fake DID?[^2]) |
+| 0x7340 &darr; | 0x00 | Radeon Pro W5500X | Falcon GL-XTA |
+| | 0x40 | Radeon Pro 5500M | (Navi14 ULA[^3]) |
+| | 0x41 | Radeon Pro 5500 XT | Falcon XTA 8G |
+| | 0x43 | Radeon Pro 5300M | |
+| | 0x47 | Radeon Pro 5300 | Falcon XLXA | 
+| | 0x70 | | |
+| | 0xC1 | RX 5500M | (Navi14 XTM) |
+| | 0xC3 | RX 5300M | (Navi14 XLM) |
+| | 0xC5 | RX 5500 XT | (Navi14 XTX) |
+| | 0xC7 | RX 5500 | (Navi14 XT) |
+| | 0xC9 | RX 5500XTB | for Blockchain |
+| | 0xCF | RX 5300 | (Navi14 XL?) |
+| | 0xF2 | | |
+| | 0xF3 | | |
+| 0x7341 | 0x00 | Radeon Pro W5500 | (Navi14 Pro-XL) |
+| 0x7343 | 0x00 | | |
+| 0x7347 | 0x00 | Radeon Pro W5500M | (Navi14 Pro-XTM) |
+| 0x734F | 0x00 | Radeon Pro W5300M | (Navi14 Pro-XLM) |
 
 [Page Top](#page_index)
 
@@ -537,30 +539,30 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 731F &darr; | 50 | |
-| | 51 | | |
-| | D0 | | |
-| | D1 | | |
-| | D3 | | |
-| | DF | | |
-| 73A0 | 00 | |
-| 73A1 | 00 | |
-| 73A2 | 00 | |
-| 73A3 | 00 | Radeon PRO W6800 |
-| 73AB | 00 | |
-| 73AE | | |
-| 73AF | | |
-| 73BD | | |
-| 73BF &darr; | 40 | |
-| | 41 | | |
-| | C0 | RX 6900 XT | |
-| | C1 | RX 6800 XT | |
-| | C3 | RX 6800 | |
-| | C7 | | |
-| | CF | | |
-| | D0 | | |
-| | D1 | | |
-| | D3 | | |
+| 0x731F &darr; | 0x50 | |
+| | 0x51 | | |
+| | 0xD0 | | |
+| | 0xD1 | | |
+| | 0xD3 | | |
+| | 0xDF | | |
+| 0x73A0 | 0x00 | |
+| 0x73A1 | 0x00 | |
+| 0x73A2 | 0x00 | |
+| 0x73A3 | 0x00 | Radeon PRO W6800 |
+| 0x73AB | 0x00 | |
+| 0x73AE | | |
+| 0x73AF | | |
+| 0x73BD | | |
+| 0x73BF &darr; | 0x40 | |
+| | 0x41 | | |
+| | 0xC0 | RX 6900 XT | |
+| | 0xC1 | RX 6800 XT | |
+| | 0xC3 | RX 6800 | |
+| | 0xC7 | | |
+| | 0xCF | | |
+| | 0xD0 | | |
+| | 0xD1 | | |
+| | 0xD3 | | |
 
 
 <!--  Navi21: gfx1030 [^12]   -->
@@ -571,16 +573,16 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 73C0 | 00 | |
-| 73C1 | 00 | |
-| 73C3 | 00 | |
-| 73DF&darr; | 40 | |
-|            | 41 | |
-|            | C1 | RX 6700 XT |
-|            | C3 | RX 6800M |
-|            | C5 | RX 6700 XT |
-|            | CF | |
-|            | DF | |
+| 0x73C0 | 0x00 | |
+| 0x73C1 | 0x00 | |
+| 0x73C3 | 0x00 | |
+| 0x73DF&darr; | 0x40 | |
+| | 0x41 | |
+| | 0xC1 | RX 6700 XT |
+| | 0xC3 | RX 6800M |
+| | 0xC5 | RX 6700 XT |
+| | 0xCF | |
+| | 0xDF | |
 
 [^14]: [P4 to Git Change 2042212 by kjayapra@1_HIPWS_LNX1_PAL on 2019/12/06 1… · ROCm-Developer-Tools/ROCclr@a35c1d2](https://github.com/ROCm-Developer-Tools/ROCclr/commit/a35c1d2f2d954363c7d2121d5334f9e7766beeae)
 [^5]:<https://github.com/ROCm-Developer-Tools/aomp-extras/blob/f3d316fe64347e697a9789f0f2499fec50024db1/utils/bin/gputable.txt#L1867>
@@ -589,11 +591,11 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 73E0 | | |
-| 73E1 | | |
-| 73E2 | | |
-| 73E2 | | |
-| 73FF | | |
+| 0x73E0 | | |
+| 0x73E1 | | |
+| 0x73E2 | | |
+| 0x73E2 | | |
+| 0x73FF | | |
 
 
 {{< ref >}}
