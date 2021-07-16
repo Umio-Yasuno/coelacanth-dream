@@ -20,7 +20,7 @@ noindex: false
  >
  > {{< quote >}} <https://review.coreboot.org/c/coreboot/+/56396/3/src/include/device/pci_ids.h#507> {{< /quote >}}
 
-*Barcelo* の Device ID は `0x15e7` となっている。この ID はちょうど先日 Linux Kernel における AMD GPUドライバーに追加されており、その時のパッチタイトルは *「[PATCH] drm/amdgpu: add another Renior DID」* 。[^another0-rn]  
+*Barcelo* の Device ID は `0x15e7` となっている。この ID はちょうど先日 Linux Kernel における AMD GPUドライバーに追加されており、その時のパッチタイトルは *「[PATCH] drm/amdgpu: add another Renior DID」* 。[^another-rn]  
 {{< link >}} [AMD Renoir APU の GPU ID が 「gfx90c」 に | Coelacanth's Dream](/posts/2020/10/31/amd-renoir-apu-gfx90c/) {{< /link >}}
 *Barcelo* は *Renoir・Lucienne・Cezanne* 同様に Vega GPU を搭載し、GPU ID は *gfx90c* になると見られる。  
 
@@ -35,7 +35,7 @@ noindex: false
 [^another-rn]: [[PATCH] drm/amdgpu: add another Renior DID](https://lists.freedesktop.org/archives/amd-gfx/2021-July/066502.html)
 
 CPU に関してはパッチではあまり触れられていないが、*Cezanne* 同様に *Zen 3 アーキテクチャ* を採用しているのではないかと思う。  
-*Barcelo* は *Raven* に対する *Picasso* 、*Renoir* に対する *Lucienne* のような、構成はほぼ同じだが製造プロセスや電力管理機能等にわずかな改良を施した後継 APU なのだと思われる。  
+*Barcelo* は *Raven* に対する *Picasso* 、*Renoir* に対する *Lucienne* のような、構成はほぼ同じだが製造プロセスや電力管理機能等にわずかな改良を施した後継 APU というポジションにいるのだろう。  
 
 | GPUID | Arch | Codename |
 | :-- | :--: | :--: |
