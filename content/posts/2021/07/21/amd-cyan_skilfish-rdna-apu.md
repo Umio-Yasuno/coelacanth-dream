@@ -17,6 +17,7 @@ amd-gfxメーリングリストにて、Linux Kernel における AMD GPUドラ�
 
 {{< pindex >}}
  * ["RDNA" APU](#rdna-apu)
+    * [ディスプレイ出力はサポートせず?](#display-output)
  * [Cyan Skilfish と Cyan Skilfish2](#v2)
  * [8-Core APU](#8-core)
 {{< /pindex >}}
@@ -160,7 +161,24 @@ GPU ASIC の開発時期を反映したか、関連して *Navi10* をベース�
  > 		 };
  >
  > {{< quote >}} [[PATCH 03/29] drm/amdgpu: add cyan_skillfish asic type](https://lists.freedesktop.org/archives/amd-gfx/2021-July/066805.html) {{< /quote >}}
- 
+
+### ディスプレイ出力はサポートせず? {#display-output}
+
+それと *Cyan Skilfish* は APU だが、今回のパッチではディスプレイコントローラー/エンジン部のサポートが追加されていない。  
+それだけでなくディスプレイコントローラー/エンジン部の IP に関しても仮想的なものを用いるように記述されており、ディスプレイ出力をサポートした *Cyan Skilfish* を想定していないか、あるいは本当に元から *Cyan Skilfish* にディスプレイ出力とコントローラー/エンジンが実装されていないか、だと思われる。  
+
+ > 		+	case CHIP_CYAN_SKILLFISH:
+ > 		+		amdgpu_device_ip_block_add(adev, &nv_common_ip_block);
+ > 		+                amdgpu_device_ip_block_add(adev, &gmc_v10_0_ip_block);
+ > 		+                amdgpu_device_ip_block_add(adev, &navi10_ih_ip_block);
+ > 		+                if (adev->enable_virtual_display || amdgpu_sriov_vf(adev))
+ > 		+                        amdgpu_device_ip_block_add(adev, &dce_virtual_ip_block);
+ > 		+                amdgpu_device_ip_block_add(adev, &gfx_v10_0_ip_block);
+ > 		+                amdgpu_device_ip_block_add(adev, &sdma_v5_0_ip_block);
+ > 		+		break;
+ >
+ > {{< quote >}} [[PATCH 06/29] drm/amdgpu: set ip blocks for cyan_skillfish](https://lists.freedesktop.org/archives/amd-gfx/2021-July/066808.html) {{< /quote >}}
+
 ## Cyan Skilfish と Cyan Skilfish2 {#v2}
 *Cyan Skilfish* にはもう 1つ、*Cyan Skilfish2* が存在することが示されており、読み込むファームウェアはその 2つで別に用意されることになっている。  
 
