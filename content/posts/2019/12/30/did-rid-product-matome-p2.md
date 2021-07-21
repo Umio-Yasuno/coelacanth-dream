@@ -13,31 +13,34 @@ summary: " "
 {{< pindex >}}
 
  * [APU](#apu)
-   * FAMILY_RV
-      * [Raven](#raven-gfx902)
-      * [Picasso](#picasso-gfx902)
-      * [Raven2](#raven2-gfx909)
-         * [Dali](#dali-gfx909)
-         * [Pollock](#pollock-gfx909)
-      * [Renoir](#renoir-gfx90c)
-      * [Lucienne](#lucienne-gfx90c)
-      * [Cezanne](#cezanne-gfx90c)
-   * FAMILY_VGH
-      * [VanGogh](#vgh)
+    * FAMILY_RV
+        * [Raven](#raven-gfx902)
+        * [Picasso](#picasso-gfx902)
+        * [Raven2](#raven2-gfx909)
+            * [Dali](#dali-gfx909)
+            * [Pollock](#pollock-gfx909)
+        * [Renoir](#renoir-gfx90c)
+        * [Lucienne](#lucienne-gfx90c)
+        * [Cezanne](#cezanne-gfx90c)
+        * [Barcelo](#barcelo)
+    * FAMILY_VGH
+        * [VanGogh](#vgh)
+    * FAMILY_YC
+        * [Yellow Carp](#yc)
  * [Discrete GPU](#dgpu)
-   * FAMILY_AI
-      * [Vega10](#vega10-gfx900)
-      * [Vega12](#vega12-gfx904)
-      * [Vega20](#vega20-gfx906)
-      * [Arcturus](#arcturus-gfx908)
-      * [Aldebaran](#aldebaran-gfx90a)
-   * FAMILY_NV
-      * [Navi10](#navi10-gfx1010)
-      * [Navi12](#navi12-gfx1011)
-      * [Navi14](#navi14-gfx1012)
-      * [Sienna Cichlid/Navi21](#sienna_cichlid-gfx1030)
-      * [Navy Flounder/Navi22](#navy_flounder-gfx1031)
-      * [Dimgrey Cavefish/Navi23](#dimgrey_cavefish-gfx1032)
+    * FAMILY_AI
+        * [Vega10](#vega10-gfx900)
+        * [Vega12](#vega12-gfx904)
+        * [Vega20](#vega20-gfx906)
+        * [Arcturus](#arcturus-gfx908)
+        * [Aldebaran](#aldebaran-gfx90a)
+    * FAMILY_NV
+        * [Navi10](#navi10-gfx1010)
+        * [Navi12](#navi12-gfx1011)
+        * [Navi14](#navi14-gfx1012)
+        * [Sienna Cichlid/Navi21](#sienna_cichlid-gfx1030)
+        * [Navy Flounder/Navi22](#navy_flounder-gfx1031)
+        * [Dimgrey Cavefish/Navi23](#dimgrey_cavefish-gfx1032)
  * [参考リンク](#reference_title)
 
 {{< /pindex >}}
@@ -299,6 +302,16 @@ DG02SRTBP4MFA
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 0x1638 &darr; | | | |
+
+<!--  Barcelo (gfx90c?) -->
+### Barcelo ( gfx90c ) {#barcelo}
+| Device ID | Revision ID | Product Name | Memo |
+| :--- | :--- | :---: | :---: |
+| 0x15E7[^barcelo-did] &darr; | | | |
+
+[^barcelo-did]: [soc/amd/common/block/graphics: add GPU PCI ID for Barcelo (I1c5446c1) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/56396)
+
+
 <!--
    Board:
       Celadon: AMD Mobile Reference Board?
@@ -309,19 +322,20 @@ DG02SRTBP4MFA
       Artic: Desktop? (PRO565?)
 -->
 
-<!--
-	VANGOGH 163F:00
-	gfx1\0\32 / gfx\10\33 [^13]
-
-[^13]: [P4 to Git Change 2008166 by vsytchen@vsytchen-remote-ocl-win10 on 201… · ROCm-Developer-Tools/ROCclr@df2e0b9](https://github.com/ROCm-Developer-Tools/ROCclr/commit/df2e0b9ae27f43ba8e23a3afa185c16dd3bb5ebc)
--->
-
 ### FAMILY_VGH {#family_vgh}
 #### VanGogh {#vgh}
-
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 0x163F &darr; | | | |
+
+### FAMILY_YC {#family_yc}
+#### Yellow Carp {#yc}
+| Device ID | Revision ID | Product Name | Memo |
+| :--- | :--- | :---: | :---: |
+| 0x164D[^yc-did] &darr; | | | |
+| 0x1681 &darr; | | | other silicon? (like Raven2?) |
+
+[^yc-did]: [[PATCH 2/2] drm/amdgpu: add yellow carp pci id (v2)](https://lists.freedesktop.org/archives/amd-gfx/2021-July/066869.html)
 
 [Page Top](#page_index)
 
