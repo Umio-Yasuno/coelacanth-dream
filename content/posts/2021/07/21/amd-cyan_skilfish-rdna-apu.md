@@ -129,7 +129,8 @@ GFXコア部に関する部分では *Navi10/Navi12/Navi14* 、*RDNA/GFX10.1 GPU
 
 そして興味深いことに、 `amd_asci_type` 列挙体に *Cyan Skilfish* を追加する際、最近になって追加された [Yellow Carp APU](/tags/yellow_carp) の後ではなく、*Navi10* と *Navi14* の間に入るように追加されている。  
 
-若干直感的ではあるが、以前 LLVM に追加された [GPUID: gfx1013](/tags/gfx1013) が示す APU が *Cyan Skilfish* だと自分は考えている。  
+若干直感的ではあるが、以前 LLVM に追加された [GPUID: gfx1013](/tags/gfx1013) が示す APU が *Cyan Skilfish* だと自分は考えている。何よりも *gfx1013* と *Cyan Skilfish* は *RDNA APU* という点が一致する。現在、他に *RDNA APU* は AMD GPU のオープンソースソフトウェアスタックにおいて存在しない。  
+
 *Navi10* と *Navi12/Navi14* は同じ *RDNA/GFX10.1* 世代であっても対応する機能や命令に違いが存在し、基本的に *Navi12/Navi14* が多くの機能、命令をサポートしている。  
 *Navi12/Navi14* が対応する、RB (Render Backend) 部における DCC (Delta Color Compression) 機能やドット積命令の一部は *Navi10* ではサポートされていない。  
 {{< link >}} [RadeonSI、RADV が AMD Navy Flounder をサポート | Coelacanth's Dream](/posts/2020/07/29/amd-navy_flounder-umd-patch/#navi10-rb) {{< /link >}}

@@ -565,7 +565,7 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | 0x73A3 | 0x00 | Radeon PRO W6800 |
 | 0x73AB | 0x00 | |
 | 0x73AE | | |
-| 0x73AF | | |
+| 0x73AF | 0xC0 | RX 6900 XT |
 | 0x73BD | | |
 | 0x73BF &darr; | 0x40 | |
 | | 0x41 | | |
@@ -579,10 +579,6 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | | 0xD3 | | |
 
 
-<!--  Navi21: gfx1030 [^12]   -->
-
-[^12]: [P4 to Git Change 1759681 by asalmanp@asalmanp-ocl-stg on 2019/03/21 1… · ROCm-Developer-Tools/ROCclr@42c005d](https://github.com/ROCm-Developer-Tools/ROCclr/commit/42c005d656a8bd99f87fa4fc86ad086701c59a86)
-
 #### Navy Flounder/Navi22 ( gfx1031 ) {#navy_flounder-gfx1031}
 
 | Device ID | Revision ID | Product Name | Memo |
@@ -592,10 +588,12 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | 0x73C3 | 0x00 | |
 | 0x73DF&darr; | 0x40 | |
 | | 0x41 | |
+| | 0xC0 | RX 6700 XT |
 | | 0xC1 | RX 6700 XT |
+| | 0xC2 | RX 6800M |
 | | 0xC3 | RX 6800M |
 | | 0xC5 | RX 6700 XT |
-| | 0xCF | |
+| | 0xCF | RX 6700M |
 | | 0xDF | |
 
 [^14]: [P4 to Git Change 2042212 by kjayapra@1_HIPWS_LNX1_PAL on 2019/12/06 1… · ROCm-Developer-Tools/ROCclr@a35c1d2](https://github.com/ROCm-Developer-Tools/ROCclr/commit/a35c1d2f2d954363c7d2121d5334f9e7766beeae)
@@ -605,11 +603,17 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 0x73E0 | | |
-| 0x73E1 | | |
+| 0x73E0 | 0x00 | |
+| 0x73E1 | 0x00 | |
 | 0x73E2 | | |
-| 0x73E2 | | |
-| 0x73FF | | |
+| 0x73E3 | 0x00 | |
+| 0x73FF&darr; | | |
+| | 0x40 | |
+| | 0x41 | |
+| | 0x42 | |
+| | 0xC1 | |
+| | 0xC3 | RX 6600M |
+| | 0xC7 | |
 
 
 {{< ref >}}
