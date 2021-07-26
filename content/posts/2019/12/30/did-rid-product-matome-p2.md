@@ -302,6 +302,9 @@ DG02SRTBP4MFA
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 0x1638 &darr; | | | |
+| | 0xC2 | 5600U[^czn-5600u] | |
+
+[^czn-5600u]: [LinuxHardware/NoteBooks/Lenovo/ThinkPad_L14_Gen2_AMD - LinuxWiki.org - Linux Wiki und Freie Software](https://www.linuxwiki.de/LinuxHardware/NoteBooks/Lenovo/ThinkPad_L14_Gen2_AMD)
 
 <!--  Barcelo (gfx90c?) -->
 ### Barcelo ( gfx90c ) {#barcelo}
