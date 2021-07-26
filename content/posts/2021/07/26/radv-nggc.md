@@ -96,6 +96,3 @@ NGG を用いたパイプラインを実行する際にパラメーターキャ�
  > 		
  > {{< quote >}} [src/amd/vulkan/radv_device.c · cadf2d63b736b610728d508ed507551dd74ba16a · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/cadf2d63b736b610728d508ed507551dd74ba16a/src/amd/vulkan/radv_device.c#L677-679) {{< /quote >}}
 
-最後に、ブログなのだから個人的なことを書くとするが、こうした最新の GPU でサポートされている機能を調べ、整理しているとやはり実ハードウェアが欲しくなる。  
-だが、今は供給不足により GPU はどれも高い値段がつけられており、そもそも自分の用途を考えれば *RDNA/RDNA 2 アーキテクチャ* の GPU を買うより CPU を更新した方が恩恵はずっと大きいため、予算を CPU に回すべきではないかと葛藤することになる。  
-そういう訳で、もどかしさと葛藤を抱えながらこの記事を書いていた――  
