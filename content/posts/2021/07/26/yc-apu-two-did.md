@@ -61,7 +61,7 @@ noindex: false
  >
  > {{< quote >}} [linux/dal_asic_id.h at master · torvalds/linux](https://github.com/torvalds/linux/blob/master/drivers/gpu/drm/amd/display/include/dal_asic_id.h#L226-L235) {{< /quote >}}
 
-最近の AMD APU では、*Raven* からプロセスを改良した *Picasso* 、*Raven* に存在したバグを修正し、規模を小さくして同じプロセスで製造する *Raven2* 、  
+最近の AMD APU では、*Raven* からプロセスを改良した *Picasso* 、*Raven* に存在したバグを修正し、規模を小さくして同じプロセスで製造される *Raven2* 、  
 *Renoir* と同じ構成、同じ製造プロセスだが電源管理機能を改良した *Lucienne* 、*Renoir* から CPUアーキテクチャを一世代進んだものを採用した *Cezanne (Green Sardine)* など、ある APU からの派生パターンが増えていることもあり、`DeviceID: 0x1681` が *Yellow Carp* とどこが異なるのかは現時点では全く予想できないが、だからこそパッチ、公式発表を待つことは楽しいのだと思う。  
 
 {{< ref >}}
