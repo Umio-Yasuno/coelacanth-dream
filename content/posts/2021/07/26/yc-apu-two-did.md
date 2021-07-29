@@ -34,7 +34,7 @@ noindex: false
  >
  > {{< quote >}} [[PATCH 1/2] drm/amdgpu: update yellow carp external rev_id handling](https://lists.freedesktop.org/archives/amd-gfx/2021-July/066870.html) {{< /quote >}}
 
-そのため今回のパッチは、*Yellow Carp* と同様の GPU や各種 IP (マルチメディアエンジン、ディスプレイエンジン/コントローラー) を搭載した APU が存在することを示していると考えられる。  
+そのため今回のパッチは、*Yellow Carp* と同様の GPUコア部、各種 IP (マルチメディアエンジン、ディスプレイエンジン/コントローラー) を搭載した APU が存在することを示していると考えられる。  
 *Yellow Carp* の DeviceID として追加されているが、APU/GPU の DeviceID が記述されている `amdgpu_drv.c` では *Raven APU* 、*Renoir APU* をまとめて管理しており、その関係と思われる。 *Raven* には *Raven・Raven2・Picasso* 、*Renoir* には *Renoir・Lucienne・Cezanne (Green Sardine) ・Barcelo* の同様の GPU を搭載した異なる APU がそれぞれ属する。  
 
  > 			/* Renoir */
@@ -46,7 +46,7 @@ noindex: false
  > {{< quote >}} [linux/amdgpu_drv.c at 27f5355f5d9706dfc1c2542253689f421008c969 · torvalds/linux](https://github.com/torvalds/linux/blob/27f5355f5d9706dfc1c2542253689f421008c969/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c#L1170-L1174) {{< /quote >}}
 
 一応、ディスプレイエンジン/コントローラー部のバージョンを識別するのに使われる部分を記述した `dal_asci_id.h` では、*Yellow Carp* は A0ステッピングと B0ステッピングで異なる ID を持つことを示しているが、  
-今回のパッチで追加された `DeviceId: 0x1681` の `external_rev_id` 範囲から外れるため、やはり *Yellow Carp* と同様の GPU、各種 IP を搭載した異なる APU が存在し、既にサポートを追加する用意が進められていると考えられる。  
+今回のパッチで追加された `DeviceId: 0x1681` の `external_rev_id` 範囲から外れるため、やはり *Yellow Carp* と同様の GPUコア部を搭載した異なる APU が存在し、既にサポートを追加する用意が進められていると考えられる。  
 コードネームも *Yellow Carp* とは異なるものになるだろう。  
 
  > 		#define FAMILY_YELLOW_CARP                     146
