@@ -1,16 +1,22 @@
 ---
-title: "VanGogh は gfx1033、Navi24 は gfx1034、Rembrandt は gfx1035 & Cyan Skilfish は gfx1013"
+title: "VanGogh, Beige Goby/Navi24, Yellow Carp/Rembrandt, Cyan Skilfish の GPUID"
 date: 2021-07-30T00:11:09+09:00
 draft: false
-tags: [ "VanGogh", "Rembrandt", "Beige_Goby", "gfx1035", "gfx1013", "Cyan_Skilfish", "Linux_Kernel" ]
+tags: [ "VanGogh", "Beige_Goby", "gfx1035", "gfx1013", "Cyan_Skilfish", "Linux_Kernel", "Yellow_Carp" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU", "GPU" ]
 noindex: false
 # summary: ""
 ---
 
-AMD がオープンソースで開発する [ROCclr (Radeon Open Compute Common Language Runtime)](https://github.com/ROCm-Developer-Tools/ROCclr) と [ROCm-OpenCL-Runtime](https://github.com/RadeonOpenCompute/ROCm-OpenCL-Runtime) レポジトリの developブランチが更新され、そこに *VanGogh, Navi24, Rembrandt* の GPUID を追加するコミットが含まれていた。  
-そのメモ書き的なもの。  
+AMD がオープンソースで開発する [ROCclr (Radeon Open Compute Common Language Runtime)](https://github.com/ROCm-Developer-Tools/ROCclr) と [ROCm-OpenCL-Runtime](https://github.com/RadeonOpenCompute/ROCm-OpenCL-Runtime) レポジトリの developブランチが更新され、そこに *VanGogh, Navi24, Rembrandt* の GPUID (GFX IP) を追加するコミットが含まれていた。  
+半分メモ書き。  
+
+{{< pindex >}}
+ * [VanGogh, Navi24, Rembrandt](#vgh-nv24-rmb)
+ * [AMDGPU KFD に GPUID 情報が追加される](#kfd)
+    * [Beige Goby == Navi24, Yellow Carp == Rembrandt](#bg-nv24-yc-rmb)
+{{< /pindex >}}
 
 ## VanGogh, Navi24, Rembrandt {#vgh-nv24-rmb}
 
@@ -66,18 +72,6 @@ AMD がオープンソースで開発する [ROCclr (Radeon Open Compute Common 
 上では *gfx1035* は *Rembrandt* の GPUID とされ、LLVM へのパッチでも *gfx1035* は APU だとされており、自分は *Beige Goby* が dGPU だと解釈している。  
 {{< link >}} [LLVM に新たな RDNA 2 APU の GPUID、gfx1035 が追加される | Coelacanth's Dream](/posts/2021/06/24/llvm-gfx1035/) {{< /link >}}
 
-パッチはまだメインラインに統合される前のコードであるため、今後変更される可能性は十分にあるが、果たしてどれが正しいのか。同じ GPU ASIC  に対して別のコードネームもあるため、少しややこしくなってきた。  
-
- > ##### VanGogh
- > 		 static const struct kfd_device_info vangogh_device_info = {
- > 		 	.asic_family = CHIP_VANGOGH,
- > 		 	.asic_name = "vangogh",
- > 		+	.gfx_version = 100303,
- > 		 	.max_pasid_bits = 16,
- > 		 	.max_no_of_hqd  = 24,
- > 		 	.doorbell_size  = 8,
- >
-
  > ##### Beige Goby
  > 		 static const struct kfd_device_info beige_goby_device_info = {
  > 		 	.asic_family = CHIP_BEIGE_GOBY,
@@ -98,6 +92,19 @@ AMD がオープンソースで開発する [ROCclr (Radeon Open Compute Common 
  >
  > {{< quote >}} [[PATCH] drm/amdkfd: Expose GFXIP engine version to sysfs](https://lists.freedesktop.org/archives/amd-gfx/2021-July/067107.html) {{< /quote >}}
 
+### Beige Goby == Navi24, Yellow Carp == Rembrandt {#bg-nv24-yc-rmb}
+
+この点はパッチのレビューを行った AMD の Felix Kuehling 氏にも指摘されており、氏によれば *Beige Goby* は *GPUID: gfx1034* 、*Yellow Carp* は *GPUID: gfx1035* であり、それぞれ *Navi24* 、*Rembrandt* のものと一致する。LLVM の情報と矛盾も起きないため、氏の言う内容が正しく、また *Beige Goby == Navi24* 、*Yellow Carp == Rembrandt* ということなのだろう。  
+
+ > 		I don't see Beige Goby in the Thunk's gfxip_lookup_table. I think it
+ > 		should be 10.3.4. Please check (I'll provide some useful internal links
+ > 		offline).
+ >      ---
+ > 		In the thunk I see 10.3.5 for Yellow Carp.
+ >
+ > {{< quote >}} [[PATCH] drm/amdkfd: Expose GFXIP engine version to sysfs](https://lists.freedesktop.org/archives/amd-gfx/2021-July/067148.html) {{< /quote >}}
+
+
 | GPUID | Arch | Codename |
 | :-- | :--: | :--: |
 | *gfx908* | CDNA | Arcturus/MI100 |
@@ -112,8 +119,8 @@ AMD がオープンソースで開発する [ROCclr (Radeon Open Compute Common 
 | *gfx1031* | RDNA 2 | Navy Flounder/Navi22 |
 | *gfx1032* | RDNA 2 | Dimgrey Cavefish/Navi23 |
 | *gfx1033* | RDNA 2 | VanGogh (APU) |
-| *gfx1034* | RDNA 2 | Beige Goby?/Navi24 |
-| *gfx1035* | RDNA 2 | Yellow Carp?/Rembrandt (APU) |
+| *gfx1034* | RDNA 2 | Beige Goby/Navi24 |
+| *gfx1035* | RDNA 2 | Yellow Carp/Rembrandt (APU) |
 
 [^gfx940]: [SWDEV-292904 - Extend HIP coherency tests to gfx940 · ROCm-Developer-Tools/HIP@9fbd19a](https://github.com/ROCm-Developer-Tools/HIP/commit/9fbd19a6759b0ed091562ad286a790783998b88a)
 [^green_sardine]: [Green Sardine APU の PCI ID が追加、正体は Cezanne APU だったか | Coelacanth's Dream](/posts/2021/01/14/green_sardine-pciid/)
