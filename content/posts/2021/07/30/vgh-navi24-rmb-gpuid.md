@@ -15,6 +15,7 @@ AMD がオープンソースで開発する [ROCclr (Radeon Open Compute Common 
 {{< pindex >}}
  * [VanGogh, Navi24, Rembrandt](#vgh-nv24-rmb)
  * [AMDGPU KFD に GPUID 情報が追加される](#kfd)
+    * [Cyan Skilfish == gfx1013](#cyan_skilfish)
     * [Beige Goby == Navi24, Yellow Carp == Rembrandt](#bg-nv24-yc-rmb)
 {{< /pindex >}}
 
@@ -54,6 +55,8 @@ AMD がオープンソースで開発する [ROCclr (Radeon Open Compute Common 
 各種 ROCmソフトウェアを動作させるためのドライバー、インターフェイスとなる AMDGPU KFD (Kernel Fusion Driver) に、GPUID (GFX IP バージョン) を `sysfs (/sys/class/kfd/kfd/topology/node/*)` に出力される GPU 情報に追加されるパッチが投稿された。  
 
  * [[PATCH] drm/amdkfd: Expose GFXIP engine version to sysfs](https://lists.freedesktop.org/archives/amd-gfx/2021-July/067107.html)
+
+### Cyan Skilfish == gfx1013 {#cyan_skilfish}
 
 `"xx_xx_xx", major, minor, stepping` のフォーマットで記述されており、*Cyan Skilfish* の GPUID は `10_01_03, gfx1013` となっていた。現時点では *RDNA APU* は *Cyan Skilfish* と *gfx1013* のみであるため、この組み合わせは納得行く。  
 
