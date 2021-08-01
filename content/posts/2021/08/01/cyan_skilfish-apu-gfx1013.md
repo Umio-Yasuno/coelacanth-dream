@@ -12,7 +12,14 @@ noindex: false
 2021/06 に *GPUID: gfx1013* のサポート追加する LLVM へのパッチが公開されてから、関連する情報を追い続けてきたが、ある程度集まってくると同時に断片化してきたと感じてきたため、集約し整理した記事を作ることにした。  
 
 ここでも最初に一応書くが、AMD GPU ドライバーのコード中では *SKILLFISH* で統一されているが、パッチタイトルの一部では *SKILFISH* となっていること、アブラボウズの英名として *SKILFISH*  があることを踏まえて、ここでは *SKILFISH* で統一している。  
-コード内では統一されているため問題は起きないし、amd-gfx メーリングリスト内で指摘するメッセージも無いため、どちらが正しいとも言い切れず、またそこまでこだわるような事柄でもない。  
+コード内では統一されているため問題は起きないし、amd-gfx メーリングリスト内で指摘するメッセージも無いため、どちらが正しいとも言い切れず、またそこまでこだわるような事柄でもないように思える。  
+
+{{< pindex >}}
+ * [gfx1013](#gfx1013)
+    * [RDNA 2 とは異なる HWレイトレーシング IP](#hw-rt-ip)
+ * [Cyan Skilfish](#cyan_skilfish)
+    * [ディスプレイ出力を持たない 8-Core APU](#8-core)
+{{< /pindex >}}
 
 ## gfx1013 {#gfx1013}
 
@@ -80,6 +87,40 @@ LLVM へのパッチから分かる *gfx1013* の特徴としては、*RDNA APU*
  > {{< quote >}} [llvm-project/AMDGPU.td at aaba37187fda7f5a7fdc4c1e6129cbaaa1bbf709 · llvm/llvm-project](https://github.com/llvm/llvm-project/blob/aaba37187fda7f5a7fdc4c1e6129cbaaa1bbf709/llvm/lib/Target/AMDGPU/AMDGPU.td#L468-L472) {{< /quote >}}
 
 *RDNA アーキテクチャ* を採用する APU であり、*Navi10 (gfx1010)* をベースに *RDNA 2/GFX10.3* 世代同様のレイトレーシング命令周りを追加した奇妙な AMD GPU が *gfx1013* となる。  
+
+### RDNA 2 とは異なる HWレイトレーシング IP {#hw-rt-ip}
+
+オープンソースドライバー等で明らかにされている情報として、AMD GPU の HWレイトレーシング IP には現時点で 2バージョン存在する、というものがある。  
+{{< link >}} [現時点で 2バージョン存在する AMD GPU の HWレイトレーシング IP | Coelacanth's Dream](/posts/2021/06/11/amd-rt-ip-1_0-1_1/) {{< /link >}}
+
+[AMDVLK](https://github.com/GPUOpen-Drivers/AMDVLK) ドライバーを構成する一部である [PAL (Platform Abstraction Library)](https://github.com/GPUOpen-Drivers/pal) 内のコードによれば、HWレイトレーシング IPは `RtIp1_0` と `RtIp1_1` の 2バージョンが存在し、  
+`RtIp1_0` は最初の実装となり、`RtIp1_1` はそこにトライアングルの重心座標 (`triangle barycentrics`) を処理する機能を追加したものとなる。  
+
+ > 		/// Supported RTIP version enumeration
+ > 		enum class RayTracingIpLevel : uint32
+ > 		{
+ > 		    _None = 0,
+ > 		#ifndef None
+ > 		    None = _None,      ///< The device does not have an RayTracing Ip Level
+ > 		#endif
+ > 		
+ > 		    RtIp1_0 = 0x1,     ///< First Implementation of HW RT
+ > 		    RtIp1_1 = 0x2,     ///< Added computation of triangle barycentrics into HW
+ > 		};
+ >
+ > {{< quote >}} [pal/palDevice.h at 02ac99ba650afb3aebff3eb8006862ce93d31968 · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/02ac99ba650afb3aebff3eb8006862ce93d31968/inc/core/palDevice.h#L754) {{< /quote >}}
+
+関連するコード部では、*RDNA 2/GFX10.3* とそれ以降の AMD GPU では `RtIp1_1` を採用するとしている記述が存在し、["RDNA 2" Instruction Set Architecture: Reference Guide](https://developer.amd.com/wp-content/resources/RDNA2_Shader_ISA_November2020.pdf) でも「8.2.10 Ray Tracing」セクションにて、HWレイトレーシングは重心座標の計算処理を直接サポートするよう設計されていると説明されている。  
+
+ > 		        if (IsGfx103Plus(pInfo->gfxLevel))
+ > 		        {
+ > 		            pInfo->gfx9.rayTracingIp = RayTracingIpLevel::RtIp1_1;
+ > 		        }
+ >
+ > {{< quote >}} [pal/gfx9Device.cpp at 02ac99ba650afb3aebff3eb8006862ce93d31968 · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/02ac99ba650afb3aebff3eb8006862ce93d31968/src/core/hw/gfxip/gfx9/gfx9Device.cpp#L5200) {{< /quote >}}
+
+上記引用部の判定から、*gfx1013* が *RDNA/GFX10.1* でありながら HWレイトレーシングをサポートしているとすると、*RDNA 2/GFX10.3* より前の世代、トライアングルの重心座標の処理機能を持たない `RtIp1_0` を採用していると考えられる。  
+
 
 ## Cyan Skilfish {#cyan_skilfish}
 
