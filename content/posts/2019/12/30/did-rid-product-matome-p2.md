@@ -41,6 +41,7 @@ summary: " "
         * [Sienna Cichlid/Navi21](#sienna_cichlid-gfx1030)
         * [Navy Flounder/Navi22](#navy_flounder-gfx1031)
         * [Dimgrey Cavefish/Navi23](#dimgrey_cavefish-gfx1032)
+        * [Beige Goby/Navi24](#beige_goby-gfx1034)
  * [参考リンク](#reference_title)
 
 {{< /pindex >}}
@@ -602,7 +603,7 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 [^14]: [P4 to Git Change 2042212 by kjayapra@1_HIPWS_LNX1_PAL on 2019/12/06 1… · ROCm-Developer-Tools/ROCclr@a35c1d2](https://github.com/ROCm-Developer-Tools/ROCclr/commit/a35c1d2f2d954363c7d2121d5334f9e7766beeae)
 [^5]:<https://github.com/ROCm-Developer-Tools/aomp-extras/blob/f3d316fe64347e697a9789f0f2499fec50024db1/utils/bin/gputable.txt#L1867>
 
-#### Dimgrey Cavefish/Navi23 ( gfx1032? ) {#dimgrey_cavefish-gfx1032}
+#### Dimgrey Cavefish/Navi23 ( gfx1032 ) {#dimgrey_cavefish-gfx1032}
 
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
@@ -617,6 +618,16 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | | 0xC1 | |
 | | 0xC3 | RX 6600M |
 | | 0xC7 | |
+
+### Beige Goby/Navi24 ( gfx1034 ) {#beige_goby-gfx1034}
+
+| Device ID | Revision ID | Product Name | Memo |
+| :--- | :--- | :---: | :---: |
+| 0x7420 | | |
+| 0x7421 | | |
+| 0x7422 | | |
+| 0x7423 | | |
+| 0x742F | | |
 
 
 {{< ref >}}
