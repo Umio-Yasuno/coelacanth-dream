@@ -2,7 +2,7 @@
 title: "AMD RDNA 2 GPU 正式発表　―― 各スペック、Infinity Cache、プロセス"
 date: 2020-10-29T01:14:51+09:00
 draft: false
-tags: [ "RDNA_2", ]
+tags: [ "RDNA_2", "Sienna_Cichlid", "Navi21" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
