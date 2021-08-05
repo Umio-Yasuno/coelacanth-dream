@@ -29,18 +29,13 @@ AMD の次世代 [RDNA 2](/tags/rdna_2) GPU、*Navi21 /Sienna Cichlid* が高速
  > 引用元: <cite>[drm/amdgpu: add XGMI support for sienna cichlid](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/amdgpu/gfxhub_v2_1.c?h=amd-staging-drm-next&id=57bde5ec6ffbeb984981ab1a38d85b07df651bd2)</cite>
 
 この最大 4GPUというのは *Vega20* と同数であり[^vega20-max-nodes]、*Vega20* の場合は 3GPU以上での接続はリングバスの構成を取ることになり、それによって GPU間のデータ転送に幾許かの遅延が発生しうるものとなっていた。  
-
-[^vega20-max-nodes]: [drm/amdgpu: Added ASIC specific checks in gfxhub V1.1 get XGMI info](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/amdgpu/gfxhub_v1_1.c?h=amd-staging-drm-next&id=f0312f45a0540a1551ca4644ff2461250520111a)
-
-だが *Sienna Cichlid* は、SDMAコントローラ 2基である *Vega20* に対し[^vega20-sdma-controllers]、倍の 4基持つ[^sienna_cichlid-sdma-controllers]。  
-
-[^vega20-sdma-controllers]: [kfd_device.c\amdkfd\amd\drm\gpu\drivers - ~agd5f/linux - Unnamed repository; edit this file 'description' to name the repository.](https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/amdkfd/kfd_device.c?h=amd-staging-drm-next&id=3ace943f8f8158ee2b0fed8482edb37245b28f45#n356)
-[^sienna_cichlid-sdma-controllers]: [[PATCH 021/207] drm/amdgpu: add sdma ip block for sienna_cichlid (v5)](https://lists.freedesktop.org/archives/amd-gfx/2020-June/049985.html)
-
+だが *Sienna Cichlid* は、SDMAコントローラ 2基である *Vega20* に対し、倍の 4基持つ。[^vega20-sdma-controllers][^sienna_cichlid-sdma-controllers]  
 もしかしたらリングバス構成を取らずに 4GPU との接続が可能 *かもしれない* 。未来のことだから、本当に断言できることなんてない。  
-
 ちなみに *Arcturus* は最大 8GPUとの接続を可能とし、SDMAコントローラは **XGMI** に最適化されたものを 6基、そうでない、他の AMDGPU 同様の SDMAコントローラを 2基持つ[^arcturus-sdma-controllers]。  
 
+[^vega20-max-nodes]: [drm/amdgpu: Added ASIC specific checks in gfxhub V1.1 get XGMI info](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/amdgpu/gfxhub_v1_1.c?h=amd-staging-drm-next&id=f0312f45a0540a1551ca4644ff2461250520111a)
+[^vega20-sdma-controllers]: [kfd_device.c\amdkfd\amd\drm\gpu\drivers - ~agd5f/linux - Unnamed repository; edit this file 'description' to name the repository.](https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/amdkfd/kfd_device.c?h=amd-staging-drm-next&id=3ace943f8f8158ee2b0fed8482edb37245b28f45#n356)
+[^sienna_cichlid-sdma-controllers]: [[PATCH 021/207] drm/amdgpu: add sdma ip block for sienna_cichlid (v5)](https://lists.freedesktop.org/archives/amd-gfx/2020-June/049985.html)
 [^arcturus-sdma-controllers]: [kfd_device.c\amdkfd\amd\drm\gpu\drivers - ~agd5f/linux - Unnamed repository; edit this file 'description' to name the repository.](https://cgit.freedesktop.org/~agd5f/linux/tree/drivers/gpu/drm/amd/amdkfd/kfd_device.c?h=amd-staging-drm-next&id=3ace943f8f8158ee2b0fed8482edb37245b28f45#n374)
 
  >       +	switch (adev->asic_type) {

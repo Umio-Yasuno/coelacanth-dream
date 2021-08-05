@@ -23,7 +23,7 @@ noindex: false
 | *gfx908* | CDNA | dGPU | Arcturus (MI100) |
 | *gfx909* | Vega | APU | Raven2 |
 | *gfx90a* | CDNA 2 | dGPU | Aldebaran (MI200) |
-| *gfx90c* | Vega | APU | Renoir/ Lucienne/<br>Cezanne (Green Sardine)[^green_sardine] |
+| *gfx90c* | Vega | APU | Renoir/ Lucienne/<br>Green Sardine (Cezanne)[^green_sardine] |
 | *gfx940* [^gfx940] | ? | ? |
 | **GFX10.1 (RDNA 1)** |
 | *gfx1010* | RDNA | dGPU | Navi10 |
