@@ -36,9 +36,9 @@ waifu2x-ncnn-vulkan をビルドするには、まず ncnn をビルドする必
 端的に言えば `glslangValidator` が最新版でなかった。誰かのせいにするなら cmake が `VULKAN_SDK` を認識してくれないのが悪い。  
 そういうことで以下修正版。
 
-	$ cmake -DVulkan_LIBRARY="${VULKAN_SDK}/lib/libvulkan.so" -DVulkan_INCLUDE_DIR="${VULKAN_SDK}/include" -DNCNN_VULKAN=ON -DGLSLANGVALIDATOR_EXECUTABLE=${VULKAN_SDK}/bin/glslangValidator ../
-	$ make -j$(grep -c processor /proc/cpuinfo)
-	$ make install
+    $ cmake -DVulkan_LIBRARY="${VULKAN_SDK}/lib/libvulkan.so" -DVulkan_INCLUDE_DIR="${VULKAN_SDK}/include" -DNCNN_VULKAN=ON -DGLSLANGVALIDATOR_EXECUTABLE=${VULKAN_SDK}/bin/glslangValidator ../
+	 $ make -j$(grep -c processor /proc/cpuinfo)
+	 $ make install
 
 インストール先はデフォルトで `<build dir>/install`
 
@@ -49,14 +49,14 @@ waifu2x-ncnn-vulkan をビルドするには、まず ncnn をビルドする必
 <del>まずビルド用のディレクトリを作成。下記のコマンドはディレクトリ名に日付を入れるようにしているが、名前であるから何でもいい。  
 そして作成したディレクトリに移動。</del>
 
-	$ mkdir build_$(date "+%F")
-	$ cd <build dir>
+    $ mkdir build_$(date "+%F")
+	 $ cd <build dir>
 
 <del>cmake、ビルド、そしてインストール。インストール先はデフォルトで `<build dir>/install` になっている。</del>  
 
-	$ cmake -DVulkan_LIBRARY="${VULKAN_SDK}/lib/libvulkan.so" -DVulkan_INCLUDE_DIR="${VULKAN_SDK}/include" -DNCNN_VULKAN=ON ../
-	$ make -j$(grep -c processor /proc/cpuinfo)
-	$ make install
+	 $ cmake -DVulkan_LIBRARY="${VULKAN_SDK}/lib/libvulkan.so" -DVulkan_INCLUDE_DIR="${VULKAN_SDK}/include" -DNCNN_VULKAN=ON ../
+	 $ make -j$(grep -c processor /proc/cpuinfo)
+	 $ make install
 
 ## waifu2x-ncnn-vulkan のビルド方法 {#waifu2x-ncnn-vulkan}
 waifu2x-ncnn-vulkan のバージョンは問わず、最新版でも問題ないが、ここでは version 20200414 を前提とする。  
@@ -65,14 +65,14 @@ waifu2x-ncnn-vulkan のバージョンは問わず、最新版でも問題ない
 まずは waifu2x-ncnn-vulkan-20200414 の src ディレクトリへ。  
 そして先程同様にビルド用のディレクトリを作成、移動。
 
-	$ cd waifu2x-ncnn-vulkan-20200414/src
-	$ mkdir build_$(date "+%F")
-	$ cd <build dir>
+	 $ cd waifu2x-ncnn-vulkan-20200414/src
+	 $ mkdir build_$(date "+%F")
+	 $ cd <build dir>
 
 cmake を実行前に、CMakeList.txt を編集する必要があり、67行目の一部を先程ビルドした ncnn に合わせて変更する。  
 パスはその人の環境で変わる。下は、/home/${USER}/src 下に ncnn をクローン、ビルドした場合のパス。  
 
-	/home/${USER}/src/<build dir>/install/lib/cmake/ncnn
+    /home/${USER}/src/<build dir>/install/lib/cmake/ncnn
 
 <del>そしてビルド。ここでは特にオプションは必要としない。</del>
 
@@ -80,13 +80,13 @@ cmake を実行前に、CMakeList.txt を編集する必要があり、67行目�
 
 ここでも cmake で Vulkan系を指定する必要がある。  
 
-	$ cmake -DVulkan_LIBRARY="${VULKAN_SDK}/lib/libvulkan.so" -DVulkan_INCLUDE_DIR="${VULKAN_SDK}/include" -DGLSLANGVALIDATOR_EXECUTABLE=${VULKAN_SDK}/bin/glslangValidator ../src
-	$ make -j$(grep -c processor /proc/cpuinfo)
+	 $ cmake -DVulkan_LIBRARY="${VULKAN_SDK}/lib/libvulkan.so" -DVulkan_INCLUDE_DIR="${VULKAN_SDK}/include" -DGLSLANGVALIDATOR_EXECUTABLE=${VULKAN_SDK}/bin/glslangValidator ../src
+	 $ make -j$(grep -c processor /proc/cpuinfo)
 
 {{< /ins >}}
 
-	$ cmake ../
-	$ make -j$(grep -c processor /proc/cpuinfo)
+	 $ cmake ../
+	 $ make -j$(grep -c processor /proc/cpuinfo)
 
 `<build dir>` に waifu2x-ncnn-vulkan のバイナリが生成されるため、それを実行すればいいが、推論に用いるモデルは `<build dir>` 下ではなく、waifu2x-ncnn-vulkan 下にあるため注意。  
 
