@@ -28,4 +28,4 @@ noindex: false
 {{< link >}} [New AMD Radeon PRO W6000 Series Workstation Graphics with AMD RDNA 2 Architecture and Massive 32GB of Memory to Power Demanding Architectural, Design and Media Workloads :: Advanced Micro Devices, Inc. (AMD)](https://ir.amd.com/news-events/press-releases/detail/1008/new-amd-radeon-pro-w6000-series-workstation-graphics-with) {{< /link >}}
 
 1年より前、*Sienna Cichlid* の設計段階からこうした製品展開が計画されていたと思われるが、自分のような外部の人間がそれを知ることができるのはパッチ等が投稿、公開されてからで、実際の製品はそれよりも後に登場することになる。  
-こうしたことからも、情報を集めることを趣味とするならば、あれやこれやと無闇に推測したり結び付ける前に気長に待つことが肝要――と思うのは自分だけだろうか？
+こうしたことからも、気長に待つことが肝要――なのだと思う。  

@@ -1,7 +1,7 @@
 ---
 title: "Intel Roadmap"
 date: 2020-09-13T10:07:00+09:00
-draft: false
+draft: true
 # tags: [ "", ]
 # keywords: [ "", ]
 categories: [ "Database", "Intel" ]
