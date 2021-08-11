@@ -2,7 +2,7 @@
 title: "Alder Lake-P/M のステッピング、PL1/PL2 参考値"
 date: 2021-05-26T17:46:07+09:00
 draft: false
-tags: [ "Alder_Lake", ]
+tags: [ "Alder_Lake", "Coreboot" ]
 # keywords: [ "", ]
 categories: [ "Intel", "CPU" ]
 noindex: false
