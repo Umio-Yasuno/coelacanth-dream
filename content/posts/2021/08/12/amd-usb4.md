@@ -15,7 +15,7 @@ USB4 は Thunderbolt 3 のプロトコルをベースに実装されており、
  * [[PATCH 0/4] Add support for AMD USB4 and bug fixes](https://lore.kernel.org/linux-usb/YQgK9fQoI35P0yLf@lahna/T/#md7c47c816215c73b2d7e08e58b9532d5c5c4c9d0)
 
 パッチでは AMD USB4 HIA (Host Interface Adapter?) の DeviceID (PCI ID) を追加し、いくつかのバグを修正をするものとなっている。  
-USB4 については今回のパッチを機に調べたことしか知らないが、ホストルーターという表現が使われているのは、USB4 では PCIeトンネリングや DisplayPortトンネリングもサポートしているからだろうか？  
+USB4 については今回のパッチを機に調べてみたが、ホストルーターという表現が使われているのは、USB4 では PCIeトンネリングや DisplayPortトンネリングもサポートしているからだろうか？  
 
 
  > 		+	/* AMD USB4 host */
@@ -32,13 +32,6 @@ USB4 については今回のパッチを機に調べたことしか知らない
 
 また、今回の AMD USB4 のサポートを追加するパッチには、、Intel のソフトウェアエンジニアであり、Linux Kernel における Thunderboltドライバーのメンテナを担当する **Mika Westerberg** 氏も好意的なコメントを寄せている。氏は他にも Intel の各種ハードウェアのドライバーを開発している。  
 
- > 		Hi Sanjay,
- > 		
- > 		On Mon, Aug 02, 2021 at 07:58:16AM -0500, Sanjay R Mehta wrote:
- > 		> From: Sanjay R Mehta <sanju.mehta@amd.com>
- > 		> 
- > 		> This series adds support for AMD USB4 host router and
- > 		> some general USB4 bug fixes.
  > 		
  > 		Nice to see AMD support being added! :) I have few comments on the
  > 		series. I'll comment on the separate patches.

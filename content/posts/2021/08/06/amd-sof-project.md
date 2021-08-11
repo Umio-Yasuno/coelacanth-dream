@@ -102,8 +102,9 @@ AMD が開発している ACP の ALSAドライバーのコードを見ると、
  >
  > {{< quote >}} [acp5x.h « vangogh « amd « soc « sound - kernel/git/next/linux-next.git - The linux-next integration testing tree](https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/tree/sound/soc/amd/vangogh/acp5x.h?h=next-20210804&id=cab396d8b22c13b424d9ba66f626f036f802658c) {{< /quote >}}
 
-それと、上記 SOF へのプルリクエストではドライバー部が `DeviceID: 0x15E2` を対象にしており、*Renoir* プラットフォームというより Vega APU に搭載された ACP をサポートしているのではないかと思われる。[^pci-id]
+それと、上記 SOF へのプルリクエストではドライバー部が `DeviceID: 0x15E2` を対象にしており、*Renoir* プラットフォームというより Vega APU に搭載された ACP をサポートしているのではないかと思われる。[^pci-id]  
 今後変更されるかもしれないが、*VanGogh* の ACP も `DeviceID: 0x15E2` が割り当てられるのであれば、*ACP 5.x* のサポートも含んでいることとなる。  
+
 [^pci-id]: [Enabling SOF Kernel support for AMD Platform by ajitkupandey · Pull Request #3054 · thesofproject/linux](https://github.com/thesofproject/linux/pull/3054/commits/1583a05743ecf504b95300ac987bbbe69db5ce84)
 
 {{< ref >}}
