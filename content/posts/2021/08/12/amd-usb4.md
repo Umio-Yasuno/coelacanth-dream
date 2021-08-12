@@ -10,13 +10,12 @@ noindex: false
 ---
 
 Linux-USB メーリングリストに AMD の USB4 ホストルーター (ホストコントローラー) のサポートを追加するパッチが投稿された。  
-USB4 は Thunderbolt 3 のプロトコルをベースに実装されており、これまでコントローラーを開発し、CPU に統合してきたのは Intel が主だったため、AMD の CPU/SoC に USB4 が将来的に統合されることは USB4 のシステムとしてもユーザーとしても大きなトピックだと言える。  
+USB4 は Thunderbolt 3 のプロトコルをベースに実装されており、これまでコントローラーを開発し、CPU に統合してきたのは Intel が主だったため、今回サポートが追加された USB4ホストルーターが CPU/APU に統合され、将来的に登場することは USB4 全体としてもユーザーとしても大きなトピックだと言える。  
 
  * [[PATCH 0/4] Add support for AMD USB4 and bug fixes](https://lore.kernel.org/linux-usb/YQgK9fQoI35P0yLf@lahna/T/#md7c47c816215c73b2d7e08e58b9532d5c5c4c9d0)
 
 パッチでは AMD USB4 HIA (Host Interface Adapter?) の DeviceID (PCI ID) を追加し、いくつかのバグを修正をするものとなっている。  
-USB4 については今回のパッチを機に調べてみたが、ホストルーターという表現が使われているのは、USB4 では PCIeトンネリングや DisplayPortトンネリングもサポートしているからだろうか？  
-
+USB4 については今回のパッチを機に調べたことしか知らないが、ホストルーターという表現が使われているのは、USB4 では PCIe、DisplayPort のトンネリング機能もサポートしているからだろうか？  
 
  > 		+	/* AMD USB4 host */
  > 		+	{ PCI_VDEVICE(AMD, PCI_DEVICE_ID_AMD_USB4_HIA0) },
@@ -30,7 +29,7 @@ USB4 については今回のパッチを機に調べてみたが、ホストル
  >
  > {{< quote >}} [[PATCH 0/4] Add support for AMD USB4 and bug fixes](https://lore.kernel.org/linux-usb/YQgK9fQoI35P0yLf@lahna/T/#m6374365dcf16ecc112db3a29e4e8d64cc19abba5) {{< /quote >}}
 
-また、今回の AMD USB4 のサポートを追加するパッチには、、Intel のソフトウェアエンジニアであり、Linux Kernel における Thunderboltドライバーのメンテナを担当する **Mika Westerberg** 氏も好意的なコメントを寄せている。氏は他にも Intel の各種ハードウェアのドライバーを開発している。  
+また、今回の AMD USB4 のサポートを追加するパッチには、、Intel のソフトウェアエンジニアであり、Linux Kernel における Thunderboltドライバーのメンテナを担当する **Mika Westerberg** 氏も好意的なコメントを寄せている。  
 
  > 		
  > 		Nice to see AMD support being added! :) I have few comments on the

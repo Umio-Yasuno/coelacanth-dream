@@ -17,7 +17,7 @@ noindex: false
 | :-- | :--: | :--: | :--: |
 | **GFX9 (Vega/ CDNA 1/ CDNA 2)** |
 | *gfx900* | Vega | dGPU | Vega10 |
-| *gfx904* | Vega | APU | Raven /Picasso |
+| *gfx902* | Vega | APU | Raven /Picasso |
 | *gfx904* | Vega | dGPU | Vega12 |
 | *gfx906* | Vega | dGPU | Vega20 |
 | *gfx908* | CDNA | dGPU | Arcturus (MI100) |
