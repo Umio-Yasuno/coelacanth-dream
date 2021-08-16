@@ -15,6 +15,19 @@ noindex: false
 
  * [amdfwtool: Add new SOC mendocino (I54492600) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/56936)
 
+ > 		enum platform {
+ > 			PLATFORM_UNKNOWN,
+ > 			PLATFORM_STONEYRIDGE,
+ > 			PLATFORM_RAVEN,
+ > 			PLATFORM_PICASSO,
+ > 			PLATFORM_RENOIR,
+ > 			PLATFORM_CEZANNE,
+ > 			PLATFORM_MENDOCINO,
+ > 			PLATFORM_LUCIENNE,
+ > 		};
+ >
+ > {{< quote >}} <https://review.coreboot.org/c/coreboot/+/56936/2/util/amdfwtool/amdfwtool.c#b1152> {{< /quote >}}
+
 とは言え、最初のパッチということもあり、パッチの内容は *Mendocino* の名前と分岐先を追加するのが主なものであり、*Mendocino* の素性 {{< comple >}} CPUアーキテクチャ、世代 {{< /comple >}} については触れられていない。  
 *new SOC* とあることから *Mendocino* は APU だと考えられるが、それくらい。  
 
@@ -24,3 +37,14 @@ noindex: false
 オープンソース・プロジェクト、オープンソース・ドライバーに名前が登場し、サポート作業が進められているが、モデルがまだ正式発表されていないものには、[Yellow Carp](/tags/yellow_carp) ([Rembrandt](/tags/rembrandt))、*Barcelo* 、そして今回追加された *Mendocino* 、  
 既にカスタム APU/SoC として製品に搭載されている可能性があるが、まだはっきりと確認されてはいないものに [VanGogh](/tags/vangogh)、[Cyan Skilfish](/tags/cyan_skilfish) がいる。  
 謎を持つ AMD APU/SoC は現状でこれだけ存在するため、下手に推測するよりも、まずはゆっくりと新たなパッチで投稿されるのを待ち、読み解いていくことを楽しんでいきたいと思っている。  
+
+| AMD APU | CPU Arch | GPU Arch |
+| :-- | :--: | :--: |
+| Renoir | Zen 2 | Vega (gfx90c) |
+| Lucienne | Zen 2 | Vega (gfx90c) |
+| Cezanne | Zen 3 | Vega (gfx90c) |
+| Barcelo | Zen 3 ? | Vega (gfx90c) |
+| *Mendocino* | ? | ? |
+| Yellow Carp (Rembrandt) | ? | RDNA 2 (gfx1035) |
+| VenGogh | Zen 2 | RDNA 2 (gfx1033) |
+| Cyan Skilfish | ? | RDNA (gfx1013) |
