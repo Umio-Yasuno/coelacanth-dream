@@ -11,15 +11,15 @@ noindex: false
 
 *RDNA 2 アーキテクチャ* を採用し、マルチメディアエンジンには VCN 3.0 を搭載する *Yellow Carp APU* 、*Beige Goby GPU* だが、最近になって Linux Kernel における AMD GPU ドライバーに投稿されたパッチはそれら APU/GPU が、同じく VCN 3.0 を搭載する他 *RDNA 2 APU/GPU* から一部機能が削られていることを示している。  
 
+ * [[PATCH 0/2] amdgpu video codec support addition and code optimization](https://lists.freedesktop.org/archives/amd-gfx/2021-July/066547.html)
+    * [[PATCH 1/2] amdgpu/nv.c - Added video codec support for Yellow Carp](https://lists.freedesktop.org/archives/amd-gfx/2021-July/066548.html)
+    * [[PATCH 2/2] amdgpu/nv.c - Optimize code for video codec support structure](https://lists.freedesktop.org/archives/amd-gfx/2021-July/066549.html)
+
 {{< pindex >}}
  * [AV1 等、一部コーディックのデコード機能が削られている Yellow Carp](#yc)
  * [エンコード機能を持たず、デコード機能も一部削られている Beige Goby](#bg)
  * [VCN 3.0](#vcn_3)
 {{< /pindex >}}
-
- * [[PATCH 0/2] amdgpu video codec support addition and code optimization](https://lists.freedesktop.org/archives/amd-gfx/2021-July/066547.html)
-    * [[PATCH 1/2] amdgpu/nv.c - Added video codec support for Yellow Carp](https://lists.freedesktop.org/archives/amd-gfx/2021-July/066548.html)
-    * [[PATCH 2/2] amdgpu/nv.c - Optimize code for video codec support structure](https://lists.freedesktop.org/archives/amd-gfx/2021-July/066549.html)
 
 ## AV1 等、一部コーディックのデコード機能が削られている Yellow Carp {#yc}
 
