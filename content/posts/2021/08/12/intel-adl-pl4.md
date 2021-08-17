@@ -17,9 +17,12 @@ PL3/PL4 は、プロセッサのデータシートには記載されているも
  * [mb/google/brya: set PL4 value dynamically for thermal (I20b98ccd) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/56915/1)
  * [mb/google/brya/variants/brya0: add PL4 values for different SKUs (I095e9eda) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/56916/1)
  * [soc/intel/alderlake: set default PL4 values for differnt SKUs (I53791bad) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/56917/1)
+ * [soc/intel/adl: Update power limits for ADL-M SKU (I40b9b3a5) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/56976)
 
 追加された PL4 の値を見てみると、*Alder Lake-P (2+8+2)* で 123W、*4+8+2* で 140W、*6+8+2* で 215W、*Alder Lake-M (2+8+2)* は 68W が設定されている。(2+8+2) といったフォーマットについては以前の記事を参照。  
 {{< link >}} [Alder Lake-P/M のステッピング、PL1/PL2 参考値 | Coelacanth's Dream](/posts/2021/05/26/adl-recent-info-2021-05-26/#adl-power) {{< /link >}}
+
+*Alder Lake-M* については (2+4+2) の PL1/PL2 設定が後のパッチで追加された。  
 
  > 			register "power_limits_config[ADL_P_POWER_LIMITS_282_CORE]" = "{
  > 				.tdp_pl1_override = 15,
@@ -49,8 +52,8 @@ PL3/PL4 は、プロセッサのデータシートには記載されているも
 
 |     | Tiger Lake-U | Tiger Lake-H | Alder Lake-P<br>(ADLRVP) | Alder Lake-M |
 | :-- | :--:       | :--:         | :--:        | :--: |
-| PL1 | UP3: <=28W<br>UP4: <=9W | <=45W | (2+8+2): <=15W<br>(4+8+2): <=28W<br>(6+8+2): <=45W | (2+8+2): <=9W |
-| PL2 | UP3: <=38W (2C), <=60W (4C) <br> UP4: <=35W (2C), <=40W (4C) | 107-135W | (2+8+2): <=55W<br>(4+8+2): <=64W<br>(6+8+2): <=115W | (2+8+2): <=30W |
+| PL1 | UP3: <=28W<br>UP4: <=9W | <=45W | (2+8+2): <=15W<br>(4+8+2): <=28W<br>(6+8+2): <=45W | (2+8+2): <=15W<br>(2+4+2) |
+| PL2 | UP3: <=38W (2C), <=60W (4C) <br> UP4: <=35W (2C), <=40W (4C) | 107-135W | (2+8+2): <=55W<br>(4+8+2): <=64W<br>(6+8+2): <=115W | (2+8+2): <=45W<br>(2+4+2): <=30W |
 | PL4 | UP3: <=71W (2C), <=105W (4C) <br> UP4: <=66W (2C), <=83W (4C) |   | (2+8+2): <=123W <br> (4+8+2): <=140W <br> (6+8+2): <=215W | (2+8+2): <=68W |
 
 そして、*Alder Lake-P/M* を搭載する Chromebook のリファレンスボードとなる **Brya0** の構成ファイルを見ると、以下のように上とは異なる低い値が設定されている。  

@@ -18,8 +18,10 @@ DisplayPort 2.0 ではエンコード方式が、従来の 8b/10b (データ効�
 今回の一連のパッチでは、ディスプレイエンジンIP **DCN 3.1** の内部ブロックのサポートを追加するものも含まれており、**DCN 3.1** にて DP 2.0 UHBR10 をサポートすると考えられる。  
 そして **DCN 3.1** は、*Yellow Carp (Rembrandt) APU* で採用されることが以前のパッチで判明している。  
 {{< link >}} [RDNA 2 APU 「Yellow Carp」 をサポートするパッチが Linux Kernel に投稿される　―― DCN3.1 / VanGogh より大きいキャッシュ | Coelacanth's Dream](/posts/2021/06/03/yellow_carp-apu-linux-kernel/#dcn3_1) {{< /link >}}
-*RDNA 2 アーキテクチャ* を採用する dGPU {{< comple >}} Sienna Cichlid, Navy Flounder, Dimgrey Cavefish, Beige Goby {{< /comple >}} と *VanGogh APU* はディスプレイエンジンに **DCN 3.0x** を採用しており、既に製品として登場しているものは DP 1.4 with DSC までの対応となっている。  
+*RDNA 2 アーキテクチャ* を採用する dGPU {{< comple >}} Sienna Cichlid, Navy Flounder, Dimgrey Cavefish, Beige Goby {{< /comple >}} と *VanGogh APU* はディスプレイエンジンに **DCN 3.0x** を採用しており、既に製品として登場しているものは DP 1.4 with DSC までの対応となっている。[^rx-6900-xt]  
 そのため、DP 2.0 UHBR10 をサポートしている可能性を持つ AMD GPU/APU は *Yellow Carp (Rembrandt) APU* からとなる。  
+
+[^rx-6900-xt]: [AMD Radeon™ RX 6900 XT Graphics | AMD](https://www.amd.com/en/products/graphics/amd-radeon-rx-6900-xt#product-specs)
 
 *Yellow Carp (Rembrandt)* は *VanGogh* に続く *RDNA 2 APU* となり、人感センサーのサポートに関する他のパッチから次世代モバイルプラットフォームとして登場すると目される。  
 {{< link >}} [AMD の次世代モバイルプラットフォームでは人感センサーをサポート | Coelacanth's Dream](/posts/2021/06/27/amd-hpd-next-gen-platform/) {{< /link >}}
