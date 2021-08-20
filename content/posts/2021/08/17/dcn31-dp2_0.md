@@ -10,7 +10,7 @@ noindex: false
 ---
 
 Linux Kernel における AMD GPU ドライバーに向け、DisplayPort 2.0 SST (Single-Stream Transport)、そして UHBR10 (Ultra High Bit Rate, 10 Gbit/s) に対応するパッチが投稿された。  
-DisplayPort 2.0 ではエンコード方式が、従来の 8b/10b (データ効率 80%) から 128b/130b (データ効率 96.71%) 変更されており、データ効率が向上している。  
+DisplayPort 2.0 ではエンコード方式が、従来の 8b/10b (データ効率 80%) から 128b/132b (データ効率 96.71%) 変更されており、データ効率が向上している。  
 レーンあたりのビットレートには UHBR10 (10 Gbit/s)、UHBR13.5 (13.5 Gbit/s)、UHBR20 (20 Gbit/s) の 3つがサポートされている。  
 
  * [[PATCH 0/6] Add DP 2.0 SST Support](https://lists.freedesktop.org/archives/amd-gfx/2021-August/067720.html)
