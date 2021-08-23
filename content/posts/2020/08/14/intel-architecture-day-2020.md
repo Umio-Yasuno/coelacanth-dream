@@ -5,7 +5,7 @@ draft: false
 tags: [ "SG1", "DG1", "Alder_Lake", "Tiger_Lake", "Gen12", "Xe-HP" ]
 keywords: [ "", ]
 categories: [ "Intel", "Hardware", "CPU", "GPU" ]
-noindex: false
+noindex: true
 # summary: ""
 ---
 
