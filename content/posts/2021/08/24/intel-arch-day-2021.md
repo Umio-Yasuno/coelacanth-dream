@@ -39,7 +39,7 @@ Intel が示す *Alder Lake* の CGイメージでは、*1x Golden Cove == 4x Gr
 
 *Sunny Cove (Client)* ではポートフージョンには対応せず、FMA (512-bit) で AVX-512 を処理する形を採っていた。  
 *Golden Cove (Client)* も同様の構成を採るかどうかは気になる所だが、それ以前に *Golden Cove (Client)* を採用する *Alder Lake* では AVX-512 が有効化されないことが複数のメディア、ライターから語られている。[^pcwatch][^anand-ian_cutress]  
-Intel のハイブリッドアーキテクチャでは、*Lakefield* の例から Core (Big) / Atom (Small) 両方が有効な場合はどちらも対応している命令のみが有効化されることが分かっていたが、[AnandTech](https://www.anandtech.com) の [Dr. Ian Cutress](https://www.anandtech.com/Author/140) 氏によれば、Atom (Small) 側を無効化しても、*Core (Big)* 側のみが対応する AVX-512 命令等は無効化されたままだとしている。  
+Intel のハイブリッドアーキテクチャでは、*Lakefield* の例から Core (Big) / Atom (Small) 両方が有効な場合はどちらも対応している命令のみが有効化されることが分かっていたが、[AnandTech](https://www.anandtech.com) の [Dr. Ian Cutress](https://www.anandtech.com/Author/140) 氏によれば、Atom (Small) 側を無効化しても、Core (Big) 側のみが対応する AVX-512 命令等は無効化されたままだとしている。  
 
  * [Instruction Sets: Alder Lake Dumps AVX-512 in a BIG Way - Intel Architecture Day 2021: Alder Lake, Golden Cove, and Gracemont Detailed](https://www.anandtech.com/show/16881/a-deep-dive-into-intels-alder-lake-microarchitectures/5)
 
@@ -70,4 +70,5 @@ Intel のハイブリッドアーキテクチャでは、*Lakefield* の例か�
     * [Intel® 64 and IA-32 Architectures Optimization Reference Manual](https://software.intel.com/content/www/us/en/develop/download/intel-64-and-ia-32-architectures-optimization-reference-manual.html)
     * Tremont - [Tremont: A Wider Front End and Caches - Intel's new Atom Microarchitecture: The Tremont Core in Lakefield](https://www.anandtech.com/show/15009/intels-new-atom-microarchitecture-the-tremont-core/2)
     * Willow Cove/Sunny Cove - [Cache Architecture: The Effect of Increasing L2 and L3 - Intel’s Tiger Lake 11th Gen Core i7-1185G7 Review and Deep Dive: Baskin’ for the Exotic](https://www.anandtech.com/show/16084/intel-tiger-lake-review-deep-dive-core-11th-gen/4)
-
+    * [Config_tools: Update board xml for acrn 2.5 · projectacrn/acrn-hypervisor@918ec7a](https://github.com/projectacrn/acrn-hypervisor/commit/918ec7aaf316b49aba5f58ffed6513f84cc1f96f)
+        * [acrn-hypervisor/adl-rvp.xml at 918ec7aaf316b49aba5f58ffed6513f84cc1f96f · projectacrn/acrn-hypervisor](https://github.com/projectacrn/acrn-hypervisor/blob/918ec7aaf316b49aba5f58ffed6513f84cc1f96f/misc/config_tools/data/adl-rvp/adl-rvp.xml)
