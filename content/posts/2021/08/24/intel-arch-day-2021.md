@@ -29,7 +29,7 @@ noindex: true
 ### Golden Cove (Performance-core) {#golden_cove}
 *Golden Cove* はシングルスレッド性能、低レイテンシを重視して設計された高性能なマイクロアーキテクチャ (Core/Big) となる。  
 *Golden Cove* は、キャッシュ構成は前世代の *Willow Cove* をほとんど踏襲したものとなっているが、フロントエンド部、アウト・オブ・オーダーエンジン、実行ユニット数を大幅に増強している。  
-特にデコード幅は従来の 4-wide から 6-wide に増やされ、命令のフェッチサイズも 16B から 32B となった。  
+特にデコード幅は従来の 4-wide から 6-wide に増やされ、命令のデコードウィンドウサイズも 16B から 32B となった。  
 ただ、*Skylake, Sunny Cove* では 1x Complex decoder + 4x Simple decoder という構成であったため (*Willow Cove* に構成は公開されていない)、*Golden Cove* で増やされたのがどれで、具体的な構成については不明だが、従来から増やされたことは確かなのだろう。  
 6-wide という点だけ見れば、*Tremont, Gracemont* と同じデコード幅だが、*Golden Cove* はデコーダーのクラスタリングを採用していない。クラスタリングの利点から考えれば、*Golden Cove* のデコーダーにはかなりのリソースが割かれていることになる。  
 Intel が示す *Alder Lake* の CGイメージでは、*1x Golden Cove == 4x Gracemont* というサイズで描かれているが、これは *Gracemont* が小さいというよりは、*Golden Cove* が巨大なコアであることを示しているような気がしなくもない。  

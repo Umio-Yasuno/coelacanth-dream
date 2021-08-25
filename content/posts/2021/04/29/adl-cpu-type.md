@@ -30,6 +30,15 @@ AVX-512命令を活用したいユーザーにとって、一方の CPUタイプ
 逆に big/Core側を無効化して、8コアという多コアな Atomプロセッサとして使うことも可能と思われるが、シングルスレッドのピーク性能は下がり、有効化される命令もそうないはずであり、あまりメリットは無いように思われる。  
 それでもユーザーが選択可能ということに意味があり、*Alder Lake* はイジりがいのあるプロセッサとなるかもしれない。  
 
+{{< ins >}}
+
+Intel Architecture Day 2021, Hot Chip 33 にてさらなる *Alder Lake* の詳細が明かされたが、Atom (Small) 側を無効化しても AVX-512 等は有効化されず、また物理的に AVX-512 ユニットを *Alder Lake* の Core (Big) は搭載していないという話も出ている。  
+
+ * [Alder Lake DeepDive - HotChipsで垣間見たIntel「Alder Lake」の細部 | マイナビニュース](https://news.mynavi.jp/article/20210825-1955663/)
+ * [Instruction Sets: Alder Lake Dumps AVX-512 in a BIG Way - Intel Architecture Day 2021: Alder Lake, Golden Cove, and Gracemont Detailed](https://www.anandtech.com/show/16881/a-deep-dive-into-intels-alder-lake-microarchitectures/5)
+
+{{< /ins >}}
+
 それと、Arm の big.LITTLE 技術と混同されやすいが、*Alder Lake* の CPUタイプはソースコード中では big (Core - Golden Cove) と small (Atom - Gracemont) として扱われている。 ( *Lakefield* では Big-Bigger なんて言い方が使われてたりもしたが[^lkf-hc31])  
 
 [^lkf-hc31]: [Lakefield: Hybrid Cores in a Three Dimensional Package](https://old.hotchips.org/hc31/HC31_2.10_LKF_HC_2019_Final_v7.pdf)
