@@ -567,7 +567,11 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | 0x73A1 | 0x00 | |
 | 0x73A2 | 0x00 | |
 | 0x73A3 | 0x00 | Radeon PRO W6800 |
+| 0x73A4 | | |
+| 0x73A5 | | |
 | 0x73AB | 0x00 | |
+| 0x73AC | | |
+| 0x73AD | | |
 | 0x73AE | | |
 | 0x73AF | 0xC0 | RX 6900 XT |
 | 0x73BD | | |
@@ -599,6 +603,11 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | | 0xC5 | RX 6700 XT |
 | | 0xCF | RX 6700M |
 | | 0xDF | |
+| 0x73DA | | |
+| 0x73DB | | |
+| 0x73DC | | |
+| 0x73DD | | |
+| 0x73DE | | |
 
 [^14]: [P4 to Git Change 2042212 by kjayapra@1_HIPWS_LNX1_PAL on 2019/12/06 1… · ROCm-Developer-Tools/ROCclr@a35c1d2](https://github.com/ROCm-Developer-Tools/ROCclr/commit/a35c1d2f2d954363c7d2121d5334f9e7766beeae)
 [^5]:<https://github.com/ROCm-Developer-Tools/aomp-extras/blob/f3d316fe64347e697a9789f0f2499fec50024db1/utils/bin/gputable.txt#L1867>
@@ -611,6 +620,13 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | 0x73E1 | 0x00 | |
 | 0x73E2 | | |
 | 0x73E3 | 0x00 | |
+| 0x73E8 | | |
+| 0x73E9 | | |
+| 0x73EA | | |
+| 0x73EB | | |
+| 0x73EC | | |
+| 0x73ED | | |
+| 0x73EF | | |
 | 0x73FF&darr; | | |
 | | 0x40 | |
 | | 0x41 | |
