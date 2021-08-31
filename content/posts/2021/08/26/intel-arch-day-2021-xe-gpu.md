@@ -80,6 +80,7 @@ Rambo Cache Tile は Intel 7 (Intel 10nm eSF) プロセスで製造され、**Po
 
 Rambo Cache == L2キャッシュ とは明言されていないが、Compute Tile には L1キャッシュ/SLM 4MB までしか搭載しておらず、全体で共有するキャッシュは搭載していないため、Rambo Cache が L2キャッシュだと考えられる。  
 144MB というサイズはキャッシュとして巨大であり、NVIDIA A100 GPU が持つ 40MB の 3.6倍にもなる。Rambo Cache という独自の名前をつけるのも不自然ではないように思う。  
+AMD の RDNA 2 GPU、*Sienna Cichlid (Navi21)* も 128MB という巨大な L3キャッシュを持つが、そちらも Infinity Cache といったマーケティングネームがつけられている。  
 
 
 {{< ref >}}
