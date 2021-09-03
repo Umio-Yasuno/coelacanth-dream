@@ -1,5 +1,5 @@
 ---
-title: "Aldebaran/MI200 はダイあたり 55CU、総 110CU か?"
+title: "Aldebaran/MI200 はダイあたり 55CU、トータル 110CU か?"
 date: 2021-09-01T15:40:37+09:00
 draft: false
 tags: [ "Aldebaran", "gfx90a", "CDNA_2" ]
@@ -97,3 +97,10 @@ CU 110基という規模自体はそうおかしいものではなく、*Aldebar
 *Aldebran/MI200* は HBM2e に対応しているが、*Arcturus/MI100* は 2.4 Gbps の HBM2 を採用しているため、メモリ帯域の向上は約 1.2〜1.3倍程度に留まると思われる。それよりもメモリスタックあたり 16GB の容量が選択できることの恩恵が大きい。  
 そして *Aldebaran/MI200* では CU あたりの演算性能が大幅に向上し、クロックあたりのピーク性能は倍になることを考えれば、各ダイに CU 55基というのは演算性能とメモリ性能のバランスを保った構成ということがわかる。  
 
+| CDNA | Arcturus/MI100 | Aldebaran/MI200 |
+| :-- | :--: | :--: |
+| Active CUs | 120 CU | 110 CU?<br> (2x 55 CU?) |
+| FP32:FP64 Rate <br> (Arcturus FP32 == 1) | 1 : 0.5 | 2 : 1 ? |
+| Memory | HBM2 2.4Gbps  | HBM2e |
+| Memory Bus width | 4096-bit | 8192-bit? <br> (2x 4096-bit) |
+| Memory Size | 32 GB | 128GB ? <br> (2x 64GB ?) |
