@@ -1,5 +1,5 @@
 ---
-title: "プライマリーダイがまとめて電力を報告する Aldebaran/MI200 GPU"
+title: "プライマリーダイがまとめて電力情報を報告する Aldebaran/MI200 GPU"
 date: 2021-09-04T22:35:06+09:00
 draft: false
 tags: [ "ROCm", "Aldebaran" ]
@@ -35,7 +35,8 @@ Kernel Mode Driver (KMD) である AMD GPUドライバーでプライマリー�
 電力制限もプライマリーダイのみに設定されるため、ダイ間でそれぞれの温度や電力情報を低レイテンシでやり取りしていると思われる。  
 
 ついでに追加されたコードの意味について解説を試みると、まず以下は *Aldebaran/MI200* の DeviceID (PCI ID) であり、同 ID は既に AMD GPUドライバーに記述されている。[^alde-dev_id]  
-`DeviceID: 0x7410` は GPU の仮想機能を使用しているときの ID。`MAX_NUM_MCM_GPU` は単に対象とする MCM GPU の DeviceID 数を示している。  
+`DeviceID: 0x7410` は GPU の仮想機能を使用しているときの ID。  
+`MAX_NUM_MCM_GPU` は、配列の要素数や forループの判定部分で使われており、単に対象とする MCM GPU の DeviceID 数を示している。  
 
 [^alde-dev_id]: [linux/amdgpu_drv.c at 838eb73c8d5fa9bf3dcc75010b0eb819eb5bb7ed · torvalds/linux](https://github.com/torvalds/linux/blob/838eb73c8d5fa9bf3dcc75010b0eb819eb5bb7ed/drivers/gpu/drm/amd/amdgpu/amdgpu_drv.c#L1185)
 
@@ -52,7 +53,7 @@ Kernel Mode Driver (KMD) である AMD GPUドライバーでプライマリー�
  >
  > {{< quote >}} [Logging to identify MCM GPUs. · ROCm-Developer-Tools/ROCmValidationSuite@d9729e5](https://github.com/ROCm-Developer-Tools/ROCmValidationSuite/commit/d9729e5be460d0b7ffdc22e8fc12ec7efc882a71#diff-85704b00078c3d83f49dd09ee32cd2d4a2ed2f8f88e96e94d74c5e694ebe8a6b) {{< /quote >}}
 
-上記 DeviceID は `gpu_check_if_mcm_die` 関数で使われているが、引数に取った DeviceID と比較して一致するものがあれば `true` を返すシンプルな処理。  
+上記 DeviceID は `gpu_check_if_mcm_die` 関数で使われているが、引数に取った DeviceID と比較して一致するものがあれば `true` を返し、それが MCM GPU だと伝えるというシンプルな処理。  
 
  > 		/**
  > 		 * @brief Check if the GPU is die (chiplet) in Multi-Core Module (MCM) GPU.
@@ -73,6 +74,5 @@ Kernel Mode Driver (KMD) である AMD GPUドライバーでプライマリー�
  > 		  return mcm_die;
  > 		}
 
-完全に余談な上、プログラマーでもない自分が言うのも何だが、変数 `mcm_die, amd_mcm_gpu_found` は bool型であるのに `if (true == mcm_die)` という風にしているのは少し気になった。  
-それと `gpu_check_if_mcm_die` 関数で MCM を Multi-*Core* Module の略としているが、他では Multi-*Chip* Module としているため、これは単なるタイポだろう。  
+`gpu_check_if_mcm_die` 関数の概要部で MCM を Multi-*Core* Module の略としているが、他では Multi-*Chip* Module としているため、これは単なるタイポだろう。  
 
