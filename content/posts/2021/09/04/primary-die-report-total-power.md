@@ -53,7 +53,8 @@ Kernel Mode Driver (KMD) である AMD GPUドライバーでプライマリー�
  >
  > {{< quote >}} [Logging to identify MCM GPUs. · ROCm-Developer-Tools/ROCmValidationSuite@d9729e5](https://github.com/ROCm-Developer-Tools/ROCmValidationSuite/commit/d9729e5be460d0b7ffdc22e8fc12ec7efc882a71#diff-85704b00078c3d83f49dd09ee32cd2d4a2ed2f8f88e96e94d74c5e694ebe8a6b) {{< /quote >}}
 
-上記 DeviceID は `gpu_check_if_mcm_die` 関数で使われている。`gpu_check_if_mcm_die` 関数は引数に取った DeviceID と比較して一致するものがあれば `true` を返し、それが MCM GPU だと伝えるというシンプルな処理。  
+上記 DeviceID は `gpu_check_if_mcm_die` 関数で使われている。  
+`gpu_check_if_mcm_die` 関数は引数に取った DeviceID と比較して、`mcm_gpu_device_id[4(MAX_NUM_MCM_GPU)]` に格納されたものと 1つでも一致するものがあれば `true` を返し、それが MCM GPU だと伝えるというシンプルな処理。  
 
  > 		/**
  > 		 * @brief Check if the GPU is die (chiplet) in Multi-Core Module (MCM) GPU.
