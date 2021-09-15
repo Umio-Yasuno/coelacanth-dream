@@ -54,6 +54,7 @@ summary: " "
 | ACE | Asynchronous Compute Engine | |
 | RB | Render Backend | =4 ROPs |
 | ROP | Render Output Pipeline | |
+| GCA | Graphics and Compute Array[^gca] | |
 | GMC | Graphics(GFX?) Memory Controller | |
 | GDS | Global Data Share | |
 | LDS | Local Data Share | |
@@ -108,6 +109,7 @@ summary: " "
 | AMFT | Audio formating | |
 | VPG | Video Package ganerator | |
 | SPL | Security patch level | |
+| THM | Thermal Controller[^thm] |
 | PC_LINES | Parameter Cache Lines? | |
 | HDP | Host Data Path[^hpd] | |
 | MGCG | Medium Grain Clock Gating | |
@@ -115,7 +117,11 @@ summary: " "
 | IH | Interrupt Handler[^ih] | |
 | TMR | Trust Memory Region[^tmr] | |
 | SQ | (Distributed) Sequencer | |
+| OSS | OS Service[^oss] | |
 
+[^oss]: [drm/amdgpu: add OSS 2.0 register headers · torvalds/linux@599bd21](https://github.com/torvalds/linux/commit/599bd21552e191913f26f581b549ec41d66984be#diff-52a7043d2b1a6cdc0d495711c1c1fff298b7d9f800cc1c59c623fb666acfd663)
+[^thm]: [drm/amdgpu/include: add thm 11.0.2 headers · torvalds/linux@e6af616](https://github.com/torvalds/linux/commit/e6af616a7822294dac294d92a04772a467ef9fd7#diff-e6bbf8860aa3bcf36ac100d5c2aea51b1a818a025b1fe97b74e479aacf1d71c8)
+[^gca]: [drm/amdgpu: add GCA 7.0 register headers · torvalds/linux@9f24d8c](https://github.com/torvalds/linux/commit/9f24d8ce2522808cdb719775dbb32cb296e20f47#diff-171aaced998e08b7e48c5b4a96eadc9fd50d95dbc1be7c5ba821c29abf671888)
 [^rap]: [drm/amdgpu: add RAP TA header file](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd?h=amd-staging-drm-next&id=a189d0ae0cd68643204cbe9b11e824414b2b06c9)
 [^dmub]: [drm/amd/display: Add DCN3 DMUB](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd?h=amd-staging-drm-next&id=5baebf61ba0ce14253a513ac92be661b35a19676)
 [^tmr]: [drm/amdgpu:add tmr mc address into amdgpu_firmware_info](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd?h=amd-staging-drm-next&id=abf412b3efb2f943d9b98a489e9aca836be21333)
