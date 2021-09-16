@@ -2,7 +2,7 @@
 title: "Intel Architecture Day 2021 個人的まとめ　―― 用語が整理された Xe GPU"
 date: 2021-08-26T18:53:10+09:00
 draft: false
-tags: [ "Xe-HPC", "DG2" ]
+tags: [ "Xe-HPC", "DG2", "Gen12" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "Intel", "GPU" ]
 noindex: false

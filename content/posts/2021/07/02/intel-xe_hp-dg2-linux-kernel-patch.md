@@ -2,7 +2,7 @@
 title: "Linux Kernel に Intel Xe-HP SDV, DG2 をサポートする最初のパッチが投稿される"
 date: 2021-07-02T06:26:52+09:00
 draft: false
-tags: [ "Linux_Kernel", "Xe-HP", "DG2", "XE_LPD" ]
+tags: [ "Linux_Kernel", "Xe-HP", "DG2", "XE_LPD", "Gen12" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "Intel", "GPU" ]
 noindex: false
