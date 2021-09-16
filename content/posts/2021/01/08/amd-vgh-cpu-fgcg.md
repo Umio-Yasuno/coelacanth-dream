@@ -11,7 +11,7 @@ toc: false
 ---
 
 以前、Linux Kernel (amd-gfx) に *VanGogh APU* の機能として `FGCG (Fine Grain Clock Gating)` をサポートするパッチが投稿されたが、  
-{{< link >}} [Linux Kernel に "Fine Grain Clock Gating" のサポートが追加される | Coelacanth's Dream](http://localhost:1313/posts/2020/11/04/amd-linux-kernel-fgcg-support/) {{< /link >}}
+{{< link >}} [Linux Kernel に "Fine Grain Clock Gating" のサポートが追加される | Coelacanth's Dream](/posts/2020/11/04/amd-linux-kernel-fgcg-support/) {{< /link >}}
 それを CPU にも適用するパッチが新たに投稿された。  
 省電力に関係する部分とはいえ、GPU ドライバーに CPU のサポートも追加される、興味深いものとなっている。  
 

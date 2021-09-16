@@ -12,7 +12,7 @@ noindex: false
 Intel oneAPI の深層学習ライブラリ、[oneAPI Deep Neural Network Library (oneDNN)](https://github.com/oneapi-src/oneDNN) に *{{< xe class="hp/hpg" >}}* をサポートするコミットが取り込まれた。  
 そこには *{{< xe class="hp/hpg" >}}* のアーキテクチャの一部を示す記述が含まれている。  
 *{{< xe class="hpg" >}}* については Intel Architecture Day 2021 で詳細が語られたが、まだ正式リリースがまだということもありそれは一部で、語られていない部分はまだまだある。*{{< xe class="hpg"  >}} アーキテクチャ* を採用する最初の GPU/SoC *DG2/Alchemist* は 2021Q1 でのリリースが予定されている。  
-{{< link >}} [Intel Architecture Day 2021 個人的まとめ　―― 用語が整理された Xe GPU | Coelacanth's Dream](http://localhost:1313/posts/2021/08/26/intel-arch-day-2021-xe-gpu/) {{< /link >}}
+{{< link >}} [Intel Architecture Day 2021 個人的まとめ　―― 用語が整理された Xe GPU | Coelacanth's Dream](/posts/2021/08/26/intel-arch-day-2021-xe-gpu/) {{< /link >}}
 
  * [src: gpu: backport xe_hp+ gpu support · oneapi-src/oneDNN@e6d288e](https://github.com/oneapi-src/oneDNN/commit/e6d288ef1943f93a782a644e3aac8b2a500c9299#diff-83f47fe7c7dcf480d6939a5b6af7df4082a26ee534ac014ca9873ae12d852c96)
 

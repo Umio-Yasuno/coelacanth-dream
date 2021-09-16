@@ -101,6 +101,10 @@ CU 110基という規模自体はそうおかしいものではなく、*Aldebar
 | :-- | :--: | :--: |
 | Active CUs | 120 CU | 110 CU?<br> (2x 55 CU?) |
 | FP32:FP64 Rate <br> (Arcturus FP32 == 1) | 1 : 0.5 | 2 : 1 ? |
+| FP32 Ops/clk<br>([CU] * [SP per CU] * [FP32 Rate] * 2 [Ops]) | 15360 | 28160 ?<br>(2x 14080) ? |
+| FP64 Ops/clk<br>([CU] * [SP per CU] * [FP64 Rate] * 2 [Ops]) | 7680 | 14080 ?<br>(2x 7040) ? |
 | Memory | HBM2 2.4Gbps  | HBM2e |
 | Memory Bus width | 4096-bit | 8192-bit? <br> (2x 4096-bit) |
 | Memory Size | 32 GB | 128GB ? <br> (2x 64GB ?) |
+
+
