@@ -15,8 +15,8 @@ AMD がオープンソースで開発する [ROCclr (Radeon Open Compute Common 
 {{< pindex >}}
  * [VanGogh, Navi24, Rembrandt](#vgh-nv24-rmb)
  * [AMDGPU KFD に GPUID 情報が追加される](#kfd)
-    * [Cyan Skilfish == gfx1013](#cyan_skilfish)
-    * [Beige Goby == Navi24, Yellow Carp == Rembrandt](#bg-nv24-yc-rmb)
+    * [Cyan Skilfish = gfx1013](#cyan_skilfish)
+    * [Beige Goby = Navi24, Yellow Carp = Rembrandt](#bg-nv24-yc-rmb)
 {{< /pindex >}}
 
 ## VanGogh, Navi24, Rembrandt {#vgh-nv24-rmb}
@@ -46,7 +46,7 @@ AMD がオープンソースで開発する [ROCclr (Radeon Open Compute Common 
  > {{< quote >}} [SWDEV-267762 - add RMB(gfx1035) to deviceQuery · RadeonOpenCompute/ROCm-OpenCL-Runtime@bc916ca](https://github.com/RadeonOpenCompute/ROCm-OpenCL-Runtime/commit/bc916cac70a5ef0215c602877c7db6dce203de7e) {{< /quote >}}
 
 *Navi24* と *Rembrandt APU* については、オープンソースドライバー (Mesa, Linux Kernel) には出てきていないコードネームではあるが、  
-タイミングからして *Beige Goby* に *GPUID: gfx1034* 、*Yellow Carp* に *GPUID: gfx1035* が該当するのではないかと推測した以上、*Beige Goby == Navi24* 、*Yellow Carp == Rembrandt* と考えない訳にはいかないだろう。  
+タイミングからして *Beige Goby* に *GPUID: gfx1034* 、*Yellow Carp* に *GPUID: gfx1035* が該当するのではないかと推測した以上、*Beige Goby = Navi24* 、*Yellow Carp = Rembrandt* と考えない訳にはいかないだろう。  
 両方の Device (PCI) ID か、ASICごとに割り振られる `external_rev_id` が判明すればそれが合っているかを確かめられるが。  
 {{< link >}}[既に 2つの DeviceID が用意されている Yellow Carp APU ファミリー | Coelacanth's Dream](/posts/2021/07/26/yc-apu-two-did/){{< /link >}}
 
@@ -56,7 +56,7 @@ AMD がオープンソースで開発する [ROCclr (Radeon Open Compute Common 
 
  * [[PATCH] drm/amdkfd: Expose GFXIP engine version to sysfs](https://lists.freedesktop.org/archives/amd-gfx/2021-July/067107.html)
 
-### Cyan Skilfish == gfx1013 {#cyan_skilfish}
+### Cyan Skilfish = gfx1013 {#cyan_skilfish}
 
 `"xx_xx_xx", major, minor, stepping` のフォーマットで記述されており、*Cyan Skilfish* の GPUID は `10_01_03, gfx1013` となっていた。現時点では *RDNA APU* は *Cyan Skilfish* と *gfx1013* のみであるため、この組み合わせは納得行く。  
 
@@ -95,9 +95,9 @@ AMD がオープンソースで開発する [ROCclr (Radeon Open Compute Common 
  >
  > {{< quote >}} [[PATCH] drm/amdkfd: Expose GFXIP engine version to sysfs](https://lists.freedesktop.org/archives/amd-gfx/2021-July/067107.html) {{< /quote >}}
 
-### Beige Goby == Navi24, Yellow Carp == Rembrandt {#bg-nv24-yc-rmb}
+### Beige Goby = Navi24, Yellow Carp = Rembrandt {#bg-nv24-yc-rmb}
 
-この点はパッチのレビューを行った AMD の Felix Kuehling 氏にも指摘されており、氏によれば *Beige Goby* は *GPUID: gfx1034* 、*Yellow Carp* は *GPUID: gfx1035* であり、それぞれ *Navi24* 、*Rembrandt* のものと一致する。LLVM の情報と矛盾も起きないため、氏の言う内容が正しく、また *Beige Goby == Navi24* 、*Yellow Carp == Rembrandt* ということなのだろう。  
+この点はパッチのレビューを行った AMD の Felix Kuehling 氏にも指摘されており、氏によれば *Beige Goby* は *GPUID: gfx1034* 、*Yellow Carp* は *GPUID: gfx1035* であり、それぞれ *Navi24* 、*Rembrandt* のものと一致する。LLVM の情報と矛盾も起きないため、氏の言う内容が正しく、また *Beige Goby = Navi24* 、*Yellow Carp = Rembrandt* ということなのだろう。  
 
  > 		I don't see Beige Goby in the Thunk's gfxip_lookup_table. I think it
  > 		should be 10.3.4. Please check (I'll provide some useful internal links

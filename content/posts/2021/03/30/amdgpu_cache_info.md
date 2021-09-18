@@ -170,7 +170,7 @@ L2キャッシュは 1024KiB (1MiB) であり、これは近年の *Vega/GFX9* �
 *Dimgrey Cavefish/Navi23* のキャッシュ情報も追加されており、そこからはメモリバス幅が読み取れる。  
 
 *Dimgrey Cavefish* は L2キャッシュ 2048KiB (2MiB)、L3キャッシュ/Infinity Cache 32MiB を持つ。  
-L3キャッシュ/Infinity Cache については、ディスプレイエンジン周りのドライバーコードから、メモリチャネルあたり 4MiB ということが読み取れ、他 *RDNA 2* dGPU同様に GDDR6メモリ (1ch == 16-bit) だとするとメモリバス幅は 128-bit だと考えられる。  
+L3キャッシュ/Infinity Cache については、ディスプレイエンジン周りのドライバーコードから、メモリチャネルあたり 4MiB ということが読み取れ、他 *RDNA 2* dGPU同様に GDDR6メモリ (1ch = 16-bit) だとするとメモリバス幅は 128-bit だと考えられる。  
 {{< link >}} [Dimgrey Cavefish/Navi23 の Infinity Cache はメモリチャネルあたり 4MiB | Coelacanth's Dream](/posts/2021/03/04/dimgrey_cavefish-4mb-mall-per-ch/#mall-size) {{< /link >}}
 L2キャッシュ 2MiB からも、他同様に L2キャッシュブロックあたり 256KiB とすると 8ブロック (ch) となり、ここでも 128-bit と考えられる。  
 

@@ -30,6 +30,7 @@ noindex: false
  > {{< quote >}} [MIOpen/conv_fin.hpp at 55fdfad32e7001acd07033e334d95941fcb44f4e · ROCmSoftwarePlatform/MIOpen](https://github.com/ROCmSoftwarePlatform/MIOpen/blob/55fdfad32e7001acd07033e334d95941fcb44f4e/fin/src/include/conv_fin.hpp#L103) {{< /quote >}}
 
 上記コード部は GPUデバイスの情報を検証する部分に使われており、アーキテクチャを示す GPUID (`gfxXXX`) とその CU数が一致しない GPU は無効なデバイスとして実行時エラーが発生するようになっている。  
+*gfx1030* は [Sienna Cichlid](/tags/sienna_cichlid)/Navi21 に割り当てられている GPUID だが、72 CU (32 WGP?) を対象にしており、製品的には [Radeon RX 6800 XT Graphics](https://www.amd.com/en/products/graphics/amd-radeon-rx-6800-xt#product-specs) かそれと同様の構成を取る未発表のものを想定していると思われる。  
 
 *Aldebaran/MI200* の ShaderEngine 構成等は不明だが、AMD はチップレット技術を GPU に投入する上で単一の GPU と認識できるようにする特許を投稿していること、  
 {{< link >}} [プライマリーダイとセカンダリーダイで構成される Aldebaran/MI200 GPU | Coelacanth's Dream](/posts/2021/06/09/aldebaran-primary-secondary/) {{< /link >}}

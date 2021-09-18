@@ -18,7 +18,7 @@ noindex: true
 | :-- | :--: | :--: |
 | GPUID | gfx908 | gfx90a |
 | Active CUs | 120 CU | 110 CU?<br> (2x 55 CU?) |
-| FP32:FP64 Rate <br> (Arcturus FP32 == 1) | 1 : 0.5 | 2 : 1 ? |
+| FP32:FP64 Rate <br> (Arcturus FP32 = 1) | 1 : 0.5 | 2 : 1 ? |
 | Memory | HBM2 (2.4Gbps) | HBM2e |
 | Memory Bus width | 4096-bit | 8192-bit ? <br> (2x 4096-bit ?) |
 | Memory Size | 32 GB | 128GB ? <br> (2x 64GB ?) |

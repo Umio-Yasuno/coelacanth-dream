@@ -21,7 +21,7 @@ Intel Architecture Day 2021 にて、ゲーミング向け Intel GPU アーキ�
  * [用語の再整理](#cleanup)
     * [{{< xe class="hpg" >}}](#xe-hpg)
     * [{{< xe class="hpc" >}}](#xe-hpc)
-        * [Rambo Cache == L2キャッシュ?](#rambo)
+        * [Rambo Cache = L2キャッシュ?](#rambo)
 {{< /pindex >}}
 
 ## 用語の再整理 {#cleanup}
@@ -71,14 +71,14 @@ Compute Tile あたりの {{< xe >}}-Core は 4基と説明されており、Com
 Compute Tile は TSMC N5プロセスで製造される。以前より製造プロセスは Intel Next Gen & External になると説明されてきたが、TSMC版が先行することとなる。  
 ただ今回は Intel Next Gen の部分には触れておらず、提供開始時期の問題もあるのだろうが、本当に Intel Next Genプロセス版が出てくるのかが怪しくなってきた。  
 
-#### Rambo Cache == L2キャッシュ? {#rambo}
+#### Rambo Cache = L2キャッシュ? {#rambo}
 **Ponte Vecchio** 、*{{< xe class="hpc" >}}* では Rambo Cache なるものが採用されることが、初出から発表されていたが、明言は避けられているが今回、144MB という L2キャッシュであるような話が出てきた。  
 
 {{< figure src="../xe-hpc-base-tile.webp" title="Intel Ponte Vecchio Base Tile" caption="画像出典: [Presentation Deck: Intel Architecture Day 2021](https://download.intel.com/newsroom/2021/client-computing/intel-architecture-day-2021-presentation.pdf)" >}}
 
 Rambo Cache Tile は Intel 7 (Intel 10nm eSF) プロセスで製造され、**Ponte Vecchio** では Base Tile あたりに 3D積層技術 Foveros を用いて 4基搭載される。4基というのは {{< xe class="hpc" >}} Slice (Compute Tile 2基) の数と一致する。  
 
-Rambo Cache == L2キャッシュ とは明言されていないが、Compute Tile には L1キャッシュ/SLM 4MB までしか搭載しておらず、全体で共有するキャッシュは搭載していないため、Rambo Cache が L2キャッシュだと考えられる。  
+Rambo Cache = L2キャッシュ とは明言されていないが、Compute Tile には L1キャッシュ/SLM 4MB までしか搭載しておらず、全体で共有するキャッシュは搭載していないため、Rambo Cache が L2キャッシュだと考えられる。  
 144MB というサイズはキャッシュとして巨大であり、NVIDIA A100 GPU が持つ 40MB の 3.6倍にもなる。Rambo Cache という独自の名前をつけるのも不自然ではないように思う。  
 AMD の RDNA 2 GPU、*Sienna Cichlid (Navi21)* も 128MB という巨大な L3キャッシュを持つが、そちらも Infinity Cache といったマーケティングネームがつけられている。  
 

@@ -53,7 +53,7 @@ toc: false
  > {{< quote >}} [pal/gfx9Device.cpp at c9d1904b35ac5eb70bd4738a5bf5e537adbf5ab0 · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/c9d1904b35ac5eb70bd4738a5bf5e537adbf5ab0/src/core/hw/gfxip/gfx9/gfx9Device.cpp) {{< /quote >}}
 
 そして、*Sienna Cichlid/Navi21* と *Navy Flounder/Navi22* が搭載する DCN 3.0 関連ファイルの同様の部分は 8 [MiB] となっており、これは発表済みの **Radeon RX 6000 シリーズ** の仕様と一致する。  
-*Sienna Cichlid/Navi21* は GDDR6 256-bit に対して *MALL/Infinity Cache* は 128MiB、*Navy Flounder/Navi22* は 192-bit に対して 96MiB となっている。(厳密に言えば、**Radeon RX 6700 XT** == *Navy Flounder/Navi22* というのはまだ確認できていないが。だが恐らくそうだろう)  
+*Sienna Cichlid/Navi21* は GDDR6 256-bit に対して *MALL/Infinity Cache* は 128MiB、*Navy Flounder/Navi22* は 192-bit に対して 96MiB となっている。(厳密に言えば、**Radeon RX 6700 XT** = *Navy Flounder/Navi22* というのはまだ確認できていないが。だが恐らくそうだろう)  
 
  >        	dc->caps.mall_size_per_mem_channel = 8;
  >        	/* total size = mall per channel * num channels * 1024 * 1024 */

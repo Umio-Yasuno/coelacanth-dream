@@ -32,7 +32,7 @@ noindex: true
 特にデコード幅は従来の 4-wide から 6-wide に増やされ、命令のデコードウィンドウサイズも 16B から 32B となった。  
 ただ、*Skylake, Sunny Cove* では 1x Complex decoder + 4x Simple decoder という構成であったため (*Willow Cove* に構成は公開されていない)、*Golden Cove* で増やされたのがどれで、具体的な構成については不明だが、従来から増やされたことは確かなのだろう。  
 6-wide という点だけ見れば、*Tremont, Gracemont* と同じデコード幅だが、*Golden Cove* はデコーダーのクラスタリングを採用していない。クラスタリングの利点から考えれば、*Golden Cove* のデコーダーにはかなりのリソースが割かれていることになる。  
-Intel が示す *Alder Lake* の CGイメージでは、*1x Golden Cove == 4x Gracemont* というサイズで描かれているが、これは *Gracemont* が小さいというよりは、*Golden Cove* が巨大なコアであることを示しているような気がしなくもない。  
+Intel が示す *Alder Lake* の CGイメージでは、*1x Golden Cove = 4x Gracemont* というサイズで描かれているが、これは *Gracemont* が小さいというよりは、*Golden Cove* が巨大なコアであることを示しているような気がしなくもない。  
 *Golden Cove* は AVX512 に対応している。スライド内の CGイメージから、2x FMA (256-bit?) + 1x FMA (512-bit) という構成で、*Skylake (Server), Sunny Cove (Server)* と同様に、2x FMA (256-bit) を束ねるポートフージョンと FMA (512-bit) 1ポートそれぞれで AVX-512 が処理可能になっていると思われる。  
 また、*Golden Cove* では新たな AVX-512系命令、`AVX512_FP16` に対応している。  
 {{< link >}} [Intel Sapphire Rapids は AVX512_FP16 をサポート | Coelacanth's Dream](/posts/2021/01/11/intel-spr-avx512_fp16/) {{< /link >}}
