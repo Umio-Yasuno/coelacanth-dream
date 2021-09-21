@@ -29,6 +29,7 @@ AMD のソフトウェアエンジニア Alex Deucher 氏により、[libdrm](ht
 ## VanGogh APU と Steam Deck {#steam-deck}
 
 Hot Chips 33 では、VanGogh APU と Steam Deck についてはノーコメントとされたらしいが[^hc33]、多くの人が考えているように、自分も Steam Deck に採用されている APU が *VanGogh* だと考えている。  
+
 [^hc33]: [Hot Chips 2021 Live Blog: Graphics (Intel, AMD, Google, Xilinx)](https://www.anandtech.com/show/16912/hot-chips-2021-live-blog-graphics-intel-amd-google-xilinx)
 
  * [Steam Deck :: Tech Specs](https://www.steamdeck.com/en/tech)
