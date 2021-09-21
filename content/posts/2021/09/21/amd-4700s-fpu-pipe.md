@@ -1,5 +1,5 @@
 ---
-title: "FPU部を削減した AMD 4700S"
+title: "FPU部を削減した AMD 4700S プロセッサ"
 date: 2021-09-21T22:51:03+09:00
 draft: false
 tags: [ "AMD_4700S", "Zen_2" ]
@@ -63,7 +63,7 @@ FDIVユニットはパイプが占有中でも 2つのオペレーションを�
 
 だが **AMD 4700S** では 2 に近く、FADD をブロックすることなく FMA が実行できるよう Pipe 0 にレジスタポートが 3本備えられている *可能性* があるが、単にうまいこと命令を並び替えて実行している可能性もある。  
 
-| AMD 4700S<br>Unit | Pipe 0 <br> (MUL ?) | Pipe 1 <br> (ADD ?) |
+| [AMD 4700S]<br>Unit | Pipe 0 <br> (MUL ?) | Pipe 1 <br> (ADD ?) |
 | :-- | :--: | :--: |
 | FMUL | X | |
 | FADD | | X |
