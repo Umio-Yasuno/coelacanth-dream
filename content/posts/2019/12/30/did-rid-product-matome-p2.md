@@ -173,7 +173,7 @@ summary: " "
 | :--- | :--- | :---: | :---: |
 | 0x15D8 &darr; | 0xC4 | 3250C[^7] | (Vega 3) |
 | | 0xCD | Silver 3050C[^7] | (Vega 2) |
-| | 0xCE | Gold 3150C[^7] | (Vega 3) |
+| | 0xCE | Gold 3150C[^7]/3150U[^gold-3150u] | (Vega 3) |
 | | 0xCF | R1305G | (6W[^8]) |
 | | 0xDE[^9] | | |
 | | 0xDF[^9] | | |
@@ -186,6 +186,7 @@ summary: " "
 
 [Page Top](#page_index)
 
+[^gold-3150u]: [bigining - dmesg - OpenBenchmarking.org](https://openbenchmarking.org/system/2109268-IB-FIRST907876/bigining/dmesg)
 [^7]: [2040455: Rework map_oprom_vendev to add revision check and mapping —   Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2040455/3/src/soc/amd/picasso/northbridge.c#332)
 [^8]: [[Dali] Raven 2 detection Patch](https://lists.freedesktop.org/archives/amd-gfx/2020-February/045579.html) <br> <https://lists.freedesktop.org/archives/amd-gfx/attachments/20200205/f22ebc46/attachment.obj>
 [^9]: [[PATCH 28/35] drm/amd/display: Fix RV2 Variant Detection](https://lists.freedesktop.org/archives/amd-gfx/2020-February/046322.html)
