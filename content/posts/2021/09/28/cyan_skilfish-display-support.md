@@ -21,6 +21,7 @@ RDNA APU *Cyan Skilfish* のディスプレイエンジン/コントローラー
 今回サポートが追加されたことで、ディスプレイ出力が有効化された *Cyan Skilfish* ベースの製品が出てくる可能性が見えてきた。  
 
 また、*Cyan Skilfish* のメディアエンジンについてはまだ有効化、サポートはされていない。  
+User Mode Driver、**RadeonSI (OpenGL), RADV (Vulkan)** にもまだサポートは追加されていない。  
 
 {{< pindex >}}
  * [DCN 2.01](#dcn201)
@@ -41,18 +42,9 @@ RDNA APU *Cyan Skilfish* のディスプレイエンジン/コントローラー
  > {{< quote >}} [[PATCH 02/02] drm/amd/display: add cyan_skillfish display support](https://lists.freedesktop.org/archives/amd-gfx/2021-September/069483.html) {{< /quote >}}
 
 メモリには、ステイトの `.dram_speed_mts` の最大値から GDDR6 〜14Gbps、`.num_chans` から 256-bit (16ch * 16-bit) を想定していると思われる。  
+*Cyan Skilfish* のキャッシュ構成は現時点で、*Navi10/Navi12* と同じものとされており、それに従えば Shader Array ごとに持つ RDNA L1キャッシュ (GL1データキャッシュ) は 128 KiB、メモリサイドキャッシュである L2データキャッシュは 4096 KiB (4MiB) となる。  
+{{< link >}} [Linux Kernel に RDNA APU 「Cyan Skilfish」 をサポートするパッチが投稿される | Coelacanth's Dream](/posts/2021/07/21/amd-cyan_skilfish-rdna-apu/) {{< /link >}}
 
- > 		+                       {
- > 		+                               .state = 3,
- > 		+                               .dscclk_mhz = 400.0,
- > 		+                               .dcfclk_mhz = 1000.0,
- > 		+                               .fabricclk_mhz = 250.0,
- > 		+                               .dispclk_mhz = 1200.0,
- > 		+                               .dppclk_mhz = 1200.0,
- > 		+                               .phyclk_mhz = 810.0,
- > 		+                               .socclk_mhz = 1254.0,
- > 		+                               .dram_speed_mts = 14000.0,
- > 		+                       },
  > 		+                       {
  > 		+                               .state = 4,
  > 		+                               .dscclk_mhz = 400.0,
@@ -64,6 +56,7 @@ RDNA APU *Cyan Skilfish* のディスプレイエンジン/コントローラー
  > 		+                               .socclk_mhz = 1254.0,
  > 		+                               .dram_speed_mts = 14000.0,
  > 		+                       }
+ >
  > {{< quote >}} [[PATCH 02/02] drm/amd/display: add cyan_skillfish display support](https://lists.freedesktop.org/archives/amd-gfx/2021-September/069483.html) {{< /quote >}}
 
  > 		+       .channel_interleave_bytes = 256,
