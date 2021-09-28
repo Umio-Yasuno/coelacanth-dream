@@ -20,6 +20,8 @@ RDNA APU *Cyan Skilfish* のディスプレイエンジン/コントローラー
 {{< link >}} [Linux Kernel に RDNA APU 「Cyan Skilfish」 をサポートするパッチが投稿される | Coelacanth's Dream](/posts/2021/07/21/amd-cyan_skilfish-rdna-apu/) {{< /link >}}
 今回サポートが追加されたことで、ディスプレイ出力が有効化された *Cyan Skilfish* ベースの製品が出てくる可能性が見えてきた。  
 
+また、*Cyan Skilfish* のメディアエンジンについてはまだ有効化、サポートはされていない。  
+
 {{< pindex >}}
  * [DCN 2.01](#dcn201)
  * [NAVI12_LITE](#navi12_lite)
@@ -109,5 +111,5 @@ AMD の GPU ASIC には、`external_rev_id/eChipRev` という ID が GPUファ�
 {{< link>}} [HWレイトレーシングをサポートする RDNA APU 「Cyan Skilfish (gfx1013)」 | Coelacanth's Dream](/posts/2021/08/01/cyan_skilfish-apu-gfx1013/#gfx1013) {{< /link >}}
 そのため LITE と付いてはいるが *Cyan Skilfish* が元々 *NAVI12_LITE* だったというのは若干違和感を覚える。  
 
-とはいえ *LITE* と付く AMD APU/GPU については、メインラインに組み込まれなかったオープンソースドライバーでは対象にしていない GPU であり、情報に乏しい。  
+とはいえ *LITE* と付く AMD APU/GPU については、メインラインに組み込まれなかったように、オープンソースドライバーでは対象にしていない GPU であり、情報に乏しい。  
 そこを超えて情報を集める気は今はあまり無く、また何かしら楽しむためには線引きすることが大切だと思うようになった。  
