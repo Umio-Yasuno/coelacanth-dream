@@ -75,7 +75,7 @@ L1命令キャッシュの倍増がグラフィクス、ゲーミング性能に
 | {{< xe >}} EU |  |  | Issue Port 0 | IP 1 | IP 2 | IP 3 | IP 4? |
 | :-- | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | {{< xe class="lp" >}} | Branch<br>(Control Flow) | Send | Short<br>(INT /FP) | Math | - | - | - |
-| {{< xe class="hp" >}} |  | Send | INT? (int8/16/32)<br> /Branch? | Math? | DPAS? | Long?<br>(Int64 /FP64) | FP?<br>(FP16/32, BF16) |
+| {{< xe class="hp" >}} | ? | Send | INT? (int8/16/32)<br> /Branch? | Math? | DPAS? | Long?<br>(Int64 /FP64) | FP?<br>(FP16/32, BF16) |
 |                       | In-Order | Out-of-Order | In-Order | Out-of-Order | Out-of-Order | In-Order | In-Order |
 {{< link >}} [intel-graphics-compiler/RegDeps.cpp at f5e9e3dcda319339b82f1171c7e55add46884036 · intel/intel-graphics-compiler](https://github.com/intel/intel-graphics-compiler/blob/f5e9e3dcda319339b82f1171c7e55add46884036/visa/iga/IGALibrary/IR/RegDeps.cpp#L100) {{< /link >}}
 

@@ -57,7 +57,7 @@ AMD が公式に提供しているオープンソース Vulkanドライバー、
  >
  > {{< quote >}} [Update pal from commit: e0d171c15 · GPUOpen-Drivers/pal@83635fb](https://github.com/GPUOpen-Drivers/pal/commit/83635fbee82fb21662a4737e34437c41172c6fe0#diff-334c7874500bba7b14e748047f54e1d18fa3e0db1289adacbb6d62da11124c3f) {{< /quote >}}
 
-| RDNA | Navi10 | Navi12 | Navi14 |
+| RDNA | Navi10 | Navi14 | Navi12 |
 | :-- | :--: | :--: | :--: |
 | Total SE | 2 | 1 | 2 |
 | Total SH | 4 | 2 | 2 |
