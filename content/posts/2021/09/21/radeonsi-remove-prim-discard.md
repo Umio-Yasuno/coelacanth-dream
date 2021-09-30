@@ -24,7 +24,7 @@ GDC 2016 で発表された [Optimizing the Graphics Pipeline with Compute](http
 
 実装時のパッチのコメントによれば、Paraview での性能比較において約 2-4倍の性能向上を得られている。多数のプリミティブを扱うためメモリ性能の影響が大きいのか、HBM系メモリを採用する **Radeon Fury X, Radeon Vega 56, Radeon VII** では約 3-4倍の性能向上となっている。  
 パッチではゲームのベンチマークをする時間が無かったため、まずはすべての Pro カードで有効化するとコメントされている。  
-後日、Linux をメインに OSS情報の発信、ハードウェアのレビューを行っている [Phronix](https://www.phoronix.com/) の Michael Larabel 氏が検証したところ、ゲームでは性能向上の効果は無く、むしろ悪化しているケースが多かったため、Proカードのみデフォルトで有効化する点は最後まで変わらなかった。[^prim-discard-game]  
+後日、Linux をメインに OSS情報の発信、ハードウェアのレビューを行っている [Phoronix](https://www.phoronix.com/) の Michael Larabel 氏が検証したところ、ゲームでは性能向上の効果は無く、むしろ悪化しているケースが多かったため、Proカードのみデフォルトで有効化する点は最後まで変わらなかった。[^prim-discard-game]  
 
 
 [^prim-discard-game]: [RadeonSI Primitive Culling Yields Mixed Benchmark Results - Phoronix](https://www.phoronix.com/scan.php?page=news_item&px=RadeonSI-Prim-Culling-Tests)
@@ -47,7 +47,7 @@ GDC 2016 で発表された [Optimizing the Graphics Pipeline with Compute](http
 そのため、*NGG* ではコンピュートシェーダーから頂点シェーダーに受け渡す必要なしにカリング処理を行うことができる。  
 *GFX9 (Vega)* とそれ以前の世代のみで非同期コンピュートによるプリミティブカリングが役立つ、というよりも、*GFX9* 以降の *GFX10, GFX10.3* 世代ではもっと有用なカリング機能を実装できるから、と言った方が正確かもしれない。  
 非同期コンピュート版は OpenGLドライバーである **RadeonSI** のみに実装されていたが、*NGG* と *NGG カリング* は Vulkanドライバー **RADV** にも実装されているのも大きい。  
-[Phronix](https://www.phoronix.com/) の Michael Larabel 氏が行った検証では、*NGG カリング* の有効化でいくつか性能が低下しているものもあるが、確かな性能向上を得られているゲームもあり、ここも非同期コンピュート版との大きな違いと言える。[^nggc-perf]  
+[Phoronix](https://www.phoronix.com/) の Michael Larabel 氏が行った検証では、*NGG カリング* の有効化でいくつか性能が低下しているものもあるが、確かな性能向上を得られているゲームもあり、ここも非同期コンピュート版との大きな違いと言える。[^nggc-perf]  
 
 [^nggc-perf]: [[Linux Gaming Performance With Radeon Vulkan NGG Culling - Phoronix](https://www.phoronix.com/scan.php?page=article&item=radeon-radv-nggc&num=4)]
 
