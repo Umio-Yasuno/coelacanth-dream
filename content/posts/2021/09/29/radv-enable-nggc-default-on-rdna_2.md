@@ -1,7 +1,7 @@
 ---
 title: "RADV + RDNA 2 で NGGカリングがデフォルトで有効に"
 date: 2021-09-29T06:17:06+09:00
-draft: true
+draft: false
 tags: [ "RDNA_2", "NGG", "RADV" ]
 # keywords: [ "", ]
 categories: [ "Software", "AMD", "GPU" ]
@@ -9,14 +9,14 @@ noindex: false
 # summary: ""
 ---
 
-以前、**RADV** では *RDNA 2/GFX10.3* 世代で *NGGカリング* をデフォルトで有効化するつもりがあることに触れたが、[Phoronix](https://www.phoronix.com/) の Michael Larabel 氏による検証で安定したパフォーマンス向上が確認できたとし、[Timur Kristóf](https://gitlab.freedesktop.org/Venemo) 氏によってそれを適用するパッチ/マージリクエストが投稿されている。  
+以前、**RADV** では *RDNA 2/GFX10.3* 世代で *NGGカリング/プリミティブカリング* をデフォルトで有効化するつもりがあることに触れたが、[Phoronix](https://www.phoronix.com/) の Michael Larabel 氏による検証で安定したパフォーマンス向上が確認できたとし、[Timur Kristóf](https://gitlab.freedesktop.org/Venemo) 氏によってそれを適用するパッチ/マージリクエストが投稿されている。  
 {{< link >}} [RadeonSI ドライバーから非同期コンピュートによるプリミティブカリング機能が削除 | Coelacanth's Dream](/posts/2021/09/21/radeonsi-remove-prim-discard/) {{< /link >}}
 
  * [radv: Enable NGG culling by default on GFX10.3 (!13086) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/13086)
 
 ## NGG/NGGカリング
 
-*NGG* は *Navi14* を除く *RDNA/GFX10* 世代の GPU でデフォルトで有効化されているが、*NGGカリング* は条件が増え、*RDNA 2/GFX10.3* とそれ以降の世代の GPU、かつ RenderBackend (RB) を 2基以上持つ GPU がデフォルトで有効化の対象になる。  
+*NGG/プリミティブシェーダー* は *Navi14* を除く *RDNA/GFX10* 世代の GPU でデフォルトで有効化されているが、*NGGカリング* は条件が増え、*RDNA 2/GFX10.3* とそれ以降の世代の GPU、かつ RenderBackend (RB) を 2基以上持つ GPU がデフォルトで有効化の対象になる。  
 *RDNA/GFX10* 世代でも環境変数 `RADV_PERFTEST=nggc` をセットすることで有効化できる。  
 
  > 		+   device->use_ngg_culling =
@@ -86,5 +86,19 @@ RB 1基の場合、*NGGカリング* を有効化できないようにされて�
  > 		      }
  >
  > {{< quote >}} [src/amd/common/ac_gpu_info.c · 29f264f25804eeea962f21c29c39050c3fc1663d · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/29f264f25804eeea962f21c29c39050c3fc1663d/src/amd/common/ac_gpu_info.c#L1013-1042) {{< /quote >}}
-[src/gallium/drivers/radeonsi/si_state_shaders.c · f00d3e29094942cf8a35c76646b2cfd82f4b3f8a · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/f00d3e29094942cf8a35c76646b2cfd82f4b3f8a/src/gallium/drivers/radeonsi/si_state_shaders.c#L2981)
-[src/gallium/drivers/radeonsi/si_pipe.c · 99c5e03986294e3aa90be6dc656080d8304d3313 · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/99c5e03986294e3aa90be6dc656080d8304d3313/src/gallium/drivers/radeonsi/si_pipe.c#L1242)
+
+**RadeonSI (OpenGL)** ドライバーにも *NGGカリング* は実装されており、デフォルト有効化の条件は **RADV** と概ね同じだが、ワークステーション用途を想定してか、マーケティングネームに **Pro** が入っているかが条件に追加されている (`is_pro_graphics`)。  
+
+ > 		   sscreen->use_ngg = !(sscreen->debug_flags & DBG(NO_NGG)) &&
+ > 		                      sscreen->info.chip_class >= GFX10 &&
+ > 		                      (sscreen->info.family != CHIP_NAVI14 ||
+ > 		                       sscreen->info.is_pro_graphics);
+ > 		   sscreen->use_ngg_culling = sscreen->use_ngg &&
+ > 		                              sscreen->info.max_render_backends >= 2 &&
+ > 		                              !((sscreen->debug_flags & DBG(NO_NGG_CULLING)) ||
+ > 		                                LLVM_VERSION_MAJOR <= 11 /* hangs on 11, see #4874 */);
+ >
+ > {{< quote >}} [src/gallium/drivers/radeonsi/si_state_shaders.c · f00d3e29094942cf8a35c76646b2cfd82f4b3f8a · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/f00d3e29094942cf8a35c76646b2cfd82f4b3f8a/src/gallium/drivers/radeonsi/si_state_shaders.c#L2981) {{< /quote >}}
+
+**RadeonSI** では、*Navi14* を除く *RDNA/GFX10* とそれ以降の世代かつ、**Pro** カードで *NGG* がデフォルトで有効化され、*NGGカリング* はそれに加え RB が 2基以上の場合にデフォルトで有効化される。  
+

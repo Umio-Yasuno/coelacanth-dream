@@ -14,6 +14,8 @@ noindex: false
 
  * [radeonsi: reviewed commits from !12343 (part 2) (!12812) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/12812/commits)
 
+なお、今回削除されたのは非同期コンピュートベース、コンピュートシェーダーによるプリミティングカリング実装であり、*RDNA/GFX10* 世代とそれ以降でサポートされている *NGGカリング/プリミティブカリング* とは異なる。  
+
 ## Primitive culling with async compute {#prim-discard}
 
 非同期コンピュートによるプリミティブカリングが **RadeonSI** に組み込まれたのは約 2年半前 (2019/02)。パッチは、今回削除するパッチを投稿したのと同じ [Marek Olšák](https://gitlab.freedesktop.org/mareko) 氏によって投稿された。  
