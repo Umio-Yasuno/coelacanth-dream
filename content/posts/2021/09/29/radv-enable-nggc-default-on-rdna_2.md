@@ -17,7 +17,7 @@ noindex: false
 ## NGG/NGGカリング
 
 *NGG/プリミティブシェーダー* は *Navi14* を除く *RDNA/GFX10* 世代の GPU でデフォルトで有効化されているが、*NGGカリング* は条件が増え、*RDNA 2/GFX10.3* とそれ以降の世代の GPU、かつ RenderBackend (RB) を 2基以上持つ GPU がデフォルトで有効化の対象になる。  
-*RDNA/GFX10* 世代でも環境変数 `RADV_PERFTEST=nggc` をセットすることで有効化できる。  
+*RDNA/GFX10* 世代は *NGGカリング* がデフォルトで有効化されないが、環境変数 `RADV_PERFTEST=nggc` をセットすることで有効化できる。  
 
  > 		+   device->use_ngg_culling =
  > 		+      device->use_ngg &&
@@ -28,7 +28,6 @@ noindex: false
  > 		+
  >
  > {{< quote >}} [radv: Enable NGG culling by default on GFX10.3 (!13086) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/13086) {{< /quote >}}
-
 
 判定部からして RB が 1基の場合は有効化が不可能となっているが、この点は以前から変わらない。  
 現時点ではまだ対象となる RB 1基の *RDNA 2/GFX10.3* APU/GPU は登場していないが、小規模な *Zen 2 + RDNA 2 APU* [VanGogh](/rags/vangogh) が該当する可能性はある。[^dcc]  
