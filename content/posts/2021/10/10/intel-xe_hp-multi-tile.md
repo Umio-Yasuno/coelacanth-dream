@@ -30,7 +30,8 @@ AMD はまだそうした使い分けに関しては触れていない (と記�
 ## マルチダイ/タイル GPU のソフトウェアサポート {#multi-die-tile-support}
 
 マルチダイ/タイル構成を GPU に導入する上で、ソフトウェア、ドライバーにおけるサポートは Intel, AMD で共通する部分がある。  
-今回のパッチで Matt Roper 氏は、複数のタイルで構成されることはユーザースペース、UMD (User Mode Driver) に対して透過的であり、直接意識する必要はないとコメントしている。KMD (Kernel Mode Driver) がそれを意識することになる。  
+今回のパッチで Matt Roper 氏は、複数のタイルで構成されることはユーザースペース、UMD (User Mode Driver) に対して透過的であり、直接意識する必要はないとコメントしている。これはマルチダイ/タイル GPU のプログラミングモデルを簡易にしつつ、性能を引き出す上で重要となる。  
+KMD (Kernel Mode Driver) が複数のダイ/タイルを意識し、ユーザースペースには単一の GPU であるように見せる。  
 また、CPU と接続されるダイ/タイルはプライマリ/ルートと呼ばれる。  
 
  > 		Only the primary/root tile is initialized for now; the other tiles will
@@ -41,10 +42,10 @@ AMD はまだそうした使い分けに関しては触れていない (と記�
 
 こうした点は *AMD Aldebaran/MI200* においても同じであり、*Aldebaran/MI200* はプライマリダイとセカンダリダイで構成される。そして、AMD のマルチダイ構成における関連特許から、単一の GPU として認識されると考えられる。  
 {{< link >}} [プライマリーダイとセカンダリーダイで構成される Aldebaran/MI200 GPU | Coelacanth's Dream](/posts/2021/06/09/aldebaran-primary-secondary/) {{< /link >}}
-ただ、*Aldebaran/MI200* は CPU とも *XGMI/Infinity Fabric* で接続し、CPU と GPU のメモリ空間を統合する *3rd Gen Infinity Architecture* を想定している関係で、サポートにおいてドライバー部に必要な変更は *{{< xe class="hp" >}}* よりも広い。  
+*Aldebaran/MI200* は CPU とも *XGMI/Infinity Fabric* で接続し、CPU と GPU のメモリ空間を統合する *3rd Gen Infinity Architecture* を想定している関係で、サポートにおいてドライバー部に必要な変更は *{{< xe class="hp" >}}* よりも広い。  
 
-マルチダイ/タイル構成では、単一の GPU に見せつつ、処理をいかに各ダイ/タイルに分散し、メモリアクセスを最適化するかが重要になる。  
-Intel, AMD 共にまだ分散処理の全容は明かしていない。  
+マルチダイ/タイル構成では、単一の GPU に見せつつ、処理をいかに各ダイ/タイルに分散し、メモリアクセスを最適化するかが重要になると考えられる。  
+ただ、Intel, AMD 共にまだ分散処理の全容は明かしていない。  
 *Aldebaran/MI200* ではプライマリダイが、セカンダリダイと合わせたソケットレベルの電力情報を返すことから、分散処理以外に GPUダイ間のみでそれぞれの温度や電力情報をやり取りしていると推測される。  
 {{< link >}} [プライマリーダイがまとめて電力情報を報告する Aldebaran/MI200 GPU | Coelacanth's Dream](/posts/2021/09/04/primary-die-report-total-power/) {{< /link >}}
 
