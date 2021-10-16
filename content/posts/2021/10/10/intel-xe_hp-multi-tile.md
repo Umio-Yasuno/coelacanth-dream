@@ -9,7 +9,7 @@ noindex: false
 # summary: ""
 ---
 
-intel-gfxメーリングリストに、Linux Kernel に *{{< xe class="hp" >}}* のようにマルチタイル構成を採る GPU の初期的なサポートを追加するパッチが投稿された。  
+intel-gfxメーリングリストに、Linux Kernel に *{{< xe class="hp" >}}* のようなマルチタイル構成を採る GPU の初期的なサポートを追加するパッチが投稿された。  
 
  * [[Intel-gfx] [PATCH 00/11] i915: Initial multi-tile support](https://lists.freedesktop.org/archives/intel-gfx/2021-October/280126.html)
 
