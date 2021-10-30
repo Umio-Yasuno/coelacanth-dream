@@ -56,7 +56,7 @@ Intel Gen12/{{< xe >}}プラットフォームでは事前に設定された Pix
  >
  > {{< quote >}} [Draft: intel: Pixel pipeline optimizations for XeHP hardware. (!13569) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/13569/diffs?commit_id=a392fccccfed48400993948d6e8b2b35c86af930) {{< /quote >}}
 
-| | DG2-128 | DG2-448 | DG2-512 |
+| DG2 SKU | DG2-128 | DG2-448 | DG2-512 |
 | :-- | :--: | :--: | :--: |
 | Total Render Slice | 2 ? | 7/8 ? | 8 ? |
 | Total Sub-Slice | 8 | 28/32 ? | 32 ? |
