@@ -44,6 +44,11 @@ XNACK を有効としてコンパイルされたコードを、XNACK が無効�
 
  * [ROCm Installation Guide v4.5 — ROCm Documentation 1.0.0 documentation](https://rocmdocs.amd.com/en/latest/Installation_Guide/Installation_new.html#confirm-you-have-a-rocm-capable-gpu)
 
+余談に近いが、**Radeon Pro W6800** には `DeviceID: 0x73A3` が割り当てられている。だが [Tensile](https://github.com/ROCmSoftwarePlatform/Tensile) 等ではまた別の *Navi21/Sienna Cichlid* の `DeviceID: 0x73A2`、まだリリースされていない SKU を対象としている。[^73a2]  
+これが間違いでなければ、**Radeon Pro W6800** 以外に *Navi21/Sienna Cichlid* ベースのワークステーション向け、あるいはサーバー向けの SKU を計画しているのかもしれない。  
+
+[^73a2h]: [AMD Radeon™ Pro V520 Graphics | AMD](https://www.amd.com/en/products/server-accelerators/amd-radeon-pro-v520#product-specs)
+
 以前には *RDNA/GFX10* 系 GPU のサポートを 2021年に追加する予定があると述べられており、それが一応達成されたことにはなるが、他 *RDNA 2/GFX10.3* 世代の GPU がサポートされるか、*RDNA 1/GFX10.1* 世代もサポートされるかは不透明なまま。  
 特に *Navi12 (gfx1011)* をベースとする **Radeon Pro V520** は AWS EC2 G4adインスタンスに採用されており、開発者を増やし、コミュニティを広げる上で重要になる。  
 *Navi12 (gfx1011)* は FP64演算性能は低いが、*Vega20 (gfx906)* よりも多くのドット積命令をサポートしているため、サポートする価値というか素質は十分あるように思う。  
