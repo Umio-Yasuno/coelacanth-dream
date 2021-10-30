@@ -1,5 +1,5 @@
 ---
-title: "ROCm v4.5 がリリース ―― CPU+GPU の統合メモリをサポート、こっそり追加される RDNA 2 のサポート"
+title: "ROCm v4.5 がリリース ―― CPU+GPU の統合メモリをサポート、RDNA系のサポートは v5.0 に？"
 date: 2021-10-30T12:19:55+09:00
 draft: false
 tags: [ "ROCm", ]
@@ -49,9 +49,9 @@ XNACK を有効としてコンパイルされたコードを、XNACK が無効�
 
 [^73a2h]: [AMD Radeon™ Pro V520 Graphics | AMD](https://www.amd.com/en/products/server-accelerators/amd-radeon-pro-v520#product-specs)
 
-以前には *RDNA/GFX10* 系 GPU のサポートを 2021年に追加する予定があると述べられており、それが一応達成されたことにはなるが、他 *RDNA 2/GFX10.3* 世代の GPU がサポートされるか、*RDNA 1/GFX10.1* 世代もサポートされるかは不透明なまま。  
-特に *Navi12 (gfx1011)* をベースとする **Radeon Pro V520** は AWS EC2 G4adインスタンスに採用されており、開発者を増やし、コミュニティを広げる上で重要になる。  
-*Navi12 (gfx1011)* は FP64演算性能は低いが、*Vega20 (gfx906)* よりも多くのドット積命令をサポートしているため、サポートする価値というか素質は十分あるように思う。  
+以前には *RDNA/GFX10* 系 GPU のサポートを 2021年に追加する予定があると述べられており、それが一応達成されたことにはなるが、[ROCmSupport](https://github.com/ROCmSupport) アカウントは ROCm v5.0 で *RDNA/GFX10* 系の公式サポートについて良いニュースがあるかもしれない、とコメントしている。  
+**ROCm Installation Guide** に **Radeon Pro W6800** が載ってるのはミスで、正式なサポートは ROCm v5.0 で追加するつもりなのだろうか。  
+ただ他 *RDNA 2/GFX10.3* 世代の GPU がサポートされるか、*RDNA 1/GFX10.1* 世代もサポートされるかは不透明なまま。  
 
 {{< ref >}}
  * [AMD Radeon™ Pro V520 Graphics | AMD](https://www.amd.com/en/products/server-accelerators/amd-radeon-pro-v520#product-specs)
