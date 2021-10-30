@@ -50,6 +50,9 @@ XNACK を有効としてコンパイルされたコードを、XNACK が無効�
 [^73a2h]: [AMD Radeon™ Pro V520 Graphics | AMD](https://www.amd.com/en/products/server-accelerators/amd-radeon-pro-v520#product-specs)
 
 以前には *RDNA/GFX10* 系 GPU のサポートを 2021年に追加する予定があると述べられており、それが一応達成されたことにはなるが、[ROCmSupport](https://github.com/ROCmSupport) アカウントは ROCm v5.0 で *RDNA/GFX10* 系の公式サポートについて良いニュースがあるかもしれない、とコメントしている。  
+
+ * <https://github.com/RadeonOpenCompute/ROCm/issues/1180#issuecomment-942101147>
+
 **ROCm Installation Guide** に **Radeon Pro W6800** が載ってるのはミスで、正式なサポートは ROCm v5.0 で追加するつもりなのだろうか。  
 ただ他 *RDNA 2/GFX10.3* 世代の GPU がサポートされるか、*RDNA 1/GFX10.1* 世代もサポートされるかは不透明なまま。  
 
