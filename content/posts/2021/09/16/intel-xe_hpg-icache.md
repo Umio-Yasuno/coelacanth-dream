@@ -2,7 +2,7 @@
 title: "Xe-LP/HP より大きな命令キャッシュを持つ Xe-HPG"
 date: 2021-09-16T05:43:34+09:00
 draft: false
-tags: [ "DG2", "Gen12" ]
+tags: [ "DG2", "Xe-HPG", "Gen12" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "Intel", "GPU" ]
 noindex: false

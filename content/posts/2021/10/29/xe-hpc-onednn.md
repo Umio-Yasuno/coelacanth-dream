@@ -2,7 +2,7 @@
 title: "Xe-HPC のサポートが intel-graphics-compiler、oneDNN に追加される"
 date: 2021-10-29T18:02:53+09:00
 draft: false
-tags: [ "Xe-HPC", "Gen12", "DG2" ]
+tags: [ "Xe-HPC", "Xe-HPG", "Gen12", "DG2" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "Intel", "GPU" ]
 noindex: false
