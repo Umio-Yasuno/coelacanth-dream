@@ -89,6 +89,16 @@ EU あたりの最大スレッド数が 8スレッドとなり、また半分の
  >
  > {{< quote >}} [oneDNN/device_info.cpp at dac5847295d587737133d4027a9c435383926fe3 · oneapi-src/oneDNN](https://github.com/oneapi-src/oneDNN/blob/dac5847295d587737133d4027a9c435383926fe3/src/gpu/compute/device_info.cpp#L116-L131) {{< /quote >}}
 
+*{{< xe class="hpc" >}}* ではデータタイプに、QF, BF8, TF32 を新しくサポートする。  
+TF32 (Tensor Float32) は 19-bit長のデータフォーマットで、**NVIDIA A100 GPU** がサポートしているデータタイプだが、QF,BF8 については詳細不明。  
+QF は Quadword Float、BF8 は BF16 (BFloat16) からダイナミックレンジと精度を減らしたフォーマットとは考えられるが。  
+
+ > 		    GED_DATA_TYPE_qf,      ///< XE.HPC.A
+ > 		    GED_DATA_TYPE_bf8,     ///< XE.HPC
+ > 		    GED_DATA_TYPE_tf32,    ///< XE.HPC
+ >
+ > {{< quote >}} [intel-graphics-compiler/ged_enumerations.h at 2887a020540d935b2f0872b5bd56c0336bc19570 · intel/intel-graphics-compiler](https://github.com/intel/intel-graphics-compiler/blob/2887a020540d935b2f0872b5bd56c0336bc19570/visa/iga/GEDLibrary/GED_external/build/autogen-ia32/ged_enumerations.h#L148-L150) {{< /quote >}}
+
 ### {{< xe class="hpc" >}}-XT と {{< xe class="hpc" >}}-XL {#xl-xt}
 
 *{{< xe class="hpc" >}}* では XT と XL の 2種類があることがコメントで示されている。  

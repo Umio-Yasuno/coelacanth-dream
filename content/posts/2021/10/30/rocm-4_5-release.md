@@ -44,7 +44,7 @@ XNACK を有効としてコンパイルされたコードを、XNACK が無効�
 
  * [ROCm Installation Guide v4.5 — ROCm Documentation 1.0.0 documentation](https://rocmdocs.amd.com/en/latest/Installation_Guide/Installation_new.html#confirm-you-have-a-rocm-capable-gpu)
 
-余談に近いが、**Radeon Pro W6800** には `DeviceID: 0x73A3` が割り当てられている。だが [Tensile](https://github.com/ROCmSoftwarePlatform/Tensile) 等ではまた別の *Navi21/Sienna Cichlid* の `DeviceID: 0x73A2`、まだリリースされていない SKU を対象としている。[^73a2]  
+余談に近いが、**Radeon Pro W6800** には `DeviceID: 0x73A3` が割り当てられている。だが [Tensile](https://github.com/ROCmSoftwarePlatform/Tensile) 等ではまた別の *Navi21/Sienna Cichlid* の `DeviceID: 0x73A2`、まだリリースされていない SKU を対象としている。[^73a2h]  
 これが間違いでなければ、**Radeon Pro W6800** 以外に *Navi21/Sienna Cichlid* ベースのワークステーション向け、あるいはサーバー向けの SKU を計画しているのかもしれない。  
 
 [^73a2h]: [AMD Radeon™ Pro V520 Graphics | AMD](https://www.amd.com/en/products/server-accelerators/amd-radeon-pro-v520#product-specs)
