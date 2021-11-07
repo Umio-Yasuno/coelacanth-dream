@@ -16,6 +16,7 @@ AMD ROCm v4.5 がリリースされた。
 
 統合メモリは *Vega/GFX9* 世代とそれ以降の世代の GPU でサポートされ、*Polaris* や *Fiji* といった *GFX8* 世代の GPU ではサポートされない。  
 これは、そもそも ROCm v4.0 から *GFX8* 世代は、動作はするが公式的に完全なサポートは保証しないことが明言されており、また *GFX8* 世代では 49-bitアドレッシングもサポートしていないことが関係していると思われる。  
+
 統合メモリは 2種類の方法でサポートされ、XNACK-enabled と XNACK-disabled からなる。  
 XNACK-disabled では、GPU が使うメモリすべてが GPU側のページテーブルにマッピングされている必要があり、ページフォールトが発生した際はドライバーが一時的に GPUキューに割り込み、それからページ移行の処理を行い、GPU は再度メモリアクセスを試みる。  
 XNACK-enabled では GPU がページフォールトとページ移行の処理を行うことができるため、CPU+GPU の統合メモリにおいては XNACK-enabled の方が有利だと考えられる。  
@@ -40,7 +41,7 @@ XNACK を有効としてコンパイルされたコードを、XNACK が無効�
 
 [^mi25-eol]: [RadeonOpenCompute/ROCm at f088317e4483b8f75ec55ac3bb040f23e5abd2d4](https://github.com/RadeonOpenCompute/ROCm/tree/f088317e4483b8f75ec55ac3bb040f23e5abd2d4#Deprecations)
 
-今リリースでサポートに追加された AMD GPU は無いが、**ROCm Installation Guide** では対応リストに *Sienna Cichlid/Navi21 (gfx1030)* ベースの **Radeon Pro W6800** がさり気なく追加されており、ROCmソフトウェア/ライブラリも *gfx1030* に対応している。  
+今リリースでサポートに追加された AMD GPU は無いが、[ROCm Installation Guide](https://rocmdocs.amd.com/en/latest/Installation_Guide/Installation_new.html) では対応リストに *Sienna Cichlid/Navi21 (gfx1030)* ベースの **Radeon Pro W6800** がさり気なく追加されており、ROCmソフトウェア/ライブラリも *gfx1030* に対応している。  
 
  * [ROCm Installation Guide v4.5 — ROCm Documentation 1.0.0 documentation](https://rocmdocs.amd.com/en/latest/Installation_Guide/Installation_new.html#confirm-you-have-a-rocm-capable-gpu)
 
