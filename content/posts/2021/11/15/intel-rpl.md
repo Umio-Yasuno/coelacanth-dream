@@ -51,6 +51,16 @@ Gen9 では GuC は、メディアエンコードのビットレート制御や�
 
 [^gen12_2]: [Add tests to detect and check MFX runtime. by uartie · Pull Request #306 · intel/vaapi-fits](https://github.com/intel/vaapi-fits/pull/306)
 
+また、*Raptor Lake-S* については CPU の x86_model 情報を追加するパッチも公開されている。  
+CPUアーキテクチャとその構成はまだ明かされていないが、多くの CPUモニタリングソフトウェアなどでは CPUID から読み取れる Family, Model, Stepping 情報から CPU の判別を行うため、初期的なサポートではあるがそうしたソフトウェアが早くに *Raptor Lake-S* に対応可能となる。  
+
+ > 		 #define INTEL_FAM6_ALDERLAKE		0x97	/* Golden Cove / Gracemont */
+ > 		 #define INTEL_FAM6_ALDERLAKE_L		0x9A	/* Golden Cove / Gracemont */
+ > 		 
+ > 		+#define INTEL_FAM6_RAPTOR_LAKE		0xB7
+ > 		+
+ > {{< quote >}} [[PATCH] x86/cpu: Add Raptor Lake to Intel family](https://lore.kernel.org/all/20211112182835.924977-1-tony.luck@intel.com/T/#u) {{< /quote >}}
+
 {{< ref >}}
  * [GuC](https://01.org/linuxgraphics/gfx-docs/drm/ch04s04.html)
  * [I915 GuC Submission/DRM Scheduler Section — The Linux Kernel documentation](https://www.kernel.org/doc/html/v5.15/gpu/rfc/i915_scheduler.html)
