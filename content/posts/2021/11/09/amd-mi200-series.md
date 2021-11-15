@@ -14,8 +14,8 @@ AMD は 2021/11/08 付で、*CDNA 2 アーキテクチャ* を採用、HBM2e 128
 フォームファクターはどちらも OAM (OCP Accelerator Module) で提供され、PCIeカードに収めた **Instinct MI210** も用意されているとするが、**MI210** の性能、規模は不明。  
 
  * [New AMD Instinct™ MI200 Series Accelerators Bring Leadership HPC and AI Performance to Power Exascale Systems and More :: Advanced Micro Devices, Inc. (AMD)](https://ir.amd.com/news-events/press-releases/detail/1032/new-amd-instinct-mi200-series-accelerators-bring)
- * [AMD Instinct™ MI250 Accelerator | AMD](https://www.amd.com/en/products/server-accelerators/instinct-mi250#product-specs)
- * [AMD Instinct™ MI250X Accelerator | AMD](https://www.amd.com/en/products/server-accelerators/instinct-mi250x#product-specs)
+    * [AMD Instinct™ MI250 Accelerator | AMD](https://www.amd.com/en/products/server-accelerators/instinct-mi250#product-specs)
+    * [AMD Instinct™ MI250X Accelerator | AMD](https://www.amd.com/en/products/server-accelerators/instinct-mi250x#product-specs)
 
 *CDNA 2 アーキテクチャ* は FP64, FP32 のデータフォーマットに対応した第2世代 Matric Core を持ち、CU あたりの FP64演算性能は前世代の *CDNA アーキテクチャ* から倍になっている。  
 
