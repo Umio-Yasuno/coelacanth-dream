@@ -47,12 +47,13 @@ Slice(s) は一部の固定ユニットと L3 Data Cache、EU (Execution Unit) �
 | :-- | :--: | :--: | :--: |
 | Tiger Lake,<br>Rocket Lake? | Gen12 | Gen12 | Gen12 |
 | DG1 | Gen12.1 | Gen12 | Gen12 |
-| Alder Lake-S | Gen12.2[^gen12_2] | Gen12 | Gen12 |
-| Alder Lake-P | Gen12.2[^gen12_2] | Gen13<br>([XE_LPD](/tags/xe_lpd)) | Gen12 |
+| Alder Lake-S | Gen12 | Gen12 | Gen12.2[^gen12_2] |
+| Alder Lake-P | Gen12 | Gen13<br>([XE_LPD](/tags/xe_lpd)) | Gen12.2[^gen12_2] |
 | {{< xe class="hp" >}} | Gen12.5 | - | Gen12.5 |
 | {{< xe class="hpg" >}} | Gen12.55 | Gen13<br>([XE_LPD](/tags/xe_lpd)) | Gen12.55 |
 
 [^gen12_2]: [Add tests to detect and check MFX runtime. by uartie · Pull Request #306 · intel/vaapi-fits](https://github.com/intel/vaapi-fits/pull/306)
+
 | {{< xe >}} EU |  |  | Issue Port 0 | IP 1 | IP 2 | IP 3 | IP 4? |
 | :-- | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | {{< xe class="lp" >}} | Branch<br>(Control Flow) | Send | Short<br>(INT /FP) | Math | - | - | - |
