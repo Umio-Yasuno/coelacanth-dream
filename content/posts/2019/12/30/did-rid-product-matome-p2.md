@@ -618,9 +618,9 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 0x73E0 | 0x00 | |
-| 0x73E1 | 0x00 | |
+| 0x73E1 | 0x00 | W6600M[^amdgpu_ids-1337803] |
 | 0x73E2 | | |
-| 0x73E3 | 0x00 | |
+| 0x73E3 | 0x00 | W6600[^amdgpu_ids-1337803] |
 | 0x73E8 | | |
 | 0x73E9 | | |
 | 0x73EA | | |
@@ -641,11 +641,13 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 0x7420 | | |
-| 0x7421 | | |
+| 0x7421 | 0x00 | W6500M[^amdgpu_ids-1337803] |
 | 0x7422 | | |
-| 0x7423 | | |
-| 0x742F | | |
+| 0x7423 | 0x00 | W6300M[^amdgpu_ids-1337803] |
+| 0x742F &darr; | 0xC3 | RX 6500M[^amdgpu_ids-1337803] |
+| | 0xCF | RX 6300M[^amdgpu_ids-1337803] | 
 
+[^amdgpu_ids-1337803]: <http://repo.radeon.com/amdgpu/21.40.1/ubuntu/pool/main/libd/libdrm-amdgpu-common/libdrm-amdgpu-common_1.0.0.40501-1337803_all.deb>
 
 {{< ref >}}
 
