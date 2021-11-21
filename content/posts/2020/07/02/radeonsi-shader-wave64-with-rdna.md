@@ -9,7 +9,9 @@ noindex: false
 ---
 
 オープンソースで開発される AMD GPU向け OpenGLドライバー **RadeonSI** への最新コミットの中で、ネイティブで Wave32モードに対応する *RDNA /Navi1x GPU* も Wave64モードで各シェーダーを実行するように変更が行なわれた。  
-{{< link >}}[radeonsi: always use Wave64 for HS/GS/VS shader stages (except GS fast launch) (90cf741d) · Commits · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/commit/90cf741d316d231bdc8a67dce8ef1c84a80eeec8){{< /link >}}
+
+ * [radeonsi: always use Wave64 for HS/GS/VS shader stages (except GS fast launch) (90cf741d) · Commits · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/commit/90cf741d316d231bdc8a67dce8ef1c84a80eeec8)
+
 Wave は コンピュートユニット(CU) 内の SIMDユニットが実行するスレッドの塊を意味し、後の数字はスレッドの数を意味する。Wavefront とも呼ぶ。  
 
 {{< pindex >}}
