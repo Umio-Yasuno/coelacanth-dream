@@ -349,40 +349,40 @@ DG02SRTBP4MFA
 #### Vega10 ( gfx900 ) {#vega10-gfx900}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 0x6860 &darr; | 0x00 | Radeon Instinct MI25 &darr; | (Vega10 GLXT SERVER) &darr; |
+| 0x6860 &darr; | 0x00 | Instinct MI25 &darr; | (Vega10 GLXT SERVER) &darr; |
 | | 0x01 | | |
 | | 0x02 | | |
-| | 0x03 | Radeon Pro V340 | |
-| | 0x04 | Radeon Instinct MI25x2 | |
-| | 0x07 | Radeon Pro V320 (/V340?) [^6]| |
-| | 0xC0 | Radeon Pro Vega 48 /56 /64 /64X[^1] | ? |
-| 0x6861 | 0x00 | Radeon Pro (TM) WX 9100 | (Vega10 GLXT) |
-| 0x6862 | 0x00 | Radeon Pro SSG | (Vega10 SSG) |
-| 0x6863 | 0x00 | Radeon Vega Frontier Edition | (Vega10 GLXTX) |
-| 0x6864 &darr; | 00 | | |
-| | 0x03 | Radeon Pro V340 | (Vega10 GLXT SERVER) &darr; |
+| | 0x03 | Pro V340 | |
 | | 0x04 | Instinct MI25x2 | |
-| | 0x05 | Radeon Pro V340 | |
-| 0x6867 | 00 | Radeon Pro Vega 56 | (Vega10 XLA) |
-| 0x6868 | 00 | Radeon (TM) Pro WX 8200 | (Vega10 GLXL) |
+| | 0x07 | Pro V320 (/V340?) [^6]| |
+| | 0xC0 | Pro Vega 48 /56 /64 /64X[^1] | ? |
+| 0x6861 | 0x00 | Pro WX 9100 | (Vega10 GLXT) |
+| 0x6862 | 0x00 | Pro SSG | (Vega10 SSG) |
+| 0x6863 | 0x00 | Vega Frontier Edition | (Vega10 GLXTX) |
+| 0x6864 &darr; | 00 | | |
+| | 0x03 | Pro V340 | (Vega10 GLXT SERVER) &darr; |
+| | 0x04 | Instinct MI25x2 | |
+| | 0x05 | Pro V340 | |
+| 0x6867 | 00 | Pro Vega 56 | (Vega10 XLA) |
+| 0x6868 | 00 | (TM) Pro WX 8200 | (Vega10 GLXL) |
 | 0x6869 | 00 | | (Vega10 XGA) |
 | 0x686A | 00 | | (Vega10 LEA) |
-| 0x686B | 00 | Radeon Pro Vega 64X | (Vega10 XTXA) |
-| 0x686C &darr; | 00 | Radeon Instinct MI25 MxGPU &darr; | (Vega10 GLXT SERVER VF) &darr; |
+| 0x686B | 00 | Pro Vega 64X | (Vega10 XTXA) |
+| 0x686C &darr; | 00 | Instinct MI25 MxGPU &darr; | (Vega10 GLXT SERVER VF) &darr; |
 | | 0x01 | | |
 | | 0x02 | | |
-| | 0x03 | Radeon Pro V340 MxGPU | |
-| | 0x04 | Radeon Instinct MI25x2 MxGPU | |
-| | 0x05 | Radeon Pro V340 MxGPU | |
+| | 0x03 | Pro V340 MxGPU | |
+| | 0x04 | Instinct MI25x2 MxGPU | |
+| | 0x05 | Pro V340 MxGPU | |
 | | 0xC1 | | |
 | 0x686D | 00 | | (Vega10 GLXTA) |
 | 0x686E | 00 | | (Vega10 GLXLA) |
-| 0x687F &darr; | 01 | Radeon RX Vega | (Vega10 XT - Blade) |
-| | 0xC0 | Radeon RX Vega | (Vega10 XTX) |
-| | 0xC1 | Radeon RX Vega (64) | (Vega10 DESKTOP XT) |
-| | 0xC3 | Radeon RX Vega (56) | (Vega10 XL) |
+| 0x687F &darr; | 01 | RX Vega | (Vega10 XT - Blade) |
+| | 0xC0 | RX Vega | (Vega10 XTX) |
+| | 0xC1 | RX Vega (64) | (Vega10 DESKTOP XT) |
+| | 0xC3 | RX Vega (56) | (Vega10 XL) |
 | | 0xC4 | | (Vega10 XL) |
-| | 0xC7 | Radeon RX Vega | (Vega10 XL) |
+| | 0xC7 | RX Vega | (Vega10 XL) |
 
 [Page Top](#page_index)
 
@@ -396,10 +396,10 @@ DG02SRTBP4MFA
 | 0x69A1 | 0x00 | | (Vega12 GL MXL) |
 | 0x69A2 | 0x00 | | (Vega12 GL XL) |
 | 0x69A3 | 0x00 | | (Vega12 Reserved) |
-| 0x69AF &darr; | 0xC0 | Radeon Pro Vega 20 | (Vega12 XTA) |
+| 0x69AF &darr; | 0xC0 | Pro Vega 20 | (Vega12 XTA) |
 | | 0xC1 | | (Vega12 MXT) |
 | | 0xC3 | | (Vega12 MLP) |
-| | 0xC7 | Radeon Pro Vega 16 | (Vega12 XLA) |
+| | 0xC7 | Pro Vega 16 | (Vega12 XLA) |
 | | 0xCF | | (Vega12 XL) |
 | | 0xFF | | (Vega12 LE) |
 
@@ -408,18 +408,18 @@ DG02SRTBP4MFA
 #### Vega20 ( gfx906 ) {#vega20-gfx906}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 0x66A0 | 00 | Radeon Instinct | |
+| 0x66A0 | 00 | Instinct | |
 | 0x66A1 &darr; | 00 | | (Server XT 32GB) |
 | | 0x02 | MI50 32GB? | |
 | | 0x03 | | |
-| | 0x06 | Radeon Pro VII | (Vega20 WKS GL-XE) |
+| | 0x06 | Pro VII | (Vega20 WKS GL-XE) |
 | 0x66A2 &darr; | 00 | | |
 | | 0x02 | | |
-| 0x66A3 | 00 | Radeon Pro Vega II (Duo) | |
+| 0x66A3 | 00 | Pro Vega II (Duo) | |
 | 0x66A4 | 00 | | |
 | 0x66A7 | 00 | | |
 | 0x66AF &darr; | C0 | | |
-| | 0xC1 | Radeon VII | (Vega20 XT) |
+| | 0xC1 | VII | (Vega20 XT) |
 | | 0xC3 | | |
 | | 0xC7 | | |
 | | 0xCF | | |
@@ -467,12 +467,12 @@ Navi LITE 13///\\\E9:00
 | | 0xF4 | | (12Gbps, Fake DID?) |
 | | 0xF5 | | (12Gbps, Fake DID?) |
 | | 0xF6 | | (Navi10 XME Fake DID?[^2]) |
-| 0x7310 | 0x00 | Radeon Pro W5700X | (Navi10 GL-XTA) |
-| 0x7312 | 0x00 | Radeon Pro W5700 | (Navi10 Pro-XL[^4]) |
+| 0x7310 | 0x00 | Pro W5700X | (Navi10 GL-XTA) |
+| 0x7312 | 0x00 | Pro W5700 | (Navi10 Pro-XL[^4]) |
 | 0x7318 | 0x40 | | (Navi10 XTA) |
-| 0x7319 | 0x40 | Radeon Pro 5700 XT | (Navi10 XTMA) |
+| 0x7319 | 0x40 | Pro 5700 XT | (Navi10 XTMA) |
 | 0x731A | 0x40 | | |
-| 0x731B | 0x40 | Radeon Pro 5700 | (Navi10 XGA) |
+| 0x731B | 0x40 | Pro 5700 | (Navi10 XGA) |
 | 0x731E &darr; | 0xC6 | RX 5700XTB | for Blockchain |
 | | 0xC7 | RX 5700B | for Blockchain |
 | 0x731F &darr; | 0xC0 | RX 5700 XT 50th | (Navi10 XTX) |
@@ -504,7 +504,7 @@ Navi LITE 13///\\\E9:00
 | 0x7360 &darr; | 0x40 | | |
 | | 0x41 | Pro 5600M | |
 | | 0xC1 | | |
-| | 0xC3 | Radeon Pro V520 | |
+| | 0xC3 | Pro V520 | |
 | | 0xC7 | | (no video support)[^no-video-navi12] |
 | 0x7362 | 0x71 | | (Navi12 VF) |
 | | 0xC1 | | (Navi12 VF) |
@@ -527,11 +527,11 @@ Navi LITE 13///\\\E9:00
 | | 0xF4 | | (Navi14 XT Fake DID?[^2]) |
 | | 0xF5 | | (Navi14 XL Fake DID??) |
 | | 0xF6 | | (Navi14 XTX Fake DID?[^2]) |
-| 0x7340 &darr; | 0x00 | Radeon Pro W5500X | Falcon GL-XTA |
-| | 0x40 | Radeon Pro 5500M | (Navi14 ULA[^3]) |
-| | 0x41 | Radeon Pro 5500 XT | Falcon XTA 8G |
-| | 0x43 | Radeon Pro 5300M | |
-| | 0x47 | Radeon Pro 5300 | Falcon XLXA | 
+| 0x7340 &darr; | 0x00 | Pro W5500X | Falcon GL-XTA |
+| | 0x40 | Pro 5500M | (Navi14 ULA[^3]) |
+| | 0x41 | Pro 5500 XT | Falcon XTA 8G |
+| | 0x43 | Pro 5300M | |
+| | 0x47 | Pro 5300 | Falcon XLXA | 
 | | 0x70 | | |
 | | 0xC1 | RX 5500M | (Navi14 XTM) |
 | | 0xC3 | RX 5300M | (Navi14 XLM) |
@@ -541,10 +541,10 @@ Navi LITE 13///\\\E9:00
 | | 0xCF | RX 5300 | (Navi14 XL?) |
 | | 0xF2 | | |
 | | 0xF3 | | |
-| 0x7341 | 0x00 | Radeon Pro W5500 | (Navi14 Pro-XL) |
+| 0x7341 | 0x00 | Pro W5500 | (Navi14 Pro-XL) |
 | 0x7343 | 0x00 | | |
-| 0x7347 | 0x00 | Radeon Pro W5500M | (Navi14 Pro-XTM) |
-| 0x734F | 0x00 | Radeon Pro W5300M | (Navi14 Pro-XLM) |
+| 0x7347 | 0x00 | Pro W5500M | (Navi14 Pro-XTM) |
+| 0x734F | 0x00 | Pro W5300M | (Navi14 Pro-XLM) |
 
 [Page Top](#page_index)
 
@@ -567,7 +567,7 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | 0x73A0 | 0x00 | |
 | 0x73A1 | 0x00 | |
 | 0x73A2 | 0x00 | |
-| 0x73A3 | 0x00 | Radeon PRO W6800 |
+| 0x73A3 | 0x00 | PRO W6800 |
 | 0x73A4 | | |
 | 0x73A5 | | |
 | 0x73AB | 0x00 | |
@@ -618,9 +618,9 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 0x73E0 | 0x00 | |
-| 0x73E1 | 0x00 | W6600M[^amdgpu_ids-1337803] |
+| 0x73E1 | 0x00 | PRO W6600M[^amdgpu_ids-1337803] |
 | 0x73E2 | | |
-| 0x73E3 | 0x00 | W6600[^amdgpu_ids-1337803] |
+| 0x73E3 | 0x00 | PRO W6600[^amdgpu_ids-1337803] |
 | 0x73E8 | | |
 | 0x73E9 | | |
 | 0x73EA | | |
@@ -641,9 +641,9 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 0x7420 | | |
-| 0x7421 | 0x00 | W6500M[^amdgpu_ids-1337803] |
+| 0x7421 | 0x00 | PRO W6500M[^amdgpu_ids-1337803] |
 | 0x7422 | | |
-| 0x7423 | 0x00 | W6300M[^amdgpu_ids-1337803] |
+| 0x7423 | 0x00 | PRO W6300M[^amdgpu_ids-1337803] |
 | 0x742F &darr; | 0xC3 | RX 6500M[^amdgpu_ids-1337803] |
 | | 0xCF | RX 6300M[^amdgpu_ids-1337803] | 
 
