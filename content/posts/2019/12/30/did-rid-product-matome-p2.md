@@ -644,7 +644,7 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | 0x7421 | 0x00 | PRO W6500M[^amdgpu_ids-1337803] |
 | 0x7422 | | |
 | 0x7423 | 0x00 | PRO W6300M[^amdgpu_ids-1337803] |
-| 0x742F &darr; | 0xC3 | RX 6500M[^amdgpu_ids-1337803] |
+| 0x743F &darr; | 0xC3 | RX 6500M[^amdgpu_ids-1337803] |
 | | 0xCF | RX 6300M[^amdgpu_ids-1337803] | 
 
 [^amdgpu_ids-1337803]: <http://repo.radeon.com/amdgpu/21.40.1/ubuntu/pool/main/libd/libdrm-amdgpu-common/libdrm-amdgpu-common_1.0.0.40501-1337803_all.deb>
