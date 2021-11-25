@@ -1,7 +1,7 @@
 ---
 title: "Thunderbolt 4の速度はThunderbolt 3、USB4と変わらず"
 date: 2020-01-12T15:09:32+09:00
-draft: false
+draft: true
 tags: [ "Bus", ]
 keywords: [ "Thunderbolt4", "USB4", "Thunderbolt3" ]
 categories: [ "Hardware", "Intel" ]
