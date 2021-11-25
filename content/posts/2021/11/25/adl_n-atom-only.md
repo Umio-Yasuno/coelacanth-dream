@@ -57,8 +57,16 @@ CPUID では、ハイブリッドコア構成であることを示すビット�
 Atom系コアで構成される製品は、[Tremont アーキテクチャ](/tags/tremont) を採用する組み込み向けの *Elkhart Lake* 、モバイル向けの *Jasper Lake* で最後となるという話があったが[^ascii-atom]、方針転換したのかもしれない。  
 今回調べ直したところ、特別ハイブリッドコア構成は組み込みに向いていないという訳ではないらしいが[^emb-big-little]、*Alder Lake* においては消費電力やダイサイズから Atomコアのみで構成する方が適していると判断された可能性がある。  
 
-また N バリアントは以前にも使われたことがあり、MacbookPro向けの *Ice Lake* や *Jasper Lake* が当たるが [^icp-n]、CPU ではなく PCH部に使われており、意味合いとしては異なると思われる。  
+また N バリアントは以前にも使われたことがあり、MacbookPro向けの *Ice Lake* や *Jasper Lake* が当たるが [^icp-n]、CPU ではなく PCH部に使われており[^n-pch]、意味合いとしては異なると思われる。  
 
 [^ascii-atom]: [ASCII.jp：最後のAtomとなるChromebook向けプロセッサーのJasper Lake　インテル CPUロードマップ (3/3)](https://ascii.jp/elem/000/004/040/4040489/3/)
 [^emb-big-little]: [if07_060.pdf](https://interface.cqpub.co.jp/wp-content/uploads/interface/2014/07/if07_060.pdf)
 [^icp-n]: [[PATCH v1 1/1] mei: me: add Ice Lake-N device id. - Andy Shevchenko](https://lore.kernel.org/all/20211001173644.16068-1-andriy.shevchenko@linux.intel.com/)
+[^n-pch]: [soc/intel/icl: add detection of PCH type PCH-N (I2b730504) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/49607)
+
+| | Golden Cove (Big) | Gracemont (Small) | GPU (Gen12.2) |
+| :-- | :--: | :--: | :--: |
+| Alder Lake-S (Desktop) | 8 | 8 | GT1 (32 EU) |
+| Alder Lake-P (Mobile) | 6 | 8 | GT2 (96 EU) |
+| Alder Lake-M (Mobile) | 2 | 8 | GT2 (96 EU) |
+| Alder Lake-N (Embedded?) | 0 | ? | GT2? (96 EU) |
