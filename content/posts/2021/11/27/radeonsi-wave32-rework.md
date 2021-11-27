@@ -30,11 +30,11 @@ noindex: false
  > {{< quote >}} [radeonsi: rework to make the wave size configurable per shader for fine-grained Wave32/64 selection (!13878) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/13878) {{< /quote >}}
 
 {{< pindex >}}
-
  * [Wave32](#wave32)
     * [Compute Shader](#cs)
     * [Pixel Shader](#ps)
     * [Divergent loops](#divergent)
+    * [Shader Profile](#shader-profile)
 {{< /pindex >}}
 
 ## Wave32 {#wave32}
@@ -136,6 +136,8 @@ Wave32 ではアイドリング状態になる半分を排除でき、次の Wav
 *RDNA系 アーキテクチャ* では Wave64モードで実行する場合、命令を 2つの Wave32 に分割して実行する。  
 命令をある程度ブロックにまとめ、それを low と high に分割し、最初の low 群を実行、次に high 群を実行する Sub-Vectorモードも *RDNA系 アーキテクチャ* ではサポートされている。  
 2つの Wave32 に分割されるといっても、スカラ命令は 1回のみとなる。また Workgroup の最大サイズはスレッド (work-item) 数で決まっているため、Workgroup 内の Wave数は Wave32 の場合は 32 Wave、Wave64 の場合は 16 Wave となる。  
+
+### Shader Profile {#shader-profile}
 
 シェーダープロファイルによる Wave サイズの選択も、現時点では SPECviewperfベンチマークのみが対象だが、実装されている。  
 [Viewperf/Energy](https://www.spec.org/gwpg/gpc.static/energy-02.html) は Pixel Shader の部で挙げた Discard処理を含む Pixel Shader のコンパイルエラーが起きないため Wave32 で実行され、  
