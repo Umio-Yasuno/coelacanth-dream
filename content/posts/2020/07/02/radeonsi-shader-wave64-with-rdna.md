@@ -41,7 +41,7 @@ Vertex/Tess/Geometry Shader も Wave64 で実行する方が良いと考える�
  > * VGPR allocation granularity is half of Wave32, so 1 Wave64 can sometimes use fewer VGPRs than 2 Wave32  
  > * TessMark X64 with NGG culling is faster with Wave64  
  >
- > 引用元: [ac,radeonsi: use Wave64 for HS/GS/VS, gpu_info fix (!5524) · Merge Requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5524)
+ > {{< quote >}} [ac,radeonsi: use Wave64 for HS/GS/VS, gpu_info fix (!5524) · Merge Requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5524) {{< /quote >}}
 
 ざっくりとした意訳
 

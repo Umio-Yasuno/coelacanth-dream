@@ -97,7 +97,7 @@ RB 1基の場合、*NGGカリング* を有効化できないようにされて�
  > 		                              !((sscreen->debug_flags & DBG(NO_NGG_CULLING)) ||
  > 		                                LLVM_VERSION_MAJOR <= 11 /* hangs on 11, see #4874 */);
  >
- > {{< quote >}} [src/gallium/drivers/radeonsi/si_state_shaders.c · f00d3e29094942cf8a35c76646b2cfd82f4b3f8a · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/f00d3e29094942cf8a35c76646b2cfd82f4b3f8a/src/gallium/drivers/radeonsi/si_state_shaders.c#L2981) {{< /quote >}}
+ > {{< quote >}} <https://gitlab.freedesktop.org/mesa/mesa/-/blob/f00d3e29094942cf8a35c76646b2cfd82f4b3f8a/src/gallium/drivers/radeonsi/si_pipe.c#L1242-1250> {{< /quote >}}
 
 **RadeonSI** では、*Navi14* を除く *RDNA/GFX10* とそれ以降の世代かつ、**Pro** カードで *NGG* がデフォルトで有効化され、*NGGカリング* はそれに加え RB が 2基以上の場合にデフォルトで有効化される。  
 
