@@ -37,6 +37,8 @@ noindex: false
     * [Divergent loops](#divergent)
 {{< /pindex >}}
 
+## Wave32 {#wave32}
+
 各シェーダーステージを Wave64 で実行するようにした際、[Marek Olšák](https://gitlab.freedesktop.org/mareko) 氏 Wave32 より性能面で優れていると考えた理由として以下の項目を挙げていた。  
 
  > * greater chance of L0 cache hits, because more threads are assigned to the same CU  
@@ -50,7 +52,6 @@ noindex: false
 
 [^wave32-true]: [radeonsi: rework to make the wave size configurable per shader for fine-grained Wave32/64 selection (!13878) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/13878/diffs?commit_id=676d4ddcf83a62973aad8062a34c7c838bfc8a4f#68ea09d61709a8690d922a47246019c3819579d7)
 
-## Wave32 {#wave32}
 ### Compute Shader {#cs}
 
 [RDNA_Architecture_public.pdf](https://gpuopen.com/wp-content/uploads/2019/08/RDNA_Architecture_public.pdf) では元より Compute Shader は通常 Wave32 を選択されるとしていたが、Wave32 で実行すると OpenGL のテストスイートである [piglit](https://gitlab.freedesktop.org/mesa/piglit) が失敗することから **RadeonSI** では Wave64 で実行するようになっていた。[^piglit-fail-cs32]  
@@ -104,6 +105,8 @@ LLVM 13/14 では、ピクセルの廃棄処理 (discard) を含む Pixel Shader
 次の部分は少し複雑で、自分には追いつけない部分がある。  
 Tessellation Control Shader または Geometry Shader を実行するが、結果を GS copy shader で Pixel Shader に渡すことはしない場合を `merged_shader (true)` とし、  
 その条件から外れると同時に、(分岐による？) 発散性 (divergent) のあるループは Wave32 で実行するようになった。  
+
+ * 参考: [GPU向けコンパイラの最適化の紹介と論文のサーベイ - Jicchoの箱](https://juln.hatenablog.com/entry/2021/05/13/181020)
 
  > 		   /* TODO: Merged shaders must use the same wave size because the driver doesn't recompile
  > 		    * individual shaders of merged shaders to match the wave size between them.
