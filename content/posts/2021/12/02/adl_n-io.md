@@ -9,3 +9,4 @@ noindex: false
 # summary: ""
 ---
 
+ * [soc/intel/alderlake: Configure 9 I/O for ADL-N (I7ebbcdcd) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/59752/2)
