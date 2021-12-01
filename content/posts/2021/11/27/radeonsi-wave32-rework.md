@@ -166,7 +166,7 @@ Wave32 ではアイドリング状態になる半分を排除でき、次の Wav
  >
  > {{< quote >}} <https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/13966/diffs?commit_id=d5d3106ddde9b711ed3231c91f97a5a407836ba6#diff-content-3219867c408aa0515182e3168fad726f47209435> {{< /quote >}}
 
-*NGG (Next Generation Geometry)* を使用しない *Legacy GS (pipeline)* は Wave64 のみでサポートされるが、*RDNA系 アーキテクチャ (GFX10 <=)* では *Navi14* 以外はデフォルトで *NGG* が有効化される。  
+[NGG (Next Generation Geometry)](/tags/ngg) を使用しない *Legacy GS (pipeline)* は Wave64 のみでサポートされるが、*RDNA系 アーキテクチャ (GFX10 <=)* では *Navi14* 以外はデフォルトで *NGG* が有効化される。  
 そう深くコードを追ってはいないが、*NGG* 有効の場合は Wave32 で実行されるものと思われる。  
 
  > 		   /* Legacy GS only supports Wave64. */

@@ -2,7 +2,7 @@
 title: "AMD、Radeon Pro V620 を発表"
 date: 2021-11-07T17:33:51+09:00
 draft: false
-tags: [ "Sienna_Cichlid", ]
+tags: [ "Sienna_Cichlid", "RDNA_2" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
