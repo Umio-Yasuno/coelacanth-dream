@@ -2,7 +2,7 @@
 title: "Intel、Rocket Lake、Tiger Lake-H、Jasper Lake など新世代プロセッサを正式発表"
 date: 2021-01-12T16:30:17+09:00
 draft: false
-tags: [ "Rocket_Lake", "Jasper_Lake", "Alder_Lake" ]
+tags: [ "Rocket_Lake", "Jasper_Lake", "Alder_Lake", "Tremont" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "Intel", "CPU" ]
 noindex: false
@@ -16,12 +16,10 @@ toc: false
  * [CES 2021: Intel Announces Four New Processor Families | Intel Newsroom](https://newsroom.intel.com/news-releases/ces-2021-intel-announces-four-new-processor-families/)
 
 {{< pindex >}}
-
  * [Rocket Lake](#rkl)
  * [Jasper Lake](#jsl)
  * [Alder Lake](#adl)
     * [Alder Lake-S は PCIe Gen5 16-Lane を備えるか](#adl_s-gen5-x16)
-
 {{< /pindex >}}
 
 ## Rocket Lake {#rkl}
@@ -68,7 +66,7 @@ CPU には 10nm で製造される *Ice Lake* を、GPU には 10nm SuperFin で
 少し意外だったのは、*Jasper Lake* は PCH を搭載する点で、「Intel® Pentium® Silver and Intel® Celeron® Processors」 によると、PCH は 14nmプロセスで製造され、CPU と同じパッケージ上に搭載される。USB や PCIe 等は PCH から接続するようだ。  
 I/O も 1つのダイに収めず、CPU と PCH に分離したのは 10nmプロセスの製造能力と関係しているのだろうか？  
 
-{{< figure src="/image/2021/01/12/jsl-diagram.webp" title="Jasper Lake Diagram" caption="画像出典: [Intel® Pentium® Silver N6005 Processor (1.5M Cache, up to 3.30 GHz) Product Specifications](https://ark.intel.com/content/www/us/en/ark/products/212327/intel-pentium-silver-n6005-processor-1-5m-cache-up-to-3-30-ghz.html)" >}}
+ * [Block Diagram - 005 - ID:633935 | Intel® Pentium® Silver and Intel® Celeron® Processors Datasheet, Volume 1](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/servers/platforms/intel-pentium-silver-and-intel-celeron-processors-datasheet-volume-1-of-2/005/block-diagram/)
 
 CPUダイ自体は *Elkhart Lake* と同一で、PCH とパッケージを変えている可能性も考えられるが、*Elkhart Lake* と *Jasper Lake* で GNA (Gaussian mixture model and Neural network Acceleration unit) の世代が異なり、  
 *Elkhart Lake* は *Ice Lake* や *Gemini Lake* と同じ Gen1 だが、*Jasper Lake* は *Tiger Lake* と同じ Gen2 となる。  
