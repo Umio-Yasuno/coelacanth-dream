@@ -33,15 +33,18 @@ CPU側 PCIe は、*Alder Lake-S (Desktop)* では Gen5 8-Lanes x2・Gen4 4-Lanes
 *Alder Lake-N* は CPU側 PCIe を持たない構成となるが、これは現世代の Atomプロセッサ [Elkhart/Jasper Lake](/tags/jasper_lake/) ([Tremont](/tags/tremont/)) の構成に近い。  
 
 *Elkhart Lake* は組み込み向け、*Jasper Lake* はモバイル向けとなるが、Compute die と PCH die を 1つのパッケージに実装するという構成は共通する。  
-*Jasper Lake* の例では、Compute die には CPU Core、GPU、IPU (Image Processing Unit)、GNA、FIVR、メモリコントローラ/インターフェイス、ディスプレイコントローラ/インターフェイスが集積されており、*Ice Lake* と同じ Intel 10+nmプロセスで製造される。  
+*Jasper Lake* の例では、Compute die には Tremont 4-Core CPU、Gen11 32EU GPU、IPU (Image Processing Unit)、GNA、FIVR、メモリコントローラ/インターフェイス、ディスプレイコントローラ/インターフェイスが集積されており、*Ice Lake* と同じ Intel 10+nmプロセスで製造される。  
 PCH die にはその他各種 I/O が集積され、PCIe I/O は Gen3、最大 5-ports、最大 8-Lanes をサポートしている。製造プロセスは Intel 14nm。[^jsl-block-diagram]  
 
 [^jsl-block-diagram]: [Block Diagram - 005 - ID:633935 | Intel® Pentium® Silver and Intel® Celeron® Processors Datasheet, Volume 1](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/servers/platforms/intel-pentium-silver-and-intel-celeron-processors-datasheet-volume-1-of-2/005/block-diagram/)
 
-*Alder Lake-N* のサポート追加に向けた他パッチから、*Alder Lake-N* は他バリアントと異なりハイブリッドコア構成を採らず、 *Gracemont (Atom/small)* のみの CPU構成になると考えられる。  
+*Alder Lake-N* のサポート追加に向けた他パッチから、*Alder Lake-N* は他バリアントと異なりハイブリッドコア構成を採らず、 *Gracemont (Atom/small)* のみの CPU構成になるとされる。  
 {{< link >}} [Alder Lake-N は Atom系コアのみの構成か | Coelacanth's Dream](/posts/2021/11/25/adl_n-atom-only/) {{< /link >}}
-CPU構成、I/O 規模で言えば、*Alder Lake-N* は *Elkhart/Jasper Lake* の構成に近い。  
+CPU構成、I/O 規模で言えば、*Alder Lake-N* は *Elkhart/Jasper Lake* の構成に近いと言える。  
 *Jasper Lake* は TDP 6W・10W・15W の SKU が、*Elkhart Lake* は TDP 4.5-10W の SKU がラインナップされているが、*Alder Lake-N* も近い TDP (PL1) 設定になっているのではないかと思われる。  
+
+ただ *Elkhart/Jasper Lake* の GPU部は Gen11 32EU が最大だったのに対し、*Alder Lake-N* は DeviceID から最大 Gen12 96EU の構成になるとされるため、GPU部の規模は大きく異なる。  
+また、*Elkhart/Jasper Lake* は最大 4-Core、L2キャッシュを共有するクラスタは 1基となる構成だったが、*Alder Lake* の他バリアントでは *Gracemont (Atom/small)* コアを最大 8-Core、クラスタ 2基の構成であるため、*Alder Lake-N* もそれを踏襲することも考えられる。  
 
 *Tiger Lake UP4* の後継になると目される *Alder Lake-M* は、現在 3種類の構成が Coreboot でサポートされている。  
 一番 PowerLimit が小さい 2+4+2 (big, small, GPU GT) 構成で PL1: 9W、PL2: 30W であり、*Alder Lake-N* はそれより PowerLimit を抑えた、低消費電力なバリアントとなる可能性がある。[^adl_m-power]  
