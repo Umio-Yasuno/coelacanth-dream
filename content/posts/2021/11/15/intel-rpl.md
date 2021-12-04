@@ -38,7 +38,8 @@ Display IP が、*Alder Lake-S* では Gen12、*Alder Lake-P* では Gen13 ([XE_
 GuC はドライバー部で担っている一部機能をオフロードする目的で開発されており、Gen9 から導入されている。  
 Gen9 では GuC は、メディアエンコードのビットレート制御やヘッダのパースのオフロード可能な HuC (The HEVC /H.265 micro (µ) Controller) の認証を担っていた。  
 *Alder Lake-P* の世代からは、GPUコンテキストのスケジューリング、クロックとパワーゲーティングの適用を選択する機能も実装され、またデフォルトで有効化されるようになった。  
-*Alder Lake-S* では HuC の認証のみで、デフォルトでは無効化されている状態だったため、*Raptor Lake* では各 GPU IP こそ更新されないが、マイクロコントローラ部では更新が行われ、*Alder Lake-P* と同世代となる。  
+*Alder Lake-S* では HuC の認証のみで、デフォルトでは *Alder Lake-P* に実装されている他の機能は無効化されている状態だった。  
+*Raptor Lake-S* では各 GPU IP こそ更新されないが、マイクロコントローラ部では *Alder Lake-P* と同世代に更新されることとなる。  
 
 | Intel GPU | Graphics IP ver | Display IP ver | Media IP ver |
 | :-- | :--: | :--: | :--: |

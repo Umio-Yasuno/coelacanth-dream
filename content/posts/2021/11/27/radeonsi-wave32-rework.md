@@ -59,7 +59,7 @@ noindex: false
 [^piglit-fail-cs32]: [radeonsi/gfx10: enable Wave32 for vertex, geometry, and tessellation shaders (a0d330be) · Commits · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/commit/a0d330bedb9eb5668bc73c60e525f3c76d23a93a)
 
 それが今回、Workgroup のサイズが小さい場合は Wave32 で実行するように変更された。  
-Waveサイズを指定するデバッグフラグが設定されていない場合は、以前同様 Compute Shader は Wave64 で実行される。  
+Workgroup が十分に大きく、かつ Waveサイズを指定するデバッグフラグが設定されていない場合は、以前同様 Compute Shader は Wave64 で実行される。  
 
  > 		+   /* Small workgroups use Wave32 unconditionally. */
  > 		+   if (stage == MESA_SHADER_COMPUTE && info &&
