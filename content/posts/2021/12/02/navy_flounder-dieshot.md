@@ -18,6 +18,12 @@ Intel は最近 CPU のダイショットを積極的に公開しているよう
 
 [^die-size]: [西川善司の3DGE：Radeon RX 6700 XTの性能は，「Infinity Cache」が鍵を握る](https://www.4gamer.net/games/461/G046171/20210316071/)
 
+{{< pindex >}}
+ * [Infinity Cache/MALL/L3キャッシュ](#mall)
+    * [L3キャッシュ 比較](#compare-l3c)
+ * [WGP 比較](#compare-wgp)
+{{< /pindex >}}
+
 ## Infinity Cache/MALL/L3キャッシュ {#mall}
 
 RDNA 2 dGPU から導入された、マーケティング的には *Infinity Cache* 、オープンソース・ドライバー中では *MALL (Memory Access Last Level)* 、キャッシュ階層で言えば L3キャッシュに当たるそれは、*Navy Flounder/Navi22* には 96MiB 搭載されている。  
