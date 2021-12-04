@@ -43,6 +43,11 @@ RDNA 2 dGPU から導入された、マーケティング的には *Infinity Cac
 
 [^w6600-diesize]: [AMD、Radeon Pro 6000Wシリーズを発表 - RDNA 2世代の「W6600」と「W6800」 | マイナビニュース](https://news.mynavi.jp/article/20210608-1901242/)
 
+WGP 20基 (CU 40基) というくくりでは、*Navi10* と同じ。  
+*Navy Flounder/Navi22* は *Navi10* から、RB+ の有効化を前提としたことにより RB+ の実装面積を削減 (16基 -\> 8基)、メモリバス幅の削減 (256-bit -\> 128-bit) といったダイサイズを節約できる要素があるが、  
+{{<  link >}} [一部の AMD GPU で実装、有効化されている RB+ とは何か | Coelacanth's Dream](/posts/2020/11/10/what-is-rbplus/) {{< /link >}}
+L3キャッシュ追加の影響が大きく、結果としてダイサイズは約 1.34倍となっている。(Navi10: 251mm2)  
+
 ### L3キャッシュ 比較 {#compare-l3c}
 
 RDNA 2 L3キャッシュは *Zen アーキテクチャ* のデザインをベースにしていることが AMD より語られており、それによって高密度、高クロック動作を可能にしているとする。  
