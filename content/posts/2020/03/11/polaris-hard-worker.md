@@ -75,8 +75,8 @@ Navi14ベースでは、メモリバス幅を96-bitに減らし、VRAMも3GBと�
 7nmプロセスノードは16/14nmプロセスノードの2倍近いコストがかかるとされ、
 
  > 　歩留まりを加味したコストを比較すると16/14nmプロセスノードに対して、7nmノードは2倍近いコストに膨れ上がっていることがわかる。45nmプロセス当時と比較すると4倍のコストだ。言い換えれば、16/14nmプロセスと同じダイサイズのチップの製造でも、7nmでは2倍のコストがかかるということだ。
-
- > 引用元: <cite>[【後藤弘茂のWeekly海外ニュース】ZEN 2ベースの64コアCPU「Rome」はなぜCPUとI/Oを分離したのか - PC Watch](https://pc.watch.impress.co.jp/docs/column/kaigai/1156455.html)</cite>
+ >
+ > {{< quote >}} [【後藤弘茂のWeekly海外ニュース】ZEN 2ベースの64コアCPU「Rome」はなぜCPUとI/Oを分離したのか - PC Watch](https://pc.watch.impress.co.jp/docs/column/kaigai/1156455.html) {{< /quote >}}
 
 そして Navi14のダイサイズは約157mm<sup>2</sup>[^11]、Polaris10のダイサイズは約244mm<sup>2</sup>[^12]であるため、単純に計算すれば Navi14 は Polaris10 よりもコストが高い。  
 それならば性能で見られることが多いコンシューマ向けではPolarisベースの製品を継続し、消費電力、電力効率が重要なモバイル向けやワークステーション向けに拡張していった方が良い、となる。  

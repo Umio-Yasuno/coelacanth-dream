@@ -48,7 +48,7 @@ Major: 10, Minor: 1 (*gfx101x*) には RDNA(1) 世代、または *Navi1x* 世�
  > 		     FeatureSupportsXNACK])>;
  >
  > {{< quote >}} [llvm-project/AMDGPU.td at 6fb02596a2094df90e9277981aae7a06a9b6671b · llvm/llvm-project](https://github.com/llvm/llvm-project/blob/6fb02596a2094df90e9277981aae7a06a9b6671b/llvm/lib/Target/AMDGPU/AMDGPU.td) {{< /quote >}}
-
+ >
  > ##### gfx1013
  >
  > 		def FeatureISAVersion10_1_3 : FeatureSet<

@@ -83,7 +83,7 @@ CPU の `em_pd (energy model performance domain)` は、CPU[0-7] と CPU[8-15] �
  >        [    1.740068] intel-hfi: update em_pd CPU13 span:8-15, ee:2048 >> 2048
  >        [    1.741311] intel-hfi: update em_pd CPU14 span:8-15, ee:2048 >> 2048
  >        [    1.742552] intel-hfi: update em_pd CPU15 span:8-15, ee:2048 >> 2048
-
+ >
  > {{< quote >}} [KWD not detecting on ADL · Issue #2782 · thesofproject/linux](https://github.com/thesofproject/linux/issues/2782) {{< /quote >}}
 
 ハードウェア側では、*Alder Lake* からサポートしている `HFI/EFHI (Enhanced/ Hardware Feedback Interface)` が機能している。  

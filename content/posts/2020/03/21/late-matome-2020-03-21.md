@@ -21,8 +21,8 @@ noindex: true
 一応、フェイクダイショットを作成、使用するのは機密を守るといった意味があり、そう珍しいことでもない。加えて言えば、公式が示すダイショットは、完全に信用することはできないが、全く信用できないという訳でもない。個人それぞれで判断するしかない。  
 
  > なお、この図はアーティストがCGで描いたものであり、実際のチップ写真ではなく、学術的な意味はない単なる壁紙である。
-
- > 引用元: <cite>[COOL Chips 22 - NVIDIAのGPUは真のクールAIチップ (1) アクセラレータとして必須となったGPU | マイナビニュース](https://news.mynavi.jp/article/20190516-822581/)</cite>
+ >
+ > {{< quote >}} [COOL Chips 22 - NVIDIAのGPUは真のクールAIチップ (1) アクセラレータとして必須となったGPU | マイナビニュース](https://news.mynavi.jp/article/20190516-822581/) {{< /quote >}}
 
 今回の件に関しては、*Zen 2* コアの詳細は既にISSCC 2020で発表しているため[^1]、CCXの構造を隠したかったのかもしれない。  
 
@@ -63,8 +63,8 @@ Xbox Series X はメモリバス幅 320-bitだが、GDDR6 16Gbitと8Gbitを混�
 ロット違いのメモリ混載というのはシステムの安定性に不安が抱かれるが、Microsoftは実際に機能し、出荷できるレベルのシステムを構築していると語る。  
 
  > we could while at the same time building the system that would actually work and we could actually ship.
-
- > 引用元: <cite>[Xbox Series X: A Closer Look at the Technology Powering the Next Generation - Xbox Wire](https://news.xbox.com/en-us/2020/03/16/xbox-series-x-tech/)</cite>  
+ >
+ > {{< quote >}} [Xbox Series X: A Closer Look at the Technology Powering the Next Generation - Xbox Wire](https://news.xbox.com/en-us/2020/03/16/xbox-series-x-tech/) {{< /quote >}}
 
 ゲームからは高速メモリプールに加え、低速メモリプール中の3.5GBを利用可能としているが、  
 プログラマ側がメモリプールの違いを意識する必要があるのか、それともPGO(Profile Guided Optimization)のように何かを元にして自動的に割り振ってくれるのか。  

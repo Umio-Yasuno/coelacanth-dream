@@ -66,7 +66,8 @@ PCIe Gen5 8-Lane の目的を考えると、4-Lane x2 のような分割に対�
  >     		DevSta:	CorrErr- NonFatalErr- FatalErr- UnsupReq- AuxPwr+ TransPend-
  >     		LnkCap:	Port #2, Speed 16GT/s, Width x16, ASPM L1, Exit Latency L1 <16us
  >          ClockPM- Surprise- LLActRep+ BwNot+ ASPMOptComp+
-
+ > {{< quote >}} [[BUG] Dell TGL-H Machine failed to load sof-tgl-h.ri · Issue #2662 · thesofproject/linux](https://github.com/thesofproject/linux/issues/2662) {{< /quote >}}
+ >  
  >     00:01.1 PCI bridge [0604]: Intel Corporation Device [8086:9a05] (rev 04) (prog-if 00 [Normal decode])
  >     ~~~~~~
  >     		LnkCap:	Port #3, Speed 16GT/s, Width x4, ASPM L1, Exit Latency L1 <16us

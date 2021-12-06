@@ -47,7 +47,7 @@ toc: false
  >      			adev->apu_flags |= AMD_APU_IS_RENOIR;
  >      		else
  >      			adev->apu_flags |= AMD_APU_IS_GREEN_SARDINE;
-
+ >
  > {{< quote >}} [[PATCH 2/2] drm/amdgpu: add new device id for Renior](https://lists.freedesktop.org/archives/amd-gfx/2021-January/058409.html) {{< /quote >}}
 
 一応、*Renoir* は `x86_Model: 0x60` 、*Lucienne* は `x86_Model: 0x68` となるため、CPU部では分けられている。  

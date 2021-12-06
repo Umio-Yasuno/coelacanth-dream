@@ -24,8 +24,8 @@ noindex: false
  > * エンジニアサンプリングではなく、箱にはS-SpeC SR26Uの記載があった (このナンバーに関して情報は無し)
  > * かなり奇妙なIPN (Intel Part Number) が割り当てられている
  > * パッケージには4ダイが実装されている
-
- > 情報元: <cite>[Information request on Intel “SoMa” : intel](https://www.reddit.com/r/intel/comments/e082ng/information_request_on_intel_soma/)</cite>
+ >
+ > {{< quote >}} [Information request on Intel “SoMa” : intel](https://www.reddit.com/r/intel/comments/e082ng/information_request_on_intel_soma/) {{< /quote >}}
 
 ### ダイレイアウト
 
@@ -79,8 +79,9 @@ Intelソケットに対応したパッケージに収めていることと合わ
 左中央の計26基のユニットはQPI PHY、その間にある6基のユニットはQPI PLL、左下のユニットはQPI Agentとなる。  
 
 XeonにQPIでCo-processor（多くはFPGA）を接続する構想はあり、Altera[^2]よりIntel CPUソケットに対応したディスクリートFPGAが提供されていた。  
-<cite>[Altera Demonstrates Industry’s First QPI 1.1 FPGA Home Agent for Enhanced Server Capabilities | Intel Newsroom](https://newsroom.intel.com/news-releases/altera-demonstrates-industrys-first-qpi-1-1-fpga-home-agent-for-enhanced-server-capabilities/)</cite>  
-<cite>[【後藤弘茂のWeekly海外ニュース】Intelのサーバー戦略の要となるXeon PhiとFPGA - PC Watch](https://pc.watch.impress.co.jp/docs/column/kaigai/1008797.html)</cite>  
+
+ * [Altera Demonstrates Industry’s First QPI 1.1 FPGA Home Agent for Enhanced Server Capabilities | Intel Newsroom](https://newsroom.intel.com/news-releases/altera-demonstrates-industrys-first-qpi-1-1-fpga-home-agent-for-enhanced-server-capabilities/)
+ * [【後藤弘茂のWeekly海外ニュース】Intelのサーバー戦略の要となるXeon PhiとFPGA - PC Watch](https://pc.watch.impress.co.jp/docs/column/kaigai/1008797.html)
 
 SoMaはそういったもののテストチップとして、もしくはUPI[^3]の開発のために作られた、という *説* 。  
 それかFPGA以外にQPI接続のCo-Processorを出す計画があったか。  
@@ -91,18 +92,16 @@ SoMaはそういったもののテストチップとして、もしくはUPI[^3]
 SoMaのパッケージが、形状こそLGA1156近くともピン配置は大きく違うという可能性はあるが、当然確証はない。  
 ソケットが非対称でも可能なのか、という疑問も浮かぶ。  
 
-<br>
 2つの説の要素を含めた、Co-processorにおける接続方法の違いの検証用という説も考えとしては浮かぶが、イマイチ確信は得られない。  
 
 そのため、やはりIntel SoMaチップは謎のままだ。  
 
-<hr>
-<span class="reference">参考:</span>
+{{< ref >}}
+ * [Xeon SoMa: Geheimnisvolles MCM-Design von Intel aufgetaucht (Update: Die-Shots) - Hardwareluxx](https://www.hardwareluxx.de/index.php/news/hardware/prozessoren/51658-xeon-soma-geheimnisvolles-mcm-design-von-intel-aufgetaucht.html)
+ * [Making MultiCore: A Slice of Sandy | The CPU Shack Museum](http://www.cpushack.com/2018/03/24/making-multicore-a-slice-of-sandy/)
+{{< /ref >}}
 
- * <cite>[Xeon SoMa: Geheimnisvolles MCM-Design von Intel aufgetaucht (Update: Die-Shots) - Hardwareluxx](https://www.hardwareluxx.de/index.php/news/hardware/prozessoren/51658-xeon-soma-geheimnisvolles-mcm-design-von-intel-aufgetaucht.html)
- * <cite>[Making MultiCore: A Slice of Sandy | The CPU Shack Museum](http://www.cpushack.com/2018/03/24/making-multicore-a-slice-of-sandy/)</cite>
 
-
-[^1]: QuickPath Interconnect [Intel® QuickPath Interconnect](https://www.intel.com/content/www/us/en/io/quickpath-technology/quickpath-technology-general.html)
+[^1]: QuickPath Interconnect: [Intel® QuickPath Interconnect](https://www.intel.com/content/www/us/en/io/quickpath-technology/quickpath-technology-general.html)
 [^2]: Intelより2015年に買収された。
-[^3]: Ultra Path Interconnect [Intel® Xeon® Processor Scalable Family Technical Overview | Intel® Software](https://software.intel.com/en-us/articles/intel-xeon-processor-scalable-family-technical-overview)
+[^3]: Ultra Path Interconnect: [Intel® Xeon® Processor Scalable Family Technical Overview | Intel® Software](https://software.intel.com/en-us/articles/intel-xeon-processor-scalable-family-technical-overview)

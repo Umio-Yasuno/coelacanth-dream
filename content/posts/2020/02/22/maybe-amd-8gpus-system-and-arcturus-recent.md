@@ -16,8 +16,6 @@ Arcturusではそれぞれが32-bit幅の AccVGPR (Accumulate? Vector General-Pu
 NVIDIA Tensor CoreはVolta、TuringではFP16までの対応であり、BF16には対応してないため、学習精度という点では有利だが、NVIDIAもAmpereで対応しそうである。  
 また、専用ハードウェア追加ではなく、CU側での対応という汎用的なものであるから、性能がどこまで出るか。その分割かなければならないダイエリアも少なく済むが。  
 
- > 参考:  
-
  > * [llvm-project/AMDGPUAsmGFX908.rst at master · llvm/llvm-project](https://github.com/llvm/llvm-project/blob/master/llvm/docs/AMDGPU/AMDGPUAsmGFX908.rst)  
  > * [MI 32x32x2x1 F32 (#800) · ROCmSoftwarePlatform/Tensile@9dfd621](https://github.com/ROCmSoftwarePlatform/Tensile/commit/9dfd6212f888cf83ff334e675c823239831c4aa8)  
  > * [Initial version of Store code clean-up for mi100 · ROCmSoftwarePlatform/Tensile@1ae540b](https://github.com/ROCmSoftwarePlatform/Tensile/commit/1ae540b7170ef971abdecd1ab0b4fc3e5f927dc1)  
@@ -41,8 +39,8 @@ Arcturusはその構成から巨大なダイになるとされ、自然と歩留
 そして過去のArcturusに関するソフトウェアへの更新には以下の文面があった。  
 
  > \* add 120CU support of perfdb and find-db
-
- > 引用元: [MI100 merge (#1951) · ROCmSoftwarePlatform/MIOpen@bc7d47b](https://github.com/ROCmSoftwarePlatform/MIOpen/commit/bc7d47bd0d65b331667da74ba3cdb04893a77998)  
+ >
+ > {{< quote >}} [MI100 merge (#1951) · ROCmSoftwarePlatform/MIOpen@bc7d47b](https://github.com/ROCmSoftwarePlatform/MIOpen/commit/bc7d47bd0d65b331667da74ba3cdb04893a77998) {{< /quote >}}
 
 AMDGPUはSEが対称となるように構成され、8-SEのArcturusがCUを一部無効するならば8刻みとなり、120CUはそれと一致する。  
 
@@ -97,7 +95,7 @@ AMDGPUはSEが対称となるように構成され、8-SEのArcturusがCUを一�
   "single node 8 GPUs PCIe on Rome",  
   "4 nodes 8 GPUs PCIe 2 NICs on Rome",  
   "3 nodes 8 GPUs PCIe + 1 Rome 8 GPUs PCIe + 2 nodes gfx908 4P3L",  
-
+ >
  > 引用元: [Add topology explorer by wenkaidu · Pull Request #172 · ROCmSoftwarePlatform/rccl](https://github.com/ROCmSoftwarePlatform/rccl/pull/172/files#diff-78fedcf9e11f148f1840999ae1b3438e)
 
 他のファイルを見るに、8P6LのPはGPU数、Lはリンクを表すと思われる。  

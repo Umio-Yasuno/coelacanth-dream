@@ -68,7 +68,7 @@ AMD APU において *System Management Unit (SMU)* 内部で実行される電�
  > 		 };
  >
  > {{< quote >}} [[PATCH v2 0/7] updates to amd-pmc driver](https://lore.kernel.org/platform-driver-x86/20210623200149.2518885-7-Shyam-sundar.S-k@amd.com/T/#m781f645e0c9351ec75f5969d07d30fb843c08dbd) {{< /quote >}}
-
+ >
  > 		    case FAMILY_YC:
  > 		      identify_chip(YELLOW_CARP);
  > 		      break;

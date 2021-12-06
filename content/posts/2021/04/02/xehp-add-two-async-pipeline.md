@@ -27,7 +27,7 @@ noindex: false
  > This MR implements compiler support for the ISA of the Intel XeHP family of GPUs. The most invasive compiler changes relative to previous generations are the result of the preexisting FPU pipeline being split into multiple asynchronous pipelines (a floating-point, integer and long AKA double-precision pipeline), which is highly visible to software because the hardware is not able to guarantee data coherency across instructions (already since TGL), so the compiler is now responsible for keeping track of which pipeline will be executing which instruction and specifying synchronization primitives in order to resolve any cross-pipeline dependencies.
  >
  > {{< quote >}} [intel: Implement compiler support for XeHP graphics platforms. (!10000) · Merge Requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/10000/) {{< /quote >}}
-
+ >
  >        The execution units of XeHP platforms have multiple asynchronous ALU
  >        pipelines instead of (as far as software is concerned) the single
  >        in-order pipeline that handled most ALU instructions except for

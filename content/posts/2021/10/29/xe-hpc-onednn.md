@@ -62,7 +62,7 @@ oneDNN では命令キャッシュの情報を、実行するカーネルの生�
  > 		    const int REG_SIZE_BITS = p >= Platform::XE_HPC ? 512 : 256;
  >
  > {{< quote >}} [intel-graphics-compiler/Messages.cpp at 2887a020540d935b2f0872b5bd56c0336bc19570 · intel/intel-graphics-compiler](https://github.com/intel/intel-graphics-compiler/blob/2887a020540d935b2f0872b5bd56c0336bc19570/visa/iga/IGALibrary/IR/Messages.cpp#L32) {{< /quote >}}
-
+ >
  > 		    const int GRF_BYTES = platform() >= Platform::XE_HPC ? 64 : 32;
  > 		    const int DEFAULT_SIMD = GRF_BYTES / 2;
  >
@@ -117,6 +117,3 @@ AMD風の命名法則に従えば、{{< xe class="hpc" >}}-XL が 1-Tile、{{< x
  * [intel-graphics-compiler/SWSBSetter.cpp at 2887a020540d935b2f0872b5bd56c0336bc19570 · intel/intel-graphics-compiler](https://github.com/intel/intel-graphics-compiler/blob/2887a020540d935b2f0872b5bd56c0336bc19570/visa/iga/IGALibrary/IR/SWSBSetter.cpp#L344)
  * [Intel® Processors with Intel® UHD Graphics](https://www.intel.com/content/www/us/en/develop/documentation/oneapi-gpu-optimization-guide/top/gen-arch.html)
 {{< /ref >}}
-
-
-

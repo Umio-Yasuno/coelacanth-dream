@@ -22,7 +22,7 @@ OSS にこれらチップの名前が追加されたのは初であり、珍し�
  >       #define AMDGPU_VANGOGH_RANGE    0x01, 0xFF
  >
  > {{< quote >}} [amd: add support for more chips - Dimgrey Cavefish and VanGogh (!6820) · Merge Requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6820/diffs){{< /quote >}}
-
+ >
  >       #if ADDR_NAVI23_BUILD
  >       #define AMDGPU_NAVI23_RANGE     0x3C, 0x46
  >       #endif

@@ -42,6 +42,8 @@ AMDVLKドライバーでは、**RADV** ドライバーとの切り換えが可�
  >               }
  >               else
  >       #endif
+ >
+ > {{< quote >}} [pal/gfx9GraphicsPipeline.cpp at 26cb05f899cc587f9398399a3381ee22ab41f4c2 · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/26cb05f899cc587f9398399a3381ee22ab41f4c2/src/core/hw/gfxip/gfx9/gfx9GraphicsPipeline.cpp#L608-L619) {{< /quote >}}
 
 ただ、判定に *NGG* の存在や GPU の世代が使われていないため、*RDNA 2/GFX10.3* 以外、*Vega/GFX9* 、*RDNA/GFX10* でも Mesh Shader をサポートする可能性が浮かぶが、実際の所は不明。  
 Mesa3D (RadeonSI, RADV) ドライバーで Task/Mesh Shader の本格的な実装が始まれば、断片として、また少し詳細が明らかにされるかもしれない。  
@@ -51,13 +53,13 @@ Mesa3D (RadeonSI, RADV) ドライバーで Task/Mesh Shader の本格的な実�
  >                   (metadata.pipeline.meshScratchMemorySize == 0));
  >
  > {{< quote >}} [pal/gfx6GraphicsPipeline.cpp at 1e61f9ab6eb2041c73d7e7bd8f2021fa05a4bdd8 · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/1e61f9ab6eb2041c73d7e7bd8f2021fa05a4bdd8/src/core/hw/gfxip/gfx6/gfx6GraphicsPipeline.cpp) {{< /quote >}}
-
+ >
  >        // Register address for passing the 32-bit GPU virtual address of a buffer storing the shader-emulated task+mesh
  >        // pipeline stats query.
  >        uint16  taskPipeStatsBufRegAddr;
  >
  > {{< quote >}} [pal/gfx9Chip.h at 1e61f9ab6eb2041c73d7e7bd8f2021fa05a4bdd8 · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/1e61f9ab6eb2041c73d7e7bd8f2021fa05a4bdd8/src/core/hw/gfxip/gfx9/gfx9Chip.h) {{< /quote >}}
-
+ >
  >         MeshPipeStatsBuf  = 0x10000014, ///< 32-bit GPU virtual address of a buffer storing the shader-emulated mesh
  >                                        ///  pipeline stats query.
  >

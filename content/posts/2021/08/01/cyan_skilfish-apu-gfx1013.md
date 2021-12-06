@@ -77,7 +77,7 @@ LLVM へのパッチから分かる *gfx1013* の特徴としては、*RDNA APU*
  > 		     FeatureSupportsXNACK])>;
  >
  > {{< quote >}} [llvm-project/AMDGPU.td at aaba37187fda7f5a7fdc4c1e6129cbaaa1bbf709 · llvm/llvm-project](https://github.com/llvm/llvm-project/blob/aaba37187fda7f5a7fdc4c1e6129cbaaa1bbf709/llvm/lib/Target/AMDGPU/AMDGPU.td#L1086-L1101) {{< /quote >}}
- 
+ >
  > 		def FeatureGFX10_AEncoding : SubtargetFeature<"gfx10_a-encoding",
  > 		  "GFX10_AEncoding",
  > 		  "true",

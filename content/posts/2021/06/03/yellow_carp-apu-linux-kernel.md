@@ -148,7 +148,7 @@ L1キャッシュに関しては他と同じ構成であり、CU ごとに 16KiB
  > 		+};
  >
  > {{< quote >}} [[PATCH 13/89] drm/amdkfd: add yellow carp KFD support](https://lists.freedesktop.org/archives/amd-gfx/2021-June/064671.html) {{< /quote >}}
-
+ >
  > ##### VanGogh cache config
  >        +		/* GL1 Data Cache per SA */
  >        +		.cache_size = 128,

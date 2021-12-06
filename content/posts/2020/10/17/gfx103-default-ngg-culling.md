@@ -28,10 +28,11 @@ NGGカリングは、{{< comple >}} 結局その世代で有効化されるこ�
 [GPUOpen Drivers](https://github.com/GPUOpen-Drivers) を構成するソフトウェアにはそのように記述されている。  
 
  >       "Description": "Enable NGG mode, use an implicit primitive shader on a per-pipeline type basis. Use this instead of PAL setting, NggEnableMode.",
-
+ >
  > {{< quote >}} [xgl/settings_xgl.json at c6c90450fb1abf5f414acf1e38a0f51a72c426c1 · GPUOpen-Drivers/xgl](https://github.com/GPUOpen-Drivers/xgl/blob/c6c90450fb1abf5f414acf1e38a0f51a72c426c1/icd/settings/settings_xgl.json#L1152) {{< /quote >}}
-
+ >
  >       // Represents configuration of static registers relevant to hardware primitive shader (NGG).
+ >
  > {{< quote >}} [llpc/Gfx9Chip.h at 93e40124f5067c8e932398204077843fb8445594 · GPUOpen-Drivers/llpc](https://github.com/GPUOpen-Drivers/llpc/blob/93e40124f5067c8e932398204077843fb8445594/lgc/patch/Gfx9Chip.h#L316) {{< /quote >}}
 
 NGGカリング/プリミティブシェーダーは、レンダリングパイプラインにおいて、後に描画されずに破棄される対象を、計算する前に破棄する早期カリング機能の 1つ。従来のレンダリングパイプラインでは、頂点処理を行なった後に破棄するため、演算リソースが無駄となりやすい。  

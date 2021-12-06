@@ -31,7 +31,7 @@ toc: false
  >              break;
  >
  > {{< quote >}} [ac/gpu_info: conceal L2 cache sizes (29ca71e1) · Commits · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/commit/29ca71e10e58077fb847a914b5051e69a4add352) {{< /quote >}}
-
+ >
  >             else if (AMDGPU_IS_RAVEN2(m_nullIdLookup.familyId, m_nullIdLookup.eRevId))
  >            {
  >                pChipInfo->doubleOffchipLdsBuffers = 1;

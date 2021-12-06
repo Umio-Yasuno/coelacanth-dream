@@ -34,14 +34,13 @@ Ryzen Mobile 4000シリーズと同時に発表された、Raven2ベース (Zen 
 知名度はそこまで高くはないものの、公開されているAMD公式のドキュメントに、  
 *RenoirのGPUはGFX9 /Vegaと同世代* と記載されたことで、勘違いが{{< comple >}}発表からそれなりに時間が経ったため、ほぼなくなったとは思うが{{< /comple>}}完全になくなることを願う。  
 
-<br>
 今回の更新内容とは関係ないが、DCN 2.0行のディスプレイコントローラー数が6基のままとなっている。  
 Navi10は6基搭載されているが、Navi14は5基であるため、 5-6 と記載するのが正確なはずだ。  
 
- > Navi10 has 6 PHY, but Navi14 only has 5 PHY, that is
- > because there is no ENGINE_ID_DIGD in Navi14.
-
- > 引用元: <cite>[drm/amd/display: Add ENGINE_ID_DIGD condition check for Navi14](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/display/dc/dcn20/dcn20_resource.c?h=amd-staging-drm-next&id=9fd4c2d712377f5fb9d3a1ad4f3106bf7833ccad)</cite>
+ > 		Navi10 has 6 PHY, but Navi14 only has 5 PHY, that is
+ > 		because there is no ENGINE_ID_DIGD in Navi14.
+ >
+ > {{< quote >}} [drm/amd/display: Add ENGINE_ID_DIGD condition check for Navi14](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/display/dc/dcn20/dcn20_resource.c?h=amd-staging-drm-next&id=9fd4c2d712377f5fb9d3a1ad4f3106bf7833ccad) {{< /quote >}}
 
 まあそこまで重要ではない。  
 

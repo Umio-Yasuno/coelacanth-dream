@@ -82,7 +82,7 @@ noindex: false
  > 		    }
  >
  > {{< quote >}} [intel-graphics-compiler/G4_Kernel.cpp at 44d7955b1ea811b2741e1bae9ba41f833fbd9026 · intel/intel-graphics-compiler](https://github.com/intel/intel-graphics-compiler/blob/44d7955b1ea811b2741e1bae9ba41f833fbd9026/visa/G4_Kernel.cpp#L918) {{< /quote >}}
-
+ >
  > 		    else if (overrideNumThreads > 0)
  > 		    {
  > 		        switch (platform)

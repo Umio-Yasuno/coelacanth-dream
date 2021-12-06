@@ -24,8 +24,8 @@ AMDはZenアーキテクチャで、前世代の小規模x86 CPUアーキテク�
 今回の R1305G、R1102G の正式発表により、実に3年半かけてそれが果たされた。  
 
  > まずOverallであるが、ZenはJaguarと同程度の低い消費電力から、Excavatorにかなり近いところまでカバーするScalableなcoreであり、Excavatorと比較して、同じ消費電力であればIPCがおおむね40%高いとしている(Photo01)。
-
- > 引用元: <cite>[Zenアーキテクチャの概要が明らかに - 分岐予測やCache構造の強化で40%のIPC改善を実現 (1) モバイルからサーバまでカバーするスケーラブルな構成 | マイナビニュース](https://news.mynavi.jp/article/20160830-zen/)</cite>
+ >
+ > {{< quote >}} [Zenアーキテクチャの概要が明らかに - 分岐予測やCache構造の強化で40%のIPC改善を実現 (1) モバイルからサーバまでカバーするスケーラブルな構成 | マイナビニュース](https://news.mynavi.jp/article/20160830-zen/) {{< /quote >}}
 
 もっと早くにZenでTDP 10W以下、Intel Atom対抗を出してよかったようにも思う。  
 そういったローエンド帯、組み込み向けよりも、まずはデスクトップ向けやサーバー向けに力を入れるべき、といった判断や、  
@@ -55,8 +55,8 @@ Chromebook向けは現状A4-9120C、A6-9220Cしかないが、Chronium OSへの�
 また、"Zen" CPU とあることから、ダイも他のR1000シリーズ製品同様 *Raven2* とされる。  
 
  > Built on “Zen” CPU and Radeon™ “Vega” graphics cores, 
-
- > 引用元: <cite>[New AMD Processors Drive High-Performance Computing for Embedded Industry | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/new-amd-processors-drive-high-performance-computing-embedded)</cite>
+ > 
+ > {{< quote >}} [New AMD Processors Drive High-Performance Computing for Embedded Industry | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/new-amd-processors-drive-high-performance-computing-embedded) {{< /quote >}}
 
 *Raven2* と言っても、その中で *Raven2* / *Dali* / *Pollock* のどれにあたるかは不明だが、組み込み向けに割り当てられることが多い RevisionID: 0x9\* を、*Pollock* が2つ持っているため、  
 *Pollock* である可能性が高いように**思う**。  

@@ -30,7 +30,7 @@ AMD GPU向けに実装されているオプションには以下のようなも�
  >           DRI_CONF_OPT_B(allow_draw_out_of_order, def, \
  >                          "Allow out-of-order draw optimizations. Set when Z fighting doesn't have to be accurate.")
  > {{< quote >}} [src/util/driconf.h · master · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/master/src/util/driconf.h) {{< /quote >}}
-
+ >
  >        /**
  >         * \brief radeonsi specific configuration options
  >         */

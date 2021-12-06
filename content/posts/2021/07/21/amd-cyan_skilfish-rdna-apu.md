@@ -46,7 +46,7 @@ ShaderArray ごとに持つ RDNA L1キャッシュ、オープンソースドラ
  > 		 		break;
  >
  > {{< quote >}} [[PATCH 14/29] drm/amdkfd: enable cyan_skillfish KFD](https://lists.freedesktop.org/archives/amd-gfx/2021-July/066817.html) {{< /quote >}}
-
+ >
  > 		 	static struct kfd_gpu_cache_info navi10_cache_info[] = {
  > 			{
  > 				/* TCP L1 Cache per CU */
@@ -108,7 +108,7 @@ GFXコア部に関する部分では *Navi10/Navi12/Navi14* 、*RDNA/GFX10.1 GPU
  > 		 };
  >
  > {{< quote >}} [[PATCH 14/29] drm/amdkfd: enable cyan_skillfish KFD](https://lists.freedesktop.org/archives/amd-gfx/2021-July/066817.html) {{< /quote >}}
-
+ >
  > 		 @@ -4748,6 +4759,7 @@ static int gfx_v10_0_sw_init(void *handle)
  > 		 	case CHIP_NAVI10:
  > 		 	case CHIP_NAVI14:

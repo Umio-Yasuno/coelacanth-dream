@@ -97,7 +97,7 @@ FP/AVXユニットからは2つのリードポートがレジスタファイル�
  > ZENの4つの浮動小数点/SIMD演算ユニットは、それぞれ2つのレジスタリードポートを備える。1サイクルに、各ユニットで2つのソースオペランドのリードが可能だ。しかし積和算時には、3つのソースオペランドをリードする必要がある。
  > 
  >「積和算では、3つの(ソース)オペランドが必要だ。レジスタファイルから読み出す場合、リードポートが足りなくなる。そのため、ちょっとしたトリックを使っている。積和算時には、加算パイプからレジスタファイルリードポートを1つ借用している。積和算時には、加算ユニットは使っていないため、加算ユニット自体は空いている。しかし、加算ユニットにはレジスタリードポートが1つしか残らない。そのため、加算(の命令発行)はスケジューラがブロックする」(Mike Clark氏, Senior Fellow, AMD)
-
+ >
  > (引用元: [相対的に大人しい設計のAMD次世代CPU「ZEN」の浮動小数点/SIMDユニット - PC Watch](https://pc.watch.impress.co.jp/docs/column/kaigai/1039027.html))
 
 AVX-512のロードとストアはそれぞれ2つのmicro-opsに分解されるものの、L1 Data Cacheはサイクルあたり合計512-bitのデータを受け渡せるようになっており、将来FP/AVXユニットを512-bit幅へ拡張したりするのかもしれない。  
@@ -133,9 +133,9 @@ Zen/2アーキテクチャをその表のフォーマットに合わせたもの
 | FP Rename | 160 FP regs | 160 FP regs |
 | Interconnect | 2x256b cross | 2x256b cross |
 
- > 参考:  
- * [AMD Zen 2の高い性能効率を支えるフロントエンドアーキテクチャ - PC Watch](https://pc.watch.impress.co.jp/docs/column/kaigai/1192135.html)  
+ * [AMD Zen 2の高い性能効率を支えるフロントエンドアーキテクチャ - PC Watch](https://pc.watch.impress.co.jp/docs/column/kaigai/1192135.html)
  * [AMD Zen 2 Microarchitecture Analysis: Ryzen 3000 and EPYC Rome - AnandTech](https://www.anandtech.com/show/14525/amd-zen-2-microarchitecture-analysis-ryzen-3000-and-epyc-rome)
+
 </details>
 
 Centaurは客観的に、公正に見て、CHAをHaswellクラスの性能と評価している。  
@@ -166,9 +166,8 @@ CHAが最大2.5GHzで動作するのに対し、IntelはSkylakeアーキテク�
 このパッチを読む限り、x86 CPUでSpectreV2への対策が為されたのはZhaxin 7-Seriesが何気に初となるのだろうか。  
 AMDはZen2アーキテクチャでSpectre対策強化のため一部設計を変更したが、あくまで強化であり、ソフトウェア側（OS Kernel、ファームウェア）での対策が不要になる訳ではなかった。  
 
- > 参考:  
- * [AMD、「Spectre」対策で次世代チップ「Zen 2」の設計を変更 - CNET Japan](https://japan.cnet.com/article/35114046/)  
- * [ASCII.jp：判明した第3世代Ryzenの内部構造を大解説　AMD CPUロードマップ (3/4)](https://ascii.jp/elem/000/001/882/1882171/3/)  
+ * [AMD、「Spectre」対策で次世代チップ「Zen 2」の設計を変更 - CNET Japan](https://japan.cnet.com/article/35114046/)
+ * [ASCII.jp：判明した第3世代Ryzenの内部構造を大解説　AMD CPUロードマップ (3/4)](https://ascii.jp/elem/000/001/882/1882171/3/)
 
 ### Ncore
 
@@ -217,22 +216,18 @@ Redditのスレッドにおける回答では、USBとSATAは外部チップセ�
 参考までに記しておくと、Intel Xeon Scalableで双方向2x 10.4 GT/s@20レーン (104GT/s?)、（Cascade Lakeなら3リンクで156GT/s?）  
 AMD EPYC Romeで双方向4x 18GT/s@16レーン (288GT/s, 実帯域 202GB/s)。  
 
- > 参考:
-
- > * [Intel® Xeon® Processor Scalable Family Technical Overview | Intel® Software](https://software.intel.com/en-us/articles/intel-xeon-processor-scalable-family-technical-overview)  
- > * [AMDが最高性能のx86 CPUと謳う「AMD EPYC 7002」シリーズ - PC Watch](https://pc.watch.impress.co.jp/docs/column/kaigai/1201352.html)  
- > * [[画像] 【後藤弘茂のWeekly海外ニュース】AMDが最高性能のx86 CPUと謳う「AMD EPYC 7002」シリーズ (25/28) - PC Watch](https://pc.watch.impress.co.jp/img/pcw/docs/1201/352/html/23_o.jpg.html)  
+  * [Intel® Xeon® Processor Scalable Family Technical Overview | Intel® Software](https://software.intel.com/en-us/articles/intel-xeon-processor-scalable-family-technical-overview)
+  * [AMDが最高性能のx86 CPUと謳う「AMD EPYC 7002」シリーズ - PC Watch](https://pc.watch.impress.co.jp/docs/column/kaigai/1201352.html)
+  * [[画像] 【後藤弘茂のWeekly海外ニュース】AMDが最高性能のx86 CPUと謳う「AMD EPYC 7002」シリーズ (25/28) - PC Watch](https://pc.watch.impress.co.jp/img/pcw/docs/1201/352/html/23_o.jpg.html)
 
 ### その他
 
 製造プロセスはTSMC 16nm FinFet Compact(16FFC)。  
 ハイパフォーマンス向けの16FF+を低コストにしたのが16FFC (16FF Compact) であり、メインストリーム向けや低消費電力 (Ultra Low Power) 向けに位置付けされている。  
 
- > 参考:
-
- > * [10nmに見切りをつけ低コストの12FFCに注力　TSMC 半導体ロードマップ - ASCII.jp](https://ascii.jp/elem/000/001/516/1516220/2/)  
- > * [16/12nm Technology - Taiwan Semiconductor Manufacturing Company Limited](https://www.tsmc.com/english/dedicatedFoundry/technology/16nm.htm)  
- > * [TSMC Symposium: New 16FFC and 28HPC+ Processes Target “Mainstream” Designers and Internet of Things (IoT) - Industry Insights - Cadence Blogs - Cadence Community](https://community.cadence.com/cadence_blogs_8/b/ii/posts/tsmc-symposium-new-16ffc-and-28hpc-processes-target-mainstream-designers-and-internet-of-things-iot)  
+ * [10nmに見切りをつけ低コストの12FFCに注力　TSMC 半導体ロードマップ - ASCII.jp](https://ascii.jp/elem/000/001/516/1516220/2/)
+ * [16/12nm Technology - Taiwan Semiconductor Manufacturing Company Limited](https://www.tsmc.com/english/dedicatedFoundry/technology/16nm.htm) 
+ * [TSMC Symposium: New 16FFC and 28HPC+ Processes Target “Mainstream” Designers and Internet of Things (IoT) - Industry Insights - Cadence Blogs - Cadence Community](https://community.cadence.com/cadence_blogs_8/b/ii/posts/tsmc-symposium-new-16ffc-and-28hpc-processes-target-mainstream-designers-and-internet-of-things-iot)
 
 余談だが、Habanaの推論用アクセラレーター Goya、Cerebrasの学習用プロセッサー WSE (Wafer Scale Engine)もTSMC 16nmで製造されている。（16FFCかどうかは不明）  
 ユニットを増やし、並列に実行するのが効果的なディープラーニング用途ではコストの低さから人気なのかもしれない。  
@@ -271,5 +266,4 @@ SIMD幅をさらに増やすかは、今もソフトウェアの最適化で忙�
 16FFCのままでx86 CPU、メモリーコントローラー、I/Oをスケールダウンさせ、より小型な推論用エッジサーバー向けのSoCがあっても面白そうだが、そのターゲット層だと絶対的な消費電力が課題となるのかもしれない。  
 x86 CPUでmicro-opキャッシュも持たないCNSアーキテクチャは消費電力の点で、他のARM+コプロセッサーの構成を取る製品より劣るはずだ。  
 
-<br>
 色んなことを期待しつつ、今後も情報を追っていきたい。  

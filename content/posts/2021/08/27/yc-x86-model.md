@@ -25,7 +25,7 @@ Linux Kernel におけるハードウェアモニタリングドライバー `hw
  > 		 		}
  >
  > {{< quote >}} [[PATCH v2 1/3] hwmon: (k10temp): Rework the temperature offset calculation - Mario Limonciello](https://lore.kernel.org/linux-hwmon/20210827201527.24454-2-mario.limonciello@amd.com/) {{< /quote >}}
-
+ >
  > 		+		case 0x40 ... 0x4f:	/* Yellow Carp */
  > 		+			data->ccd_offset = 0x300;
  > 		+			k10temp_get_ccd_support(pdev, data, 8);

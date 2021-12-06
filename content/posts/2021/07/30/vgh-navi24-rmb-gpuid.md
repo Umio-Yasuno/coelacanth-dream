@@ -33,7 +33,7 @@ AMD がオープンソースで開発する [ROCclr (Radeon Open Compute Common 
  > 		+    {"gfx1034",                "gfx1034",   true,  false,  false,             10, 3,  4,    NONE,   NONE, 2,    32,   1,    256,    64 * Ki, 32}
  >
  >  {{< quote >}} [SWDEV-290306 - [LNX][Navi24][mainline]clinfo test failed on Navi24 · ROCm-Developer-Tools/ROCclr@600bb35](https://github.com/ROCm-Developer-Tools/ROCclr/commit/600bb356421a3d39d50be1dd149d373506878663) {{< /quote >}}
-
+ >
  > 		Subject: [PATCH] SWDEV-267762 - add RMB(gfx1035) to deviceQuery
  > 		
  > 		---
@@ -83,7 +83,7 @@ AMD がオープンソースで開発する [ROCclr (Radeon Open Compute Common 
  > 		 	.max_pasid_bits = 16,
  > 		 	.max_no_of_hqd  = 24,
  > 		 	.doorbell_size  = 8,
-
+ >
  > ##### Yellow Carp
  > 		 static const struct kfd_device_info yellow_carp_device_info = {
  > 		 	.asic_family = CHIP_YELLOW_CARP,

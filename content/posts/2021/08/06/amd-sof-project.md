@@ -49,7 +49,7 @@ AMD が開発している ACP の ALSAドライバーのコードを見ると、
  > 			.periods_max = CAPTURE_MAX_NUM_PERIODS,
  > 		};
  > {{< quote >}} [acp3x-pcm-dma.c « raven « amd « soc « sound - kernel/git/next/linux-next.git - The linux-next integration testing tree](https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/tree/sound/soc/amd/raven/acp3x-pcm-dma.c?h=next-20210804&id=cab396d8b22c13b424d9ba66f626f036f802658c) {{< /quote >}}
-
+ >
  > ### Renoir (ACP 3.x)
  > 		 static const struct snd_pcm_hardware acp_pdm_hardware_capture = {
  > 			.info = SNDRV_PCM_INFO_INTERLEAVED |

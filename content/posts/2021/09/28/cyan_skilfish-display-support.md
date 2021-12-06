@@ -58,7 +58,7 @@ User Mode Driver、**RadeonSI (OpenGL), RADV (Vulkan)** にもまだサポート
  > 		+                       }
  >
  > {{< quote >}} [[PATCH 02/02] drm/amd/display: add cyan_skillfish display support](https://lists.freedesktop.org/archives/amd-gfx/2021-September/069483.html) {{< /quote >}}
-
+ >
  > 		+       .channel_interleave_bytes = 256,
  > 		+       .num_banks = 8,
  > 		+       .num_chans = 16,

@@ -104,20 +104,22 @@ L2キャッシュは CPUコアのみが使用可能だが、L3キャッシュは
 {{< link >}} [Alder Lake は PCIe Gen5 に対応、Tiger Lake-H は Gen4 20-Lane を備える | Coelacanth's Dream](/posts/2021/01/01/adl_p-gen5-tgl_h-gen4-x20/) {{< /link >}}
 関係したパッチのコメントにて、*Alder Lake-S* ではさらに `PEG11` (PCI Express Graphics Interface) が追加されることが述べられた。  
 
- > ADL-S has one extra PEG11, will add ADL-S later in year
+ >      ADL-S has one extra PEG11, will add ADL-S later in year
+ >
  > {{< quote >}} <https://review.coreboot.org/c/coreboot/+/49136/comment/ef70c9d3_664b5002/> {{< /quote >}}
 
 PEG と PCIe RP (Root Port) の関係は、以下の引用部から、PCIe Gen4 4-Lane x2 には PEG60 と PEG62 が割り振られ、PCIe Gen5 8-Lane は PEG10 となっている。  
 割り振られた数字から追加される PEG11 は PCIe Gen5 に対応し、*Alder Lake-S* はデスクトップ向けとして GPU との接続を目的に PCIe Gen5 16-Lane を備えることが考えられる。  
 
- > 00:01.0 (pcie5) has 1 x8 port (pcie5 or lower)  
- > 00:06.0 (pci4_0) has 1 x4 port (pcie4 or lower)  
- > 00:06.2 (pci4_1) has 1 x4 port (pcie4 or lower)  
+ > 		00:01.0 (pcie5) has 1 x8 port (pcie5 or lower)
+ > 		00:06.0 (pci4_0) has 1 x4 port (pcie4 or lower)  
+ > 		00:06.2 (pci4_1) has 1 x4 port (pcie4 or lower)  
+ >
  > {{< quote >}} [soc/intel/alderlake: Refactor PCIE port config (I0b390e43) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/48340) {{< /quote >}}
-
- > RP1: PEG60 : 0:6:0 : CPU SSD1  
- > RP2: PEG10 : 0:1:0 : x8 CPU Slot  
- > RP3: PEG62 : 0:6:2 : CPU SSD2  
+ >
+ > 		RP1: PEG60 : 0:6:0 : CPU SSD1  
+ > 		RP2: PEG10 : 0:1:0 : x8 CPU Slot  
+ > 		RP3: PEG62 : 0:6:2 : CPU SSD2  
  >
  > {{< quote >}} [soc/intel/alderlake: Refactor SoC code to maintain CPU and PCH PCIE RPs (I92123450) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/49136) {{< /quote >}}
 

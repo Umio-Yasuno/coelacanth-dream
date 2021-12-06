@@ -23,7 +23,7 @@ USB4 については今回のパッチを機に調べたことしか知らない
  > 		+
  >
  > {{< quote >}} [[PATCH 0/4] Add support for AMD USB4 and bug fixes](https://lore.kernel.org/linux-usb/YQgK9fQoI35P0yLf@lahna/T/#m6374365dcf16ecc112db3a29e4e8d64cc19abba5) {{< /quote >}}
-
+ >
  > 		+#define PCI_DEVICE_ID_AMD_USB4_HIA0	0x162e
  > 		+#define PCI_DEVICE_ID_AMD_USB4_HIA1	0x162f
  >
