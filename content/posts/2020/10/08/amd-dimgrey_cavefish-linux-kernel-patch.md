@@ -36,7 +36,7 @@ toc: false
  >
  > {{< quote >}} [[PATCH 49/50] drm/amd/display: Add support for DCN302 (v2)](https://lists.freedesktop.org/archives/amd-gfx/2020-October/054588.html) {{< /quote >}}
 
-<br>
+
 他は概ね *Sienna Cichlid, Navy Flounder* と同じとなっており、マルチメディアエンジンには VCN3 1基、SDMAエンジンは 2基となっている[^kfd]。
 なお、XGMI をサポートする *Sienna Cichlid* は SDMAエンジンを 4基搭載している。[^sienna_cichlid-xgmi]  
 

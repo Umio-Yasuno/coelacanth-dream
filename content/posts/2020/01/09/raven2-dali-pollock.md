@@ -30,6 +30,6 @@ Raven2とDali/Pollockの違いは、後者だとディスプレイコントロ�
 APU系統では他にDID:15D9も確認されており、これにPollockが追加で割り当てられるのかそれともまた新しいコードネームを持ったASICとなるのかはまだ不明。  
 [DeviceInfoUtils.cpp#L523](https://github.com/GPUOpen-Tools/common-src-DeviceInfo/blob/master/DeviceInfoUtils.cpp#L523)  
 
-<br>
+
 こちらで既に反映させてあるため、ややこしさの解消に役立てていただければ幸いだ。  
 [AMDGPUのDID、RID、Productのびみょうまとめ Part2](/posts/2019/12/30/did-rid-product-matome-p2/#pollock-gfx909)  

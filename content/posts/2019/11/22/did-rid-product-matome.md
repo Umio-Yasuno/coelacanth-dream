@@ -72,8 +72,8 @@ categories: [ "Hardware", "AMD", "GPU" ]
 
 DeviceIDとChipNameだけがわかって、RevisionID、ProductNameがさっぱりな項目が多い。  
 そこはこれから地道に埋めていきたい。  
-<br>
-<br>
+
+
 このブログは、私がスマホから簡単に確認できるデータベースとしても使っているが、  
 ここまで表がでかいとカクつきそうだ。  
 いや確実にカクつく。  

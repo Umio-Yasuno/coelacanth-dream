@@ -117,7 +117,7 @@ Raven/Picassoでも発熱によるサーマルスロットリングが問題と�
 | Ryzen 5 | 6/12 ? |
 | Ryzen 3 | 4/8 ? |
 
-<br>
+
 
 | <span style="color:crimson">RV | <span style="color:coral">Raven | <span style="color:coral">Raven2 | <span style="color:coral">Picasso | <span style="color:#f4a460">Renoir | <span style="color:#f4a460">Dali |
 | :--- | :---: | :---: | :---: | :---: | :---: |

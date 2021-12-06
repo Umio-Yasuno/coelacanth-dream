@@ -64,7 +64,7 @@ SIMDユニットあたりで保持される Wave数は 16エントリとなり�
 ただ不自然なのは TCC/L2キャッシュブロック (`numTccBlocks`) が 20基とされている点で、*Navi21/Sienna Cichlid* は GDDR6 256-bit (16ch) であるから 16基な十分なはずだ。  
 誤字、間違いである可能性もあるため、やはり AMD による資料公開が待たれる。  
 
-<br>
+
 また、MALL (Memory Access Last Level) の対応も追加されている。  
 マーケティング上では **Infinity Cache** と呼ばれるそれは、コード中においては MALL となるようだ。  
 

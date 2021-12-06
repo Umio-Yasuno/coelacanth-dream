@@ -107,7 +107,7 @@ TDP的にはV1000も12-25Wの製品があるが、[V1202B](https://www.amd.com/e
 そのTDPを求める層に売るには、V1000（Raven）のコストがきついため再設計し、ダイが小さめなR1000（Raven2）を出したのだろうか。  
 ダイが小さい分、Ravenよりも消費電力が低くなり、Ravenであった一部のバグも修正されているため、電力効率ではより優秀である、というのもあるかもしれない。  
 
-<br>
+
 どーでもいい話だが、R1000シリーズ発表と同時にAtari VCSに採用、2019年7月に出荷開始されることになっていたが、  
 延期され2020年中までとなった。  
 [The Atari VCS retro console can now be preordered from GameStop and Walmart - The Verge](https://www.theverge.com/2019/6/11/18661879/atari-vcs-gamestop-walmart-preorders-price-available)  

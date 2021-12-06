@@ -24,7 +24,7 @@ CSSのtable部をいじったことで実用的になったため掲載する。
 | WKS Pro-XTM | 7347 | 00 | ? | Pro 5500M (12WGP) |
 | WKS Pro-XL | 7341 | 00 | ? | |
 | WKS Pro-XLM | 734F | 00 | ? | Pro 5300M (10WGP) |
-<br>
+
 WKS Pro-XLMのRevisionIDははっきりと出ていないが、  
 [add support for wks firmware loading](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd?h=amd-staging-drm-next&id=73e5bc910eb3e697f0bf33aa63ad64549db4212a)  
 デバイスを判定する部分のコードが、DeviceIDが7340以外かつRevisionIDが00のものはwksが付いたファームウェアを読み込む、  

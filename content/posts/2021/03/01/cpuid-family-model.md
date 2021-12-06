@@ -109,8 +109,6 @@ Family/Model の意味と表記方法の違いを正しく理解し、かつ既�
  >              (model synth)   = 0x8 (8)
  >              (simple synth)  = AMD Ryzen (Pinnacle Ridge PiR-B2) [Zen+], 12nm
 
-
-<br>
 CPUID と Family/Model は 1種の記号であり、確かな意味を持っている。  
 しかしそれを正しく認識するには、表記の違いや、そのソフトウェアの表示が信頼できるかどうかを考える必要がある。  
 

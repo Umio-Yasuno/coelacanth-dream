@@ -16,7 +16,7 @@ IntelはNewsroomでTB4はUSB3の4倍とアナウンスしているが、問題�
 
 [^1]:[2020 CES: Intel Brings Innovation to Life with Intelligent Tech Spanning the Cloud, Network, Edge and PC | Intel Newsroom](https://newsroom.intel.com/news-releases/intel-ces-2020/)
 
-<br>
+
 USB3には現在、ざっくりと帯域で言うと5 Gbit/s、10 Gbit/s、20 Gbit/sの3種類がある。（GB/sはエンコード方式によってUSB 3.2 Gen1とGen2で違い、Gen1は8b/10b、Gen2は128b/130bでGen2の方が高効率。）  
 
 そして、TB3は40 Gbit/sであるから、Intelの言う4倍が20 Gbit/sに掛かるならば、TB4は80 Gbit/sとTB3の2倍となる。  
@@ -51,9 +51,7 @@ PCIeGen4にCPU側が対応しても、デバイス側としては自社製品が
 IntelからのTigerlakeに関しての情報はちらつかせるだけのものが多く、かえって謎が増えてるような気がしてならない。  
 さすがにTB3のリブランドだけに留まらず、Intelは何らかの付加価値を作ってくるはずだが、そこに関してはまだ一切明かされていない。  
 
-<hr>
-<span class="reference">参考</span>
-
+{{< ref >}}
  * [What Is Thunderbolt 4? Tiger Lake Tech Isn't Faster, Thunderbolt 3 With a New Name - Tom's Hardware](https://www.tomshardware.com/news/what-is-thunderbolt-4-tiger-lake-tech-isnt-faster-thunderbolt-3-with-a-new-name)  
  * [IntelがThunderbolt 4に言及、詳細不明ながら速度は据え置きか - Computerworldニュース：Computerworld](https://project.nikkeibp.co.jp/idg/atcl/19/00001/00076/?ST=idg-cm-hardware)  
  * [Intel's new 'Thunderbolt 4' spec quickly turns into a confusing messi - PCWorld](https://www.pcworld.com/article/3512937/intels-new-thunderbolt-4-spec-quickly-turns-into-a-mess.html)  
@@ -61,3 +59,4 @@ IntelからのTigerlakeに関しての情報はちらつかせるだけのもの
  * [Thunderbolt 4 vs. USB 4 - what's the difference? • Indeedly](https://indeedly.io/thunderbolt-4-is-usb-4-maxed-out/)  
  * [新しいUSBのスタンダード：USB 3.2の説明 - MSI](https://jp.msi.com/blog/new-usb-standard-usb-3-2-gen-1-gen2-explained)  
  * [USB 3.0#USB_3.2 - Wikipedia](https://en.wikipedia.org/wiki/USB_3.0#USB_3.2)  
+{{< /ref >}}

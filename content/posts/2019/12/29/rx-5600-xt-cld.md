@@ -55,7 +55,7 @@ ROP数も――理由はわからないが――アピールされないこと�
 
 まあ近い内にRX 5600無印のスペックも明らかになるはずだ。  
 
-<br>
+
 
 | Navi Product | <span style="color:coral">RX 5500 XT</span> | <span style="color:coral">RX 5600 XT ProductA</span> | <span style="color:coral">RX 5700</span> |
 | :--- | :---: | :---: | :---: |

@@ -74,7 +74,7 @@ AMDは以前3D積層によってコンピュータを1つのパッケージに�
  >
  > 引用元: <cite>[AMD Details Strategy to Deliver Best-in-Class Growth and Strong Shareholder Returns at 2020 Financial Analyst Day | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/amd-details-strategy-deliver-best-class-growth-and-strong)  
 
-<br>
+
 しかし、アーキテクチャの具体的な改良点やプラットフォームに関しては今回明らかにされなかった。  
 
 ## GPU

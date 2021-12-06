@@ -52,7 +52,7 @@ dGPU ながら、メモリに GDDR系ではなく LPDDR4x を採用したのは�
 *Tiger Lake* は LPDDR5メモリにも対応しているため、その点も共通とすれば、将来的に LPDDR5メモリを搭載した **Iris {{< xe >}} MAX** の上位製品が考えられるが、  
 そういった製品を出すかどうかはびみょうで、出さない気がする。  
 
-[^dg1-sdv]: [Intelが開発者向けのPCIeカード型DG1を公開 | Coelacanth's Dream](/posts/2020/01/10/intel-dg1-unveil/)<br>
+[^dg1-sdv]: [Intelが開発者向けのPCIeカード型DG1を公開 | Coelacanth's Dream](/posts/2020/01/10/intel-dg1-unveil/)
 [^tgl-up3-doc]: [Intel® Core™ i7-1185G7 Processor (12M Cache, up to 4.80 GHz, with IPU) Product Specifications](https://ark.intel.com/content/www/us/en/ark/products/208664/intel-core-i7-1185g7-processor-12m-cache-up-to-4-80-ghz-with-ipu.html)
 
 ## 今後の Intel GPU {#next-gpu}

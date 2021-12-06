@@ -33,7 +33,7 @@ GPUと同様に、「末尾」のLakeは省略している。
 ソース内には「Comet Lake PCH」ではなく「CometPoint」と書かれていたりするが、下記リンクのようなことを言って修正しているのだから前者が正しいと思い、表ではそう記述した。  
 [Fix PCH names for KBP and CNP.](https://cgit.freedesktop.org/drm-intel/commit/drivers/gpu/drm/i915?id=23247d715d3cf679cac24d1c4de2d76774a2a495)  
 
-<br>
+
 読み込んだ感想としては、Coffeeがややこしい。  
 Whiskey（ウイスキー）、Amber（琥珀）、Comet（彗星）が入り混じるコーヒーとは遠くかけ離れた存在と化している。  
 <https://gitlab.freedesktop.org/mesa/drm/blob/master/intel/i915_pciids.h#L527>  
@@ -57,7 +57,7 @@ H310Cのような22nmでありながら、Coffee Lakeに対応しているチッ
 そうなるとCMP_VはAmberにも対応するということになる。   
 CMP、CMP2はCNPと互換性があるとのことから、普通のCoffeeにも対応すると考えられる。  
 
-<br>
+
 パズルをやっている気分。  
 
 Coffeeを抜ければ多少なりともすっきりすると思いたいが、既にElkhartから嫌な予感がする。  

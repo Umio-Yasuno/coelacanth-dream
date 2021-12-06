@@ -50,7 +50,7 @@ baseof.html、list.html、single.htmlの調整もしなければ。
 
 もっと時間が掛かりそうだが、クールとスマートを両立したものを目指していく。  
 
-<br>
+
 ある程度完成したらGithubで公開したいが、サイトタイトル部分に使っている LoveLetterTypewriterフォント（lainのタイトルにも使われている）を再配布していいのかが心配だ。  
 ライセンスとしては、シェアウェアで個人使用としては無料、商用としてはライセンス購入、作者に連絡する必要があるらしい。  
 [Love Letter Typewriter Font - FontSpace](https://www.fontspace.com/dixies-delights/love-letter-typewriter)  

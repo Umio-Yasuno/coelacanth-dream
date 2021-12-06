@@ -134,7 +134,6 @@ Atom系プロセッサでは、*Airmont* から 1つ世代が進んだ *Goldmont
 [^gpupower]: [Tomtom apk - broken in car radio with android](https://www.gpspower.net/tomtom-android/362748-tomtom-apk-broken-car-radio-android.html)
 [^apl]: [製品の開発コード名 Apollo Lake](https://ark.intel.com/content/www/jp/ja/ark/products/codename/80644/apollo-lake.html)
 
-<br>
 ここまででいくつかの *Lightning Mountain SoC* が過去にスマートフォン向けに 2017年登場、採用され、今はカーラジオが販売されていることまでは分かったが、切っ掛けである最初のパッチが何故 2019/08頃に投稿されたのかは不明なままだ。  
 Android は Linux Kernel を採用しているため、搭載製品に使われているソースコードを入手できれば何かしら分かるのではと期待したが、サポートページを探しても {{< comple >}} または製品、サポートページ自体が {{< /comple >}} 見付からなかった。  
 *Lightning Mountain SoC* 自体よりも、その扱いが一番の謎と言えるかもしれない。  

@@ -22,7 +22,7 @@ NotebookCheck.netのレビュー記事より、Radeon Pro 5500Mが DeviceID:7340
 
 ちなみに、通常のとWKSで何が違うのかは、CP（Command Processor?）の挙動が若干変更されている、かもしれない程度しかわからない。  
 
-<br>
+
 そういうことで、AMDはApple向け（専用?）とは別にNavi14を使った製品を3つ *くらい* 用意しているとなる。  
 判明してる中では、XL、XLM、XTMとデスクトップ向け1つ、モバイル向けが2つあり、  
 Navi14のスペックからして、  

@@ -24,7 +24,7 @@ Two MPXの構成もあり、そちらを選ぶと総VRAM容量は32GBとなる�
 Vega II DuoのようにOne MPXに2GPUとしなかったのは、GDDRだと基板面積が厳しかったからか、  
 Navi10に外部へ出すInfinity Fabricが無く、One MPXに収める利点が特になかったか。  
 
-<br>
+
 他のNavi10採用GPUとまとめたスペックは以下、  
 
 | Navi10 Product | <span style="color:skyblue">W5700</span> | <span style="color:tomato">RX 5700</span> | <span style="color:tomato">RX 5700XT</span> | <span style="color:skyblue">W5700X</span> |

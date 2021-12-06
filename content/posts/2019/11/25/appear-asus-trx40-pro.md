@@ -11,7 +11,7 @@ categories: [ "Hardware", "AMD", "Motherboard" ]
 
 <https://www.amazon.com/TRX40-PRO-Threadripper-Motherboard-Connector-Lighting/dp/B08166G8DS>
 
-<br>
+
 米Amazonで「TRX40」と検索したところ１件、ASUS TRX40-PROが出てきた。  
 発売予定日は November 25, 2019 となっているが、まだ予約受付段階だ。  
 

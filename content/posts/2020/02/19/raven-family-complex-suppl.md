@@ -52,7 +52,7 @@ on-board でも on-package でもなく、**on-die** とあり、ひとまずこ
 
 そして、AMDはRyzen 7 3780U、Ryzen 5 3580Uに *Winston* というコードネームを *Picasso* とは別に付けた……
 
-<br>
+
 という推測。  
 
 そう何種類も出ないため、GPUのコードネームが実質SoCをも指し示すことが多いが、  

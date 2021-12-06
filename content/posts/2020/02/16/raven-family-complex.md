@@ -42,7 +42,7 @@ AMDもはっきりと、Raven2ベースの製品、Athlon 3000Gを発表の際�
  >
  > 引用元: <cite>[AMD Announces World’s Highest Performance Desktop and Ultrathin Laptop Processors at CES 2020 | Advanced Micro Devices](https://ir.amd.com/news-releases/news-release-details/amd-announces-worlds-highest-performance-desktop-and-ultrathin)</cite>
 
-<br>
+
 パッチ内のメッセージでもその点が突っ込まれまくっており、少し色々とあったが、最終的に zen2 ではなく raven2 を関数名に使うということで納得してくれたようだ。  
 
  > I'll change it to raven2 instead of zen2. Thanks.
@@ -248,6 +248,6 @@ CPUID は x86_model のように *Picasso* と *Raven2* がごちゃごちゃに
 
 製品を買うのに大半の人はこれまで書いてきたことは気にしないだろうし、公式や各種メディアから、製造プロセス、アーキテクチャ等の結論として存在するベンチマーク結果が示されているのだから、それと価格で決めれば良い。  
 
-<br>
+
 それなのにここまで記事を書いたのは、開発者が Wiki系サイトに頼らなくていいようAMDが資料をもっと公表し、  
 多くの人の苦労が詰まった半導体がどんな設計で、どんな名前を付けられたか、出来るだけ無視されないことを願っているからだ。  

@@ -68,7 +68,7 @@ IO部も個人的な考えではPCIeGen4は必要ないように思えるが、�
 PCIeGen3とするなら、IO HUBへの接続が32B/Cで済むだろうし、まだ発熱の厳しいPCIeGen4 SSDがモバイル向けで支持されるかは怪しいはず。Ice LakeもGen3止まりだ。  
 だが、発表されるのが2020年CESだとしても、実際に出るまではもっと時間がかかるため、その時の需要を考えればGen4になるかもしれない。  
 
-<br>
+
 #### DC Patches - 2 Dec 2019
 これを書いてる最中、少し久しぶりな気がするDC（Display Core）へのパッチが投稿された。  
 [[PATCH 00/51] DC Patches - 2 Dec 2019](https://lists.freedesktop.org/archives/amd-gfx/2019-December/043394.html)  

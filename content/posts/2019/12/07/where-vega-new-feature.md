@@ -64,14 +64,14 @@ DPBBが部分的な、DFSMは全体的なものとなるらしいが、決まっ
 
 [^5]: [ radeonsi: limit DPBB context_states_per_bin batches when using gfx9 workaround - Mesa GitLab](https://gitlab.freedesktop.org/mesa/mesa/commit/519bebdb40d9df5926e8b16dedd36b8e0f356f60)
 
-<br>
+
 Raven（APU）向けのチューニングがされていることから、メモリ帯域が狭いAPUでは効果があったが、dGPUではそうでもなかったのかもしれない。  
 （じゃあ上述したフレームレート最大10%UP、メモリ帯域33%削減は何なんだとなるが、10fpsが11fpsになっても10%の向上だ。下衆の勘繰りであることは否めないが。バグの影響もあったかもしれない）  
 
 それでもGFX10に引き継がれ、改良は進められているらしい。DPBBのみだが、GFX10ではデフォルトで有効にされる。  
 {{< link >}}[ radeonsi/gfx10: implement primitive binning - Mesa GitLab](https://gitlab.freedesktop.org/mesa/mesa/commit/9f68367d19d9c0394bc935493788dcd189e08f49){{< /link >}}
 
-<br>
+
 オープンソースドライバーのRadeonSI、RADVでは確認できるが、Windowsのプロプライエタリなドライバーではどうなのかはわからない。  
 ### DPBB（Deferred Primitive Batch Binning）
 Raven向けの機能となる。[^6]  

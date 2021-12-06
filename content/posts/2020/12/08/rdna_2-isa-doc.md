@@ -78,7 +78,7 @@ Wave はスレッドの塊の意だが、Work-group は Wave の塊で、Wave間
 RadeonSIドライバーに、*RDNA アーキテクチャ* でも Wave64 (Wave32x2) で各シェーダーを実行する変更が為された時のコメントから、後者の粒度が大きくなったという解釈のが正しいようには思える。自信はない。  
 {{< link >}} [RadeonSI ドライバーでは RDNA GPU も Wave64モードで各シェーダーを実行するように | Coelacanth's Dream](/posts/2020/07/02/radeonsi-shader-wave64-with-rdna/) {{< /link >}}
 
-<br>
+
 他には、1つのコンポーネントに対して最大 4つのサンプルを、サンプラーを用いずに読み込む `IMAGE_MSAA_LOAD`、  
 グローバルメモリへの TID (Thread-ID) によるアドレッシング等が新たにサポートされている。  
 

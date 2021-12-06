@@ -52,7 +52,7 @@ BroxtonとWillowViewはキャンセルされており、影も薄くなるよな
 
 それとAmber、Whiskey、Cometは少しややこしいが、PCHでもっとややこしくなる。  
 
-<br>
+
 ### スペックの知り方
 
 Intelのmedia-driverレポジトリ内のファイルを読むのが手っ取り早いし正確だ。  

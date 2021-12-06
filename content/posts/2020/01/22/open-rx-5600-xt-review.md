@@ -55,7 +55,7 @@ WGP(CU)はほとんど、ROPは全く削られていないというのはやは�
 ASRockは旧vBIOSの仕様のままだが、PowerColorとSAPPHIREは新vBIOSなあたり、よく間に合ったな、という感想。  
 まだ国内発表していないベンダーは間に合わなかったのかもしれないが。  
 
-<br>
+
 それはともかく、一番の問題は**価格**だ。  
 
  * SAPPHIRE PULSE RADEON RX 5600 XT : **&yen;41,800（税込み）**
