@@ -2,7 +2,7 @@
 title: "Intel Lightning Mountain を追う"
 date: 2021-03-23T00:00:00+09:00
 draft: false
-# tags: [ "", ]
+tags: [ "Unknown", ]
 # keywords: [ "", ]
 categories: [ "Intel", "CPU" ]
 noindex: false
