@@ -1,5 +1,5 @@
 ---
-title: "謎？のコードネーム、Intel Molasses Rapids"
+title: "謎？のコードネーム、Intel Molasses Rapids、あるいはブラック・ジョーク"
 date: 2021-12-10T10:54:29+09:00
 draft: false
 tags: [ "Unknown" ]
@@ -10,6 +10,11 @@ noindex: false
 ---
 
 Intel のソフトウェアエンジニア、[kilobyte (Adam Borowski)](https://github.com/kilobyte) 氏よりわずかに語られた謎のコードネームを持つ CPU *Molasses Rapids* についてのメモ。  
+
+{{< pindex >}}
+ * [Molasses Rapids](#molasses-rapids)
+    * [安易な推測](#easy-guess)
+{{< /pindex >}}
 
 ## Molasses Rapids {#molasses-rapids}
 
@@ -63,6 +68,8 @@ zydis でのコメントで目的としているのは、命令と拡張命令�
 *Sapphire Rapids* 以前の命令に対応しながら、キャッシュラインが拡大された将来のプロセッサとして名前が挙げられる CPU、というのも不自然だろう。  
 また、*Molasses Rapids, Hubris Rapids* で検索した時、これまでに挙げたページ以外に出てこなかったことも後押しする。あまりに情報が無さすぎる。  
 
-ちなみに *Molasses* は糖蜜、サトウキビの糖液という意味だが、そこからひどくのろいものを指すのにも使われるらしい。*Hubris* は破滅へと至る慢心あるいは傲慢の意。  
 それとキャッシュラインを拡大することの利点として、メモリとキャッシュ間のやり取りはキャッシュライン単位であるため、メモリ帯域を活用しやすくなることが挙げられる。  
+
+ちなみに *Molasses* は糖蜜、サトウキビの糖液という意味だが、そこからひどくのろいものを指すのにも使われるらしい。*Hubris* は破滅へと至る慢心あるいは傲慢の意。  
+……ブラック・ジョークだろうか？  
 
