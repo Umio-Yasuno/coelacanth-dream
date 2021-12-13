@@ -1,5 +1,5 @@
 ---
-title: "Site Changelog 2021-12-11"
+title: "【雑記】Site Changelog 2021-12-11"
 date: 2021-12-11T22:16:01+09:00
 draft: false
 tags: [ "Hugo", ]

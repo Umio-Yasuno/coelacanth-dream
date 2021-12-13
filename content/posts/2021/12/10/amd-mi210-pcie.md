@@ -9,7 +9,7 @@ noindex: false
 # summary: ""
 ---
 
-フィンランドの国営企業、CSC に主任HPCサイエンティストとして籍を置く [George Markomanolis](https://twitter.com/geomark) 氏によって、**Instinct MI210** のスペックが明かされた。  
+フィンランドの国営企業、CSC に主任HPCサイエンティストとして籍を置く [George Markomanolis](https://twitter.com/geomark) 氏より、**Instinct MI210** のスペックが明かされた。  
 **MI210** は GCD (Graphics Compute Die) 1基の構成を採り、CU 104基、HBM2e 64GB (4096-bit) というスペックとなる。  
 
  * <https://twitter.com/geomark/status/1466837043837915138>
