@@ -338,7 +338,9 @@ DG02SRTBP4MFA
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 0x164D[^yc-did] &darr; | | | |
-| 0x1681 &darr; | | | other silicon? (like Raven2?) |
+| 0x1681 &darr; | 0xC7 | (AMD Eng Sample: 100-000000560-40_Y) | LilacKD-RMB[^lilackd-rmb] |
+
+[^lilackd-rmb]: [[Kernel-packages] [Bug 1953008] ProcInterrupts.txt](https://www.mail-archive.com/kernel-packages@lists.launchpad.net/msg466205.html)
 
 [^yc-did]: [[PATCH 2/2] drm/amdgpu: add yellow carp pci id (v2)](https://lists.freedesktop.org/archives/amd-gfx/2021-July/066869.html)
 

@@ -1,5 +1,5 @@
 ---
-title: "Yellow Carp は Family 19h Model 40h"
+title: "Yellow Carp は Family 19h Model 40h-4Fh"
 date: 2021-08-27T18:48:33+09:00
 draft: false
 tags: [ "Linux_Kernel", "Yellow_Carp", "Green_Sardine", "Cezanne", "Rembrandt", "Lucienne" ]
