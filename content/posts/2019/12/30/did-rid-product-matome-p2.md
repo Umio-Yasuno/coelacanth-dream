@@ -229,7 +229,6 @@ DG02SRTBP4MFA
 ### Renoir ( gfx90c ) {#renoir-gfx90c}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 0x15E7[^rn-15e7h] | | | |
 | 0x1636 &darr; | 0x00 | | (BringUp FP6) |
 | | 0xC1 | Extreme Edition /4800U[^rn-4800u] | (B12 15W FP6) |
 | | 0xC2 | 4700U[^rn-4700u] | (B10 15W FP6) |
