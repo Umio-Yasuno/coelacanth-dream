@@ -21,6 +21,15 @@ noindex: false
 
 どちらも GPU部の DeviceID が `0x15E7` であり、これは *Barcelo* に割り当てられた DeviceID。  
 {{< link >}} [新たな Zen 3 + Vega APU 「Barcelo」 | Coelacanth's Dream](/posts/2021/07/17/amd-barcelo-vega-apu/) {{< /link >}}
+
+ > 		åäºŒ 14 21:00:15 WMVB5-DVT2-A2 kernel: [drm] initializing kernel modesetting (RENOIR 0x1002:0x15E7 0x1028:0x0B7C 0xC1).
+ >
+ > {{< quote >}} [](https://launchpadlibrarian.net/574000802/suspend-success.log) {{< /quote >}}
+ >
+ > 		[    1.340700] [drm] initializing kernel modesetting (RENOIR 0x1002:0x15E7 0x1002:0x0123 0xC3).
+ >
+ > {{< quote >}} [](https://launchpadlibrarian.net/574190473/CurrentDmesg.txt) {{< /quote >}}
+
 そのため、確かに *Barcelo APU* だと言えるのだが、CPU の `Family, Model, Stepping` は *Green Sardine/Cezanne APU* と同一となっている。  
 また、当てられているマイクロコードのバージョン (`0xa50000c`) も同一のものだった。  
 
@@ -46,3 +55,7 @@ CPU の識別に使われる `Family, Model, Stepping` が変わらないあた�
 
  * [Func Benchmarks [2112063-TJ-FUNC8359488] - OpenBenchmarking.org](https://openbenchmarking.org/result/2112063-TJ-FUNC8359488)
 
+余談だが、*Renoir /Lucienne /Green Sardine (Cezanne) /Barcelo APU* では、AMDGPUドライバーが間違った有効 CU数を検出する。上記ブートログでも、CU 26基か 28基という数が出てきている。  
+これは AMDGPUドライバーがそれらの VBIOS、ファームウェアのパースに対応していなかったことによるもので、issue を送ったところ AMD の Alex Deucher 氏より、すぐに修正パッチが投稿された。  
+
+ * [The number of CU on GreenSardine/Cezanne is wrong (#1833) · Issues · drm / amd · GitLab](https://gitlab.freedesktop.org/drm/amd/-/issues/1833)
