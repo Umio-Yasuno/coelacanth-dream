@@ -16,6 +16,11 @@ Intel GPU の OpenCLコンパイラ [intel-graphics-compiler](https://github.com
  * [gpu: compute: add Xe HPC engine · oneapi-src/oneDNN@dac5847](https://github.com/oneapi-src/oneDNN/commit/dac5847295d587737133d4027a9c435383926fe3)
  * [gpu: ocl: implement ocl Xe HPC support · oneapi-src/oneDNN@43b0a06](https://github.com/oneapi-src/oneDNN/commit/43b0a063495944d31d3826482bc42bb2f31be7aa)
 
+{{< pindex >}} 
+ * [{{< xe class="hpc" >}} の L1命令キャッシュサイズ](#icache)
+    * [{{< xe class="hpc" >}}-XT と {{< xe class="hpc" >}}-XL](#xl-xt)
+{{< /pindex >}}
+
 ## {{< xe class="hpc" >}} の L1命令キャッシュサイズ {#icache}
 
 *{{< xe >}} アーキテクチャ* では複数の EU (Vector Engine, Matrix Engine) やロード/ストアユニットをまとめた {{< xe >}}-Core ごとに L1命令キャッシュを持つ。  
