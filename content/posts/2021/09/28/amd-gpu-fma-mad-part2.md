@@ -2,9 +2,9 @@
 title: "AMD GPU の世代における FMA、MAD 命令の微妙な仕様と違い Part2"
 date: 2021-09-28T02:53:53+09:00
 draft: false
-# tags: [ "", ]
+tags: [ "GFX8", "GFX9", "GFX10", "RDNA_2" ]
 # keywords: [ "", ]
-categories: [ "AMD", "Database", "GPU", "Hardware" ]
+categories: [ "AMD", "Database", "GPU", "Note" ]
 noindex: false
 # summary: ""
 ---
@@ -14,6 +14,10 @@ noindex: false
 
 AMD GPU アーキテクチャにおいて、初期の GCN から *Polaris1x /VegaM* までを含む *GFX6-8* では FMA の処理が MAD の 4倍遅く、*Vega, Navi* の世代である *GFX9-10* では FMA も MAD も同じ処理性能であり、*RDNA 2 /GFX10.3* では MAD をサポートせず、MUL と ADD 2つに分けて処理するため遅くなり、FMA を使う方が速くなるとされる。  
 
+{{< pindex >}}
+ * [FMA と MAD の性能違い](#perf)
+ * [FMA と MAD の精度違い](#ulp)
+{{< /pindex >}}
 
 ## FMA と MAD の性能違い {#perf}
 

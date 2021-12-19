@@ -1,5 +1,5 @@
 ---
-title: "AMD Yellow Carp/Rembrandt APU ブートログ　―― LilacKD-RMB, 100-000000560-40_Y"
+title: "AMD Yellow Carp/Rembrandt APU ブートログ&emsp;―― LilacKD-RMB, 100-000000560-40_Y"
 date: 2021-12-14T20:21:08+09:00
 draft: false
 tags: [ "Yellow_Carp", "RDNA_2" ]

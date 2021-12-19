@@ -4,7 +4,7 @@ date: 2020-09-18T09:45:41+09:00
 draft: false
 tags: [ "RadeonSI", "RADV", "RDNA_2" ]
 # keywords: [ "", ]
-categories: [ "Hardware", "AMD", "GPU", "Database" ]
+categories: [ "Note", "AMD", "GPU", "Database" ]
 noindex: false
 # summary: ""
 ---
