@@ -27,7 +27,9 @@ noindex: false
 段階を踏んで解説すると、AMD GPU では *GFX6-8* の世代だと FMA、MAD命令の処理性能に違いがあり、FMA命令は MAD命令の 1/4 という性能だった。  
 *GFX9 (Vega)* の世代からは FMA命令が MAD命令と同等の処理性能となり、*GFX10.3 (RDNA 2)* の世代では MAD命令が取り除かれ、FMA命令に置き換えられた。  
 ドライバー、シェーダーコンパイラでは、*GFX6-8* では MAD命令を、*GFX9-10* ではどちらでも性能は変わらないが MAD命令を、*GFX10.3* では FMA命令を使う形で対応していた。*GFX10.3* の場合、MAD命令だと MUL+ADD に分けて処理するため、逆に遅くなる。  
-一応、*GFX6-8* 世代でも倍精度演算への対応が強化されている GPU は FMA、MAD命令の性能が同等になっているが、対応を簡潔にするため上のようになっているものと思われる。  
+
+一応、*GFX6-8* 世代でも倍精度演算への対応が強化されている一部 GPU では、FMA、MAD命令の性能が同等となっており、*Tahiti (gfx600), Hawaii (gfx702), Hawaii Pro (gfx701), Carrizo (gfx801)* が該当するが、ドライバーとしては対応を簡潔にするために、上のような形にしていると思われる。  
+
 
  > 		      /*        |---------------------------------- Performance & Availability --------------------------------|
  > 		       *        |MAD/MAC/MADAK/MADMK|MAD_LEGACY|MAC_LEGACY|    FMA     |FMAC/FMAAK/FMAMK|FMA_LEGACY|PK_FMA_F16,|Best choice
