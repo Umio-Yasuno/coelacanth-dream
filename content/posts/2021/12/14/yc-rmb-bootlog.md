@@ -115,13 +115,13 @@ GPU部の構成は、SE (ShaderEngine) 1基、SE あたりの SH (ShaderArray) 2
 そして *Yellow Carp/Rembrandt* は *VanGogh* と比べて、CU数だけでなくキャッシュの規模も大きくしている。  
 *RDNA系アーキテクチャ* では、SH ごとに GL1キャッシュ 128KiB を持ち、ほとんどの RDNA/2 GPU では SE あたり SH 2基という構成を採っているが、*VanGogh* は SE あたり SH 1基という GL1キャッシュを減らし、小規模であることを意識した構成だった。  
 *Yellow Carp/Rembrandt* のキャッシュが大きいというより、*VanGogh* が特別小さかったと言った方が適切かもしれない。一応 *RDNA 2 APU* という枠内で強化された点ではある。  
-また、GPU全体で共有する L2キャッシュも、*VanGogh* では 2MiB だったのが *Yellow Carp/Rembrandt* では 4MiB となり、容量を増やしている。  
+また、GPU全体で共有する L2キャッシュも、*VanGogh* では 1MiB だったのが *Yellow Carp/Rembrandt* では 2MiB となり、容量を増やしている。  
 なお現時点の *RDNA 2 APU* は共通して L3/Infinity Cache (MALL) を持たない。  
 
 | RDNA 2 APU | VanGogh | Yellow Carp<br>(Rembrandt) |
 | :-- | :--: | :--: |
 | GL1 Cache | 128KiB | 256 KiB<br>(2x 128KiB)
-| L2 Cache | 2MiB | 4MiB |
+| L2 Cache | 1MiB | 2MiB |
 | L3 Cache/MALL | N/A | N/A |
 
 ## Memory {#memory}
