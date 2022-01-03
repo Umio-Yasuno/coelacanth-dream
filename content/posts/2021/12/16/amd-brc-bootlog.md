@@ -1,5 +1,5 @@
 ---
-title: "AMD Barcelo APU ブートログ&emsp;―― Ryzen 7 5825U, 100-000000586-40_Y"
+title: "AMD Barcelo APU ブートログ ―― Ryzen 7 5825U, 100-000000586-40_Y"
 date: 2021-12-16T21:16:03+09:00
 draft: false
 tags: [ "Barcelo", "Cezanne" ]
