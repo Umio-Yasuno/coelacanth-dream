@@ -5,7 +5,7 @@ draft: false
 tags: [ "Yellow_Carp", "Beige_Goby", "Barcelo" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU", "GPU" ]
-noindex: true
+noindex: false
 # summary: ""
 ---
 
@@ -18,13 +18,32 @@ CES 2022 に併せたライブストリーミングにて AMD より新たな CP
  * [AMD Presents Latest High-Performance Computing Technologies in 2022 Product Premiere Livestream :: Advanced Micro Devices, Inc. (AMD)](https://ir.amd.com/news-events/press-releases/detail/1040/amd-presents-latest-high-performance-computing-technologies)
 
 {{< pindex >}}
+ * [Ryzen 5x25U /Pro 5x75U (Barcelo)](#brc)
  * [Ryzen 6000U/H/HX (Yellow Carp [Rembrandt])](#yc)
+    * [AV1デコードの有無](#av1-dec)
  * [Radeon RX 6500 XT / RX 6400 (Beige Goby [Navi24])](#bg)
 {{< /pindex >}}
 
+## Ryzen 5x25U /Pro 5x75U (Barcelo) {#brc}
+
+*Barcelo APU* をベースとする **Ryzen 5x25U /Pro 5x75U** が発表された。*Barelo* は *Cezanne* と同じく CPU に *Zen 3* 、GPU に *Vega (GFX9)* を採用している。プロセスも同様に TSMC 7nm FinFet で製造され、パッケージも続いて FP6。  
+*Renoir* に対する *Lucienne* のように、電源管理機能等を改良したという情報はなく、GPU部の有効 CU 数と動作クロックは *Cezanne* ベースの **Ryzen 5x00U** と変わらない。  
+違いとしては CPU の Base Clock、Boost Clock のどちらか、あるいは両方が 0.1 GHz 向上したぐらいものとなっている。  
+
+**Ryzen Pro 5x75U** も SKU 3種が発表されたが、プロセッサ仕様はモデルナンバーが対応する非 Pro SKU と同じ。  
+
+| | Codename | Core/Thread | Base Clock (GHz) | Boost Clock (GHz) | GPU CU | GPU Clock (GHz) |
+| :-- | :--: | :--: | :--: | :--: | :--: | :--: |
+| 5825U | *Barcelo* | 8/16 | 2.0 | 4.5 | 8 | 2.0 |
+| 5625U | *Barcelo* | 6/12 | 2.3 | 4.3 | 7 | ?   |
+| 5425U | *Barcelo* | 4/8  | 2.7 | 4.1 | 6 | 1.6 |
+| 5800U | *Cezanne* | 8/16 | 1.9 | 4.4 | 8 | 2.0 |
+| 5600U | *Cezanne* | 6/12 | 2.3 | 4.2 | 7 | 1.8 |
+| 5600U | *Cezanne* | 4/8  | 2.6 | 4.0 | 6 | 1.6 |
+
 ## Ryzen 6000U/H/HX (Yellow Carp [Rembrandt]) {#yc}
 
-6nmプロセスで製造され、*Zen 3+* と *RDNA 2* を組み合わせた APU をベースとする **Ryzen 6000U/H/HX シリーズ** が正式発表された。  
+TSMC 6nm FinFet プロセスで製造され、*Zen 3+* と *RDNA 2* を組み合わせた APU をベースとする **Ryzen 6000U/H/HX シリーズ** が正式発表された。  
 *Zen 3+* では電力管理機能が強化され、クロックの切り替えレイテンシ削減と新たな Deep Sleepステートにより、性能と電力効率が一緒に強化されているとする。  
 GPU部は *RDNA 2 アーキテクチャ* となっただけでなく、L2キャッシュと RB (RenderBackend) の規模は倍に、CU数は *Renoir/Lucienne/Cezanne (Green Sardine) /Barcelo* の 8基から 12基へと 1.5倍になった。[^rdna_2]  
 補足すると、RB (Render Backend) あたり 8 ROP相当という意味での RB+ は APU だと *Stoney Ridge* や *Raven (Zen, Vega, 14nm)* の世代から実装、有効化されていた。  
@@ -34,16 +53,19 @@ GPU部は *RDNA 2 アーキテクチャ* となっただけでなく、L2キャ�
 単純な数値の比較ではあるが、Shader Processor と Pixel Rate において、*Tiger Lake-U* や *Alder Lake-P/M* に搭載されている Intel Gen12 GT2 は最大で 768 SP、24 ROP相当であり、それら規模では今まで AMD APU より上だった。(実性能は動作クロックやドライバー、メモリ性能等が関わってくる)  
 *Yellow Carp* ではそれを追い抜き返した形となる。  
 
-| iGPU | Renoir /Lucienne<br>/Cezanne (Green Sardine) /Barcelo | Yellow Carp<br>(Rembrandt) | Gen12 GT2<br>(Tiger Lake /Alder Lake-P/M) |
-| :-- | :--: | :--: | :--: |
-| | 8 CU | 6 WGP<br>(12 CU) | 96 EU |
-| Shader Processor | 512 SP | 768 SP | 768 SP |
-| Pixel Rate | 16 | 32 | 24 |
+| iGPU | Renoir /Lucienne<br>/Cezanne (Green Sardine) /Barcelo | Yellow Carp<br>(Rembrandt) | Gen12 GT1<br>(TGL-H /RKL-S /ADL-S) | Gen12 GT2<br>(TGL-U /ADL-P/M) |
+| :-- | :--: | :--: | :--: | :--: |
+| | 8 CU | 6 WGP<br>(12 CU) | 32 EU | 96 EU |
+| Shader Processor | 512 SP | 768 SP | 256 SP | 768 SP |
+| Pixel Rate | 16 | 32 | 8 | 24 |
+| GPU Cache | L2 1024 KiB | L2 2048 KiB | 1920 KiB | 3840 KiB |
 
 ダイサイズはプロセッサ仕様によると 210mm2 としており、*Cezanne* の約 180mm2 より大きくなっている。  
 CPU部は *Zen 3* と電力管理機能を除いてほとんど同じとされているため、PCIe Gen4, USB4 に対応した I/O部、*RDNA 2 アーキテクチャ* の採用と同時に規模が大きくなった GPU部の影響と思われる。  
 
 [^rdna_2]: {{< youtube id="_jX-hKvUQDU" start="683" >}}
+
+### AV1デコードの有無 {#av1-dec}
 
 個人的なトピックだった、*Yellow Carp (Rembrandt)* のハードウェア AV1デコードの有無については、びみょうにはっきりしないところがある。  
 まず、半年近く前 (2021/07/14) に投稿されたパッチで、*Yellow Carp* がHWデコードをサポートするフォーマットの中に MPEG2, MPEG4, VC1, AV1 は無かった。  
@@ -95,7 +117,7 @@ CPU部は *Zen 3* と電力管理機能を除いてほとんど同じとされ�
  * [AMD Radeon™ RX 6500M | AMD](https://www.amd.com/en/products/graphics/amd-radeon-rx-6500m#product-specs)
 
 1080p でのゲーム性能において、**RX 570 (Polaris19, 14nm)** より高速であることがアピールされている。  
-トランジスタ数が、*Polaris10* は 5.7 B、*Beige Goby (Navi24)* は 5.4 B とされており、微細化によるトランジスタ密度向上、ユニット数の増加ではなく、アーキテクチャの進化と倍以上にもなる動作クロックの向上で **RX 6500 XT** は **RX 570** 以上の性能を達成している。  
+トランジスタ数が、*Polaris10* は 5.7 B、*Beige Goby (Navi24)* は 5.4 B とされており、微細化によるトランジスタ密度向上、ユニット数の増加ではなく、同程度のトランジスタ数ながらアーキテクチャの進化と倍以上にもなる動作クロックの向上によって **RX 6500 XT** は **RX 570** 以上の性能を達成している。  
 **RX 6500 XT** は GDDR6 18Gbps を採用しているが、メモリバス幅は 64-bit であり、**RX 570** と比較してメモリ帯域は 64% 程度 (144 GB/s vs 224 GB/s) である。この点、Infinity Cache 16 MiB がかなり活きているように思う。  
 しかし、1080p より上の解像度や GPGPU 等においては 16 MiB ではカバーしきれず、最大 4GB というメモリサイズもあって、性能は低下すると考えられる。  
 *RDNA 2 アーキテクチャ* の中でも、ゲームに特化しているという特徴が濃く出ているようにも感じる。  
