@@ -41,9 +41,9 @@ CES 2022 に併せたライブストリーミングにて AMD より新たな CP
 | 5600U | *Cezanne* | 6/12 | 2.3 | 4.2 | 7 | 1.8 |
 | 5600U | *Cezanne* | 4/8  | 2.6 | 4.0 | 6 | 1.6 |
 
-## Ryzen 6000U/H/HX (Yellow Carp [Rembrandt]) {#yc}
+## Ryzen 6000U/H/HS/HX (Yellow Carp [Rembrandt]) {#yc}
 
-TSMC 6nm FinFet プロセスで製造され、*Zen 3+* と *RDNA 2* を組み合わせた APU をベースとする **Ryzen 6000U/H/HX シリーズ** が正式発表された。  
+TSMC 6nm FinFet プロセスで製造され、*Zen 3+* と *RDNA 2* を組み合わせた APU をベースとする **Ryzen 6000U/H/HS/HX シリーズ** が正式発表された。  
 *Zen 3+* では電力管理機能が強化され、クロックの切り替えレイテンシ削減と新たな Deep Sleepステートにより、性能と電力効率が一緒に強化されているとする。  
 GPU部は *RDNA 2 アーキテクチャ* となっただけでなく、L2キャッシュと RB (RenderBackend) の規模は倍に、CU数は *Renoir/Lucienne/Cezanne (Green Sardine) /Barcelo* の 8基から 12基へと 1.5倍になった。[^rdna_2]  
 補足すると、RB (Render Backend) あたり 8 ROP相当という意味での RB+ は APU だと *Stoney Ridge* や *Raven (Zen, Vega, 14nm)* の世代から実装、有効化されていた。  
@@ -64,6 +64,10 @@ GPU部は *RDNA 2 アーキテクチャ* となっただけでなく、L2キャ�
 CPU部は *Zen 3* と電力管理機能を除いてほとんど同じとされているため、PCIe Gen4, USB4 に対応した I/O部、*RDNA 2 アーキテクチャ* の採用と同時に規模が大きくなった GPU部の影響と思われる。  
 
 [^rdna_2]: {{< youtube id="_jX-hKvUQDU" start="683" >}}
+
+*Vega (GFX9)* 世代の APU では、GPU部のモデル名が CU数をそのまま反映したものになっていたが、**Ryzen 6000U/H/HS/HX** では **Radeon 660M (6 CU)** と **Radeon 680M (12 CU)** という名前が付けられている。  
+GPU部だけを見たときのラインラップがかなりすっきりとし、わかりやすくなったと感じるが、**Radeon 660M** は 1900MHz で統一されているのに対し、**Radeon 680M** は **Ryzen 6980HS/HX** のみ 2400MHz、それ以外が 2200MHz となっている。  
+とはいえ同じ *Vega (GFX9)* 世代であっても有効 CU 数、動作クロックがバラバラだったのと比べればずっとわかりやすい。  
 
 ### AV1デコードの有無 {#av1-dec}
 

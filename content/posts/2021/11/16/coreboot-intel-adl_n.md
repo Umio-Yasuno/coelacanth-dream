@@ -2,7 +2,7 @@
 title: "N バリアントも存在する Alder Lake"
 date: 2021-11-16T00:13:26+09:00
 draft: false
-tags: [ "Alder_Lake", "Coreboot" ]
+tags: [ "Alder_Lake", "Coreboot", "Meteor_Lake", "Raptor_Lake" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "Intel", "CPU" ]
 noindex: false
