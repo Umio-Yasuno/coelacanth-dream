@@ -58,6 +58,15 @@ CPUID Model だけではあるが、今になってサポートを追加する�
 とはいえサポートを追加したから製品としてリリースされるという確証もないが。  
 モバイル向けには先日 *Alder Lake-P/M* の SKU が発表されたばかりであるから、単に非公開の内部ドキュメントとのズレを修正したか、手違いということも考えられる。  
 
+それと、以前 *Meteor Lake-M/P, N, S* 、*Raptor Lake-P, S* の CPUID が記載されているとして挙げた [intel/dptf](https://github.com/intel/dptf) には、*Rocket Lake-U/Y, H/S* も記載されている。  
+だが `CPUID_FAMILY_MODEL_RKL_H` は、リリース済みであり、明らかな *Rocket Lake-S* の CPUID とは異なり、代わりに *Tiger Lake-H* のものと一致する。  
+`CPUID_FAMILY_MODEL_RKL` も *Tiger Lake-U* と一致するため、マクロ名とコメント部についてはミスだと思われる。  
+
+ > 		#define CPUID_FAMILY_MODEL_RKL      0x000806C0		// Rocket Lake U/Y
+ > 		#define CPUID_FAMILY_MODEL_RKL_H    0x000806D0		// Rocket Lake H/S
+ >
+ > {{< quote >}} [dptf/esif_ccb_cpuid.h at e1f10f989223720ccb6b2519f8d96435925407c0 · intel/dptf](https://github.com/intel/dptf/blob/e1f10f989223720ccb6b2519f8d96435925407c0/Common/esif_ccb_cpuid.h#L106-L107) {{< /quote >}}
+
 {{< ref >}}
  * [Intel® 64 and IA-32 Architectures Software Developer Manuals](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)
 {{< /ref >}}

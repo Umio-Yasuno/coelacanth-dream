@@ -74,7 +74,9 @@ L3キャッシュに関する記述も追加されている。
 *DG1* ではバンクあたり 2048KB (2MB)、Way あたり 16KB、セクションあたり 2-Way と構成。  
 
 DGPU としての比較では、*Alchemist/DG2, Ponte Vecchio* の L3キャッシュは *DG1* より、バンクあたりの規模で小さいと言えるが、L3キャッシュ帯域ではバンク数が多い方が有利と考えられる。  
-また、Intel GPU では L3キャッシュバンク内部を、データキャッシュやリードオンリーキャッシュ、Unified Tile Cache (UTC)、Command Buffer (CB) といった用途ごとに分けて割り当てる方式を採っている。  
+ローカルメモリを持つ dGPU になったことで、*{{< xe class="lp" >}}* からメモリバス幅が増えたことも関係するだろう。  
+
+Intel GPU では L3キャッシュバンク内部を、データキャッシュやリードオンリーキャッシュ、Unified Tile Cache (UTC)、Command Buffer (CB) といった用途ごとに分けて割り当てる方式を採っている。  
 *DG1* では L3キャッシュバンクの割り当て設定は 3パターンだったが、*Alchemist/DG2, PVC* では 6パターンであるため、より用途に合わせた割り当てが可能となっている。  
 それと、*DG1* は内蔵 GPU を想定した *{{< xe class="lp" >}}* から構成をほとんど変えずに L3キャッシュを増やした結果、バンクあたり 2048KB、全体では 16MB というサイズになったと考えられる。  
 
@@ -87,6 +89,13 @@ DGPU としての比較では、*Alchemist/DG2, Ponte Vecchio* の L3キャッ�
  > 		};
  >
  > {{< quote >}} [media-driver/cm_rt_g12_dg1.h at c2ab2faf51d766840d8d2f3a8b5c1c716d993b3f · intel/media-driver](https://github.com/intel/media-driver/blob/c2ab2faf51d766840d8d2f3a8b5c1c716d993b3f/cmrtlib/agnostic/share/cm_rt_g12_dg1.h#L35-L41) {{< /quote >}}
+
+| L3$ | {{< xe class="lp" >}}<br>(TGL/RKL/ADL) | DG1 | {{< xe class="hpg/hpc" >}}<br>(Alchemist/DG2, PVC) |
+| :-- | :--: | :--: | :--: |
+| Up to L3$ size | 3840KB | 16384KB (16MB) | ? |
+| L3$ size per bank | 480KB | 2048KB | 512KB |
+| size per way | 4KB | 16KB | 4KB |
+| way count per section | 2-Way | 2-Way | 2-Way |
 
 {{< ref >}}
  * [Intel® Iris® Xe MAX Graphics Open Source Programmer's Reference Manual For the 2020 Discrete GPU formerly named "DG1" Volume 7: Memory Cache - intel-gfx-prm-osrc-dg1-vol07-memory_cache.pdf](https://01.org/sites/default/files/documentation/intel-gfx-prm-osrc-dg1-vol07-memory_cache.pdf)
