@@ -2,7 +2,7 @@
 title: "Intel Alchemist/DG2 は AV1エンコードをサポートか"
 date: 2021-12-19T13:52:20+09:00
 draft: false
-tags: [ "Xe-HP", "Xe-HPG", "DG2", "Xe-HPC" ]
+tags: [ "Xe-HP", "Xe-HPG", "DG2", "Xe-HPC", "Gen12" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "Intel", "GPU" ]
 noindex: false

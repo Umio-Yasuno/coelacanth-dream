@@ -10,15 +10,13 @@ summary: " "
 ---
 
 {{< pindex >}}
-
  * [AMD](#amd)
-   * [Github](#amd_github)
-   * [Freedesktop](#amd_freedesktop)
+    * [Github](#amd_github)
+    * [Freedesktop](#amd_freedesktop)
  * [Intel](#intel)
-   * [Github](#intel_github)
-   * [Freedesktop](#intel_freedesktop)
- * [Coreboot](#coreboot)
-
+    * [Github](#intel_github)
+    * [Freedesktop](#intel_freedesktop)
+ * [Coreboot / Chromium](#coreboot)
 {{< /pindex >}}
 
 ## AMD {#amd}
@@ -56,9 +54,6 @@ summary: " "
     * [ROCm Developer Tools](https://github.com/ROCm-Developer-Tools/)
     * [ROCm Software Platform](https://github.com/ROCmSoftwarePlatform/)
  * [llvm/llvm-project](https://github.com/llvm/llvm-project)
- * gray
-   * [pdli (pdli) / Repositories](https://github.com/pdli?tab=repositories)
-      * Navi1x/2x VBIOS
 
 ### Freedesktop {#amd_freedesktop}
 
@@ -82,7 +77,10 @@ summary: " "
 ## Intel {#intel}
 
  * [Intel® Graphics for Linux* | 01.org](https://01.org/linuxgraphics)
-   * <https://01.org/linuxgraphics/documentation>
+    * [Programmer's Reference Manuals | 01.org](https://01.org/linuxgraphics/documentation)
+ * [GDC 2019 Tech Sessions](https://www.intel.com/content/www/us/en/developer/articles/event-contest/gdc-2019-tech-sessions.html?wapkw=Intel%20GDC%20Gen11)
+    * [Intel® Processor Graphics Gen11 Architecture](https://www.intel.com/content/dam/develop/external/us/en/documents/02-the-architecture-of-intel-processor-graphics-gen11-807276.pdf)
+ * [Intel® Processor Graphics Xᵉ-LP API Developer and Optimization Guide](https://www.intel.com/content/www/us/en/developer/articles/guide/lp-api-developer-optimization-guide.html)
  * [Intel® 64 and IA-32 Architectures Software Developer Manuals](https://software.intel.com/content/www/us/en/develop/articles/intel-sdm.html)
    * [Intel® 64 and IA-32 Architectures Optimization Reference Manual](https://software.intel.com/content/www/us/en/develop/download/intel-64-and-ia-32-architectures-optimization-reference-manual.html)
 
