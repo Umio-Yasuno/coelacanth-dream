@@ -52,7 +52,5 @@ SKUは **i5-L16G7** 、**i3-L13G4** の 2種類となる。
 次世代のハイブリッドプロセッサではより高度なスケジューリングが実装されていることを期待したい。  
 
 {{< ref >}}
-
- * <https://www.hotchips.org/hc31/HC31_2.10_LKF_HC_2019_Final_v7.pdf>
-
+ * <https://old.hotchips.org/hc31/HC31_2.10_LKF_HC_2019_Final_v7.pdf>
 {{< /ref >}}

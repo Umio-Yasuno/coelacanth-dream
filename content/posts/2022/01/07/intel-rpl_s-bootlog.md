@@ -41,8 +41,10 @@ CPUID Model は 0xB7、これは以前に投稿されたパッチの情報と一
  > {{< quote >}} <https://intel-gfx-ci.01.org/tree/drm-tip/IGT_6321/bat-rpls-1/boot0.txt> {{< /quote >}}
 
 また AVX2 までの対応となっており、AVX512 には対応していない。  
+以前 *Rocket Lake-S* の Bootlog (`dmesg`) を取り上げた。AVX512 をサポートしている場合は、その時の Bootlog のように `AVX-512 opmask` といったメッセージが出力される。  
+{{< link >}} [Intel Rocket Lake は AVX-512 をサポート & 推測 | Coelacanth's Dream](/posts/2020/07/23/intel-rocket_lake-support-avx512/) {{< /link >}}
 *Alder Lake* の *Golden Cove* コアには *Sapphire Rapids* と同じ範囲の AVX512 が実装されているが、*Gracemont* コアが有効な時は ISA を対称とする関係で AVX512 は無効化されていた。[^adl-avx512]  
-この点が *Raptor Lake-S* でも続くと見られるが、まだ ES品の段階であり、今後どういった方針を採るかは変更される可能性がある。  
+Bootlog から、この点が *Raptor Lake-S* でも続くと見られるが、まだ ES品の段階であり、今後どういった方針を採るかは変更される可能性がある。  
 
  > 		<6>[    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
  > 		<6>[    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
