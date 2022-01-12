@@ -87,7 +87,7 @@ Linux Kernel へのパッチから得られる情報では、*Keem Bay* は OCS 
 Full と Prime (Standard) と呼ぶ 2種類の構成が存在し、CPUクラスタ 4基、クラスタあたり Arm A53 4-Core というのは共通。VPUスライスの数と搭載メモリが異なり、Full は VPUスライス 4基を持ち、メモリは 2x8GB + 2x4GB という構成。Prime (Standard) は VPUスライス 2基、メモリは 8GB + 4GB とされている。  
 VPUスライスについては、複数の SHAVEプロセッサと Neural Compute Engine をまとめたものと推察される。  
 *Thunder Bay* は *Keem Bay* の複数並べたような構成と見えるが、VPUスライスあたりの規模は不明。  
-しかし *Keem Bay* よりも全体の規模は大きくなっているのは確かであり、15Wより上か、Arm A53 CPU に多くの汎用処理を割り当てたい用途向けの製品を想定しているのではないかと思われる。  
+しかし *Keem Bay* よりも全体の規模は大きくなっているのは確かであり、15Wより上か、Arm A53 16-Core からサーバ向けの製品を想定しているのではないかと思われる。  
 
  > 		This patch-set adds initial support for a new Intel Movidius SoC
  > 		code-named Thunder Bay. The SoC couples an ARM Cortex A53 CPU
@@ -126,8 +126,7 @@ VPUスライスについては、複数の SHAVEプロセッサと Neural Comput
  >
  > {{< quote >}} [[PATCH V2 0/3] Add initial Thunder Bay SoC / Board support](https://lore.kernel.org/linux-devicetree/1626758569-27176-1-git-send-email-kenchappa.demakkanavar@intel.com/T/#e5e8fba959b11f1cc80d9c261a78a0285fa86f342) {{< /quote >}}
 
-
-[Intel® Movidius™ Accelerator on Edge Software Hub](https://www.intel.com/content/www/us/en/developer/articles/technical/movidius-accelerator-on-edge-software-hub.html) には、Gen 3 Intel Movidius VPU として、*Keem Bay* ともう 1つ、*Shamrock Bay* を挙げているが、*Thunder Bay* の名はない。  
+[Intel® Movidius™ Accelerator on Edge Software Hub](https://www.intel.com/content/www/us/en/developer/articles/technical/movidius-accelerator-on-edge-software-hub.html) には、Gen 3 Intel Movidius VPU として、*Keem Bay* ともう 1つ、*Shamrock Bay* を挙げられているが、*Thunder Bay* の名はない。  
 *Shamrock Bay* の名だけが変更されて *Thunder Bay* になったのか、あるいはキャンセルされて *Thunder Bay* のプロジェクトが立ち上げられたのか。  
 *Shamrock Bay* はそのページで触れられているのみであるため、どちらにしても実質 *Thunder Bay* に置き換えられたものと思われる。  
 
@@ -161,16 +160,15 @@ VPUスライスについては、複数の SHAVEプロセッサと Neural Comput
 
 推論処理向けアクセラレータとしては、Atom系では *Gemini Lake*、Core系では *Cannon Lake* から GNA (Gaussian & Neural Accelerator) が搭載されている。  
 
-OpenVINO のドキュメントでは、GNA が 推論処理において CPU, GPU, VPU を置き換えるものではなく、ノイズ除去や音声認識といった推論処理 (continuous inference workloads) をオフロードし、CPU やメモリに負荷を掛けることなく低消費電力で処理することを目的に設計されたものだとしている。  
+OpenVINO のドキュメントでは、GNA が 推論処理において CPU, GPU, VPU を置き換えるものではなく、ノイズ除去や音声認識といった推論処理 (continuous inference workloads) をオフロードし、CPU やメモリに負荷を掛けることなく低消費電力で処理することを目的に設計されたものだとしている。[^openvino-gna]  
 OpenVINO は、Intel がオープンソースで開発する AI推論ツールキット。CPU/GPU/VPU/GNA といった複数のデバイスに対応している。  
-
- * [GNA Plugin — OpenVINO™ documentation](https://docs.openvino.ai/latest/openvino_docs_IE_DG_supported_plugins_GNA.html)
-
 VPU は Vision Processing Unit の名の通り、画像認識等に特化している。  
 GNA、VPU ともに、それぞれ音声処理、画像処理に限定されてはいないが、向いた処理は異なる。  
 *Meteor Lake* ではより推論処理を高速かつ低消費電力に処理するために、GNA と VPU を両方搭載する可能性もある。  
 
 *Meteor Lake* の他に、*OYB*、*STF* といったプラットフォームもリストされているが、何の略称かは明かされておらず、将来登場するであろう VPU としか言えない。  
+
+[^openvino-gna] [GNA Plugin — OpenVINO™ documentation](https://docs.openvino.ai/latest/openvino_docs_IE_DG_supported_plugins_GNA.html)
 
 {{< ref >}}
  * [Intel® Movidius™ Accelerator on Edge Software Hub](https://www.intel.com/content/www/us/en/developer/articles/technical/movidius-accelerator-on-edge-software-hub.html)
