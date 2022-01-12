@@ -35,10 +35,9 @@ Coreboot に、*Alder Lake (Golden Cove + Gracemont)* のようにハイブリ�
  > {{< quote >}} <https://review.coreboot.org/plugins/gitiles/coreboot/+/3352093f2bb1f6912dd57d19a5e564e8d21ecc26%5E%21/#F0> {{< /quote >}}
 
 上記引用部が該当のコード `get_soc_cpu_type` 関数だが、処理内容は非常にシンプルで、まず実行する CPU がハイブリッドコア構成を採っている場合は CPUコアタイプを取得する `cpu_get_cpu_type` 関数を呼んでいる。  
-CPUID では、ハイブリッドコア構成であることを示すビットフラグ (`EAX=0x7, ECX=0 [EDX: Bit15]`) と、CPUコアタイプを示す値 (`EAX=0x1A [0x20: Atom, 0x40: Core]`) が定義されている。  
-*Alder Lake-S/P/M* ではその時点で関数はコアタイプを返すが、ハイブリッド構成を採っていない場合は `CPUID (EAX=1)` から `Family, Model, Stepping` を取得、そして `Faily: 0x6, Model: 0xBE` の場合はコアタイプに `Atom (0x20)` を、それ以外は `Core (0x40)` を返す。  
-
-`Family: 0x6, Model: 0xBE` には *Alder Lake-N* が該当し、その `Family, Model, Stepping` を示す CPUID は以前に追加されていた。  
+CPUID では、ハイブリッドコア構成であることを示すビットフラグ (`EAX=0x7, ECX=0 [EDX: Bit15]`) と、CPUコアタイプを示す値 (`Leaf: 0x1A [0x20: Atom, 0x40: Core]`) が定義されており、それをチェックする。  
+*Alder Lake-S/P/M* ではその時点で関数は CPUコアタイプを返すが、ハイブリッド構成を採っていない場合は `CPUID (Leaf: 0x1)` から `Family, Model, Stepping` を取得。そして `Faily: 0x6, Model: 0xBE` の場合はコアタイプに `Atom (0x20)` を、それ以外は `Core (0x40)` を返す。  
+`Family: 0x6, Model: 0xBE` には *Alder Lake-N* が該当し、その `Family, Model, Stepping` を示す CPUID は以前に別のパッチで追加されていた。  
 
  > 		#define CPUID_ALDERLAKE_S_A0		0x90670
  > 		#define CPUID_ALDERLAKE_A0		0x906a0
@@ -52,8 +51,8 @@ CPUID では、ハイブリッドコア構成であることを示すビット�
 ここでの CPUID では、Bit 0-3 が `Stepping`、Bit 8-11 が `Family ID`、Bit 4-7 が `Model ID`、Bit 20-27 が `Extended Family ID`、Bit 16-19 が `Extended Model ID` を表現しており、`0xb06e0` をデコードすると `Family: 0x6, Model: 0xBE, Stepping: 0` となる。  
 `Extended Model ID` は 1桁左にずらして (`<< 4`) から `Model ID` と組み合わされる。  
 
-以上のことから、*Alder Lake-N* はハイブリッドコア構成を採らず、Atom系コアのみで構成されると考えられる。  
-モバイル向けの `ALDERLAKE_L (Model: 0x9A)` (*Alder Lake-P/M*) とは異なる Display Model ID であることから、*Alder Lake-N* は組み込み向けとして想定されているのではないかと思われる。  
+*Alder Lake-N* では `cpu_is_hybrid_supported()` の判定から外れ、他 CPU と区別されて CPUコアタイプに Atom (0x20) が返されることから、*Alder Lake-N* はハイブリッドコア構成を採らず、Atom系コアのみで構成されると考えられる。  
+モバイル向けの `ALDERLAKE_L (Model: 0x9A)` (*Alder Lake-P/M*) とは異なる CPUID Model であることから、*Alder Lake-N* は組み込み向けとして想定されているのではないかと思われる。  
 Atom系コアで構成される製品は、[Tremont アーキテクチャ](/tags/tremont) を採用する組み込み向けの *Elkhart Lake* 、モバイル向けの *Jasper Lake* で最後となるという話があったが[^ascii-atom]、方針転換したのかもしれない。  
 今回調べ直したところ、特別ハイブリッドコア構成は組み込みに向いていないという訳ではないらしいが[^emb-big-little]、*Alder Lake* においては消費電力やダイサイズから Atomコアのみで構成する方が適していると判断された可能性がある。  
 
