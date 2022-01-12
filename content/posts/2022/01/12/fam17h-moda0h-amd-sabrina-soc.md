@@ -1,5 +1,5 @@
 ---
-title: "Coreboot に Family 17h Model A0h APU のサポートが追加 ―― Sabrina SoC"
+title: "Coreboot に Family 17h Model A0h APU/SoC のサポートが追加 ―― Sabrina SoC"
 date: 2022-01-12T14:02:42+09:00
 draft: false
 tags: [ "Coreboot", "Mendocino" ]
@@ -15,6 +15,12 @@ noindex: false
  * [include/device/pci_ids.h: add PCI IDs for AMD Family 17h Model A0h SoC (I41e0a576) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/60984/2)
  * [soc/amd/common/block: add new PCI IDs to common code (I50960e50) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/60985/2)
 
+{{< pindex >}}
+ * [Sabrina SoC](#sabrina)
+    * [Mendocino](#mendocino)
+{{< /pindex >}}
+
+## Sabrina SoC {#sabrina}
 パッチで [Felix Held](https://github.com/felixheld) 氏は、SMBus (System Management Bus)、LPC (Low Pin Count) の DeviceID は前世代の Zen-based APU と同じとコメントしている。  
 他の情報と照らし合わせたところ、Display HD Audio Controller (HDA) の DeviceID が *VanGogh APU* のものと一致した。  
 {{< link >}} [AMD VanGogh APU ブートログ | Coelacanth's Dream](/posts/2021/03/17/vgh-bootlog/#pci_id) {{< /link >}}
@@ -43,15 +49,14 @@ GPU部の DeviceID が追加されていることから、`Family 17h Model A0h`
 ただ CPU部においても、ハードウェアモニタリングドライバ `hwmon` 等に `Family 17h Model A0h` のサポートが追加されていないため、詳細は不明。  
 Coreboot には *Zen 3 APU* 、*Green Sardine (Cezanne), Barcelo* のサポートがすでに追加されており、CPUアーキテクチャとしては前世代のものが新たに追加されることとなる。  
 
-## Sabrina SoC, Mendocino {#sabrina-mendocino}
-
 今回のパッチ 2つには *amd-sabrina-soc* というトピックが付与されており、`Family 17h Model A0h` を指していると思われる。  
-ただ、GPU部に対するソフトウェアではコードネーム *VanGogh* が使われつつも、SoC としては *Aerith* という別のコードネームを持つ前例がある。同様に、AMDGPUドライバ等では `Family 17h Model A0h` に対し、*Sabrina* とは別のコードネームを用いることが考えられる。  
+ただ、GPU部に対するソフトウェアではコードネーム *VanGogh* が使われつつも、SoC としては *Aerith* という別のコードネームを持つ前例がある。同様に、AMDGPUドライバ等では `Family 17h Model A0h` に対し、*Sabrina* とは別のコードネームを用いる可能性がある。  
 
  * [topic:amd-sabrina-soc · Gerrit Code Review](https://review.coreboot.org/q/topic:amd-sabrina-soc)
 
 [^aerith]: {{< youtube id="SsqvY0buseQ" start="23" title="Steam Deck Hardware (an Overview)" >}}
 
+### Mendocino {#mendocino}
 Coreboot には以前、`amdfwtool` にコードネーム *Mendocino* のサポートが追加されている。  
 {{< link >}} [AMD の新たな APU/SoC 「Mendocino」 | Coelacanth's Dream](/posts/2021/08/12/amd-mendocino-soc/) {{< /link >}}
 *Mendocino* もまた詳細が明らかにされていない APU/SoC であり、*Sabrina SoC* と近い存在ではあるが、それらが一致するかどうかの情報もまだ明らかにされていない。  
