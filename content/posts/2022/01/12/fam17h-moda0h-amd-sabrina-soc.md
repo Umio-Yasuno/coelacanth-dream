@@ -39,24 +39,28 @@ GPU部の DeviceID が追加されていることから、`Family 17h Model A0h`
  >
  > {{< quote >}} <https://review.coreboot.org/c/coreboot/+/60984/2/src/include/device/pci_ids.h#377> {{< /quote >}}
 
-`Family 17h` ということから CPUアーキテクチャは *Zen /2* 系と思われる。  
-ただ CPU面においても、ハードウェアモニタリングドライバ `hwmon` 等に `Family 17h Model A0h` のサポートが追加されていないため、詳細はまだ不明。  
+`Family 17h` ということから CPUアーキテクチャは *Zen /2* 系とされる。  
+ただ CPU部においても、ハードウェアモニタリングドライバ `hwmon` 等に `Family 17h Model A0h` のサポートが追加されていないため、詳細は不明。  
 Coreboot には *Zen 3 APU* 、*Green Sardine (Cezanne), Barcelo* のサポートがすでに追加されており、CPUアーキテクチャとしては前世代のものが新たに追加されることとなる。  
 
-Coreboot には以前、`amdfwtool` にコードネーム *Mendocino* のサポートが追加されている。  
-{{< link >}} [AMD の新たな APU/SoC 「Mendocino」 | Coelacanth's Dream](/posts/2021/08/12/amd-mendocino-soc/) {{< /link >}}
-*Mendocino* もまた詳細が明らかにされていない APU/SoC であり、`Family 17h Model A0h` と近い存在ではあるが、それらが一致するかどうかの情報もまだ明らかにされていない。  
-だが今回のパッチは、新たな APU/SoC を OSS に対して公開し、サポートを追加する段階となったことを示しており、近いうちにさらなる情報が公開されるのではないかと思われる。  
-*Mendocino APU* では、PSP部が更新され、PSP に ISH と呼ぶヘッダ情報が追加されることは判明している。[^psp-ish]  
+## Sabrina SoC, Mendocino {#sabrina-mendocino}
 
-[^psp-ish]: [amdfwtool: Add ISH header support for A/B recovery layout (I4710df40) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/59384)
-
-また、今回のパッチ 2つには *amd-sabrina-soc* というトピックが付与されており、`Family 17h Model A0h` を指していると思われる。  
+今回のパッチ 2つには *amd-sabrina-soc* というトピックが付与されており、`Family 17h Model A0h` を指していると思われる。  
 ただ、GPU部に対するソフトウェアではコードネーム *VanGogh* が使われつつも、SoC としては *Aerith* という別のコードネームを持つ前例がある。同様に、AMDGPUドライバ等では `Family 17h Model A0h` に対し、*Sabrina* とは別のコードネームを用いることが考えられる。  
 
  * [topic:amd-sabrina-soc · Gerrit Code Review](https://review.coreboot.org/q/topic:amd-sabrina-soc)
 
 [^aerith]: {{< youtube id="SsqvY0buseQ" start="23" title="Steam Deck Hardware (an Overview)" >}}
+
+Coreboot には以前、`amdfwtool` にコードネーム *Mendocino* のサポートが追加されている。  
+{{< link >}} [AMD の新たな APU/SoC 「Mendocino」 | Coelacanth's Dream](/posts/2021/08/12/amd-mendocino-soc/) {{< /link >}}
+*Mendocino* もまた詳細が明らかにされていない APU/SoC であり、*Sabrina SoC* と近い存在ではあるが、それらが一致するかどうかの情報もまだ明らかにされていない。  
+だが今回のパッチは、新たな APU/SoC を OSS に対して公開し、サポートを追加する段階となったことを示しており、近いうちにさらなる情報が公開されるのではないかと思われる。  
+
+*Mendocino APU* では、PSP部が更新され、PSP に ISH と呼ぶヘッダ情報が追加されることは判明している。[^psp-ish]  
+
+[^psp-ish]: [amdfwtool: Add ISH header support for A/B recovery layout (I4710df40) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/59384)
+
 
 | AMD APU | CPU Arch | (Family, Model) | GPU Arch |
 | :-- | :--: | :--: | :--: |
