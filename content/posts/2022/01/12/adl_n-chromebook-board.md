@@ -38,6 +38,45 @@ USB Type-C についても、*Alder Lake-P* では最大 4-Ports をサポート
  >
  > {{< quote >}} [adlrvp: Configure typec ports at runtime (I7daf1f72) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/platform/ec/+/3220900) {{< /quote >}}
 
+GPU部は、当初 *Alder Lake-N* の DeviceID として追加された `0x46A0/0x46A3` が *Alder Lake GT2* にも当たるため、最大 96EU 構成である可能性があったが、後にパッチが更新され、`0x46D0/0x46D1/0x46D2` に変更された。  
+この DeviceID は Linux Kernel における Intel GPUドライバ、各種ソフトウェアにも *Alder Lake-N* として追加されているため、こちらが正しい DeviceID と思われる。[^adl_n]  
+そして EU数は不明だが、[Intel Media Driver](https://github.com/intel/media-driver) では *Alder Lake-N GT1* とされているため、*Rocket Lake-S /Tiger Lake-H /Alder Lake-S* のように最大 32EU である可能性が高くなった。  
+
+ > 		+#ifdef IGFX_GEN12_ADLN_SUPPORTED
+ > 		+static struct GfxDeviceInfo adlnGt1Info = {
+ > 		+    .platformType     = PLATFORM_MOBILE,
+ > 		+    .productFamily    = IGFX_ALDERLAKE_N,
+ > 		+    .displayFamily    = IGFX_GEN12_CORE,
+ > 		+    .renderFamily     = IGFX_GEN12_CORE,
+ > 		+    .eGTType          = GTTYPE_GT1,
+ > 		+    .L3CacheSizeInKb  = 0,
+ > 		+    .L3BankCount      = 8,
+ > 		+    .EUCount          = 0,
+ > 		+    .SliceCount       = 0,
+ > 		+    .SubSliceCount    = 0,
+ > 		+    .MaxEuPerSubSlice = 0,
+ > 		+    .isLCIA           = 0,
+ > 		+    .hasLLC           = 0,
+ > 		+    .hasERAM          = 0,
+ > 		+    .InitMediaSysInfo = InitTglMediaSysInfo,
+ > 		+    .InitShadowSku    = InitTglShadowSku,
+ > 		+    .InitShadowWa     = InitTglShadowWa,
+ > 		+};
+ > 		+
+ > 		+static bool adlnGt1Device46D0 = DeviceInfoFactory<GfxDeviceInfo>::
+ > 		+    RegisterDevice(0x46D0, &adlnGt1Info);
+ > 		+
+ > 		+static bool adlnGt1Device46D1 = DeviceInfoFactory<GfxDeviceInfo>::
+ > 		+    RegisterDevice(0x46D1, &adlnGt1Info);
+ > 		+
+ > 		+static bool adlnGt1Device46D2 = DeviceInfoFactory<GfxDeviceInfo>::
+ > 		+    RegisterDevice(0x46D2, &adlnGt1Info);
+ > 		+#endif
+ >
+ > {{< quote >}} [[Upstream] upstream ADLN · intel/media-driver@348e98e](https://github.com/intel/media-driver/commit/348e98e90d240deecd3040f3846a27e9bb6c3ac1#diff-8dffc32a698ea3c63a66dc6c33d530bb9fafced3b89d7198e1ec929c179344a2) {{< /quote >}}
+
+[^adl_n]: [[Intel-gfx] [PATCH V3] drm/i915/adl-n: Enable ADL-N platform](https://lists.freedesktop.org/archives/intel-gfx/2021-December/285043.html)
+
 Intel はハイブリッドアーキテクチャを採用する *Alder Lake-S/P/M* は正式に発表しているが、Atomコアのみの構成と目される *Alder Lake-N* は未発表となっている。  
 元より Atom系プロセッサは *Tremont アーキテクチャ* の世代、*Elkhart/Jasper Lake* で最後になるという話があったことから、どこか発表しにくいものがあるのかもしれない。[^ascii-atom]  
 
