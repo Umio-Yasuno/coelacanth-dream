@@ -71,6 +71,15 @@ Mesa3D 内の [iris_pci_ids.h](https://gitlab.freedesktop.org/mesa/mesa/blob/mai
 
 [^jsl-ids]: [Compute Global Device ID - 005 - ID:633935 | Intel® Pentium® Silver and Intel® Celeron® Processors Datasheet, Volume 1](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/servers/platforms/intel-pentium-silver-and-intel-celeron-processors-datasheet-volume-1-of-2/005/compute-global-device-id/)
 
+{{< ins >}}
+パッチが更新され、`0x46A0/0x46A3` ではなく `0x46D0/0x46D1/0x46D2` が *Alder Lake-N* GPU部の DeviceID として追加された。  
+
+ * [soc/intel/common: Include Alder Lake-N device IDs (I0974fc6e) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/59306/4/)
+
+他OSSでの情報から、*Alder Lake-N GT1* 最大 32EU構成である可能性が高くなった。  
+{{< link >}} [Alder Lake-N を搭載する Chromebookボード Nissa, Nivviks, Nereid | Coelacanth's Dream](/posts/2022/01/12/adl_n-chromebook-board/) {{< /link >}}
+{{< /ins >}}
+
 {{< ref >}}
  * [linux/intel-family.h at master · torvalds/linux](https://github.com/torvalds/linux/blob/master/arch/x86/include/asm/intel-family.h)
  * [include/pci_ids/i965_pci_ids.h · main · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/main/include/pci_ids/i965_pci_ids.h)

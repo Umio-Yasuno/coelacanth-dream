@@ -52,11 +52,10 @@ PCIe Lane数も *Jasper Lake* が 8-Lanes、*Alder Lake-N* が 9-Lanes とほと
 
 [^adl_m-power]: [coreboot/chipset.cb at 0c54461cf99010d9ebeae869f0a486b0268ec860 · coreboot/coreboot](https://github.com/coreboot/coreboot/blob/0c54461cf99010d9ebeae869f0a486b0268ec860/src/soc/intel/alderlake/chipset.cb#L29-L43)
 
-GPU部は、*Elkhart/Jasper Lake* では Gen11 32EU が最大だったのに対し、*Alder Lake-N* は DeviceID から最大 Gen12 96EU の構成になるとされるため、GPU部の規模は大きく異なる。  
-また CPU部においても、*Elkhart/Jasper Lake* は最大 4-Core、L2キャッシュを共有するクラスタは 1基となる構成だったが、*Alder Lake-S/P/M* では *Gracemont (Atom/small)* コアを最大 8-Core、クラスタ 2基の構成であるため、*Alder Lake-N* もそれを踏襲することも考えられる。  
-そうなれば *Alder Lake-N* は *Elkhart/Jasper Lake* と比較したとき、GPU部は 3倍、CPU部は倍近い規模になる。  
+*Elkhart/Jasper Lake* では GPU部は Gen11 32EU が最大規模の構成だった。*Alder Lake-N* は Gen12 GT1、最大 EU 32基である可能性が出てきており、EU数で見れば同規模だが、アーキテクチャ更新による性能向上は期待できる。  
+CPU部においても、*Elkhart/Jasper Lake* は最大 4-Core、L2キャッシュを共有するクラスタは 1基となる構成だったが、*Alder Lake-S/P/M* では *Gracemont (Atom/small)* コアを最大 8-Core、クラスタ 2基の構成であるため、*Alder Lake-N* もそれを踏襲することも考えられる。  
 だが CPUクラスタあたり 4-Core で L2キャッシュを共有する構成は *Gracemont* でも引き継いでいるため、*Alder Lake-N* ではクラスタ 1基の採ることも可能。  
-*Jasper Lake* の後継とするならば、クラスタ 1基 (4-Core) の可能性のが高いかもしれない。  
+*Jasper Lake* の後継とするならば、クラスタ 1基 (4-Core) 構成の可能性が高いだろう。  
 
 *Alder Lake-N* がモバイル向けにもリリースされるかは、*Alder Lake-P/M* とは異なる Model ID が割り当てられていることから、その可能性が低いように思える。  
 だが、元々 Atom系コアのみで構成されたプロセッサは *Elkhart/Jasper Lake* で最後になるという話があったが、それに反して *Alder Lake-N* の存在が浮かび上がってきたことから何らかの方針転換があったと思われ、今後どう展開されるかは判然としない。[^only-atom]
