@@ -16,6 +16,14 @@ noindex: false
  >
  > {{< quote >}} <https://review.coreboot.org/c/coreboot/+/61087/2/src/soc/amd/sabrina/include/soc/cpu.h#6> {{< /quote >}}
 
+{{< pindex >}}
+ * [AMD Chausie](#chausie)
+    * [4基の UARTコントローラ](#uart)
+    * [CPPC2 をサポートせず](#cppc2)
+    * [PCIe](#pcie)
+    * [SATA](#sata)
+{{< /pindex >}}
+
 ## AMD Chausie {#chausie}
 
 *Sabrina SoC* のメインボード名は *AMD Chausie*。コードとしては、*AMD Chausie* ボード部に *FP6パッケージ* を採用する *AMD Majolica* をベースとし、FSP (Firmware Support Package) も *Cezanne SoC* をベースにしている。[^copy-from]  
