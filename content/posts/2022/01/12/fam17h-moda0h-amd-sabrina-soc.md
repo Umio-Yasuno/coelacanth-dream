@@ -2,7 +2,7 @@
 title: "Coreboot に Family 17h Model A0h APU/SoC のサポートが追加 ―― Sabrina SoC"
 date: 2022-01-12T14:02:42+09:00
 draft: false
-tags: [ "Coreboot", "Mendocino" ]
+tags: [ "Coreboot", "Sabrina", "Mendocino" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU" ]
 noindex: false
