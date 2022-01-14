@@ -26,8 +26,9 @@ noindex: false
 
 ## AMD Chausie {#chausie}
 
-*Sabrina SoC* のメインボード名は *AMD Chausie*。コードとしては、*AMD Chausie* ボード部に *FP6パッケージ* を採用する *AMD Majolica* をベースとし、FSP (Firmware Support Package) も *Cezanne SoC* をベースにしている。[^copy-from]  
-そのためベース部の情報が多く、*Sabrina SoC* 、*AMD Chausie* 固有の情報はまだ読みにくいところがある。  
+*Sabrina SoC* のメインボード名は *AMD Chausie*。コードとしては、*AMD Chausie* ボード部に *FP6パッケージ* を採用する *AMD Majolica* を、FSP (Firmware Support Package) も *Cezanne SoC* をベースにし、コードファイルのほとんどをコピーし、名前だけを置き換えた形となっている。[^copy-from]  
+コードファイルを *Cezanne* 関連からコピーした理由に、[Felix Held](https://github.com/felixheld) 氏はひとまずビルドを成功させることを挙げている。  
+そのためベース部の情報が多く、*Sabrina SoC* 、*AMD Chausie* 固有の情報はまだ読みにくいところがある。パッケージも、*Cezanne* 同様に FP6 が使われるかどうかはまだ判然としない。  
 
 [^copy-from]: [vc/amd/fsp/sabrina: add as a copy of vc/amd/fsp/cezanne (Ib3bf5059) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/61076) <br> [mb/amd/chausie: add mainboard as copy of mb/amd/majolica (Ic7b18f7a) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/61079/3)
 
@@ -91,6 +92,14 @@ Dicrete GPU用の PCIe GPP (General Purpose Port) は 1ポート、*Zen 2/3 APU*
 *Raven2 (Dali /Pollock)* は CPU *Zen* 2-Core、GPU *Vega (gfx909)* 3CU という、小規模で、低コスト省電力が必要なプラットフォームに向けた APU/SoC。  
 *Zen 2 アーキテクチャ* を採用する *Renoir APU* からは、CPU 8-Core の APU がメインとなり、更新されるのも上位帯に向けたものだった。*VanGogh APU* は *Zen 2* 4-Core、*RDNA 2* 8CU であり、小規模な APU と言えるかもしれないが、カスタム APU であるため、一般向け製品に採用される見込みは薄い。  
 そうした中で、*Sabrina SoC* は *Raven2* 以降の小規模 APU となるかもしれない。  
+
+| | Raven /Picasso<br>/Raven2 (Dali) | Renoir /Cezanne<br>/Barcelo | Raven2<br>(Pollock) | Sabrina |
+| :-- | :--: | :--: | :--: | :--: |
+| Package | FP5 | FP6 | FT5 | ? |
+| Base Borard | Mandolin | Cereme | Majolica | Chausie |
+| UART controller | 4 | 2 | 4? | 4 |
+| SATA Poat | 2 | 0 | 2 | 0 |
+| PCIe GPP | 7 | 7 | 5 | 6 |
 
 {{< ref >}}
  * [よく分かる！ シリアル通信基礎講座 | 組込み技術ラボ](https://emb.macnica.co.jp/articles/8191/)

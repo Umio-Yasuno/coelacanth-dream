@@ -75,7 +75,7 @@ Coreboot には以前、`amdfwtool` にコードネーム *Mendocino* のサポ�
 | Renoir | Zen 2 | (0x17, 0x60) | Vega (gfx90c) |
 | Lucienne | Zen 2 | (0x17, 0x68) | Vega (gfx90c) |
 | VanGogh | Zen 2 | (0x17, 0x90) | RDNA 2 (gfx1033) |
-| ? | ? | (0x17, 0xA0) | ? |
+| Sabrina SoC | ? | (0x17, 0xA0) | ? |
 | Mendocino | ? | ? | ? |
 | Green Sardine (Cezanne)<br>/Barcelo | Zen 3 | (0x19, 0x50) | Vega (gfx90c) |
 | Yellow Carp (Rembrandt) | Zen 3+ | (0x19, 0x44)[^yc-rmb] | RDNA 2 (gfx1035) |
