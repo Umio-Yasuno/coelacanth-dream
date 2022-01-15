@@ -12,23 +12,28 @@ noindex: false
 Oak Ridge Leadership Computing Facility (OLCF) の HPCシステムの 1つ、**Crusher** の Quick-Start Guide が公開された。  
 
  * [Crusher Quick-Start Guide — OLCF User Documentation](https://docs.olcf.ornl.gov/systems/crusher_quick_start_guide.html)
+ * [olcf-user-docs/crusher_quick_start_guide.rst at 0dddf16f0229da8afe314860fd4fb979995582a3 · olcf/olcf-user-docs](https://github.com/olcf/olcf-user-docs/blob/0dddf16f0229da8afe314860fd4fb979995582a3/systems/crusher_quick_start_guide.rst)
 
 ## Crusher {#crusher}
 
-**Crusher** のノードは、**1x AMD EPYC 7A53 (Zen 3) + 4x AMD MI250X (CDNA 2, Aldebaran)** 、メモリは CPU側に DDR4 512GB (3200 MT/s) が搭載されている。**AMD MI250X** GPU はそれぞれ GCD (Graphics Compute Die) 2基で構成され、GCD ごとに HBM2E 64GB が搭載されている。  
-**AMD EPYC 7A53** は CPU-GPU とメモリコヒーレントを取る XGMI (Infinity Fabric) 接続をサポートしており、*Optimized 3rd Gen EPYC*、あるいはコードネーム *Trento* とも呼ばれる。  
+**Crusher** のノードは、**1x AMD EPYC 7A53 (Zen 3) + 4x AMD MI250X (CDNA 2, Aldebaran)** 、メモリは CPU側に DDR4 512GB (3200 MT/s, total 205 GB/s) が搭載されている。**AMD MI250X** GPU はそれぞれ GCD (Graphics Compute Die) 2基で構成され、GCD ごとに HBM2E 64GB (1.6 TB/s) が搭載されている。  
+**AMD EPYC 7A53** は CPU-GPU とメモリコヒーレントを取る XGMI (Global Memory Interconnect, Infinity Fabric) 接続をサポートしており、*Optimized 3rd Gen EPYC*、あるいはコードネーム *Trento* とも呼ばれる。  
 *Optimized 3rd Gen EPYC* としてこれまでにもドキュメント中に出てきたが、具体的な SKU名が明かされたのはこれが初めてな気がする。  
 **AMD EPYC 7A53** は 64-Core/128-Thread を持ち、この点は *EPYC Milan (Zen 3)* と同じ。CPUキャッシュ構成は明かされていないが、こちらも *EPYC Milan* と同様、というより同じ CCD を用いているのではないかと思われる。  
 
 エクサスケールスパコン **Frontier** のノードも同様のハードウェアで構成され、**Crusher** は **Frontier** のテストベッド (実証基盤) として使用される。ソフトウェア環境も基本 **Frontier** と同じだとしている。  
 **Crusher** システムは 128ノードと 64ノードのキャビネット 2基で構成され、全体では 196ノードとなる。  
-同じく **Frontier** に向けたテストベッドには **Spock** システムも存在する。ただし、**Spock** はノードが **AMD EPYC 7662 (Zen 2) + 4x AMD MI100 (CDNA, Arcturus)** で構成されている。**Frontier** と近いハードウェア構成ではあるが、同じではない。[^spock]  
+同じく **Frontier** に向けたテストベッドには **Spock** システムも存在する。ただし、**Spock** はノードが **AMD EPYC 7662 (Zen 2) + 4x AMD MI100 (CDNA, Arcturus)** で構成されている。**Frontier** と近いハードウェア構成ではあるが、CPU、GPU ともに一世代前であり、同じではない。[^spock]  
 
 [^spock]: [Spock Quick-Start Guide — OLCF User Documentation](https://docs.olcf.ornl.gov/systems/spock_quick_start_guide.html#system-overview)
 
 **AMD EPYC 7A53** は内部的に 4個の NUMAトポロジに分割され、NUMAトポロジあたり CCD 2基、L3キャッシュリージョンを 2個持つ構成を採っている。  
 **AMD MI250X** はパッケージあたり GCD 2基で構成され、それらは 200+200 GB/s という広帯域で接続されている。ただ、あくまでも広帯域で接続された GPU 2基 として扱われる。  
 そのためプログラムからはノードあたり GPU 8基 が見える形となっている。  
+異なる **AMD MI250X** パッケージ間も XGMI で接続されているが、リンク数が少ないため GCD間より帯域は狭く、50+50 GB/s となっている。  
+CPU-GPU間は 36+36 GB/s、帯域は GCDあたりとなり、また PCIe Gen4 x16 (32+32 GB/s) より帯域が広いが、このあたりが *Optimized 3rd Gen EPYC* とされる部分なのだろうか。  
+**MI250X** はそれぞれ CPU 以外に、NIC とも PCIe Gen4 ESM (Extend Speed Mode) で接続されている。これは GCD に PCIe Root Complex が実装されたことで可能となった。  
+このことを AMD CDNA 2 whitepaper では、CPU と GPU のメモリ空間を統合したエクサスケールコンピューティングにおいて、非常に重要なものだとしている。  
 
 **Crusher** ノードでは、L3キャッシュリージョン 1個に GPU (GCD) 1基を関連付ける形式を採っている。  
 これは **Crusher** の特性だとしており、プロセス間のメッセージ機能、Open MPI (Message Passing Interface) ライブラリを使う上で性能に影響する。  
