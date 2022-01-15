@@ -13,7 +13,7 @@ Intel GFX CI に次世代 Intel デスクトップ向けプロセッサ *Raptor 
 
  * [igt@core_hotunplug@unbind-rebind on bat-rpls-1@IGT_6321 Test details](https://intel-gfx-ci.01.org/tree/drm-tip/IGT_6321/bat-rpls-1/igt@core_hotunplug@unbind-rebind.html)
 
-プラットフォーム名は **Intel Corporation Raptor Lake Client Platform/RPL-S ADP-S DDR5 UDIMM CRB**、Base Clock 1.8 GHz で動作している。  
+プラットフォーム名は *Intel Corporation Raptor Lake Client Platform/RPL-S ADP-S DDR5 UDIMM CRB*、Base Clock 1.8 GHz で動作している。  
 
  > 		<6>[    0.000000] DMI: Intel Corporation Raptor Lake Client Platform/RPL-S ADP-S DDR5 UDIMM CRB, BIOS RPLSFWI1.R00.2397.A01.2109300731 09/30/2021
  > 		<6>[    0.000000] tsc: Detected 1800.000 MHz processor
@@ -21,7 +21,7 @@ Intel GFX CI に次世代 Intel デスクトップ向けプロセッサ *Raptor 
  >
  > {{< quote >}} <https://intel-gfx-ci.01.org/tree/drm-tip/IGT_6321/bat-rpls-1/boot0.txt> {{< /quote >}}
 
-CPU Name は **Genuine Intel(R) 0000** になっており、ES品とされる。  
+CPU Name は *Genuine Intel(R) 0000* になっており、ES品とされる。  
 CPUID Model は 0xB7、これは以前に投稿されたパッチの情報と一致し、確かに *Raptor Lake-S* だと言える。  
 {{< link >}} [Alder Lake-S と同じ GPU IP となる Raptor Lake-S | Coelacanth's Dream](/posts/2021/11/15/intel-rpl/) {{< /link >}}
 

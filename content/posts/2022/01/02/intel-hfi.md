@@ -38,8 +38,8 @@ HFI では、相対的なレベルを示す値 (8-bit) が性能と電力効率�
 EHFI ではソフトウェアスレッドに固有のインデックス (ClassID) が割り当てられ、スケジューラはこれに基づいて、ソフトウェアスレッドをどの CPUコアに割り当てるかを決定できる。  
 論理プロセッサには EHFI 関連の履歴が蓄積されるようになっており、これは ClassID の割り当て等に用いているのではないかと思われる。履歴をリセットする命令として `HRESET` 命令も *Alder Lake* ではサポートされている。  
 
-マーケティング的には **Intel Thread Director** と呼ばれ、Windows 11 でサポートされているそれは Intel EHFI を活用したものとなっている。  
-今の所 Linux Kernel には HFI を活用するパッチが投稿、公開されている段階であり、*Lakefield* も含めた Intel ハイブリッドアーキテクチャへの最適化は進んでいると言えるが、**Intel Thread Director** に相当する機能はまだ実装されていない。  
+マーケティング的には *Intel Thread Director* と呼ばれ、Windows 11 でサポートされているそれは Intel EHFI を活用したものとなっている。  
+今の所 Linux Kernel には HFI を活用するパッチが投稿、公開されている段階であり、*Lakefield* も含めた Intel ハイブリッドアーキテクチャへの最適化は進んでいると言えるが、*Intel Thread Director* に相当する機能はまだ実装されていない。  
 Linux におけるハードウェアの検証や OSS関連のニュースを発信している [Phoronix](https://www.phoronix.com/scan.php?page=home) は、Windows 11 と各種 Linuxディストリで多種多様のベンチマークを実行し、その結果を掲載している。[^phoronix-adl]  
 一部のアプリケーションにおいて Windows 11 の方が優れた性能を示しており、Linuxディストリでは *Golden Cove (Performance/Big), Gracemont (Efficient/Small)* へのコア割り当てが適切に行えていないことが窺える。  
 

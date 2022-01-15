@@ -36,17 +36,17 @@ XNACK を有効としてコンパイルされたコードを、XNACK が無効�
 
 再度サポートが有効化されたり、プルリクエストが取り込まれなかったりでほとんどは *Polaris (gfx803)* のサポートを継続しているが、今後サポートする AMD GPU が増えた場合には今度こそ取り除かれると思われる。  
 
-*Vega10 (gfx900)* についてもサポートから外される予兆を見せており、*Vega10* ベースのサーバー向け SKU **Instint MI25** は EOL (End of Life) に達し、ROCm v4.5 がサポートする最後の公式リリースになるとしている。[^mi25-eol]  
-**Vega64** に対しては触れられていないが、ROCm のメインターゲットであるサーバー向け SKU が EOL に入った以上、同様にサポートから外されることが考えられる。  
+*Vega10 (gfx900)* についてもサポートから外される予兆を見せており、*Vega10* ベースのサーバー向け SKU *Instint MI25* は EOL (End of Life) に達し、ROCm v4.5 がサポートする最後の公式リリースになるとしている。[^mi25-eol]  
+*Vega64* に対しては触れられていないが、ROCm のメインターゲットであるサーバー向け SKU が EOL に入った以上、同様にサポートから外されることが考えられる。  
 
 [^mi25-eol]: [RadeonOpenCompute/ROCm at f088317e4483b8f75ec55ac3bb040f23e5abd2d4](https://github.com/RadeonOpenCompute/ROCm/tree/f088317e4483b8f75ec55ac3bb040f23e5abd2d4#Deprecations)
 
-今リリースでサポートに追加された AMD GPU は無いが、[ROCm Installation Guide](https://rocmdocs.amd.com/en/latest/Installation_Guide/Installation_new.html) では対応リストに *Sienna Cichlid/Navi21 (gfx1030)* ベースの **Radeon Pro W6800** がさり気なく追加されており、ROCmソフトウェア/ライブラリも *gfx1030* に対応している。  
+今リリースでサポートに追加された AMD GPU は無いが、[ROCm Installation Guide](https://rocmdocs.amd.com/en/latest/Installation_Guide/Installation_new.html) では対応リストに *Sienna Cichlid/Navi21 (gfx1030)* ベースの *Radeon Pro W6800* がさり気なく追加されており、ROCmソフトウェア/ライブラリも *gfx1030* に対応している。  
 
  * [ROCm Installation Guide v4.5 — ROCm Documentation 1.0.0 documentation](https://rocmdocs.amd.com/en/latest/Installation_Guide/Installation_new.html#confirm-you-have-a-rocm-capable-gpu)
 
-余談に近いが、**Radeon Pro W6800** には `DeviceID: 0x73A3` が割り当てられている。だが [Tensile](https://github.com/ROCmSoftwarePlatform/Tensile) 等ではまた別の *Navi21/Sienna Cichlid* の `DeviceID: 0x73A2`、まだリリースされていない SKU を対象としている。[^73a2h]  
-これが間違いでなければ、**Radeon Pro W6800** 以外に *Navi21/Sienna Cichlid* ベースのワークステーション向け、あるいはサーバー向けの SKU を計画しているのかもしれない。  
+余談に近いが、*Radeon Pro W6800* には `DeviceID: 0x73A3` が割り当てられている。だが [Tensile](https://github.com/ROCmSoftwarePlatform/Tensile) 等ではまた別の *Navi21/Sienna Cichlid* の `DeviceID: 0x73A2`、まだリリースされていない SKU を対象としている。[^73a2h]  
+これが間違いでなければ、*Radeon Pro W6800* 以外に *Navi21/Sienna Cichlid* ベースのワークステーション向け、あるいはサーバー向けの SKU を計画しているのかもしれない。  
 
 [^73a2h]: [AMD Radeon™ Pro V520 Graphics | AMD](https://www.amd.com/en/products/server-accelerators/amd-radeon-pro-v520#product-specs)
 
@@ -54,7 +54,7 @@ XNACK を有効としてコンパイルされたコードを、XNACK が無効�
 
  * <https://github.com/RadeonOpenCompute/ROCm/issues/1180#issuecomment-942101147>
 
-**ROCm Installation Guide** に **Radeon Pro W6800** が載ってるのはミスで、正式なサポートは ROCm v5.0 で追加するつもりなのだろうか。  
+*ROCm Installation Guide* に *Radeon Pro W6800* が載ってるのはミスで、正式なサポートは ROCm v5.0 で追加するつもりなのだろうか。  
 ただ他 *RDNA 2/GFX10.3* 世代の GPU がサポートされるか、*RDNA 1/GFX10.1* 世代もサポートされるかは不透明なまま。  
 
 {{< ref >}}

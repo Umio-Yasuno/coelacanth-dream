@@ -9,7 +9,7 @@ noindex: false
 # summary: ""
 ---
 
-以前、**RADV** では *RDNA 2/GFX10.3* 世代で *NGGカリング/プリミティブカリング* をデフォルトで有効化するつもりがあることに触れたが、[Phoronix](https://www.phoronix.com/) の Michael Larabel 氏による検証で安定したパフォーマンス向上が確認できたとし、[Timur Kristóf](https://gitlab.freedesktop.org/Venemo) 氏によってそれを適用するパッチ/マージリクエストが投稿されている。  
+以前、*RADV* では *RDNA 2/GFX10.3* 世代で *NGGカリング/プリミティブカリング* をデフォルトで有効化するつもりがあることに触れたが、[Phoronix](https://www.phoronix.com/) の Michael Larabel 氏による検証で安定したパフォーマンス向上が確認できたとし、[Timur Kristóf](https://gitlab.freedesktop.org/Venemo) 氏によってそれを適用するパッチ/マージリクエストが投稿されている。  
 {{< link >}} [RadeonSI ドライバーから非同期コンピュートによるプリミティブカリング機能が削除 | Coelacanth's Dream](/posts/2021/09/21/radeonsi-remove-prim-discard/) {{< /link >}}
 
  * [radv: Enable NGG culling by default on GFX10.3 (!13086) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/13086)
@@ -34,7 +34,7 @@ noindex: false
 
 [^dcc]: [ac/surface: Expose modifiers capable of DCC image stores first (!13056) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/13056/diffs?commit_id=39f5be7d6ed133659160a791c9c752b99f8bcc28)
 
-シェーダーベースのカリング処理は、効率が Pixel Shader (PS) のスループットに依存するとされており、**RADV** では GPU の規模、構成から PS への最大入力パラメーター数を決定している。[^ps-param]  
+シェーダーベースのカリング処理は、効率が Pixel Shader (PS) のスループットに依存するとされており、*RADV* では GPU の規模、構成から PS への最大入力パラメーター数を決定している。[^ps-param]  
 RB 1基の場合、*NGGカリング* を有効化できないようにされているのも、効率が低く、かえって性能に悪影響が与える可能性があるからなのかもしれない。  
 
 [^ps-param]:  [src/amd/vulkan/radv_shader.c · 576d56780cad1e26dd401ef09318a85dd64841f3 · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/576d56780cad1e26dd401ef09318a85dd64841f3/src/amd/vulkan/radv_shader.c#L899)
@@ -86,7 +86,7 @@ RB 1基の場合、*NGGカリング* を有効化できないようにされて�
  >
  > {{< quote >}} [src/amd/common/ac_gpu_info.c · 29f264f25804eeea962f21c29c39050c3fc1663d · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/29f264f25804eeea962f21c29c39050c3fc1663d/src/amd/common/ac_gpu_info.c#L1013-1042) {{< /quote >}}
 
-**RadeonSI (OpenGL)** ドライバーにも *NGGカリング* は実装されており、デフォルト有効化の条件は **RADV** と概ね同じだが、ワークステーション用途を想定してか、マーケティングネームに **Pro** が入っているかが条件に追加されている (`is_pro_graphics`)。  
+*RadeonSI (OpenGL)* ドライバーにも *NGGカリング* は実装されており、デフォルト有効化の条件は *RADV* と概ね同じだが、ワークステーション用途を想定してか、マーケティングネームに *Pro* が入っているかが条件に追加されている (`is_pro_graphics`)。  
 
  > 		   sscreen->use_ngg = !(sscreen->debug_flags & DBG(NO_NGG)) &&
  > 		                      sscreen->info.chip_class >= GFX10 &&
@@ -99,5 +99,5 @@ RB 1基の場合、*NGGカリング* を有効化できないようにされて�
  >
  > {{< quote >}} <https://gitlab.freedesktop.org/mesa/mesa/-/blob/f00d3e29094942cf8a35c76646b2cfd82f4b3f8a/src/gallium/drivers/radeonsi/si_pipe.c#L1242-1250> {{< /quote >}}
 
-**RadeonSI** では、*Navi14* を除く *RDNA/GFX10* とそれ以降の世代かつ、**Pro** カードで *NGG* がデフォルトで有効化され、*NGGカリング* はそれに加え RB が 2基以上の場合にデフォルトで有効化される。  
+*RadeonSI* では、*Navi14* を除く *RDNA/GFX10* とそれ以降の世代かつ、*Pro* カードで *NGG* がデフォルトで有効化され、*NGGカリング* はそれに加え RB が 2基以上の場合にデフォルトで有効化される。  
 

@@ -28,7 +28,7 @@ USB4 DPIA (DisplayPort Input Adapter) の数は *Yellow Carp B0 Stepping* で 4�
  >
  > {{< quote >}} [[PATCH 02/23] drm/amd/display: USB4 DPIA enumeration and AUX Tunneling](https://lists.freedesktop.org/archives/amd-gfx/2021-October/069796.html) {{< /quote >}}
 
-また、*Yellow Carp APU* が搭載するディスプレイエンジン **DCN 3.1** は DP 2.0 をサポートするとされている。  
+また、*Yellow Carp APU* が搭載するディスプレイエンジン *DCN 3.1* は DP 2.0 をサポートするとされている。  
 {{< link >}} [[Yellow Carp APU では DisplayPort 2.0 をサポートか | Coelacanth's Dream](/posts/2021/08/17/dcn31-dp2_0/)] {{< /link >}}
 AMD APU では *Vega/GFX9 アーキテクチャ* の採用が続き、ディスプレイエンジン部、I/O部においても、*Renoir* から *Green Sardine/Cezanne* では特に変わらない等、機能面で大きな変更点は見られなかったが、  
 *Yellow Carp/Rembrandt* では *RDNA 2/GFX10.3 アーキテクチャ* を採用し、ディスプレイ部、I/O部も同時に大きく進化することとなる。  

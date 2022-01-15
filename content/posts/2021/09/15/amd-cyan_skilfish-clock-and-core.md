@@ -87,16 +87,16 @@ L3キャッシュは 2基 (CCX 2基) となっているため、*Cyan Skilfish A
  >
  > {{< quote >}} [[PATCH v3 2/3] drm/amdgpu: update SMU driver interface for cyan skilfish(v3)](https://lists.freedesktop.org/archives/amd-gfx/2021-September/068810.html) {{< /quote >}}
 
-以前は、*Cyan Skilfish* のディスプレイエンジンがドライバーでサポートされていないこと、CPU 8コアを持つこと、また *Cyan Skilfish (gfx1013)* がレイトレーシング命令をサポートしていること等から、**AMD 4700S Desktop Kit** が *Cyan Skilfish* ではないかと考えた。  
-公式に発表はされていないが **AMD 4700S Desktop Kit** はパッケージ、ダイの形状から **PS5 SoC** の一部、主に GPU を無効化した CPU ではないかと言われており[^ps5-4700s]、**PS5 SoC** もまた HWレイトレーシングに対応しているため、*Cyan Skilfish・AMD 4700S・PS5* で繋がりが生まれる。  
+以前は、*Cyan Skilfish* のディスプレイエンジンがドライバーでサポートされていないこと、CPU 8コアを持つこと、また *Cyan Skilfish (gfx1013)* がレイトレーシング命令をサポートしていること等から、*AMD 4700S Desktop Kit* が *Cyan Skilfish* ではないかと考えた。  
+公式に発表はされていないが *AMD 4700S Desktop Kit* はパッケージ、ダイの形状から *PS5 SoC* の一部、主に GPU を無効化した CPU ではないかと言われており[^ps5-4700s]、*PS5 SoC* もまた HWレイトレーシングに対応しているため、*Cyan Skilfish・AMD 4700S・PS5* で繋がりが生まれる。  
 {{< link >}} [HWレイトレーシングをサポートする RDNA APU 「Cyan Skilfish (gfx1013)」 | Coelacanth's Dream](/posts/2021/08/01/cyan_skilfish-apu-gfx1013/#8-core) {{< /link >}}
 だが *Cyan Skilfish* が 6コアだとすると、その正体がまた少し戻って曖昧となる。  
-**AMD 4700S** 以外に **PS5 SoC** をベースにしたモデルが存在する **可能性** もある。  
+*AMD 4700S* 以外に *PS5 SoC* をベースにしたモデルが存在する *可能性* もある。  
 
-それと、**AMD 4700S** ではアーキテクチャのバックエンド部に変化があるらしく、FPU の性能が他の *Zen 2 アーキテクチャ* を採用する AMD CPU より低いらしいが、FPUパイプラインのデータ幅がどうなっているか気になる所だ。  
+それと、*AMD 4700S* ではアーキテクチャのバックエンド部に変化があるらしく、FPU の性能が他の *Zen 2 アーキテクチャ* を採用する AMD CPU より低いらしいが、FPUパイプラインのデータ幅がどうなっているか気になる所だ。  
 Zen系 CPU では FPUパイプラインのデータ幅を示す情報を `CPUID` 命令を使って読み取れるようになっており、EAXレジスタに `0x8000001A` を入れて `CPUID` 命令を実行し、EAXレジスタに出力された値の bit 2 が `1` であれば FP256 (256-bit) 、bit 0 が `1` であれば FP128 (128-bit) を示す。[^cpuid]  
 *Zen/+ アーキテクチャ* では FP128、*Zen 2/3 アーキテクチャ* であれば FP256 と表示される。  
-*Zen 2 アーキテクチャ* を採用する **AMD 4700S** が FP256 か FP128 のどちらだとしても、他とは部分的に異なる謎の *Zen 2? アーキテクチャ* であることに変わりはないが。  
+*Zen 2 アーキテクチャ* を採用する *AMD 4700S* が FP256 か FP128 のどちらだとしても、他とは部分的に異なる謎の *Zen 2? アーキテクチャ* であることに変わりはないが。  
 
 [^cpuid]: <https://www.amd.com/system/files/TechDocs/55898_pub.zip>
 

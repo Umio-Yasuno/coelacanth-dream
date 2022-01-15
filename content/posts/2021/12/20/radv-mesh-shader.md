@@ -10,7 +10,7 @@ noindex: false
 # summary: ""
 ---
 
-オープンソースで開発されている AMD GPU向け Vulkanドライバー **RADV** 、そのバックエンドである **ACO** で Mesh Shader への対応が進められている。  
+オープンソースで開発されている AMD GPU向け Vulkanドライバー *RADV* 、そのバックエンドである *ACO* で Mesh Shader への対応が進められている。  
 [Timur Kristóf](https://gitlab.freedesktop.org/Venemo) 氏は該当マージリクエスト内で、Mesh Shader と Vulkan における拡張機能 `NV_mesh_shader`、そして RADV/ACO での実装について詳細を語っている。  
 
  * [nir, spirv: Mesh Shader I/O fixes (!13466) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/13466)

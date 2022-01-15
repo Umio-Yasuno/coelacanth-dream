@@ -30,7 +30,7 @@ Intel Gen12/{{< xe >}}プラットフォームでは事前に設定された Pix
 
 ## 最大で 16本の Pixel pipe {#16-pipes}
 
-*DG2/{{< xe class="hpg" >}}* においても、最大構成から一部 EU、Sub-Slice を無効化した構成を予定しているらしく、マージリクエストのコメントでは今回のパッチで **DG2-448** の場合、20%-40% の性能改善を確認できたとしている。  
+*DG2/{{< xe class="hpg" >}}* においても、最大構成から一部 EU、Sub-Slice を無効化した構成を予定しているらしく、マージリクエストのコメントでは今回のパッチで *DG2-448* の場合、20%-40% の性能改善を確認できたとしている。  
 デモシーンやベンチマーク以外にゲームでも確かな性能向上を果たしており、規模が大きくなった分 *{{< xe class="lp" >}}* よりも影響と恩恵が大きいのかもしれない。  
 
  > This series is part of the XeHP enabling effort.  It's not strictly required for functional correctness, but it improves performance significantly for most non-trivial workloads on all DG2 platforms it's been tested on so far, particularly on fused configurations -- E.g. on DG2-448 it gives us a 20%-40% performance improvement on most interesting workloads:
@@ -48,8 +48,8 @@ Intel Gen12/{{< xe >}}プラットフォームでは事前に設定された Pix
  >
  > {{< quote >}} [Draft: intel: Pixel pipeline optimizations for XeHP hardware. (!13569) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/13569/diffs?commit_id=d6f4f19155321dd0895f6c3cb14fc22318585421#diff-content-712a8df50d1196c189650dc493dacd43b7afed44) {{< /quote >}}
 
-*DG2* が最大 EU 512基とすると、コメントで触れられた **DG2-448** は *Render Slice* 1基を無効化して 7基 (Sub-Slice 28基、EU 448基、Pixel Backend 14基) という構成と思われるが、それだと Sub-Slice ごとに持つレイトレーシングユニット、テクスチャサンプラー、*Render Slice* ごとに持つ Pixel Backend も無効化することになるため、*Render Slice* 8基はそのままに、Sub-Slice あたりの EU を 56基とする構成も考えられる。  
-また、**DG2-128** という構成にも触れており、こちらは *Render Slice* 2基で構成した低消費電力向けの構成と思われる。  
+*DG2* が最大 EU 512基とすると、コメントで触れられた *DG2-448* は *Render Slice* 1基を無効化して 7基 (Sub-Slice 28基、EU 448基、Pixel Backend 14基) という構成と思われるが、それだと Sub-Slice ごとに持つレイトレーシングユニット、テクスチャサンプラー、*Render Slice* ごとに持つ Pixel Backend も無効化することになるため、*Render Slice* 8基はそのままに、Sub-Slice あたりの EU を 56基とする構成も考えられる。  
+また、*DG2-128* という構成にも触れており、こちらは *Render Slice* 2基で構成した低消費電力向けの構成と思われる。  
 
  > On DG2-128 this seems to improve SynMark2/OglDrvRes by 16.0% ±0.1%,
  > n=8.

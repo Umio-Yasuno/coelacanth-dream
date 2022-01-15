@@ -15,7 +15,7 @@ intel-gfxメーリングリストに、Linux Kernel に *{{< xe class="hp" >}}* 
 
 *{{< xe class="hp" >}}* 含め、今後の Intel GPU プラットフォームではマルチタイル構成が採られ、そこでは複数の GPUタイル (ダイ) とそれぞれに接続されたローカルなメモリが存在する。  
 今回のパッチは初期的なサポートを追加するもので、複数のタイルで構成されながら単一の GPUデバイスとして認識される完全なマルチタイルプラットフォームのサポートにはさらなる作業、特にローカルメモリに関する作業が必要だと語られている。  
-なお、パッチ中では **GT** という単語が使われているが、*Graphics Technology* の略であり、Intel GPU ドライバーでは単に GPU を指す際に用いられる。[^gt]  
+なお、パッチ中では *GT* という単語が使われているが、*Graphics Technology* の略であり、Intel GPU ドライバーでは単に GPU を指す際に用いられる。[^gt]  
 
 [^gt]: <https://github.com/torvalds/linux/blob/bdb575f872175ed0ecf2638369da1cb7a6e86a14/drivers/gpu/drm/i915/Makefile#L79>
 

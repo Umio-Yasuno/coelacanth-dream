@@ -9,8 +9,8 @@ noindex: false
 # summary: ""
 ---
 
-Google の Reka Norman 氏より、Coreboot に *Alder Lake-N* の Chromebookボード、**Nissa /Nivviks /Nereid** のサポートを追加するパッチが投稿された。  
-**Nissa** のベースボード、**Nivviks /Nereid** はそこから派生したリファレンスボードとなる。  
+Google の Reka Norman 氏より、Coreboot に *Alder Lake-N* の Chromebookボード、*Nissa /Nivviks /Nereid* のサポートを追加するパッチが投稿された。  
+*Nissa* のベースボード、*Nivviks /Nereid* はそこから派生したリファレンスボードとなる。  
 
  * [mb/google/brya: Add new baseboard nissa with variants nivviks and nereid (I2a3975fb) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/60271)
 

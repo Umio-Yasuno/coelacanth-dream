@@ -9,7 +9,7 @@ noindex: false
 # summary: ""
 ---
 
-1年半近く前 (2020/07) に AMD のソフトウェアエンジニア、[Marek Olšák](https://gitlab.freedesktop.org/mareko) 氏によって投稿されたパッチから、**RadeonSI (OpenGL)** ドライバーでは、Wave32 に対応する RDNA系アーキテクチャであっても、各シェーダーステージを Wave64モードで実行するようになっていた。[^radeonsi-wave64]  
+1年半近く前 (2020/07) に AMD のソフトウェアエンジニア、[Marek Olšák](https://gitlab.freedesktop.org/mareko) 氏によって投稿されたパッチから、*RadeonSI (OpenGL)* ドライバーでは、Wave32 に対応する RDNA系アーキテクチャであっても、各シェーダーステージを Wave64モードで実行するようになっていた。[^radeonsi-wave64]  
 {{< link >}} [RadeonSI ドライバーでは RDNA GPU も Wave64モードで各シェーダーを実行するように | Coelacanth's Dream](/posts/2020/07/02/radeonsi-shader-wave64-with-rdna/) {{< /link >}}
 
 [^radeonsi-wave64]: [ac,radeonsi: use Wave64 for HS/GS/VS, gpu_info fix (!5524) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5524)
@@ -54,7 +54,7 @@ noindex: false
 
 ### Compute Shader {#cs}
 
-[RDNA_Architecture_public.pdf](https://gpuopen.com/wp-content/uploads/2019/08/RDNA_Architecture_public.pdf) では元より Compute Shader は通常 Wave32 を選択されるとしていたが、Wave32 で実行すると OpenGL のテストスイートである [piglit](https://gitlab.freedesktop.org/mesa/piglit) が失敗することから **RadeonSI** では Wave64 で実行するようになっていた。[^piglit-fail-cs32]  
+[RDNA_Architecture_public.pdf](https://gpuopen.com/wp-content/uploads/2019/08/RDNA_Architecture_public.pdf) では元より Compute Shader は通常 Wave32 を選択されるとしていたが、Wave32 で実行すると OpenGL のテストスイートである [piglit](https://gitlab.freedesktop.org/mesa/piglit) が失敗することから *RadeonSI* では Wave64 で実行するようになっていた。[^piglit-fail-cs32]  
 
 [^piglit-fail-cs32]: [radeonsi/gfx10: enable Wave32 for vertex, geometry, and tessellation shaders (a0d330be) · Commits · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/commit/a0d330bedb9eb5668bc73c60e525f3c76d23a93a)
 

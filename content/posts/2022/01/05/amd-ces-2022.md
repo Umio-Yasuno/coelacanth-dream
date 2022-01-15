@@ -26,11 +26,11 @@ CES 2022 に併せたライブストリーミングにて AMD より新たな CP
 
 ## Ryzen 5x25U /Pro 5x75U (Barcelo) {#brc}
 
-*Barcelo APU* をベースとする **Ryzen 5x25U /Pro 5x75U** が発表された。*Barelo* は *Cezanne* と同じく CPU に *Zen 3* 、GPU に *Vega (GFX9)* を採用している。プロセスも同様に TSMC 7nm FinFet で製造され、パッケージも続いて FP6。  
-*Renoir* に対する *Lucienne* のように、電源管理機能等を改良したという情報はなく、GPU部の有効 CU 数と動作クロックは *Cezanne* ベースの **Ryzen 5x00U** と変わらない。  
+*Barcelo APU* をベースとする *Ryzen 5x25U /Pro 5x75U* が発表された。*Barelo* は *Cezanne* と同じく CPU に *Zen 3* 、GPU に *Vega (GFX9)* を採用している。プロセスも同様に TSMC 7nm FinFet で製造され、パッケージも続いて FP6。  
+*Renoir* に対する *Lucienne* のように、電源管理機能等を改良したという情報はなく、GPU部の有効 CU 数と動作クロックは *Cezanne* ベースの *Ryzen 5x00U* と変わらない。  
 違いとしては CPU の Base Clock、Boost Clock のどちらか、あるいは両方が 0.1 GHz 向上したぐらいものとなっている。  
 
-**Ryzen Pro 5x75U** も SKU 3種が発表されたが、プロセッサ仕様はモデルナンバーが対応する非 Pro SKU と同じ。  
+*Ryzen Pro 5x75U* も SKU 3種が発表されたが、プロセッサ仕様はモデルナンバーが対応する非 Pro SKU と同じ。  
 
 | | Codename | Core/Thread | Base Clock (GHz) | Boost Clock (GHz) | GPU CU | GPU Clock (GHz) |
 | :-- | :--: | :--: | :--: | :--: | :--: | :--: |
@@ -43,7 +43,7 @@ CES 2022 に併せたライブストリーミングにて AMD より新たな CP
 
 ## Ryzen 6000U/H/HS/HX (Yellow Carp [Rembrandt]) {#yc}
 
-TSMC 6nm FinFet プロセスで製造され、*Zen 3+* と *RDNA 2* を組み合わせた APU をベースとする **Ryzen 6000U/H/HS/HX シリーズ** が正式発表された。  
+TSMC 6nm FinFet プロセスで製造され、*Zen 3+* と *RDNA 2* を組み合わせた APU をベースとする *Ryzen 6000U/H/HS/HX シリーズ* が正式発表された。  
 *Zen 3+* では電力管理機能が強化され、クロックの切り替えレイテンシ削減と新たな Deep Sleepステートにより、性能と電力効率が一緒に強化されているとする。  
 GPU部は *RDNA 2 アーキテクチャ* となっただけでなく、L2キャッシュと RB (RenderBackend) の規模は倍に、CU数は *Renoir/Lucienne/Cezanne (Green Sardine) /Barcelo* の 8基から 12基へと 1.5倍になった。[^rdna_2]  
 補足すると、RB (Render Backend) あたり 8 ROP相当という意味での RB+ は APU だと *Stoney Ridge* や *Raven (Zen, Vega, 14nm)* の世代から実装、有効化されていた。  
@@ -65,8 +65,8 @@ CPU部は *Zen 3* と電力管理機能を除いてほとんど同じとされ�
 
 [^rdna_2]: {{< youtube id="_jX-hKvUQDU" start="683" >}}
 
-*Vega (GFX9)* 世代の APU では、GPU部のモデル名が CU数をそのまま反映したものになっていたが、**Ryzen 6000U/H/HS/HX** では **Radeon 660M (6 CU)** と **Radeon 680M (12 CU)** という名前が付けられている。  
-GPU部だけを見たときのラインラップがかなりすっきりとし、わかりやすくなったと感じるが、**Radeon 660M** は 1900MHz で統一されているのに対し、**Radeon 680M** は **Ryzen 6980HS/HX** のみ 2400MHz、それ以外が 2200MHz となっている。  
+*Vega (GFX9)* 世代の APU では、GPU部のモデル名が CU数をそのまま反映したものになっていたが、*Ryzen 6000U/H/HS/HX* では *Radeon 660M (6 CU)* と *Radeon 680M (12 CU)* という名前が付けられている。  
+GPU部だけを見たときのラインラップがかなりすっきりとし、わかりやすくなったと感じるが、*Radeon 660M* は 1900MHz で統一されているのに対し、*Radeon 680M* は *Ryzen 6980HS/HX* のみ 2400MHz、それ以外が 2200MHz となっている。  
 とはいえ同じ *Vega (GFX9)* 世代であっても有効 CU 数、動作クロックがバラバラだったのと比べればずっとわかりやすい。  
 
 ### AV1デコードの有無 {#av1-dec}
@@ -75,17 +75,17 @@ GPU部だけを見たときのラインラップがかなりすっきりとし�
 まず、半年近く前 (2021/07/14) に投稿されたパッチで、*Yellow Carp* がHWデコードをサポートするフォーマットの中に MPEG2, MPEG4, VC1, AV1 は無かった。  
 現時点で該当部分に変更はされていない。  
 {{< link >}} [他 RDNA 2 GPU とは対応コーディックが異なる Yellow Carp APU と Beige Goby GPU | Coelacanth's Dream](/posts/2021/07/14/yc-bg-vcn/#yc) {{< /link >}}
-だが発表会中では、**Ryzen 6000 シリーズ** は AV1デコードに対応するとしていた。[^yc-av1]  
+だが発表会中では、*Ryzen 6000 シリーズ* は AV1デコードに対応するとしていた。[^yc-av1]  
 パッチで追加されたコード部は DRM API 経由で `amdgpu_asic_query_video_codecs` を実行したときに対応するフォーマットの情報を返すのに使われているが、User Mode Driver である Mesa3D ではその中で対応サイズの情報だけを使っていた。  
 
 少しだけ話がずれてしまうが、AMD のプロセッサ仕様ページが最近アップデートし、Intel ark に近い形式となった。コードネームやアーキテクチャ、ダイサイズ等の情報が追加され、同時に見やすくなったと感じる。  
-**Ryzen 6000 シリーズ** のページも既に公開されており、*Rembrandt* の名が確認できる。  
-対応ビデオフォーマットの情報もあるのだが、**Ryzen 5 6600U** と **Ryzen 7 6800U** とでズレがあり、参考にしにくい。  
+*Ryzen 6000 シリーズ* のページも既に公開されており、*Rembrandt* の名が確認できる。  
+対応ビデオフォーマットの情報もあるのだが、*Ryzen 5 6600U* と *Ryzen 7 6800U* とでズレがあり、参考にしにくい。  
 
  * [AMD Ryzen™ 5 6600U | AMD](https://www.amd.com/en/product/11596)
  * [AMD Ryzen™ 7 6800U | AMD](https://www.amd.com/en/product/11591)
 
-どちらにも AV1デコードの表記が無いのだが、何故か対応サイズが 1080p までだったり、**Ryzen 5 6600U** には MPEG2, VC1 があったりと、公開直後である現時点ではやはり参考にできない。  
+どちらにも AV1デコードの表記が無いのだが、何故か対応サイズが 1080p までだったり、*Ryzen 5 6600U* には MPEG2, VC1 があったりと、公開直後である現時点ではやはり参考にできない。  
 一応、Mesa3D でも *Beige Goby (Navi24)* と *Yellow Carp (Rembrandt)* は MPEG2, MPEG4, VC1 に対応しないとしている。`CHIP_BEIGE_GOBY` と `PIPE_VIDEO_FORMAT_MPEG4_AVC` はそれぞれ `enum` で管理されている。[^enum-amd-family] [^enum-format]  
 
  > 		   switch (param) {
@@ -104,25 +104,25 @@ GPU部だけを見たときのラインラップがかなりすっきりとし�
 
 ## Radeon RX 6500 XT / RX 6400 (Beige Goby [Navi24]) {#bg}
 
-新たな *RDNA 2* dGPU **Radeon RX 6500 XT / RX 6400** が発表された。  
+新たな *RDNA 2* dGPU *Radeon RX 6500 XT / RX 6400* が発表された。  
 メモリバス幅、Infinity Cache の規模から *Beige Goby (Navi24)* をベースにしていると思われる。  
-*RDNA 2* dGPU では最も小規模で、**Ryzen 6000 シリーズ** と同じく 6nmプロセスで製造されることが特徴に挙げられる。  
-**RX 6400** は 1スロット、TBP (Total Board Power) 53W、WGP 6基 (CU 12基)、GDDR6 16Gbps 4GB、  
-**RX 6500** は 2スロット、TBP 107W、WGP 8基 (CU 16基)、GDDR6 18Gbps 4GB となっている。  
+*RDNA 2* dGPU では最も小規模で、*Ryzen 6000 シリーズ* と同じく 6nmプロセスで製造されることが特徴に挙げられる。  
+*RX 6400* は 1スロット、TBP (Total Board Power) 53W、WGP 6基 (CU 12基)、GDDR6 16Gbps 4GB、  
+*RX 6500* は 2スロット、TBP 107W、WGP 8基 (CU 16基)、GDDR6 18Gbps 4GB となっている。  
 2つで TBP の差が大きいが、有効 WGP数以上に、Game Clock では 571 MHz、Boost Clock では 494 MHz の差が要因になっていると思われる。  
 
  * [AMD Radeon™ RX 6400 | AMD](https://www.amd.com/en/products/graphics/amd-radeon-rx-6400#product-specs) 
  * [AMD Radeon RX 6500 XT Graphics Card | AMD](https://www.amd.com/en/products/graphics/amd-radeon-rx-6500-xt#product-specs)
 
 上 2つのページでは、動画エンコードと AV1デコードには非対応とされており、これはパッチでの情報と一致する。  
-だが現時点で **RX 6300M/6500M** は AV1デコードに対応と表記されており、信頼しきれない部分がある。  
+だが現時点で *RX 6300M/6500M* は AV1デコードに対応と表記されており、信頼しきれない部分がある。  
 
  * [AMD Radeon™ RX 6300M | AMD](https://www.amd.com/en/product/11501)
  * [AMD Radeon™ RX 6500M | AMD](https://www.amd.com/en/products/graphics/amd-radeon-rx-6500m#product-specs)
 
-1080p でのゲーム性能において、**RX 570 (Polaris19, 14nm)** より高速であることがアピールされている。  
-トランジスタ数が、*Polaris10* は 5.7 B、*Beige Goby (Navi24)* は 5.4 B とされており、微細化によるトランジスタ密度向上、ユニット数の増加ではなく、同程度のトランジスタ数ながらアーキテクチャの進化と倍以上にもなる動作クロックの向上によって **RX 6500 XT** は **RX 570** 以上の性能を達成している。  
-**RX 6500 XT** は GDDR6 18Gbps を採用しているが、メモリバス幅は 64-bit であり、**RX 570** と比較してメモリ帯域は 64% 程度 (144 GB/s vs 224 GB/s) である。この点、Infinity Cache 16 MiB がかなり活きているように思う。  
+1080p でのゲーム性能において、*RX 570 (Polaris19, 14nm)* より高速であることがアピールされている。  
+トランジスタ数が、*Polaris10* は 5.7 B、*Beige Goby (Navi24)* は 5.4 B とされており、微細化によるトランジスタ密度向上、ユニット数の増加ではなく、同程度のトランジスタ数ながらアーキテクチャの進化と倍以上にもなる動作クロックの向上によって *RX 6500 XT* は *RX 570* 以上の性能を達成している。  
+*RX 6500 XT* は GDDR6 18Gbps を採用しているが、メモリバス幅は 64-bit であり、*RX 570* と比較してメモリ帯域は 64% 程度 (144 GB/s vs 224 GB/s) である。この点、Infinity Cache 16 MiB がかなり活きているように思う。  
 しかし、1080p より上の解像度や GPGPU 等においては 16 MiB ではカバーしきれず、最大 4GB というメモリサイズもあって、性能は低下すると考えられる。  
 *RDNA 2 アーキテクチャ* の中でも、ゲームに特化しているという特徴が濃く出ているようにも感じる。  
 

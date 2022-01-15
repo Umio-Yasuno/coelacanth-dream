@@ -9,7 +9,7 @@ noindex: false
 # summary: ""
 ---
 
-**AMD Instinct MI200 シリーズ** (コードネーム: [Aldebaran](/tags/aldebaran)) の ISA (命令セット) ドキュメント、*AMD Instinct MI200/CDNA2 Instruction Set Architecture* が公開された。  
+*AMD Instinct MI200 シリーズ* (コードネーム: [Aldebaran](/tags/aldebaran)) の ISA (命令セット) ドキュメント、*AMD Instinct MI200/CDNA2 Instruction Set Architecture* が公開された。  
 
  * [Developer Guides, Manuals & ISA Documents - AMD](https://developer.amd.com/resources/developer-guides-manuals/)
     * ["AMD Instinct MI200" Instruction Set Architecture: Reference Guide - CDNA2_Shader_ISA_18November2021.pdf](https://developer.amd.com/wp-content/resources/CDNA2_Shader_ISA_18November2021.pdf)

@@ -27,7 +27,7 @@ noindex: false
 
 ## CPU {#cpu}
 
-プロセッサ名は **AMD Eng Sample: 100-000000560-40_Y** 、エンジニアサンプリング品となる。  
+プロセッサ名は *AMD Eng Sample: 100-000000560-40_Y* 、エンジニアサンプリング品となる。  
 CPUID における `Family, Model` は `family: 0x19 (25), model: 0x44 (68)`、EAXレジスタそのままの値に書くと `0x00A40F40`。  
 *Yellow Carp/Rembrandt* の `Family, Model` 情報は、AMD CPU の温度センサーを読み取る `k10temp` ドライバーにサポートを追加する際に、`Model 40h-4fh` となることが明かされていた。  
 {{< link >}} [Yellow Carp は Family 19h Model 40h-4Fh | Coelacanth's Dream](/posts/2021/08/27/yc-x86-model/) {{< /link >}}
@@ -84,7 +84,7 @@ L3キャッシュの情報は無いが、AMD GPUドライバーに記述され�
 
 ## GPU {#gpu}
 
-**AMD Eng Sample: 100-000000560-40_Y** の GPU部は DeviceID: 0x1681, RevID: 0xC7 。  
+*AMD Eng Sample: 100-000000560-40_Y* の GPU部は DeviceID: 0x1681, RevID: 0xC7 。  
 *Yellow Carp/Rembrandt* の DeviceID には既に 2つが割り当てられており、今回の 0x1681 ともう 1つ、0x164D がある。  
 {{< link >}} [既に 2つの DeviceID が用意されている Yellow Carp APU ファミリー | Coelacanth's Dream](/posts/2021/07/26/yc-apu-two-did/) {{< /link >}}
 

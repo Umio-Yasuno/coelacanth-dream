@@ -26,7 +26,7 @@ issue内のコメントにあるように、「公式的にはサポートしな
     * <https://github.com/RadeonOpenCompute/ROCm/issues/1608#issuecomment-965733228>
 
 *Polaris (gfx803)* は ROCm の初期バージョンからサポートされ、またその価格帯から広く出回った GPU であるため、該当 issue では ROCm v4.5.x での変更を残念に思うコメントが見られる。  
-参考までに載せると、[Steamハードウェア＆ソフトウェア 調査](https://store.steampowered.com/hwsurvey/?platform=linux) によれば、Linuxプラットフォームにおいて 2021/11 で最も使用されている GPU は **Radeon RX 480 (Polaris)** であり、6.76% のシェアを持っている。  
+参考までに載せると、[Steamハードウェア＆ソフトウェア 調査](https://store.steampowered.com/hwsurvey/?platform=linux) によれば、Linuxプラットフォームにおいて 2021/11 で最も使用されている GPU は *Radeon RX 480 (Polaris)* であり、6.76% のシェアを持っている。  
 
 ROCmSupportアカウントは、意図的な変更ではない可能性があるとしているが、*Polaris (gfx803)* を含む *GFX8* 世代の AMD GPU は ROCm v4.0.0 から公式サポートから外されており、検証が行われていないとしている。  
 実質的にはサポートが削除され、今後戻されることはない、と言っているようにも聞こえる。  

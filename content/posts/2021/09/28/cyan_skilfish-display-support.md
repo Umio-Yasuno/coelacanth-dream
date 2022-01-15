@@ -9,7 +9,7 @@ noindex: false
 # summary: ""
 ---
 
-RDNA APU *Cyan Skilfish* のディスプレイエンジン/コントローラー **DCN 2.01** をサポートするパッチが amd-gfx メーリングリストに投稿された。  
+RDNA APU *Cyan Skilfish* のディスプレイエンジン/コントローラー *DCN 2.01* をサポートするパッチが amd-gfx メーリングリストに投稿された。  
 
  * [[PATCH 00/02] cyan skillfish display support](https://lists.freedesktop.org/archives/amd-gfx/2021-September/069481.html)
     * [[PATCH 01/02] drm/amdgpu: add cyan_skillfish asic header files](https://lists.freedesktop.org/archives/amd-gfx/2021-September/069482.html)
@@ -21,7 +21,7 @@ RDNA APU *Cyan Skilfish* のディスプレイエンジン/コントローラー
 今回サポートが追加されたことで、ディスプレイ出力が有効化された *Cyan Skilfish* ベースの製品が出てくる可能性が見えてきた。  
 
 また、*Cyan Skilfish* のメディアエンジンについてはまだ有効化、サポートはされていない。  
-User Mode Driver、**RadeonSI (OpenGL), RADV (Vulkan)** にもまだサポートは追加されていない。  
+User Mode Driver、*RadeonSI (OpenGL), RADV (Vulkan)* にもまだサポートは追加されていない。  
 
 {{< pindex >}}
  * [DCN 2.01](#dcn201)
@@ -30,8 +30,8 @@ User Mode Driver、**RadeonSI (OpenGL), RADV (Vulkan)** にもまだサポート
 
 ## DCN 2.01 {#dcn201}
 
-*Navi1x* はディスプレイエンジンに **DCN 2.0** を搭載しており、*Cyan Skilfish* のはそこからステッピングが進んだバージョンとなる。  
-**DCN 2.01** は最大同時画面出力数が 2画面となっており、他 APU ではほとんどが 4画面となっていることを考えれば少ない方だと言える。  
+*Navi1x* はディスプレイエンジンに *DCN 2.0* を搭載しており、*Cyan Skilfish* のはそこからステッピングが進んだバージョンとなる。  
+*DCN 2.01* は最大同時画面出力数が 2画面となっており、他 APU ではほとんどが 4画面となっていることを考えれば少ない方だと言える。  
 
  > 		+       case CHIP_CYAN_SKILLFISH:
  > 		+               adev->mode_info.num_crtc = 2;

@@ -14,7 +14,7 @@ Intel は最近 CPU のダイショットを積極的に公開しているよう
 
  * [AMD@7nm@RDNA_2nd_gen@Navi22@Radeon_RX_6700_XT@215-0932396@… | Flickr](https://www.flickr.com/photos/130561288@N04/51703830446/)
 
-氏の測定によれば、*Navy Flounder/Navi22* のダイサイズは 334.980mm2、そう変わらないが **RX 6700 XT** 発表時に AMD が公表したダイサイズは 336mm2 だった。[^die-size]  
+氏の測定によれば、*Navy Flounder/Navi22* のダイサイズは 334.980mm2、そう変わらないが *RX 6700 XT* 発表時に AMD が公表したダイサイズは 336mm2 だった。[^die-size]  
 
 [^die-size]: [西川善司の3DGE：Radeon RX 6700 XTの性能は，「Infinity Cache」が鍵を握る](https://www.4gamer.net/games/461/G046171/20210316071/)
 

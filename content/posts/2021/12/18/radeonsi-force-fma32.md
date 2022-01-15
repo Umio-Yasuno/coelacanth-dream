@@ -13,7 +13,7 @@ noindex: false
 {{< link >}} [AMD GPU の世代における FMA、MAD 命令の微妙な仕様と違い | Coelacanth's Dream](/posts/2020/09/16/amd-gcn-rdna-fma-mad/) {{< /link >}}
 {{< link >}} [AMD GPU の世代における FMA、MAD 命令の微妙な仕様と違い Part2 | Coelacanth's Dream](/posts/2021/09/28/amd-gpu-fma-mad-part2/) {{< /link >}}
 
-タイトルの通り、**RadeonSI (OpenGL)** ドライバーに FMA32命令を強制的に使用するオプションが追加された。  
+タイトルの通り、*RadeonSI (OpenGL)* ドライバーに FMA32命令を強制的に使用するオプションが追加された。  
 
  * [driconf: support META application (!13686) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/13686)
 

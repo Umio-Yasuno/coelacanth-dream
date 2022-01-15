@@ -95,7 +95,7 @@ EU あたりの最大スレッド数が 8スレッドとなり、また半分の
  > {{< quote >}} [oneDNN/device_info.cpp at dac5847295d587737133d4027a9c435383926fe3 · oneapi-src/oneDNN](https://github.com/oneapi-src/oneDNN/blob/dac5847295d587737133d4027a9c435383926fe3/src/gpu/compute/device_info.cpp#L116-L131) {{< /quote >}}
 
 *{{< xe class="hpc" >}}* ではデータタイプに、QF, BF8, TF32 を新しくサポートする。  
-TF32 (Tensor Float32) は 19-bit長のデータフォーマットで、**NVIDIA A100 GPU** がサポートしているデータタイプだが、QF,BF8 については詳細不明。  
+TF32 (Tensor Float32) は 19-bit長のデータフォーマットで、*NVIDIA A100 GPU* がサポートしているデータタイプだが、QF,BF8 については詳細不明。  
 QF は Quadword Float、BF8 は BF16 (BFloat16) からダイナミックレンジと精度を減らしたフォーマットとは考えられるが。  
 
  > 		    GED_DATA_TYPE_qf,      ///< XE.HPC.A
@@ -107,8 +107,8 @@ QF は Quadword Float、BF8 は BF16 (BFloat16) からダイナミックレン�
 ### {{< xe class="hpc" >}}-XT と {{< xe class="hpc" >}}-XL {#xl-xt}
 
 *{{< xe class="hpc" >}}* では XT と XL の 2種類があることがコメントで示されている。  
-これまで公開されてきた *{{< xe class="hpc" >}} アーキテクチャ* を採用する **Ponte Vecchio** は Base Tile を 2基持ち、Co-EMIB でそれらを接続する 2-Tile 構成だったが、Raja Koduri 氏は 1-Tile バージョンを提供する予定があることを話している。[^1t-pvc]  
-AMD風の命名法則に従えば、{{< xe class="hpc" >}}-XL が 1-Tile、{{< xe class="hpc" >}}-XT が 2-Tile 構成の **Ponte Vecchio** となるのかもしれない。  
+これまで公開されてきた *{{< xe class="hpc" >}} アーキテクチャ* を採用する *Ponte Vecchio* は Base Tile を 2基持ち、Co-EMIB でそれらを接続する 2-Tile 構成だったが、Raja Koduri 氏は 1-Tile バージョンを提供する予定があることを話している。[^1t-pvc]  
+AMD風の命名法則に従えば、{{< xe class="hpc" >}}-XL が 1-Tile、{{< xe class="hpc" >}}-XT が 2-Tile 構成の *Ponte Vecchio* となるのかもしれない。  
 
  > 		    XE_HPC      = IGA_XE_VER_ORDINAL(1, 4), // XeHPC-XT, preserved (1, 3) for XeHPC-XL
  >

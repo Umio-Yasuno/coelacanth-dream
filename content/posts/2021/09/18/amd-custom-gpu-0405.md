@@ -10,7 +10,7 @@ noindex: false
 ---
 
 AMD のソフトウェアエンジニア Alex Deucher 氏により、[libdrm](https://gitlab.freedesktop.org/mesa/drm) に新たな AMD GPU/APU のマーケティングネームを追加するパッチ(マージリクエスト) が公開された。  
-そしてその中に `DeviceID: 0x163F, RevisionID: 0xAE`、マーケティングネーム **AMD Custom GPU 0405** という異質なものがある。  
+そしてその中に `DeviceID: 0x163F, RevisionID: 0xAE`、マーケティングネーム *AMD Custom GPU 0405* という異質なものがある。  
 
  > 		+163F,	AE,	AMD Custom GPU 0405
  >
@@ -34,14 +34,14 @@ Hot Chips 33 では、VanGogh APU と Steam Deck についてはノーコメン�
 
  * [Steam Deck :: Tech Specs](https://www.steamdeck.com/en/tech)
 
-**Steam Deck** に採用されているカスタム APU は 4-Core/8-Thread、2.4-3.5 GHz の範囲で動作するがこれは上記ブートログのスペックと同じだ。  
+*Steam Deck* に採用されているカスタム APU は 4-Core/8-Thread、2.4-3.5 GHz の範囲で動作するがこれは上記ブートログのスペックと同じだ。  
 *AMD Eng Sample* において、プロセッサ名の末尾 `35/24_N` はベースクロック 2.4GHz、ブーストクロック 3.5GHz であることを示す。  
 
  >        [    0.353153] smpboot: CPU0: AMD Eng Sample: 100-000000405-03_35/24_N (family: 0x17, model: 0x90, stepping: 0x1)
  >
  > {{< quote >}} [slow boot with 7fef431be9c9 ("mm/page_alloc: place pages to tail in __free_pages_core()")](https://lists.freedesktop.org/archives/amd-gfx/2021-March/060563.html) {{< /quote >}}
 
-また **Steam Deck** のカスタム APU は GPU に *RDNA 2 アーキテクチャ* を採用し、CU 8基 (WGP 4基) という規模を取っている。  
+また *Steam Deck* のカスタム APU は GPU に *RDNA 2 アーキテクチャ* を採用し、CU 8基 (WGP 4基) という規模を取っている。  
 *VanGogh* のキャッシュ情報と ShaderEngine の構成は、以前投稿されたパッチである程度明かされていたが、それによると *VanGogh* は ShaderEngine あたり CU 8基の構成を取る。  
 {{< link >}} [AMD GPU のキャッシュ構成情報　―― Dimgrey Cavefish / Aldebaran / VanGogh | Coelacanth's Dream](/posts/2021/03/30/amdgpu_cache_info/) {{< /link >}}
 となると、*VanGogh APU* の GPU部は全体 SE (ShaderEngine) 1基、SE あたりの SA (ShaderArray) も 1基、SA あたりの CU数は 8基 (WGP 4基) とされる。  
@@ -99,9 +99,9 @@ SA 1基のみとすることで GL1データキャッシュも 1基となり、�
  >
  > {{< quote >}} [[PATCH] drm/amdkfd: Update L1 and add L2/3 cache information](https://lists.freedesktop.org/archives/amd-gfx/2021-March/061392.html) {{< /quote >}}
 
-で、**Steam Deck** のカスタム APU を *VanGogh APU* とすると、自分はメモリ構成に関して読み間違えていたことになる。  
-自分はブートログから、*VanGogh APU* を LPDDR5 64-bit (4x 16-bit) だと考えていたが、**Steam Deck** のハードウェアスペックには LPDDR5 128-bit (4x 32-bit) と記載されている。  
+で、*Steam Deck* のカスタム APU を *VanGogh APU* とすると、自分はメモリ構成に関して読み間違えていたことになる。  
+自分はブートログから、*VanGogh APU* を LPDDR5 64-bit (4x 16-bit) だと考えていたが、*Steam Deck* のハードウェアスペックには LPDDR5 128-bit (4x 32-bit) と記載されている。  
 LPDDR5、クアッドチャネルだというところまでは合っていたが、チャネルあたりのバス幅は間違っていた。  
-ブートログはメモリサイズ 8GB、**Steam Deck** は 16GB となっているが、チャネル数は同じであるため、メモリチップあたりの容量違いではないかと思われる。  
+ブートログはメモリサイズ 8GB、*Steam Deck* は 16GB となっているが、チャネル数は同じであるため、メモリチップあたりの容量違いではないかと思われる。  
 `RAM width 256bits DDR5` という表示が間違っていた所は合っていて安心はしたが、不完全だったのは気恥ずかしい。  
 
