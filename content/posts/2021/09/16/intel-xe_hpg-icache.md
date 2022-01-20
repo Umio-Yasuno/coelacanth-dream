@@ -69,16 +69,10 @@ L1命令キャッシュの倍増がグラフィクス、ゲーミング性能に
  > {{< quote >}} [oneDNN/device_info.cpp at e6d288ef1943f93a782a644e3aac8b2a500c9299 · oneapi-src/oneDNN](https://github.com/oneapi-src/oneDNN/blob/e6d288ef1943f93a782a644e3aac8b2a500c9299/src/gpu/compute/device_info.cpp#L107) {{< /quote >}}
 
 ここは *{{< xe class="hp/hpg" >}}* で共通する部分となる。  
-だが *{{< xe class="hpg" >}}* は 64-bit 精度のデータ型にはエミュレートで対応、対し *{{< xe class="hp" >}}* は FP64/Int64 を処理する専用パイプラインを持つとしている。  
+だが *{{< xe class="hpg" >}}* は 64-bit 精度のデータ型にはエミュレートで対応し[^xe_hpg-emu64]、*{{< xe class="hp" >}}* は FP64/Int64 を処理する専用パイプラインを持つとしている。  
 そのため EU部において一部共通するが、パイプライン構成についてはそれぞれのターゲットに向けて最適化された別物となる。  
 
-| {{< xe >}} EU |  |  | Issue Port 0 | IP 1 | IP 2 | IP 3 | IP 4? |
-| :-- | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| {{< xe class="lp" >}} | Branch<br>(Control Flow) | Send | Short<br>(INT /FP) | Math | - | - | - |
-| {{< xe class="hp" >}} | ? | Send | INT? (int8/16/32)<br> /Branch? | Math? | DPAS? | Long?<br>(Int64 /FP64) | FP?<br>(FP16/32, BF16) |
-|                       | In-Order | Out-of-Order | In-Order | Out-of-Order | Out-of-Order | In-Order | In-Order |
-
-{{< link >}} [intel-graphics-compiler/RegDeps.cpp at f5e9e3dcda319339b82f1171c7e55add46884036 · intel/intel-graphics-compiler](https://github.com/intel/intel-graphics-compiler/blob/f5e9e3dcda319339b82f1171c7e55add46884036/visa/iga/IGALibrary/IR/RegDeps.cpp#L100) {{< /link >}}
+[^xe_hpg-emu64]: [oneDNN/emulation.hpp at c7e18067cc5353f5ccbd63129dd7eb64fa4275c4 · oneapi-src/oneDNN](https://github.com/oneapi-src/oneDNN/blob/c7e18067cc5353f5ccbd63129dd7eb64fa4275c4/src/gpu/jit/gemm/emulation.hpp#L41)
 
 | {{< xe >}} GPU | {{< xe class="lp" >}} | {{< xe class="hpg" >}} | {{< xe class="hp" >}} | {{< xe class="hpc" >}} |
 | :-- | :--: | :--: | :--: | :--: |
@@ -91,16 +85,14 @@ L1命令キャッシュの倍増がグラフィクス、ゲーミング性能に
 | Native FP64 | N/A | N/A | Y | Y |
 
 {{< ref >}}
- * [Arm Mali GPU Best Practices Developer Guide](https://developer.arm.com/documentation/101897/0200/shader-code/instruction-caches)
- * [PowerPoint Presentation - GDC2017-Advanced-Shader-Programming-On-GCN.pdf](https://gpuopen.com/wp-content/uploads/2017/03/GDC2017-Advanced-Shader-Programming-On-GCN.pdf)
- * [Reducing Shader Bottlenecks | Apple Developer Documentation](https://developer.apple.com/documentation/metal/optimizing_performance_with_the_gpu_counters_instrument/reducing_shader_bottlenecks)
- * [Tips and Tricks: Ray Tracing Best Practices | NVIDIA Developer Blog](https://developer.nvidia.com/blog/rtx-best-practices/)
- * [oneDNN/emulation.hpp at c7e18067cc5353f5ccbd63129dd7eb64fa4275c4 · oneapi-src/oneDNN](https://github.com/oneapi-src/oneDNN/blob/c7e18067cc5353f5ccbd63129dd7eb64fa4275c4/src/gpu/jit/gemm/emulation.hpp)
+ * GPU instruction cache
+    * [Arm Mali GPU Best Practices Developer Guide](https://developer.arm.com/documentation/101897/0200/shader-code/instruction-caches)
+    * [PowerPoint Presentation - GDC2017-Advanced-Shader-Programming-On-GCN.pdf](https://gpuopen.com/wp-content/uploads/2017/03/GDC2017-Advanced-Shader-Programming-On-GCN.pdf)
+    * [Reducing Shader Bottlenecks | Apple Developer Documentation](https://developer.apple.com/documentation/metal/optimizing_performance_with_the_gpu_counters_instrument/reducing_shader_bottlenecks)
+    * [Tips and Tricks: Ray Tracing Best Practices | NVIDIA Developer Blog](https://developer.nvidia.com/blog/rtx-best-practices/)
  * [oneDNN/gen_convolution.cpp at c7e18067cc5353f5ccbd63129dd7eb64fa4275c4 · oneapi-src/oneDNN](https://github.com/oneapi-src/oneDNN/blob/c7e18067cc5353f5ccbd63129dd7eb64fa4275c4/src/gpu/jit/conv/gen_convolution.cpp)
- * [oneDNN/xe_lp_x8s8x_convolution.hpp at c7e18067cc5353f5ccbd63129dd7eb64fa4275c4 · oneapi-src/oneDNN](https://github.com/oneapi-src/oneDNN/blob/c7e18067cc5353f5ccbd63129dd7eb64fa4275c4/src/gpu/ocl/xe_lp_x8s8x_convolution.hpp)
  * [oneDNN/neo_structs.hpp at c7e18067cc5353f5ccbd63129dd7eb64fa4275c4 · oneapi-src/oneDNN](https://github.com/oneapi-src/oneDNN/blob/c7e18067cc5353f5ccbd63129dd7eb64fa4275c4/src/gpu/jit/ngen/npack/neo_structs.hpp)
  * [oneDNN/device_info.cpp at e6d288ef1943f93a782a644e3aac8b2a500c9299 · oneapi-src/oneDNN](https://github.com/oneapi-src/oneDNN/blob/e6d288ef1943f93a782a644e3aac8b2a500c9299/src/gpu/compute/device_info.cpp)
-
 {{< /ref >}}
 
 

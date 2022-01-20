@@ -9,7 +9,8 @@ noindex: false
 # summary: ""
 ---
 
-Oak Ridge Leadership Computing Facility (OLCF) の HPCシステムの 1つ、*Crusher* の Quick-Start Guide が公開された。  
+Oak Ridge Leadership Computing Facility (OLCF) の HPCシステムの 1つ、*Crusher* の Quick-Start Guide が公開されている。  
+ドキュメントは Github の [olcf/olcf-user-docs](https://github.com/olcf/olcf-user-docs) レポジトリで管理されており、当該ドキュメントは [Tom Papatheodore](https://github.com/tom-papatheodore) 氏 ([OLCF](https://www.olcf.ornl.gov/directory/staff-member/tom-papatheodore/)) によって追加された。  
 
  * [Crusher Quick-Start Guide — OLCF User Documentation](https://docs.olcf.ornl.gov/systems/crusher_quick_start_guide.html)
  * [olcf-user-docs/crusher_quick_start_guide.rst at 0dddf16f0229da8afe314860fd4fb979995582a3 · olcf/olcf-user-docs](https://github.com/olcf/olcf-user-docs/blob/0dddf16f0229da8afe314860fd4fb979995582a3/systems/crusher_quick_start_guide.rst)

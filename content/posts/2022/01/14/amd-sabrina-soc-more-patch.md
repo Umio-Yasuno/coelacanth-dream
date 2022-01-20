@@ -101,7 +101,7 @@ Dicrete GPU用の PCIe GPP (General Purpose Port) Bridge 1基でそこから出�
 | Package | FP5 | FP6 | FT5 | ? |
 | Base board name | Mandolin | Cereme | Majolica | Chausie |
 | UART controller | 4 | 2 | 4? | 4 |
-| SATA poat/controller | 2 | 0 | 2 | 0 |
+| SATA controller | 2 | 0 | 2 | 0 |
 | PCIe GPP | 7 | 7 | 5 | 6 |
 
 {{< ref >}}

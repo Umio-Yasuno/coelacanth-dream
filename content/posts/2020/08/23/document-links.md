@@ -1,5 +1,5 @@
 ---
-title: "Document Links"
+title: "Document Link Bookmark"
 date: 2020-08-23T04:10:40+09:00
 draft: false
 # tags: [ "", ]
@@ -76,13 +76,16 @@ summary: " "
 
 ## Intel {#intel}
 
- * [Intel® Graphics for Linux* | 01.org](https://01.org/linuxgraphics)
-    * [Programmer's Reference Manuals | 01.org](https://01.org/linuxgraphics/documentation)
- * [GDC 2019 Tech Sessions](https://www.intel.com/content/www/us/en/developer/articles/event-contest/gdc-2019-tech-sessions.html?wapkw=Intel%20GDC%20Gen11)
+ * GPU
+    * [Intel® Graphics for Linux\* | 01.org](https://01.org/linuxgraphics)
+        * [Programmer's Reference Manuals | 01.org](https://01.org/linuxgraphics/documentation)
+    * [GDC 2019 Tech Sessions](https://www.intel.com/content/www/us/en/developer/articles/event-contest/gdc-2019-tech-sessions.html?wapkw=Intel%20GDC%20Gen11)
     * [Intel® Processor Graphics Gen11 Architecture](https://www.intel.com/content/dam/develop/external/us/en/documents/02-the-architecture-of-intel-processor-graphics-gen11-807276.pdf)
- * [Intel® Processor Graphics Xᵉ-LP API Developer and Optimization Guide](https://www.intel.com/content/www/us/en/developer/articles/guide/lp-api-developer-optimization-guide.html)
- * [Intel® 64 and IA-32 Architectures Software Developer Manuals](https://software.intel.com/content/www/us/en/develop/articles/intel-sdm.html)
-   * [Intel® 64 and IA-32 Architectures Optimization Reference Manual](https://software.intel.com/content/www/us/en/develop/download/intel-64-and-ia-32-architectures-optimization-reference-manual.html)
+    * [Intel® Processor Graphics Xᵉ-LP API Developer and Optimization Guide](https://www.intel.com/content/www/us/en/developer/articles/guide/lp-api-developer-optimization-guide.html)
+    * [the-compute-architecture-of-intel-processor-graphics-gen9-v1d0.pdf](https://www.intel.com/content/dam/develop/external/us/en/documents/the-compute-architecture-of-intel-processor-graphics-gen9-v1d0.pdf)
+ * CPU
+    * [Intel® 64 and IA-32 Architectures Software Developer Manuals](https://software.intel.com/content/www/us/en/develop/articles/intel-sdm.html)
+    * [Intel® 64 and IA-32 Architectures Optimization Reference Manual](https://software.intel.com/content/www/us/en/develop/download/intel-64-and-ia-32-architectures-optimization-reference-manual.html)
 
 ### Github {#intel_github}
 
