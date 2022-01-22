@@ -99,7 +99,7 @@ Dicrete GPU用の PCIe GPP (General Purpose Port) Bridge 1基でそこから出�
 | | Raven /Picasso<br>/Raven2 (Dali) | Renoir /Cezanne<br>/Barcelo | Raven2<br>(Pollock) | Sabrina |
 | :-- | :--: | :--: | :--: | :--: |
 | Package | FP5 | FP6 | FT5 | ? |
-| Base board name | Mandolin | Cereme | Majolica | Chausie |
+| Base board name | Mandolin | Majolica | Cereme | Chausie |
 | UART controller | 4 | 2 | 4? | 4 |
 | SATA controller | 2 | 0 | 2 | 0 |
 | PCIe GPP | 7 | 7 | 5 | 6 |
