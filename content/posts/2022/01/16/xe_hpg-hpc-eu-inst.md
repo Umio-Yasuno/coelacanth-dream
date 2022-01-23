@@ -19,15 +19,21 @@ noindex: false
 {{< /pindex >}}
 
 ## DG2-G12 {#dg2-12}
-以前に [IGC (intel-graphics-compiler)](https://github.com/intel/intel-graphics-compiler)、[compute-runtime](https://github.com/intel/compute-runtime) に取り込まれた変更から、*DG2* には *G10/G11* に加え、*G12* バリアント (サブプラットフォーム) も存在することが示唆されていた。  
+Linux Kernel に *DG2-G12* バリアント (サブプラットフォーム) 関連のパッチが投稿された。  
+以前から [IGC (intel-graphics-compiler)](https://github.com/intel/intel-graphics-compiler)、[compute-runtime](https://github.com/intel/compute-runtime) に取り込まれた変更から、*DG2* には *G10/G11* に加え、*G12* バリアント (サブプラットフォーム) も存在することが示唆されていた。  
 {{< link >}} [3種類存在するかも知れない Intel Alchemist/DG2 と 2種類存在する Ponte Vecchio | Coelacanth's Dream](/posts/2021/12/17/dg2_g10-g11-g12/#dg2) {{< /link >}}
-それが Linux Kernel にも *G12* 関連のパッチが投稿されたことで、ひとまず存在が確定したと言える。  
+今回のパッチで、ひとまず *G12* バリアントの存在が確定したと言える。  
 パッチの内容は初期的なサポートを追加するもので、現時点で *G12* はハードウェアに存在するバグへの回避策や機能面において、*G10/G11* と共通していると推察される。  
 
  * [[Intel-gfx] [PATCH] drm/i915: Introduce G12 subplatform of DG2](https://lists.freedesktop.org/archives/intel-gfx/2022-January/287309.html)
 
 ## DG2 L3 banks {#dg2-l3-banks}
 最近の Mesa3D へのパッチの中に、*DG2* の L3キャッシュバンク数に関するものがあった。  
+
+補足すると、Intel はこれまで GPU が持つキャッシュについて、サンプラーごとに持つリードオンリーキャッシュを L2、GPU全体で共有するプログラマブルなキャッシュを L3 としていた。  
+それが {{< xe >}}-Core、Vector Engine、Matrix Engine といった用語を打ち出すとともに、キャッシュ階層の呼称が整理され、従来の L3キャッシュを L2キャッシュとするようになった。{{< xe >}}-Core が Sub-Slice、Vector Engine + Matirx Engine が EU に相当する。  
+しかし、ドライバ等のシェーダコンパイラ、GPU に最適化されたソフトウェアでは従来の用語を使い続けている。  
+{{< link >}} [Intel Architecture Day 2021 個人的まとめ　―― 用語が整理された Xe GPU | Coelacanth's Dream](/posts/2021/08/26/intel-arch-day-2021-xe-gpu/) {{< /link >}}
 
  * [intel/devinfo: updates for gfx12.5 (!14297) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/14297)
 
@@ -133,4 +139,5 @@ oneDNN 内のコメントから、DPASW では内部的に行列ブロックを 
  * HC33 PVC: [Intel's Ponte Vecchio GPU Architecture - hc2021_pvc_final.pdf](https://hc33.hotchips.org/assets/program/conference/day2/hc2021_pvc_final.pdf)
  * DPASW FusedEU: [oneDNN/xe_hp_systolic_gemm_kernel.cpp at 72e9993236c10bd2d676896b600fac05bdcfa2e1 · oneapi-src/oneDNN](https://github.com/oneapi-src/oneDNN/blob/72e9993236c10bd2d676896b600fac05bdcfa2e1/src/gpu/jit/gemm/xe_hp_systolic_gemm_kernel.cpp#L897-L901)
  * Gen12 PDF: [Develop for Intel Graphics—Today and into the Future Presentation - july-gdc-2021-developing-for-intel-graphics-today-and-into-the-future.pdf](https://www.intel.com/content/dam/develop/external/us/en/documents/pdf/july-gdc-2021-developing-for-intel-graphics-today-and-into-the-future.pdf)
+ * [the-compute-architecture-of-intel-processor-graphics-gen9-v1d0.pdf](https://www.intel.com/content/dam/develop/external/us/en/documents/the-compute-architecture-of-intel-processor-graphics-gen9-v1d0.pdf)
 {{< /ref >}}
