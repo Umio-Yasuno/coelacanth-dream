@@ -561,6 +561,7 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | :--- | :--- | :---: | :---: |
 | 0x731F &darr; | 0x50 | |
 | | 0x51 | | |
+| | 0xCE | | |
 | | 0xD0 | | |
 | | 0xD1 | | |
 | | 0xD3 | | |
@@ -570,7 +571,7 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | 0x73A2 | 0x00 | |
 | 0x73A3 | 0x00 | PRO W6800 |
 | 0x73A4 | | |
-| 0x73A5 | | |
+| 0x73A5 | 0xC0 | |
 | 0x73AB | 0x00 | |
 | 0x73AC | | |
 | 0x73AD | | |
@@ -628,7 +629,11 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | 0x73EB | | |
 | 0x73EC | | |
 | 0x73ED | | |
-| 0x73EF | | |
+| 0x73EF&darr; | 0xC0 | RX 6800S[^6cd1d146f947bdf6be66a08d1004cc5c75815773] |
+| | 0xC1 | |
+| | 0xC2 | RX 6700S[^6cd1d146f947bdf6be66a08d1004cc5c75815773] |
+| | 0xC3 | RX 6650M[^6cd1d146f947bdf6be66a08d1004cc5c75815773] |
+| | 0xC4 | RX 6650M XT[^6cd1d146f947bdf6be66a08d1004cc5c75815773] |
 | 0x73FF&darr; | | |
 | | 0x40 | |
 | | 0x41 | |
@@ -636,6 +641,8 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | | 0xC1 | RX 6600 XT |
 | | 0xC3 | RX 6600M |
 | | 0xC7 | RX 6600 |
+| | 0xCB | RX 6600S[^6cd1d146f947bdf6be66a08d1004cc5c75815773] |
+| | 0xD7 | |
 
 ### Beige Goby/Navi24 ( gfx1034 ) {#beige_goby-gfx1034}
 
@@ -643,13 +650,15 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | :--- | :--- | :---: | :---: |
 | 0x7420 | | |
 | 0x7421 | 0x00 | PRO W6500M[^amdgpu_ids-1337803] |
-| 0x7422 | | |
+| 0x7422 | 0x00 | PRO W6400[^6cd1d146f947bdf6be66a08d1004cc5c75815773] |
 | 0x7423 | 0x00 | PRO W6300M[^amdgpu_ids-1337803] |
+| 0x7424 | | |
 | 0x743F &darr; | 0xC1 | RX 6500 [^amdgpu_ids-1362367] |
 | | 0xC3 | RX 6500M[^amdgpu_ids-1337803] |
 | | 0xC7 | RX 6400[^amdgpu_ids-1362367] |
 | | 0xCF | RX 6300M[^amdgpu_ids-1337803] | 
 
+[^6cd1d146f947bdf6be66a08d1004cc5c75815773]: [Update Device Info · GPUOpen-Tools/common_src_device_info@6cd1d14](https://github.com/GPUOpen-Tools/common_src_device_info/commit/6cd1d146f947bdf6be66a08d1004cc5c75815773)
 [^amdgpu_ids-1337803]: <http://repo.radeon.com/amdgpu/21.40.1/ubuntu/pool/main/libd/libdrm-amdgpu-common/libdrm-amdgpu-common_1.0.0.40501-1337803_all.deb>
 [^amdgpu_ids-1362367]: <http://repo.radeon.com/amdgpu/21.40.2/ubuntu/pool/main/libd/libdrm-amdgpu-common/libdrm-amdgpu-common_1.0.0.40502-1362367_all.deb>
 
