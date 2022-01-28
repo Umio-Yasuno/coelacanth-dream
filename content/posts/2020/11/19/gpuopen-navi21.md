@@ -65,7 +65,7 @@ SIMDユニットあたりで保持される Wave数は 16エントリとなり�
 誤字、間違いである可能性もあるため、やはり AMD による資料公開が待たれる。  
 
 
-また、MALL (Memory Access Last Level) の対応も追加されている。  
+また、MALL (Memory Access at Last Level) の対応も追加されている。  
 マーケティング上では **Infinity Cache** と呼ばれるそれは、コード中においては MALL となるようだ。  
 
 **RadeonSI (OpenGL)** ドライバーでは既に *NGGカリング/プリミティブシェーダー* を、*RDNA 2 / GFX10.3* 世代の dGPU ではデフォルトに有効とするようになっているが、**AMDVLK (Vulkan)** ドライバーでも同様となる。[^amdvlk-ngg]  

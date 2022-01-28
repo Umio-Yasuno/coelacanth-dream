@@ -49,6 +49,8 @@ RB 1基の場合、*NGGカリング* を有効化できないようにされて�
  >
  > {{< quote >}} [radv: Enable NGG culling by default on GFX10.3 (!13086) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/13086) {{< /quote >}}
 
+### Parameter Cache (PC) {#pc}
+
 *NGG* は、Pixel Shader への入力用オンチップバッファ、パラメーターキャッシュ (Parameter Cache, PC) を搭載している。  
 コードから、パラメーターキャッシュの規模は *RDNA 2 dGPU (Sienna Cichlid/Navi21, Navy Flounder/Navi22, Dimgrey Cavefish/Navi23)* と *RDNA 1 dGPU (Navi10/Navi12)* で同じものとなっている。  
 それでいて上記 `max_ps_params` は *RDNA 2 dGPU* の方が大きく設定されているため、*RDNA 1 -> RDNA 2* で *NGG* 部が改良されていると考えられる。  

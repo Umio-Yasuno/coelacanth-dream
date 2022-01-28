@@ -26,7 +26,7 @@ Intel は最近 CPU のダイショットを積極的に公開しているよう
 
 ## Infinity Cache/MALL/L3キャッシュ {#mall}
 
-RDNA 2 dGPU から導入された、マーケティング的には *Infinity Cache* 、オープンソース・ドライバー中では *MALL (Memory Access Last Level)* 、キャッシュ階層で言えば L3キャッシュに当たるそれは、*Navy Flounder/Navi22* には 96MiB 搭載されている。  
+RDNA 2 dGPU から導入された、マーケティング的には *Infinity Cache* 、オープンソース・ドライバー中では *MALL (Memory Access at Last Level)* 、キャッシュ階層で言えば L3キャッシュに当たるそれは、*Navy Flounder/Navi22* には 96MiB 搭載されている。  
 ダイショットにおいて L3キャッシュブロックはかなり目立ち、上下部に敷き詰めるようにして配置されている。  
 
 *Navy Flounder/Navi22* のメモリインターフェイスは GDDR6 192-bit (16-bit x12ch)、メモリチャネルあたりの L3キャッシュサイズは 8MiB となるが、ダイショットでは 16ブロック確認でき、ブロックあたり 4MiB の実装となっている。  
