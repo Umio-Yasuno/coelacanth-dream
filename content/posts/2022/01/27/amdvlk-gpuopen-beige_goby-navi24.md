@@ -1,5 +1,5 @@
 ---
-title: "AMDVLK GPUOpenドライバが Beige Goby/Navi24 に対応"
+title: "AMDVLK GPUOpenドライバーが Beige Goby/Navi24 に対応"
 date: 2022-01-27T07:54:32+09:00
 draft: false
 tags: [ "GPUOpen", "RDNA_2", "Beige_Goby" ]
@@ -9,9 +9,9 @@ noindex: false
 # summary: ""
 ---
 
-AMD が公式に提供しているオープンソース Vulkanドライバ、[AMDVLK](https://github.com/GPUOpen-Drivers/AMDVLK)、それを構成する各種ソフトウェア ([LLPC (LLVM-Based Pipeline Compiler)](https://github.com/GPUOpen-Drivers/llpc), [PAL (Platform Abstraction Library)](https://github.com/GPUOpen-Drivers/pal), [XGL (Vulkan API Layer)](https://github.com/GPUOpen-Drivers/xgl)) が、*Beige Goby/Navi24 (gfx10)* に対応した。  
+AMD が公式に提供しているオープンソース Vulkanドライバー、[AMDVLK](https://github.com/GPUOpen-Drivers/AMDVLK)、それを構成する各種ソフトウェア ([LLPC (LLVM-Based Pipeline Compiler)](https://github.com/GPUOpen-Drivers/llpc), [PAL (Platform Abstraction Library)](https://github.com/GPUOpen-Drivers/pal), [XGL (Vulkan API Layer)](https://github.com/GPUOpen-Drivers/xgl)) が、*Beige Goby/Navi24 (gfx10)* に対応した。  
 
- * [Update pal from commit: f4c1b21c · GPUOpen-Drivers/pal@0a0a4ae](https://github.com/GPUOpen-Drivers/pal/commit/0a0a4ae4ab062d31fcd68863c35952967a8060ee#diff-671366d7e4dc96c40f966d81a9dccc4812240e5452105162205974e3b310194b)
+ * [Update pal from commit: f4c1b21c · GPUOpen-Drivers/pal@0a0a4ae](https://github.com/GPUOpen-Drivers/pal/commit/0a0a4ae4ab062d31fcd68863c35952967a8060ee)
  * [Update llpc from commit: 9c33c180 · GPUOpen-Drivers/llpc@7c2f5f7](https://github.com/GPUOpen-Drivers/llpc/commit/7c2f5f7e28f62f82524baa6234d967eeef9e77a9)
  * [Update xgl from commit: b30d9ce9 · GPUOpen-Drivers/xgl@d01032b](https://github.com/GPUOpen-Drivers/xgl/commit/d01032b9f8f7f3b7ce54a3078e9aae149386b716)
 
@@ -19,7 +19,7 @@ AMD が公式に提供しているオープンソース Vulkanドライバ、[AM
 *Beige Goby/Navi24* の GPUコア部は、ShaderEngine (SE) 1基、SE あたりの ShaderArray (SA,SH) 2基、SA あたりの WGP (CU) 4基 (8基)、SE あたりの RenderBackend (RB) 4基という構成になっている。  
 スペックに関するもう 1つのコードブロックでは SE あたりの RB数は 2基となっているが、AMD 公式サイトでは ROP 32基 (RB+ 4基) となっているため、下引用部が正しいと思われる。[^wrong-spec-?]  
 メモリサイドキャッシュには、L2キャッシュブロック 1MiB (ブロック 4基)、L3キャッシュ/MALL 16MiB を持つ。メモリチャネルは 4ch、メモリタイプは GDDR6 に対応している (GDDR6 64-bit [16-bit x 4ch])。  
-余談となるが、AMDGPU に関するソフトウェア中では L3キャッシュを MALL と呼んでいるものの、MALL が何の略称かは分かれており、LLVM では *Memory Attached Last Level* [^llvm-mall]、Linux Kernel における AMDGPUドライバでは *Memory Access at Last Level* だとしている。[^amdgpu-mall]  
+余談となるが、AMDGPU に関するソフトウェア中では L3キャッシュを MALL と呼んでいるものの、MALL が何の略称かは分かれており、LLVM では *Memory Attached Last Level* [^llvm-mall]、Linux Kernel における AMDGPUドライバーでは *Memory Access at Last Level* だとしている。[^amdgpu-mall]  
 
 [^llvm-mall]: [llvm-project/AMDGPUUsage.rst at 6d28dffb6bf4c97848290b9aee3c19025470e54a · llvm/llvm-project](https://github.com/llvm/llvm-project/blob/6d28dffb6bf4c97848290b9aee3c19025470e54a/llvm/docs/AMDGPUUsage.rst#memory-model-gfx10)
 [^amdgpu-mall]: [linux/dc-glossary.rst at 8d0749b4f83bf4768ceae45ee6a79e6e7eddfc2a · torvalds/linux](https://github.com/torvalds/linux/blob/8d0749b4f83bf4768ceae45ee6a79e6e7eddfc2a/Documentation/gpu/amdgpu/display/dc-glossary.rst)
