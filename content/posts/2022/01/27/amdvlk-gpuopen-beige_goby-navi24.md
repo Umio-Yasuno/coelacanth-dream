@@ -49,7 +49,7 @@ AMD が公式に提供しているオープンソース Vulkanドライバー、
 *NGG (Next Generation Geometry)* に対応する RDNA系アーキテクチャ GPU では、特殊なオンチップバッファ、Parameter Cache (PC) を持つ。PC はメモリキャッシュと異なり、ピクセルシェーダ (Pixel Shader, PS) への入力バッファとして用いられる。  
 {{< link >}} [RADVドライバーに NGGカリングが実装 | Coelacanth's Dream](/posts/2021/07/26/radv-nggc/#pc) {{< /link >}}
 PC の規模について *RDNA 2 dGPU* という枠で見たとき、*Beige Goby* は他 GPU よりも少ない 512ラインとなっている。  
-規模が大きく異なる *Sienna Cichlid/Navi21* と *Navy Flounder/Navi22, Dimgrey Cavefish/Navi23* で同じ 1024ラインという構成を採っており、PC は GPUコア部の規模とは別に調節されているものと思われる。  
+その他 *RDNA 2 dGPU*、*Sienna Cichlid/Navi21, Navy Flounder/Navi22, Dimgrey Cavefish/Navi23* それぞれで全体的な規模は異なるが、PC は同じ 1024ラインという構成を採っており、PC は GPUコア部の規模とは別に調節されているものと思われる。  
 また、*RDNA 2 APU* である *VanGogh (Aerith), Yellow Carp (Rembrandt)* で PC は、*Beige Goby* よりも小さい 256ラインとなっている。  
 
  > 		      case CHIP_RAVEN:
@@ -79,6 +79,7 @@ PC の規模について *RDNA 2 dGPU* という枠で見たとき、*Beige Goby
 | WGP (CU) | 40 (80) | 20 (40) | 16 (32) | 8 (16) |
 | RB+ | 16 | 8 | 8 | 4 |
 | Memory Bus | 256-bit | 192-bit | 128-bit | 64-bit |
+| L2 Cache | 4 MiB | 3 MiB | 2 MiB | 1 MiB |
 | L3 Cache | 128 MiB | 96 MiB | 32 MiB | 16 MiB |
 | Transistor | 26.8 B | 17.2 B | 11.1 B | 5.4 B |
 | Process | 7 nm | 7nm | 7 nm | 6 nm |
@@ -88,7 +89,7 @@ PC の規模について *RDNA 2 dGPU* という枠で見たとき、*Beige Goby
 RB数も減ったが、処理可能なピクセル数を増やした RB+ となったため、相当 ROP数は変わらない。  
 それと *Navi14* ではハードウェアのバグで *NGG* が無効化されていたが、*Beige Goby* ではそれが無いため有効可能になっていることは触れておきたい。  
 
-| Navi | Navi14 |  Beige Goby<br>(Navi24) |
+| | Navi14 |  Beige Goby<br>(Navi24) |
 | :-- | :--: | :--: |
 | Shader Engine | 1 | 1 |
 | WGP (CU) | 12 (24) | 8 (16) |
