@@ -2,7 +2,7 @@
 title: "Navi10 Database"
 date: 2020-03-23T09:46:48+09:00
 draft: true
-tags: [ "Radeon", "RDNA", "GFX10", "gfx1010", "Navi10", "Database" ]
+tags: [ "Radeon", "RDNA", "GFX10", "gfx1010", "Navi10" ]
 keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false

@@ -30,10 +30,11 @@ CPUキャッシュ構成は明かされていないが、こちらも *EPYC Mila
 異なる *AMD MI250X* パッケージ間も XGMI で接続されているが、リンク数が少ないため GCD間より帯域は狭く、50+50 GB/s となっている。  
 CPU-GPU間は 36+36 GB/s、帯域は GCDあたりとなり、また PCIe Gen4 x16 (32+32 GB/s) より帯域が広いが、このあたりが *Optimized 3rd Gen EPYC* とされる部分なのだろうか。  
 *MI250X* はそれぞれ CPU 以外に、NIC とも PCIe Gen4 ESM (Extend Speed Mode) で接続されている。これは GCD に PCIe Root Complex が実装されたことで可能となった。  
-このことを AMD CDNA 2 Whitepaper では、CPU と GPU のメモリ空間を統合したエクサスケールコンピューティングにおいて、非常に重要なものだとしている。  
+このことを AMD CDNA 2 Whitepaper では、CPU と GPU のメモリ空間を統合したエクサスケールコンピューティングにおいて、非常に重要なものだとしている。[^white-paper]  
+
 また、*Crusher, Frontier* のノード構成は AMD CDNA 2 Whitepaper にて、Flagship HPC Topology として掲載されている。  
 
- * [amd-cdna2-white-paper.pdf](https://www.amd.com/system/files/documents/amd-cdna2-white-paper.pdf)
+[^white-paper]: [amd-cdna2-white-paper.pdf](https://www.amd.com/system/files/documents/amd-cdna2-white-paper.pdf)
 
 *Crusher* ノードでは、L3キャッシュリージョン 1個に GPU (GCD) 1基を関連付ける形式を採っている。  
 これは *Crusher* の特性だとしており、プロセス間のメッセージ機能、Open MPI (Message Passing Interface) ライブラリを使う上で性能に影響する。  
