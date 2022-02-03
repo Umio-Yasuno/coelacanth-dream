@@ -1,7 +1,7 @@
 ---
 title: "AMDGPUの各種 IPバージョン"
 date: 2022-01-31T17:53:21+09:00
-draft: true
+draft: false
 tags: [ "Linux_Kernel", "GFX9", "RDNA", "RDNA_2" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU", "GPU", "Database" ]
@@ -11,7 +11,9 @@ noindex: false
 
 以前の AMDGPUドライバーでは、DeviceID (DID) から GPU ASIC を検出し、そこから分岐して各種 IPブロック (GC, SDMA, DCN, UVD, VCN, VCE) をサポートする形を採っていたが、少し前 (2021/09) から、VBIOS、ファームウェアに含まれている各種 IPバージョンを取得、直接 IPブロックをサポートする形になった。  
 これにより、ドライバーに直接記述された DeviceIDリスト や GPU ASIC に結びつけた各種 IPバージョンの情報が無くとも IPブロックをサポートすることができる。以前の方法では、ある GPU の DeviceID を後から追加した場合、ほとんどサポートされている状態でもその DeviceID が反映されなければ不明の GPU として扱われてしまう。  
-IPバージョンを VBIOS、ファームウェアに含むようになったのは *GFX9 (Vega)* 世代からとなる。  
+例えば、*Renoir, Lucienne, Green Sardine (Cezanne), Barcelo* は共通した構成の GPU部となるが、DevceID は異なるため、サポートには DeviceID を追加するパッチを適用する必要があった。  
+
+IPバージョンを VBIOS、ファームウェアに含むようになったのは *GFX9 (Vega)* 世代からとなり、それ以前の世代は従来の DeviceID から検出する方法が使われる。  
 
 * [[PATCH 00/66] Move to IP driven device enumeration](https://lists.freedesktop.org/archives/amd-gfx/2021-September/069191.html)
 
