@@ -1,5 +1,5 @@
 ---
-title: "Alder Lake-N を搭載する Chromebookボード Nissa, Nivviks, Nereid"
+title: "Alder Lake-N を搭載する Chromebookボード 「Nissa, Nivviks, Nereid」"
 date: 2022-01-12T21:31:27+09:00
 draft: false
 tags: [ "Alder_Lake", "Coreboot", "Chromebook" ]
