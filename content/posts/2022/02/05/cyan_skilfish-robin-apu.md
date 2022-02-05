@@ -29,7 +29,7 @@ noindex: false
 コードネームの類と思われるが、自分は `ROBIN` の情報を全く持っていない。`ROBIN+` とあることから他のコードネームを持つ APU も同じ DeviceID に割り当てられている可能性もある。  
 としても、今回のパッチで追加されたように、また `is_skillfish_series()` 関数における判定に使われていることからも *Cyan Skilfish* に関連することは確かと言える。  
 `is_skillfish_series()` 関数を使用している部分からして、*ROBIN (0x143F)* もまたディスプレイコントローラーに DCN 2.01 を採用し、最大画面出力数は 2画面で変わらない。  
-また、*Cyan Skilfish* はディスプレイコントローラー部において、eDP のバックライト調整機能 (Adaptive Backlight Modulation) や Panel Self Refresh 機能を担当する DMCU (Display Microcontroller Unit) を持たないが、同じ *RDNA/GFX10.1* 世代では *Navi10, Navi14* も持たないため、特別変わった点ではない。何故か *RDNA/GFX10.1* 世代では *Navi12* だけが持つ。  
+また、*Cyan Skilfish* はディスプレイコントローラー部において、eDP のバックライト調整機能 (Adaptive Backlight Modulation) や Panel Self Refresh 機能を担当する DMCU (Display Microcontroller Unit) を持たないが、同じ *RDNA/GFX10.1* 世代では *Navi10, Navi14* も持たないため、特別変わった点ではない。*RDNA/GFX10.1* 世代では *Navi12* だけが DMCU を持つ。  
 
  > 		+bool is_skillfish_series(struct amdgpu_device *adev)
  > 		+{

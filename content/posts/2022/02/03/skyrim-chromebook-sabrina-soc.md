@@ -12,6 +12,8 @@ noindex: false
 Google の Karthik Ramasubramanian 氏より、Coreboor に *AMD Sabrina SoC* を搭載する Chromebookボード *Skyrim* のサポートを追加する最初のパッチが投稿された。  
 Karthik Ramasubramanian 氏は、*AMD Sabrina SoC* プラットフォームにおける LPDDR5メモリのサポートを追加するパッチも投稿している。  
 {{< link >}} [AMD Sabrina SoC は LPDDR5メモリをサポート | Coelacanth's Dream](/posts/2022/02/02/amd-sabrina-lpddr5/) {{< /link >}}
+*Skyrim* は世界的に有名なあのゲームから取っていると思われ、これまでにも AMD APU/SoC を搭載する Chromebookボードにはゲームから取ったコードネームが付けられている。  
+{{< link >}} [Lucienne/Cezanne APU を搭載する Chromebookボード　―― Guybrush、Mancomb | Coelacanth's Dream](/posts/2020/11/22/lcn-czn-fp6-chromebook-board/) {{< /link >}}
 
 * [mb/google/skyrim: Add new mainboard (I008fea4a) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/61565)
 

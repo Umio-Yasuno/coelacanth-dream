@@ -66,7 +66,7 @@ CPU部においても、*Elkhart/Jasper Lake* は最大 4-Core、L2キャッシ�
 | :-- | :--: | :--: | :--: | :--: |
 | Variant (Model) | Desktop (0x97) | Mobile (0x9A) | Mobile (0x9A) | Embedded? (0xBE) |
 | CPU (big + small) | 8 + 8 | 6 + 8 | 2 + 8 | 0 + ? |
-| GPU (Gen12.2) | GT1 32EU | GT2 96EU | GT2 96EU | GT2 96EU? |
+| GPU (Gen12.2) | GT1 32EU | GT2 96EU | GT2 96EU | GT1 32EU? |
 | CPU PCIe | Gen5 8L x2,<br>Gen4 4L x2 | Gen5 8L,<br>Gen4 4L x2 | Gen4 4L ? | N/A |
 | TDP (PL1) | - | 15-45W | 9-15W ? | |
 
