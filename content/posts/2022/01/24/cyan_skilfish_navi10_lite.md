@@ -2,7 +2,7 @@
 title: "Cyan Skilfish と Navi10_LITE"
 date: 2022-01-24T06:56:23+09:00
 draft: false
-tags: [ "Cyan_Skilfish", "gfx1013" ]
+tags: [ "Cyan_Skilfish", "gfx1013", "RDNA" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU" ]
 noindex: false
