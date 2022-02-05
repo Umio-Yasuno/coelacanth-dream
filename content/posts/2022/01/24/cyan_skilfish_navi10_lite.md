@@ -24,7 +24,7 @@ AMDGPU Display Core (DC) ドライバの新しいパッチが投稿、公開さ�
  >
  > {{< quote >}} [[PATCH 13/24] drm/amd/display: Basic support with device ID](https://lists.freedesktop.org/archives/amd-gfx/2022-January/074104.html) {{< /quote >}}
 
-しかし *Cyan Skilfish* と異なるコードネームに関しては、*NAVI12_LITE (NV_NAVI12_LITE_P_A0)* と APU/GPU ASIC に割り当てられた `external_rev_id/eChipRev` が一致する。  
+しかし *Cyan Skilfish* と異なるコードネームに関しては、*NAVI12_LITE (NV_NAVI12_LITE_P_A0)* と `external_rev_id/eChipRev` が一致する。`external_rev_id/eChipRev` は AMD APU/GPU ASIC に割り当てられた ID であり、  
 {{< link >}} [Cyan Skilfish APU のディスプレイエンジンをサポートするパッチが投稿される　―― NAVI12_LITE | Coelacanth's Dream](/posts/2021/09/28/cyan_skilfish-display-support/#navi12_lite) {{< /link >}}
 
 *Cyan Skilfish* には *NAVI10_LITE* と *NAVI12_LITE*、2つのコードネームも結び付けられていることとなるが、*Cyan Skilfish* 自体も 2種類のバージョンが存在する。  

@@ -10,8 +10,8 @@ noindex: false
 ---
 
 Google の Karthik Ramasubramanian 氏より、Coreboot のメモリツールに *AMD Sabrina SoC* のサポートを追加するパッチが投稿された。  
-パッチコメントでは、*AMD Sabrina SoC* は LPDDR5メモリをサポートする予定にあるとしている。  
-Coreboot では、*Alder Lake-N/M/P* と LPDDR5メモリを組み合わせたプラットフォームをサポートしているが、*Alder Lake-N/M/P* は SPD (Serial Presence Detect) のバージョンに 1.0、*AMD Sabrina SoC* では 1.1 を想定している。パッチはその違いに対応することを目的としたもの。  
+パッチコメントでは、*AMD Sabrina* は LPDDR5メモリをサポートする予定にあるとしている。  
+Coreboot では、*Alder Lake-N/M/P* と LPDDR5メモリを組み合わせたプラットフォームをサポートしているが、*Alder Lake-N/M/P* は SPD (Serial Presence Detect) のバージョンに 1.0、*AMD Sabrina* では 1.1 を想定している。パッチはその違いに対応することを目的としたもの。  
 
 * [spd/lp5: Generate initial SPDs for Sabrina SoC (Ibb43f26b) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/61543/2)
 * [util/spd_tools/spd_gen: Add support for Sabrina SoC (I2a2c0d0e) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/61542/2)
@@ -24,10 +24,12 @@ Coreboot では、*Alder Lake-N/M/P* と LPDDR5メモリを組み合わせたプ
  >
  > {{< quote >}} [util/spd_tools/spd_gen: Add support for Sabrina SoC (I2a2c0d0e) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/61542/2) {{< /quote >}}
 
-*AMD Sabrina SoC* は現在 Coreboot でサポートが進められており、CPUID (Family, Model)、GPU DeviceID、一部 I/O 構成は明かされているが、その他 OSS、コンパイラや Linux Kernel の各種ドライバーにはまだパッチが投稿されていない。  
+*AMD Sabrina* は現在 Coreboot でサポートが進められており、CPUID (Family, Model)、GPU DeviceID、一部 I/O 構成は明かされているが、その他 OSS、コンパイラや Linux Kernel の各種ドライバーにはまだパッチが投稿されていない。  
 {{< link >}} [AMD Sabrina SoC に向けたさらなるパッチ | Coelacanth's Dream](/posts/2022/01/14/amd-sabrina-soc-more-patch/) {{< /link >}}
 まだ謎の多い AMD APU/SoC だが、今回でメモリに LPDDR5 をサポートすることが公開された。  
-GPU部に *GFX9/Vega* を共通して採用する *Renoir, Lucienne, Green Sardine (Cezanne), Barcelo* は DDR4/LPDDR4メモリのサポートに留まるため、*AMD Sabrina SoC* ではメモリインターフェイスの世代が進んでいると見られる。  
+GPU部に *GFX9/Vega* を共通して採用する *Renoir, Lucienne, Green Sardine (Cezanne), Barcelo* は DDR4/LPDDR4メモリのサポートに留まるため、*AMD Sabrina* ではメモリインターフェイスの世代が進んでいると見られる。  
 LPDDR5メモリをサポートする AMD APU/SoC は現在、*VanGogh/Aerith (Zen 2 + RDNA 2)* と *Yellow Carp/Rembrandt (Zen 3 + RDNA 2)* があり、メモリインターフェイスだけで言えば *AMD Sabrina SoC* は *GFX9/Vega* 系 APU より、*GFX10.3/RDNA 2* 系 APU に近い。  
-しかし、*AMD Sabrina SoC* では SATAコントローラを持たず、CPU は CPPC2 をサポートしないなど、それらより小規模な APU/SoC であることが予想される。  
-
+しかし、*AMD Sabrina* では SATAコントローラを持たず、CPU は CPPC2 をサポートしないなど、それらより小規模な APU/SoC であることが予想される。  
+また、*AMD Sabrina* が LPDDR5メモリをサポートすることは、*FP6 パッケージ* とは別のパッケージを採用することを意味する。  
+*AMD Sabrina SoC* とそのメインボード (リファレンスボード) *AMD Chausie* は、コード的には *AMD Cezanne SoC* と *FP6 パッケージ* ボード *AMD Majolica* をコピーしたものを元にしているが、まずビルドを通すためとされている。  
+{{< link >}} [AMD Sabrina SoC に向けたさらなるパッチ | Coelacanth's Dream](/posts/2022/01/14/amd-sabrina-soc-more-patch/#chausie) {{< /link >}}
