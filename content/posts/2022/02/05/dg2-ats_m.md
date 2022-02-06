@@ -4,7 +4,7 @@ date: 2022-02-05T06:58:31+09:00
 draft: false
 tags: [ "DG2", "Xe-HPG", "Xe-HP" ]
 # keywords: [ "", ]
-categories: [ "Hardware", "Inte", "GPU" ]
+categories: [ "Hardware", "Intel", "GPU" ]
 noindex: false
 # summary: ""
 ---
