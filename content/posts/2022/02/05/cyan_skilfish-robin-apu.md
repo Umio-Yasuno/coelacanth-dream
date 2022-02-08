@@ -1,5 +1,5 @@
 ---
-title: "Navi10_LITE、Cyan Skillfishシリーズに Robin APU"
+title: "Cyan Skillfishシリーズ、Navi10_LITE、Navi12_LITE に Robin に Ariel"
 date: 2022-02-05T06:58:12+09:00
 draft: false
 tags: [ "Cyan_Skilfish", "RDNA", "gfx1013" ]

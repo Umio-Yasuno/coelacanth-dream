@@ -1,5 +1,5 @@
 ---
-title: "Yellow Carp/Rembrandt APU の DeviceID と Revision、Stepping"
+title: "Revision、Stepping で DeviceID が異なる Yellow Carp/Rembrandt APU"
 date: 2022-01-29T03:01:05+09:00
 draft: false
 tags: [ "Yellow_Carp", "Linux_Kernel" ]
