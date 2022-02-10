@@ -14,7 +14,7 @@ noindex: false
 Geekbench の実行結果が 2020/06/24 にアップロードされていた。  
 {{< link >}}[Default string Cato - Geekbench Browser](https://browser.geekbench.com/v4/cpu/15585159), [Default string Cato - Geekbench Browser](https://browser.geekbench.com/v4/cpu/15585185) {{< /link >}}
 
-発表されたその時は、**A9-9820** を Bulldozer系アーキテクチャ(Family 15h) ではないかと考えたが、Geekbench の実行結果を見ると `Family 22(16h) Model 38(22h)` となっており、Jaguar系アーキテクチャ(Family 16h) であるようだ。{{< comple >}}(やっぱ自分の推測ってロクに当たらない){{< /comple >}}  
+発表されたその時は、**A9-9820** を Bulldozer系アーキテクチャ(Family 15h) ではないかと考えたが、Geekbench の実行結果を見ると `Family 22(0x16) Model 38(0x26)` となっており、Jaguar系アーキテクチャ(Family 16h) であるようだ。{{< comple >}}(やっぱ自分の推測ってロクに当たらない){{< /comple >}}  
 {{< link >}} [CHUWIよりAMD A9-9820搭載MiniPC発売予定 & 推測 | Coelacanth's Dream](/posts/2020/03/14/chuwi-amd-a9-9820/) {{< /link >}}
 
 ## まだまだ謎ばかり

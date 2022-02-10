@@ -39,7 +39,7 @@ Karthik Ramasubramanian 氏は、*AMD Sabrina SoC* プラットフォームに�
  >
  > {{< quote >}} […/project-config.json · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/project/+/3319443/3/skyrim/skyrim15w/sw_build_config/platform/chromeos-config/generated/project-config.json) {{< /quote >}}
 
-素直に *Skyrim* には TDP: 6W と 15W の構成が計画されていると捕らえれば、*AMD Sabrina APU/SoC* は *Raven2 (Zen 2-Core/4-Thread + Vega 3-CU) APU/SoC* の後継と見ることができる。  
+素直に *Skyrim* には TDP: 6W と 15W の構成が計画されていると捉えれば、*AMD Sabrina APU/SoC* は *Raven2 (Zen 2-Core/4-Thread + Vega 3-CU) APU/SoC* の後継と見ることができる。  
 {{< link >}} [Raven2 | Coelacanth's Dream](/tags/raven2/) {{< /link >}}
 
 *Raven2* は *Dali* と *Pollock* のバリアントが存在し、バリアント間の区別にはまずパッケージの違いが挙げられる。  

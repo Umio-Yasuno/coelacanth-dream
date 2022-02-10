@@ -11,7 +11,6 @@ noindex: false
 
 個人的に気になった *DG2/Alchemist* と *ATS-M (Arctic Sound Mainstream)* の関係を一旦整理するだけの記事。  
 
-
 ## Arctic Sound-P/M {#ats-p_m}
 Intel のエンジニアは早く (2018年) から開発中の、Intel 初 (?) となる Discrete GPU に *Arctic Sound* というコードネームを付けていることを明らかにしていた。[^ats-codename]  
 当初 *Arctic Sound* は動画ストリーミング処理を担当するようなデータセンター向けの dGPU のみを対象にしたコードネームだったが、後にゲーミング向けにも対象を拡大した。  
@@ -25,6 +24,7 @@ Intel のエンジニアは早く (2018年) から開発中の、Intel 初 (?) �
 oneVPL でサポートする Intel GPU プラットフォームは列挙体 (enum) で管理され、`MFX_PLATFORM_ARCTICSOUND_P` と `MFX_PLATFORM_XEHP_SDV` 、`MFX_PLATFORM_ATS_M` と `MFX_PLATFORM_DG2` には同じ値が割り当てられている。  
 コメント部で、*ATS-M* は *DG2* と同じメディア機能を持つとしているが、*DG2* と分けた上で同じ値を割り当てた意図は不明。  
 
+{{< bq cite="[oneVPL-intel-gpu/mfxcommon.h at 5d0987b9b3ebe60844402dda532909075b5b7d02 · oneapi-src/oneVPL-intel-gpu](https://github.com/oneapi-src/oneVPL-intel-gpu/blob/5d0987b9b3ebe60844402dda532909075b5b7d02/api/vpl/mfxcommon.h#L200-L207)" >}}
  > 		    MFX_PLATFORM_ARCTICSOUND_P  = 45,
  > 		    MFX_PLATFORM_XEHP_SDV       = 45, /*!< Code name XeHP SDV. */
  > 		    MFX_PLATFORM_DG2            = 46, /*!< Code name DG2. */
@@ -33,8 +33,7 @@ oneVPL でサポートする Intel GPU プラットフォームは列挙体 (enu
  > 		    MFX_PLATFORM_ALDERLAKE_N    = 55, /*!< Code name Alder Lake N. */
  > 		#endif
  > 		    MFX_PLATFORM_KEEMBAY        = 50, /*!< Code name Keem Bay. */
- >
- > {{< quote >}} [oneVPL-intel-gpu/mfxcommon.h at 5d0987b9b3ebe60844402dda532909075b5b7d02 · oneapi-src/oneVPL-intel-gpu](https://github.com/oneapi-src/oneVPL-intel-gpu/blob/5d0987b9b3ebe60844402dda532909075b5b7d02/api/vpl/mfxcommon.h#L200-L207) {{< /quote >}}
+{{< /bq >}}
 
 ### ATS-M75/150 {#m75-m150}
 Mesa3D の *DG2* サポートは進められているが、今は一旦関連するコード部が無効化されている。  
@@ -43,17 +42,17 @@ Mesa3D の *DG2* サポートは進められているが、今は一旦関連す
 
 * [intel/dev: Add more DG2 pci-ids (still disabled, waiting on i915) (!14884) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/14884) 
 
+{{< bq cite="[intel/dev: Add more DG2 pci-ids (still disabled, waiting on i915) (!14884) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/14884/)" >}}
  > 		 CHIPSET(0x56a6, dg2_g11, "DG2", "Intel(R) Graphics")
  > 		 CHIPSET(0x56b0, dg2_g11, "DG2", "Intel(R) Graphics")
  > 		 CHIPSET(0x56b1, dg2_g11, "DG2", "Intel(R) Graphics")
  > 		+CHIPSET(0x56c0, dg2_g10, "ATS-M150", "Intel(R) Graphics")
  > 		+CHIPSET(0x56c1, dg2_g11, "ATS-M75", "Intel(R) Graphics")
- >
- > {{< quote >}} [intel/dev: Add more DG2 pci-ids (still disabled, waiting on i915) (!14884) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/14884/) {{< /quote >}}
+{{< /bq >}}
 
 関数形式のマクロ `CHIPSET` の引数は `(_id, _family, _fam_str, _name)` という並びになっている。 [^chipset]  
 `_id` (DeviceID) から GPU を検出、`_family` を元にその GPUファミリーが持つとしている機能の情報を取得する。`_fam_str, _name` はデバイス名として使われ、今回追加されたものだと実際には *Intel(R) Graphics (ATS-M75)* といったように表示される。`_fam_str` の部分には通常、マーケティング的な、SKU名が入る。  
-そのため、異なるのはデバイス名の補足的な部分のみとなるが、2つが異質なことには変わらないだろう。  
+そのため、異なるのはデバイス名の補足的な部分のみとなる。  
 *ATS-M* が上と oneVPL でサポートされているものと同じだとして、末尾の数字は消費電力とかを表しているのだろうか？  
 
 [^chipset]: [src/intel/dev/intel_device_info.c · 4f9141607f40f0be9cee38ff6b006a05bba72e88 · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/d9416cd8bd437bd877b21c685ccd28bbb425d7eb/src/intel/dev/intel_device_info.c#L1317-1341)
@@ -71,6 +70,7 @@ Intel のチーフアーキテクトである Raja Koduri 氏は、過去のイ�
 機能で差別化するとしたら、それはゲーミング向けとワークステーション向け、あるいはサーバー向けの SKU の間で行われるように思う。[^ascii]  
 
 [^ascii]: [ASCII.jp：Ponte VecchioとIntel Arcに関する疑問をRaja Koduri氏が回答　インテル GPUロードマップ (3/3)](https://ascii.jp/elem/000/004/069/4069704/3/)
+[^xe-hp]: <https://twitter.com/Rajaontheedge/status/1453808598283210752>
 
 {{< ref >}}
 * [Intel Xe - Wikipedia](https://ja.wikipedia.org/wiki/Intel_Xe#Xe-HP)
