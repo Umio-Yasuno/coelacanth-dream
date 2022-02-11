@@ -31,7 +31,8 @@ ROCM-SMI ツールでは、異なる *Infinity Fabric/XGMI (Global Memory Interc
 これは同期などの集合的な処理を行う単位となるスレッドグループ (Cooperative Groups) に対し、正しい使用可能な CU数を取得するためのものと思われる。  
 `HSA_COOP_CU_COUNT` が 1 の場合、ROCr-Rutime は `hsa_agent_get_info()` の `HSA_AMD_AGENT_INFO_COOPERATIVE_COMPUTE_UNIT_COUNT` 属性を通して、Cooperative Groups用の正しい CU数を返す。  
 1 以外か未設定の場合は、`HSA_AMD_AGENT_INFO_COMPUTE_UNIT_COUNT` と同じ CU数、おそらくは全体の CU数を返す。  
-ROCr-Runtime のソースコードを見るに、*CDNA 2/MI200/Aldebaran (gfx90a)* を想定した機能となっている。GPUID は `gfx{Major, Minor, Stepping}` のフォーマットで表現される。  
+ドキュメント中では触れられていないが、ROCr-Runtime のソースコードを見るに、*CDNA 2/MI200/Aldebaran (gfx90a)* を想定した機能となっており、それ以外の GPU では `HSA_AMD_AGENT_INFO_COMPUTE_UNIT_COUNT` 属性を通した CU数が返される。  
+GPUID は `gfx{Major, Minor, Stepping}` のフォーマットで表現される。  
 
 {{< bq cite="[ROCR-Runtime/amd_gpu_agent.cpp at 83b46ab91086e10edbc6100d5e55cac11c9b5d7a · RadeonOpenCompute/ROCR-Runtime](https://github.com/RadeonOpenCompute/ROCR-Runtime/blob/83b46ab91086e10edbc6100d5e55cac11c9b5d7a/src/core/runtime/amd_gpu_agent.cpp#L1013-L1023)" >}}
  > 		    case HSA_AMD_AGENT_INFO_COOPERATIVE_COMPUTE_UNIT_COUNT:
@@ -76,7 +77,7 @@ ROCm v5.0 では既知の問題 (Known Issues) として、dGPU の VBIOS を上
 
 [^amdvbflash]: <https://github.com/RadeonOpenCompute/ROCm/tree/roc-5.0.x#incorrect-dgpu-behavior-when-using-amdvbflash-tool>
 
-全体的にサポート状況が曖昧という印象を受ける。  
+全体的にサポート状況が曖昧という印象を受け、開発者とサポーターの間で正しく情報共有が行われていないのではないかという気がする。  
 ROCm は複数のライブラリ、ソフトウェアから構成されるプラットフォーム、ソフトウェアスタックであり、サポートリストに載っていない AMD GPU ではどこまでサポートされているかが判然としない。  
 *RDNA 1/2* GPU の ROCmサポートは以前から多くに望まれており、そうした issue が複数存在するが、ROCmプラットフォーム全体でサポートしているか否かではなく、各種ツール、OpenCL/HIPランタイム、HPC向け計算ライブラリ、ML向けライブラリ、それぞれでサポート状況を示せば、サポートリストに載っていないことから発する要望やバージョン更新による混乱を減らせるのではないかと思う。  
 
