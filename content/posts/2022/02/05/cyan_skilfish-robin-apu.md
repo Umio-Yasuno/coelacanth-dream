@@ -1,5 +1,5 @@
 ---
-title: "Cyan Skillfishシリーズ、Navi10_LITE、Navi12_LITE に Robin に Ariel"
+title: "Cyan Skilfishシリーズ、Navi10_LITE、Navi12_LITE に Robin に Ariel"
 date: 2022-02-05T06:58:12+09:00
 draft: false
 tags: [ "Cyan_Skilfish", "RDNA", "gfx1013" ]
@@ -41,7 +41,8 @@ noindex: false
  >
  > {{< quote >}} [[PATCH 04/13] drm/amd/display: Basic support with device ID](https://lists.freedesktop.org/archives/amd-gfx/2022-February/074734.html) {{< /quote >}}
 
-どういった背景かは不明だが、ある APU を元にコードネームが多角的に増え、*Navi10_LITE, Navi12_LITE, Cyan Skilfish, ROBIN* となったのだろう。さらに言えば、*Navi10_LITE* には *Ariel* というコードネームも結びついている。  
+*Navi10_LITE* には *Ariel* というコードネームも結びついている。*Ariel* は *Cyan Skilfish* 以前に内部で使われていたコードネームのようだが、現在では使われていない。  
+どういった背景かは不明だが、ある APU を指すコードネームが多角的に増え、*Navi10_LITE, Navi12_LITE, Ariel, Cyan Skilfish, Robin* となったのだろう。  
 
  > 			SWDEV-132899 - [OCL][GFX10] passing "force-wgp-mode" option to Finalizer to enable WGP mode by default on gfx10+
  > 			and allow GPU_ENABLE_WGP_MODE to control the WGP/CU mode for HSAIL/SC path as well.
