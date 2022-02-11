@@ -27,11 +27,38 @@ ROCM-SMI ツールでは、異なる *Infinity Fabric/XGMI (Global Memory Interc
 
 [^xgmi-bw]: <https://github.com/RadeonOpenCompute/ROCm/tree/roc-5.0.x#display-xgmi-bandwidth-between-nodes>
 
-ROCm から少し外れるが、HIP/CUDA API を動的に読み込み、実行時に API を切り替え可能な [Orochi](https://github.com/GPUOpen-LibrariesAndSDKs/Orochi) が Apache License 2.0 下で公開された。  
+[ROCR-Runtime](https://github.com/RadeonOpenCompute/ROCR-Runtime) では新たな環境変数 `HSA_COOP_CU_COUNT` が追加された。[^coop-cu]  
+これは同期などの集合的な処理を行う単位となるスレッドグループ (Cooperative Groups) に対し、正しい使用可能な CU数を取得するためのものと思われる。  
+`HSA_COOP_CU_COUNT` が 1 の場合、ROCr-Rutime は `hsa_agent_get_info()` の `HSA_AMD_AGENT_INFO_COOPERATIVE_COMPUTE_UNIT_COUNT` 属性を通して、Cooperative Groups用の正しい CU数を返す。  
+1 以外か未設定の場合は、`HSA_AMD_AGENT_INFO_COMPUTE_UNIT_COUNT` と同じ CU数、おそらくは全体の CU数を返す。  
+ROCr-Runtime のソースコードを見るに、*CDNA 2/MI200/Aldebaran (gfx90a)* を想定した機能となっている。GPUID は `gfx{Major, Minor, Stepping}` のフォーマットで表現される。  
+
+{{< bq cite="[ROCR-Runtime/amd_gpu_agent.cpp at 83b46ab91086e10edbc6100d5e55cac11c9b5d7a · RadeonOpenCompute/ROCR-Runtime](https://github.com/RadeonOpenCompute/ROCR-Runtime/blob/83b46ab91086e10edbc6100d5e55cac11c9b5d7a/src/core/runtime/amd_gpu_agent.cpp#L1013-L1023)" >}}
+ > 		    case HSA_AMD_AGENT_INFO_COOPERATIVE_COMPUTE_UNIT_COUNT:
+ > 		      if (core::Runtime::runtime_singleton_->flag().coop_cu_count() &&
+ > 		          (isa_->GetMajorVersion() == 9) && (isa_->GetMinorVersion() == 0) &&
+ > 		          (isa_->GetStepping() == 10)) {
+ > 		        uint32_t count = 0;
+ > 		        hsa_status_t err = GetInfo((hsa_agent_info_t)HSA_AMD_AGENT_INFO_COMPUTE_UNIT_COUNT, &count);
+ > 		        assert(err == HSA_STATUS_SUCCESS && "CU count query failed.");
+ > 		        *((uint32_t*)value) = (count & 0xFFFFFFF8) - 8;  // value = floor(count/8)*8-8
+ > 		        break;
+ > 		      }
+ >             return GetInfo((hsa_agent_info_t)HSA_AMD_AGENT_INFO_COMPUTE_UNIT_COUNT, value);
+{{< /bq >}}
+
+[^coop-cu]: <https://github.com/RadeonOpenCompute/ROCm/tree/roc-5.0.x#new-environment-variable>
+
+{{< ref >}}
+* [Volta-Architecture-Whitepaper-v1.1-jp.pdf](https://images.nvidia.com/content/pdf/tesla/Volta-Architecture-Whitepaper-v1.1-jp.pdf)
+{{< /ref >}}
+
+ROCm v5.0 では *CDNA 2/MI200/Aldebaran (gfx90a)* を意識した変更点がいくつかあるものの、サポートリストには追加されていない。  
+
+それと、ROCm から少し外れるが、HIP/CUDA API を動的に読み込み、実行時に API を切り替え可能な [Orochi](https://github.com/GPUOpen-LibrariesAndSDKs/Orochi) が Apache License 2.0 下で公開された。  
+Orochi を使うことで、CUDAコードを HIPコードに変換してからコンパイルする必要がなくなり、単一のバイナリを維持することができる。  
 
 * [GPUOpen-LibrariesAndSDKs/Orochi](https://github.com/GPUOpen-LibrariesAndSDKs/Orochi)
-
-Orochi を使うことで、CUDAコードを HIPコードに変換してからコンパイルする必要がなくなり、単一のバイナリを維持することができる。  
 
 ## 曖昧なサポート状況 {#support}
 まず自分が熱心な ROCmユーザーではなく、GPUプログラマーでもないことを断っておく。  
