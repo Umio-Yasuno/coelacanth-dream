@@ -50,7 +50,7 @@ GPU部の DeviceID が追加されていることから、`Family 17h Model A0h`
 Coreboot には *Zen 3 APU* 、*Green Sardine (Cezanne), Barcelo* のサポートがすでに追加されており、CPUアーキテクチャとしては前世代のものが新たに追加されることとなる。  
 
 今回のパッチ 2つには *amd-sabrina-soc* というトピックが付与されており、`Family 17h Model A0h` を指していると思われる。  
-ただ、GPU部に対するソフトウェアではコードネーム *VanGogh* が使われつつも、SoC としては *Aerith* という別のコードネームを持つ前例がある。同様に、AMDGPUドライバ等では `Family 17h Model A0h` に対し、*Sabrina* とは別のコードネームを用いる可能性がある。  
+ただ、GPU部に対するソフトウェアではコードネーム *VanGogh* が使われつつも、SoC としては *Aerith* という別のコードネームを持つ前例がある。[^aerith] 同様に、AMDGPUドライバ等では `Family 17h Model A0h` に対し、*Sabrina* とは別のコードネームを用いる可能性がある。  
 
  * [topic:amd-sabrina-soc · Gerrit Code Review](https://review.coreboot.org/q/topic:amd-sabrina-soc)
 

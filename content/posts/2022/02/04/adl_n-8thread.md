@@ -81,3 +81,6 @@ GPU部の DeviceID は `0x46D0` 、これは *Alder Lake-N* の DeviceID に割�
 | GPU (Gen12.2) | GT1 32EU |
 | CPU PCIe | N/A |
 | PCH PCIe | 9-Lane |
+| Memory Bus Width | 64-bit[^single_mc] |
+
+[^single_mc]: [メモリコントローラー 1基 (64-bit) の Alder Lake-N | Coelacanth's Dream](/posts/2022/02/09/adl_n-single-mc/)
