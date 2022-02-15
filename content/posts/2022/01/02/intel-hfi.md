@@ -11,7 +11,7 @@ noindex: false
 
 Linux Kernel において Intel HFI (Hardware Feedback Interface) をサポートするパッチが、Intel の Linuxソフトウェアエンジニア [Ricardo Neri](https://www.linkedin.com/in/ricardo-neri-3347265) 氏によって投稿されている。  
 
- * [[PATCH v2 0/7] Thermal: Introduce the Hardware Feedback Interface for thermal and performance management](https://lore.kernel.org/linux-pm/20211220151438.1196-1-ricardo.neri-calderon@linux.intel.com/T/)
+* [[PATCH v2 0/7] Thermal: Introduce the Hardware Feedback Interface for thermal and performance management](https://lore.kernel.org/linux-pm/20211220151438.1196-1-ricardo.neri-calderon@linux.intel.com/T/)
 
 {{< pindex >}}
  * [Intel HFI](#hfi)
@@ -33,17 +33,18 @@ HFI ではスケジューラに対するヒントとして、相対的なレベ�
 
 ## Intel \"E\"HFI {#ehfi}
 *Lakefield* ではサポートせず、*Alder Lake* ではサポートしている機能として、Intel HFI より進んだ機能となる Intel EHFI (Enhanced Hardware Feedback Interface) がある。  
+今回のパッチでは、CPUID の機能フラグビットを HFI だけ確認しており、EHFI (Level: 0x6:0x0, Bit23) は確認していない。HFI のみを対象にした実装となっている。  
 
-EHFI ではソフトウェアスレッドに固有のインデックス (ClassID) が割り当てられ、スケジューラはこれに基づいて、ソフトウェアスレッドをどの CPUコアに割り当てるかを決定できる。  
+EHFI は名の通り HFI からスケジューラへのヒントとなる要素が強化されている。ソフトウェアスレッドには固有のインデックス (ClassID) が割り当てられ、スケジューラはこれを基にソフトウェアスレッドをどの CPUコアに割り当てるかを決定できる。  
 論理プロセッサには EHFI 関連の履歴が蓄積されるようになっており、これは ClassID の割り当て等に用いているのではないかと思われる。履歴をリセットする命令として `HRESET` 命令も *Alder Lake* ではサポートされている。  
 
-マーケティング的には *Intel Thread Director* と呼ばれ、Windows 11 でサポートされているそれは Intel EHFI を活用したものとなっている。  
-今の所 Linux Kernel には HFI へのインターフェイスを実装するパッチが投稿、公開されている段階であり、*Lakefield* も含めた Intel ハイブリッドアーキテクチャへの最適化は進んでいると言えるが、*Intel Thread Director* に相当する機能はまだ実装されていない。  
+マーケティング的には *Intel Thread Director* と呼ばれ、Windows 11 でサポートされているそれは Intel EHFI を活用している。[^adl-hc33]  
+今の所 Linux Kernel には HFI へのインターフェイスを実装するパッチが投稿、公開されている段階であり、*Lakefield* も含めた Intel ハイブリッドアーキテクチャへの最適化は進んでいると言えるが、EHFI を活用した *Intel Thread Director* に相当する機能はまだ実装されていない。  
 Linux におけるハードウェアの検証や OSS関連のニュースを発信している [Phoronix](https://www.phoronix.com/scan.php?page=home) は、Windows 11 と各種 Linuxディストリで多種多様のベンチマークを実行し、その結果を掲載している。[^phoronix-adl]  
 一部のアプリケーションにおいて Windows 11 の方が優れた性能を示しており、Linuxディストリでは *Golden Cove (Performance/Big), Gracemont (Efficient/Small)* へのコア割り当てが適切に行えていないことが窺える。  
 
+[^adl-hc33]: [HC2021.C1.1 Intel Efraim Rotem.pdf](https://hc33.hotchips.org/assets/program/conference/day1/HC2021.C1.1%20Intel%20Efraim%20Rotem.pdf)
 [^phoronix-adl]: [Windows 11 Better Than Linux Right Now For Intel Alder Lake Performance - Phoronix](https://www.phoronix.com/scan.php?page=article&item=alderlake-windows-linux&num=1)
-
 
 {{< ref >}}
  * [Intel® 64 and IA-32 Architectures Software Developer Manuals](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)
