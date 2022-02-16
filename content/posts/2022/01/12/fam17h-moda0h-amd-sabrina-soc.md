@@ -22,7 +22,7 @@ noindex: false
 
 ## Sabrina SoC {#sabrina}
 パッチで [Felix Held](https://github.com/felixheld) 氏は、SMBus (System Management Bus)、LPC (Low Pin Count) の DeviceID は前世代の Zen-based APU と同じとコメントしている。  
-他の情報と照らし合わせたところ、Display HD Audio Controller (HDA) の DeviceID が *VanGogh APU* のものと一致した。  
+他の情報と照らし合わせたところ、Display HD Audio Controller (HDA) の DeviceID `0x1640` が *VanGogh APU* のものと一致した。  
 {{< link >}} [AMD VanGogh APU ブートログ | Coelacanth's Dream](/posts/2021/03/17/vgh-bootlog/#pci_id) {{< /link >}}
 *VanGogh* 関連では、*Green Sardine (Cezanne)* の PSP (Platform Security Processor) DeviceID も *VanGogh* と同じとされ、同時期に複数の APU を並行して開発してたことが窺える。  
 {{< link >}} [Green Sardine/Cezanne APU の PSP DeviceID が追加される　―― VanGogh APU と同じ PSP か | Coelacanth's Dream](/posts/2021/04/17/green_sardine-apu-psp/) {{< /link >}}
