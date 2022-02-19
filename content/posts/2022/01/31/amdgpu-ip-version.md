@@ -1,5 +1,5 @@
 ---
-title: "AMDGPUの各種 IPバージョン"
+title: "IPバージョンベースのサポートに移行する AMDGPUドライバー"
 date: 2022-01-31T17:53:21+09:00
 draft: false
 tags: [ "Linux_Kernel", "GFX9", "RDNA", "RDNA_2" ]

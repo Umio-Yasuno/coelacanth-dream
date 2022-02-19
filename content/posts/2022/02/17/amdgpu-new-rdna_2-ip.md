@@ -13,10 +13,10 @@ noindex: false
 Linux Kernel における AMDGPUドライバーに向けて、新たな *RDNA 2* APU の各種 IPブロックのサポートを追加するパッチが投稿されている。  
 各種 IPブロックはほとんどが、直接 IPバージョンを指定する形でサポートが追加されており、従来のように DeviceID から GPU ASIC を検出する形は採っていない。  
 こうしたサポート形式は最近になって採られるようになり、VBIOS、ファームウェアから各種 IPバージョンを取得できる *GFX9 (Vega)* とそれ以降の世代では IPバージョンベースのコードに置き換えられている。  
-{{< link >}} [AMDGPUの各種 IPバージョン | Coelacanth's Dream](/posts/2022/01/31/amdgpu-ip-version/) {{< /link >}}
+{{< link >}} [IPバージョンベースのサポートに移行する AMDGPUドライバー | Coelacanth's Dream](/posts/2022/01/31/amdgpu-ip-version/) {{< /link >}}
 
 GC: 13.0.7, DCN: 3.1.6, VCN: 3.1.1, NBIO: 7.5.1, SMU: 13.0.9, PSP: 13.0.8, SDMA 5.2.7、これら IPブロックをサポートするパッチが近いタイミングで投稿されている。  
-ただ、一部 IPブロックは関連付けられているが、また一部はそうでない。そのため、厳密に言えば今回お取り上げるパッチは 1つの AMD APU ではなく、また別の APU か複数の APU を想定している可能性がある。  
+ただ、一部 IPブロックは関連付けられているが、また一部はそうでない。そのため、厳密に言えば今回取り上げるパッチは 1つの AMD APU ではなく、また別の APU か複数の APU を想定している可能性がある。  
 
 パッチでは、従来の DeviceIDベースのサポートと異なり、コードネームにまったく触れていない。  
 APU/GPU、SoC として何らかのコードネームはあるかもしれないが、AMDGPUドライバーでそれを基に開発する必要性が薄くなった。  
@@ -36,12 +36,19 @@ DeviceID を追加することなく、 IPブロックを持つ AMD APU/GPU ASIC
 
 * [Core Driver Infrastructure — The Linux Kernel documentation](https://www.kernel.org/doc/html/latest/gpu/amdgpu/driver-core.html)
 
+{{< pindex >}}
+ * [GC (Graphics and Compute)](#gc)
+ * [DCN 3.1.6](#dcn)
+{{< /pindex >}}
+
 ## GC (Graphics and Compute) {#gc}
 コンピュートユニットやグラフィクス専用の固定機能ブロックを含む GFXコア部、GC (Graphics and Compute) のバージョンは 10.3.7。  
 ドキュメントでは、GC は GPU内で最大の IPブロックとしており、その関係かコードネームの代わりとして *GC_10_3_7* が使われている。  
+IPバージョンベースのサポートでは今後コードネームらしいものは使わない方針となるのだろうか？  
+
 *GC_10_3_7* は、IPバージョンが Major: 10, Minor: 3 となっていることから、*RDNA 2 アーキテクチャ* を採用していると思われ、コードも既存の *RDNA 2* APU/GPU とほとんど共通している。  
 
-GPU部のキャッシュ構成情報を示すコード部も IPバージョンベースに移行しているが[^cache-ip-base]、*GC_10_3_7* の情報を追加するパッチはまだ投稿、公開されていない。  
+GPU部のキャッシュ構成を示すコード部も IPバージョンベースに移行しているが[^cache-ip-base]、*GC_10_3_7* の情報を追加するパッチはまだ投稿、公開されていない。  
 
 [^cache-ip-base]: [kfd_crat.c « amdkfd « amd « drm « gpu « drivers - kernel/git/next/linux-next.git - The linux-next integration testing tree](https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/tree/drivers/gpu/drm/amd/amdkfd/kfd_crat.c?h=next-20220216#n1383)
 
@@ -90,6 +97,27 @@ DCN 3.1.6 をサポートするパッチは 6個あるとしているが、内 2
 Watermark (WM) table は DDR4、LPDDR5 メモリに向けたものが用意されている。この点は [VanGogh/Aerith APU](/tags/vangogh) と一致する。[^vgh-dcn301]  
 *Yellow Carp/Rembrandt* は DDR5、LPDDR5 分の WM table のみが用意されているため、DCN 3.1.x ながら *GC_10_3_7* はそれと異なるメモリに対応すると読める。だが、メモリタイプが LPDDR5 でない場合に DDR4 の WM table が使われるようになっており、LPDDR5メモリはまず対応していると思われるが、DDR4 については仮のデータである可能性がある。  
 
+最大画面出力数といった規模は基本 *Yellow Carp/Rembrandt APU* と同じであり、最大 4画面出力に対応しているものと思われる。  
+
+ > 		+static const struct resource_caps res_cap_dcn31 = {
+ > 		+	.num_timing_generator = 4,
+ > 		+	.num_opp = 4,
+ > 		+	.num_video_plane = 4,
+ > 		+	.num_audio = 5,
+ > 		+	.num_stream_encoder = 5,
+ > 		+	.num_dig_link_enc = 5,
+ > 		+	.num_hpo_dp_stream_encoder = 4,
+ > 		+	.num_hpo_dp_link_encoder = 2,
+ > 		+	.num_pll = 5,
+ > 		+	.num_dwb = 1,
+ > 		+	.num_ddc = 5,
+ > 		+	.num_vmid = 16,
+ > 		+	.num_mpc_3dlut = 2,
+ > 		+	.num_dsc = 3,
+ > 		+};
+ >
+ > {{< quote >}} [[PATCH 5/6] drm/amd/display: Add DCN316 resource and SMU clock manager](https://lists.freedesktop.org/archives/amd-gfx/2022-February/075448.html) {{< /quote >}}
+
 LPDDR5メモリに対応する AMD APU には、最近になって [AMD Sabrina APU/SoC](/tags/sabrina) が Coreboot へのパッチで出てきている。  
 しかし、今の所 *GC_10_3_7* と *AMD Sabrina* で結び付けられるのは LPDDR5メモリに対応する点だけであるため、断定はできない。  
 
@@ -103,3 +131,4 @@ LPDDR5メモリに対応する AMD APU には、最近になって [AMD Sabrina 
 
 [^vgh-dcn301]: [vg_clk_mgr.c « dcn301 « clk_mgr « dc « display « amd « drm « gpu « drivers - kernel/git/next/linux-next.git - The linux-next integration testing tree](https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/tree/drivers/gpu/drm/amd/display/dc/clk_mgr/dcn301/vg_clk_mgr.c?h=next-20220216#n781)
 [^yc-dcn31]: [dcn31_clk_mgr.c « dcn31 « clk_mgr « dc « display « amd « drm « gpu « drivers - kernel/git/next/linux-next.git - The linux-next integration testing tree](https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/tree/drivers/gpu/drm/amd/display/dc/clk_mgr/dcn31/dcn31_clk_mgr.c?h=next-20220216#n687)
+
