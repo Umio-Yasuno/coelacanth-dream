@@ -1,5 +1,5 @@
 ---
-title: "RadeonSI に gfx1036、gfx1037 のサポートを追加するパッチ"
+title: "RadeonSI で gfx1036、gfx1037 のサポートが進められる"
 date: 2022-02-27T15:11:49+09:00
 draft: false
 categories: [ "Hardware", "AMD", "APU" ]
