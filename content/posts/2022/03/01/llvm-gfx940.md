@@ -32,6 +32,9 @@ GPU としては、コア部やメモリの規模、I/O部の改良がメイン�
 `FeatureMadMacF32Insts` は `V_MAD_F32/V_MAC_F32/V_MADAK_F32/V_MADMK_F32` 命令をサポートすることを示す機能フラグとなる。[^mad-mac-flag] それら命令は *RDNA 2/GFX10.3* 世代ではサポートされておらず、より丸め誤差、ULP (Unit of Last Place) が小さい `V_FMA_F32` 命令に置き換えられた。  
 {{< link >}} [RadeonSIドライバーに FMA32命令を強制するオプションが追加 | Coelacanth's Dream](/posts/2021/12/18/radeonsi-force-fma32/) {{< /link >}}
 *gfx90a* ではまだサポートが残されていたが、`FeatureMadMacF32Insts` が削除されたことから *gfx940* では *RDNA 2/GFX10.3* に揃えたと見られる。  
+他にも *gfx940* は、*RDNA系アーキテクチャ* では *RDNA 1/GFX10.1* から対応していた、ソースオペランドの 1つに定数を用いる `V_FMAMK_F32/V_FMAAK_F32` に対応する。[^fmamk_fmaak]  
+
+[^fmamk_fmaak]: [⚙ D120769 [AMDGPU] gfx940: support V_FMAMK_F32 and V_FMAAK_F32](https://reviews.llvm.org/D120769)
 
 [^mad-mac-flag]: [llvm-project/AMDGPU.td at a5d4f82b7392630e657fc8f4a46b62bfc25c7962 · llvm/llvm-project](https://github.com/llvm/llvm-project/blob/a5d4f82b7392630e657fc8f4a46b62bfc25c7962/llvm/lib/Target/AMDGPU/AMDGPU.td#L607-L611)
 
