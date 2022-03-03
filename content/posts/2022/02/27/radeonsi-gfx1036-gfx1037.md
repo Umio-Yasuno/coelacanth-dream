@@ -49,6 +49,9 @@ APU/GPU としてのファミリーは AMDGPUドライバー同様、`GC_10_3_6`
  > {{< quote >}} [amd: add support for gfx1036 and gfx1037 chips (85caa4be) · Commits · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/commit/85caa4be69897570d0b03600798b7f6ad5720f6e?merge_request_iid=15155) {{< /quote >}}
 
 `ac_get_llvm_processor_name()` において、GPUID が他 *RDNA 2 APU/dGPU* とまとめて *gfx1030* とされているが、これは ISAレベルではそれらに差が無いからではないかと思われる。  
+後に投稿されたパッチで当該部分が更新され、LLVM で定義されている GPUID がそれぞれに適用されるようになった。LLVM のメジャーバージョンで正式な GPUID を使うか、*gfx1030* を使うか分岐しているため、LLVM のリリースに合わせる意味合いが強かったとされる。[^llvm-name]  
+
+[^llvm-name]: [amd: update LLVM names, add env var to parse IBs in files, fix register shadowing (!15209) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/15209/diffs?commit_id=0cae7a59c08698fd822c4a50e98531f631dcb741)
 
  > 		@@ -179,6 +179,7 @@ const char *ac_get_llvm_processor_name(enum radeon_family family)
  > 		    case CHIP_BEIGE_GOBY:
