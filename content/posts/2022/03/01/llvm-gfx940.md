@@ -27,6 +27,18 @@ GPU としては、コア部やメモリの規模、I/O部の改良がメイン�
  >
  > {{< quote >}} [⚙ D120688 [AMDGPU] Add gfx940 target](https://reviews.llvm.org/D120688) {{< /quote >}}
 
+それ以外では、*gfx940* は dGPU とし、*Vega20/gfx906* からサポートされている SRAMECC 機能、*Aldebaran/gfx90a* からの TgSplit 機能もサポートしている。  
+
+ > 		+     ``gfx940``                  ``amdgcn``   dGPU  - sramecc         - Architected                   *TBA*
+ > 		+                                                    - tgsplit           flat
+ > 		+                                                    - xnack             scratch                       .. TODO::
+ > 		+                                                                      - Packed
+ > 		+                                                                        work-item                       Add product
+ > 		+                                                                        IDs                             names.
+ > 		+
+ >
+ > {{< quote >}} [⚙ D120688 [AMDGPU] Add gfx940 target](https://reviews.llvm.org/D120688) {{< /quote >}}
+
 *gfx90a* と *gfx940* がサポートする機能の差分が以下。  
 主要な命令、機能としては `FeatureMadMacF32Insts` が削除され、`FeatureArchitectedFlatScratch` が追加されている。  
 `FeatureMadMacF32Insts` は `V_MAD_F32/V_MAC_F32/V_MADAK_F32/V_MADMK_F32` 命令をサポートすることを示す機能フラグとなる。[^mad-mac-flag] それら命令は *RDNA 2/GFX10.3* 世代ではサポートされておらず、より丸め誤差、ULP (Unit of Last Place) が小さい `V_FMA_F32` 命令に置き換えられた。  
