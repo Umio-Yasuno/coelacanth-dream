@@ -2,7 +2,7 @@
 title: "AMD GPU の GPU ID は何を意味するか"
 date: 2020-06-22T23:12:53+09:00
 draft: false
-tags: [ "Radeon" ]
+tags: [ "Radeon", "LLVM" ]
 keywords: [ "", ]
 categories: [ "Hardware", "GPU", "AMD", "Database" ]
 noindex: false

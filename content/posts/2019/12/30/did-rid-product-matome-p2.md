@@ -171,17 +171,17 @@ summary: " "
 | | 0xCD | Silver 3050C[^7] | (Vega 2) |
 | | 0xCE | Gold 3150C[^7]/3150U[^gold-3150u] | (Vega 3) |
 | | 0xCF | R1305G | (6W[^8]) |
-| | 0xDE[^9] | | |
+| | 0xDE[^9] | Silver 3050e[^3050e-ln-hw-db] | |
 | | 0xDF[^9] | | |
 | | 0xE3[^9] | | (6W[^8] Vega 3) |
 | | 0xE4[^9] | R1102G[^11] | (6W[^8] Vega 3) |
 ||
 | | ? | 3020e | |
-| | ? | Silver 3050e | |
 | | ? | 3050GE | (35W AM4 Vega 3) |
 
 [Page Top](#page_index)
 
+[^3050e-ln-hw-db]: [HW probe of Lenovo 3181 SDK0J40697 WIN ... (ThinkCentre M75n 11GW000BUS) #56f9a83d77: lspci](https://linux-hardware.org/?probe=56f9a83d77&log=lspci)
 [^gold-3150u]: [bigining - dmesg - OpenBenchmarking.org](https://openbenchmarking.org/system/2109268-IB-FIRST907876/bigining/dmesg)
 [^7]: [2040455: Rework map_oprom_vendev to add revision check and mapping —   Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/coreboot/+/2040455/3/src/soc/amd/picasso/northbridge.c#332)
 [^8]: [[Dali] Raven 2 detection Patch](https://lists.freedesktop.org/archives/amd-gfx/2020-February/045579.html) <br> <https://lists.freedesktop.org/archives/amd-gfx/attachments/20200205/f22ebc46/attachment.obj>
@@ -193,7 +193,7 @@ summary: " "
 | :--- | :--- | :---: | :---: |
 | 0x15D8 &darr; | 0x94 | | |
 | | 0x95 | | |
-| | 0xE9 | | (Samples FT5)[^7] |
+| | 0xE9 | 3015e[^3015-ln-hw-db] | (Samples FT5)[^7] |
 | | 0xEA | | (Production FT5)[^7] |
 | | 0xEB | | |
 | | | 3015e | |
@@ -202,6 +202,8 @@ summary: " "
 
  > Source:<cite>
 [drm/amd/display: add Pollock IDs, fix Pollock & Dali clk mgr construct - amd-staging-drm-next](https://cgit.freedesktop.org/~agd5f/linux/commit/drivers/gpu/drm/amd/display/include/dal_asic_id.h?h=amd-staging-drm-next&id=04d8707ef5549065c10d5a2e20d2c61089807997)</cite>
+
+[^3015-ln-hw-db]: [HW probe of Lenovo 100e 2nd Gen 82GJ #ce0d33750c: lspci](https://linux-hardware.org/?probe=ce0d33750c&log=lspci)
 
 #### ?
 
