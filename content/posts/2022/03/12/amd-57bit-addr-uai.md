@@ -10,10 +10,10 @@ noindex: false
 # author: ""
 ---
 
-linux-mm (memory management) メーリングリストに、近く登場する AMDプロセッサでサポートされる AMD UAI (Upper Address Ignore) をメモリアドレスへのメタデータ、タグの付与に活用するパッチが投稿されている。  
+AMD の [Bharata B Rao](https://in.linkedin.com/in/bharata-b-rao-58123851) 氏より linux-mm (memory management) メーリングリストに、近く登場する AMDプロセッサでサポートされる AMD UAI (Upper Address Ignore) をメモリアドレスへのメタデータ、タグの付与に活用するパッチが投稿されている。  
 AMD UAI は仮想アドレスの上位 7-bit (Bit_63:57) に対するチェックを抑制する機能であり、ソフトウェアはその分をメタデータ、タグの格納に活用することができる。  
 
-* [[RFC PATCH v0 0/6] x86/AMD: Userspace address tagging](https://lore.kernel.org/linux-mm/2b26fc5b-d709-f2e1-0c8f-a6a548008216@intel.com/T/#e1b9caa0c700839bc9238a3161ddc5b757062d077)
+* [[RFC PATCH v0 0/6] x86/AMD: Userspace address tagging](https://lore.kernel.org/linux-mm/2b26fc5b-d709-f2e1-0c8f-a6a548008216@intel.com/T/)
 
 パッチコメントにて、現 AMDプロセッサは最大 57-bits の仮想 (virtual/logical) アドレスサイズをサポートするとしているが、*AMD Zen 3 アーキテクチャ* は最大 48-bit であるため、次世代の AMDプロセッサ、*AMD Zen 4 アーキテクチャ* を指しているのではないかと思われる。  
 
@@ -36,7 +36,8 @@ AMD UAI は仮想アドレスの上位 7-bit (Bit_63:57) に対するチェッ�
 機能の主な差異としては、メタデータのサイズと位置が挙げられ、  
 Intel LAM は LAM_U48 の場合 Bit_62:48 (15-bits) を、LAM_U57 の場合は Bit_62:57 (6-bits) をメタデータとして用いる。  
 Arm TBI は Bit_63:56 (8-bits) を無視し、その内の一部、Bit_59:56 (4-bits) を Arm MTE でメタデータとして用いる。  
-AMD UAI は Bit_63:57 (7-bits) をメタデータとして用いるため、メタデータのサイズと位置が一致するものはなく、それぞれで異なる。  
+AMD UAI は Bit_63:57 (7-bits) を無視するため、メタデータのサイズと位置が一致するものはなく、それぞれで異なる。  
+無視されるビットすべてをメタデータとして活用しなければ、機能間で仕様をある程度一致させることは可能かもしれないが。  
 
 Arm MTE の例ではタグの一致を確認することで、メモリ安全性に関わる 2つのエラー、解放後メモリの使用 (Use-After-Free) と領域外アクセス (out-of-bounds) を検知可能としている。  
 
