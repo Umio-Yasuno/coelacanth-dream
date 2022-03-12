@@ -15,6 +15,16 @@ AMD UAI は仮想アドレスの上位 7-bit (Bit_63:57) に対するチェッ�
 
 * [[RFC PATCH v0 0/6] x86/AMD: Userspace address tagging](https://lore.kernel.org/linux-mm/2b26fc5b-d709-f2e1-0c8f-a6a548008216@intel.com/T/)
 
+UAI のサポートフラグ `CPUID.(EAX=0x8000_0021, ECX=0x0):EAX[bit 7]` から確認可能としている。  
+
+ > 		@@ -42,6 +42,7 @@ static const struct cpuid_bit cpuid_bits[] = {
+ > 		 	{ X86_FEATURE_CPB,		CPUID_EDX,  9, 0x80000007, 0 },
+ > 		 	{ X86_FEATURE_PROC_FEEDBACK,    CPUID_EDX, 11, 0x80000007, 0 },
+ > 		 	{ X86_FEATURE_MBA,		CPUID_EBX,  6, 0x80000008, 0 },
+ > 		+	{ X86_FEATURE_UAI,		CPUID_EAX,  7, 0x80000021, 0 },
+ >
+ > {{< quote >}} [[RFC PATCH v0 2/6] x86/cpufeatures: Add Upper Address Ignore(UAI) as CPU feature - Bharata B Rao](https://lore.kernel.org/linux-mm/20220310111545.10852-3-bharata@amd.com/) {{< /quote >}}
+
 パッチコメントにて、現 AMDプロセッサは最大 57-bits の仮想 (virtual/logical) アドレスサイズをサポートするとしているが、*AMD Zen 3 アーキテクチャ* は最大 48-bit であるため、次世代の AMDプロセッサ、*AMD Zen 4 アーキテクチャ* を指しているのではないかと思われる。  
 
 *AMD Zen 1/2/3* では物理アドレス空間、仮想アドレス空間ともに最大 48-bit のサポートとなっている。  
