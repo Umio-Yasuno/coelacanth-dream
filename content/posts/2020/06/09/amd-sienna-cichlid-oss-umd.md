@@ -9,9 +9,12 @@ noindex: false
 ---
 
 AMDGPU向けのオープンソースなドライバー、RadeonSI(OpenGL)、RADV(Vulkan) が *Sienna Cichlid* サポートに向けて動き始めた。  
-{{< link >}}[radv: add Sienna Cichild (!5389) · Merge Requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5389/commits){{< /link >}}
 
-今回読み取れるのは、*Sienna Cichlid* が
+* [radeonsi: add support for Sienna Cichlid (!5383) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5383)
+* [radv: add Sienna Cichild (!5389) · Merge Requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5389/commits)
+
+
+今回パッチ、マージリクエストから、*Sienna Cichlid* が以下のような特徴を備えていることが読み取れる。  
 
  * [SIMDユニットあたりで保持する実行中の Wave数が Navi1x の 20エントリ から 16エントリ に減らされている](#wavefront-16)[^2]
  * [GPU ID は gfx1030](#gfx1030)[^1]
@@ -20,7 +23,6 @@ AMDGPU向けのオープンソースなドライバー、RadeonSI(OpenGL)、RADV
  * [フレームバッファの `big_page` に対応](#big-page)[^4]
  * [SDMAが巨大なサイズ(約1GB)のパケットに対応](#sdma-big-packet)[^6]
 
-ということだ。  
 
 [^1]: <https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5383/diffs?commit_id=c09cac343eb8dbca0b8dda24941540b20768702b#diff-content-fbbe09bc487101e3f2f96c0b8fe543c915fa99bf>
 [^2]: <https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5389/diffs?commit_id=3239184db55f21c6708c87805284e257b780b5cb#diff-content-c3cf206d71203e77a4252c3915daf913c9251dc3>
@@ -44,6 +46,16 @@ LLVM のリリース間隔を見ると、ver11 は 2020/09 に来る可能性が
 スレッドに割り当てられるレジスタ数も増えるため、その点でもスレッド性能の向上が期待できる。  
 {{< link >}}参考: <cite>[コンピュータアーキテクチャの話(365) GCNのブロックダイヤグラムを読む | マイナビニュース](https://news.mynavi.jp/article/architecture-365/)</cite>{{< /link >}}
 
+ > 		-	if (info->chip_class >= GFX10)
+ > 		+	if (info->chip_class >= GFX10_3)
+ > 		+		info->max_wave64_per_simd = 16;
+ > 		+	else if (info->chip_class >= GFX10)
+ > 		 		info->max_wave64_per_simd = 20;
+ > 		 	else if (info->family >= CHIP_POLARIS10 && info->family <= CHIP_VEGAM)
+ > 		 		info->max_wave64_per_simd = 8;
+ >
+ > {{< quote >}} <https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5389/diffs?commit_id=dc698fb5dc3d4043d0c7908b5703b92ad7056e86#diff-content-5787f118213b56cb46d38ffa3760b8da393ae6c4> {{< /quote >}}
+
 ちなみに、コードを見る限り *AMD Polaris系 (Polaris10/11/12, VegaM)* も SIMD16ユニットあたり 8エントリ、CU全体で 32エントリとなっているらしく、過去にゲーミングGPUのため取り入れた改良点を再度取り入れたとも見られる。  
 
 ## GPU ID: gfx1030 {#gfx1030}
@@ -55,15 +67,14 @@ GFX9 で追加された、レンダリング領域を細かいタイルに分割
 まあ色々あったり効果が無かったりで微妙な扱いを受けていた。  
 {{< link >}}[Vegaの新機能今いずこ | Coelacanth's Dream](/posts/2019/12/07/where-vega-new-feature/#dsbr-draw-stream-binning-rasterizer){{< /link >}}
 
-今回追加されたコメントにも、Navi1x では効果が無かったとあり、  
+今回追加されたコメントにも、Navi1x では効果が無かったとしている。  
+元あったコードでは、専用VRAMが無い場合、つまり APU ならば有効可能にする処理を取っていたが、Navi1x GPUを統合した APU は現在無い。  
 
-```
-/* DFSM is not supported on GFX 10.3 and not beneficial on Navi1x. */
-```
+ > 		-      sscreen->dfsm_allowed = !sscreen->info.has_dedicated_vram;
+ > 		+      /* DFSM is not supported on GFX 10.3 and not beneficial on Navi1x. */
+ >
+ > {{< quote >}} [ac,radeonsi: start adding support for gfx10.3 (a23802bc) · Commits · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/commit/a23802bcb9a42a02d34a5a36d6e66d6532813a0d?merge_request_iid=5383) {{< /quote >}}
 
-引用元: <cite><https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/5389/diffs?commit_id=3239184db55f21c6708c87805284e257b780b5cb#diff-content-c5f2982df5fe472882e2234484ac9885cc80b82f></cite>
-
-そこに元あったコードでは、専用VRAMが無い場合、つまり APU ならば有効可能にする処理を取っていたが、Navi1x GPUを統合した APU は現在無い。  
 *Raven* でも DFSM有効化により、かえって性能が下がるケースがあったため、今後 GFX 10.3 またはそれ以降の GPU を統合した APU が出てきても DFSM が有効にされることはないだろう。  
 
 ## pc_lines は 1024 {#pc-lines}
