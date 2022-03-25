@@ -1,5 +1,5 @@
 ---
-title: "57-bits の仮想メモリアドレス空間と新機能 UAI が実装される将来の AMDプロセッサ"
+title: "57-bits の仮想メモリアドレス空間と新機能 UAI が実装される将来の AMD プロセッサ"
 date: 2022-03-12T08:13:30+09:00
 draft: false
 categories: [ "Software", "AMD", "CPU" ]
