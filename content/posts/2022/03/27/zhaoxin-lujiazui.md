@@ -14,10 +14,13 @@ Zhaoxin の MayShao 氏より、GCC のメーリングリストに同社のマ�
 Zhaoxin は中国に本社を置く x86互換CPUの開発、製造企業であり、VIA Technologies の x86-64 のライセンスを保持している。  
 
 *Lujiazui* はデスクトップ/モバイル向けの KX-6000 シリーズと サーバー向けの KH-30000 シリーズに採用されている。  
-コアあたり 1スレッド、コア数は両シリーズ共通して最大 8コア。ブーストクロック機能は KX-6640MA (4C/4T) のみ有効化されている。  
+コアあたり 1スレッド、コア数は両シリーズ共通して最大 8コア。  
 キャッシュ構成は、コアあたり L1 Data 32KB、L1 Instruction 32KB、複数コアで共有する L2キャッシュが最大 8MB。  
+KX-6640A/6640MA のみ 4C/4T、L2キャッシュ 4MB という仕様になっており、またブーストクロック機能は KX-6640MA のみ有効化されている。  
 
-メモリは DDR4-2666、デュアルチャネルをサポートしている。  
+CPUID における Family, Model, Stepping は `Family: 0x7, Model: 0x3B (59)` となっている。`(CPUID EAX: 0x000307B0)`  
+
+メモリは DDR4-2666、デュアルチャネルをサポート。  
 他 I/O には、PCIe 3.0 x16、USB 3.1 x2、USB 2.0 x4、SATA 3.2 x2 を備える。  
 
 * [[PATCH] [x86_64] Zhaoxin lujiazui enablement](https://gcc.gnu.org/pipermail/gcc-patches/2022-March/592269.html)
