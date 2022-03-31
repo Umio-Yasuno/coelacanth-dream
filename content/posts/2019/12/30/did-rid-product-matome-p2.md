@@ -650,12 +650,13 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | 0x7421 | 0x00 | PRO W6500M[^amdgpu_ids-1337803] |
 | 0x7422 | 0x00 | PRO W6400[^6cd1d146f947bdf6be66a08d1004cc5c75815773] |
 | 0x7423 | 0x00 | PRO W6300M[^amdgpu_ids-1337803] |
-| 0x7424 | | |
+| 0x7424 | 0x00 | RX 6300[^amdgpu-22_10] |
 | 0x743F &darr; | 0xC1 | RX 6500 [^amdgpu_ids-1362367] |
 | | 0xC3 | RX 6500M[^amdgpu_ids-1337803] |
 | | 0xC7 | RX 6400[^amdgpu_ids-1362367] |
 | | 0xCF | RX 6300M[^amdgpu_ids-1337803] | 
 
+[^amdgpu-22_10]: <http://repo.radeon.com/amdgpu/22.10/ubuntu/pool/main/libd/>
 [^6cd1d146f947bdf6be66a08d1004cc5c75815773]: [Update Device Info · GPUOpen-Tools/common_src_device_info@6cd1d14](https://github.com/GPUOpen-Tools/common_src_device_info/commit/6cd1d146f947bdf6be66a08d1004cc5c75815773)
 [^amdgpu_ids-1337803]: <http://repo.radeon.com/amdgpu/21.40.1/ubuntu/pool/main/libd/libdrm-amdgpu-common/libdrm-amdgpu-common_1.0.0.40501-1337803_all.deb>
 [^amdgpu_ids-1362367]: <http://repo.radeon.com/amdgpu/21.40.2/ubuntu/pool/main/libd/libdrm-amdgpu-common/libdrm-amdgpu-common_1.0.0.40502-1362367_all.deb>

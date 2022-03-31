@@ -1,5 +1,5 @@
 ---
-title: "gfx940 で新たにサポートされる命令と削除される命令"
+title: "gfx940 で新たにサポートされる命令と XF32フォーマット"
 date: 2022-03-19T16:59:40+09:00
 draft: false
 categories: [ "Hardware", "AMD", "GPU" ]
@@ -15,6 +15,14 @@ AMD の Stanislav Mekhanoshin 氏より、新たな CDNA系 GPUID *gfx940* の�
 
 前提情報として、AMD GPU における MFMA命令名は `V_MFMA_{CD}_{M}x{N}x{K}_{AB}` のフォーマットからなり、`{AB}` は入力データフォーマット、`{CD}` は一時的な結果と最終的な出力データフォーマットを示し、`{M,N,K}` は行列のサイズを示す。  
 `{M,N}` は値に {4,16,32} のどれかを取り、`{K}` は {1,2,4,8,16,32} から取る。  
+
+{{< pindex >}}
+ * [削除される MFMA系命令](#removed)
+ * [追加される MFMA系命令](#added)
+    * [XF32](#xf32)
+    * [SMFMAC](#smfmac)
+ * [V_MOV_B64](#v_mov_b64)
+{{< /pindex >}}
 
 ## 削除される MFMA系命令 {#removed}
 *gfx940* では MFMA系命令の従来の対応範囲から、`V_MFMA_I32_{32X32X8,16X16X16}_I8` と `V_MFMA_F32_{*}_BF16` が外される。  
