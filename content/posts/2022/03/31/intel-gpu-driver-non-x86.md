@@ -88,12 +88,13 @@ dGPU 単体としてはすでに Intel DG1 /Iris Xe MAX /SG1 ({{< xe class="lp" 
 
 ## 対応における課題 {#fence}
 
-現時点で、x86(-64) 以外のプラットフォームへのサポートを進める Intel GPUドライバーと関連ライブラリには、Mesa3D、IGC (Intel Graphics Compiler)、gmmlib (Graphics Memory Management Library) が確認できる。  
+現時点で、x86(-64) 以外のプラットフォームへのサポートを進める Intel GPUドライバーと関連ライブラリには、Mesa3D、IGC (Intel Graphics Compiler)、gmmlib (Graphics Memory Management Library)、Compute Runtime が確認できる。  
 サポートに追加される対象は主に ARM64 (aarch64) となっている。  
 
  * [intel: Support compiling on non-x86 (!15309) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/15309)
  * [Introduce ARM64 Support for the Library (#91) · intel/gmmlib@32f4cfc](https://github.com/intel/gmmlib/commit/32f4cfc294f8342f6e0e1bae2ef430c3971d50c6)
  * [Enable ARM build · intel/intel-graphics-compiler@eda4042](https://github.com/intel/intel-graphics-compiler/commit/eda4042be98cf1edd6cabf45104f4e1050a3bbfb)
+ * [Add neon intrinsics for aarch64 · intel/compute-runtime@cf90603](https://github.com/intel/compute-runtime/commit/cf906030ac0da5799d6a8ee7878f64bb20fa8b9c)
 
 まだ正式に対応してないため作業途中 (WIP) と思われるが、内容としては主に x86(-64) 固有の命令を直接使っている部分を、複数のアーキテクチャに対応したライブラリに置き換えるか、マクロで制御しコードを分ける、といった対応を取っている。  
 対応が必要な命令として挙げられているものには、主に `SSE/2/3/4.1/4.2`,`CLFLUSH`, `CPUID` がある。  
