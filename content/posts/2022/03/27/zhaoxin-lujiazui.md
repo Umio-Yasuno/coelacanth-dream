@@ -25,6 +25,12 @@ CPUID における Family, Model, Stepping は `Family: 0x7, Model: 0x3B (59)` �
 
 * [[PATCH] [x86_64] Zhaoxin lujiazui enablement](https://gcc.gnu.org/pipermail/gcc-patches/2022-March/592269.html)
 
+{{< pindex >}}
+ * [対応命令](#isa)
+ * [フロントエンド部](#frontend)
+ * [バックエンド部](#backend)
+{{< /pindex >}}
+
 ## 対応命令 {#isa}
 
 *Lujiazui* はベクトル命令に SSE4.2 /AVX、ビット操作命令に ABM (LZCNT) /BMI /BMI2 /POPCNT をサポートしている。  
