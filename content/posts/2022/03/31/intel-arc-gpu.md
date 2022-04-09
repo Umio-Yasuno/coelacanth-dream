@@ -19,6 +19,13 @@ Intel より、Intel Arc Aシリーズ GPU とその詳細が正式発表され�
 * [Intel、ノートPC向け単体GPU「Arc Aシリーズ」を正式発表。ローエンドからハイエンドまで4月から順次投入 - PC Watch](https://pc.watch.impress.co.jp/docs/news/1399221.html)
 * [Intel® Iris® Xe GPU Architecture](https://www.intel.com/content/www/us/en/develop/documentation/oneapi-gpu-optimization-guide/top/xe-arch.html)
 
+{{< pindex >}}
+ * [ACM-G10 (DG2-G10), ACM-G11 (DG2-G11)](#dg2-g10-g11)
+    * [ACM-G12 (DG2-G12)](#acm-g12)
+    * [メディアエンジン](#media)
+ * [ATS-M](#ats-m)
+{{< /pindex >}}
+
 ## ACM-G10 (DG2-G10), ACM-G11 (DG2-G11) {#dg2-g10-g11}
 一般に公開されているリリース、資料には記述されていないが、メディア向けの資料には Intel Arc Aシリーズのベースとなる 2種類のダイの詳細がある。  
 
@@ -32,6 +39,8 @@ Intel より、Intel Arc Aシリーズ GPU とその詳細が正式発表され�
 L1キャッシュ/SLM (Shared Local Memory) 192KB、メディアエンジン 2基、ディスプレイエンジン (パイプ) 4基という点は共通。  
 
 ダイサイズとトランジスタ数は、*ACM-G10* が 406mm2 と 21.7B、*ACM-G11* が 157mm2 と 7.2B となっている。  
+
+### ACM-G12 (DG2-G12) {#acm-g12}
 
 オープンソース・ドライバーでは、*ACM/DG2-G10/G11* に加え *ACM/DG2-G12* のサポートが進められているが、今回の発表では触れられていない。  
 IGC 内の記述から、*ACM/DG2-G12* は {{< xe >}}-Core 16基 (EU 256基) なると見られ、SKU としては *Intel Arc 5 A550M* と一致する。  
