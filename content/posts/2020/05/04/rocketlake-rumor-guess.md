@@ -1,7 +1,7 @@
 ---
 title: "Rocket Lakeの噂、そこからの推測"
 date: 2020-05-04T21:19:30+09:00
-draft: false
+draft: true
 tags: [ "Rocket_Lake", "Guess", "Rumor" ]
 keywords: [ "", ]
 categories: [ "Hardware", "Intel", "CPU", "GPU" ]

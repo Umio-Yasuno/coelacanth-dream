@@ -1,7 +1,7 @@
 ---
 title: "Alder Lake の噂と推測 ――Alder Lake は現実に向けたプロセッサか"
 date: 2020-05-07T01:52:51+09:00
-draft: false
+draft: true
 tags: [ "Alder_Lake", "Rumor", "Guess" ]
 keywords: [ "", ]
 categories: [ "Hardware", "Intel", "CPU"]
