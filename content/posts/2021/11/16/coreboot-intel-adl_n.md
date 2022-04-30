@@ -41,6 +41,7 @@ Intel CPU では CPUID における `Model` がマーケットセグメント別
  > 		#define CPUID_FAMILY_MODEL_MTL_S	0x000606C0		// Meteor Lake S
  > 		#define CPUID_FAMILY_MODEL_RPL_S	0x000B0670		// Raptor Lake S
  > 		#define CPUID_FAMILY_MODEL_RPL_P	0x000B06A0		// Raptor Lake P
+ >
  > {{< quote >}} <https://github.com/intel/dptf/blob/e1f10f989223720ccb6b2519f8d96435925407c0/Common/esif_ccb_cpuid.h#L108-L112> {{< /quote >}}
 
 
@@ -55,7 +56,6 @@ GPU部の DeviceID も `0x46A0/0x46A3` の 2つが追加されている。
  > 		#define PCI_DEVICE_ID_INTEL_ADL_N_GT2			0x46A3
  >
  > {{< quote >}} <https://review.coreboot.org/c/coreboot/+/59306/1/src/include/device/pci_ids.h#3885> {{< /quote >}}
-
 
 Mesa3D 内の [iris_pci_ids.h](https://gitlab.freedesktop.org/mesa/mesa/blob/main/include/pci_ids/iris_pci_ids.h) では、2つの DeviceID は Alder Lake GT2 に当たるため、*Alder Lake-N* の GPU部は *Alder Lake-M/P* 同様に最大 96EU の構成とされる。  
 また *Alder Lake-N* の DeviceID の上に `PCI_DEVICE_ID_INTEL_ADL_M_GT3` があるが、この `DeviceID: 0x46C3` も Alder Lake GT2 に当たる。そのため製品的な意味では GT3 なのかもしれないが、最大構成としては Alder Lake GT2 (96EU) だと思われる。  

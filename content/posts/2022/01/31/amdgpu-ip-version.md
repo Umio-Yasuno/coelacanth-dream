@@ -31,7 +31,7 @@ IPバージョンを VBIOS、ファームウェアに含むようになったの
 
 今回 IPバージョンをまとめた分だけだと、以下のようになっている。  
 
-* GC: Graphiics and Compute
+* GC: Graphics and Compute
 * SDMA: System DMA
 * DCE: Display Contoroller Engine
 * DCN: Display Core Next

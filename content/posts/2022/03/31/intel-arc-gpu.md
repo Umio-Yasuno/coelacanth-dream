@@ -43,9 +43,14 @@ L1キャッシュ/SLM (Shared Local Memory) 192KB、メディアエンジン 2�
 ### ACM-G12 (DG2-G12) {#acm-g12}
 
 オープンソース・ドライバーでは、*ACM/DG2-G10/G11* に加え *ACM/DG2-G12* のサポートが進められているが、今回の発表では触れられていない。  
-IGC 内の記述から、*ACM/DG2-G12* は {{< xe >}}-Core 16基 (EU 256基) なると見られ、SKU としては *Intel Arc 5 A550M* と一致する。  
-また、Mesa3D 内の記述から、L2キャッシュは 8MB になると見られる。  
+IGC 内の記述から、*ACM/DG2-G12* は {{< xe >}}-Core 16基 (EU 256基) なると見られ、発表されている SKU では *Intel Arc A550M* と一致する。  
+だが、Intel の公式ページでは *Arc A550M* の DeviceID は `0x5692` としており[^arc-a550m]、これは *ACM/DG2-G10* に割り当てられた DeviceID となる。[^dg2-did]  
+スペックが近いダイがあっても *ACM/DG2-G10* をベースにしていることから、*ACM/DG2-G12* ベースの SKU は後から発表されるのかもしれない。  
+また、Mesa3D 内の記述から、 *ACM/DG2-G12* の L2キャッシュサイズは 8MB になると見られる。  
 {{< link >}} [DG2-G12, DG2 L3 banks, SIMD width | Coelacanth's Dream](/posts/2022/01/16/xe_hpg-hpc-eu-inst/#dg2-l3-banks) {{< /link >}}
+
+[^arc-a550m]: [Intel® Arc™ A550M Graphics](https://www.intel.com/content/www/us/en/products/sku/228343/intel-arc-a550m-graphics/specifications.html?wapkw=a550m)
+[^dg2-did]: [[Intel-gfx] [PATCH v2 3/3] topic/core-for-CI: Add remaining DG2 and ATS-M device IDs](https://lists.freedesktop.org/archives/intel-gfx/2022-April/296374.html)
 
  > 		         case IGFX_DG2:
  > 		+            /* 128 */
