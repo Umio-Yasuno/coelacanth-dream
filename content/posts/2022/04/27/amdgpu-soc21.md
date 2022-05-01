@@ -3,7 +3,7 @@ title: "AMDGPUドライバーに SoC21 をサポートするパッチ"
 date: 2022-04-27T14:56:49+09:00
 draft: false
 categories: [ "Hardware", "AMD", "GPU" ]
-tags: [ "Linux_Kernel", ]
+tags: [ "Linux_Kernel", "GFX11" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]
