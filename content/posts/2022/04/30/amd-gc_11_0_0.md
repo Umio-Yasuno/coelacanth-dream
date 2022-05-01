@@ -1,5 +1,5 @@
 ---
-title: "次世代 GPU IPブロックのサポートが進む AMDGPUドライバー"
+title: "次世代 GPU IPブロックのサポートが進む AMDGPUドライバー ―― GFX11, GC 11.0, MES 11.0, IMU"
 date: 2022-04-30T18:16:11+09:00
 draft: false
 categories: [ "Hardware", "AMD", "GPU" ]
@@ -35,11 +35,14 @@ noindex: false
 
 ### MES {#mes}
 
+ * [[PATCH 00/73] MES support](https://lists.freedesktop.org/archives/amd-gfx/2022-April/078410.html)
+
 MES は従来の HWS (HardWare Scheduler) に近い機能を持つ。  
 用語の解説を挟むと、まず AMD GPU にはハードウェアブロックとして CP (Command Processor) があり、CP は多数のマイクロコントローラーで構成されている。その一部が MEC (MicroEngine Compute) であり、HWS は MEC内に位置する。  
-MES は MEC を置き換えるものと思われるが、パッチ内などで明言はされていない。  
+MES は MEC を置き換えるものと思われるが、今の所パッチ内などで明言はされていない。  
 
- * [[PATCH 00/73] MES support](https://lists.freedesktop.org/archives/amd-gfx/2022-April/078410.html)
+ * [Core Driver Infrastructure — The Linux Kernel documentation](https://www.kernel.org/doc/html/latest/gpu/amdgpu/driver-core.html#gpu-hardware-structure)
+ * [AMDGPU Glossary — The Linux Kernel documentation](https://www.kernel.org/doc/html/latest/gpu/amdgpu/amdgpu-glossary.html)
 
 MES は *RDNA 1/GFX10* 世代から搭載されていたが、デフォルトでは無効化されていた。AMDGPUドライバー側のサポートが進んでいなかったことが理由の一つにあると思われる。  
 今回のパッチでサポートが進んだものの、デフォルトでは無効化されている点は変更されていない。  
