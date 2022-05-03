@@ -137,6 +137,29 @@ IMU が何の略語なのかは触れられていないが、パッチのコメ�
  >
  > {{< quote >}} [[PATCH 21/29] drm/amdgpu: add init support for GFX11 (v2)](https://lists.freedesktop.org/archives/amd-gfx/2022-April/078513.html) {{< /quote >}}
 
+以下の引用部から、WGP 1基あたりの CU数は 2基という構成は *GC 11.0/GFX11* でも変わらないと考えられる。  
+
+ > 		+static u32 gfx_v11_0_get_cu_active_bitmap_per_sh(struct amdgpu_device *adev)
+ > 		+{
+ > 		+	u32 wgp_idx, wgp_active_bitmap;
+ > 		+	u32 cu_bitmap_per_wgp, cu_active_bitmap;
+ > 		+
+ > 		+	wgp_active_bitmap = gfx_v11_0_get_wgp_active_bitmap_per_sh(adev);
+ > 		+	cu_active_bitmap = 0;
+ > 		+
+ > 		+	for (wgp_idx = 0; wgp_idx < 16; wgp_idx++) {
+ > 		+		/* if there is one WGP enabled, it means 2 CUs will be enabled */
+ > 		+		cu_bitmap_per_wgp = 3 << (2 * wgp_idx);
+ > 		+		if (wgp_active_bitmap & (1 << wgp_idx))
+ > 		+			cu_active_bitmap |= cu_bitmap_per_wgp;
+ > 		+	}
+ > 		+
+ > 		+	return cu_active_bitmap;
+ > 		+}
+ > 		+
+ >
+ > {{< quote >}} [[PATCH 21/29] drm/amdgpu: add init support for GFX11 (v2)](https://lists.freedesktop.org/archives/amd-gfx/2022-April/078513.html) {{< /quote >}}
+
 CU内の SIMDユニットに関する記述もある。ここでは `navi10_enum.h` ファイルを include しているため、`NUM_SIMD_PER_CU` には *RDNA 1/RDNA 2* 世代と同じ `0x2` が入る。[^navi10_enum]  
 
 [^navi10_enum]: [linux/navi10_enum.h at aa6158112645aae514982ad8d56df64428fcf203 · torvalds/linux](https://github.com/torvalds/linux/blob/aa6158112645aae514982ad8d56df64428fcf203/drivers/gpu/drm/amd/include/navi10_enum.h)
@@ -270,8 +293,6 @@ VCN では、インスタンス数と、恐らくはどの対応コーディッ�
 まず、CU ごとに持つプライベートキャッシュ (TCP, Texture Cache per Pipe) だが、共有する CU数を示す `num_cu_shared` には WGP あたりの数を 2 で割っている。  
 このことから WGP あたりの CU数は 2 で変わらないことが考えられる。  
 ソースコード中では WGP ではなく、"WPG" になっているが、ここでは一旦誤字とする。  
-
-複数の CU で共有される SQC (Sequencer Cache)、スカラ L1データ/命令キャッシュも、WGP あたりの SQC数に CU数だろう 2 を掛けている。  
 
  > 		+static int kfd_fill_gpu_cache_info_from_gfx_config(struct kfd_dev *kdev,
  > 		+						   struct kfd_gpu_cache_info *pcache_info)
