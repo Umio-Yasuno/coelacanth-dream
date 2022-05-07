@@ -45,7 +45,7 @@ AMD は現地時間 2021/11/04 付で、*Sienna Cichlid/Navi21* ベースのサ�
 {{< link >}} [AMD の次世代GPU、Sienna Cichlid の Linux Kernelパッチが投稿される | Coelacanth's Dream](/posts/2020/06/02/amd-sienna_cichlid/#vcn3) {{< /link >}}
 2基をまとめて、デコード/エンコードを行う 1基の VCN としては構成されはしないが、役割を明確に分けることでパワーゲーティングを設定しやすくなり、より優れた電力効率を得ることができるとされている。[^vcn3-pg]  
 デコード/エンコード性能の詳細については不明だが、*Navy Flounder* などの統合された VCN 1基を搭載する場合よりも引き上げられている可能性はある。  
-また、*Beige Goby/Navi24* では対応コーディックに違いこそあるが、デコードのみに対応する VCN を 1基搭載しており、元々 VCN 3 ではデコードとエンコードにそれぞれ分割が可能なように設計されていると考えられる。  
-{{< link >}} [他 RDNA 2 GPU とは対応コーディックが異なる Yellow Carp APU と Beige Goby GPU | Coelacanth's Dream](/posts/2021/07/14/yc-bg-vcn/) {{< /link >}}
+また、*Beige Goby/Navi24* では対応コーデックに違いこそあるが、デコードのみに対応する VCN を 1基搭載しており、元々 VCN 3 ではデコードとエンコードにそれぞれ分割が可能なように設計されていると考えられる。  
+{{< link >}} [他 RDNA 2 GPU とは対応コーデックが異なる Yellow Carp APU と Beige Goby GPU | Coelacanth's Dream](/posts/2021/07/14/yc-bg-vcn/) {{< /link >}}
 
 [^vcn3-pg]: [[PATCH 38/42] drm/amd/powerplay: set VCN1 pg only for sienna_cichlid](https://lists.freedesktop.org/archives/amd-gfx/2020-July/051564.html)

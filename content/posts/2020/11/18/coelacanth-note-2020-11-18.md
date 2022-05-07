@@ -13,11 +13,11 @@ toc: false
 ## ソフトウェア側も AV1 HWデコードに対応 {#av1}
 
 *RDNA 2 / GFX10.3* 世代の GPU/APU、厳密に言えばそれらがマルチメディアエンジンとして搭載している VCN 3.0 が対応する AV1 HWデコードをサポートするパッチが Mesa3D に投稿、メインラインに取り込まれている。  
-解像度については、他コーディック同様 8K に対応している。  
+解像度については、他コーデック同様 8K に対応している。  
 {{< link >}} [Radeon: AV1 HW video acceleration with OMX (!7596) · Merge Requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/7596) {{< /link >}}
 
 これで *RDNA 2 / GFX10.3* 世代の GPU/APU を持つユーザーが AV1 HWデコードを活用できるようになる。  
-AV1コーディックは主に Youtube で使われており、HWデコードにはブラウザ側も対応する必要があるが、Firefox、Chromium系は (確か) VA-API を使っているはずなので、そこで引っ掛かることはないと思われる (たぶん)。  
+AV1コーデックは主に Youtube で使われており、HWデコードにはブラウザ側も対応する必要があるが、Firefox、Chromium系は (確か) VA-API を使っているはずなので、そこで引っ掛かることはないと思われる (たぶん)。  
 
 ## RadeonSI が VRS に対応 {#vrs}
 

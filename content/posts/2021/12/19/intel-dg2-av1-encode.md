@@ -11,7 +11,7 @@ noindex: false
 
 
 Intel GPU のメディア関連機能 (動画エンコード/デコード、ポストプロセッシング) をサポートする VA-API (Video Acceleration API) 向けドライバー、[Intel(R) Media Driver](https://github.com/intel/media-driver) で *Alchemist/DG2* 、*Ponte Vecchio* 、*{{< xe class="hp" >}} SDV* のサポートが進められている。  
-そして masterブランチに取り込まれた変更の中に、*Alchemist/DG2* では AV1コーディックの HWエンコードに対応していることを示唆するものがあった。  
+そして masterブランチに取り込まれた変更の中に、*Alchemist/DG2* では AV1コーデックの HWエンコードに対応していることを示唆するものがあった。  
 
  * [Upstream Alchemist & ATS-M · intel/media-driver@244ccc6](https://github.com/intel/media-driver/commit/244ccc6f9e589f32a8789de4e5d46386faad6ea3)
 

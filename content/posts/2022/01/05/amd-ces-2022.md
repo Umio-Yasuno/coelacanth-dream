@@ -74,7 +74,7 @@ GPU部だけを見たときのラインラップがかなりすっきりとし�
 個人的なトピックだった、*Yellow Carp (Rembrandt)* のハードウェア AV1デコードの有無については、びみょうにはっきりしないところがある。  
 まず、半年近く前 (2021/07/14) に投稿されたパッチで、*Yellow Carp* がHWデコードをサポートするフォーマットの中に MPEG2, MPEG4, VC1, AV1 は無かった。  
 現時点で該当部分に変更はされていない。  
-{{< link >}} [他 RDNA 2 GPU とは対応コーディックが異なる Yellow Carp APU と Beige Goby GPU | Coelacanth's Dream](/posts/2021/07/14/yc-bg-vcn/#yc) {{< /link >}}
+{{< link >}} [他 RDNA 2 GPU とは対応コーデックが異なる Yellow Carp APU と Beige Goby GPU | Coelacanth's Dream](/posts/2021/07/14/yc-bg-vcn/#yc) {{< /link >}}
 だが発表会中では、*Ryzen 6000 シリーズ* は AV1デコードに対応するとしていた。[^yc-av1]  
 パッチで追加されたコード部は DRM API 経由で `amdgpu_asic_query_video_codecs` を実行したときに対応するフォーマットの情報を返すのに使われているが、User Mode Driver である Mesa3D ではその中で対応サイズの情報だけを使っていた。  
 

@@ -28,8 +28,8 @@ DisplayPort 2.0 ではエンコード方式が、従来の 8b/10b (データ効�
 **DCN 3.1** では新たなクロックステートが追加され、省電力面も従来から強化されている。  
 また人感センサーについても、既に近い技術、機能を *Tiger Lake* の世代に投入している Intel の用途から、省電力への活用が期待される。  
 
-アーキテクチャの進化以外にも、APU/SoC として各種機能にも改良が加えられている *Yellow Carp (Rembradt)* だが、一方でマルチメディアエンジンから AV1 を含む一部コーディックのサポートが削られる情報が存在する。  
-{{< link >}} [他 RDNA 2 GPU とは対応コーディックが異なる Yellow Carp APU と Beige Goby GPU | Coelacanth's Dream](/posts/2021/07/14/yc-bg-vcn/) {{< /link >}}
+アーキテクチャの進化以外にも、APU/SoC として各種機能にも改良が加えられている *Yellow Carp (Rembradt)* だが、一方でマルチメディアエンジンから AV1 を含む一部コーデックのサポートが削られる情報が存在する。  
+{{< link >}} [他 RDNA 2 GPU とは対応コーデックが異なる Yellow Carp APU と Beige Goby GPU | Coelacanth's Dream](/posts/2021/07/14/yc-bg-vcn/) {{< /link >}}
 さらには最近になって、*Barcelo* 、*Mendocino* という新たな APU のコードネームが OSS 上に登場したこともあり、機能と登場時期については読み取りにくいところがある。  
 最も、AMD APU/GPU をサポートするパッチが投稿されてから実際に登場するまでは、ものによっては大きく期間が空くこともあり、予想したところで仕方がないし、興味の対象にもなりにくい。  
 

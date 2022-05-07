@@ -9,7 +9,7 @@ noindex: false
 # summary: ""
 ---
 
-AMD *RDNA 2* 世代の GPU、*Sienna Cichlid* 、*Navy Flounder* がマルチメディアエンジンとして備える VCN 3 は AV1コーディックのハードウェアデコードをサポートする。  
+AMD *RDNA 2* 世代の GPU、*Sienna Cichlid* 、*Navy Flounder* がマルチメディアエンジンとして備える VCN 3 は AV1コーデックのハードウェアデコードをサポートする。  
 そのことが Linux Kernel (amd-gfx) に投稿されたパッチから判明した。  
 {{< link >}} [[PATCH 2/4] drm/amdgpu: add VCN 3.0 AV1 registers](https://lists.freedesktop.org/archives/amd-gfx/2020-September/053779.html) {{< /link >}}
 {{< link >}} [[PATCH 3/4] drm/amdgpu: use the AV1 defines for VCN 3.0](https://lists.freedesktop.org/archives/amd-gfx/2020-September/053780.html) {{< /link >}}
@@ -19,7 +19,7 @@ AV1 のHWデコードと次世代 GPUに関しては、以前より Intel の次
 だが、今回のパッチでサポートすることが判明し、不安は払拭された。  
 VCN 3 は *RDNA 2* でないと搭載できない、といった理由は無いため、今後登場する AMD の次世代 APU に搭載される可能性も考えられる。  
 
-[^gen12-av1-dec]: [Intel Gen12 GPU は AV1コーディックのHWデコードをサポート | Coelacanth's Dream](/posts/2020/07/09/intel-gen12-av1-decode/)
+[^gen12-av1-dec]: [Intel Gen12 GPU は AV1コーデックのHWデコードをサポート | Coelacanth's Dream](/posts/2020/07/09/intel-gen12-av1-decode/)
 
 また、今回のパッチは Linux Kernel側の対応で、実際に AV1 HWデコードを実行するには libdrm や UMD(User Mode Driver) である [RadeonSI](/tags/radeonsi) の対応も必要となる。  
 VRS(Variable Rate Shader) の対応を示すレジスタ情報も追加されているが[^gfx103-vrs]、こちらも同様に UMD側の対応が必要である。  

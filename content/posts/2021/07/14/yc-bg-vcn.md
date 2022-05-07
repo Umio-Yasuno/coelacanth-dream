@@ -1,5 +1,5 @@
 ---
-title: "他 RDNA 2 GPU とは対応コーディックが異なる Yellow Carp APU と Beige Goby GPU"
+title: "他 RDNA 2 GPU とは対応コーデックが異なる Yellow Carp APU と Beige Goby GPU"
 date: 2021-07-14T16:49:33+09:00
 draft: false
 tags: [ "Yellow_Carp", "Beige_Goby", "RDNA_2" ]
@@ -16,18 +16,18 @@ noindex: false
     * [[PATCH 2/2] amdgpu/nv.c - Optimize code for video codec support structure](https://lists.freedesktop.org/archives/amd-gfx/2021-July/066549.html)
 
 {{< pindex >}}
- * [AV1 等、一部コーディックのデコード機能が削られている Yellow Carp](#yc)
+ * [AV1 等、一部コーデックのデコード機能が削られている Yellow Carp](#yc)
  * [エンコード機能を持たず、デコード機能も一部削られている Beige Goby](#bg)
  * [VCN 3.0](#vcn_3)
 {{< /pindex >}}
 
-## AV1 等、一部コーディックのデコード機能が削られている Yellow Carp {#yc}
+## AV1 等、一部コーデックのデコード機能が削られている Yellow Carp {#yc}
 
-*Yellow Carp APU* は、オープンソースドライバー上では *VanGogh APU* の次に登場した *RDNA 2 APU* だが、マルチメディアエンジンが対応するコーディックは *VanGogh* よりも少ない。  
+*Yellow Carp APU* は、オープンソースドライバー上では *VanGogh APU* の次に登場した *RDNA 2 APU* だが、マルチメディアエンジンが対応するコーデックは *VanGogh* よりも少ない。  
 
  * [[PATCH 1/2] amdgpu/nv.c - Added video codec support for Yellow Carp](https://lists.freedesktop.org/archives/amd-gfx/2021-July/066548.html)
 
-下引用部は、*Sienna Cichlid* と *Yellow Carp* がハードウェアデコードに対応するコーディックを示したドライバー中のコード部。  
+下引用部は、*Sienna Cichlid* と *Yellow Carp* がハードウェアデコードに対応するコーデックを示したドライバー中のコード部。  
 *Yellow Carp* では、*RDNA 2 アーキテクチャ* の特徴としてアピールされていた AV1 HWデコードをサポートせず[^rdna_2]、それ以外にも MPEG2・MPEG4・VC1 がサポートされていない。  
 
 [^czn]: [Green Sardine APU の PCI ID が追加、正体は Cezanne APU だったか | Coelacanth's Dream](/posts/2021/01/14/green_sardine-pciid/)
@@ -56,14 +56,14 @@ noindex: false
  >
  > {{< quote >}} [[PATCH 1/2] amdgpu/nv.c - Added video codec support for Yellow Carp](https://lists.freedesktop.org/archives/amd-gfx/2021-July/066548.html) {{< /quote >}}
 
-これにより *Yellow Carp* は 8Kサイズの HWデコードには対応するが、対応コーディックの幅は前世代の *Renoir/Lucienne/Cezanne (Green Sardine) APU* [^czn] よりも狭まることとなる。  
-だがそれら MPEG2・MPEG4・VC1 コーディックは現在ではほとんど使われておらず、H.264/MPEG-4 AVC・H.265/HEVC・VP9 といった広く普及し、主流となっているコーディックの対応は残されている。一部コーディックの削除は、活用する機会が少ない無駄な固定機能を省き、ダイサイズを最適化するため行ったのかもしれない。  
+これにより *Yellow Carp* は 8Kサイズの HWデコードには対応するが、対応コーデックの幅は前世代の *Renoir/Lucienne/Cezanne (Green Sardine) APU* [^czn] よりも狭まることとなる。  
+だがそれら MPEG2・MPEG4・VC1 コーデックは現在ではほとんど使われておらず、H.264/MPEG-4 AVC・H.265/HEVC・VP9 といった広く普及し、主流となっているコーデックの対応は残されている。一部コーデックの削除は、活用する機会が少ない無駄な固定機能を省き、ダイサイズを最適化するため行ったのかもしれない。  
 
 ただ、普及しつつある AV1 HWデコードを省いたのは少し疑問に思え、またそれ以上に惜しいと感じる部分だ。 Intel Gen12 GPUアーキテクチャを採用する [Tiger Lake](/tags/tiger_lake)・[Rocket Lake](/tags/rocket_lake)・[Alder Lake](/tags/alder_lake) は AV1 HWデコードに対応しているため、それらと *Yellow Carp* を比較した時、弱点になるとも言える。  
-{{< link >}} [Intel Gen12 GPU は AV1コーディックのHWデコードをサポート | Coelacanth's Dream](/posts/2020/07/09/intel-gen12-av1-decode/) {{< /link >}}
+{{< link >}} [Intel Gen12 GPU は AV1コーデックのHWデコードをサポート | Coelacanth's Dream](/posts/2020/07/09/intel-gen12-av1-decode/) {{< /link >}}
 
 また、*VanGogh* が GPU L2キャッシュ 1MiB を持つのに対し、*Yellow Carp* はその倍のサイズ、2MiB を持つとされている。  
-このことから *Yellow Carp* は、*VanGogh* よりも大きい規模のメモリインターフェイス、GPUコアを持つ可能性が考えられるが、その一方でマルチメディアエンジン部は *VanGogh* のが {{< comple >}} どれだけそのコーディックが使われているかはともかく {{< /comple >}} 多機能だということになる。コード中では、*VanGogh* は *Sienna Cichlid* と同じコーディックに対応するとしている。  
+このことから *Yellow Carp* は、*VanGogh* よりも大きい規模のメモリインターフェイス、GPUコアを持つ可能性が考えられるが、その一方でマルチメディアエンジン部は *VanGogh* のが {{< comple >}} どれだけそのコーデックが使われているかはともかく {{< /comple >}} 多機能だということになる。コード中では、*VanGogh* は *Sienna Cichlid* と同じコーデックに対応するとしている。  
 {{< link >}} [RDNA 2 APU 「Yellow Carp」 をサポートするパッチが Linux Kernel に投稿される　―― DCN3.1 / VanGogh より大きいキャッシュ | Coelacanth's Dream](/posts/2021/06/03/yellow_carp-apu-linux-kernel/#yc-cache) {{< /link >}}
 設計時期、設計に掛けられる期間によるものか、あるいは実装コストか、AV1 HWデコードを削ってその分を GPUコア部に割いた方が有益と判断したか。  
 
@@ -71,12 +71,12 @@ noindex: false
 
 ## エンコード機能を持たず、デコード機能も一部削られている Beige Goby {#bg}
 
-*Beige Goby* が HWエンコード機能を持たないことは、AMD GPUドライバーにサポートを追加する最初のパッチで既に示されていたが、HWデコードに関しても、*Yellow Carp* 同様 MPEG2・MPEG4・VC1 コーディック、それと JPEG にも対応しないことが明かされた。  
+*Beige Goby* が HWエンコード機能を持たないことは、AMD GPUドライバーにサポートを追加する最初のパッチで既に示されていたが、HWデコードに関しても、*Yellow Carp* 同様 MPEG2・MPEG4・VC1 コーデック、それと JPEG にも対応しないことが明かされた。  
 {{< link >}} [新たな RDNA 2 GPU、「Beige Goby」 をサポートするパッチが投稿される | Coelacanth's Dream](/posts/2021/05/13/amd-beige_goby/#vcn3) {{< /link >}}
 
  * [amdgpu/nv.c - Added codec query for Beige Goby · torvalds/linux@b3a2446](https://github.com/torvalds/linux/commit/b3a24461f9fb1579c3335c63d1e039bc5a6eda53#diff-29095eeae87881c774274edb9172812d9b05002a942494ba525a9198d56bacf0)
 
-対応コーディックの削減については、上記 *Yellow Carp* と同じ理由しか自分には思い付かないため省略する。  
+対応コーデックの削減については、上記 *Yellow Carp* と同じ理由しか自分には思い付かないため省略する。  
 
 *Yellow Carp* とは異なり、JPEG HWデコードのサポートも外されていることは、*Renoir APU* 、*Navi1x GPU* に搭載されている前世代の VCN 2.0 から、IPブロックを VCN と JPEGデコーダーとで分けられたため、JPEGデコーダーを省いた構成は以前から想定していたのではないかと思われる。  
 省いたこと自体からは、*Beige Goby* が dGPU としては切り詰めた構成を採っている、という印象を受ける。  

@@ -2,7 +2,7 @@
 title: "AMD、マルチダイ構成を採用した MI200シリーズ GPU を正式発表"
 date: 2021-11-09T08:47:49+09:00
 draft: false
-tags: [ "CDNA_2", "Aldebaran" ]
+tags: [ "CDNA_2", "Aldebaran", "gfx90a" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
