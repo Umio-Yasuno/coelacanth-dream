@@ -14,7 +14,7 @@ noindex: false
 
  * [radv: Enable NGG culling by default on GFX10.3 (!13086) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/13086)
 
-## NGG/NGGカリング
+## NGG/NGGカリング {#nggc}
 
 *NGG/プリミティブシェーダー* は *Navi14* を除く *RDNA/GFX10* 世代の GPU でデフォルトで有効化されているが、*NGGカリング* は条件が増え、*RDNA 2/GFX10.3* とそれ以降の世代の GPU、かつ RenderBackend (RB) を 2基以上持つ GPU がデフォルトで有効化の対象になる。  
 *RDNA/GFX10* 世代は *NGGカリング* がデフォルトで有効化されないが、環境変数 `RADV_PERFTEST=nggc` をセットすることで有効化できる。  

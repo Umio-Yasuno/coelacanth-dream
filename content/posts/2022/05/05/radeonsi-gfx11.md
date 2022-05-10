@@ -63,7 +63,9 @@ NGG は *GFX10/RDNA 1* からデフォルトで有効化されているが、 *N
 またこれまでは無効化されていた NGG Stream-Out (transform feedback) も *GFX11* ではデフォルトで有効化される。  
 
 現時点で *GFX11* の NGG Culling はデフォルトで無効化されているが、これは *GFX10/RDNA 1* 以上の世代でも、RenderBackend (RB) が 2基以上という条件がデフォルトで有効化する条件に含まれており、GPU の規模によって効果に違いがあることが理由だろう。  
-内部での検証が進めば変わると思われる。  
+NGGカリングのようなシェーダーベースのカリング処理は、効率が Pixel Shader のスループットに依存するとされている。  
+{{< link >}} [RADV + RDNA 2 で NGGカリングがデフォルトで有効に | Coelacanth's Dream](/posts/2021/09/29/radv-enable-nggc-default-on-rdna_2/#nggc) {{< /link >}}
+内部での検証が進み、効果があると分かれば切り替えられると思われる。  
 
  > 		+   if (sscreen->info.chip_class >= GFX11) {
  > 		+      sscreen->use_ngg = true;
@@ -84,6 +86,14 @@ NGG は *GFX10/RDNA 1* からデフォルトで有効化されているが、 *N
  > 		+   }
  >
  > {{< quote >}} [radeonsi/gfx11: enable NGG-only draw paths (4e9915b5) · Commits · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/commit/4e9915b5e5c9ecc3c354a6dda916253aaf07138d?merge_request_iid=16328) {{< /quote >}}
+
+Pixel Shader への入出力用バッファ、パラメーターキャッシュ (Parameter Cache, PC) の規模は 1024、*Sienna Cichlid/Navi21* 等と同じ規模となっている。  
+
+ > 		+   if (info->chip_class >= GFX11) {
+ > 		+      info->pc_lines = 1024;
+ > 		+      info->pbb_max_alloc_count = 255; /* minimum is 2, maximum is 256 */
+ >
+ > {{< quote >}} [radeonsi/gfx11: scattered register deltas (9fecac09) · Commits · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/commit/9fecac091f3159eb50a3e3dea2312218bb87d8c1?merge_request_iid=16328) {{< /quote >}}
 
 ## VRS {#vrs}
 
