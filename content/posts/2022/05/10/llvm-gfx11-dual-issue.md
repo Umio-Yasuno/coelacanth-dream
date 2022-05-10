@@ -18,6 +18,14 @@ AMD の Joe Nash 氏より、LLVM への *GFX11* のサポートに向けたさ�
 
  * [⚙ D125261 [AMDGPU] gfx11 subtarget features & early tests](https://reviews.llvm.org/D125261)
 
+{{< pindex >}}
+ * [FeatureGFX11](#gfx11)
+    * [True16Bit](#true16)
+    * [Dot8Insts](#dot8)
+    * [Dual issue wave32](#vopd)
+    * [GPU ID](#gpuid)
+{{< /pindex >}}
+
 ## FeatureGFX11 {#gfx11}
 
 *GFX11* がサポートする機能、命令の情報が `AMDGPU.td` に追加された。  
