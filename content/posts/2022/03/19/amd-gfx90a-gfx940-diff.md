@@ -3,7 +3,7 @@ title: "gfx940 で新たにサポートされる命令と XF32フォーマット
 date: 2022-03-19T16:59:40+09:00
 draft: false
 categories: [ "Hardware", "AMD", "GPU" ]
-tags: [ "gfx940", "gfx90a", "CDNA_2" ]
+tags: [ "gfx940", "gfx90a", "CDNA_2", "LLVM" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]

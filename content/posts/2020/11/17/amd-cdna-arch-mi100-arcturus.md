@@ -2,7 +2,7 @@
 title: "AMD、初の CDNAアーキテクチャ GPU 「MI100」 を発表"
 date: 2020-11-17T00:20:47+09:00
 draft: false
-tags: [ "CDNA", "Arcturus" ]
+tags: [ "CDNA", "Arcturus", "gfx908" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false

@@ -2,7 +2,7 @@
 title: "AMD、CDNA1/MI100 ISA Reference Guide を公開"
 date: 2020-12-15T12:01:27+09:00
 draft: false
-tags: [ "CDNA", "Arcturus" ]
+tags: [ "CDNA", "Arcturus", "gfx908" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
