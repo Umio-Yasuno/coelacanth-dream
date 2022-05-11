@@ -115,9 +115,13 @@ AMD の Joe Nash 氏より、LLVM への *GFX11* のサポートに向けたさ�
 ### Dual issue wave32 {#vopd}
 
 *GFX11* では `FeatureVOPD`、`Has VOPD dual issue wave32 instructions` と説明される命令をサポートする。 この機能もまた、それ以上の詳細は今回明かされていない。  
-推測するならば、1個の命令から 2x Wave32 分のスレッドを発行する機能と思われるが、ただ SIMDユニットに対応する Wave Controller に 2x Wave32 がスタックされるだけなのか、  
+推測するならば、1個の命令から 2x Wave32 分のスレッドを発行する機能と思われるが、ただ SIMDユニットに対応する Wave Controller (Buffer) に 2x Wave32 がスタックされるだけなのか、  
 または Wave Controller と SIMDユニットの構成が変更され、一部の `FeatureVOPD` に含まれる命令は従来の 2x レートで処理できるのか、等は不明。  
-自分の推測がすべて外れている可能性も高い。  
+
+前者は、*GFX10/RDNA 1* 世代からソフトウェアで実装されている Sub-Vector Mode に近い。Sub-Vector Mode では、Wave64 をベクタレジスタを共有する 2x Wave32 に分解して実行する。  
+{{< link >}} [RadeonSI ドライバーでは RDNA GPU も Wave64モードで各シェーダーを実行するように | Coelacanth's Dream](/posts/2020/07/02/radeonsi-shader-wave64-with-rdna/#consider) {{< /link >}}
+後者は、Wave Controller に対して SIMDユニットを増やした可能性が考えられる。ただ一部の命令に限られるとすると効率が気になる所ではある。  
+CU 内部の構造が大きく変わっている可能性、自分の推測がすべて外れている可能性も高い。  
 
  > 		+def FeatureVOPD : SubtargetFeature<"vopd",
  > 		+  "HasVOPDInsts",
