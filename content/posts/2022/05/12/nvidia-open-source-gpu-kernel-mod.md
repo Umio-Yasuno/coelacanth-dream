@@ -27,12 +27,14 @@ NVIDIA は、最終的にはオープンソースモジュールがクローズ�
 
 Linux Kernel コミュニティや、Canonical, Red Hat, SUSE などのパトーナーと共に、アップストリームへの合流に取り組む計画があることが語られている。  
 現在クローズドソースとなっているコードは Linux Kernel の設計に即していないため、アップストリームの候補にはならない。  
-アップストリームに合流するまでの間、公開されたソースコードは *Nouveau* ドライバーへのリファレンスとして機能する。  
+
+今日、NVIDIA GPU のオープンソースドライバーとしては *Nouveau* が存在する。  
+*Nouveau* はコミュニティによって開発されているが、NVIDIA が配布するクローズドソースなドライバーと比べて機能、性能では不足しており、また異なるファームウェアを使用している。  
+新たな NVIDIA GPU向けドライバーがアップストリームに合流するまでの間、公開されたソースコードは *Nouveau* へのリファレンスとして機能し、ドライバーの改良を助ける。  
 それにより、クローズドソースモジュールと同じファームウェアの使用、電力管理 (クロック調整、熱管理) 機能といった多くの機能を *Nouveau* ドライバーにもたらすとしている。  
 
 ## Nouveau
 
-今日、NVIDIA GPU のオープンソースドライバーとしては *Nouveau* が存在する。  
 NVIDIA GPU モジュールと今後のさらなるオープンソース化による *Nouveau* ドライバーの今後の展望について、Red Hat に所属している Christian F.K. Schaller 氏が GNOME Blogs に記事を投稿している。  
 
  * [Why is the open source driver release from NVidia so important for Linux? | Christian F.K. Schaller](https://blogs.gnome.org/uraeus/2022/05/11/why-is-the-open-source-driver-release-from-nvidia-so-important-for-linux/)
@@ -44,4 +46,6 @@ Christian F.K. Schaller 氏は、オープンソース化されたモジュー�
  * <https://twitter.com/cfkschaller>
  * [Chapter 43. GSP Firmware](https://download.nvidia.com/XFree86/Linux-x86_64/515.43.04/README/gsp.html)
  * [The Mesa drivers matrix](https://mesamatrix.net/)
+ * [nouveau - Gentoo Wiki](https://wiki.gentoo.org/wiki/Nouveau)
+ * [NvHardwareDocs](https://nouveau.freedesktop.org/NvHardwareDocs.html)
 {{< /ref >}}
