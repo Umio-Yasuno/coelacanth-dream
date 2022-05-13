@@ -1,5 +1,5 @@
 ---
-title: "NVIDIA GPU の Linux Kernel モジュールをオープンソースに"
+title: "NVIDIA GPU の Linux Kernel モジュールがオープンソースに"
 date: 2022-05-12T20:32:59+09:00
 draft: false
 categories: [ "NVIDIA", "GPU", "Software" ]
