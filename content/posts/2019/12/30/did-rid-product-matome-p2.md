@@ -569,7 +569,7 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | 0x73A2 | 0x00 | |
 | 0x73A3 | 0x00 | PRO W6800 |
 | 0x73A4 | | |
-| 0x73A5 | 0xC0 | |
+| 0x73A5 | 0xC0 | RX 6950 XT |
 | 0x73AB | 0x00 | |
 | 0x73AC | | |
 | 0x73AD | | |
@@ -609,6 +609,7 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | 0x73DC | | |
 | 0x73DD | | |
 | 0x73DE | | |
+| 0x73DF | 0xC0 | RX 6750 XT |
 
 [^14]: [P4 to Git Change 2042212 by kjayapra@1_HIPWS_LNX1_PAL on 2019/12/06 1… · ROCm-Developer-Tools/ROCclr@a35c1d2](https://github.com/ROCm-Developer-Tools/ROCclr/commit/a35c1d2f2d954363c7d2121d5334f9e7766beeae)
 [^5]:<https://github.com/ROCm-Developer-Tools/aomp-extras/blob/f3d316fe64347e697a9789f0f2499fec50024db1/utils/bin/gputable.txt#L1867>
@@ -628,7 +629,7 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | 0x73EC | | |
 | 0x73ED | | |
 | 0x73EF&darr; | 0xC0 | RX 6800S[^6cd1d146f947bdf6be66a08d1004cc5c75815773] |
-| | 0xC1 | |
+| | 0xC1 | RX 6650 XT |
 | | 0xC2 | RX 6700S[^6cd1d146f947bdf6be66a08d1004cc5c75815773] |
 | | 0xC3 | RX 6650M[^6cd1d146f947bdf6be66a08d1004cc5c75815773] |
 | | 0xC4 | RX 6650M XT[^6cd1d146f947bdf6be66a08d1004cc5c75815773] |
@@ -651,8 +652,8 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | 0x7422 | 0x00 | PRO W6400[^6cd1d146f947bdf6be66a08d1004cc5c75815773] |
 | 0x7423 | 0x00 | PRO W6300M[^amdgpu_ids-1337803] |
 | 0x7424 | 0x00 | RX 6300[^amdgpu-22_10] |
-| 0x743F &darr; | 0xC1 | RX 6500 [^amdgpu_ids-1362367] |
-| | 0xC3 | RX 6500M[^amdgpu_ids-1337803] |
+| 0x743F &darr; | 0xC1 | RX 6500 XT[^amdgpu_ids-1362367] |
+| | 0xC3 | RX 6500/6500M[^amdgpu_ids-1337803] |
 | | 0xC7 | RX 6400[^amdgpu_ids-1362367] |
 | | 0xCF | RX 6300M[^amdgpu_ids-1337803] | 
 
