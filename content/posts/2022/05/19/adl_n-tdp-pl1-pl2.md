@@ -14,6 +14,7 @@ Intel の Vidya Gopalakrishnan 氏より、Coreboot に *Alder Lake-N* SKU の T
 パッチでは *Alder Lake-N* の各設定値以外に、コア数に関する記述も見られる。  
 
  * [soc/intel/alderlake: add power limits for Alder Lake-N SKUs (I24c18a27) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/64472/1)
+ * [soc/intel/alderlake: Configure the SKU specific parameters for VR domains (I3d6ae203) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/63369/6)
 
 *Alder Lake-N* は以下の引用部から、*Gracemont (Small)* コアのみの構成であり、コア数は 2/4/8 の 3種類が用意されていると思われる。TDP (PL1) は 2/4-Core が 6W、8-Core が 15W。  
 以下引用部では、*Alder Lake* のバリアント、コア構成と GPU GT、TDP (PL1) を次のようなフォーマットで記述している。 `ADL_{M,N,P}_{BIG}{SMALL}{GPU_GT}_{TDP}W_CORE`  
@@ -33,6 +34,40 @@ Intel の Vidya Gopalakrishnan 氏より、Coreboot に *Alder Lake-N* SKU の T
 
 Coreboot でサポートしている Intel ADLRVP ボードでは、*Alder Lake-M (2+8+2)* の PL1/PL2 設定値は以下のようになっている。  
 Big コアを持たない *Alder Lake-N* で、*Alder Lake-M (2+8+2)* と同じ TDP (PL1) 15W の設定が用意されているのは少し意外かもしれない。なお PL2 は *Alder Lake-N* の方が 10W 低い 35W 設定となる。  
+また、別のパッチの内容から、*Alder Lake-N* 8-Core には TDP (PL1) 7W の設定もあるようだ。  
+
+ > 		/*
+ > 		 * VR Configurations for IA and GT domains for ADL-N SKU's.
+ > 		 * Per doc#646929 ADL N Platform Design Guide -> Power_Map_Rev1p0
+ > 		 *
+ > 		 * +----------------+-----------+-------+-------+---------+-------------+----------+
+ > 		 * |      SKU       | Setting   | AC LL | DC LL | ICC MAX | TDC Current | TDC Time |
+ > 		 * |                |           |(mOhms)|(mOhms)|   (A)   |     (A)     |   (msec) |
+ > 		 * +----------------+-----------+-------+-------+---------+-------------+----------+
+ > 		 * | ADL-N 081(15W) |    IA     |  4.7  |  4.7  |    53   |      22     |  28000   |
+ > 		 * +                +-----------+-------+-------+---------+-------------+----------+
+ > 		 * |                |    GT     |  6.5  |  6.5  |    29   |      22     |  28000   |
+ > 		 * +----------------+-----------+-------+-------+---------+-------------+----------+
+ > 		 * | ADL-N 081(7W)  |    IA     |  5.0  |  5.0  |    37   |      14     |  28000   |
+ > 		 * +                +-----------+-------+-------+---------+-------------+----------+
+ > 		 * |                |    GT     |  6.5  |  6.5  |    29   |      14     |  28000   |
+ > 		 * +----------------+-----------+-------+-------+---------+-------------+----------+
+ > 		 * | ADL-N 041(6W)  |    IA     |  5.0  |  5.0  |    37   |      12     |  28000   |
+ > 		 * +  Pentium       +-----------+-------+-------+---------+-------------+----------+
+ > 		 * |                |    GT     |  6.5  |  6.5  |    29   |      12     |  28000   |
+ > 		 * +----------------+-----------+-------+-------+---------+-------------+----------+
+ > 		 * | ADL-N 041(6W)  |    IA     |  5.0  |  5.0  |    37   |      12     |  28000   |
+ > 		 * +  Celeron       +-----------+-------+-------+---------+-------------+----------+
+ > 		 * |                |    GT     |  6.5  |  6.5  |    26   |      12     |  28000   |
+ > 		 * +----------------+-----------+-------+-------+---------+-------------+----------+
+ > 		 * | ADL-N 021(6W)  |    IA     |  5.0  |  5.0  |    27   |      10     |  28000   |
+ > 		 * +                +-----------+-------+-------+---------+-------------+----------+
+ > 		 * |                |    GT     |  6.5  |  6.5  |    23   |      10     |  28000   |
+ > 		 * +----------------+-----------+-------+-------+---------+-------------+----------+
+ > 		 */
+ >
+ > {{< quote >}} <https://review.coreboot.org/c/coreboot/+/63369/6/src/soc/intel/alderlake/vr_config.c> {{< /quote >}}
+
 *Alder Lake-N* 8-Core の PL4 は 83W、2/4-Core は 78W となっているが、PL4 はあくまでもパッケージレベルの最大電力制限であり、電源アダプタやバッテリーの許容範囲となる。電力管理機能はそれを超えないよう、先制して周波数を制限、調整する。  
 
  > 			register "power_limits_config[ADL_M_282_12W_CORE]" = "{
