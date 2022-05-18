@@ -1,0 +1,81 @@
+---
+title: "Alder Lake-N のコア数と TDP (PL1), PL2"
+date: 2022-05-19T02:26:02+09:00
+draft: false
+categories: [ "Hardware", "Intel", "CPU" ]
+tags: [ "Alder_Lake", "Coreboot" ]
+noindex: false
+# summary: ""
+# keywords: [ "", ]
+# author: ""
+---
+
+Intel の Vidya Gopalakrishnan 氏より、Coreboot に *Alder Lake-N* SKU の TDP, Power Limit の設定値を追加するパッチが投稿、公開されている。  
+パッチでは *Alder Lake-N* の各設定値以外に、コア数に関する記述も見られる。  
+
+ * [soc/intel/alderlake: add power limits for Alder Lake-N SKUs (I24c18a27) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/64472/1)
+
+*Alder Lake-N* は以下の引用部から、*Gracemont (Small)* コアのみの構成であり、コア数は 2/4/8 の 3種類が用意されていると思われる。TDP (PL1) は 2/4-Core が 6W、8-Core が 15W。  
+以下引用部では、*Alder Lake* のバリアント、コア構成と GPU GT、TDP (PL1) を次のようなフォーマットで記述している。 `ADL_{M,N,P}_{BIG}{SMALL}{GPU_GT}_{TDP}W_CORE`  
+*Alder Lake-N* が *Alder Lake-S/P/M* に搭載されている *Golden Cove (Big)* コアを持たず *Gracemont (Small)* コアのみの構成であり、最大 8-Core/8-Thread、GPU は Gen12 GT1 (32 EU)、といった情報は、これまでに公開されてきたパッチやログの情報と一致する。  
+{{< link >}} [CPU 8-Thread、GPU 32EU を持つ Alder Lake-N | Coelacanth's Dream](/posts/2022/02/04/adl_n-8thread/) {{< /link >}}
+
+*Alder Lake-N* 2/4-Core SKU の TDP (PL1) 6W というのは、TDP (PL1) 9W をサポートする *Alder Lake-M (2+8+2, 2+4+2)* SKU より省電力、ファンレス構成等の製品をカバーするためのものと思われる。  
+
+ > 		 	ADL_M_282_15W_CORE,
+ > 		 	ADL_M_242_CORE,
+ > 		 	ADL_P_442_45W_CORE,
+ > 		+  ADL_N_081_15W_CORE,
+ > 		+  ADL_N_041_6W_CORE,
+ > 		+  ADL_N_021_6W_CORE,
+ >
+ > {{< quote >}} <https://review.coreboot.org/c/coreboot/+/64472/1/src/soc/intel/alderlake/chip.h#33> {{< /quote >}}
+
+Coreboot でサポートしている Intel ADLRVP ボードでは、*Alder Lake-M (2+8+2)* の PL1/PL2 設定値は以下のようになっている。  
+Big コアを持たない *Alder Lake-N* で、*Alder Lake-M (2+8+2)* と同じ TDP (PL1) 15W の設定が用意されているのは少し意外かもしれない。なお PL2 は *Alder Lake-N* の方が 10W 低い 35W 設定となる。  
+*Alder Lake-N* 8-Core の PL4 は 83W、2/4-Core は 78W となっているが、PL4 はあくまでもパッケージレベルの最大電力制限であり、電源アダプタやバッテリーの許容範囲となる。電力管理機能はそれを超えないよう、先制して周波数を制限、調整する。  
+
+ > 			register "power_limits_config[ADL_M_282_12W_CORE]" = "{
+ > 				.tdp_pl1_override = 12,
+ > 				.tdp_pl2_override = 35,
+ > 			}"
+ > 			register "power_limits_config[ADL_M_282_15W_CORE]" = "{
+ > 				.tdp_pl1_override = 15,
+ > 				.tdp_pl2_override = 45,
+ > 			}"
+ > 			register "power_limits_config[ADL_M_242_CORE]" = "{
+ > 				.tdp_pl1_override = 9,
+ > 				.tdp_pl2_override = 30,
+ > 				.tdp_pl4 = 68,
+ > 			}"
+ >
+ > {{< quote >}} <https://review.coreboot.org/plugins/gitiles/coreboot/+/refs/changes/72/64472/1/src/soc/intel/alderlake/chipset.cb#35> {{< /quote >}}
+ >
+ > 		+	register "power_limits_config[ADL_N_081_15W_CORE]" = "{
+ > 		+		.tdp_pl1_override = 15,
+ > 		+		.tdp_pl2_override = 35,
+ > 		+		.tdp_pl4 = 83,
+ > 		+	}"
+ > 		+
+ > 		+	register "power_limits_config[ADL_N_041_6W_CORE]" = "{
+ > 		+		.tdp_pl1_override = 6,
+ > 		+		.tdp_pl2_override = 25,
+ > 		+		.tdp_pl4 = 78,
+ > 		+	}"
+ > 		+
+ > 		+	register "power_limits_config[ADL_N_021_6W_CORE]" = "{
+ > 		+		.tdp_pl1_override = 6,
+ > 		+		.tdp_pl2_override = 25,
+ > 		+		.tdp_pl4 = 78,
+ > 		+	}"
+ > 		+
+ >
+ > {{< quote >}} <https://review.coreboot.org/c/coreboot/+/64472/1/src/soc/intel/alderlake/chipset.cb#51> {{< /quote >}}
+
+余談だが、Intel が公開するプロセッサのドキュメント中において、以前は TDP (PL1) のみ具体的な数値が記載され、PL2 については PL1 x1.25 が推奨値とされながら、実際の設定は PL1 x3 近くとなっていたのが、  
+*Alder Lake* の世代からは Coreboot 中の設定と同様の値、実際の設定値がドキュメントに記載されるようになった。  
+今までがドキュメント中でぼかされていた状態だったとはいえ、ユーザーに対して公開される情報が増えたことは素直に喜ばしい。  
+
+ * [Alder Lake P: Overview and Technical Documentation](https://www.intel.com/content/www/us/en/products/platforms/details/alder-lake-p.html)
+ * [12th Gen Intel® Core™ Processors Product Brief](https://www.intel.com/content/www/us/en/products/docs/processors/core/12th-gen-core-mobile-processors-brief.html)
+ * [Processor Line Thermal and Power - 006 - ID:655258 | Core™ Processors](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/006/processor-line-thermal-and-power/)
