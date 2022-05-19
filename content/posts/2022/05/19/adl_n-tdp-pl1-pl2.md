@@ -117,8 +117,8 @@ Big コアを持たない *Alder Lake-N* で、*Alder Lake-M (2+8+2)* と同じ 
 
 | Alder Lake | -S | -P | -M | -N |
 | :-- | :--: | :--: | :--: | :--: |
-| Variant (CPUID Model) | Desktop (0x97) | Mobile (0x9A) | Mobile (0x9A) | Mobile/Embedded? (0xBE) |
-| CPU (big + small) | 8 + 8 | 6 + 8 | 2 + 8 | 0 + 8? |
+| Variant (CPUID Model) | Desktop (0x97) | Mobile (0x9A) | Mobile (0x9A) | Mobile (0xBE) |
+| CPU (big + small) | 8 + 8 | 6 + 8 | 2 + 8 | 0 + 8 |
 | GPU (Gen12.2) | GT1 32EU | GT2 96EU | GT2 96EU | GT1 32EU |
 | Display ver | Gen12 | Gen13 (XE_LPD) | Gen13 (XE_LPD) | Gen13 (XE_LPD) |
 | CPU PCIe | Gen5 8L x2,<br>Gen4 4L x2 | Gen5 8L,<br>Gen4 4L x2 | Gen4 4L? | N/A |
