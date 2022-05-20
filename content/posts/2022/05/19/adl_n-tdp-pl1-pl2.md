@@ -70,6 +70,10 @@ Big コアを持たない *Alder Lake-N* で、*Alder Lake-M (2+8+2)* と同じ 
 
 *Alder Lake-N* 8-Core の PL4 は 83W、2/4-Core は 78W となっているが、PL4 はあくまでもパッケージレベルの最大電力制限であり、電源アダプタやバッテリーの許容範囲となる。電力管理機能はそれを超えないよう、先制して周波数を制限、調整する。  
 
+Atom (Small) 系プロセッサとして *Alder Lake-N* を *Japser Lake (Tremont, 10nm)* と較べると、Intel JSLRVP ボードでは TDP (PL1) 6W、PL2 20W の設定となっており[^jslrvp]、*Alder Lake-N* 2/4-Core は TDP (PL1) は同じだが、PL2 は 5W 高いと見ることができる。  
+
+[^jslrvp]: <https://review.coreboot.org/plugins/gitiles/coreboot/+/refs/changes/72/64472/1/src/mainboard/intel/jasperlake_rvp/variants/jslrvp/devicetree.cb#126>
+
  > 			register "power_limits_config[ADL_M_282_12W_CORE]" = "{
  > 				.tdp_pl1_override = 12,
  > 				.tdp_pl2_override = 35,
