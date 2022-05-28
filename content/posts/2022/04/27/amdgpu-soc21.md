@@ -41,6 +41,6 @@ AMD のソフトウェアエンジニアである Alex Deucher 氏により、AM
  >
  > {{< quote >}} [[PATCH 0/5] Add new SoC21 infrastructure](https://lists.freedesktop.org/archives/amd-gfx/2022-April/078231.html) {{< /quote >}}
 
-AMDGPUドライバーのレジスタヘッダーには、サイズが大きなものだと約 5-10MB あり、同じく AMD のソフトウェアエンジニアである Christian König 氏はそれらをうまく圧縮する方法を見つけなければならないとしている。[^register-header]  
+AMDGPUドライバーのレジスタヘッダーには、サイズが大きなものだと約 5-16MB あり (drivers/gpu/drm/amd/include/asic_reg/nbio/nbio_7_2_0_sh_mask.h が 16MB)、同じく AMD のソフトウェアエンジニアである Christian König 氏はそれらをうまく圧縮する方法を見つけなければならないとしている。[^register-header]  
 
 [^register-header]: [[PATCH 0/5] Add new SoC21 infrastructure](https://lists.freedesktop.org/archives/amd-gfx/2022-April/078255.html)
