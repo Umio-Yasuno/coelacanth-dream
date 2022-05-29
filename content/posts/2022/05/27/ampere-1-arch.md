@@ -39,7 +39,7 @@ L1データキャッシュサイズは 64KB、コアごとに L2キャッシュ�
     * [llvm-project/AArch64.td at 731f0e27ec110443aa5faaceda4b20adafbddcc7 · llvm/llvm-project](https://github.com/llvm/llvm-project/blob/731f0e27ec110443aa5faaceda4b20adafbddcc7/llvm/lib/Target/AArch64/AArch64.td)
 
 *Ampere-1* アーキテクチャの ISA は Armv8.6-A、デコード幅は 4命令。このデコード幅について、GCC へのパッチ内で Philipp Tomsich 氏は、最新のマイクロアーキテクチャと同様に、最大ディスパッチレートとスケジューラに発行される micro-ops の最大レートの中間、妥協点だと語っている。  
-また SVE (Scalable Vector Extension) はサポートしない。  
+また SVE (Scalable Vector Extension) はサポートしない。しかし ISA は Armv8.6-A であり、Bfloat16系命令や Int8 行列演算命令は ASIMD (FP, SIMD) ユニットに実装されている。  
 
  > 		The Ampere-1 implements the ARMv8.6 architecture in A64 mode and is
  > 		modelled as a 4-wide issue (as with all modern micro-architectures,
@@ -142,4 +142,6 @@ GCC 内の最適化情報では、*Ampere-1* の L2キャッシュサイズは 2
 
 {{< ref >}}
  * [Press Release Details](https://amperecomputing.com/press/2020-03-03/ampere-altra---industrys-first-80-core-server-processor-unveiled.html)
+ * [BFloat16 extensions for Armv8-A - AI and ML blog - Arm Community blogs - Arm Community](https://community.arm.com/arm-community-blogs/b/ai-and-ml-blog/posts/bfloat16-processing-for-neural-networks-on-armv8_2d00_a)
+ * [Arm A profile architecture update 2019 - Architectures and Processors blog - Arm Community blogs - Arm Community](https://community.arm.com/arm-community-blogs/b/architectures-and-processors-blog/posts/arm-architecture-developments-armv8-6-a)
 {{< /ref >}}
