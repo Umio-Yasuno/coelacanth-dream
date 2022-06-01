@@ -140,6 +140,7 @@ GCC 内の最適化情報では、*Ampere-1* の L2キャッシュサイズは 2
 
 *Ampere-1* アーキテクチャは全体的に見て ROB や L2キャッシュサイズの増加といった実行効率の向上を目的としたと思われる点が目立ち、デコード幅やバックエンド部は *Neoverse-N1* と比較して特別増やしてはいない。また SVE の実装もされていない。  
 *Ampere Altra/Altra Max* 同様に電力効率やソケットあたりのコア数を重視した結果ではないかと思われる。  
+しかし性能においても、BFloat16系命令、Int8 行列演算命令に対応したことで推論処理は高速化されている。  
 
 {{< ref >}}
  * [Press Release Details](https://amperecomputing.com/press/2020-03-03/ampere-altra---industrys-first-80-core-server-processor-unveiled.html)

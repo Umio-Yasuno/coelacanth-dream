@@ -292,26 +292,69 @@ DG02SRTBP4MFA
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 0x164C &darr; | | | |
+| | 0xC1 | 5700U[^lcn-5700u] | |
 | | 0xC2 | 5500U[^lcn-5500u] | |
+| | 0xC3 | 5300U[^lcn-5300u] | |
 
+[^lcn-5700u]: [HW probe of Acer Aspire A515-45 #a5fd51cc39: lspci](https://linux-hardware.org/?probe=a5fd51cc39&log=lspci)
 [^lcn-5500u]: <https://openbenchmarking.org/system/2105266-IB-5500USYNT82/1/lspci>
+[^lcn-5300u]: [HW probe of Acer Aspire A515-45 #128cdc0a61: lspci](https://linux-hardware.org/?probe=128cdc0a61&log=lspci)
 
 <!--  Cezanne (gfx90c?) -->
-### Cezanne ( gfx90c ) {#cezanne-gfx90c}
+### Green Sardine/Cezanne ( gfx90c ) {#cezanne-gfx90c}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 0x1638 &darr; | | | |
 | | 0xC2 | 5600U[^czn-5600u] | |
+| | 0xC3 | 5400U[^czn-5400u] | |
+| | 0xC4 | 5900HS[^czn-5900hs]/5900HX[^czn-5900hx] | |
+| | 0xC5 | 5800H[^czn-5800h]/5800HS[^czn-5800hs] | |
+| | 0xC6 | 5600H[^czn-5600h] | |
+| | 0xC7 | 5980HS[^czn-5980hs]/5980HX[^czn-5980hx]
+| | 0xC8 | 5700G[^czn-5700g] | |
+| | 0xC9 | 5600G[^czn-5600g] | |
+| | 0xCA | 5300G[^czn-5300g] | |
+| | 0xD1 | PRO 5850U[^czn-pro-5850u] | |
+| | 0xD2 | PRO 5650U[^czn-pro-5650u] | |
+| | 0xD3 | PRO 5450U[^czn-pro-5450u] | |
+| | 0xD8 | PRO 5750G[^czn-pro-5750g] | |
+| | 0xD9 | PRO 5650G[^czn-pro-5650g] | |
 
 [^czn-5600u]: [LinuxHardware/NoteBooks/Lenovo/ThinkPad_L14_Gen2_AMD - LinuxWiki.org - Linux Wiki und Freie Software](https://www.linuxwiki.de/LinuxHardware/NoteBooks/Lenovo/ThinkPad_L14_Gen2_AMD)
+[^czn-5400u]: [HW probe of Lenovo ThinkPad L13 Yoga Ge... #59279fc1ba: lscpu](https://linux-hardware.org/?probe=59279fc1ba&log=lscpu)
+
+[^czn-5600h]: [HW probe of Acer Nitro AN515-45 #aee7cca97f: lspci](https://linux-hardware.org/?probe=aee7cca97f&log=lspci)
+[^czn-5800h]: [HW probe of Acer Nitro AN515-45 #714ce6dfc9: lspci](https://linux-hardware.org/?probe=714ce6dfc9&log=lspci)
+[^czn-5900hs]: [HW probe of ASUSTek ROG Flow X13 GV301QE... #d58f229004: lspci](https://linux-hardware.org/?probe=d58f229004&log=lspci)
+[^czn-5900hx]: [HW probe of Acer Nitro AN515-45 #bdbff8abc8: lspci](https://linux-hardware.org/?probe=bdbff8abc8&log=lspci)
+[^czn-5800hs]: [HW probe of ASUSTek ROG Flow X13 GV301QH... #f2719a9d26: lspci](https://linux-hardware.org/?probe=f2719a9d26&log=lspci)
+[^czn-5980hs]: [HW probe of ASUSTek ROG Flow X13 GV301QE... #d8b53c12c7: lspci](https://linux-hardware.org/?probe=d8b53c12c7&log=lspci)
+[^czn-5980hx]: [HW probe of ASUSTek ROG Strix G513QY_G51... #bdb9536c9c: lspci](https://linux-hardware.org/?probe=bdb9536c9c&log=lspci)
+
+[^czn-5600g]: [HW probe of ASRock A520M-HDV Desktop Computer #e7404b1511: lspci](https://linux-hardware.org/?probe=e7404b1511&log=lspci)
+[^czn-5700g]: [HW probe of Acer TravelMate P215-41-G... #5485738b5a: lspci](https://linux-hardware.org/?probe=5485738b5a&log=lspci)
+[^czn-5300g]: [HW probe of HP 8906 SMVB Desktop Computer (Pavilion Desktop TP01-2xxx) #7be0a79c32: lspci](https://linux-hardware.org/?probe=7be0a79c32&log=lspci)
+
+[^czn-pro-5850u]: [HW probe of HP DevX #8dc3513586: lspci](https://linux-hardware.org/?probe=8dc3513586&log=lspci)
+[^czn-pro-5650u]: [HW probe of Acer TravelMate P215-41-G... #5485738b5a: lspci](https://linux-hardware.org/?probe=5485738b5a&log=lspci)
+[^czn-pro-5450u]: [HW probe of Acer TravelMate P215-41-G... #dcfad64d9d: lspci](https://linux-hardware.org/?probe=dcfad64d9d&log=lspci)
+
+[^czn-pro-5750g]: [HW probe of ASRockRack X470D4U Desktop Computer #1b9b990e65: lspci](https://linux-hardware.org/?probe=1b9b990e65&log=lspci)
+[^czn-pro-5650g]: [HW probe of MSI B450M PRO-VDH MAX Desktop Computer by CSL-Computer (955) #bfe6169921: lscpu](https://linux-hardware.org/?probe=bfe6169921&log=lscpu)
 
 <!--  Barcelo (gfx90c?) -->
 ### Barcelo ( gfx90c ) {#barcelo}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 0x15E7[^barcelo-did] &darr; | | | |
+| | 0xC1 | 5825U[^brc-5825u] | | |
+| | 0xC2 | 5625U[^brc-5625u] | | |
+| | 0xC3 | 5425U ? | | |
 
 [^barcelo-did]: [soc/amd/common/block/graphics: add GPU PCI ID for Barcelo (I1c5446c1) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/56396)
+
+[^brc-5825u]: [HW probe of Dell Vostro 5625 #2ae97190b6: lspci](https://linux-hardware.org/?probe=2ae97190b6&log=lspci)
+[^brc-5625u]: [HW probe of ASUSTek Zenbook UM3402YA_UM3... #1a31d93797: lspci](https://linux-hardware.org/?probe=1a31d93797&log=lspci)
 
 
 <!--
@@ -328,7 +371,7 @@ DG02SRTBP4MFA
 #### VanGogh {#vgh}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 0x163F &darr; | | | |
+| 0x163F &darr; | 0xAF | AMD Custom GPU 0405 | |
 
 ### FAMILY_YC {#family_yc}
 #### Yellow Carp {#yc}
