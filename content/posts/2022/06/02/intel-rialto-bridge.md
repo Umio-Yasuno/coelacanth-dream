@@ -21,7 +21,8 @@ Intel は ISC 2022 における基調講演にて、現世代の HPC、データ
 今回公開された *Rialto Bridge* の CG画像では、*Ponte Vechhio* の Compute Tile 8基と Rambo (Random Access Memory, Bandwidth, Optimized) Tile 4基にあたる部分が、4基の Tile に置き換えられている。  
 
 *Ponte Vecchio* では、実行ユニット (EU, Vector Engine, XMX)、Load/Store ユニット、命令キャッシュ、L1データキャッシュ/Shared Local Memory をまとめた {{< xe >}}-Core を、Compute Tile あたり 4基搭載している。  
-そして 1個の Hardware Context を保持する {{< xe >}}-Slice を {{< xe >}}-Core 8基、要は Compute Tile 2基で構成する。  
+そして 1個の Hardware Context を保持する {{< xe >}}-Slice を {{< xe >}}-Core 8基 (Compute Tile 2基) で構成する。  
+{{< link >}} [Intel Architecture Day 2021 個人的まとめ　―― 用語が整理された Xe GPU | Coelacanth's Dream](/posts/2021/08/26/intel-arch-day-2021-xe-gpu/#xe-hpc) {{< /link >}}
 *Rialto Bridge* で Compute Tile を *Ponte Vecchio* の 8基から 4基にしたのは、{{< xe >}}-Core の増量と密度向上の他に、Tile 構成をシンプルにし、Base Tile に搭載された Fabric への帯域を削減する目的があるのではないかと思われる。  
 
 *Rialto Bridge* は 2023年にサンプリング品の出荷を目標としている。  
