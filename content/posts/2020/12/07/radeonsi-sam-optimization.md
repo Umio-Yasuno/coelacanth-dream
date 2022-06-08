@@ -21,15 +21,10 @@ AMD GPU のオープンソース OpenGL ドライバー **RadeonSI** に、*Smar
 以前検証を行なった時は、Vulkan API を用いるソフトウェアのみを試したが、OpenGL API でもある程度の効果はあるのだろう。  
 一連のパッチがメインラインに組み込まれた時は再度検証するつもりだが、やっぱり Linux でも動作する OpenGLベンチマークというのは少なかったりする。  
 
-{{< ins datetime="2020/12/08" >}}
-
-**RADV (Vulkan)** ドライバーにも同様の最適化パッチが投稿された。  
+その後 **RADV (Vulkan)** ドライバーにも同様の最適化パッチが投稿された。  
 {{< link >}} [radv: Use VRAM for CS & upload buffer if all VRAM is CPU-visible. (!7979) · Merge Requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/7979) {{< /link >}}
+
 **RADV** の開発者である [Bas Nieuwenhuizen](https://gitlab.freedesktop.org/bnieuwenhuizen) 氏は検証も行なっており、Basemark では +3%、SotTR (Shadow of the Tomb Raider) では +1fps (0-4%) の性能向上を確認できたとコメントしている。  
-
-
-{{< /ins >}}
-
 
 {{< ref >}}
 

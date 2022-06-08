@@ -16,23 +16,20 @@ toc: false
 
 ## Linuxには 2017年に実装
 
-前回は何年前と書いたが、Linux Kernelのレポジトリ、パッチアーカイブを調査する中で、*Smart Access Memory* の実態である `Resizeable PCI BAR` を実装するパッチは 2017/03 に投稿されていた。  
+前回は何年前と書いたが、Linux Kernelのレポジトリ、パッチアーカイブを調査する中で、*Smart Access Memory* の実態である `Resizeable PCI BAR` を実装するパッチは 2017/03 に投稿されていたことがわかった。  
 
  * [Resizeable PCI BAR support V3](https://lists.freedesktop.org/archives/amd-gfx/2017-March/006316.html)
     * [[PATCH 1/4] PCI: add resizeable BAR infrastructure v3](https://lists.freedesktop.org/archives/amd-gfx/2017-March/006319.html)
     * [[PATCH 4/4] drm/amdgpu: resize VRAM BAR for CPU access](https://lists.freedesktop.org/archives/amd-gfx/2017-March/006320.html)
 
-{{< ins >}}
 
-PCI部への最初のパッチは 2015/12 に投稿されていた。  
-{{< link >}} [Resizeable PCI BAR support - Patchwork](https://patchwork.kernel.org/project/linux-pci/patch/5662C61F.50303@amd.com/) {{< /link >}}
-だがその時は組み込まれず、AMD GPUドライバーに合わせた 2017/03 にまたパッチが投稿されたようだ。  
-{{< link >}} [[1/5] PCI: add resizeable BAR infrastructure v2 - Patchwork](https://patchwork.kernel.org/project/linux-pci/patch/1488800428-2854-1-git-send-email-deathsimple@vodafone.de/) {{< /link >}}
+PCI部への最初のパッチは 2015/12 に投稿されたが、その時は組み込まれず、AMDGPUドライバーに合わせた 2017/03 にまたパッチが投稿された。  
+ * [Resizeable PCI BAR support - Patchwork](https://patchwork.kernel.org/project/linux-pci/patch/5662C61F.50303@amd.com/)
+ * [[1/5] PCI: add resizeable BAR infrastructure v2 - Patchwork](https://patchwork.kernel.org/project/linux-pci/patch/1488800428-2854-1-git-send-email-deathsimple@vodafone.de/)
 
-その後もバージョンを重ね、Linux Kernel のレポジトリを検索したところでは、2017/12 頃メインラインに組み込まれている。  
-{{< link >}} [Merge branch 'drm-next-4.16' of git://people.freedesktop.org/~agd5f/linux into drm-next](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?h=v5.10-rc6&id=9c606cd4117a3c45e04a6616b1a0dbeb18eeee62) {{< /link >}}
+その後もアップデートを重ね、Linux Kernel のレポジトリを検索したところでは、2017/12 頃メインラインに組み込まれている。  
 
-{{< /ins >}}
+ * [Merge branch 'drm-next-4.16' of git://people.freedesktop.org/~agd5f/linux into drm-next](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?h=v5.10-rc6&id=9c606cd4117a3c45e04a6616b1a0dbeb18eeee62)
 
 一連のパッチを投稿した Christian König 氏は AMD GPU のオープンソースドライバー等を長年担当しているソフトウェアエンジニアである。[^christian]  
 氏は Resizeable PCI BAR を実装する構想を持ってから、1年以上経ってようやく完成させることができた、とコメントしている。  

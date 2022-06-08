@@ -67,7 +67,7 @@ summary: " "
 | SMU | System Manasgement Unit | |
 | PG | Powergating | |
 | RLC | Rear left Center? | |
-| PFP | Prefetch Parser | |
+| PFP | Prefetch Parser[^pfp] | |
 | CE | Constant Engine | |
 | DE | Dispatch Engine | |
 | ME | Micro Engine | |
@@ -119,6 +119,7 @@ summary: " "
 | SQ | (Distributed) Sequencer | |
 | OSS | OS Service[^oss] | |
 
+[^pfp]: [drm/radeon: add initial ucode loading for CIK (v5) · torvalds/linux@02c8132](https://github.com/torvalds/linux/commit/02c813274114976cb104a32407a21c10c89b0465)
 [^oss]: [drm/amdgpu: add OSS 2.0 register headers · torvalds/linux@599bd21](https://github.com/torvalds/linux/commit/599bd21552e191913f26f581b549ec41d66984be#diff-52a7043d2b1a6cdc0d495711c1c1fff298b7d9f800cc1c59c623fb666acfd663)
 [^thm]: [drm/amdgpu/include: add thm 11.0.2 headers · torvalds/linux@e6af616](https://github.com/torvalds/linux/commit/e6af616a7822294dac294d92a04772a467ef9fd7#diff-e6bbf8860aa3bcf36ac100d5c2aea51b1a818a025b1fe97b74e479aacf1d71c8)
 [^gca]: [drm/amdgpu: add GCA 7.0 register headers · torvalds/linux@9f24d8c](https://github.com/torvalds/linux/commit/9f24d8ce2522808cdb719775dbb32cb296e20f47#diff-171aaced998e08b7e48c5b4a96eadc9fd50d95dbc1be7c5ba821c29abf671888)
