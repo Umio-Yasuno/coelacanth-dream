@@ -10,7 +10,7 @@ noindex: false
 # author: ""
 ---
 
-AMDGPUドライバーのバグを報告するレポジトリである [drm / amd · GitLab](https://gitlab.freedesktop.org/drm/amd) に、System UEFI/BIOS の設定によって BAR (Base Address Register) への書き込みが遅くなる問題が報告されている。  
+AMDGPUドライバーのバグを報告するレポジトリである [drm / amd · GitLab](https://gitlab.freedesktop.org/drm/amd) に、System UEFI/BIOS の設定によって BAR (Base Address Register) 領域への書き込みが遅くなる問題が報告されている。  
 報告者の [Tatsuyuki Ishi](https://github.com/ishitatsuyuki) 氏はベンダー非依存な NVIDIA Reflex の代替ミドルウェア [LatencyFleX](https://github.com/ishitatsuyuki/LatencyFleX) の開発者であり、Mesa3D RADVドライバーを始め多くの OSSプロジェクトに参加、開発を行っている。  
 
  * [BAR writes are slow with certain machine configurations (#1864) · Issues · drm / amd · GitLab](https://gitlab.freedesktop.org/drm/amd/-/issues/1864)
@@ -34,7 +34,7 @@ AMD AM4プラットフォームの UEFI/BIOS (AMD AGESA >1.1.0.0) では、`Abov
 
 Tatsuyuki Ishi 氏は Vulkan API を用いて BAR の領域に書き込むようにしたベンチマークを開発し、検証した結果、`Resizable BAR [Enabled]` 設定時に書き込み速度が明確に遅くなることを報告している。  
 
-ベンチマークのソースコードは以下のリンク先で公開されている。自分の理解では、と前置くと、当該ベンチマークではメモリタイプに `DEVICE_LOCAL | HOST_COHERENT` のフラグを立てることで BAR の領域を使うようにし、8MiB ごとに書き込み (zero fill)、その速度を測定している。  
+ベンチマークのソースコードは以下のリンク先で公開されている。自分の理解では、と前置くと、当該ベンチマークではメモリタイプに `DEVICE_LOCAL | HOST_COHERENT` のフラグを立てることで BAR 領域を使うようにし、8MiB ごとに書き込み (zero fill)、その速度を測定している。  
 ベンチマークでは VRAM の 90% を使うことを想定しており、実行するにはソースコードの Line 31 を変更して搭載 GPU の VRAM サイズに合わせる必要があると氏はコメントしている。2048 は 16GiB (2048 \* 8MiB) を想定した値となる。  
 
  * <https://gist.github.com/ishitatsuyuki/e86aa70879a8de8ed5b398b68b1ddfbc>
@@ -58,10 +58,9 @@ System UEFI/BIOS で既に Resizable BAR (large BAR) が有効化、マッピン
  > {{< quote >}} <https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/drivers/gpu/drm/amd/amdgpu/amdgpu_device.c?h=v5.18.2#n1199> {{< /quote >}}
 
 `Resizable BAR [Enabled]` によって System UEFI/BIOS 側でマッピングされている場合に BAR への書き込み速度は遅くなり、`Resizable BAR [Disabled]` によって Linux Kernel側でリサイズ、再マッピング処理が行われた場合は速くなる。  
-問題が発生する条件は最低限判明しているが、何故発生するかは不明。  
-
 Tatsuyuki Ishi 氏は Windows環境でも問題が再現できるとしている。  
 また、氏は Linux Kernel にパッチを適用し、BAR が問題無い範囲で自由にマッピングできるようにした調査を行ない、アドレス範囲が `0xfc00000000..0xfdffffffff` では上位半分のみが遅く、`0xfe00000000..0xffffffffff` では全体が遅くなることを発見している。  
+そのため、厳密には System UEFI/BIOS、Linux Kernel どちらでマッピングするかではなく、どこにマッピングされるかで問題は発生している。  
 このことから、マッピングのコンフリクトか PCIコントローラのバグではないかと氏は推測している。  
 AMD の Alex Deucher 氏は当該 issue 内で、System UEFI/BIOS が誤った CPUキャッシュマッピングを設定しているのではと推測、プラットフォームベンダーに報告するとコメントしている。  
 原因の判明にはもう少し時間が掛かるものと思われる。  
