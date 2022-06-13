@@ -3,7 +3,7 @@ title: "AMD Financial Analyst Day 個人的まとめ"
 date: 2022-06-11T04:18:05+09:00
 draft: false
 categories: [ "Hardware", "AMD", "CPU", "GPU", "APU" ]
-tags: [ "CDNA_3", "gfx940" ]
+tags: [ "CDNA_3", "gfx940", "Zen_4", "Zen_5" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]
@@ -67,6 +67,24 @@ TF32フォーマットへの対応については、LLVM への *gfx940* 対応�
 2024年を計画している *Zen 5 アーキテクチャ* ではフロントエンド部の再設計に加え、wide issue、バックエンド部の改良、推論と学習処理への最適化が行われるとしている。  
 *AMD Zen 系 アーキテクチャ* は *Zen 3 アーキテクチャ* までフロントエンド部、バックエンド部は基本的な構成は変えず、キャッシュ構成や各所に改良を重ねることで IPC を向上させてきた。*Zen 4 アーキテクチャ* の詳細は発表されておらず、コンパイラに最適化情報もまだ追加されていないが、IPC の向上幅から *Zen 4 アーキテクチャ* も同様の延長線上にあるのではないかと思われる。  
 *Zen 5 アーキテクチャ* ではその流れが変わり、大幅な変更が施されていることが期待できる。  
+
+## コードネーム {#codename}
+
+ * Phoenix Point
+    * Zen 4 + RDNA 3 + AIE (AI Engine, XDNA)
+    * 4nm
+    * Mobile
+    * 2023
+ * Strix Point
+    * Zen 5 + RDNA 3+ + AIE
+    * Adovanced Node
+    * Mobile
+    * 2024
+ * Granite Ridge
+    * Zen 5
+    * Adovanced Node
+    * Desktop
+    * 2024
 
 {{< ref >}}
  * [AMD Showcases Industry-Leading Gaming, Commercial, and Mainstream PC Technologies at COMPUTEX 2022 :: Advanced Micro Devices, Inc. (AMD)](https://ir.amd.com/news-events/press-releases/detail/1069/amdshowcases-industry-leading-gaming-commercial-and)

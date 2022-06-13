@@ -1,5 +1,5 @@
 ---
-title: "AMD Sabrina SoC は最大 4-Core/8-Thread"
+title: "最大 4-Core/8-Thread な AMD Sabrina SoC と Mendocino SoC"
 date: 2022-06-11T18:09:27+09:00
 draft: false
 categories: [ "Hardware", "AMD", "APU" ]
