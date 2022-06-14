@@ -17,12 +17,22 @@ Samsung Exynos 2200 SoC は GPU に *AMD RDNA 2 アーキテクチャ* ベース
 
 通常の AMDGPU ドライバーのソースコードは `drivers/gpu/drm/amd/` 下に置いてあるが、*Xclipse 920* 向けのドライバーは AMDGPU ドライバーをベースにしながら `drivers/gpu/samsung/{include, sgpu}/` 下に置かれている。  
 
+{{< ref >}}
+ * [VanGogh Lite](#vgh_lite)
+    * [GC10.4 (M0), GC40.1 (M1)](#m0_m1)
+    * [ME/MEC](#me_mec)
+    * [AMDGPU_WGP_GATING](#wgp_gating)
+    * [MGFX0, MGFX1](#mgfx)
+    * [Mariner, Gopher](#mariner_gopher)
+{{< /ref >}}
+
 ## VanGogh Lite {#vgh_lite}
 *Xclipse 920* の `ASIC Type/Family` は *VanGogh_LITE* とされている。  
 `_LITE` は恐らくカスタム GPU に付けられるもので、過去には *Cyan Skilfish/Skillfish* に関連する GPU に *Navi10_LITE, Navi12_LITE* があった。  
 {{< link >}} [Cyan Skilfishシリーズ、Navi10_LITE、Navi12_LITE に Robin に Ariel | Coelacanth's Dream](/posts/2022/02/05/cyan_skilfish-robin-apu/) {{< /link >}}
 GC (Graphics, Compute) の IPバージョンは `10.4.0` とされる。  
 
+### GC10.4 (M0), GC40.1 (M1) {#m0_m1}
 *Xclipse 920* のフルスペックは不明だが、ターゲットに合わせた `eval_mode` を指定し、最大 WGP (CU) 数を制限しダウングレードするカーネルパラメータが追加されている。  
 ShaderEngine 1基、RenderBackend 3基という設定は共通するが、`eval_mode=1` の場合は WGP 3基、`eval_mode=2` の場合は WGP 4基に再設定される。  
 
@@ -40,7 +50,7 @@ ShaderEngine 1基、RenderBackend 3基という設定は共通するが、`eval_
  >
  > {{< quote >}} drivers/gpu/drm/samsung/sgpu/amdgpu_drv.c {{< /quote >}}
 
-また、`eval_mode=1` には `M0`、`eval_mode=2` には `M1` という識別子も付けられている。  
+また、`eval_mode=1` には `M0` と `GC10.4`、`eval_mode=2` には `M1` と `GC40.1` という識別子も付けられている。  
 
  > 		 enum eval_mode_config {
  > 			eval_mode_config_disabled           = 0,
@@ -100,6 +110,7 @@ ShaderArray ごとに GL1キャッシュを持つため、1基の場合 GL1キ�
  >
  > {{< quote >}} drivers/gpu/drm/samsung/sgpu/gfx_v10_0.c {{< /quote >}}
 
+### ME/MEC {#me_mec}
 *VanGogh_LITE* の ME (GFX Ring) と MEC (MicroEngine Compute, Compute Ring) の設定は、ME/MEC 共に 1基、ME/MEC あたり 1パイプ、パイプあたり 4キューとなっている。  
 これは他 *RDNA 1/2 アーキテクチャ* ベースの GPU の設定と異なる。*RDNA 1/2 アーキテクチャ* では ME 1基、ME あたり 1パイプ、パイプあたり 1キュー、MEC は 2基、MEC あたり 4パイプ、*RDNA 1 アーキテクチャ* はパイプあたり 8キュー、*RDNA 2 アーキテクチャ* は 4キューとなっている。  
 しかし最新の AMDGPU ドライバー内の設定と異なるというだけで、その意図までは読めない。またこのバージョンでは *Navi14* だけが ME 4基という設定になっているが、これも最新のバージョンとは異なる。  
@@ -116,6 +127,51 @@ ShaderArray ごとに GL1キャッシュを持つため、1基の場合 GL1キ�
  > 				break;
  >
  > {{< quote >}} drivers/gpu/drm/samsung/sgpu/gfx_v10_0.c {{< /quote >}}
+
+### AMDGPU_WGP_GATING {#wgp_gating}
+アップストリームには取り込まれていない *VanGogh_LITE* 向けの機能に `AMDGPU_WGP_GATING` が確認できる。  
+WGP ごとにクロックゲーティングを設定する機能と思われ、モバイル向け APU/SoC よりさらに省電力性が求められるスマートフォン向け APU/SoC には必要な機能なのだろう。  
+
+ > 		/* not upstream */
+ > 		#define DRM_AMDGPU_WGP_GATING		0x5e
+ >
+ > {{< quote >}} include/uapi/drm/amdgpu_drm.h {{< /quote >}}
+
+ > 		static int amdgpu_wgp_gating_ioctl(struct drm_device *dev, void *data,
+ > 						       struct drm_file *filp)
+ > 		{
+ > 			int r = 0;
+ > 			struct amdgpu_device *adev = drm_to_adev(dev);
+ > 			union drm_amdgpu_wgp_gating *wgp = data;
+ > 		
+ > 			switch (wgp->in.op) {
+ > 			case AMDGPU_WGP_GATING_WGP_CLOCK_ON:
+ > 				r = amdgpu_gfx_set_num_clock_on_wgp(adev, wgp->in.value);
+ > 				wgp->out.wgp_clock_on.number = adev->gfx.num_clock_on_wgp;
+ > 				break;
+ > 			case AMDGPU_WGP_GATING_WGP_AON:
+ > 				r = amdgpu_gfx_set_num_aon_wgp(adev, wgp->in.value);
+ > 				wgp->out.wgp_aon.number = adev->gfx.num_aon_wgp;
+ > 				memcpy(&wgp->out.wgp_aon.bitmap[0][0],
+ > 					&adev->gfx.wgp_aon_bitmap[0][0],
+ > 					sizeof(adev->gfx.wgp_aon_bitmap));
+ > 				break;
+ > 			case AMDGPU_WGP_GATING_WGP_STATUS:
+ > 				amdgpu_gfx_read_status_static_wgp(adev);
+ > 				memcpy(&wgp->out.wgp_status.bitmap[0][0],
+ > 					&adev->gfx.wgp_status_bitmap[0][0],
+ > 					sizeof(adev->gfx.wgp_status_bitmap));
+ > 				break;
+ > 			default:
+ > 				DRM_DEBUG_KMS("Invalid request %d\n", wgp->in.op);
+ > 				return -EINVAL;
+ > 			}
+ > 		
+ > 			return r;
+ > 		}
+ >
+ > {{< quote >}} drivers/gpu/drm/samsung/sgpu/amdgpu_kms.c {{< /quote >}}
+
 
 ### MGFX0, MGFX1 {#mgfx}
 
