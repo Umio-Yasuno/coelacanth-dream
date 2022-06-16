@@ -17,14 +17,14 @@ Samsung Exynos 2200 SoC は GPU に *AMD RDNA 2 アーキテクチャ* ベース
 
 通常の AMDGPU ドライバーのソースコードは `drivers/gpu/drm/amd/` 下に置いてあるが、*Xclipse 920* 向けのドライバーは AMDGPU ドライバーをベースにしながら `drivers/gpu/samsung/{include, sgpu}/` 下に置かれている。  
 
-{{< ref >}}
+{{< pindex >}}
  * [VanGogh Lite](#vgh_lite)
     * [GC10.4 (M0), GC40.1 (M1)](#m0_m1)
     * [ME/MEC](#me_mec)
     * [AMDGPU_WGP_GATING](#wgp_gating)
     * [MGFX0, MGFX1](#mgfx)
     * [Mariner, Gopher](#mariner_gopher)
-{{< /ref >}}
+{{< /pindex >}}
 
 ## VanGogh Lite {#vgh_lite}
 *Xclipse 920* の `ASIC Type/Family` は *VanGogh_LITE* とされている。  
