@@ -73,8 +73,8 @@ Graphics IP と Media IP のバージョンについては、世代を表す基�
 | :-- | :--: | :--: | :--: |
 | Tiger Lake,<br>Rocket Lake? | Gen12 | Gen12 | Gen12 |
 | DG1 | Gen12.1 | Gen12 | Gen12 |
-| Alder Lake-S | Gen12 | Gen12 | Gen12.2[^gen12_2] |
-| Alder Lake-P | Gen12 | Gen13<br>([XE_LPD](/tags/xe_lpd)) | Gen12.2[^gen12_2] |
+| Alder Lake-S | Gen12 | Gen12 | Gen12.2 |
+| Alder Lake-P | Gen12 | Gen13<br>([XE_LPD](/tags/xe_lpd)) | Gen12.2 |
 | {{< xe class="hp" >}} | Gen12.5 | - | Gen12.5 |
 | {{< xe class="hpg" >}} | Gen12.55 | Gen13<br>([XE_LPD](/tags/xe_lpd)) | Gen12.55 |
 | {{< xe class="hpc" >}} | Gen12.6 | - | Gen12.6 |
