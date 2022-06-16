@@ -11,6 +11,9 @@ noindex: false
 ---
 
 Mesa3D における Intel Iris (OpenGL) / ANV (Vulkan) ドライバーに *Compute Engine* の対応を追加するマージリクエストが、Intel の Jordan Justen 氏より投稿された。当該マージリクエストはすでに `main` ブランチにマージされている。  
+
+ * [Use INTEL_COMPUTE_CLASS=1 to enable using a compute engine (!14395) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/14395)
+
 機能は現状デフォルトでは無効化されており、環境変数 `INTEL_COMPUTE_CLASS` に `[1, true, y, yes]` のどれかを設定することで有効化できる。  
 有効化され、かつ *Compute Engine* が検出された場合、Compute dispatch (OpenGL) と Compute queue (Vulkan) において *Compute Engine* を用いるようになる。  
 
@@ -23,9 +26,7 @@ Mesa3D における Intel Iris (OpenGL) / ANV (Vulkan) ドライバーに *Compu
  >
  > {{< quote >}} [anv, iris: Enable compute engine with INTEL_COMPUTE_CLASS=1 (81d6ae31) · Commits · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/commit/81d6ae31d6f18d6fd2894a8b6dfe4323eea797f9) {{< /quote >}}
 
- * [Use INTEL_COMPUTE_CLASS=1 to enable using a compute engine (!14395) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/14395)
-
-当初は環境変数 `INTEL_DEBUG` に `c-cs` を設定することで有効化される形だったが、色圧縮機能 `Color Control Surface` と略称が被り[^color-control-surface]、また `INTEL_DEBUG` にそれを無効化する `noccs` がすでに定義されていたため、`INTEL_COMPUTE_CLASS` で切り替える方式になった。[^ref-comment-1]  
+当初は環境変数 `INTEL_DEBUG` に `c-cs` を設定することで有効化される形だったが、色圧縮機能 `Color Control Surface` と略称が被り[^color-control-surface]、また `INTEL_DEBUG` にそれを無効化する `noccs` がすでに定義されていたため、`INTEL_COMPUTE_CLASS` を使う形となった。[^ref-comment-1]  
 
 [^color-control-surface]: [Single-sampled Color Compression — The Mesa 3D Graphics Library latest documentation](https://docs.mesa3d.org/isl/ccs.html)
 [^ref-comment-1]: <https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/14395#note_1366681>
