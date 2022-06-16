@@ -30,14 +30,12 @@ AMD は COMPUTEX 2022 にて、エントリーレベル向けに新たな APU/So
 
 *Sabrina SoC* と *Mendocino SoC* は CPU、GPU、それと Chromebookボードが開発するという点も共通することから、そう深く考えずとも両者同じ APU/SoC、シリコンを指しているとするのが自然に思う。  
 
-*Mendocino SoC* については、*Sabrina SoC* に関するパッチが投稿されるより前に、Bao Zheng 氏より PSP部に追加された ISH (Image Slot Header) をサポートするパッチが Coreboot に投稿されている。[^mendocino-ish]  
+*Mendocino SoC* については、*Sabrina SoC* に関するパッチが投稿されるより前に、Bao Zheng 氏より PSP部に追加された ISH (Image Slot Header) をサポートするパッチが Coreboot に投稿されていた。[^mendocino-ish]  
 {{< link >}} [Coreboot に Family 17h Model A0h APU/SoC のサポートが追加 ―― Sabrina SoC | Coelacanth's Dream](/posts/2022/01/12/fam17h-moda0h-amd-sabrina-soc/#mendocino) {{< /link >}}
+*Sabrina SoC* のサポートが進められるようになってから *Mendocino SoC* の名前は Coreboot において出されなくなり、そして *Sabrina SoC* に向けても PSP ISH をサポートするパッチが投稿された。[^sabrina-ish]  
+また、*Sabrina SoC* と *Mendocino SoC* の PSP ID は同じものとされ、PSP部においても一致している。[^psp-id]  
 
 [^mendocino-ish]: [amdfwtool: Add ISH header support for A/B recovery layout (I4710df40) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/59384/1)
-
-*Sabrina SoC* のサポートが進められるようになってから *Mendocino SoC* の名前は Coreboot において出されなくなり、そして *Sabrina SoC* の PSP ISH をサポートするパッチが投稿された。[^sabrina-ish]  
-また、*Sabrina SoC* と *Mendocino SoC* の PSP ID は同じものとされている。[^psp-id]  
-
 [^sabrina-ish]: [util/amdfwtool: use ISH support for Sabrina SoC (I9e630885) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/63186/3)
 [^psp-id]: [util/amdfwtool: add Sabrina SoC type (Ibe52b443) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/63185/3)
 
