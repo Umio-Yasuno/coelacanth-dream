@@ -39,7 +39,6 @@ CS の種類には、Render (RCS)、Copy/Blitter (BCS)、Video (VCS)、Video Enh
 *Gen11 アーキテクチャ* からカリング処理を行うための POSH (Position Only SHader) パイプライン専用の POCS、*Gen12/{{< xe >}} アーキテクチャ* から GPGPU/Compute 専用の CCS が追加された。  
 
 ### POSH, POCS {#posh}
-
 POSH はカリング処理を目的とした新たなジオメトリパイプラインであり、Cull Pipe、Record Pipe とも呼ばれる。  
 POSH では位置のみの (position only) Vertex Shader を先行して実行、カリングテストを行う。テスト結果は圧縮されてメモリに保存され、メインの Render パイプラインはテスト結果を用いて無駄なフェッチやシェーディングを省く。  
 POSH パイプラインと POCS は *Gen11 アーキテクチャ* から追加、実装されているが、*Tiger Lake* のドキュメントにおいて、GPU は 1つのジオメトリパイプラインで構成され、POSH パイプラインは維持する (maintain) とあることから、現状無効化されているのではないかと思われる。[^tgl-configuration]  
@@ -49,10 +48,9 @@ POSH パイプラインと POCS は *Gen11 アーキテクチャ* から追加�
 {{< figure src="../posh-pipeline.webp" title="POSH Pipeline" caption="引用元: [Volume 9: Render Engine - intel-gfx-prm-osrc-tgl-vol09-renderengine_0.pdf](https://01.org/sites/default/files/documentation/intel-gfx-prm-osrc-tgl-vol09-renderengine_0.pdf)" >}}
 
 ### Compute Command Streamer {#ccs}
-
 RCS/Render Engine は 3D、GPGPU (Compute)、シェーダーを用いたメディア処理に使われる命令をサポートしている。  
 CCS/Compute Engine はそこから GPGPU (Compute) の命令のみをサポートする、RCS/Render Engine のサブセットとなる。  
-
+機能的には AMDGPU の MEC (MicroEngine Compute) と近いのではないかと思う。  
 *Gen11 アーキテクチャ* までは RCS/Render Engine 1基の構成だったが、*Gen12/{{< xe >}} アーキテクチャ* から CCS/Compute Engine を追加で搭載する構成となった。  
 
 CCS/Compute Engine は *Xe_HP SDV ({{< xe class="hp" >}})*、*DG2/Alchemist ({{< xe class="hpg" >}})*、*Ponte Vecchio ({{< xe class="hpc" >}})* では 4基搭載されている。  
