@@ -14,6 +14,26 @@ noindex: false
 
 AMD GPU アーキテクチャにおいて、初期の GCN から *Polaris1x /VegaM* までを含む *GFX6-8* では FMA の処理が MAD の 4倍遅く、*Vega, Navi* の世代である *GFX9-10* では FMA も MAD も同じ処理性能であり、*RDNA 2 /GFX10.3* では MAD をサポートせず、MUL と ADD 2つに分けて処理するため遅くなり、FMA を使う方が速くなるとされる。  
 
+ > 		      /*        |---------------------------------- Performance & Availability --------------------------------|
+ > 		       *        |MAD/MAC/MADAK/MADMK|MAD_LEGACY|MAC_LEGACY|    FMA     |FMAC/FMAAK/FMAMK|FMA_LEGACY|PK_FMA_F16,|Best choice
+ > 		       * Arch   |    F32,F16,F64    | F32,F16  | F32,F16  |F32,F16,F64 |    F32,F16     | F32,F16  |PK_FMAC_F16|F16,F32,F64
+ > 		       * ------------------------------------------------------------------------------------------------------------------
+ > 		       * gfx6,7 |     1 , - , -     |  1 , -   |  1 , -   |1/4, - ,1/16|     - , -      |  - , -   |   - , -   | - ,MAD,FMA
+ > 		       * gfx8   |     1 , 1 , -     |  1 , -   |  - , -   |1/4, 1 ,1/16|     - , -      |  - , -   |   - , -   |MAD,MAD,FMA
+ > 		       * gfx9   |     1 , 1 , -     |  1 , -   |  1 , -   | 1 , 1 ,1/16|     - , -      |  - , 1   |   2 , -   |FMA,MAD,FMA
+ > 		       * gfx10  |     1 , 1 , -     |  1 , -   |  1 , -   | 1 , 1 ,1/16|     1 , 1      |  - , -   |   2 , 2   |FMA,MAD,FMA
+ > 		       * gfx10.3|     - , - , -     |  - , -   |  - , -   | 1 , 1 ,1/16|     1 , 1      |  1 , -   |   2 , 2   |  all FMA
+ > 		       *
+ > 		       * Tahiti, Hawaii, Carrizo, Vega20: FMA_F32 is full rate, FMA_F64 is 1/4
+ > 		       *
+ > 		       * gfx8 prefers MAD for F16 because of MAC/MADAK/MADMK.
+ > 		       * gfx9 and newer prefer FMA for F16 because of the packed instruction.
+ > 		       * gfx10 and older prefer MAD for F32 because of the legacy instruction.
+ > 		       */
+ >
+ > {{< quote >}} <https://gitlab.freedesktop.org/mesa/mesa/-/blob/f1284505f0fae78dee2af06e2d8a194d1bc5b442/src/gallium/drivers/radeonsi/si_get.c#L940-955> {{< /quote >}}
+
+
 {{< pindex >}}
  * [FMA と MAD の性能違い](#perf)
  * [FMA と MAD の精度違い](#ulp)
