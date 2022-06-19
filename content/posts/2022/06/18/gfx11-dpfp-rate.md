@@ -38,7 +38,7 @@ AMD の Jay Foad 氏より LLVM に投稿されたパッチから、*GFX11* で�
  >
  > {{< quote >}} L: [llvm-project/gfx10-double.s at d393538c7f85a564f6f1c702aa2895b41f025da3 · llvm/llvm-project](https://github.com/llvm/llvm-project/blob/d393538c7f85a564f6f1c702aa2895b41f025da3/llvm/test/tools/llvm-mca/AMDGPU/gfx10-double.s) <br> / R: [llvm-project/gfx11-double.s at d393538c7f85a564f6f1c702aa2895b41f025da3 · llvm/llvm-project](https://github.com/llvm/llvm-project/blob/d393538c7f85a564f6f1c702aa2895b41f025da3/llvm/test/tools/llvm-mca/AMDGPU/gfx11-double.s) {{< /quote >}}
 
-*RDNA 1/GFX10 アーキテクチャ*、*RDNA 2/GFX10.3 アーキテクチャ* では FP32:FP64 の演算性能レートは 16:1 (32x ALU Unit に対して 2x DP Unit)となっていた。*Vega20/gfx906* のような一部のサーバー向け GPU や *Carrizo/gfx801* APU の FP32:FP64 = 2:1 となっているアーキテクチャを除けば、*RDNA 1/2* の演算性能レートは *GCN 系アーキテクチャ* と基本同じである。  
+*RDNA 1/GFX10 アーキテクチャ*、*RDNA 2/GFX10.3 アーキテクチャ* では FP32:FP64 の演算性能レートは 16:1 (32x ALU Unit に対して 2x DP Unit)となっていた。*Vega20/gfx906* のような一部のサーバー向け GPU や *Carrizo/gfx801* APU の FP32:FP64 = 2:1 (`HalfRate64Ops`) となっているアーキテクチャを除けば、*RDNA 1/2* の演算性能レートは *GCN 系アーキテクチャ* と基本同じである。  
 
 {{< figure src="/image/2020/11/17/amd-cdna-rdna-simd.webp" title="CDNA/RDNA SIMD" caption="画像出典: [amd-cdna-whitepaper.pdf](https://www.amd.com/system/files/documents/amd-cdna-whitepaper.pdf) (Page 6), <br>&emsp; [Introduction - rdna-whitepaper.pdf](https://www.amd.com/system/files/documents/rdna-whitepaper.pdf) (Page 9)" >}}
 
@@ -48,7 +48,7 @@ AMD の Jay Foad 氏より LLVM に投稿されたパッチから、*GFX11* で�
 *CDNA* と *RDNA* の大きな違いには、HWレイトレーシングの有無、行列演算命令 (MFMA, MAI) の有無、FP64 演算性能があるが、次世代では FP64演算性能の差がさらに広がることとなる。  
 
 他社のグラフィクス、ゲーミング向け GPU では、NVIDIA TU102 では FP32:FP64 = 32:1[^tu102]、NVIDIA GA102 では FP32:FP64 = 64:1[^ga102] となっている。  
-Intel GPU では、*Gen9 アーキテクチャ* では FP32:FP64 = 4:1、*Gen11 アーキテクチャ* からはネイティブでの対応が外され、ソフトウェアエミュレートでの対応となっている。{{< xe class="hpg" >}} もエミュレートでの対応となっているが、{{< xe class="hp/hpc" >}} ではネイティブで対応している。[^intel-gpu]  
+Intel GPU では、*Gen9 アーキテクチャ* では FP32:FP64 = 4:1、*Gen11 アーキテクチャ* からはネイティブでの対応が外され、エミュレートでの対応となっている。{{< xe class="hpg" >}} もエミュレートでの対応となっているが、{{< xe class="hp/hpc" >}} ではネイティブで対応しており、EU に専用の実行ポートを備える。[^intel-gpu]  
 そのためアーキテクチャ、SIMDユニットの構成による所もあるが、最新のグラフィクス、ゲーミング向け GPU として *GFX11* は以前 FP64演算性能が確保されている方だとも言える。  
 
 [^intel-gpu]: [Xe-LP/HP より大きな命令キャッシュを持つ Xe-HPG | Coelacanth's Dream](/posts/2021/09/16/intel-xe_hpg-icache/)
