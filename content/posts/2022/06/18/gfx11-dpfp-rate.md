@@ -43,12 +43,13 @@ AMD の Jay Foad 氏より LLVM に投稿されたパッチから、*GFX11* で�
 {{< figure src="/image/2020/11/17/amd-cdna-rdna-simd.webp" title="CDNA/RDNA SIMD" caption="画像出典: [amd-cdna-whitepaper.pdf](https://www.amd.com/system/files/documents/amd-cdna-whitepaper.pdf) (Page 6), <br>&emsp; [Introduction - rdna-whitepaper.pdf](https://www.amd.com/system/files/documents/rdna-whitepaper.pdf) (Page 9)" >}}
 
 *RDNA 1/2* はゲーミング向けのアーキテクチャという言葉から、コンピュート性能は低いという印象を持たれることがあるが、演算性能レートについては変わっていない。  
-それが *RDNA 3* と目される *GFX11* では変更される。変更には、より FP32 演算性能を重視し、WGP (CU) の実装面積を減らす目的があるのではないかと考えられる。  
+それが *RDNA 3* と目される *GFX11* では変更される。変更には、よりグラフィクス処理で求められる FP32 演算性能を重視し、WGP (CU) の実装面積を減らし、効率を向上させる目的があるのではないかと考えられる。  
 一方 *CDNA 系アーキテクチャ* では *CDNA 2/Aldebaran/gfx90a* からは `FullRateFP64` に対応し、FP32:FP64 = 1:1 となっている。  
-*CDNA* と *RDNA* の大きな違いには、HWレイトレーシングの有無、行列演算命令 (MFMA, MAI) の有無、FP64 演算性能があるが、次世代では FP64演算性能の違いがさらに広がることとなる。  
+*CDNA* と *RDNA* の大きな違いには、HWレイトレーシングの有無、行列演算命令 (MFMA, MAI) の有無、FP64 演算性能があるが、次世代では FP64演算性能の差がさらに広がることとなる。  
 
 他社のグラフィクス、ゲーミング向け GPU では、NVIDIA TU102 では FP32:FP64 = 32:1[^tu102]、NVIDIA GA102 では FP32:FP64 = 64:1[^ga102] となっている。  
 Intel GPU では、*Gen9 アーキテクチャ* では FP32:FP64 = 4:1、*Gen11 アーキテクチャ* からはネイティブでの対応が外され、ソフトウェアエミュレートでの対応となっている。{{< xe class="hpg" >}} もエミュレートでの対応となっているが、{{< xe class="hp/hpc" >}} ではネイティブで対応している。[^intel-gpu]  
+そのためアーキテクチャ、SIMDユニットの構成による所もあるが、最新のグラフィクス、ゲーミング向け GPU として *GFX11* は以前 FP64演算性能が確保されている方だとも言える。  
 
 [^intel-gpu]: [Xe-LP/HP より大きな命令キャッシュを持つ Xe-HPG | Coelacanth's Dream](/posts/2021/09/16/intel-xe_hpg-icache/)
 
