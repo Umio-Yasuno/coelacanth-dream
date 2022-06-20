@@ -1,5 +1,5 @@
 ---
-title: "GFX11 でサポートされる VOPD (Dual issue wave32) 命令のリスト"
+title: "GFX11 でサポートされる VOPD (Dual issue wave32) 命令の範囲と特徴"
 date: 2022-06-21T05:57:44+09:00
 draft: false
 categories: [ "Hardware", "Software", "AMD", "GPU" ]
