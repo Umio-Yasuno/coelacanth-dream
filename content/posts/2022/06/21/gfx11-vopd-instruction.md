@@ -57,6 +57,8 @@ AMD の Joe Nash 氏より、*GFX11* に追加される `VOPD (Dual issue wave32
  > {{< quote >}} [⚙ D128218 [AMDGPU] gfx11 VOPD instructions MC support](https://reviews.llvm.org/D128218) {{< /quote >}}
 
 今回のパッチで追加されたテストファイルの内容から、最大 2種類の `VOPD` 命令を組み合わせ、同時に発行、実行するものと推測した。  
+`Dual issue wave32` とあるように、対応するのは Wave32 の場合のみとなる。  
+*GFX11* における Wave64 の処理方法がどのようになっているかはまだ不明。*RDNA 1/GFX10.1, RDNA 2/GFX10.3* では Wave64 を、VGPR を共有する 2x Wave32 に分けて処理する方式を取っていた。  
 
  > 		# W32: v_dual_add_f32 v5, 0xaf123456, v2 :: v_dual_fmaak_f32 v6, v3, v1, 0xaf123456 ; encoding: [0xff,0x04,0x02,0xc9,0x03,0x03,0x06,0x05,0x56,0x34,0x12,0xaf]
  > 		0xff,0x04,0x02,0xc9,0x03,0x03,0x06,0x05,0x56,0x34,0x12,0xaf
@@ -69,7 +71,7 @@ AMD の Joe Nash 氏より、*GFX11* に追加される `VOPD (Dual issue wave32
  >
  > {{< quote >}} [⚙ D128218 [AMDGPU] gfx11 VOPD instructions MC support](https://reviews.llvm.org/D128218) {{< /quote >}}
 
-`VOPD` 命令のメリットとしては、単純にすれば *RDNA 1/GFX10.1 アーキテクチャ*、*RDNA 2/GFX10.3 アーキテクチャ* では 2x Wave32 に処理に 2サイクル掛かっていたが、対応命令であれば 1サイクルで済むようになることが考えられる。  
+`VOPD` 命令のメリットとしては、単純にすれば *RDNA 1/GFX10.1, RDNA 2/GFX10.3* では 2x Wave32 に処理に 2サイクル掛かっていたが、対応命令であれば 1サイクルで済むようになることが考えられる。  
 デメリットとしては、限られた範囲の命令とはいえ、組み合わせた命令を生成しなければならないため、コンパイラへの負担が大きくなることが予想される。  
 最大 2種類であり、同じ命令の組み合わせに対応しているため、これも単純に考えれば、同じ命令を実行する Wave が続く場合における性能向上が期待できそうだが、依存関係の判定が複雑になるように思われる。  
 
