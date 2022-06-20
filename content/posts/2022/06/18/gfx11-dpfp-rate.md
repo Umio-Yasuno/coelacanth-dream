@@ -3,7 +3,7 @@ title: "GFX11 では FP64 演算性能が FP32 の 1/32 に"
 date: 2022-06-18T21:33:21+09:00
 draft: false
 categories: [ "Hardware", "AMD", "GPU" ]
-tags: [ "GFX11", ]
+tags: [ "GFX11", "LLVM" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]
