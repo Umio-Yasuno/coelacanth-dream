@@ -24,6 +24,10 @@ summary: " "
         * [VanGogh](#vgh)
     * FAMILY_YC
         * [Yellow Carp](#yc)
+    * FAMILY_GC_10_3_6
+        * [gfx1036](#gfx1036)
+    * FAMILY_GC_10_3_7
+        * [Sabrina (gfx1037)](#sabrina)
  * [Discrete GPU](#dgpu)
     * FAMILY_AI
         * [Vega10](#vega10-gfx900)
@@ -385,6 +389,22 @@ DG02SRTBP4MFA
 [^yc-did]: [[PATCH 2/2] drm/amdgpu: add yellow carp pci id (v2)](https://lists.freedesktop.org/archives/amd-gfx/2021-July/066869.html)
 
 [Page Top](#page_index)
+
+### FAMILY_GC_10_3_6 {#family_gc_10_3_6}
+#### gfx1036 {#gfx1036}
+| Device ID | Revision ID | Product Name | Memo |
+| :--- | :--- | :---: | :---: |
+| 0x164E[^gc_10_3_6-did] &darr; | | | |
+
+[^gc_10_3_6-did]: [[PATCH] drm/amdkfd: Add fw version for 10.3.6](https://lists.freedesktop.org/archives/amd-gfx/2022-June/080084.html)
+
+### FAMILY_GC_10_3_7 {#family_gc_10_3_7}
+#### Sabrina SoC (gfx1037) {#sabrina}
+| Device ID | Revision ID | Product Name | Memo |
+| :--- | :--- | :---: | :---: |
+| 0x1506[^sabrina-did] &darr; | | | |
+
+[^sabrina-did]: [AMD Sabrina SoC は GC 10.3.7 | Coelacanth's Dream](/posts/2022/05/03/amd-sabrina-soc-gc_10_3_7/)
 
 ## Discrete GPU {#dgpu}
 ### FAMILY_AI {#family_ai}
