@@ -55,3 +55,10 @@ Intel GPU では、*Gen9 アーキテクチャ* では FP32:FP64 = 4:1、*Gen11 
 
 [^tu102]: [nvidia-ampere-ga-102-gpu-architecture-whitepaper-v2.pdf](https://www.nvidia.com/content/PDF/nvidia-ampere-ga-102-gpu-architecture-whitepaper-v2.pdf)
 [^ga102]: [NVIDIA Turing Architecture In-Depth | NVIDIA Technical Blog](https://developer.nvidia.com/blog/nvidia-turing-architecture-in-depth/)
+
+{{< ref >}}
+ * [Intel® Processor Graphics Xᵉ-LP API Developer and Optimization Guide](https://www.intel.com/content/www/us/en/developer/articles/guide/lp-api-developer-optimization-guide.html)
+ * [Re: What processors have an internal Gen11 GPU *with* FP64 (double precision) enabled? - Intel Communities](https://community.intel.com/t5/Graphics/What-processors-have-an-internal-Gen11-GPU-with-FP64-double/m-p/691217)
+ * <https://github.com/oneapi-src/oneDNN/blob/df399b0d8bffcb0f59aa8753344dd254f4421ac5/src/gpu/jit/gemm/emulation.hpp#L42-L54>
+ * `FeatureFP64` - <https://github.com/intel/intel-graphics-compiler/blob/d82cdf69941156e976205c64724801be7080e29a/IGC/VectorCompiler/lib/GenXCodeGen/GenX.td>
+{{< /ref >}}
