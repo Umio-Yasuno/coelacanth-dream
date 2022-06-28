@@ -1,5 +1,5 @@
 ---
-title: "GFX11/RDNA 3 では WMMA (Wave Matrix Multiply-accumulate) 命令をサポート"
+title: "GFX11/RDNA 3 では行列積和演算命令、WMMA (Wave Matrix Multiply-accumulate) をサポート"
 date: 2022-06-29T05:49:48+09:00
 draft: false
 categories: [ "Hardware", "AMD", "GPU" ]
