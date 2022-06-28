@@ -57,7 +57,13 @@ noindex: false
 NVIDIA GPU 向けの CUDA にも Tesor Core が対応する命令、それを利用するための API として `WMMA (Warp Matrix Multiply Accumulate)` はあり、言葉としては Warp か Wave かの違いとなる。  
 AMDGPU *GFX11* における `WMMA` は現状行列のサイズが 16x16x16 で固定されているのに対し、NVIDIA CUDA における `WMMA` はアーキテクチャにもよるが、16x16x16 以外に 32x8x16 や 8x8x4 (FP64)、8x8x128 (B1) にも対応するといった違いもある。  
 
-機能や名称から、NVIDIA GPU をある程度意識して追加された命令のように思える。  
+Intel GPU では、`DPAS (Dot Product Accumulate Systolic)` 命令、XMX ({{< xe >}} Matrix eXtension) とも呼ぶユニットが NVIDIA Tensor Core に相当する。[^intel-gpu]  
+Fused EU 構成を採用する *{{< xe class="hp/hpg" >}}* では内部的に行列ブロックを 2つ分解して実行する `DPASW (Wide)` 命令もサポートしている。[^intel-dpas]  
+
+[^intel-gpu]: [Intel® Iris® Xe GPU Architecture](https://www.intel.com/content/www/us/en/develop/documentation/oneapi-gpu-optimization-guide/top/xe-arch.html)
+[^intel-dpas]: [DG2-G12, DG2 L3 banks, SIMD width | Coelacanth's Dream](/posts/2022/01/16/xe_hpg-hpc-eu-inst/#dpas_w)
+
+機能や名称から、*GFX11* の `WMMA` 命令は NVIDIA GPU をある程度意識して追加された命令のように思える。  
 *CDNA 系アーキテクチャ* がサポートする `MFMA` 命令は miSIMD (Machine Intelligence SIMD) で実行する方式だったが、*GFX11* でも同様のユニットを用いるかは不明。  
 ただ今回のパッチでは通常のベクタレジスタ (VGPR) を指定しているため、miSIMD と専用の AccVGPR を用いる *CDNA 系アーキテクチャ* とは異なる方式であることが可能性として考えられる。  
 *CDNA 1/gfx908/MI100/Arcturus* では SIMD と VGPR、miSIMD と AccVGPR が分けて実装されている。  

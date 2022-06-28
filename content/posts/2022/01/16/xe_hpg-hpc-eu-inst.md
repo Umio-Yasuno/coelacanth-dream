@@ -112,8 +112,8 @@ OneDNN、IGC に記述されている情報によると、*{{< xe class="hpg" >}
 
 ### DPAS/DPASW {#dpas_w}
 *{{< xe class="hp"  >}}* から行列演算のための命令として、DPAS/DPASW (Dot Product Accumulate Systolic /Wide) が用意されている。  
-*{{< xe class="lp/hp/hpg" >}}* では DPAS/DPASW をサポートするが、*{{< xe class="hpc" >}}* は DPAS のみをサポートする。  
-これは DPASW が Fused EU を想定した命令であり、その関係で *{{< xe class="hpc" >}}* ではサポートされてない。  
+*{{< xe class="hp/hpg" >}}* では DPAS/DPASW をサポートするが、*{{< xe class="hpc" >}}* は DPAS のみをサポートする。  
+これは DPASW が Fused EU を想定した命令であるため、その関係で *{{< xe class="hpc" >}}* ではサポートされてない。  
 
  > 		bool supportDpaswInstruction() const
  > 		{
