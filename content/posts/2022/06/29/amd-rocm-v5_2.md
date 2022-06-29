@@ -10,7 +10,7 @@ noindex: false
 # author: ""
 ---
 
-AMD より ROCm v5.2 がリリースされた。  
+AMD より ROCm v5.2 がリリースされた。併せて AMDGPU 22.20 もリリースされている。  
 リリースノートは v5.1 から [AMD Documentation - Portal](https://docs.amd.com/) のみに公開されるようになり、また最近の更新内容からリリースノートは vX.Y の更新時に公開されるようになった。  
 
  * [ROCm™ v5.2](https://docs.amd.com/category/ROCm_v5.2)
