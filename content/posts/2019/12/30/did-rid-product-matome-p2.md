@@ -649,7 +649,9 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | | 0xD0 | | |
 | | 0xD1 | | |
 | | 0xD3 | | |
+| | 0xD7 | TDC-235[^22_20] | |
 
+[^22_20]: AMDGPU 22.20
 
 #### Navy Flounder/Navi22 ( gfx1031 ) {#navy_flounder-gfx1031}
 

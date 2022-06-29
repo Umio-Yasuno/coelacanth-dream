@@ -25,7 +25,8 @@ noindex: false
  >
  > {{< quote >}} [⚙ D128756 [AMDGPU] gfx11 WMMA instruction support](https://reviews.llvm.org/D128756) {{< /quote >}}
 
-`WMMA` 命令には以下の 6個が存在し、*CDNA 系アーキテクチャ* でサポートされている `MFMA (Matrix-Fused-Multiply-Add)` 命令と同様のフォーマットとすると、`V_WMMA_{CD}_{M}x{N}x{K}_{AB}` と置いた場合、`{AB}` は入力データフォーマット、`{CD}` は加算する行列と最終的な出力データフォーマットを、`{M,N,K}` は行列のサイズを示す。  
+`WMMA` 命令には以下の 6個が存在する。  
+*CDNA 系アーキテクチャ* でサポートされている `MFMA (Matrix-Fused-Multiply-Add)` 命令と同様のフォーマットとすると、`V_WMMA_{CD}_{M}x{N}x{K}_{AB}` と置いた場合、`{AB}` は入力データフォーマット、`{CD}` は加算する行列と最終的な出力データフォーマットを、`{M,N,K}` は行列のサイズを示す。  
 *GFX11* の `WMMA` 命令は、入力データフォーマットに `F16,BF16,IU8,IU4`、出力データフォーマットに `F32,F16,BF16,I32` をサポートしていると考えられる。  
 命令ごとの対応関係は `F16->F32, BF16->F32, F16->F16, BF16->BF16, IU8->I32, IU4->I32` となる。  
 
