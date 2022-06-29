@@ -27,7 +27,7 @@ noindex: false
 
 `WMMA` 命令には以下の 6個が存在する。  
 *CDNA 系アーキテクチャ* でサポートされている `MFMA (Matrix-Fused-Multiply-Add)` 命令と同様のフォーマットとすると、`V_WMMA_{CD}_{M}x{N}x{K}_{AB}` と置いた場合、`{AB}` は入力データフォーマット、`{CD}` は加算する行列と最終的な出力データフォーマットを、`{M,N,K}` は行列のサイズを示す。  
-*GFX11* の `WMMA` 命令は、入力データフォーマットに `F16,BF16,IU8,IU4`、出力データフォーマットに `F32,F16,BF16,I32` をサポートしていると考えられる。  
+*GFX11* の `WMMA` 命令は、入力データフォーマットに `F16,BF16,IU8,IU4`、出力データフォーマットに `F32,F16,BF16,I32` をサポートしている。  
 命令ごとの対応関係は `F16->F32, BF16->F32, F16->F16, BF16->BF16, IU8->I32, IU4->I32` となる。  
 
  > 		defm V_WMMA_F32_16X16X16_F16   : VOP3P_Real_WMMA <0x040>;
@@ -40,7 +40,7 @@ noindex: false
  > {{< quote >}} [⚙ D128756 [AMDGPU] gfx11 WMMA instruction support](https://reviews.llvm.org/D128756) {{< /quote >}}
 
 `MFMA` と `WMMA` の違いには、`MFMA` は入出力に `F64` フォーマットをサポートし、`WMMA` は `F64` をサポートしないが入力データフォーマットに `IU4` をサポートしている点、  
-`MFMA` は複数の行列サイズに対応するが `WMMA` は 16x16x16 に固定されている点が挙げられる。  
+`MFMA` は複数の行列レイアウトに対応するが `WMMA` は 16x16x16 に固定されている点が挙げられる。  
 ここでの `MFMA` 命令は *CDNA 2/gfx90a/MI200/Aldebaran* がサポートしている範囲を指している。  
 
 | AMDGPU | MFMA (CDNA 2) | WMMA (GFX11) |
@@ -48,7 +48,7 @@ noindex: false
 | Register type | AccVGPR | VGPR |
 | Input format  | F32, F16, I8, BF16, F64 | F16, BF16, IU8, IU4 |
 | Output format | F32, I32, F64           | F32, F16, BF16, I32 |
-| Matrix size   | {4,16,32}x{4,16,32}x{2,4,8,16} | 16x16x16 |
+| Matrix layout | {4,16,32}x{4,16,32}x{2,4,8,16} | 16x16x16 |
 
 *GFX11* では Wave32 と Wave64 の両方に対応するが、`WMMA` 命令では Wave のサイズによって割り当てられるレジスタリソースが異なっている。  
 
