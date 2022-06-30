@@ -17,9 +17,12 @@ AMD より ROCm v5.2 がリリースされた。併せて AMDGPU 22.20 もリリ
     * [What’s New in This Release](https://docs.amd.com/bundle/ROCm-Release-Notes-v5.2/page/What%E2%80%99s_New_in_This_Release.html)
 
 主な更新内容は HIP (Heterogeneous-Compute Interface for Portability) のメモリ管理に関する API の更新、GPU Device側で実行される kernel 内での malloc (device-side malloc) のサポート、ライブラリの更新となる。  
+rocBLAS ライブラリのターゲットから *Navi12 (gfx1011)* が外されたが、*Polaris (gfx803)* や *Navi10 (gfx1010)* 、*Navi14 (gfx1012)* はまだ残されている。[^rocblas]  
 そして *CDNA 系アーキテクチャ* でサポートされている `MFMA (Matrix-Fused-Multiply-Add)` 命令を使いやすくするためのライブラリ、rocWMMA がリリースに含まれるようになった。  
 
  * [ROCmSoftwarePlatform/rocWMMA: rocWMMA](https://github.com/ROCmSoftwarePlatform/rocWMMA)
+
+[^rocblas]: [remove Navi12 (gfx1011) from fat binary · ROCmSoftwarePlatform/rocBLAS@f3b45f7](https://github.com/ROCmSoftwarePlatform/rocBLAS/commit/f3b45f701048bef8e7190d5a710b845354319169)
 
 ## rocWMMA {#rocwmma}
 rocWMMA は `MFMA` 命令を使いやすくするのと同時に、CUDA WMMA を用いたコードとのポータビリティを強化するためのライブラリとなる。  
