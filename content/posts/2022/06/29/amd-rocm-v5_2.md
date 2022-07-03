@@ -25,7 +25,7 @@ rocBLAS ライブラリのターゲットから *Navi12 (gfx1011)* が外され�
 [^rocblas]: [remove Navi12 (gfx1011) from fat binary · ROCmSoftwarePlatform/rocBLAS@f3b45f7](https://github.com/ROCmSoftwarePlatform/rocBLAS/commit/f3b45f701048bef8e7190d5a710b845354319169)
 
 ## rocWMMA {#rocwmma}
-rocWMMA は `MFMA` 命令を使いやすくするのと同時に、CUDA WMMA を用いたコードとのポータビリティを強化するためのライブラリとなる。  
+rocWMMA はデータの分割等を行い `MFMA` 命令を使いやすくするのと同時に、CUDA WMMA を用いたコードとのポータビリティを強化するためのライブラリとなる。  
 
  > 		/**
  > 		 * \mainpage

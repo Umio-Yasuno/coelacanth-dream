@@ -67,6 +67,7 @@ AMD の Alex Deucher 氏は当該 issue 内で、System UEFI/BIOS が誤った C
 
 この問題がゲームのような実アプリケーションの性能にどれだけ影響するかも不明。  
 BAR への書き込み速度と同様の影響があるのであれば、もっと以前から他で話題になっていいように思う。  
+自環境で Basemark を実行してみたが、スコアに差はほとんど無かった。  
 また Tatsuyuki Ishi 氏の環境も自環境も GIGABYTE M/B を用いており、この問題が他ベンダーの M/B、`Resizable BAR [Auto/Enabled/Disabled]` オプションを備える AMD AGESA >1.1.0.0 の UEFI/BIOS すべてでも発生するのかは判然としない。  
 
 {{< ref >}}
