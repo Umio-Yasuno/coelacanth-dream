@@ -33,11 +33,19 @@ AMD は COMPUTEX 2022 にて、エントリーレベル向けに新たな APU/So
 *Mendocino SoC* については、*Sabrina SoC* に関するパッチが投稿されるより前に、Bao Zheng 氏より PSP部に追加された ISH (Image Slot Header) をサポートするパッチが Coreboot に投稿されていた。[^mendocino-ish]  
 {{< link >}} [Coreboot に Family 17h Model A0h APU/SoC のサポートが追加 ―― Sabrina SoC | Coelacanth's Dream](/posts/2022/01/12/fam17h-moda0h-amd-sabrina-soc/#mendocino) {{< /link >}}
 *Sabrina SoC* のサポートが進められるようになってから *Mendocino SoC* の名前は Coreboot において出されなくなり、そして *Sabrina SoC* に向けても PSP ISH をサポートするパッチが投稿された。[^sabrina-ish]  
-また、*Sabrina SoC* と *Mendocino SoC* の PSP ID は同じものとされ、PSP部においても一致している。[^psp-id]  
+また、*Sabrina SoC* と *Mendocino SoC* の PSP ID は同じものとされ、PSP部も一致している。[^psp-id]  
 
 [^mendocino-ish]: [amdfwtool: Add ISH header support for A/B recovery layout (I4710df40) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/59384/1)
 [^sabrina-ish]: [util/amdfwtool: use ISH support for Sabrina SoC (I9e630885) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/63186/3)
 [^psp-id]: [util/amdfwtool: add Sabrina SoC type (Ibe52b443) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/63185/3)
+
+{{< ins >}}
+また、*Sabrina SoC* を搭載する Chromebookボード *Skyrim* に対して、`chipset-mendocino` をベースとするパッチも投稿されている。[^chipset]  
+{{< link >}} [AMD Sabrina SoC を搭載する Chromebookボード 「Skyrim」 | Coelacanth's Dream](/posts/2022/02/03/skyrim-chromebook-sabrina-soc/) {{< /link >}}
+
+[^chipset]: [chipset-mendocino: Add initial mendocino chipset overlay (I6461a700) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/overlays/board-overlays/+/3727882)
+{{< /ins >}}
+
 
 *Sabrina* と *Mendocino* という 2つのコードネームがある理由は不明だが、一応 GPU部のコードネームは *VanGogh* だが、SoC に対するコードネームや VBIOS名に *Aerith* が使われるという前例はある。  
 個人的には、最初は *Mendocino* というコードネームだったが、Intel の過去 CPU のコードネームと被ることを気にして *Sabrina* というコードネームを新たに付けたのではと考えていたが、COMPUTEX 2022 でコードネーム *Mendocino* が正式発表された。  
