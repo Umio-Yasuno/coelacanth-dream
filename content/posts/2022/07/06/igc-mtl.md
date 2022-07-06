@@ -46,8 +46,7 @@ XMXユニットは主に推論処理の高速化を目的としており、用�
 
 ### FP64 に部分的に対応 {#fp64}
 Intel GPU では *Gen11 アーキテクチャ* から Int64/FP64 の対応がハードウェア的には外され、ソフトウェアエミュレータでの対応となり、これは *DG2/Alchemist* にも引き継がれているが、*Meteor Lake GPU* では FP64 に部分的ではあるが再度ハードウェアが対応する様子を見せている。  
-{{< link >}} [GFX11 では FP64 演算性能が FP32 の 1/32 に | Coelacanth's Dream](/posts/2022/06/18/gfx11-dpfp-rate/) {{< /link >}}
-[visa/HWCaps.inc](https://github.com/intel/intel-graphics-compiler/blob/20ef9c5a42f4154c9e18c65cafd55e8af5f67c17/visa/HWCaps.inc) において、`noInt64()` の判定部に `Xe_MTL` が追加されているが、`noFP64()` には追加されていない。  
+[visa/HWCaps.inc](https://github.com/intel/intel-graphics-compiler/blob/20ef9c5a42f4154c9e18c65cafd55e8af5f67c17/visa/HWCaps.inc) において、`noInt64()` の判定部に `Xe_MTL` が追加されているが、`noFP64()` には追加されていない。FP64 にのみ対応し、Int64 には対応しないものと思われる。  
 
  > 		    bool noInt64() const
  > 		    {
@@ -78,8 +77,10 @@ FP64 演算性能について、*Gen9* では使用可能な FPパイプ (SIMD4)
  >
  > {{< quote >}} [vISA: Add MTL target. · intel/intel-graphics-compiler@20ef9c5](https://github.com/intel/intel-graphics-compiler/commit/20ef9c5a42f4154c9e18c65cafd55e8af5f67c17) {{< /quote >}}
 
-
 [^gen9]: [the-compute-architecture-of-intel-processor-graphics-gen9-v1d0.pdf](https://www.intel.com/content/dam/develop/external/us/en/documents/the-compute-architecture-of-intel-processor-graphics-gen9-v1d0.pdf)
+
+GPU の FP32:FP64 演算性能レートは、AMD GPU では FP64演算性能を高めたサーバー向けを除けば *RDNA 2/GFX10.3 アーキテクチャ* までの長い間 16:1 を保っていたが、*RDNA 3/GFX11* では 32:1 になることが明らかにされている。  
+{{< link >}} [GFX11 では FP64 演算性能が FP32 の 1/32 に | Coelacanth's Dream](/posts/2022/06/18/gfx11-dpfp-rate/) {{< /link >}}
 
 {{< ref >}}
  * [Intel® Iris® Xe GPU Architecture](https://www.intel.com/content/www/us/en/develop/documentation/oneapi-gpu-optimization-guide/top/xe-arch.html)
