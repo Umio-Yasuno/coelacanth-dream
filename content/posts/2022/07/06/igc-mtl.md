@@ -25,14 +25,16 @@ Intel の Pete Chou 氏より、[Intel Graphics Compiler (IGC)](https://github.c
  > {{< quote >}} [vISA: Add MTL target. · intel/intel-graphics-compiler@20ef9c5](https://github.com/intel/intel-graphics-compiler/commit/20ef9c5a42f4154c9e18c65cafd55e8af5f67c17) {{< /quote >}}
 
 ### DPAS 命令には非対応、XMXユニット非搭載か {#nodpas}
-
 EU あたり 8スレッド、EU あたり 4スレッドにも設定可能であり、その場合スレッドあたりの利用可能レジスタファイルが 256エントリ (8KiB) になるという点は *Meteor Lake* と *{{< xe class="hp/hpg" >}}* と共通する。  
+EU のネイティブでの実行サイズが SIMD8 という点も変わらない。  
 {{< link >}} [Intel Xe-HP EU に追加されるパイプラインと増加するスレッド/レジスタファイル | Coelacanth's Dream](/posts/2021/06/08/intel-xe_hp-thread-reg-pipe/) {{< /link >}}
 
 だが行列積和演算を行う `DPAS (Dot Product Accumulate Systolic)` 命令、XMX ({{< xe >}} Matrix eXtension) とも呼ばれるユニットの有無を判定する `hasDPAS()` において `getPlatform() != Xe_MTL` が追加されている。  
 このことから *Meteor Lake GPU* では XMXユニットが搭載されていないことが考えられる。  
 XMXユニットは主に推論処理の高速化を目的としており、用途の一つに Intel はアップスケーリング技術 {{< xe >}}SS (Super Sampling) を挙げている。  
 {{< xe >}}SS は DP4a (INT8) にも対応しているため、タイルアーキテクチャを採用するとはいえ iGPU としてダイ面積、面積あたりの性能を *Meteor Lake GPU* で重視した結果、XMXユニットを搭載しなかったのではないかと考えられる。  
+*Meteor Lake* は VPU (Vision Processing Unit) を搭載するとされているため、GPU との連携が重要な推論処理以外は VPU で実行することができる。  
+{{< link >}} [Intel Movidius VPU に関するメモ ―― Keem Bay, Thunder Bay, Meteor Lake | Coelacanth's Dream](/posts/2022/01/11/intel-kmb-thb/) {{< /link >}}
 
  > 		     bool hasDPAS() const
  > 		     {
@@ -44,6 +46,7 @@ XMXユニットは主に推論処理の高速化を目的としており、用�
 
 ### FP64 に部分的に対応 {#fp64}
 Intel GPU では *Gen11 アーキテクチャ* から Int64/FP64 の対応がハードウェア的には外され、ソフトウェアエミュレータでの対応となり、これは *DG2/Alchemist* にも引き継がれているが、*Meteor Lake GPU* では FP64 に部分的ではあるが再度ハードウェアが対応する様子を見せている。  
+{{< link >}} [GFX11 では FP64 演算性能が FP32 の 1/32 に | Coelacanth's Dream](/posts/2022/06/18/gfx11-dpfp-rate/) {{< /link >}}
 [visa/HWCaps.inc](https://github.com/intel/intel-graphics-compiler/blob/20ef9c5a42f4154c9e18c65cafd55e8af5f67c17/visa/HWCaps.inc) において、`noInt64()` の判定部に `Xe_MTL` が追加されているが、`noFP64()` には追加されていない。  
 
  > 		    bool noInt64() const
