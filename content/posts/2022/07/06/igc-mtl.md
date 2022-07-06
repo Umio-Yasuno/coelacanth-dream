@@ -1,5 +1,5 @@
 ---
-title: "Intel Graphics Compiler で Meteor Lake のサポートが進み始める ―― XMXユニットは非搭載か、再度 FP64 に対応"
+title: "Intel Graphics Compiler で Meteor Lake のサポートが進み始める ―― Xe-HPG、XMXユニットは非搭載か、再度 FP64 に対応"
 date: 2022-07-06T15:50:54+09:00
 draft: false
 categories: [ "Intel", "GPU", "Hardware" ]
@@ -59,8 +59,8 @@ Intel GPU では *Gen11 アーキテクチャ* から Int64/FP64 の対応がハ
  >
  > {{< quote >}} [intel-graphics-compiler/HWCaps.inc at 20ef9c5a42f4154c9e18c65cafd55e8af5f67c17 · intel/intel-graphics-compiler](https://github.com/intel/intel-graphics-compiler/blob/20ef9c5a42f4154c9e18c65cafd55e8af5f67c17/visa/HWCaps.inc#L514-L523) {{< /quote >}}
 
-実行パイプは従来の FPパイプや Longパイプ ({{< xe class="hp/hpc" >}})とは異なり、*Meteor Lake GPU* では複雑な関数を実行する EM (Extend Math) パイプとされる。  
-グラフィクス性能の最適化から *Gen11 アーキテクチャ* でハードウェアから対応を外したが、FP32演算性能に対して低くとも、互換性の問題などからハードウェアの対応はやはり必要と判断したのだろうか。  
+実行パイプは従来の FPパイプや Longパイプ ({{< xe class="hp/hpc" >}})とは異なり、*Meteor Lake GPU* では複雑な関数を実行する EM (Extend Math) パイプとされる。そのため FP64演算性能は限定的と思われる。  
+グラフィクス性能の最適化から *Gen11 アーキテクチャ* でハードウェアから対応を外したが、互換性の問題などからハードウェアの対応はやはり必要と判断したのだろうか。  
 同様の変更が dGPU においても *DG2/Alchemist* の次世代で適用される可能性が考えられる。  
 
  > 		         ThreeDistPipe         = 2, // XeHP/XeHPG: 3 distance pipe
@@ -73,4 +73,6 @@ Intel GPU では *Gen11 アーキテクチャ* から Int64/FP64 の対応がハ
 {{< ref >}}
  * [Intel® Iris® Xe GPU Architecture](https://www.intel.com/content/www/us/en/develop/documentation/oneapi-gpu-optimization-guide/top/xe-arch.html)
  * [インテル® Arc™ - Xe スーパーサンプリング](https://www.intel.co.jp/content/www/jp/ja/products/docs/arc-discrete-graphics/xess.html)
+ * [Intel® Processor Graphics Xᵉ-LP API Developer and Optimization Guide](https://www.intel.com/content/www/us/en/developer/articles/guide/lp-api-developer-optimization-guide.html)
+ * [Re: What processors have an internal Gen11 GPU *with* FP64 (double precision) enabled? - Intel Communities](https://community.intel.com/t5/Graphics/What-processors-have-an-internal-Gen11-GPU-with-FP64-double/m-p/691217)
 {{< /ref >}}
