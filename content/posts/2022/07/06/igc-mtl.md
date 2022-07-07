@@ -10,7 +10,7 @@ noindex: false
 # author: ""
 ---
 
-Intel の Pete Chou 氏より、[Intel Graphics Compiler (IGC)](https://github.com/intel/intel-graphics-compiler) のサポートターゲットに *Meteor Lake* を追加するコミットが追加されている。  
+Intel の Pete Chou 氏より、[Intel Graphics Compiler (IGC)](https://github.com/intel/intel-graphics-compiler) のサポートターゲット、vISA (virtual ISA) に *Meteor Lake* を追加するコミットが追加されている。  
 
  * [vISA: Add MTL target. · intel/intel-graphics-compiler@20ef9c5](https://github.com/intel/intel-graphics-compiler/commit/20ef9c5a42f4154c9e18c65cafd55e8af5f67c17)
 
@@ -27,6 +27,7 @@ Intel の Pete Chou 氏より、[Intel Graphics Compiler (IGC)](https://github.c
 ### DPAS 命令には非対応、XMXユニット非搭載か {#nodpas}
 EU あたり 8スレッド、EU あたり 4スレッドにも設定可能であり、その場合スレッドあたりの利用可能レジスタファイルが 256エントリ (8KiB) になるという点は *Meteor Lake* と *{{< xe class="hp/hpg" >}}* と共通する。  
 EU のネイティブでの実行サイズが SIMD8 という点も変わらない。  
+従来から大幅に設計が見直されたデータポート、LSC (Load Store Cache) も *{{< xe class="hpg/hpc" >}}}* と同様に採用している。  
 {{< link >}} [Intel Xe-HP EU に追加されるパイプラインと増加するスレッド/レジスタファイル | Coelacanth's Dream](/posts/2021/06/08/intel-xe_hp-thread-reg-pipe/) {{< /link >}}
 
 だが行列積和演算を行う `DPAS (Dot Product Accumulate Systolic)` 命令、XMX ({{< xe >}} Matrix eXtension) とも呼ばれるユニットの有無を判定する `hasDPAS()` において `getPlatform() != Xe_MTL` が追加されている。  
