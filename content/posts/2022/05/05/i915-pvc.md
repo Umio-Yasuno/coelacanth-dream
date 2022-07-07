@@ -1,5 +1,5 @@
 ---
-title: "Intel GPU ドライバーに Ponte Vecchio をサポートするパッチが投稿される"
+title: "Intel GFX ドライバーに Ponte Vecchio をサポートするパッチが投稿される"
 date: 2022-05-05T12:49:26+09:00
 draft: false
 categories: [ "Intel", "GPU", "Hardware" ]
