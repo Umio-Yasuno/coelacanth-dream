@@ -17,8 +17,13 @@ Intel の [Radhakrishna Sripada](https://www.linkedin.com/in/rkinvictus) 氏よ�
  * [[Intel-gfx] [PATCH 2/2] drm/i915/mtl: Add MeteorLake PCI IDs](https://lists.freedesktop.org/archives/intel-gfx/2022-July/301010.html)
 
 *Meteor Lake-M/P* の各 IP バージョンは、GraphicsIP は `12.70`、DisplayIP は `14 (Xe_LPD+)`、MediaIP は `13 (Xe_LPM+)` とされている。  
+ただ GraphicsIP については、あくまでもドライバー内で区別するためのバージョンであり、実際のバージョンはハードウェアの `GMD_ID` レジスタから読み取れる。  
+また、[intel/gmmlib](https://github.com/intel/gmmlib) などでは、`PRODUCT_FAMILY` や `GFXCORE_FAMILY` としては `IGFX_DG2 = 1270` (ver12.7) を割り当てているが、Intel GFX ドライバーでは *DG2/Alchemist* の GraphicsIP は ver12.55 とされており、それぞれバージョン番号は近いが意味する所は異なっている。[^gmmlib]  
+
+[^gmmlib]: [gmmlib/igfxfmid.h at c70167bee652c7f4cc656d651a1705ffb6bcc0c9 · intel/gmmlib](https://github.com/intel/gmmlib/blob/c70167bee652c7f4cc656d651a1705ffb6bcc0c9/Source/inc/common/igfxfmid.h#L69-L82)
+
 *Xe_LPD+* の新機能に関するパッチはまだ投稿されていない。*Xe_LPD+* では *Xe_LPD (ver13)* でサポートする機能に加えて `has_cdclk_crawl` のフラグが有効化されているが、これは *Alder Lake-P* でもサポートされている。  
-*Xe_LPD (ver13)* IP は *DG2/Alchemist* でも採用されているが、こちらは `has_cdclk_crawl` が有効化されていない。[^cdclk_crawl]  
+同様に *Xe_LPD (ver13)* IP を採用する *DG2/Alchemist* では `has_cdclk_crawl` が有効化されておらず、*Xe_LPD (ver13)* においては分離していた部分だった。[^cdclk_crawl]  
 
 [^cdclk_crawl]: <https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/tree/drivers/gpu/drm/i915/i915_pci.c?h=next-20220706#n983>
 
