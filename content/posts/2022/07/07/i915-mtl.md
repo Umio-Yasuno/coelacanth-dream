@@ -16,7 +16,7 @@ Intel の [Radhakrishna Sripada](https://www.linkedin.com/in/rkinvictus) 氏よ�
  * [[Intel-gfx] [PATCH 1/2] drm/i915/mtl: Add MeteorLake platform info](https://lists.freedesktop.org/archives/intel-gfx/2022-July/301009.html)
  * [[Intel-gfx] [PATCH 2/2] drm/i915/mtl: Add MeteorLake PCI IDs](https://lists.freedesktop.org/archives/intel-gfx/2022-July/301010.html)
 
-*Meteor Lake-M/P* の各 IP バージョンは、GraphicsIP は `12.70`、DisplayIP は `14 (Xe_LPD+)`、MediaIP は `13 (Xe_LPM+)` とされている。  
+*Meteor Lake-M/P* の各 IP バージョンは、GraphicsIP は `ver12.70`、DisplayIP は `ver14 (Xe_LPD+)`、MediaIP は `ver13 (Xe_LPM+)` とされている。  
 ただ GraphicsIP については、あくまでもドライバー内で区別するためのバージョンであり、実際のバージョンはハードウェアの `GMD_ID` レジスタから読み取れる。  
 また、[intel/gmmlib](https://github.com/intel/gmmlib) などでは、`PRODUCT_FAMILY` や `GFXCORE_FAMILY` としては `IGFX_DG2 = 1270` (ver12.7) を割り当てているが、Intel GFX ドライバーでは *DG2/Alchemist* の GraphicsIP は ver12.55 とされており、それぞれバージョン番号は近いが意味する所は異なっている。[^gmmlib]  
 
