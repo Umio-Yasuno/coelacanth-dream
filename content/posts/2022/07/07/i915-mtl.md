@@ -27,7 +27,7 @@ Intel の [Radhakrishna Sripada](https://www.linkedin.com/in/rkinvictus) 氏よ�
 
 [^cdclk_crawl]: <https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/tree/drivers/gpu/drm/i915/i915_pci.c?h=next-20220706#n983>
 
-`platform_engine_mask` に `CCS0` のビットがセットされていることから、*Meteor Lake-M/P* では *Compute Engine (Compute Command Streamer)* を 1基搭載しているものと思われる。  
+`platform_engine_mask` に `CCS0` のビットがセットされていることから、*Meteor Lake-M/P* では *Compute Engine (Compute Command Streamer)* を 1基搭載、有効化される。  
 *Xe_HP SDV, DG2/Alchemist, Ponte Vecchio* では 4基搭載されているため、それよりも小さい規模となる。  
 公開されているドキュメントでは *Tiger Lake* でも CCS 1基を搭載しているとされているが、i915 ドライバーでは何らかの理由で有効化されていないものと思われる。  
 *Rocket Lake, Alder Lake-N/M/P/S* でも同様のため、iGPU では *Meteor Lake-M/P* で CCS がようやく有効化されることとなる。  
