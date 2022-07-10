@@ -10,7 +10,7 @@ noindex: false
 # author: ""
 ---
 
-AMD の Alex Deucher 氏より、AMDGPU ドライバーに *RDNA 3/GFX11 APU* で採用されるディスプレイエンジン *:DCN 3.1.4* のサポートを追加するパッチが amd-gfx メーリングリストに投稿されている。  
+AMD の Alex Deucher 氏より、AMDGPU ドライバーに *RDNA 3/GFX11 APU* で採用されるディスプレイエンジン *DCN 3.1.4* のサポートを追加するパッチが amd-gfx メーリングリストに投稿されている。  
 例によってレジスタヘッダはパッチサイズが巨大となるため、メーリングリストには投稿されていない。補足すると、最近追加された `dcn_3_2_0_sh_mask.h (drivers/gpu/drm/amd/include/asic_reg/dcn/)` はファイル単体で 23.9MiB もある。  
 以前は `nbio_7_2_0_sh_mask.h (drivers/gpu/drm/amd/include/asic_reg/nbio/)` が 15.9MiB で最大だったと思うのだが、一気に最大ファイルサイズが更新されたようだ。  
 もはや余談だが、こうした自動生成された巨大なレジスタヘッダについて、Linus Torvalds 氏は以下のようにコメントしている。  
@@ -69,7 +69,7 @@ AMD の Alex Deucher 氏より、AMDGPU ドライバーに *RDNA 3/GFX11 APU* �
 
 現状、*GC IP* と GFX ID と `AMDGPU_FAMILY` の関係性は以下のようになっている。  
 
-| GC IP ver | GFX ID | AMDGPU_FAMILY | Type |
+| GC (Graphics Compute) IP ver | GFX ID | AMDGPU_FAMILY | Type |
 | :-------- | :-----: | :--: | :--: |
 | 11.0.0    | gfx1100 (Navi31)[^tensile-gfx11] | AMDGPU_FAMILY_GC_11_0_0 (FAMILY_GFX1100) | dGPU |
 | 11.0.1    | gfx1103 | AMDGPU_FAMILY_GC_11_0_2 (FAMILY_GFX1103) | APU  |
@@ -114,6 +114,14 @@ AMD の Alex Deucher 氏より、AMDGPU ドライバーに *RDNA 3/GFX11 APU* �
  >
  > {{< quote >}} [[PATCH 4/9] drm/amd/display: Add DCN314 DC resources](https://lists.freedesktop.org/archives/amd-gfx/2022-July/081245.html) {{< /quote >}}
 
+WaterMark Table には LPDDR5用と DDR5用があり、*GC 11.0.1 APU* ではメモリにそれらをサポートしていると考えられる。  
+
+ > 		+		if (ctx->dc_bios->integrated_info->memory_type == LpDdr5MemType)
+ > 		+			dcn314_bw_params.wm_table = lpddr5_wm_table;
+ > 		+		else
+ > 		+			dcn314_bw_params.wm_table = ddr5_wm_table;
+ >
+ > {{< quote >}} [[PATCH 3/9] drm/amd/display: Add DCN314 clock manager](https://lists.freedesktop.org/archives/amd-gfx/2022-July/081238.html) {{< /quote >}}
 
 {{< ref >}}
  * [Support Tensile for gfx11 series platform by TonyYHsieh · Pull Request #1521 · ROCmSoftwarePlatform/Tensile](https://github.com/ROCmSoftwarePlatform/Tensile/pull/1521/commits/3796d41aec358721fced1ed4337c27f69aeda3bb#diff-95d409aa7c33d03c94333a9a95ce6076cabf7428d1613137ccc7944151cd0972)
