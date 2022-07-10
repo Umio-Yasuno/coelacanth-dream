@@ -63,9 +63,9 @@ Intel GPU では *Gen11 アーキテクチャ* から Int64/FP64 の対応がハ
  > {{< quote >}} [intel-graphics-compiler/HWCaps.inc at 20ef9c5a42f4154c9e18c65cafd55e8af5f67c17 · intel/intel-graphics-compiler](https://github.com/intel/intel-graphics-compiler/blob/20ef9c5a42f4154c9e18c65cafd55e8af5f67c17/visa/HWCaps.inc#L514-L523) {{< /quote >}}
 
 実行パイプは複雑な関数を実行する EM (Extend Math) パイプとされ、{{< xe class="hp/hpc" >}} のように専用の Longパイプは持たない。  
-また、*Gen9 アーキテクチャ* のドキュメントによれば、*Gen9* においても FP64 演算は EMパイプで実行されていた。[^gen9]そのため、FP64 演算に関しては *Meteor Lake GPU* で従来の方式に戻したとも見られる。  
+また、*Gen9 アーキテクチャ* においても FP64 演算は EMパイプで実行する方式だった。[^gen9]そのため、FP64 演算に関して、*Meteor Lake GPU* で *Gen9* と同様の方式に戻したとも見られる。  
 グラフィクス性能の最適化から *Gen11 アーキテクチャ* でハードウェアから対応を外したが、互換性の問題などからハードウェアの対応はやはり必要と判断したのだろうか。  
-同様の変更が dGPU においても *DG2/Alchemist* の次世代で適用される可能性が考えられる。  
+同様の変更が dGPU においても、*DG2/Alchemist* の次世代で適用される可能性が考えられる。  
 
 FP64 演算性能について、*Gen9* では使用可能な FPパイプ (SIMD4) が片方 1基であり、スループットが半分ということから、FP32 演算性能に対して 1/4 のピーク性能となっていた。  
 *{{< xe class="lp" >}}* では FP/INTパイプ が SIMD8 なのに対し、EMパイプは SIMD2 となっており、この構成を引き継いでいるとすると、*Meteor Lake GPU* では FP32 演算性能に対して 1/8 の FP64演算性能になるのではないかと思われる。  
