@@ -24,7 +24,7 @@ noindex: false
 | *gfx909* | Vega | APU | Raven2 |
 | *gfx90a* | CDNA 2 | dGPU | Aldebaran (MI200) |
 | *gfx90c* | Vega | APU | Renoir/ Lucienne/<br>Green Sardine (Cezanne)[^green_sardine] |
-| *gfx940* [^gfx940] | ? | ? |
+| *gfx940* [^gfx940] | CDNA 3 | APU | MI300
 | **GFX10.1 (RDNA 1)** |
 | *gfx1010* | RDNA | dGPU | Navi10 |
 | *gfx1011* | RDNA | dGPU | Navi12 |
@@ -37,6 +37,13 @@ noindex: false
 | *gfx1033* | RDNA 2 | APU | VanGogh |
 | *gfx1034* | RDNA 2 | dGPU | Beige Goby (Navi24) |
 | *gfx1035* | RDNA 2 | APU | Yellow Carp (Rembrandt) |
+| *gfx1036* | RDNA 2 | APU | |
+| *gfx1037* | RDNA 2 | APU | GC 10.3.7/Sabrina |
+| **GFX11 (RDNA 3)** |
+| *gfx1100* | RDNA 3 | dGPU | GC 11.0.0/Navi31 |
+| *gfx1101* | RDNA 3 | dGPU | GC 11.0.3/Navi33? |
+| *gfx1102* | RDNA 3 | dGPU | GC 11.0.2/Navi32 |
+| *gfx1103* | RDNA 3 | APU | GC 11.0.1 |
 
 [^gfx940]: [SWDEV-292904 - Extend HIP coherency tests to gfx940 · ROCm-Developer-Tools/HIP@9fbd19a](https://github.com/ROCm-Developer-Tools/HIP/commit/9fbd19a6759b0ed091562ad286a790783998b88a)
 [^green_sardine]: [Green Sardine APU の PCI ID が追加、正体は Cezanne APU だったか | Coelacanth's Dream](/posts/2021/01/14/green_sardine-pciid/)
