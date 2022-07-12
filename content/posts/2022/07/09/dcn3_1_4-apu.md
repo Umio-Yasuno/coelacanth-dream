@@ -10,7 +10,7 @@ noindex: false
 # author: ""
 ---
 
-AMD の Alex Deucher 氏より、AMDGPU ドライバーに *RDNA 3/GFX11 APU* で採用されるディスプレイエンジン *DCN 3.1.4* のサポートを追加するパッチが amd-gfx メーリングリストに投稿されている。  
+AMD の Alex Deucher 氏より、AMDGPU ドライバーに *RDNA 3/GFX11 APU* で採用されるディスプレイエンジン *DCN 3.1.4 (Display Core Next)* のサポートを追加するパッチが amd-gfx メーリングリストに投稿されている。  
 例によってレジスタヘッダはパッチサイズが巨大となるため、メーリングリストには投稿されていない。補足すると、最近追加された `dcn_3_2_0_sh_mask.h (drivers/gpu/drm/amd/include/asic_reg/dcn/)` はファイル単体で 23.9MiB もある。  
 以前は `nbio_7_2_0_sh_mask.h (drivers/gpu/drm/amd/include/asic_reg/nbio/)` が 15.9MiB で最大だったと思うのだが、一気に最大ファイルサイズが更新されたようだ。  
 もはや余談だが、こうした自動生成された巨大なレジスタヘッダについて、Linus Torvalds 氏は以下のようにコメントしている。  
