@@ -12,7 +12,7 @@ noindex: false
 
 Samsung Exynos 2200 SoC は GPU に *AMD RDNA 2 アーキテクチャ* ベースの *Xclipse 920* を採用している。  
 そして Exynos 2200 SoC を搭載する Samsung Galaxy S22 Ultra は Android OS を採用しており、その関係で Linux Kernel と *Xclipse 920* 向けの AMDGPU ドライバーのソースコードが公開されているため読んでみた。  
-ソースコードは [Samsung Open Source](https://opensource.samsung.com/uploadList) からダウンロードでき、*SM-S908B* で検索すると出てくる。  
+ソースコードは [Samsung Open Source](https://opensource.samsung.com/) からダウンロードでき、*SM-S908B* で検索すると出てくる。  
 今回参照したソースコードのバージョンは `S908BXXU2AVEH` となる。  
 
 通常の AMDGPU ドライバーのソースコードは `drivers/gpu/drm/amd/` 下に置いてあるが、*Xclipse 920* 向けのドライバーは AMDGPU ドライバーをベースにしながら `drivers/gpu/samsung/{include, sgpu}/` 下に置かれている。  
