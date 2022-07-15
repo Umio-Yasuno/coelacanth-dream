@@ -3,7 +3,7 @@ title: "新たな RDNA 2 APU の IPブロック ―― GC 10.3.7, DCN 3.1.6, VCN
 date: 2022-02-17T03:57:56+09:00
 draft: false
 categories: [ "Hardware", "AMD", "APU" ]
-tags: [ "Linux_Kernel", "GC_10_3_7", "RDNA_2" ]
+tags: [ "Linux_Kernel", "GC_10_3_7", "RDNA_2", "Mendocino" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]

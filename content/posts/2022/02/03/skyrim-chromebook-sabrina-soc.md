@@ -2,7 +2,7 @@
 title: "AMD Sabrina SoC を搭載する Chromebookボード 「Skyrim」"
 date: 2022-02-03T20:43:32+09:00
 draft: false
-tags: [ "Coreboot", "Chromebook", "Sabrina" ]
+tags: [ "Coreboot", "Chromebook", "Sabrina", "Mendocino" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU" ]
 noindex: false

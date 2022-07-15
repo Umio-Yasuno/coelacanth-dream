@@ -2,7 +2,7 @@
 title: "AMD Sabrina SoC は LPDDR5メモリをサポート"
 date: 2022-02-02T15:09:19+09:00
 draft: false
-tags: [ "Sabrina", "Coreboot", ]
+tags: [ "Sabrina", "Mendocino", "Coreboot", ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU" ]
 noindex: false

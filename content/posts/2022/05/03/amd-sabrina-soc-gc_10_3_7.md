@@ -3,7 +3,7 @@ title: "AMD Sabrina SoC は GC 10.3.7"
 date: 2022-05-03T04:48:37+09:00
 draft: false
 categories: [ "Hardware", "AMD", "APU" ]
-tags: [ "Sabrina", "GC_10_3_7", "RDNA_2" ]
+tags: [ "Sabrina", "Mendocino", "GC_10_3_7", "RDNA_2" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]

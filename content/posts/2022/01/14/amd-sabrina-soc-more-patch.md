@@ -2,7 +2,7 @@
 title: "AMD Sabrina SoC に向けたさらなるパッチ"
 date: 2022-01-14T06:18:51+09:00
 draft: false
-tags: [ "Sabrina", "Coreboot" ]
+tags: [ "Sabrina", "Mendocino", "Coreboot" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "APU" ]
 noindex: false

@@ -10,7 +10,7 @@ noindex: false
 # author: ""
 ---
 
-AMD GPU 向け Vulkan ドライバー **RADV** とそのコンパイラバックエンドに採用されている **ACO** の開発者として知られる Timur Kristóf 氏が、ブログにて *RDNA 1/GFX10* 世代から有効化されている *NGG パイプライン* とドライバー側で行われる *NGG カリング* について解説した記事を公開している。  
+AMD GPU 向け Vulkan ドライバー **RADV** とそのコンパイラバックエンドに採用されている **ACO** の開発者として知られる Timur Kristóf 氏が、ブログにて *RDNA 1/GFX10* 世代から有効化されている *NGG (Next Generation Geometry) /NGG パイプライン* とドライバー側で行われる *NGG カリング* について解説した記事を公開している。  
 
  * [What is NGG and shader culling on AMD RDNA GPUs? | Timur’s blog](https://timur.hu/blog/2022/what-is-ngg)
 
@@ -36,6 +36,7 @@ AMDGPU ドライバー側の実装も 2019-09 に関連コードを削除する�
 
 現在は削除されている AMDGPU ドライバー側の実装から、*Vega/GFX9* 世代の *NGG* は Primitive/Position/Control Sideband Buffer を VRAM側に、GDS (Global Data Share) も一部を *NGG* 用に確保する仕様となっていた。  
 推測だが、こうした仕様が性能上のボトルネックになっていた可能性はある。  
+*RDNA 1/GFX10.1* 世代からの *NGG* にそうした KMD側のバッファ確保等は必要なく、UMD側ですべて制御可能となっている。  
 
 ### NGG 有効時の性能 {#perf}
 *RDNA 1/GFX10.1* 世代からの *NGG* を用いた場合の性能について、Timur Kristóf 氏の言ではただ従来のパイプラインから *NGG* に切り替えるだけでは性能は特に変わらない。  
