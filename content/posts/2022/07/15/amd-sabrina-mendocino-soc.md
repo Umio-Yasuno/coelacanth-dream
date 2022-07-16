@@ -10,7 +10,7 @@ noindex: false
 # author: ""
 ---
 
-Google のソフトウェアエンジニアである Jon Murphy 氏により、これまで AMD *Sabrina* SoC として Coreboot でサポートが進められてきた SoC のコードネームを *Mendocino* に置き換えるパッチが投稿されている。  
+Google のソフトウェアエンジニアである Jon Murphy 氏により、これまで AMD *Sabrina (SBR)* SoC として Coreboot でサポートが進められてきた SoC のコードネームを *Mendocino (MDN)* に置き換えるパッチが投稿されている。  
 
  * [Sabrina: Remove embargoed name (Ib82b3453) · Gerrit Code Review](https://review.coreboot.org/c/amd_blobs/+/65864/1)
  * [treewide: Remove embargoed name (I2d0f76fd) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/65861/6)
