@@ -20,6 +20,7 @@ summary: " "
         * [Lucienne](#lucienne-gfx90c)
         * [Cezanne](#cezanne-gfx90c)
         * [Barcelo](#barcelo)
+    * [Navi10_LITE, Navi12_LITE Cyan Skilfish/Skillfish (gfx1013)](#gfx1013)
     * FAMILY_VGH
         * [VanGogh](#vgh)
     * FAMILY_YC
@@ -615,6 +616,21 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 -->
 
 [^3]:[Apple Pro 5500M 8 GB BIOS - TechPowerUp](https://www.techpowerup.com/vgabios/216534/apple-pro5500m-8192-191010)
+
+#### Navi10_LITE, Navi12_LITE Cyan Skilfish/Skillfish (gfx1013) {#gfx1013}
+| Device ID | Revision ID | Product Name | Memo |
+| :--- | :--- | :---: | :---: |
+| 0x13F9[^gfx1013-did] | | |
+| 0x13FA | | |
+| 0x13FB | | |
+| 0x13FC | | |
+| 0x13FE |  || `CYAN_SKILLFISH2` |
+| 0x1400[^0x1400] | | | `CYAN_SKILLFISH2` |
+| 0x143F[^robin-did] | | | ROBIN+ |
+
+[^gfx1013-did]: [libhsakmt: add cyan skillfish support · RadeonOpenCompute/ROCT-Thunk-Interface@f044505](https://github.com/RadeonOpenCompute/ROCT-Thunk-Interface/commit/f04450557cfa6960049fea86450800a2ad5aab28)
+[^0x1400]: [[PATCH 13/24] drm/amd/display: Basic support with device ID](https://lists.freedesktop.org/archives/amd-gfx/2022-January/074104.html)
+[^robin-did]: [[PATCH 04/13] drm/amd/display: Basic support with device ID](https://lists.freedesktop.org/archives/amd-gfx/2022-February/074734.html)
 
 #### Sienna Cichlid/Navi21 ( gfx1030 ) {#sienna_cichlid-gfx1030}
 
