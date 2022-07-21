@@ -732,6 +732,7 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | 0x7421 | 0x00 | PRO W6500M[^amdgpu_ids-1337803] |
 | 0x7422 | 0x00 | PRO W6400[^6cd1d146f947bdf6be66a08d1004cc5c75815773] |
 | 0x7423 | 0x00 | PRO W6300M[^amdgpu_ids-1337803] |
+| | 0x01 | PRO W6300 | |
 | 0x7424 | 0x00 | RX 6300[^amdgpu-22_10] |
 | 0x743F &darr; | 0xC1 | RX 6500 XT[^amdgpu_ids-1362367] |
 | | 0xC3 | RX 6500/6500M[^amdgpu_ids-1337803] |

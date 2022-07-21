@@ -73,8 +73,8 @@ AMD の Alex Deucher 氏より、AMDGPU ドライバーに *RDNA 3/GFX11 APU* �
 | :-------- | :-----: | :--: | :--: |
 | 11.0.0    | gfx1100 (Navi31)[^tensile-gfx11] | AMDGPU_FAMILY_GC_11_0_0 (FAMILY_GFX1100) | dGPU |
 | 11.0.1    | gfx1103 | AMDGPU_FAMILY_GC_11_0_2 (FAMILY_GFX1103) | APU  |
-| 11.0.2    | gfx1102 (Navi32) | AMDGPU_FAMILY_GC_11_0_0 (FAMILY_GFX1100) | dGPU |
-| 11.0.3?   | gfx1101 (Navi33)? | AMDGPU_FAMILY_GC_11_0_0 (FAMILY_GFX1100)? | dGPU? |
+| 11.0.2    | gfx1102 (Navi33) | AMDGPU_FAMILY_GC_11_0_0 (FAMILY_GFX1100) | dGPU |
+| 11.0.3?   | gfx1101 (Navi32)? | AMDGPU_FAMILY_GC_11_0_0 (FAMILY_GFX1100)? | dGPU? |
 
 [^tensile-gfx11]: [Support Tensile for gfx11 series platform by TonyYHsieh · Pull Request #1521 · ROCmSoftwarePlatform/Tensile](https://github.com/ROCmSoftwarePlatform/Tensile/pull/1521/commits/3796d41aec358721fced1ed4337c27f69aeda3bb#diff-95d409aa7c33d03c94333a9a95ce6076cabf7428d1613137ccc7944151cd0972)
 
