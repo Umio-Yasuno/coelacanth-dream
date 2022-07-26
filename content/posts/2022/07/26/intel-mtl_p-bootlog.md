@@ -18,7 +18,7 @@ Github 上の Sound Open Firmware (SOF) プロジェクトにおいて、Intel �
 プラットフォームは *Intel Corporation Meteor Lake Client Platform/MTL-P DDR5 SODIMM SBS RVP*、ベースクロックは約 1.2 GHz と検出されている。  
 
 プロセッサ名は *Genuine Intel(R) 0000* であり ES品とされ、ステッピングは `0x0 (A0)` となる。  
-CPUID Family/Model は Coreboot *Meteor Lake-M/P* の情報と一致する。  
+CPUID Family/Model は Coreboot に追加された *Meteor Lake-M/P* の情報と一致する。  
 
  > 		[    0.000000] SMBIOS 3.4 present.
  > 		[    0.000000] DMI: Intel Corporation Meteor Lake Client Platform/MTL-P DDR5 SODIMM SBS RVP, BIOS MTLPFWI1.R00.2223.D01.2205300653 05/30/2022
@@ -31,7 +31,7 @@ CPUID Family/Model は Coreboot *Meteor Lake-M/P* の情報と一致する。
  >
  > {{< quote >}} [MTL has a kernel RIP on build_sched_domains · Issue #3784 · thesofproject/linux](https://github.com/thesofproject/linux/issues/3784) {{< /quote >}}
 
-`FPU, XFEATURE, XSAVE, XSTATE` に関する出力メッセージから、*Alder Lake, Raptor Lake* に続き *Meteor Lake-P* でも AVX512 がサポートされていないことが推察される。  
+`FPU, XFEATURE, XSAVE, XSTATE` に関する出力メッセージから、*Alder Lake, Raptor Lake* に続き *Meteor Lake-P* でも AVX512 がサポートしていないとされている。  
 
  > 		[    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
  > 		[    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
@@ -44,6 +44,7 @@ CPUID Family/Model は Coreboot *Meteor Lake-M/P* の情報と一致する。
  > {{< quote >}} [MTL has a kernel RIP on build_sched_domains · Issue #3784 · thesofproject/linux](https://github.com/thesofproject/linux/issues/3784) {{< /quote >}}
 
 検出されている CPU数 (スレッド数) だが、アップロードされている 3個の Bootlog で分かれており、16CPU と 20CPU の 2種類のパターンが確認できる。  
+Linux Kernel のバージョンが同じ `5.19.0-rc2-daily-default-20220724-0-g70f9e7b34a9d` でも異なる CPU数が検出されている。  
 以下引用部のメッセージを出力している部分の Linux Kernel のソースコードは `arch/x86/kernel/smpboot.c`。  
 
  > 		[    0.245426] .... node  #0, CPUs:        #1
@@ -93,13 +94,13 @@ CPUID Family/Model は Coreboot *Meteor Lake-M/P* の情報と一致する。
  >
  > {{< quote >}} 0725_dmesg01_mtlp_nocodec_rip_build_sched_domains.log (5.19.0-rc2-daily-nocodec-20220724-0-g70f9e7b34a9d) {{< /quote >}}
 
-これについては別の *Meteor Lake-P* による Bootlog がアップロードされたというよりは、恐らく `CPUID` 命令経由で取得できる APIC ID と Package/Die ID でズレがあり、その結果ではないかと思われる。  
+これについては別の *Meteor Lake-P* による Bootlog がアップロードされたというよりは、恐らく `CPUID` 命令経由で取得できる APIC ID と Package/Die ID でズレがあり、その結果 `smpboot` が一部失敗しているのではないかと思われる。  
 Coreboot の *Meteor Lake-M/P* への対応が主に進めている Subrata Banik 氏によれば、*Meteor Lake* では `XAPIC (MMIO)` と `X2APIC (MSR)` 間の動的な切り替えに対応している。[^mtl-apic]  
-検出された CPU数のズレは用いたプラットフォームの BIOS/UEFI が十分に対応していない、Linux Kernel に対応するためのパッチがまだ公開されていないためであることが考えられる。  
+Subrata Banik 氏は以前は Intel に、現在は Google に所属している。  
+検出された CPU数のズレは用いたプラットフォームの BIOS/UEFI が未成熟であるか、Linux Kernel 側が `XAPIC (MMIO)` と `X2APIC (MSR)` が動的に切り替えられる CPU にまだ充分に対応していないためであることが考えられる。  
+そのためどちらが正確な CPU数か、というのは不明である。  
 
 [^mtl-apic]: [cpu/x86: Improve help text for `X2APIC_RUNTIME` config (Ia736efa0) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/65738/4)
-
-Subrata Banik 氏は以前は Intel に、現在は Google に所属している。  
 
 {{< ref >}}
  * [Intel Raptor Lake-S Bootlog | Coelacanth's Dream](/posts/2022/01/07/intel-rpl_s-bootlog/)
