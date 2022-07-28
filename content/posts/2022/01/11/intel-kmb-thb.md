@@ -51,7 +51,7 @@ CPU に Arm Cortex-A53 4-Core を搭載し、これによりスタンドアロ�
 ### Keem Bay SKU {#kmb-sku}
 しかし検索エンジンに頼ったところ、一部の顧客は *Keem Bay* の SKU と採用製品について発表していた。  
 それによると、*Keem Bay* は TSMC 12nmプロセス (12FFC?) で製造され、SKU には *3400VE/3700VE/3500SE* の 3種類が存在する。  
-SKU間の違いは主に VPU 数と動作クロック、それと DPU (Deep-Learning Processor Unit?, = Neural Compute Engine?) の数となる。  
+SKU間の違いは主に VPU 数と動作クロック、それと DPU (Data Processing Unit) の数となる。  
 推論性能は、*Myriad X* 1-Chip を 0.7 TOPS とし、そして *3700VE* は 7.1 TOPS 持つため、ここで上記の 10倍が達成されている。  
 メモリインターフェイスは 2x32-bit LPDDR4/X 1600-2133 MHz に対応し、*Myriad X* から倍以上のメモリ帯域を実現可能になっている。  
 SHAVEプロセッサは 12基か 16基となり、最大 16基という点では *Myriad X* と同数。DPU とメモリインターフェイスの強化がメインとなっているのだろうか。  

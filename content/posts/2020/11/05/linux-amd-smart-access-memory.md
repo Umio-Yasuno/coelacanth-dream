@@ -47,7 +47,7 @@ toc: false
 そして、その中の `vram_vis_size` が CPU が一度にアクセス可能なサイズを示している。[^vram_vis_size]  
 以下は具体的な実行コマンドの一例。`AMD_DEBUG=info` を設定し、GLX の実装情報を示す `glxinfo` を実行、結果を `grep` に受け渡して抽出している。  
 
-      $ AMD_DEBUG="info" glxinfo -B | grep vram_vis_size
+ > 		$ AMD_DEBUG="info" glxinfo -B | grep vram_vis_size
 
 自分が最初確認した時は、BIOS のあるオプションを有効化していなかったため、256MB と表示されていた。AMD が解説している通りのサイズだ。  
 
@@ -67,7 +67,7 @@ toc: false
 
 また、スーパーユーザー権限が必要となるが `dmesg` コマンドでも確認することができる。  
 
-       % dmesg | grep "Detected VRAM"
+    % dmesg | grep "Detected VRAM"
 
 BAR の値が CPU から VRAM へアクセス可能なサイズとなる。以下は `Above 4G Decoding` 無効時の実行結果。有効時は `BAR=4096M` となっていた。  
 
