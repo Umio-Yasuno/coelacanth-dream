@@ -18,8 +18,12 @@ Intel の Vidya Gopalakrishnan 氏より、Coreboot に *Alder Lake-N* SKU の T
 
 *Alder Lake-N* は以下の引用部から、*Gracemont (Small)* コアのみの構成であり、コア数は 2/4/8 の 3種類が用意されていると思われる。TDP (PL1) は 2/4-Core が 6W、8-Core が 15W。  
 以下引用部では、*Alder Lake* のバリアント、コア構成と GPU GT、TDP (PL1) を次のようなフォーマットで記述している。 `ADL_{M,N,P}_{BIG}{SMALL}{GPU_GT}_{TDP}W_CORE`  
-*Alder Lake-N* が *Alder Lake-S/P/M* に搭載されている *Golden Cove (Big)* コアを持たず *Gracemont (Small)* コアのみの構成であり、最大 8-Core/8-Thread、GPU は Gen12 GT1 (32 EU)、といった情報は、これまでに公開されてきたパッチやログの情報と一致する。  
+
+*Alder Lake-N* が *Alder Lake-S/P/M* に搭載されている *Golden Cove (Big)* コアを持たず *Gracemont (Small)* コアのみの構成、最大 8-Core/8-Thread、GPU は Gen12 GT1 (32 EU)、といった情報は、これまでに公開されてきたパッチやログの情報と一致する。  
 {{< link >}} [CPU 8-Thread、GPU 32EU を持つ Alder Lake-N | Coelacanth's Dream](/posts/2022/02/04/adl_n-8thread/) {{< /link >}}
+ChromeOS に関するパッチのレビューが行われる Chromium Gerrit では、*Alder Lake-N (Family: 0x6, Model: 0xBE)* を *Gracemont* とするパッチも公開されている。  
+
+[^gracemont]: [Updating INTEL_UARCH_TABLE with Alder Lake-N platform info (I9a27bc1e) · Gerrit Code Review](https://chromium-review.googlesource.com/c/chromiumos/third_party/autotest/+/3590236)
 
 *Alder Lake-N* 2/4-Core SKU の TDP (PL1) 6W というのは、TDP (PL1) 9W をサポートする *Alder Lake-M (2+8+2, 2+4+2)* SKU より省電力、ファンレス構成等の製品をカバーするためのものと思われる。  
 
