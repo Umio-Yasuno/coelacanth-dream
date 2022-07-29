@@ -1,7 +1,7 @@
 ---
 title: "Versatile Processing Unit を搭載する Intel Meteor Lake"
 date: 2022-07-29T03:48:56+09:00
-draft: false
+draft: true
 categories: [ "Hardware", "Intel", "VPU" ]
 tags: [ "Meteor_Lake", "Linux_Kernel" ]
 noindex: false
