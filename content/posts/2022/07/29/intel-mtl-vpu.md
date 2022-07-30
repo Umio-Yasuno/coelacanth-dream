@@ -69,7 +69,7 @@ Neural Compute Subsystem (NCS) には実際の処理を行うコンピュート�
 *Keem Bay* では DPU (Data Processing Unit) を最大 20基搭載しており、*Meteor Lake VPU* でも引き続き搭載するものと思われる。DPU について詳細は公開されていないが、*Keem Bay* 採用製品の情報からニューラルネットワークのスパースや圧縮処理を担当している。  
 
 [openvinotoolkit/vpux-plugin](https://github.com/openvinotoolkit/vpux-plugin) によれば、*Meteor Lake VPU* では新たに BF16フォーマットや混合精度をサポートしている。  
-*Keem Bay* からではあるが、画像認識以外に推論処理も主なターゲットとなったことから、*Vison Processing Unit* から *Versatile Processing Unit* に変えたのかもしれない。[^bf16] [^mix]  
+*Keem Bay* からではあるが、画像認識以外に推論処理も主なターゲットとなり、*Meteor Lake VPU* では推論処理に向けた機能が追加されている。そのため *Vison Processing Unit* から *Versatile Processing Unit* (Versatile, 多才な、多用途) へと名前を変えたのかもしれない。[^bf16] [^mix]  
 
 [^mix]: [vpux-plugin/nce_sparsity.cpp at 411d6bb1e1ff6daa146954b75b149fdc7c1bdcd7 · openvinotoolkit/vpux-plugin](https://github.com/openvinotoolkit/vpux-plugin/blob/411d6bb1e1ff6daa146954b75b149fdc7c1bdcd7/src/vpux_compiler/src/dialect/VPU/nce_sparsity.cpp#L22-L24)
 [^bf16]: [vpux-plugin/nce_invariant.cpp at 411d6bb1e1ff6daa146954b75b149fdc7c1bdcd7 · openvinotoolkit/vpux-plugin](https://github.com/openvinotoolkit/vpux-plugin/blob/411d6bb1e1ff6daa146954b75b149fdc7c1bdcd7/src/vpux_compiler/src/dialect/VPU/nce_invariant.cpp#L23-L31)
