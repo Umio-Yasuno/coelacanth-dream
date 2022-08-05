@@ -11,6 +11,9 @@ noindex: false
 ---
 
 AMD の Alex Deucher 氏より、AMDGPU ドライバーに *RDNA 3/GFX11 APU* で採用されるディスプレイエンジン *DCN 3.1.4 (Display Core Next)* のサポートを追加するパッチが amd-gfx メーリングリストに投稿されている。  
+
+ * [[PATCH 0/9] Add DCN 3.1.4 Support](https://lists.freedesktop.org/archives/amd-gfx/2022-July/081237.html)
+
 例によってレジスタヘッダはパッチサイズが巨大となるため、メーリングリストには投稿されていない。補足すると、最近追加された `dcn_3_2_0_sh_mask.h (drivers/gpu/drm/amd/include/asic_reg/dcn/)` はファイル単体で 23.9MiB もある。  
 以前は `nbio_7_2_0_sh_mask.h (drivers/gpu/drm/amd/include/asic_reg/nbio/)` が 15.9MiB で最大だったと思うのだが、一気に最大ファイルサイズが更新されたようだ。  
 もはや余談だが、こうした自動生成された巨大なレジスタヘッダについて、Linus Torvalds 氏は以下のようにコメントしている。  
@@ -24,7 +27,6 @@ AMD の Alex Deucher 氏より、AMDGPU ドライバーに *RDNA 3/GFX11 APU* �
  >
  > {{< quote >}} [LKML: Linus Torvalds: Re: [git pull] drm for 5.19-rc1](https://lkml.org/lkml/2022/5/25/1144) {{< /quote >}}
 
- * [[PATCH 0/9] Add DCN 3.1.4 Support](https://lists.freedesktop.org/archives/amd-gfx/2022-July/081237.html)
 
 ## AMDGPU_FAMILY_GC_11_0_2 {#family_gc_11_0_2}
 パッチでは `AMDGPU_FAMILY_GC_11_0_2` に関するコードも追加されており、そして `AMDGPU_FAMILY_GC_11_0_2` には *DCN 3.1.4* が結び付けられている。  
