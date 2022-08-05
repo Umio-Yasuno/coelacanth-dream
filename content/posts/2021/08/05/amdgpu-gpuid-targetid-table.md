@@ -41,8 +41,8 @@ noindex: false
 | *gfx1037* | RDNA 2 | APU | GC 10.3.7/Sabrina |
 | **GFX11 (RDNA 3)** |
 | *gfx1100* | RDNA 3 | dGPU | GC 11.0.0/Navi31 |
-| *gfx1101* | RDNA 3 | dGPU | GC 11.0.3/Navi33? |
-| *gfx1102* | RDNA 3 | dGPU | GC 11.0.2/Navi32 |
+| *gfx1101* | RDNA 3 | dGPU | GC 11.0.3/Navi32 |
+| *gfx1102* | RDNA 3 | dGPU | GC 11.0.2/Navi33? |
 | *gfx1103* | RDNA 3 | APU | GC 11.0.1 |
 
 [^gfx940]: [SWDEV-292904 - Extend HIP coherency tests to gfx940 · ROCm-Developer-Tools/HIP@9fbd19a](https://github.com/ROCm-Developer-Tools/HIP/commit/9fbd19a6759b0ed091562ad286a790783998b88a)
