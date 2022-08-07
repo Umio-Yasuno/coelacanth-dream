@@ -40,10 +40,13 @@ noindex: false
 | *gfx1036* | RDNA 2 | APU | |
 | *gfx1037* | RDNA 2 | APU | GC 10.3.7/Sabrina |
 | **GFX11 (RDNA 3)** |
-| *gfx1100* | RDNA 3 | dGPU | GC 11.0.0/Navi31 |
+| *gfx1100* | RDNA 3 | dGPU | GC 11.0.0/Navi31[^navi3x] |
 | *gfx1101* | RDNA 3 | dGPU | GC 11.0.3/Navi32 |
-| *gfx1102* | RDNA 3 | dGPU | GC 11.0.2/Navi33? |
-| *gfx1103* | RDNA 3 | APU | GC 11.0.1 |
+| *gfx1102* | RDNA 3 | dGPU | GC 11.0.2/Navi33 |
+| *gfx1103* | RDNA 3 | APU | GC 11.0.1/Phoenix[^phoenix-apu] |
+
+[^navi3x]: [Support Tensile for gfx11 series platform by TonyYHsieh · Pull Request #1521 · ROCmSoftwarePlatform/Tensile](https://github.com/ROCmSoftwarePlatform/Tensile/pull/1521/commits/3796d41aec358721fced1ed4337c27f69aeda3bb)
+[^phoenix-apu]: [AMDGPU: Add gfx1103/phoenix · RadeonOpenCompute/ROCm-Device-Libs@9bab550](https://github.com/RadeonOpenCompute/ROCm-Device-Libs/commit/9bab550ca07b2439c41f94493a5df16e80b5f435)
 
 [^gfx940]: [SWDEV-292904 - Extend HIP coherency tests to gfx940 · ROCm-Developer-Tools/HIP@9fbd19a](https://github.com/ROCm-Developer-Tools/HIP/commit/9fbd19a6759b0ed091562ad286a790783998b88a)
 [^green_sardine]: [Green Sardine APU の PCI ID が追加、正体は Cezanne APU だったか | Coelacanth's Dream](/posts/2021/01/14/green_sardine-pciid/)

@@ -1,19 +1,21 @@
 ---
-title: "RDNA 3/GFX11 APU は AMDGPU_FAMILY_GC_11_0_1 に"
+title: "RDNA 3/GFX11 Phoenix APU は AMDGPU_FAMILY_GC_11_0_1 に"
 date: 2022-08-05T10:59:41+09:00
 draft: false
 categories: [ "Hardware", "AMD", "GPU", "APU" ]
-tags: [ "GFX11", "Linux_Kernel" ]
+tags: [ "GFX11", "Linux_Kernel", "Phoenix" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]
 # author: ""
 ---
 
-以前に *RDNA 3/GFX11 APU* で採用されるディスプレイエンジン *DCN (Display Core Next) 3.1.4* のサポートを AMDGPUドライバーに追加するパッチを取り上げた。  
+以前に *RDNA 3/GFX11 Phoenix APU* [^phoenix] で採用されるディスプレイエンジン *DCN (Display Core Next) 3.1.4* のサポートを AMDGPUドライバーに追加するパッチを取り上げた。  
 {{< link >}} [RDNA 3/GFX11 APU に採用される DCN 3.1.4 | Coelacanth's Dream](/posts/2022/07/09/dcn3_1_4-apu/) {{< /link >}}
 その際、それらに関連付けられている `AMDGPU_FAMILY` が `AMDGPU_FAMILY_GC_11_0_2` となっており、*RDNA 3/GFX11 APU* は *GC (Graphics Compute) IP* のバージョンが *GC 11.0.1* であるため、少しややこしいということを書いた。  
 それがやはりミスだったようで、AMD の Yifan Zhang 氏により、`AMDGPU_FAMILY_GC_11_0_2` を `AMDGPU_FAMILY_GC_11_0_1` に置き換えるパッチが投稿され、修正された。  
+
+[^phoenix]: [AMDGPU: Add gfx1103/phoenix · RadeonOpenCompute/ROCm-Device-Libs@9bab550](https://github.com/RadeonOpenCompute/ROCm-Device-Libs/commit/9bab550ca07b2439c41f94493a5df16e80b5f435)
 
  * [[PATCH] drm/amd/display: change family id name for DCN314](https://lists.freedesktop.org/archives/amd-gfx/2022-August/082370.html)
 

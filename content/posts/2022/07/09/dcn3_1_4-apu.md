@@ -3,14 +3,16 @@ title: "RDNA 3/GFX11 APU に採用される DCN 3.1.4"
 date: 2022-07-09T21:01:46+09:00
 draft: false
 categories: [ "Hardware", "APU", "AMD" ]
-tags: [ "GFX11", "Linux_Kernel" ]
+tags: [ "GFX11", "Linux_Kernel", "Phoenix" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]
 # author: ""
 ---
 
-AMD の Alex Deucher 氏より、AMDGPU ドライバーに *RDNA 3/GFX11 APU* で採用されるディスプレイエンジン *DCN 3.1.4 (Display Core Next)* のサポートを追加するパッチが amd-gfx メーリングリストに投稿されている。  
+AMD の Alex Deucher 氏より、AMDGPU ドライバーに *RDNA 3/GFX11 APU*、コードネーム *Phoenix* [^phoenix] で採用されるディスプレイエンジン *DCN 3.1.4 (Display Core Next)* のサポートを追加するパッチが amd-gfx メーリングリストに投稿されている。  
+
+[^phoenix]: [AMDGPU: Add gfx1103/phoenix · RadeonOpenCompute/ROCm-Device-Libs@9bab550](https://github.com/RadeonOpenCompute/ROCm-Device-Libs/commit/9bab550ca07b2439c41f94493a5df16e80b5f435)
 
  * [[PATCH 0/9] Add DCN 3.1.4 Support](https://lists.freedesktop.org/archives/amd-gfx/2022-July/081237.html)
 
