@@ -60,6 +60,10 @@ User Mode Driver 側では *RadeonSI (OpenGL)* ドライバーに `EGL_IMG_conte
 [^rdna_2-pipe1]: [[PATCH 162/207] drm/amdgpu: only use one gfx pipe for Sienna_Cichlid](https://lists.freedesktop.org/archives/amd-gfx/2020-June/050126.html)
 [^navi1x-pipe1]: [[PATCH] drm/amdgpu: disable 3D pipe 1 on Navi1x](https://lists.freedesktop.org/archives/amd-gfx/2020-March/046692.html)
 
+しかし AMD の Michel Dänzer 氏により、GFX Async Ring を有効化した *Sienna Cichlid/Navi21* GPU と AMDGPUドライバー、`EGL_IMG_context_priority` をサポートした *RadeonSI* ドライバーの組み合わせで GPU がハングアップする問題が報告されており、GFX Async Ring サポートの安定化まではまだ時間が必要と見られる。[^navi21-hang]  
+
+[^navi21-hang]: [Navi 21 GFX hangs since "drm/amd/amdgpu: add pipe1 hardware support" (#2117) · Issues · drm / amd · GitLab](https://gitlab.freedesktop.org/drm/amd/-/issues/2117)
+
 {{< ref >}}
  * [Core Driver Infrastructure — The Linux Kernel documentation](https://www.kernel.org/doc/html/latest/gpu/amdgpu/driver-core.html#graphics-and-compute-microcontrollers)
 {{< /ref >}}
