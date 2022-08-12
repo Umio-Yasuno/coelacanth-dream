@@ -70,6 +70,14 @@ FP8/BF8 フォーマットは 8-bit ということはわかるが、指数部 (
 
 *{{< xe class="hpc" >}}* では現状 `BF8` のみの対応とし、`FP8` の記述はない。  
 変換命令については、*AMD GFX940/CDNA 3* では `F32 <-> FP8,BF8` のみだったが、*Intel {{< xe class="hpc" >}}* では `F16 (HF) <-> BF8 (QF)` のみの対応関係となっている。  
+Intel GPU における `BF8` のフォーマットは E5M2 とされている。  
+
+ > 		     BF16 = 9,   // bfloat16 (1, 8, 7)
+ > 		     FP16 = 10,  // half (1, 5, 10)
+ > 		+    BF8 = 11,   // bfloat8 (1, 5, 2)
+ > 		     TF32 = 12,  // TensorFloat (1, 8, 10), 19 bits
+ >
+ > {{< quote >}} [Internal feature · intel/intel-graphics-compiler@2a6f568](https://github.com/intel/intel-graphics-compiler/commit/2a6f568e4fd813cd3f4c23b833a20daabc2c1369) {{< /quote >}}
 
  > 		    GED_DATA_TYPE_nf,      ///< 11, TGL, XE.HP, XE.HPG
  > 		    GED_DATA_TYPE_bf,      ///< XE.HP, XE.HPG, XE.HPC.A, XE.HPC
