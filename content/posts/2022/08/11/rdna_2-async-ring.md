@@ -26,12 +26,13 @@ GFX Ring/ME は AMD GPU に搭載されているマイクロコントローラ�
 Compute エンジン、コンピュートキュー用のマイクロコントローラは MEC (MicroEngine Compute) とされている。  
 ME と MEC はハードウェアブロックとしては GFX/Compute パイプラインのフロントエンドに位置する。  
 
-*GFX9/Vega* 世代までは GFX Ring/ME は通常 1基の構成となっており、*GFX10/RDNA 1* 世代からは優先度が高く設定されたグラフィクスキュー向けに GFX Async Ring が追加された。  
-しかし *GFX10/RDNA 1* 世代では GFX Async Ring は無効化されており[^navi1x-pipe1]、これはその後に AMDGPUドライバーへのパッチが初めて公開された *Sienna Cichlid/Navi21*、*RDNA 2/GFX10.3* 世代においても同様だった。[^rdna_2-pipe1]  
+*GFX9/Vega* 世代までは GFX Ring/ME は通常 1基の構成となっており、*RDNA 1/GFX10.1* 世代からは優先度が高く設定されたグラフィクスキュー向けに GFX Async Ring が追加された。  
+しかし *RDNA 1/GFX10.1* 世代では GFX Async Ring は無効化されており[^navi1x-pipe1]、これはその後に AMDGPUドライバーへのパッチが公開された *Sienna Cichlid/Navi21*、*RDNA 2/GFX10.3* 世代においても同様だった。[^rdna_2-pipe1]  
 
-そうした状態だったが、*RDNA 2/GFX10.3* 世代の GFX Async Ring が Linux Kernel 5.20/6.0 では有効化される。  
-パッチでは *RDNA 2/GFX10.3 APU* も対象に含まれている。  
-*GFX10/RDNA 1* 世代の GFX Async Ring を無効化するパッチは 2020/03/02、*Sienna Cichlid/Navi21* へのパッチは 2020/06/01 に投稿されたため、約 2年越しの有効化となる。  
+そうした状態だったのが、*RDNA 2/GFX10.3* 世代の GFX Async Ring が Linux Kernel 5.20/6.0 では有効化される。*RDNA 1/GFX10.1* 世代では有効化されず、通常の GFX Ring、GFX Primary Ring 1基構成のままとなる。  
+*RDNA 1/GFX10.1* 世代の GFX Async Ring を無効化するパッチは 2020/03/02、*Sienna Cichlid/Navi21* へのパッチは 2020/06/01 に投稿されたため、*RDNA 2/GFX10.3 アーキテクチャ* では約 2年越しの有効化となる。  
+
+GFX Async Ring 自体は、グラフィクス処理において高い優先度が設定されたキューを専用の GFX Ring から発行可能になったということから、リアルタイム性の向上を目的とした機能と考えられる。  
 
  * [drm/amd/amdgpu: Enable high priority gfx queue (b07d1d73) · Commits · Alex Deucher / linux · GitLab](https://gitlab.freedesktop.org/agd5f/linux/-/commit/b07d1d73b09ef40e91ace51a2e167391676a8175)
  * [drm/amd/amdgpu: add pipe1 hardware support (4c763180) · Commits · Alex Deucher / linux · GitLab](https://gitlab.freedesktop.org/agd5f/linux/-/commit/4c7631800e6bf0eced08dd7b4f793fcd972f597d)
