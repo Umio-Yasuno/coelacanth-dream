@@ -1,5 +1,5 @@
 ---
-title: "AMDGPUドライバーにて RDNA 2 アーキテクチャの GFX Async Ring が有効化"
+title: "AMDGPUドライバーにて RDNA 2 アーキテクチャの GFX Async Ring が 2年越しに有効化"
 date: 2022-08-11T09:07:41+09:00
 draft: false
 categories: [ "Hardware", "AMD", "GPU" ]

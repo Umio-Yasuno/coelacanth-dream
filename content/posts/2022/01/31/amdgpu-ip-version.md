@@ -87,6 +87,7 @@ IPバージョンは `{major}.{minor}.{revision}` のフォーマットで記述
 [^rn-smu]: [amdgpu_smu.c « swsmu « pm « amd « drm « gpu « drivers - kernel/git/next/linux-next.git - The linux-next integration testing tree](https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/tree/drivers/gpu/drm/amd/pm/swsmu/amdgpu_smu.c?h=next-20220128#n526)
 
 {{< ref >}}
+* [[PATCH v2 1/3] Documentation/gpu: Add info table for ASICs](https://lists.freedesktop.org/archives/amd-gfx/2022-August/082697.html)
 * [database · main · Tom St Denis / umr · GitLab](https://gitlab.freedesktop.org/tomstdenis/umr/-/tree/main/database)
 * [linux/kfd_device.c at d0a231f01e5b25bacd23e6edc7c979a18a517b2b · torvalds/linux](https://github.com/torvalds/linux/blob/d0a231f01e5b25bacd23e6edc7c979a18a517b2b/drivers/gpu/drm/amd/amdkfd/kfd_device.c)
 * [kfd_device.c « amdkfd « amd « drm « gpu « drivers - kernel/git/next/linux-next.git - The linux-next integration testing tree](https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/tree/drivers/gpu/drm/amd/amdkfd/kfd_device.c?h=next-20220128)
