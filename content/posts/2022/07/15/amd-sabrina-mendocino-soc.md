@@ -3,7 +3,7 @@ title: "AMD Sabrina SoC の名が Mendocino SoC に置き換えられる"
 date: 2022-07-15T13:06:18+09:00
 draft: false
 categories: [ "Software", "AMD", "APU" ]
-tags: [ "Sabrina", "Mendocino", "Coreboot" ]
+tags: [ "Sabrina", "Mendocino", "Coreboot", "Codename" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]
