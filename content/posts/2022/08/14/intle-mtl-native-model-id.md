@@ -29,12 +29,12 @@ Intel は PMU (Performance Monitoring Unit) で検出したハードウェアイ
 現在 Intel CPU でハイブリッドアーキテクチャを採用し、`Native Model ID` が公開情報となっている CPU には、*Lakefield, Alder Lake, Raptor Lake, Meteor Lake* があり、それぞれの `Native Model ID` は以下の表のようになっている。  
 *Lakefield* の `Native Model ID` は InstLatx64 氏が公開している CPUID dump 結果から確認した。  
 
-| Native Model ID | Type: Core | Type: Atom |
+| Native Model ID<br>(2022-Aug-09 18:19) | Type: Core | Type: Atom |
 | :--             | :--:       | :--:       |
 | Lakefield[^lkf] | 0x0        | 0x0        |
 | Alder Lake      | 0x1        | 0x1        |
 | Raptor Lake     | 0x1        | 0x1        |
-| Meteor Lake     | 0x1        | 0x2        |
+| Meteor Lake     | 0x1?       | 0x2        |
 
 `Native Model ID` がマイクロアーキテクチャに対して付けられるユニークな ID ということを考えれば、*Raptor Lake* は *Alder Lake* と同じ *Golden Cove (Core)* と *Gracemont (Atom)* の構成を取り、*Meteor Lake* はコードネームは違うが `Native Model ID` が *Golden Cove* と同じ *Redwood Cove (Core)* と、*Gracemont (Atom)* から ID が更新された *Crestmont* を採用していることになる。  
 以上は一応、Intel が公式に公開している情報とドキュメントに記載された仕様から推測できる内容である。  
