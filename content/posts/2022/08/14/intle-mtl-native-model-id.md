@@ -43,6 +43,7 @@ Intel は PMU (Performance Monitoring Unit) で検出したハードウェアイ
 Intel は *Meteor Lake* で新たにサポートする命令や拡張等を発表していないため、*Golden Cove* と *Redwood Cove* のマイクロアーキテクチャが同じだとしても、それは現状矛盾しない。  
 
 しかし、*Meteor Lake* に関しては正式リリース前の早期に公開された情報であること、それと `Nativi Model ID` はドキュメントにはあるが、`Native Model ID` によって具体的に分岐するようなコードを今の所 Linux Kernel 等で確認できていないため、抜けがあるかもしれない。  
+マイクロアーキテクチャと `Native Model ID` の更新基準もはっきりとはしていない。  
 今後 `mapfile.csv` の内容が変更される可能性もある。  
 そういう訳であくまでもオタクの推測とメモ書き。  
 
