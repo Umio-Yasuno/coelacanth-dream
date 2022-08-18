@@ -3,7 +3,7 @@ title: "Native Model ID が更新される Crestmont と更新されない Redwo
 date: 2022-08-14T15:31:57+09:00
 draft: false
 categories: [ "Intel", "Hardware", "CPU" ]
-tags: [ "Meteor_Lake", "Lakefield", "Alder_Lake", "Raptor_Lake" ]
+tags: [ "Meteor_Lake", "Lakefield", "Alder_Lake", "Raptor_Lake", "CPUID" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]

@@ -10,7 +10,7 @@ noindex: false
 # author: ""
 ---
 
-Intel の Pete Chou 氏より、[Intel Graphics Compiler (IGC)](https://github.com/intel/intel-graphics-compiler) のサポートターゲット、vISA (virtual ISA) に *Meteor Lake* を追加するコミットが追加されている。  
+Intel の Pete Chou 氏より、[Intel Graphics Compiler (IGC)](https://github.com/intel/intel-graphics-compiler) のサポートターゲット、vISA (virtual ISA) に *Meteor Lake* を追加するコミットが投稿されている。  
 
  * [vISA: Add MTL target. · intel/intel-graphics-compiler@20ef9c5](https://github.com/intel/intel-graphics-compiler/commit/20ef9c5a42f4154c9e18c65cafd55e8af5f67c17)
 
