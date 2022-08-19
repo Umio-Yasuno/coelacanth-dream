@@ -547,6 +547,7 @@ Navi LITE 13///\\\E9:00
 | | 0xC7 |  | |
 | | 0xCA | RX 5600 XT | (Navi10 XLE) |
 | | 0xCB | RX 5600 | (Navi10 XE) |
+| | 0xCE | TDC-140 | |
 | | 0xE1 | | |
 | | 0xE2 | | |
 | | 0xE3 | | |
@@ -568,9 +569,9 @@ Navi LITE 13///\\\E9:00
 | | 0x41 | Pro 5600M | |
 | | 0xC1 | | |
 | | 0xC3 | Pro V520 | |
-| | 0xC7 | | (no video support)[^no-video-navi12] |
+| | 0xC7 | BC-160 | (no video support)[^no-video-navi12] |
 | 0x7362 | 0x71 | | (Navi12 VF) |
-| | 0xC1 | | (Navi12 VF) |
+| | 0xC1 | Pro V540 | (Navi12 VF) |
 | | 0xC3 | | (Navi12 VF) (AWS) |
 
 [Page Top](#page_index)
@@ -600,7 +601,7 @@ Navi LITE 13///\\\E9:00
 | | 0xC3 | RX 5300M | (Navi14 XLM) |
 | | 0xC5 | RX 5500 XT | (Navi14 XTX) |
 | | 0xC7 | RX 5500 | (Navi14 XT) |
-| | 0xC9 | RX 5500XTB | for Blockchain |
+| | 0xC9 | RX 5500XTB/TDC-120 | for Blockchain |
 | | 0xCF | RX 5300 | (Navi14 XL?) |
 | | 0xF2 | | |
 | | 0xF3 | | |
@@ -636,15 +637,8 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 0x731F &darr; | 0x50 | |
-| | 0x51 | | |
-| | 0xCE | | |
-| | 0xD0 | | |
-| | 0xD1 | | |
-| | 0xD3 | | |
-| | 0xDF | | |
 | 0x73A0 | 0x00 | |
-| 0x73A1 | 0x00 | |
+| 0x73A1 | 0x00 | Pro V620 |
 | 0x73A2 | 0x00 | |
 | 0x73A3 | 0x00 | PRO W6800 |
 | 0x73A4 | | |
@@ -652,7 +646,7 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | 0x73AB | 0x00 | |
 | 0x73AC | | |
 | 0x73AD | | |
-| 0x73AE | | |
+| 0x73AE | Pro V620 | |
 | 0x73AF | 0xC0 | RX 6900 XT |
 | 0x73BD | | |
 | 0x73BF &darr; | 0x40 | |
@@ -663,40 +657,40 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | | 0xC7 | | |
 | | 0xCF | | |
 | | 0xD0 | | |
-| | 0xD1 | | |
-| | 0xD3 | | |
+| | 0xD1 | Nashira Point | |
+| | 0xD3 | Nachira Point | |
 | | 0xD7 | TDC-235[^22_20] | |
 
 [^22_20]: AMDGPU 22.20
 
 #### Navy Flounder/Navi22 ( gfx1031 ) {#navy_flounder-gfx1031}
-
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 0x73C0 | 0x00 | |
-| 0x73C1 | 0x00 | |
-| 0x73C3 | 0x00 | |
+| 0x73C0 | 0x00 | Nashira Summit |
+| 0x73C1 | 0x00 | Nashira Summit |
+| 0x73C3 | 0x00 | Nashira Summit |
 | 0x73DF&darr; | 0x40 | |
-| | 0x41 | |
-| | 0xC0 | RX 6700 XT |
+| | 0x40 | Summit? |
+| | 0x41 | Summit? |
+| | 0xC0 | RX 6700 XT/6750 XT |
 | | 0xC1 | RX 6700 XT |
 | | 0xC2 | RX 6800M |
 | | 0xC3 | RX 6800M |
 | | 0xC5 | RX 6700 XT |
+| | 0xC7 | Nashira Summit |
 | | 0xCF | RX 6700M |
-| | 0xDF | |
+| | 0xD7 | TDC-235 |
+| | 0xDF | RX 6700 |
 | 0x73DA | | |
 | 0x73DB | | |
 | 0x73DC | | |
 | 0x73DD | | |
 | 0x73DE | | |
-| 0x73DF | 0xC0 | RX 6750 XT |
 
 [^14]: [P4 to Git Change 2042212 by kjayapra@1_HIPWS_LNX1_PAL on 2019/12/06 1… · ROCm-Developer-Tools/ROCclr@a35c1d2](https://github.com/ROCm-Developer-Tools/ROCclr/commit/a35c1d2f2d954363c7d2121d5334f9e7766beeae)
 [^5]:<https://github.com/ROCm-Developer-Tools/aomp-extras/blob/f3d316fe64347e697a9789f0f2499fec50024db1/utils/bin/gputable.txt#L1867>
 
 #### Dimgrey Cavefish/Navi23 ( gfx1032 ) {#dimgrey_cavefish-gfx1032}
-
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 0x73E0 | 0x00 | |
@@ -725,7 +719,6 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 | | 0xD7 | |
 
 ### Beige Goby/Navi24 ( gfx1034 ) {#beige_goby-gfx1034}
-
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 0x7420 | | |
