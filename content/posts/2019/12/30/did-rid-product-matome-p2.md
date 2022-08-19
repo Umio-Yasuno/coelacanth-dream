@@ -536,7 +536,7 @@ Navi LITE 13///\\\E9:00
 | 0x7319 | 0x40 | Pro 5700 XT | (Navi10 XTMA) |
 | 0x731A | 0x40 | | |
 | 0x731B | 0x40 | Pro 5700 | (Navi10 XGA) |
-| 0x731E &darr; | 0xC6 | RX 5700XTB | for Blockchain |
+| 0x731E &darr; | 0xC6 | RX 5700XTB/TDC-150 | for Blockchain |
 | | 0xC7 | RX 5700B | for Blockchain |
 | 0x731F &darr; | 0xC0 | RX 5700 XT 50th | (Navi10 XTX) |
 | | 0xC1 | RX 5700 XT | (Navi10 XT) |
