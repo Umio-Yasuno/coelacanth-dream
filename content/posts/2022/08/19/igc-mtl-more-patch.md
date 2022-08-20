@@ -19,7 +19,7 @@ noindex: false
 ## {{< xe >}}-HPG {#xe-hpg}
 前回触れたように、*Meteor Lake GPU* の IGC におけるアーキテクチャ、プラットフォームは *{{< xe class="hpg" >}}* とされている。  
 {{< link >}} [Intel Graphics Compiler で Meteor Lake のサポートが進み始める ―― Xe-HPG、XMXユニットは非搭載か、再度 FP64 に対応 | Coelacanth's Dream](/posts/2022/07/06/igc-mtl/) {{< /link >}}
-しかし、*Alchemist/DG2* とまったく同じアーキテクチャ、構成という訳ではなく、*Meteor Lake GPU* ではレイトレーシングはサポートするが XMXユニットを用いて実行される `DPAS (Dot Product Accumulate Systolic)` 命令をサポートしないといった違いがある。  
+しかし、*Alchemist/DG2* とまったく同じアーキテクチャ、構成という訳ではなく、*Meteor Lake GPU* では XMXユニットを用いて実行される `DPAS (Dot Product Accumulate Systolic)` 命令をサポートしないといった違いがある。  
 *Meteor Lake GPU* では `FP64 (DP)` のサポートが復活することから、EU の構成もある程度 *Alchemist/DG2* とは異なると考えられる。  
 
  > 		     IGFX_XE_HP_SDV = 1250,
@@ -28,6 +28,18 @@ noindex: false
  > 		+    IGFX_METEORLAKE = 1272,
  >
  > {{< quote >}} [Add MTL support · intel/intel-graphics-compiler@2013a0c](https://github.com/intel/intel-graphics-compiler/commit/2013a0c271b136be2629fe74cb2b4eefffad78c0) {{< /quote >}}
+
+*Meteor Lake GPU* の HWレイトレーシングのサポートについては、`IGC/AdaptorCommon/RayTracing/PrologueShaders.cpp` に `IGFX_METEORLAKE` が追加されていることからサポートしていると考えられる。  
+それ以外の HWレイトレーシングのサポートを判定するコード部においても、変更がないことからも *Meteor Lake GPU* は *Alchemist/DG2* と *Ponte Vechhio* 同様にサポートしていると考えられる。  
+
+ > 		bool supportRayTracing() const
+ > 		{
+ > 		    return isProductChildOf(IGFX_DG2);
+ > 		}
+ >
+ > {{< quote >}} <https://github.com/intel/intel-graphics-compiler/blob/2013a0c271b136be2629fe74cb2b4eefffad78c0/IGC/Compiler/CISACodeGen/Platform.hpp#L742-L745> {{< /quote >}}
+
+[^mtl-rt]: <https://github.com/intel/intel-graphics-compiler/blob/2013a0c271b136be2629fe74cb2b4eefffad78c0/IGC/AdaptorCommon/RayTracing/PrologueShaders.cpp>
 
 ## 倍精度と整数除算 {#intdiv}
 IGC では整数の除算を *XE_HP_SDV* 世代からエミュレーションを用いるようにしており、`FP64 (DP)` をネイティブでサポートしている場合は `FP64` で、サポートしていない場合は `FP32 (SP)` でエミュレートする。  
