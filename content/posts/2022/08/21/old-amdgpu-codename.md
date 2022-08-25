@@ -10,7 +10,7 @@ noindex: false
 # author: ""
 ---
 
-CodeXL にある、結果的に世に出ることはなかった、オープンソースドライバーにサポートが追加されなかった過去の AMD GPU のコードネームに関するメモ。  
+結果的に世に出ることはなかった、オープンソースドライバーにサポートが追加されなかった過去の AMD GPU のコードネームに関するメモ。  
 
 * [GPUOpen-Archive/CodeXL: CodeXL is a comprehensive tool suite that enables developers to harness the benefits of CPUs, GPUs and APUs.](https://github.com/GPUOpen-Archive/CodeXL)
 
@@ -38,7 +38,7 @@ CodeXL にある、結果的に世に出ることはなかった、オープン�
  > {{< quote >}} [CodeXL/ci_id.h at master · GPUOpen-Archive/CodeXL](https://github.com/GPUOpen-Archive/CodeXL/blob/master/CodeXL/Components/ShaderAnalyzer/AMDTBackEnd/Include/Common/asic_reg/ci_id.h) {{< /quote >}}
 
 ### Tiran {#tiran}
-*Tiran* はコメント部にあるように、記述はあるが使用することはない ID とされており、DeviceID を `0x6600` とする記述もあるが、それは *GFX6 /Southern Islands (SI)* 世代の *Oland* に割り当てられた DeviceID であり、製品化の予定は元から、あるいは早くから無かったのではないかと推察される。  
+*Tiran* はコメント部にあるように、記述はあるが使用することはない ID とされており、DeviceID を `0x6600` とする記述もあるが、それは *GFX6 /Southern Islands (SI)* 世代の *Oland* に割り当てられた DeviceID であるため、製品化の予定は元から、あるいは早くから無かったのではないかと推察される。  
 
 しかし検索エンジンを頼ると、わずかではあるが *Tiran* について AMD が発表していた情報とそれを取り上げた記事が見つかった。  
 テクノロジー関連のニュースを取り扱っている [SemiAccurate](https://www.semiaccurate.com/) で Charlie Demerjian 氏が 2013/05/20 に書いた記事に、AMD/ATI の 「GPU Tape out Schedule」と題したスライドが掲載されている。  
@@ -56,7 +56,8 @@ AMD は同年の HotChips 27 にて *Fiji* と HBM メモリの講演をして�
 
 [^hc27-fiji]: [COMPUTEX 2015 - HC27.25.520-Fury-Macri-AMD-GPU2.pdf](https://old.hotchips.org/wp-content/uploads/hc_archives/hc27/HC27.25-Tuesday-Epub/HC27.25.50-GPU-Epub/HC27.25.520-Fury-Macri-AMD-GPU2.pdf)
 
-*Tiran* が製品として出なかった理由は不明。CodeXL にあるファイルは最初のコミットが 2016/04/20 であるから、最初は製品化を目標としていたが途中でキャンセルされた可能性もある。  
+*Tiran* が製品として出なかった理由は不明。CodeXL にあるファイルは最初のコミットが 2016/04/20 であり、*Tiran* の名が出てからだいぶ時間が経ってから公開されたものである。  
+初期は製品化を目標としていたが途中でキャンセルされた可能性もある。  
 製造コストに対する性能、GPUダイ側の性能が不十分とされ、1世代を経て機能が強化され、同時に GPUダイサイズをさらに巨大化できるくらいには製造コストが下げられた *Fiji* が製品として登場したのではないか、という想像はできるが、あくまでもオタクの想像である。  
 
 ### Maui {#maui}
