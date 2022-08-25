@@ -89,3 +89,17 @@ CPUID Model: `0xBF` は CPUID Model, Stepping こそ *Alder Lake-S* と異なる
  > 		etc. teams can added model specific code to their respective subsystems
  >
  > {{< quote >}} [[PATCH] x86/cpu: Add CPU model numbers for Meteor Lake - Tony Luck](https://lore.kernel.org/all/20220824175718.232384-1-tony.luck@intel.com/) {{< /quote >}}
+
+| Family 0x6 | CPUID Model |
+| :--        | :--:        |
+| Alder Lake-S | 0x97      |
+| Alder Lake-M/P | 0x9A    |
+| Alder Lake-N   | 0xBE    |
+| Raptor Lake-S  | 0xB7    |
+| Raptor Lake-P  | 0xBA    |
+| Raptor Lake-S (Alder Lake-R?) | 0xBF |
+| Meteor Lake-S  | 0xAC |
+| Meteor Lake-M/P | 0xAA |
+| Sapphire Rapids | 0x8F |
+| Emerald Rapids  | 0x8F?<br>(Stepping: 0x8?) |
+
