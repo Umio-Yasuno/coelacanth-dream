@@ -31,6 +31,7 @@ noindex: false
 
 *Meteor Lake GPU* の HWレイトレーシングのサポートについては、`IGC/AdaptorCommon/RayTracing/PrologueShaders.cpp` に `IGFX_METEORLAKE` が追加されていることからサポートしていると考えられる。  
 それ以外の HWレイトレーシングのサポートを判定するコード部においても、変更がないことからも *Meteor Lake GPU* は *Alchemist/DG2* と *Ponte Vechhio* 同様にサポートしていると考えられる。  
+またデータポートも *Alchemist/DG2* と *Ponte Vecchio* 同様に LSC (Load Store Cache?) を採用している。  
 
  > 		bool supportRayTracing() const
  > 		{

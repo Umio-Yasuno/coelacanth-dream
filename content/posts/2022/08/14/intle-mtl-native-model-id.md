@@ -38,7 +38,7 @@ Intel は PMU (Performance Monitoring Unit) で検出したハードウェアイ
 | Raptor Lake     | 0x1        | 0x1        |
 | Meteor Lake     | 0x1?       | 0x2        |
 
-`Native Model ID` がマイクロアーキテクチャに対して付けられるユニークな ID ということを考えれば、*Raptor Lake* は *Alder Lake* と同じ *Golden Cove (Core)* と *Gracemont (Atom)* の構成を取り、*Meteor Lake* はコードネームは違うが `Native Model ID` が *Golden Cove* と同じ *Redwood Cove (Core)* と、*Gracemont (Atom)* から ID が更新された *Crestmont* を採用していることになる。  
+`Native Model ID` がマイクロアーキテクチャに対して付けられるユニークな ID ということを考えれば、*Meteor Lake* はコードネームは違うが `Native Model ID` が *Golden Cove* と同じ *Redwood Cove (Core)* と、*Gracemont (Atom)* から ID が更新された *Crestmont* を採用していることになる。  
 以上は一応、Intel が公式に公開している情報とドキュメントに記載された仕様から推測できる内容である。  
 Intel は *Meteor Lake* で新たにサポートする命令や拡張等を発表していないため、*Golden Cove* と *Redwood Cove* のマイクロアーキテクチャが同じだとしても、それは現状矛盾しない。  
 
