@@ -9,6 +9,7 @@ summary: " "
 ---
 
 {{< pindex >}}
+ * [参考リンク](#reference_title)
  * [APU](#apu)
     * FAMILY_RV
         * [Raven](#raven-gfx902)
@@ -44,8 +45,13 @@ summary: " "
         * [Navy Flounder/Navi22](#navy_flounder-gfx1031)
         * [Dimgrey Cavefish/Navi23](#dimgrey_cavefish-gfx1032)
         * [Beige Goby/Navi24](#beige_goby-gfx1034)
- * [参考リンク](#reference_title)
 {{< /pindex >}}
+
+{{< ref >}}
+ * [DeviceInfoUtils.cpp - GPUOpen-Tools/common-src-DeviceInfo](https://github.com/GPUOpen-Tools/common-src-DeviceInfo/blob/master/DeviceInfoUtils.cpp)
+ * [device_info/DeviceInfo.cpp at master · GPUOpen-Tools/device_info](https://github.com/GPUOpen-Tools/device_info/blob/master/DeviceInfo.cpp)
+ * [data/amdgpu.ids · master · Mesa / drm · GitLab](https://gitlab.freedesktop.org/mesa/drm/blob/master/data/amdgpu.ids)
+{{< /ref >}}
 
 ## APU {#apu}
 ### FAMILY_RV {#family_rv}
@@ -737,8 +743,3 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 [^amdgpu_ids-1337803]: <http://repo.radeon.com/amdgpu/21.40.1/ubuntu/pool/main/libd/libdrm-amdgpu-common/libdrm-amdgpu-common_1.0.0.40501-1337803_all.deb>
 [^amdgpu_ids-1362367]: <http://repo.radeon.com/amdgpu/21.40.2/ubuntu/pool/main/libd/libdrm-amdgpu-common/libdrm-amdgpu-common_1.0.0.40502-1362367_all.deb>
 
-{{< ref >}}
- * [DeviceInfoUtils.cpp - GPUOpen-Tools/common-src-DeviceInfo](https://github.com/GPUOpen-Tools/common-src-DeviceInfo/blob/master/DeviceInfoUtils.cpp)
- * [device_info/DeviceInfo.cpp at master · GPUOpen-Tools/device_info](https://github.com/GPUOpen-Tools/device_info/blob/master/DeviceInfo.cpp)
- * [data/amdgpu.ids · master · Mesa / drm · GitLab](https://gitlab.freedesktop.org/mesa/drm/blob/master/data/amdgpu.ids)
-{{< /ref >}} 
