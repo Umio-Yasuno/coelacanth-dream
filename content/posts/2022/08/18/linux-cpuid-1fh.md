@@ -64,6 +64,5 @@ Linux Kernel では `CPUID [Leaf=0xB, 0x1F]` の情報を活用しているが�
  > {{< quote >}} [[PATCH V2 4/8] x86/topology: Fix multiple packages shown on a single-package system - Zhang Rui](https://lore.kernel.org/linux-hwmon/20220816051633.17775-5-rui.zhang@intel.com/) {{< /quote >}}
 
 `Module` レベルのサポートにより、`CPUID [Leaf=0x1F]` から取得できる情報のみで、全体では 2-Module, 8-Core、Module あたり 4-Core であることが計算できるようになる。  
-
-ただ、*Alder Lake-S/P/M* で E-Core 2-Module であることを判断するにはどうすればいいのかが少し気になる。  
+*Alder Lake-S/P/M* では `Module` レベルをサポートしていないとされているが、APIC ID と L2キャッシュの対応関係から、2-Module ということは求められる (はず)。  
 

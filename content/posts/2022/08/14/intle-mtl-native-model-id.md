@@ -16,10 +16,10 @@ Intel は PMU (Performance Monitoring Unit) で検出したハードウェアイ
 
 ## Native Model ID {#native-model-id}
 `Native Model ID` は `CPUID (Leaf:0x1A)` 命令から取得できるハイブリッドアーキテクチャに関する情報であり、各マイクロアーキテクチャを一意に識別するための ID となる。  
-`CPUID (Leaf:0x1)` 命令から取得できる `Family, Model, Stepping` とは関係がなく、`Family, Model, Stepping` は CPU 全体の ID なのに対し、`Native Model ID` はマイクロアーキテクチャの ID だと言える。  
+`CPUID (Leaf:0x1)` から取得できる `Family, Model, Stepping` とは関係がなく、`Family, Model, Stepping` は CPU 全体の ID なのに対し、`Native Model ID` はマイクロアーキテクチャの ID だと言える。  
 
-`CPUID (Leaf:0x1A)` 命令からは他に `CPU Type[31:24]` も取得でき、`Type: Atom` に `0x20`、`Type: Core` に `0x40` が割り当てられている。  
-`Native Model ID` は各 `CPU Type` ごとに割り当てられるとされており、`CPU Type` と `Native Model ID` の組み合わせでマイクロアーキテクチャを識別することができる。  
+`CPUID (Leaf:0x1A)` からは他に `CPU Type[31:24]` も取得でき、`Type: Atom` に `0x20`、`Type: Core` に `0x40` が割り当てられている。  
+`Native Model ID` は各 `CPU Type` ごとに割り当てられるとされており、`CPU Type` と `Native Model ID` の組み合わせ、言い換えれば `CPUID [Leaf=0x1A].EAX` の値のみでマイクロアーキテクチャを識別できる。  
 
  > 		Also, hybrid parts have a native model ID to uniquely identify the
  > 		micro-architecture of each CPU. Please note that the native model ID is not
@@ -57,5 +57,6 @@ Intel は *Meteor Lake* で新たにサポートする命令や拡張等を発�
  * [Top-down Microarchitecture Analysis Method](https://www.intel.com/content/www/us/en/develop/documentation/vtune-cookbook/top/methodologies/top-down-microarchitecture-analysis-method.html)
  * [intel/event-converter-for-linux-perf](https://github.com/intel/event-converter-for-linux-perf)
  * <https://download.01.org/perfmon/>
+ * Volume 2A: <https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html>
  * <https://software.intel.com/content/www/us/en/develop/download/intel-architecture-instruction-set-extensions-programming-reference.html>
 {{< /ref >}}

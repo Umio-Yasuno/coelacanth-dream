@@ -11,7 +11,7 @@ noindex: false
 ---
 
 Intel の Tony Luck 氏により、Linux Kernel (`arch/x86/include/asm/intel-family.h`) に *Raptor Lake-S* と *Meteor Lake-M/P, S* の CPUID Model を追加するパッチが投稿されている。  
-`CPUID[LEAF=0x1].EAX` から取得できる CPUID Family, Model, Stepping は、主にプロセッサやプラットフォームの判定、ステイトの情報や `perf` ツールのための PMU (Performance Monitoring Unit) 情報をそれぞれに適用するのに用いられる。  
+`CPUID[LEAF=0x1].EAX` から取得できる CPUID Family, Model, Stepping は、主にプロセッサやプラットフォームの判定、ステイトの情報や perf ツールのための PMU (Performance Monitoring Unit) 情報をそれぞれに適用するのに用いられる。  
 
  * [[PATCH 1/4] perf/x86: Add new Raptor Lake S support - kan.liang](https://lore.kernel.org/all/20220823210129.979394-1-kan.liang@linux.intel.com/)
  * [[PATCH] x86/cpu: Add CPU model numbers for Meteor Lake](https://lore.kernel.org/all/20220824175718.232384-1-tony.luck@intel.com/T/#u)
@@ -51,7 +51,7 @@ CPUID Model: `0xBF` は CPUID Model, Stepping こそ *Alder Lake-S* と異なる
 [^adl]: [Intel Alder Lake と Rocket Lake に追加される CPUID Model | Coelacanth's Dream](/posts/2022/01/07/intel-adl-rkl-new-model/)
 
 また、Tony Luck 氏はパッチ内で、ソフトウェア的な観点では `RAPTORLAKE*` と `ALDERLAKE*` の機能において、2つの間に異なる点はないとコメントしている。  
-ここでの機能はあくまでステイトや `PMU` のことを指していると思われる。  
+ここでの機能はあくまでステイトや PMU のことを指していると思われる。  
 
  > 		Note1: Model 0xB7 already claimed the "no suffix" #define for a regular
  > 		client part, so add (yet another) suffix "S" to distinguish this new
