@@ -56,7 +56,18 @@ Linux Kernel のスケジューラーには、ITMT が有効化されている�
 だが、そうした ITMT が有効化されたコアの SMT側に低い優先度を割り当てるようにしていたため、状況によっては同コア内で不要なタスク移行が発生していたとパッチ内で Ricardo Neri 氏はコメントしている。  
 パッチ (2022/08/25) では、不要なタスク移行を防ぐための修正と、先のパッチ (2021/09/11) で同コア内の両スレッドの状態を確認するようになったことで不要になった部分の削除が行われている。  
 
+Intel Thread Director が実装された Windows11 (/Pro) と各種 Linux ディストリビューションにおける *Alder Lake* の性能比較を Phoronix の Michael Larabel 氏が行っている。  
+2021/11/12 に公開された検証記事では、104個のテスト中 47個 (45.2%) で Windows11 が最速という結果だったが[^adl-2021-11-12]、2022/07/08 の検証記事では Windows11 Pro が最速という結果になったのは 103個のテスト中 16個 (15.5%) となっている[^adl-2022-07-08]。  
+また、2021/11/12 の検証記事で Windows11 (/Pro) がテストにおいて最遅になったのは 104個中 24個 (23.1%)、2022/07/08 の検証記事では 103個中 74個 (71.8%) になっており、Linux ディストリビューション全体で *Alder Lake* の性能が向上している。  
+
+[^adl-2021-11-12]: [Windows 11 Better Than Linux Right Now For Intel Alder Lake Performance - Phoronix](https://www.phoronix.com/review/alderlake-windows-linux)
+[^adl-2022-07-08]: [Windows 11 vs. Linux Performance For Intel Core i9 12900K In Mid-2022 - Phoronix](https://www.phoronix.com/review/windows-linux-mid22adl)
+
+Intel Thread Director に近い機能が実装されていない Linux ディストリビューションの方が全体的に性能が高いという結果になったが、OS 自体の特性、実行されたテストのほとんどがレンダリングやエンコードといったクリエイティブ系ということもあり、Windows11 (/Pro) では Intel Thread Director の効果があまり発揮できなかった可能性がある。  
+Intel Thread Director はコアの状況やスレッドの種類に応じて適切なスケジューリングを行うことで、性能と電力効率と上げる機能であり、複数の種類のスレッドが動作するアプリケーション、アプリケーションが複数立ち上がっている状況において効果が発揮できると考えられる。  
+
 {{< ref >}}
  * [[PATCH 0/5] Make Cluster Scheduling Configurable](https://lore.kernel.org/all/20211204091402.GM16608@worktop.programming.kicks-ass.net/T/#u)
  * [Intel® Turbo Boost Max Technology 3.0](https://www.intel.com/content/www/us/en/architecture-and-technology/turbo-boost/turbo-boost-max-technology.html)
+ * [Windows 11 vs. Linux Performance For Intel Core i9 12900K In Mid-2022 - Phoronix](https://www.phoronix.com/review/windows-linux-mid22adl)
 {{< /ref >}}
