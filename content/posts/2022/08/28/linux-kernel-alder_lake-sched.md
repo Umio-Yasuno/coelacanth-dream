@@ -59,6 +59,7 @@ Linux Kernel のスケジューラーには、ITMT が有効化されている�
 Intel Thread Director が実装された Windows11 (/Pro) と各種 Linux ディストリビューションにおける *Alder Lake* の性能比較を Phoronix の Michael Larabel 氏が行っている。  
 2021/11/12 に公開された検証記事では、104個のテスト中 47個 (45.2%) で Windows11 が最速という結果だったが[^adl-2021-11-12]、2022/07/08 の検証記事では Windows11 Pro が最速という結果になったのは 103個のテスト中 16個 (15.5%) となっている[^adl-2022-07-08]。  
 また、2021/11/12 の検証記事で Windows11 (/Pro) がテストにおいて最遅になったのは 104個中 24個 (23.1%)、2022/07/08 の検証記事では 103個中 74個 (71.8%) になっており、Linux ディストリビューション全体で *Alder Lake* の性能が向上している。  
+2022/07/08 の検証では、先のパッチ (2021/09/11) が適用され、パッチによって以前の E-Core が使われずに P-Core に負荷が集中する状況が修正されたことが性能に良い影響を与えたと考えられる。  
 
 [^adl-2021-11-12]: [Windows 11 Better Than Linux Right Now For Intel Alder Lake Performance - Phoronix](https://www.phoronix.com/review/alderlake-windows-linux)
 [^adl-2022-07-08]: [Windows 11 vs. Linux Performance For Intel Core i9 12900K In Mid-2022 - Phoronix](https://www.phoronix.com/review/windows-linux-mid22adl)
