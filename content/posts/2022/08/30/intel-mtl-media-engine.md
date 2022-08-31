@@ -50,10 +50,10 @@ Intel は 2022/08/21 - 2022/08/23 に開催された Hot Chips 34 にて、*Mete
 
 *Standalone Media* では、複数の GPU/Tile で構成されるプラットフォームとは異なり、*primary GT* を経由して割り込み処理が行われるとされている。  
 この点から、*Meteor Lake* では GPU と Media Engine が別々のタイルに搭載されるが、GPU が無効化された SKU では Media Engine も無効化されるものと思われる。  
+また、GPU が無効化されている場合は DeviceID からプラットフォームの検出ができないようにも思う。  
 
 *Standalone Media ({{< xe >}}-LPM+)* の `engine_mask` を見ると `VECS0, VCS0, VCS2` のビットフラグが有効化されている。  
 `VCS` はデコードエンジン (VDBox, BSD, Bit Stream Decode)、`VCES` はエンコードエンジン (VEBox, Video Enhancement Engine) を指し、エンジン数だけで言えば *Tiger Lake, Alder Lake, DG1* と同規模となる。  
-
 *DG2/Alchemist* に採用されている *{{< xe >}}-HPM (ver12.50)* は AV1エンコードをサポートしているが、*Meteor Lake* に採用される *{{< xe >}}-LPM+ (ver13.00)* はまだ [intel/media-driver](https://github.com/intel/media-driver) 等へのパッチが公開されておらず、AV1エンコードのサポート状況については不明となっている。  
 
  > 		+static const struct intel_gt_definition xelpmp_extra_gt[] = {
@@ -69,6 +69,13 @@ Intel は 2022/08/21 - 2022/08/23 に開催された Hot Chips 34 にて、*Mete
  > 		+
  >
  > {{< quote >}} [[Intel-gfx] [PATCH 6/8] drm/i915/xelpmp: Expose media as another GT](https://lists.freedesktop.org/archives/intel-gfx/2022-August/304513.html) {{< /quote >}}
+
+| Intel Media Engine | VEBox | VDBox |
+| :--                | :--:  | :--:  |
+| TGL/DG1/ADL        | 1     | 2     |
+| {{< xe >}}-HP SDV  | 4?    | 4?    |
+| DG2/Alchemist      | 2?    | 2?    |
+| Meteor Lake        | 1?    | 2?    |
 
 {{< ref >}}
  * [Intel Meteor Lake and Arrow Lake - HotChips 34レポート | マイナビニュース](https://news.mynavi.jp/article/20220824-2433247/)
