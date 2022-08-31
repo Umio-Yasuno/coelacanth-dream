@@ -52,6 +52,12 @@ Intel は 2022/08/21 - 2022/08/23 に開催された Hot Chips 34 にて、*Mete
 この点から、*Meteor Lake* では GPU と Media Engine が別々のタイルに搭載されるが、GPU が無効化された SKU では Media Engine も無効化されるものと思われる。  
 また、GPU が無効化されている場合は DeviceID からプラットフォームの検出ができないようにも思う。  
 
+ > 		 - Unlike platforms with remote tiles, all interrupt handling for
+ > 		   standalone media still happens via the primary GT.
+ > 		
+ >
+ > {{< quote >}} [[Intel-gfx] [PATCH 0/8] i915: Add "standalone media" support for MTL](https://lists.freedesktop.org/archives/intel-gfx/2022-August/304507.html) {{< /quote >}}
+
 *Standalone Media ({{< xe >}}-LPM+)* の `engine_mask` を見ると `VECS0, VCS0, VCS2` のビットフラグが有効化されている。  
 `VCS` はデコードエンジン (VDBox, BSD, Bit Stream Decode)、`VCES` はエンコードエンジン (VEBox, Video Enhancement Engine) を指し、エンジン数だけで言えば *Tiger Lake, Alder Lake, DG1* と同規模となる。  
 *DG2/Alchemist* に採用されている *{{< xe >}}-HPM (ver12.50)* は AV1エンコードをサポートしているが、*Meteor Lake* に採用される *{{< xe >}}-LPM+ (ver13.00)* はまだ [intel/media-driver](https://github.com/intel/media-driver) 等へのパッチが公開されておらず、AV1エンコードのサポート状況については不明となっている。  
@@ -81,4 +87,6 @@ Intel は 2022/08/21 - 2022/08/23 に開催された Hot Chips 34 にて、*Mete
  * [Intel Meteor Lake and Arrow Lake - HotChips 34レポート | マイナビニュース](https://news.mynavi.jp/article/20220824-2433247/)
  * [Intel Disaggregates Client Chips with Meteor Lake in 2023](https://www.servethehome.com/intel-disaggregates-client-chips-with-meteor-lake-hc34/)
  * [Intel GFX ドライバーに Meteor Lake をサポートする最初のパッチが投稿される ―― Gen12.7, Xe_LPD+, Xe_LPM+ | Coelacanth's Dream](/posts/2022/07/07/i915-mtl/)
+ * Linux Kernel
+    * `drivers/gpu/drm/i915/i915_pci.c`
 {{< /ref >}}
