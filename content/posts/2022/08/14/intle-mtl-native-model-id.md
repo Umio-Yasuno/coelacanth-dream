@@ -27,7 +27,7 @@ Intel は PMU (Performance Monitoring Unit) で検出したハードウェアイ
  >
  > {{< quote >}} [[PATCH 2/3] x86/cpu: Describe hybrid CPUs in cpuinfo_x86 - Ricardo Neri](https://lore.kernel.org/lkml/20201002201931.2826-3-ricardo.neri-calderon@linux.intel.com/) {{< /quote >}}
 
-現在 Intel CPU でハイブリッドアーキテクチャを採用し、`Native Model ID` が公開情報となっている CPU には、*Lakefield, Alder Lake, Raptor Lake, Meteor Lake* があり、それぞれの `Native Model ID` は以下の表のようになっている。  
+現在 Intel CPU でハイブリッドアーキテクチャを採用し、`Native Model ID` が公開情報となっている CPU には、*Lakefield, Alder Lake, Meteor Lake* があり、それぞれの `Native Model ID` は以下の表のようになっている。  
 *Lakefield* の `Native Model ID` は InstLatx64 氏が公開している CPUID dump 結果から確認した。  
 *Raptor Lake* は `mapfile.csv` に含まれていないが、`TMA_Metrics` では *Alder Lake (ADL)* と同様のものとして扱っているため、`Native Model ID` も *Alder Lake* と合わせた。  
 

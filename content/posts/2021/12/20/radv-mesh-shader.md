@@ -48,9 +48,9 @@ Timur Kristóf 氏は RADV/ACO で `VK_NV_mesh_shader` を公式にサポート�
  >
  > {{< quote >}} [radv: Experimental support for Mesh Shaders. (!13580) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/13580) {{< /quote >}}
 
- > * D3D12 では出力する頂点の総数を、出力を書き込む前に `SetMeshOutputCounts` を使って表示することを必須としているが、`VK_NV_mesh_shader` ではそうした機能がなく、頂点の総数を実行時に知ることができない。  
- > * D3D12 では不可能にされている、あるシェーダーから他のシェーダーの出力を読み取ることができるようになっている。  
- > * NV間接コマンドバッファフォーマットが (AMD GPU) ハードウェアでサポートされていないため、複数のコピーパケットを発行する必要がある。D3D12 ではオフセット無しの 3次元ディスパッチ (x, y, z) を使用するが、`VK_NV_mesh_shader` ではオフセット有りの 1次元ディスパッチ (taskCount, firstTask) を使用する。  
+ * D3D12 では出力する頂点の総数を、出力を書き込む前に `SetMeshOutputCounts` を使って表示することを必須としているが、`VK_NV_mesh_shader` ではそうした機能がなく、頂点の総数を実行時に知ることができない。  
+ * D3D12 では不可能にされている、あるシェーダーから他のシェーダーの出力を読み取ることができるようになっている。  
+ * NV間接コマンドバッファフォーマットが (AMD GPU) ハードウェアでサポートされていないため、複数のコピーパケットを発行する必要がある。D3D12 ではオフセット無しの 3次元ディスパッチ (x, y, z) を使用するが、`VK_NV_mesh_shader` ではオフセット有りの 1次元ディスパッチ (taskCount, firstTask) を使用する。  
 
 以上のことから、`VK_NV_mesh_shader` では D3D12 と比較して性能が低くなるとしている。  
 クロスベンダー拡張でこれらの問題が解決され、D3D12 との互換性がより取られれば、AMD GPU での性能も改善することが期待される。  
