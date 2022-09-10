@@ -12,15 +12,17 @@ noindex: false
 
 *RDNA 3/GFX11* では CU ごとに持つ L0ベクタキャッシュと Shader Array (SA) ごとに持つ GL1データキャッシュ (RDNA L1キャッシュ) が、*RDNA 2/GFX10.3* から倍のサイズに増やされることが AMD の Liu, Aaron 氏によって明かされている。  
 
- * [[PATCH] drm/amdkfd: Match GC 11.0.1 cache info to yellow carp](https://lists.freedesktop.org/archives/amd-gfx/2022-September/083698.html)
+ * [[PATCH] drm/amdkfd: Match GC 11.0.1 cache info to yellow carp](https://lists.freedesktop.org/archives/amd-gfx/2022-September/083667.html)
+    * [[PATCH] drm/amdkfd: Match GC 11.0.1 cache info to yellow carp](https://lists.freedesktop.org/archives/amd-gfx/2022-September/083698.html)
 
-*RDNA 3/GFX11* からは IP Discovery Table からキャッシュ情報を読み取るようになり、AMDGPUドライバー中にハードコードされることはなくなったとされている。  
-しかし、*Phoenix APU (GC 11.0.1, GFX1103)* に限ってはキャッシュ情報が含まれておらず、他の *RDNA 3/GFX11* GPU のように読み取れないため、*Yellow Carp/Rembrandt APU* のキャッシュ情報を用いるようにするのが当該のパッチとなる。[^ip-discovery]  
+*RDNA 3/GFX11* からは GPU 内部に格納されている (と思われる) IP Discovery Table からキャッシュ情報を読み取るようになり、AMDGPUドライバー中にハードコードされることはなくなった。[^ip-discovery]  
+しかし、*Phoenix APU (GC 11.0.1, GFX1103)* に限ってはキャッシュ情報が含まれておらず、他の *RDNA 3/GFX11* GPU のように読み取れないため、*Yellow Carp/Rembrandt APU* のキャッシュ情報を用いるようにするのが当該のパッチとなる。  
 パッチは AMD の Zhang, Yifan 氏によって投稿されている。  
+これは一時的な回避策とされ、IP Discovery Table にキャッシュ情報が追加され次第、パッチで追加された部分は削除される。  
 
 [^ip-discovery]: [次世代 GPU IPブロックのサポートが進む AMDGPUドライバー ―― GFX11, GC 11.0, MES 11.0, IMU | Coelacanth's Dream](http://localhost:1313/posts/2022/04/30/amd-gc_11_0_0/#ip)
 
-*Phoenix APU (GC 11.0.1, GFX1103)* と *Yellow Carp/Rembrandt APU* のキャッシュ情報は完全には一致せず、異なる点が L0ベクタキャッシュ (TCP L1 Cache per CU) と GL1データキャッシュとなる。  
+*Phoenix APU (GC 11.0.1, GFX1103)* と *Yellow Carp/Rembrandt APU* のキャッシュ情報は完全には一致せず、異なる点が L0ベクタキャッシュ (TCP L1 Cache per CU, Texture Cacher per Pipe, Private) と GL1データキャッシュとなる。  
 それに触れたのが以下の Liu, Aaron 氏によるコメント。  
 
  > 		[Public]
@@ -42,7 +44,7 @@ noindex: false
  >
  > {{< quote >}} [[PATCH] drm/amdkfd: Match GC 11.0.1 cache info to yellow carp](https://lists.freedesktop.org/archives/amd-gfx/2022-September/083698.html) {{< /quote >}}
 
-*Phoenix APU (GC 11.0.1, GFX1103)* では、L0ベクタキャッシュは 16KiB から 32KiB に、GL1データキャッシュは 128KiB から 256KiB になるとされている。  
+*Phoenix APU (GC 11.0.1, GFX1103)* では、L0ベクタキャッシュは 32KiB に、GL1データキャッシュは 256KiB になるとされており、*RDNA 2/GFX10.3* と比較するとそれぞれ倍のサイズに増加している。  
 他キャッシュは同じとされており、WGP (CU 2基) ごとに持つスカラ命令キャッシュ (L1i) とスカラデータキャッシュ (L1k)、GPU全体で共有する L2データキャッシュのサイズについては *Yellow Carp/Rembdrandt APU* と変わらない。  
 以下は *Yellow Carp/Rembrandt APU* のキャッシュ情報となり、スカラ命令キャッシュは 32KiB、スカラデータキャッシュは 16KiB、L2データキャッシュは 2048KiB (2MiB) となる。  
 それと MALL (Infinity Cache, L3データキャッシュ) に触れられていないことから、やはり APU では MALL を搭載しない方針と思われる。  
@@ -115,7 +117,7 @@ GL1データキャッシュは Shader Array 内の WGP 以外に RB (Render Back
 
 | Cache Info                | Yellow Carp (Rembrandt) | Phoenix (GC 11.0.1, GFX1103) |
 | :--                       | :--:                    | :--:                         |
-| L1 Vector Data (per CU)   | 16KiB                   | *32KiB* |
+| L0 Vector Data (per CU)   | 16KiB                   | *32KiB* |
 | L1 Scalar Inst. (per WGP) | 32KiB                   | 32KiB |
 | L1 Scalar Data (per WGP)  | 16KiB                   | 16KiB |
 | GL1 Data (per SA)         | 128KiB                  | *256KiB* |

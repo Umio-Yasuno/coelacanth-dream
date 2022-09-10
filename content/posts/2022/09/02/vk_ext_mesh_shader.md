@@ -1,5 +1,5 @@
 ---
-title: "Vulkan Mesh Shader のクロスベンダ拡張がリリース"
+title: "Vulkan Mesh Shader のクロスベンダ拡張 VK_EXT_mesh_shader がリリース"
 date: 2022-09-02T14:00:17+09:00
 draft: false
 categories: [ "Software", "AMD", "Intel", "GPU" ]
