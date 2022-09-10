@@ -52,11 +52,13 @@ Class 0 がベクトル化 (SIMD化) されていない整数演算と浮動小�
 VNNI系命令が Class 1 から分離されているのは、推論処理等を E-Core (Atom, *Gracemont*) で実行することを想定しているのではないかと思われる。  
 Hot Chips 33 における *Alder Lake* と Intel Thread Directore の発表では、Class 0 が主要なアプリケーション、Class 1/2 が新しいアプリケーション (Emerging application) とされていた。  
 
-ITD (EHFI) の実装によりタスクごとに Class の情報が追加されることで、例えば同 P-Core 内の 2-Threads に異なる Class のタスク (Class 0 [Int] + Class 1/2 [SIMD]) を割り当てることで P-Core あたりのスループットを最大化するといったスケジューリングが可能になると思われる。  
+ITD (EHFI) の実装によりタスクごとに Class の情報が追加されることで、例えば同 P-Core 内の 2-Threads に異なる Class のタスク (Class 0 [Int] + Class 1/2 [SIMD]) を割り当てることで P-Core あたりの稼働率とスループットを最大化するといったスケジューリングが可能になると思われる。  
 
 {{< ref >}}
  * Volume 3B: [Intel® 64 and IA-32 Architectures Software Developer Manuals](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html#inpage-nav-3)
  * Optimization Reference Manual: [Intel® 64 and IA-32 Architectures Software Developer Manuals](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html#inpage-nav-5)
  * Alder Lake Architecture: [Title of this template file over multiple lines of text - HC2021.C1.1 Intel Efraim Rotem.pdf](https://hc33.hotchips.org/assets/program/conference/day1/HC2021.C1.1%20Intel%20Efraim%20Rotem.pdf)
+ * [Linux Kernel に Intel HFI をサポートするパッチ | Coelacanth's Dream](/posts/2022/01/02/intel-hfi/)
  * [Intel、SDM に Golden Cove、Gracemont アーキテクチャの詳細を追加 | Coelacanth's Dream](/posts/2022/03/04/adl-arch-details/)
+ * [Linux Kernel における Alder Lake のスケジューリング改善 | Coelacanth's Dream](/posts/2022/08/28/linux-kernel-alder_lake-sched/)
 {{< /ref >}}
