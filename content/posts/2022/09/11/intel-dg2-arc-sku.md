@@ -13,6 +13,7 @@ noindex: false
 Intel は 2022/09/08 付でデスクトップ向け *DG2/Alchemist* SKU の仕様を公開した。  
 内 **Arc A380** は以前より仕様が発表されており、一部では販売もされていた。今回新たに仕様が発表された SKU は **Arc A580/A750/A770** となる。  
 **Arc A580/A750/A770** は *ACM-G10/DG2-G10* をベースにしており、SKU 間で {{< xe >}}-Core、Ray Tracing Unit、EU (XVE, XMX Engine)、メモリチップ速度が異なっている。  
+**Arc A580/A750/A770(8GB)** はメモリ帯域が 512 GB/s (GDDR6 16Gbps)、**Arc A770(16GB)** は 560 GB/s (GDDR6 17.5Gbps) となる。  
 
  * [Intel® Arc™ Graphics - Q&A: Hardware Specs Explained](https://game.intel.com/story/intel-arc-graphics-qa-hardware-specs/)
  * [Products formerly Alchemist](https://ark.intel.com/content/www/us/en/ark/products/codename/226095/products-formerly-alchemist.html)
@@ -26,6 +27,7 @@ Intel は 2022/09/08 付でデスクトップ向け *DG2/Alchemist* SKU の仕�
 | Memory Bus Width | 96-bit | 256-bit | 256-bit | 256-bit |
 | Memory Bandwidth | 186 GB/s | 512 GB/s | 512 GB/s | 560 GB/s |
 | Render Slice | 2 | 6? | 7? | 8 |
+| TBP (Watts) | 75 W | 175 W | 225 W | 225 W |
 
 ニュースリリース内では *full specs* と書いてあるが、Render Slice 数とや Pixel Backend 数については記載が無い。  
 Render Slice は {{< xe >}}-Core や各種固定機能ユニットをまとめた GPUクラスタの単位であり、*{{< xe >}}-HPG アーキテクチャ* では基本 {{< xe >}}-Core 4基、Ray Tracing Unit 4基、Texture Sampler 4基、Pixel Backend 2基 (ROP 16基相当)、Geometry Unit、Rasterizer Unit、HiZ (Hierarchical Z) Unit それぞれ 1基で構成されている。  

@@ -18,6 +18,21 @@ Ricardo Neri 氏はこれまでにも Linux Kernel における *Alder Lake* の
 
  * [[RFC PATCH 00/23] sched: Introduce classes of tasks for load balance - Ricardo Neri](https://lore.kernel.org/lkml/20220909231205.14009-1-ricardo.neri-calderon@linux.intel.com/)
 
+ > 		+
+ > 		+config INTEL_THREAD_DIRECTOR
+ > 		+	bool "Intel Thread Director"
+ > 		+	depends on INTEL_HFI_THERMAL
+ > 		+	depends on SMP
+ > 		+	select SCHED_TASK_CLASSES
+ > 		+	help
+ > 		+	  Select this option to enable the Intel Thread Director. If selected,
+ > 		+	  hardware classifies tasks based on the type of instructions they
+ > 		+	  execute. It also provides performance capabilities for each class of
+ > 		+	  task. On hybrid processors, the scheduler uses this data to place
+ > 		+	  tasks of classes of higher performance on higher-performnance CPUs.
+ >
+ > {{< quote >}} [[RFC PATCH 17/23] thermal: intel: hfi: Enable the Intel Thread Director - Ricardo Neri](https://lore.kernel.org/lkml/20220909231205.14009-18-ricardo.neri-calderon@linux.intel.com/) {{< /quote >}}
+
 用語関係としては、*Alder Lake* からサポートしている EHFI (Enhanced Hardware Feedback Interface) を活用したスケジューリング機能が ITD と認識していたが、パッチでは EHFI を使わず ITD で統一されている。  
 おそらくは先に HFI (Hardware Feedback Interface) を活用するパッチがメインラインに取り込まれているため、HFI との混同を避けるために ITD を使っていると思われる。[^intel-hfi]  
 HFI は最初の Intel ハイブリッドプロセッサ *Lakefield* からサポートされており、スケジューラに対するヒントとして、性能と電力効率それぞれの相対的なレベルを示す値 (8-bits, 0-255) を論理プロセッサ (スレッド数) 分提供する機能となる。  
