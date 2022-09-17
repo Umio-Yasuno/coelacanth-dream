@@ -30,8 +30,8 @@ Intel は 2022/09/16 付で、*Intel Pentium, Celeron* ブランドが簡素化�
  > {{< quote >}} <https://intel-gfx-ci.01.org/tree/drm-tip/IGT_6642/bat-adln-1/boot0.txt> {{< /quote >}}
 
 Atom系コアのみの構成ながら *Intel Pentium, Celeron* ブランドはプロセッサ名に使われておらず、またモデルナンバーが現行 SKU から続かない 3桁という点から、新たなブランディングを導入したプロセッサ名の可能性が考えられる。  
-推測を重ねることとなるが、そうであれば *Alder Lake-N* が初の *Intel Processor* ブランドを導入する世代になるかもしれない。  
-ただ今回の発表内容と合わせると *Alder Lake-N* のリリースが 2023年になる。  
+推測を重ねることとなるが、そうであれば *Alder Lake-N* が初の *Intel Processor* ブランドを導入する世代になるかもしれない。一方、*Nxxx* というモデルナンバーは継続している。  
+ただ今回の発表内容と合わせると *Alder Lake-N* のモバイル向け SKU 正式リリースが 2023年になる。  
 *Alder Lake-N* は GPUドライバ等ですでにサポートされているが、公開されているロードマップ上には置かれていないため、大きな問題は無いと言えば無いが。  
 
 {{< ref >}}
