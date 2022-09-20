@@ -15,9 +15,9 @@ AMD GPU 向けの Vulkan ドライバには現在、Mesa3D RADV、AMDVLK GPUOpen
 
  * [Release v-2022.Q3.4 · GPUOpen-Drivers/AMDVLK](https://github.com/GPUOpen-Drivers/AMDVLK/releases/tag/v-2022.Q3.4)
 
-リリースに合わせて、レイトレーシングにおける BVH (Bounding volume hierarchy) のビルドやソート処理を HLSL シェーダーで実装した GPU Ray Tracing Library (GPURT) も公開されている。  
-GPURT は Vulkan レイトレーシングの他に DXR (DirectX 12) にも対応している。  
-そのため、GPURT は PAL (Platform Abstraction Library) に依存したライブラリとなるが、他の AMD GPU 向けのプロプライエタリなドライバでも GPURT を採用していることが考えられる。  
+リリースに合わせて、新たに GPU Ray Tracing Library (GPURT) が公開された。  
+GPURT はレイトレーシングにおける BVH (Bounding volume hierarchy) のビルドやソート処理を HLSL シェーダーで実装したライブラリであり、Vulkan レイトレーシングの他に DXR (DirectX 12) にも対応している。  
+GPURT は PAL (Platform Abstraction Library) に依存したライブラリとなるが、他の AMD GPU 向けのプロプライエタリなドライバでも PAL と一緒に GPURT を採用していることが考えられる。  
 
  * [GPUOpen-Drivers/gpurt: GPU Ray Tracing Library](https://github.com/GPUOpen-Drivers/gpurt)
 

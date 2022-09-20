@@ -30,11 +30,13 @@ Intel は 2022/09/16 付で、*Intel Pentium, Celeron* ブランドが簡素化�
  > {{< quote >}} <https://intel-gfx-ci.01.org/tree/drm-tip/IGT_6642/bat-adln-1/boot0.txt> {{< /quote >}}
 
 Atom系コアのみの構成ながら *Intel Pentium, Celeron* ブランドはプロセッサ名に使われておらず、またモデルナンバーが現行 SKU から続かない 3桁という点から、新たなブランディングを導入したプロセッサ名の可能性が考えられる。  
-推測を重ねることとなるが、そうであれば *Alder Lake-N* が初の *Intel Processor* ブランドを導入する世代になるかもしれない。一方、*N シリーズ (Nxxx)* は継続している。  
-ただ今回の発表内容と合わせると *Alder Lake-N* のモバイル向け SKU 正式リリースが 2023年になる。  
+推測を重ねることとなるが、そうであれば *Alder Lake-N* が初の *Intel Processor* ブランドを導入する世代になるかもしれない。一方、*N シリーズ (Nxxx)* は継続することとなる。  
+ただ今回の発表内容と合わせると *Alder Lake-N* のモバイル向け SKU 正式リリースが 2023年ということになる。  
 *Alder Lake-N* は GPUドライバ等ですでにサポートされているが、公開されているロードマップ上には置かれていないため、大きな問題は無いと言えば無いが。  
+しかし、*Alder Lake-N* を搭載する Chromebook のサポートも Coreboot では進められているため、*Intel Processor* ブランドとは別のブランドで *Alder Lake-N* をリリースする可能性もある。  
 
 {{< ref >}}
  * [Intel、「Intel Pentium」と「Intel Celeron」ブランドはただの「Intel」に　2023年から - ITmedia NEWS](https://www.itmedia.co.jp/news/articles/2209/17/news052.html)
+ * [Alder Lake-N を搭載する Chromebookボード 「Nissa, Nivviks, Nereid」 | Coelacanth's Dream](/posts/2022/01/12/adl_n-chromebook-board/)
  * [Products formerly Alder Lake](https://ark.intel.com/content/www/us/en/ark/products/codename/147470/products-formerly-alder-lake.html)
 {{< /ref >}}
