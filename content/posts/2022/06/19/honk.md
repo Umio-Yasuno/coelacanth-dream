@@ -3,7 +3,7 @@ title: "Go言語製 ActivityPub サーバーの最小実装 honk を立ててみ
 date: 2022-06-19T02:30:21+09:00
 draft: false
 categories: [ "Diary", "Note" ]
-# tags: [ "", ]
+tags: [ "Honk", ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]
