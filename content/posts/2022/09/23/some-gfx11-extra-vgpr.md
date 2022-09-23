@@ -47,7 +47,7 @@ AMD の Jay Foad 氏により公開された LLVM へのパッチから、*RDNA 
  > {{< quote >}} [⚙ D134522 [AMDGPU] Add GFX11 feature for subtargets with extra VGPRs](https://reviews.llvm.org/D134522) {{< /quote >}}
 
 *RDNA 1/2 アーキテクチャ* のベクタレジスタファイルのサイズは、SIMDユニットあたり 128KiB となっている。  
-128KiB の内訳はベクタレジスタ幅 32-bit、レーンあたり 1024本、そして SIMD32 であるから 32x1024x32/8。  
+128KiB の内訳はベクタレジスタ幅 32-bit、レーンあたり 1024本、そして SIMD32 であるから 32x1024x32/8 となる。  
 
 今回 Jay Foad 氏より公開されたパッチを見るに、*Navi31/gfx1100* と *Navi32/gfx1101* ではレーンあたりのベクタレジスタが +50% 増やされ、1536本 (Wave32) となっている。  
 ベクタレジスタ幅に変更がなければ、*Navi31/gfx1100* と *Navi32/gfx1101* は SIMDユニットあたり 192KiB のベクタレジスタファイルを持つと考えられる。  
@@ -100,6 +100,12 @@ AMD の Jay Foad 氏により公開された LLVM へのパッチから、*RDNA 
 まず考えられる理由はダイサイズへの影響だが、追加のベクタレジスタの変更で興味深いのは実性能への影響と、そして *RDNA 3/GFX11* の次世代でも GPU によって分けるのか、それともすべてに追加のベクタレジスタを搭載するのか、という点ではないかと考えている。  
 
 *RDNA 2/GFX10.3* では、Infinity Cache/ L3 Cache (MALL) がメモリチャネルあたり 8MiB か 4MiB、あるいは搭載しないという風に複数のキャッシュメモリ構成があったが、*RDNA 3/GFX11* ではさらに多様化することとなる。  
+
+| VGPR per SIMD Unit | RDNA 1 | RDNA 2 | RDNA 3<br>(extra VGPR) |
+| :--  | :--:   | :--:   | :--:   |
+| VGPR File Size | 128KiB | 128KiB | 192KiB? |
+| VGPR per Lane | 1024 | 1024 | 1536 |
+| VGPR Alloc Granularity (Wave32) | 8 | 16 | 24 |
 
 {{< ref >}}
  * [AMD RDNA™ - GPUOpen](https://gpuopen.com/rdna/)
