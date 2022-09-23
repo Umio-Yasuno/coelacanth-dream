@@ -105,7 +105,7 @@ AMD の Jay Foad 氏により公開された LLVM へのパッチから、*RDNA 
 | :--  | :--:   | :--:   | :--:   |
 | VGPR File Size | 128KiB | 128KiB | 192KiB? |
 | VGPR per Lane | 1024 | 1024 | 1536 |
-| VGPR Alloc Granularity (Wave32) | 8 | 16 | 24 |
+| VGPR Alloc Granularity (Wave32) | 8 DWords | 16 DWords | 24 DWords |
 
 {{< ref >}}
  * [AMD RDNA™ - GPUOpen](https://gpuopen.com/rdna/)
