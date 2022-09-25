@@ -12,37 +12,34 @@ noindex: false
 
 AMD の Jay Foad 氏により公開された LLVM へのパッチから、*RDNA 3/GFX11* のいくつかは通常の *RDNA 1/2/3* より 50% 大きい物理ベクタレジスタ (VGPR, Vector general-perpose register) を持つことが明らかにされた。  
 
- * [⚙ D134522 [AMDGPU] Add GFX11 feature for subtargets with extra VGPRs](https://reviews.llvm.org/D134522)
+ * [⚙ D134522 [AMDGPU] Add GFX11 feature for subtargets with more VGPRs](https://reviews.llvm.org/D134522)
 
- >         Some GFX11 subtargets have 50% extra physical VGPRs compared to standard
- >         GFX10/GFX11. This affects occupancy calculations.
+ >         The full complement of physical VGPRs for GFX11 is 50% more than GFX10.
+ >         Some subtargets have this, others stay the same as GFX10. This affects
+ >         occupancy calculations.
  > 
  > {{< quote >}} [⚙ D134522 [AMDGPU] Add GFX11 feature for subtargets with extra VGPRs](https://reviews.llvm.org/D134522) {{< /quote >}}
  >
- >         +def FeatureGFX11ExtraVGPRs : SubtargetFeature<"gfx11-extra-vgprs",
- >         +  "HasGFX11ExtraVGPRs",
+ >         +def FeatureGFX11FullVGPRs : SubtargetFeature<"gfx11-full-vgprs",
+ >         +  "HasGFX11FullVGPRs",
  >         +  "true",
- >         +  "GFX11 with 50% extra VGPRs and 50% larger allocation granule"
+ >         +  "GFX11 with 50% more physical VGPRs and 50% larger allocation granule than GFX10"
  >         +>;
  >         +
  >
  > {{< quote >}} [⚙ D134522 [AMDGPU] Add GFX11 feature for subtargets with extra VGPRs](https://reviews.llvm.org/D134522) {{< /quote >}}
 
-## Extra VGPR {#extra}
+## more VGPR {#extra}
 追加のベクタレジスタを持つことを示す `FeatureGFX11ExtraVGPRs` フラグは *Navi31/gfx1100, Navi32/gfx1101* に追加されている。一方、*Navi32/gfx1102* と *Phoenix APU/gfx1103* には追加されていない。  
 
- >          def FeatureISAVersion11_0_0 : FeatureSet<
- >            !listconcat(FeatureISAVersion11_Common.Features,
- >         -    [FeatureUserSGPRInit16Bug])>;
- >         +    [FeatureGFX11ExtraVGPRs,
- >         +     FeatureUserSGPRInit16Bug])>;
+ >         def FeatureISAVersion11_0_0 : FeatureSet<
+ >           !listconcat(FeatureISAVersion11_Common.Features,
+ >             [FeatureGFX11FullVGPRs,
+ >              FeatureUserSGPRInit16Bug])>;
  >         
- >          def FeatureISAVersion11_0_1 : FeatureSet<
- >            !listconcat(FeatureISAVersion11_Common.Features,
- >         -    [])>;
- >         +    [FeatureGFX11ExtraVGPRs])>;
- >         
- >         
+ >         def FeatureISAVersion11_0_1 : FeatureSet<
+ >           !listconcat(FeatureISAVersion11_Common.Features,
+ >             [FeatureGFX11FullVGPRs])>;
  >
  > {{< quote >}} [⚙ D134522 [AMDGPU] Add GFX11 feature for subtargets with extra VGPRs](https://reviews.llvm.org/D134522) {{< /quote >}}
 
@@ -58,15 +55,15 @@ AMD の Jay Foad 氏により公開された LLVM へのパッチから、*RDNA 
  >           if (!isGFX10Plus(*STI))
  >             return 256;
  >           bool IsWave32 = STI->getFeatureBits().test(FeatureWavefrontSize32);
- >           if (STI->getFeatureBits().test(FeatureGFX11ExtraVGPRs))
+ >           if (STI->getFeatureBits().test(FeatureGFX11FullVGPRs))
  >             return IsWave32 ? 1536 : 768;
  >           return IsWave32 ? 1024 : 512;
  >         }
  >
  > {{< quote >}} [⚙ D134522 [AMDGPU] Add GFX11 feature for subtargets with extra VGPRs](https://reviews.llvm.org/D134522) {{< /quote >}}
 
-ベクタレジスタの割り当ての粒度も変更され、`FeatureGFX11ExtraVGPRs` が有効な場合は 24 (Wave32) とされている。  
-割り当て粒度は *RDNA 1/GFX10.1* では 8 (Wave32)、*RDNA 2/GFX10.3* では 16 (Wave32) と毎世代変更されている。  
+ベクタレジスタの割り当ての粒度も変更され、`FeatureGFX11ExtraVGPRs` が有効な場合は 24 DWords (Wave32) とされている。  
+割り当て粒度は *RDNA 1/GFX10.1* では 8 DWords (Wave32)、*RDNA 2/GFX10.3* では 16 DWords (Wave32) と毎世代変更されている。  
 アドレス可能なベクタレジスタは 256 (v0-v255) のまま保たれているため、命令のフォーマットに大きな変更は無く、互換性は保たれている。  
 
  >         unsigned getVGPRAllocGranule(const MCSubtargetInfo *STI,
@@ -78,7 +75,7 @@ AMD の Jay Foad 氏により公開された LLVM へのパッチから、*RDNA 
  >               *EnableWavefrontSize32 :
  >               STI->getFeatureBits().test(FeatureWavefrontSize32);
  >         
- >           if (STI->getFeatureBits().test(FeatureGFX11ExtraVGPRs))
+ >           if (STI->getFeatureBits().test(FeatureGFX11FullVGPRs))
  >             return IsWave32 ? 24 : 12;
  >         
  >           if (hasGFX10_3Insts(*STI))
@@ -94,7 +91,6 @@ AMD の Jay Foad 氏により公開された LLVM へのパッチから、*RDNA 
 *CDNA 1 アーキテクチャ* では `MFMA (Matrix-Fused-Multiply-Add)` 命令専用の SIMDユニット (miSIMD) と一緒に専用の AccVGPR (Accumulation VGPR) を追加し、*CDNA 2 アーキテクチャ* では通常の VGPR と AccVGPR を統合した。  
 *RDNA 3/GFX11* では `MFMA` 命令とは別の行列積和演算命令、`WMMA (Wave Matrix Multiply-accumulate)` 命令に対応するが、*CDNA 1/2 アーキテクチャ* のように専用のレジスタファイルは追加していない。  
 *Navi31/gfx1100* と *Navi32/gfx1101* のみではあるが、レーンあたりのレジスタ本数を増やした背景には `WMMA` 命令の対応が関係しているのかもしれない。  
-また、*RDNA 3/GFX11* では最大 2種類の命令を同時に発行可能にすると思われる `VOPD (Dual issue wave32)` 命令にも対応する。  
 
 *RDNA 3/GFX11* では部分的に構成が異なる SIMDユニットが 2種類存在することになるが、*Navi31/gfx1100* と *Navi32/gfx1101* のみに留まっている理由は今回触れられていない。触れられるとしたら正式発表時か HotChips での発表だろう。  
 まず考えられる理由はダイサイズへの影響だが、追加のベクタレジスタの変更で興味深いのは実性能への影響と、そして *RDNA 3/GFX11* の次世代でも GPU によって分けるのか、それともすべてに追加のベクタレジスタを搭載するのか、という点ではないかと考えている。  
@@ -104,7 +100,7 @@ AMD の Jay Foad 氏により公開された LLVM へのパッチから、*RDNA 
 | VGPR per SIMD Unit | RDNA 1 | RDNA 2 | RDNA 3<br>(extra VGPR) |
 | :--  | :--:   | :--:   | :--:   |
 | VGPR File Size | 128KiB | 128KiB | 192KiB? |
-| VGPR per Lane | 1024 | 1024 | 1536 |
+| VGPR per Lane (Wave32) | 1024 | 1024 | 1536 |
 | VGPR Alloc Granularity (Wave32) | 8 DWords | 16 DWords | 24 DWords |
 
 {{< ref >}}

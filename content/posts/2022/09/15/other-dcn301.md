@@ -45,7 +45,7 @@ DeviceID: `0x163F` では PLL 4基となっているが、`0x1435` では 2基�
 
  > 		[WHY]
  > 		New dcn301 has 2 less phys
- >      ~~~~
+ >      [...]
  > 		+	if (dc->ctx->asic_id.chip_id == DEVICE_ID_VGH_1435)
  > 		+		res_cap_dcn301.num_pll = 2;
  > 		
