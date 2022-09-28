@@ -17,7 +17,7 @@ noindex: true
 
  * [13th Gen Intel Core Desktop Media Presentation - 13th-Gen-Intel-Core-Desktop-Media-presentation.pdf](https://download.intel.com/newsroom/2022/2022innovation/13th-Gen-Intel-Core-Desktop-Media-presentation.pdf)
 
-プロセッサ全体としては、E-Core Module/Cluster を *Alder Lake* の最大 2基 (8 E-Core) から 4基 (16 E-Core) に増やしている。E-Core Module/Cluster 自体は *Alder Lake* と同じとされる。  
+プロセッサ全体としては、E-Core Module/Cluster を *Alder Lake* の最大 2基 (8 E-Core) から 4基 (16 E-Core) に増やし、Module/Cluster ごとに持つ共有 L2キャッシュも増量されている (2.0 MB -\> 4.0 MB)。  
 E-Core Module/Cluster を増やしたことで LLC (Last Level Cache) の容量も増えた。  
 内部ファブリックの高速化、メモリレイテンシの削減も合わさって、マルチスレッド性能は 41% 向上したと主張している。(Core i9-13900K vs Core i9-12900K)
 
