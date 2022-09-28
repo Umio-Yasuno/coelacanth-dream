@@ -398,10 +398,12 @@ DG02SRTBP4MFA
 [Page Top](#page_index)
 
 ### FAMILY_GC_10_3_6 {#family_gc_10_3_6}
-#### gfx1036 {#gfx1036}
+#### Raphael (gfx1036) {#gfx1036}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 0x164E[^gc_10_3_6-did] &darr; | | | |
+| | 0xC1 | Ryzen 7950X |
+| | 0xC2 | Ryzen 7900X |
 
 [^gc_10_3_6-did]: [[PATCH] drm/amdkfd: Add fw version for 10.3.6](https://lists.freedesktop.org/archives/amd-gfx/2022-June/080084.html)
 
