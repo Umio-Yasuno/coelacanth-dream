@@ -18,11 +18,11 @@ Intel より、*Intel® Architecture Instruction Set Extensions Programming Refe
  * [Intel® Architecture Instruction Set Extensions Programming Reference](https://www.intel.com/content/www/us/en/content-details/671368/intel-architecture-instruction-set-extensions-programming-reference.html)
 
 また、命令とそれをサポートするプロセッサを集めたテーブルの `AVX512_VP2INTERSECT` 命令の行に、*Tiger Lake* 以外ではサポートされていないとする記述が追加された。  
-`AVX512_VP2INTERSECT` 命令は *Tiger Lake (Willow Cove)* からサポートされており、GCC では *Sapphire Rapids (Golden Cove)* でもサポートされているとしているが。  
+`AVX512_VP2INTERSECT` 命令は *Tiger Lake (Willow Cove)* からサポートされており、GCC では *Sapphire Rapids (Golden Cove)* でもサポートされているとしているが。[^gcc]  
 
-[^gcc] [x86 Options (Using the GNU Compiler Collection (GCC))](https://gcc.gnu.org/onlinedocs/gcc/x86-Options.html)
+[^gcc]: [x86 Options (Using the GNU Compiler Collection (GCC))](https://gcc.gnu.org/onlinedocs/gcc/x86-Options.html)
 
-## AVX-{IFMA, NE-CONVERT, VNNI-INT8} {#avx}
+## AVX-[IFMA, NE-CONVERT, VNNI-INT8] {#avx}
 *Golden Cove (P-Core), Gracemont (E-Core)* では `AVX512_VNNI` 命令の 128/256-bit 版とも言える `AVX_VNNI` 命令を新たにサポートした。  
 そして *Sierra Forest, Grand Ridge* では `AVX_IFMA, AVX_NE_CONVERT, AVX_VNNI_INT8` 命令をサポートする。  
 
