@@ -30,7 +30,7 @@ Mesa3D の AMD GPU 向け Vulkan ドライバー *RADV* と Intel GPU 向けで�
  * [WIP: radv: Add support for VK_EXT_mesh_shader (!18367) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/18367)
  * [anv: add support for VK_EXT_mesh_shader (!18371) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/18371)
 
-*RADV* における実装では、Kernel Mode Driver (KMD) 側の AMDGPU ドライバーに *Gang Submit* が実装されていないと安全に動作しないため、環境変数を設定しないと `VK_EXT_mesh_shader` 対応が有効化されないと Timur Kristóf 氏はコメントしている。  
+*RADV* における実装では、Kernel Mode Driver (KMD) 側の AMDGPU ドライバーに *Gang Submit* が実装されていないと安全に動作しないため、環境変数 `RADV_PERFTEST=ext_ms` を設定しないと `VK_EXT_mesh_shader` 対応が有効化されないと Timur Kristóf 氏はコメントしている。  
 *Gang Submit* は以前に取り上げたが、AMD のソフトウェアエンジニア Christian König 氏によって実装が進められており、複数の IB (Indirect Buffer) を複数の異なるエンジンで同時に実行可能であることを保証する機能となる。[^gang-submit]  
 複数のプロセスが同時に Task Shader を使用した場合、GPU がデッドロックする可能性があるが、*Gang Submit* があれば効果的に防止することが可能となる。  
 

@@ -18,7 +18,7 @@ Intel より、*Intel® Architecture Instruction Set Extensions Programming Refe
  * [Intel® Architecture Instruction Set Extensions Programming Reference](https://www.intel.com/content/www/us/en/content-details/671368/intel-architecture-instruction-set-extensions-programming-reference.html)
 
 また、命令とそれをサポートするプロセッサを集めたテーブルの `AVX512_VP2INTERSECT` 命令の行に、*Tiger Lake* 以外ではサポートされていないとする記述が追加された。  
-`AVX512_VP2INTERSECT` 命令は *Tiger Lake (Willow Cove)* からサポートされており、GCC では *Sapphire Rapids (Golden Cove)* でもサポートされているとしているが。[^gcc]  
+`AVX512_VP2INTERSECT` 命令は *Tiger Lake (Willow Cove)* からサポートされており、GCC では *Sapphire Rapids (Golden Cove)* でもサポートされているとしている。[^gcc]  
 
 [^gcc]: [x86 Options (Using the GNU Compiler Collection (GCC))](https://gcc.gnu.org/onlinedocs/gcc/x86-Options.html)
 
@@ -27,9 +27,15 @@ Intel より、*Intel® Architecture Instruction Set Extensions Programming Refe
 そして *Sierra Forest, Grand Ridge* では `AVX_IFMA, AVX_NE_CONVERT, AVX_VNNI_INT8` 命令をサポートする。  
 
 `AVX_IFMA (Integer Fused Multiply Add Instructions)` 命令は `AVX_VNNI` 命令と同様、`AVX512_IFMA` 命令の 128/256-bit 版だとされる。  
+
 `AVX_NE_CONVERT` 命令は FP16/BF16 - FP32 の変換命令となる。  
+
 `AVX512_BF16` 命令は FP32 から BF16 への変換命令と(`VCVTNE2PS2BF16, VCVTNEPS2BF16`)、2個の BF16 データペアのドット積を計算し、結果を FP32 レジスタにパックして累積する命令 (`VDPBF16PS`) のセットであり、`AVX_NE_CONVERT` 命令と `AVX512_BF16` 命令は異なった内容の命令セットとなる。  
+
 `AVX_VNNI_INT8` 命令は *Multiply and Add Unsigned and Signed Bytes With and Without Saturation* と説明されているが、`AVX_VNNI` 命令 (`VPDPBUSD[S]`) との違いは `VPDPB[SU,UU,SS]D[,S]` 命令があること、ソースオペランドのデータフォーマットの組み合わせが増やされていることなのだろうか？ 正直自信がない。  
+x86, AMD64, x86-64 向けの C++ JITアセンブリ Xbyak の開発者である herumi 氏の記事と、Intel の Srinivas Putta 氏 (nivas-x86) のコメントでは、`AVX_VNNI` では `<uint8_t>x<int8_t>` の組み合わせのみをサポートするが、`AVX_VNNI_INT8` は他の組み合わせ (`<uint8_t/int8_t>x<uint8_t/int8_t>`) もサポートするのが違いだとしている。[^zenn]  
+
+[^zenn]: [Granite Rapids/Sierra ForestのAMX/AVXの新命令](https://zenn.dev/herumi/articles/granite-rapids-sierra-forest)
 
 これらの命令は *Sierra Forest, Grand Ridge* でサポートされている。  
 `AVX (128/256)` 系命令の拡張を Atom系で行っていることから、まだ Atom系が `AVX512` 系命令をサポートするつもりがないとも捉えられる。  
@@ -75,4 +81,6 @@ Intel より、*Intel® Architecture Instruction Set Extensions Programming Refe
  * [後藤弘茂のWeekly海外ニュース](https://pc.watch.impress.co.jp/docs/2008/0407/kaigai434.htm)
  * [サンプルコード: インテル® AVX-512 とインテル® ディープラーニング・ブースト: 組込み関数 | iSUS](https://www.isus.jp/embeded/avx-512-vnni/)
  * [Intel Sierra Forest the E-Core Xeon Intel Needs - ServeTheHome](https://www.servethehome.com/intel-sierra-forest-the-e-core-xeon-intel-needs/)
+ * [Granite Rapids/Sierra ForestのAMX/AVXの新命令](https://zenn.dev/herumi/articles/granite-rapids-sierra-forest)
+ * [Adding AMX_FP16, AVN_VNNI_INT8 and AVX_NE_CONVERT instructions by nivas-x86 · Pull Request #162 · herumi/xbyak](https://github.com/herumi/xbyak/pull/162)
 {{< /ref >}}
