@@ -1,5 +1,5 @@
 ---
-title: "Raptor Lake-P の PCIe I/O 構成"
+title: "Intel Raptor Lake-P の PCIe I/O 構成"
 date: 2022-10-09T12:53:43+09:00
 draft: false
 categories: [ "Hardware", "Intel", "CPU" ]
@@ -14,10 +14,10 @@ noindex: false
 
 *Alder Lake* 世代では *Alder Lake-S/P/M* でそれぞれ CPU 側の PCIe I/O 構成が異なり、デスクトップ向けの *Alder Lake-S (8P+8E)* では 2x Gen5 8-Lane + 1x Gen4 4-Lane、*Alder Lake-P (6+8)* では 1x Gen5 8-Lane + 2x Gen4 4-Lane、*Alder Lake-M (2+8)* では 1x Gen4 4-Lane という構成になっている。  
 現状 *Alder Lake-P* の 1x Gen5 8-Lane は *H Series* でのみ有効とされているが、Gen5 ではなく Gen4 での利用となっている。これはドキュメント中では TTM (time-to-market, 製品化に掛かる期間) のためだとしている。[^ttm]  
+搭載するデバイスがほとんど固定されているモバイル向けでは、PCIe Gen5 対応デバイスが少ない中わざわざ Gen5 認証を取るコストに対してリターンが見合わないというのもあるだろう。  
 また、CPU部が Atom系 (E-Core) *Gracemont* のみの *Alder Lake-N* は CPU側 PCIe I/O を持たない。  
 
 [^ttm]: [Introduction - 009 - ID:655258 | 12th Generation Intel® Core™ Processors](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/introduction/)
-
 
 先日、2022/09/28 付で「13th Generation Intel® Core™ Processors Datasheet, Volume 1 of 2」が公開された。[^13th]  
 そのドキュメントによれば、*Raptor Lake-S* は PCIe Root Port (RP) /Root Complex (RC) に割り当てられた DeviceID は違うが、2x Gen5 4-Lane + 1x Gen4 4-Lane と *Alder Lake-S* と同様の構成を採っている。  
@@ -40,6 +40,7 @@ PCIe RC と DeviceID はそれぞれ `PCIe RC 010 G5 (DeviceID: 0xA70D), PCIe RC
 
 このことから、*Raptor Lake-P* では *Alder Lake-S/Raptor Lake-S* と同じ PCIe I/O 構成を採っていると考えられる。  
 *Raptor Lake-P* と *Alder Lake-P* を比較した時、*Raptor Lake-P* では Gen5 Lane 数が増えると同時に全体の Lane 数も増えたと見ることができる。  
+*Alder Lake-S/Raptor Lake-S* と同様の構成とすることで、開発期間も短縮することができる。  
 
 しかし、*Raptor Lake-P* では *H Series* だけでなく *U Series* でも追加の PCIe Lane が有効化されるのか、また *Alder Lake-P* では有効化されなかった Gen5 での利用が可能になるかは不明である。  
 
