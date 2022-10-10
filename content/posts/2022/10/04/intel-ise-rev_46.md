@@ -21,7 +21,9 @@ Intel より、*Intel® Architecture Instruction Set Extensions Programming Refe
 
 また、命令とそれをサポートするプロセッサを集めたテーブルの `AVX512_VP2INTERSECT` 命令の行に、*Tiger Lake* 以外ではサポートされていないとする記述が追加された。  
 `AVX512_VP2INTERSECT` 命令は *Tiger Lake (Willow Cove)* からサポートされており、GCC では *Sapphire Rapids (Golden Cove)* でもサポートされているとしている。[^gcc]  
+一方、LLVM では Intel の Freddy Ye 氏により、Intel ISE の記述に沿う方向を見せている。[^llvm]  
 
+[^llvm]: [[X86] Remove AVX512VP2INTERSECT from Sapphire Rapids. · llvm/llvm-project@566c277](https://github.com/llvm/llvm-project/commit/566c277c64f8f76d8911aa5fd931903a357ed7be)
 [^gcc]: [x86 Options (Using the GNU Compiler Collection (GCC))](https://gcc.gnu.org/onlinedocs/gcc/x86-Options.html)
 
 ## AVX-[IFMA, NE-CONVERT, VNNI-INT8] {#avx}
@@ -31,8 +33,8 @@ Intel より、*Intel® Architecture Instruction Set Extensions Programming Refe
 `AVX_IFMA (Integer Fused Multiply Add Instructions)` 命令は `AVX_VNNI` 命令と同様、`AVX512_IFMA` 命令の 128/256-bit 版だとされる。  
 
 `AVX_NE_CONVERT` 命令は FP16/BF16 - FP32 の変換命令となる。  
-
-`AVX512_BF16` 命令は FP32 から BF16 への変換命令と(`VCVTNE2PS2BF16, VCVTNEPS2BF16`)、2個の BF16 データペアのドット積を計算し、結果を FP32 レジスタにパックして累積する命令 (`VDPBF16PS`) のセットであり、`AVX_NE_CONVERT` 命令と `AVX512_BF16` 命令は異なった内容の命令セットとなる。  
+AVX512 では `AVX512_BF16` で BF16 フォーマットに、`AVX512-FP16` で FP16 フォーマットに対応している。  
+`AVX512_BF16` と `AVX512-FP16` には変換命令に加え、各種演算命令も含まれているが、`AVX_NE_CONVERT` はその中から FP16/BF16 - FP32 との変換命令の 128/256-bit 版のみに対応したものとなる。  
 
 `AVX_VNNI_INT8` 命令は *Multiply and Add Unsigned and Signed Bytes With and Without Saturation* と説明されているが、`AVX_VNNI` 命令 (`VPDPBUSD[S]`) との違いは `VPDPB[SU,UU,SS]D[,S]` 命令があること、ソースオペランドのデータフォーマットの組み合わせが増やされていることなのだろうか？ 正直自信がない。  
 x86, AMD64, x86-64 向けの C++ JITアセンブリ Xbyak の開発者である herumi 氏の記事と、Intel の Srinivas Putta 氏 (nivas-x86) のコメントでは、`AVX_VNNI` では `<uint8_t>x<int8_t>` の組み合わせのみをサポートするが、`AVX_VNNI_INT8` は他の組み合わせ (`<uint8_t/int8_t>x<uint8_t/int8_t>`) もサポートするのが違いだとしている。[^zenn]  
