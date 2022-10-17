@@ -41,6 +41,7 @@ x86_64 CPU には識別子として `Family, Model, Stepping` が割り当てら
 また **Intel Xeon W-1300** は 8-Core と 6-Core の SKU があり、6-Core の *Rocket Lake-U* だけですべてをカバーすることはできない。「Data Operand Independent Timing ISA Guidance」の記述が一部が間違っている可能性が高い。  
 **Intel Xeon W-1350/W-1350P** が 6-Core SKU であり、それらで *Rocket Lake-U* がベースになっている可能性もあるが、それらの `CPUID` 情報を確認できるようなベンチマーク結果やログを見つけることができなかった。  
 しかし、他に *Rocket Lake-U* に触れていて、そして記述が一致するような公式ドキュメントもまた見つけられなかった。**Intel Xeon W-1300** も基本 *Rocket Lake-S* ベースとされている。  
+また、*Rocket Lake-U* 向けのマイクロコードパッチも配布されていない。  
 そのため、完全には否定できないが *Rocket Lake-U* が一部の SKU に使われている可能性は限りなく低いように思う。  
 
 {{< ref >}}
@@ -48,4 +49,5 @@ x86_64 CPU には識別子として `Family, Model, Stepping` が割り当てら
  * [Intel® Xeon® W-1300 Product Brief](https://www.intel.com/content/www/us/en/products/docs/processors/xeon/xeon-w-1300-processors-brief.html)
  * [Data Operand Independent Timing ISA Guidance](https://www.intel.com/content/www/us/en/developer/articles/technical/software-security-guidance/best-practices/data-operand-independent-timing-isa-guidance.html)
  * [2021 INTEL(R) PROCESSORS BASED ON THE Rocket Lake PLATFORM | 01.org](https://01.org/node/37341)
+ * [intel/Intel-Linux-Processor-Microcode-Data-Files](https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files)
 {{< /ref >}}
