@@ -3,7 +3,7 @@ title: "Intel Sierra Forest, Grand Ridge, Granite Rapids でサポートされ�
 date: 2022-10-04T15:56:58+09:00
 draft: false
 categories: [ "Software", "Intel", "CPU" ]
-tags: [ "Sierra_Forest", "Grand_Ridge", "Granite_Rapids", "Meteor_Lake", "Emerald_Rapids" ]
+tags: [ "CPUID", "Sierra_Forest", "Grand_Ridge", "Granite_Rapids", "Meteor_Lake", "Emerald_Rapids" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]
@@ -20,11 +20,11 @@ Intel より、*Intel® Architecture Instruction Set Extensions Programming Refe
  * [Intel® Architecture Instruction Set Extensions Programming Reference](https://www.intel.com/content/www/us/en/content-details/671368/intel-architecture-instruction-set-extensions-programming-reference.html)
 
 また、命令とそれをサポートするプロセッサを集めたテーブルの `AVX512_VP2INTERSECT` 命令の行に、*Tiger Lake* 以外ではサポートされていないとする記述が追加された。  
-`AVX512_VP2INTERSECT` 命令は *Tiger Lake (Willow Cove)* からサポートされており、GCC では *Sapphire Rapids (Golden Cove)* でもサポートされているとしている。[^gcc]  
-一方、LLVM では Intel の Freddy Ye 氏により、Intel ISE の記述に沿う方向を見せている。[^llvm]  
+`AVX512_VP2INTERSECT` 命令は *Tiger Lake (Willow Cove)* からサポートされているはずだが、GCC と LLVM では Intel ISE の記述に沿う方向を見せている。[^llvm] [^gcc]  
+今後の Intel プロセッサでは `AVX512_VP2INTERSECT` のサポートを廃止、あるいは実装しない方針なのだろうか。  
 
 [^llvm]: [[X86] Remove AVX512VP2INTERSECT from Sapphire Rapids. · llvm/llvm-project@566c277](https://github.com/llvm/llvm-project/commit/566c277c64f8f76d8911aa5fd931903a357ed7be)
-[^gcc]: [x86 Options (Using the GNU Compiler Collection (GCC))](https://gcc.gnu.org/onlinedocs/gcc/x86-Options.html)
+[^gcc]: [[PATCH] Remove AVX512_VP2INTERSECT from PTA_SAPPHIRERAPIDS](https://gcc.gnu.org/pipermail/gcc-patches/2022-October/603329.html)
 
 ## AVX-[IFMA, NE-CONVERT, VNNI-INT8] {#avx}
 *Golden Cove (P-Core), Gracemont (E-Core)* では `AVX512_VNNI` 命令の 128/256-bit 版とも言える `AVX_VNNI` 命令を新たにサポートした。  
