@@ -29,9 +29,9 @@ AMD CPU のドキュメントとしては、AMD が別に公開している **Pr
 また、`Fn Bh, Fn 1Fh` は主に Intel CPU で実装されてきたこともあり、`Fn 1Fh` は `Fn Bh` の上位互換 (super-set) となっており、トポロジのレベルタイプと値の関係を合わせているが、`Fn 8000_0026h` では異なっている。  
 トポロジのレベルタイプは `ECX[Bit15:8]` に定義されている。  
 
-返す CPU トポロジ情報とそのトポロジのレベルは `Sub-Leaf (ECX)` によって変わるが、`Sub-Leaf (ECX)` とトポロジのレベルタイプを示す値が直接一致する訳ではないことに注意。  
+返す CPU トポロジ情報とそのトポロジのレベルは `Sub-Leaf (ECX)` によって変わるが、`Sub-Leaf (ECX)` とトポロジのレベルタイプを示す値が一致する訳ではないことに注意。  
 
-`Fn Bh` は **AMD64 Architecture Programmer’s Manual Processor** に載っていないが、AMD CPU では *Zen 2 アーキテクチャ* の世代から実装されている。  
+`Fn Bh` は AMD CPU では *Zen 2 アーキテクチャ* の世代から実装されている。  
 
 | Value(ECX[Bit15:8]) - Level Type | Fn Bh | Fn 1Fh | Fn 8000_0026h |
 | :--                | :--:  | :--:   | :--:          |
