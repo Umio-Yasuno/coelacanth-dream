@@ -96,5 +96,5 @@ Intel の [Radhakrishna Sripada](https://www.linkedin.com/in/rkinvictus) 氏よ�
 | {{< xe class="hp" >}} | 12.5 | - | 12.5 |
 | {{< xe class="hpg" >}} | 12.55 | 13 (XE_LPD) | 12.55 |
 | {{< xe class="hpc" >}} | 12.6 | - | 12.6 |
-| Meteor Lake | 12.7 | 14 (XE_LPD+) | 13 (XE_LPM) |
+| Meteor Lake | 12.7 | 14 (XE_LPD+) | 13 (XE_LPM+) |
 
