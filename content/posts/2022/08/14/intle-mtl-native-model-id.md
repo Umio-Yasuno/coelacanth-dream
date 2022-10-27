@@ -10,7 +10,7 @@ noindex: false
 # author: ""
 ---
 
-Intel は PMU (Performance Monitoring Unit) で検出したハードウェアイベントをデコードそ、計測に用いるため、ハードウェアイベントの生データと概要をマッピングした JSONファイルを <https://download.01.org/perfmon/> で公開している。  
+Intel は PMU (Performance Monitoring Unit) で検出したハードウェアイベントをデコードし、計測に用いるため、ハードウェアイベントの生データと概要をマッピングした JSONファイルを <https://download.01.org/perfmon/> で公開している。  
 すでに *Meteor Lake-M/P (Family: 0x6, Model: 0xAA)* 用のファイルも公開されており、アーキテクチャ名が P-Core (`Type: Core`) は *Redwood Cove*、E-Core (`Type: Atom`) は *Crestmont* であることが明かされている。  
 同時に `mapfile.csv (2022-Aug-09 18:19)` に `Native Model ID` の記載も追加されており、*Redwood Cove* は *Golden Cove* と同じ `0x00000001`、*Crestmont* は `0x00000002` となる。  
 

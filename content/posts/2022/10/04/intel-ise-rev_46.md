@@ -15,7 +15,7 @@ Intel より、*Intel® Architecture Instruction Set Extensions Programming Refe
 *Grand Ridge* は対応する新命令が *Sierra Forest* と近いことから、Atom系と思われる。  
 *Sierra Forest, Grand Ridge, Granite Rapids* で共通してサポートする新命令はなく、また *Sierra Forest, Grand Ridge* でも命令範囲が完全には一致していない。  
 
-*Sierra Forest* と *Granite Rapids* については Intel 3 プロセスが採用されることが発表されている。  
+*Sierra Forest* と *Granite Rapids* については Intel 3 プロセスが採用し、ロードマップ上では 2024年に位置することが発表されている。  
 
  * [Intel® Architecture Instruction Set Extensions Programming Reference](https://www.intel.com/content/www/us/en/content-details/671368/intel-architecture-instruction-set-extensions-programming-reference.html)
 
