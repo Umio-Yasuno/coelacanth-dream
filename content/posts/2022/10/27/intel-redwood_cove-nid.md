@@ -10,15 +10,18 @@ noindex: false
 # author: ""
 ---
 
-以前に *Meteor Lake* に採用される *Redwood Cove (Core, P-Core)* と *Crestmont (Atom, E-Core)* の存在と、それらマイクロアーキテクチャを識別するために割り当てられる NativeModelID について取り上げた。  
-その時点では、*Redwood Cove* の NativeModelID は *Golden Cove* と同じ `0x1`、*Crestmont* は *Gracemont* から更新された `0x2` が割り当てられているとされていたが、情報が更新され、*Redwood Cove* の NativeModelID が `0x2` となった。  
+以前に *Meteor Lake* に採用される *Redwood Cove (Core, P-Core)* と *Crestmont (Atom, E-Core)* の存在と、それらマイクロアーキテクチャを識別するために割り当てられる Native Model ID について取り上げた。  
+その時点では、*Redwood Cove* の Native Model ID は *Golden Cove* と同じ `0x1`、*Crestmont* は *Gracemont* から更新された `0x2` が割り当てられているとされていたが、情報が更新され、*Redwood Cove* の Native Model ID が `0x2` となった。  
 
-NativeModelID の値に関する情報元は、主に Intel が公開している TMA (Top-down Microarchitecture Analysis), PMU (Performance Monitoring Unit) のイベント情報を記述したマップファイルとなる。  
+Native Model ID は複数のマイクロアーキテクチャが混在するハイブリッドアーキテクチャ向けの情報であり、`CPUID [LEAF=0x1A]` 命令から取得することができる。  
+`Core Type (Atom: 0x20, Core: 0x40)` と Native Model ID の組み合わせからマイクロアーキテクチャを識別することができる。  
+
+Native Model ID の値に関する情報元は、主に Intel が公開している TMA (Top-down Microarchitecture Analysis), PMU (Performance Monitoring Unit) のイベント情報を記述したマップファイルとなる。  
 マップファイルは <https://download.01.org/perfmon/> で公開されていたが、最近になって Github レポジトリ [intel/perfmon](https://github.com/intel/perfmon) に移行した。  
 
 ## Redwood Cove {#rwc}
 [intel/perfmon](https://github.com/intel/perfmon) に
-Intel の Ed Baker 氏により、マップファイルを更新するプルリクエストが投稿されており、そこでは *Meteor Lake-S* の `CPUID Model (0xAC)` を追加すると同時に、*Redwood Cove* の NativeModelID が `0x2` に更新されている。  
+Intel の Ed Baker 氏により、マップファイルを更新するプルリクエストが投稿されており、そこでは *Meteor Lake-S* の `CPUID Model (0xAC)` を追加すると同時に、*Redwood Cove* の Native Model ID が `0x2` に更新されている。  
 
  * [mapfile: Update MTL entries by edwarddavidbaker · Pull Request #25 · intel/perfmon](https://github.com/intel/perfmon/pull/25)
 
@@ -36,7 +39,7 @@ Intel の Ed Baker 氏により、マップファイルを更新するプルリ�
  >
  > {{< quote >}} [mapfile: Update MTL entries by edwarddavidbaker · Pull Request #25 · intel/perfmon](https://github.com/intel/perfmon/pull/25) {{< /quote >}}
 
-NativeModelID についてプルリクエスト内では特に触れられていないが、*Meteor Lake* の初期サンプリングでは *Redwood Cove* が NativeModelID に `0x1` を返すようになっていたか、単なるタイプミスだったのだと思われる。  
+Native Model ID についてプルリクエスト内では特に触れられていないが、*Meteor Lake* の初期サンプリングでは *Redwood Cove* が Native Model ID に `0x1` を返すようになっていたか、単なるタイプミスだったのだと思われる。  
 
 | Native Model ID<br>(2022-Oct-27) | Type: Core<br>(0x40) | Type: Atom<br>(0x20) |
 | :--             | :--:       | :--:       |
@@ -47,7 +50,7 @@ NativeModelID についてプルリクエスト内では特に触れられてい
 
 [^lkf]: [InstLatx64/GenuineIntel00806A1_Lakefield_CPUID.txt at 382580dc9f5fbed23cb1945c6b4a259a49cab484 · InstLatx64/InstLatx64](https://github.com/InstLatx64/InstLatx64/blob/382580dc9f5fbed23cb1945c6b4a259a49cab484/GenuineIntel/GenuineIntel00806A1_Lakefield_CPUID.txt)
 
-ある意味不自然だった点が解消された訳だが、未だ NativeModelID の更新基準はよく分からないままだ。  
+ある意味不自然だった点が解消された訳だが、未だ Native Model ID の更新基準はよく分からないままだ。  
 先日 **Intel® Architecture Instruction Set Extensions Programming Reference** が更新され、*Sierra Forest (Atom), Grand Ridge (Atom?), Granite Rapids (Core)* それぞれに追加される命令が公開されたが、*Meteor Lake* については明記されておらず、それらの命令に対応しないと考えられる。  
 **Intel® Architecture Instruction Set Extensions Programming Reference** を基に、*Meteor Lake* のサポートを追加するパッチが GCC や Clang/LLVM に投稿されたが、対応命令範囲は *Alder Lake (Golden Cove + Gracemont)* と同じだとされている。[^gcc]  
 
@@ -56,7 +59,7 @@ NativeModelID についてプルリクエスト内では特に触れられてい
 
 [^gcc]: [[PATCH 2/2] Initial Meteorlake Support](https://gcc.gnu.org/pipermail/gcc-patches/2022-October/603542.html)
 
-今回の更新により、NativeModelID の更新基準、言い換えればマイクロアーキテクチャが異なるとされる基準は対応命令範囲に限らないと言えるのかもしれない。  
+今回の更新により、Native Model ID の更新基準、言い換えればマイクロアーキテクチャが異なるとされる基準は対応命令範囲に限らないと言えるのかもしれない。  
 
 {{< ref >}}
  * [Intel® Architecture Instruction Set Extensions Programming Reference](https://www.intel.com/content/www/us/en/content-details/671368/intel-architecture-instruction-set-extensions-programming-reference.html)
