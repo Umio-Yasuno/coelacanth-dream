@@ -1,7 +1,7 @@
 ---
 title: "Document Link Bookmark"
 date: 2020-08-23T04:10:40+09:00
-draft: false
+draft: true 
 # tags: [ "", ]
 # keywords: [ "", ]
 categories: [ "Database", ]
