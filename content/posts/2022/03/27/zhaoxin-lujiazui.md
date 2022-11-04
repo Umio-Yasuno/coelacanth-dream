@@ -72,6 +72,7 @@ CPUID における Family, Model, Stepping は `Family: 0x7, Model: 0x3B (59)` �
 
 *Lujiazui* マイクロアーキテクチャは Out-of-Order 実行が実装されている。  
 6本の実行パイプラインを備え、内 2本 (Port 4/5) は AGU (Address Generation Unit)、Load/Store Unit となっている。  
+他 4本 (Port0/1/2/3) は汎用となっている。  
 
  > 		+;; The out-of-order core has six pipelines.
  > 		+;; Port 4, 5 are responsible for address calculations, load or store.
@@ -88,7 +89,6 @@ CPUID における Family, Model, Stepping は `Family: 0x7, Model: 0x3B (59)` �
  > 		+(define_reservation "lua_p0p1p2p3" "lua_p0+lua_p1+lua_p2+lua_p3")
  >
  > {{< quote >}} [[PATCH] [x86_64] Zhaoxin lujiazui enablement](https://gcc.gnu.org/pipermail/gcc-patches/2022-March/592269.html) {{< /quote >}}
-
 
 `lujiazui_cost` には以下のような記述があるが、4コアごとに L2キャッシュ 4MB を持つ構成になっているのかもしれない。AMD Zen の CCX よりかは、Intel Atom のモジュール構成が近いと言える。  
 
