@@ -1,5 +1,5 @@
 ---
-title: "AMD、RDNA 3 アーキテクチャを採用した RX 7900 シリーズを発表、そのメモ"
+title: "AMD、RDNA 3 アーキテクチャを採用した RX 7900 Series を発表、そのメモ"
 date: 2022-11-04T20:24:20+09:00
 draft: false
 categories: [ "Hardware", "AMD", "GPU" ]
