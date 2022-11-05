@@ -3,7 +3,7 @@ title: "Intel SDSi の名称が Intel On Demand に"
 date: 2022-11-06T05:30:02+09:00
 draft: false
 categories: [ "Hardware", "Intel", "CPU" ]
-tags: [ "", ]
+tags: [ "Sapphire_Rapids", ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]
