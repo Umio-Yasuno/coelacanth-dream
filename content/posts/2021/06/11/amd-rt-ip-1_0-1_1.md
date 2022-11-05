@@ -2,7 +2,7 @@
 title: "現時点で 2バージョン存在する AMD GPU の HWレイトレーシング IP"
 date: 2021-06-11T15:55:01+09:00
 draft: false
-tags: [ "RDNA_2", "gfx1013", "GPUOpen" ]
+tags: [ "RDNA_2", "gfx1013", "GPUOpen", "Cyan_Skilfish" ]
 # keywords: [ "", ]
 categories: [ "Hardware", "AMD", "GPU" ]
 noindex: false
