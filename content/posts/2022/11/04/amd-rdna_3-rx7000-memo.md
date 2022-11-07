@@ -30,6 +30,8 @@ GCD-MCD 間が 883.3GB/s としても、**AMD MI250X (CDNA 2)** の GCD-GCD 間�
 GCD は 5nmプロセスで製造され、ダイサイズは 306mm2。MCD は 6nmプロセス、37.5mm2 となっている。  
 *Navi21* は 7nmプロセス 519mm2、*Navi22* からの計測だが Infinity Cache (4MiB) が約 2.47mm2 だったため、Infinity Cache を MCD に分離したことによる効果は大きいように思う。  
 
+**RX 7900 Series** 全体でのトランジスタ数は 58 Billion となり、*Navi21* (26.8 B) の倍以上。  
+
 ## Unified Compute Unit {#cu}
 CU (Compute Unit) は Unified Compute Unit となり、従来から 1.5倍のベクタレジスタ、64 Dual-issue SP、AI Accelerator 2基、第 2世代 Ray Tracing Accelerator で構成される。  
 
@@ -37,6 +39,8 @@ CU (Compute Unit) は Unified Compute Unit となり、従来から 1.5倍のベ
 64 Dual-issue SP は詳細が不明で、Wave Controller や Scalar ALU、SIMD Unit がどうなっているかは気になる所である。  
 AI Accelerator は行列演算命令の専用ユニットと思われる。  
 第 2世代 Ray Tracing Accelerator は CU あたりの性能が 1.5倍になったとしているが、具体的にどう強化されたのか、サイクルあたりの性能や新機能の詳細、活用方法は明らかにされていない。  
+
+5nmプロセスの採用もあり、CU のトランジスタ密度は 1.65倍に向上している。  
 
 ## 2.7X AI 性能 {#ai-perf}
 *RDNA 3 アーキテクチャ* では *RDNA 2 アーキテクチャ* から AI 命令が追加され、AI スループット性能は 2.7倍になったとしている。  

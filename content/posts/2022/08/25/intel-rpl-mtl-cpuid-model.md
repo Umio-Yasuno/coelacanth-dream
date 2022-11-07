@@ -101,5 +101,6 @@ CPUID Model: `0xBF` は CPUID Model, Stepping こそ *Alder Lake-S* と異なる
 | Meteor Lake-S  | 0xAC |
 | Meteor Lake-M/P | 0xAA |
 | Sapphire Rapids | 0x8F |
-| Emerald Rapids  | 0x8F?<br>(Stepping: 0x8?) |
+| Emerald Rapids  | 0xCF[^lkml] |
 
+[^lkml]: [[PATCH] x86/cpu: Add several Intel server CPU mode numbers - Tony Luck](https://lore.kernel.org/lkml/20221103203310.5058-1-tony.luck@intel.com/)
