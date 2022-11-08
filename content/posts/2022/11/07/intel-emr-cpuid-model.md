@@ -27,10 +27,10 @@ Intel の Tony Luck 氏により、Linux Kernel に Intel の次世代サーバ�
  > {{< quote >}} [[PATCH] x86/cpu: Add several Intel server CPU mode numbers - Tony Luck](https://lore.kernel.org/lkml/20221103203310.5058-1-tony.luck@intel.com/) {{< /quote >}}
 
 サーバー向け Atom プロセッサとなる *Sierra Forest* の CPUID Model は `0xAF (175)`、*Grand Ridge* は `0xB6 (182)`。  
-何気に今回のパッチで *Grand Ridge* が Atom 系であることが明言された形となる。  
 だが *Grand Ridge* がどのマーケットセグメントに位置するかは情報が無い。また、*Grand Ridge* は現状 Intel が公開しているロードマップ上には現れていない。  
-*Ridge* 系のコードネームからは、*Snow Ridge (Tremont)* のようにマイクロサーバー向けという印象を受けるが。  
-Intel のサイトを検索したところでは、ISA ドキュメントの他に *Grand Ridge* と FPGA を組み合わせた例のダイアグラムが引っ掛かるくらいだった。  
+*Ridge* 系のコードネームからは、*Snow Ridge (Tremont)* のようにマイクロサーバー向け (`_D`) という印象を受けるが。  
+Intel のサイトを検索したところでは、ISA ドキュメントの他に *Grand Ridge* と FPGA を組み合わせた例のダイアグラムが引っ掛かるくらいだった。[^grand-ridge-fpga]  
+また、今回のパッチや LLVM へのパッチの中で *Grand Ridge* が Atom 系であることが一応明言されている。  
 
 [^grand-ridge-fpga]: [1.2.2.2. Ethernet Bridge + Inline MACsec](https://www.intel.com/content/www/us/en/docs/programmable/736108/22-3-1-2-0/ethernet-bridge-inline-macsec.html)
 
@@ -59,4 +59,6 @@ Intel のサイトを検索したところでは、ISA ドキュメントの他�
 
 {{< ref >}}
  * [Intel Sierra Forest, Grand Ridge, Granite Rapids でサポートされる新命令 | Coelacanth's Dream](/posts/2022/10/04/intel-ise-rev_46/)
+ * [[PATCH 0/2] Intel Grand Ridge Support](https://gcc.gnu.org/pipermail/gcc-patches/2022-November/605144.html)
+ * [⚙ D137153 [WIP][X86] Support -march=sierraforest, grandridge, graniterapids.](https://reviews.llvm.org/D137153)
 {{< /ref >}}
