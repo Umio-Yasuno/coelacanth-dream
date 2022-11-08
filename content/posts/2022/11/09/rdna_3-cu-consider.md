@@ -63,7 +63,7 @@ CU あたりの SIMDユニット数は 2基のままで、CU あたりの演算�
  > {{< quote >}} [src/amd/common/ac_gpu_info.c · 8b66c0ac7605b1f0e0f7af4cff1c8e0381b16b4d · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/blob/8b66c0ac7605b1f0e0f7af4cff1c8e0381b16b4d/src/amd/common/ac_gpu_info.c#L1313-1318) {{< /quote >}}
 
 *RDNA 1/2 アーキテクチャ* における LDS には、WGP 内の CU 2基で LDS 128KB (2x64KB) を共有し、ある CU から見た時に近い LDS と遠い LDS が存在する WGP mode と、CU 内の LDS 64KB のみを使う CU mode がある。  
-*RDNA 3 アーキテクチャ* で LDS と WGP/CU mode がどうなっているかは不明であり、発表時にも LDS には触れられていなかった。  
+*RDNA 3 アーキテクチャ* で LDS と WGP/CU mode がどうなっているかは不明であり、発表時にも LDS には触れていなかった。  
 
 ### Cache {#cache}
 
@@ -106,6 +106,7 @@ CU あたりの SIMDユニット数も合わせて考えると、*64 Dual Issue 
 *RDNA 1 アーキテクチャ* で新たに Wave32 に対応したことについて、AMD は利点の 1つとして低レイテンシをアピールしていた。  
 *RDNA 1/2 アーキテクチャ* の Wave64 を 2xWave32 に分割する方式では、発行可能なスカラ命令は 1回に制限していたため、*RDNA 3 アーキテクチャ* で Wave64 を 1サイクルで発行可能としても実行方式の変更による影響は小さいように思える。  
 
+`VOPD` 命令は、基本的な演算命令 `(ADD, SUB, MUL)`、FMA (`FMA{C,AK,MK}`) 命令、データの移動命令 (`MOV`)、比較命令 (`MAX, MIN`)、条件命令 (`CNDMASK`)、ビット演算命令 (`LSHLREV, AND`)、ドット積命令 (`DOT2C_F32_F16 (D.f32 = S0.f16[0] * S1.f16[0] + S0.f16[1] * S1.f16[1] + D.f32)`) をサポートしており、それらの命令でピーク性能が高くなればと割り切った可能性もある。  
 
 {{< ref >}}
  * [AMD，新世代GPU「Radeon RX 7000」シリーズを発表。第1弾製品はRadeon RX 7900 XTXとRadeon RX 7900 XTで12月13日発売](https://www.4gamer.net/games/660/G066019/20221104001/)
