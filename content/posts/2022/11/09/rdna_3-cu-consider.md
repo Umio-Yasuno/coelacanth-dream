@@ -23,7 +23,7 @@ noindex: false
  >
  > {{< quote >}} [amd: add cosmetic gfx10 and gfx11 changes (8b66c0ac) · Commits · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/commit/8b66c0ac7605b1f0e0f7af4cff1c8e0381b16b4d) {{< /quote >}}
 
-ピーク FP32 性能 (GFlops) は CU 数とピーク動作クロック (GHz, MHz/1000)、そして CU あたりの SIMDレーン数あるいは SP (Shader Processor) 数と FMA (ADD+MUL) の 2 ops を乗算して求められる。  
+ピーク FP32 性能 (GFlops) は CU 数とピーク動作クロック (GHz, MHz/1000)、そして CU あたりの SIMDレーン数あるいは SP (Shader Processor) 数と FMA の 2 ops を乗算して求められる。  
 この変更から言えるのは、まず *RDNA 3 アーキテクチャ* の `libdrm` API 経由で返される CU 数は製品仕様と同じ数であること。[^rx7900xtx]  
 それと CU あたりの演算性能 (Flops) は、従来の倍となる 256 Flops となるということだろう。  
 
@@ -107,6 +107,7 @@ CU あたりの SIMDユニット数も合わせて考えると、*64 Dual Issue 
 仮に *Dual issue SIMD unit* が Wave64 を 1サイクルで発行可能とすると、Wave64 に対する Wave32 (Dual issue) の利点はさらなる実行レイテンシの削減と言えるかもしれない。  
 *RDNA 1 アーキテクチャ* で新たに Wave32 に対応したことについて、AMD は利点の 1つとして低レイテンシをアピールしていた。  
 *RDNA 1/2 アーキテクチャ* の Wave64 を 2xWave32 に分割する方式では、発行可能なスカラ命令は 1回に制限していたため、*RDNA 3 アーキテクチャ* で Wave64 を 1サイクルで発行可能としても実行方式の変更による影響は小さいように思える。  
+しかし実際の所は AMD が技術詳細を公開するまでは不明であり、*RADV* ドライバーのバックエンド *ACO* も `VOPD` 命令への対応はまだ進んでいない。  
 
 {{< ref >}}
  * [AMD，新世代GPU「Radeon RX 7000」シリーズを発表。第1弾製品はRadeon RX 7900 XTXとRadeon RX 7900 XTで12月13日発売](https://www.4gamer.net/games/660/G066019/20221104001/)

@@ -17,15 +17,17 @@ noindex: false
 ## honk
 `honk` は [OpenBSD](https://www.openbsd.org/) の開発者として知られる Ted Unangst 氏が開発した Go言語製の ActivityPub サーバーの最小実装。データベースには SQLite を使用する。  
 フォロー数やアカウント数等の接続規模、画像処理時で変わるとは思うが、最小実装のため軽量であり、メモリ使用量は小さい。  
+個人用として運用しているが、メモリ 512MB の VPS でも問題なく稼働している。  
 
  * <https://humungus.tedunangst.com/r/honk>
 
 `honk` は ActivityPub サーバーとして、同じく軽量であることを特徴とする [Pleroma](https://pleroma.social/) との連携を意識した部分があり、chat 機能が実装されている。  
 
 `honk` は ActivityPub に対応し、Fediverse に参加可能なソフトウェアでありながら、SNS らしい機能を一部削っていることも特徴と言える。  
-その時々で意味合いは変わるが、`honk` で *Like* に対応していない。このことは特に強調されており、ドキュメントには *"Don't be ridiculous."* と書いてあるくらいだ。  
-フォロワー情報を `honk` の WebUI 上からは確認できない。  
+その時々、SNS によって意味合いは変わるが、`honk` で *Like* に対応していない。このことは特に強調されており、ドキュメントには *"Don't be ridiculous."* と書いてあるくらいだ。  
+フォロワー情報は `honk` の WebUI 上からは確認できないようになっている。  
 通知機能も自アカウントに対するリプライのみに限られている。  
+こうした点から `honk` は SNS に対して一歩引いた ActivityPub サーバー、WebUI だと言える。  
 
 用語周りも少し変わっていて、Mastodon の toot や Twitter の tweet に相当するのが *honk(s)*。  
 *honk(s)* に対して Actions が用意されており、boost や re-tweet 相当が *bonk*、reply が *honk bonk* とされている。  
