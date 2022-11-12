@@ -51,6 +51,8 @@ tweet を引用する機能があり、`hoot:` の後に投稿への URL を付�
 [^preview]: <https://humungus.tedunangst.com/r/honk/v/fb1d23b65fb0>
 [^import]: <https://humungus.tedunangst.com/r/honk/m/honk.8#Import>
 
+`honk` で外部 ActivityPub サーバーのユーザーをフォローしたい場合には、`/honkers` でユーザー URL を入力して `add honker` ボタンを押すか、`/xzone` の `xid` に投稿単体の URL を入力し、読み込まれた投稿から経由して `add honker` をする方法がある。  
+
 カスタマイズ要素に少し触れると、`./honk admin` からページに表示される固定メッセージの変更と、生成されるアバターアイコンに用いられる 4色を設定できる。  
 色は 32-bit hex colors、`RRGGBBAA` の形式で記述する必要がある。末尾 `AA` は省略可能。  
 
