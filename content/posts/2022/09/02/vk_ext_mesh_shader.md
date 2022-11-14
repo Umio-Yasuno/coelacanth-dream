@@ -34,4 +34,4 @@ Mesa3D の AMD GPU 向け Vulkan ドライバー *RADV* と Intel GPU 向けで�
 *Gang Submit* は以前に取り上げたが、AMD のソフトウェアエンジニア Christian König 氏によって実装が進められており、複数の IB (Indirect Buffer) を複数の異なるエンジンで同時に実行可能であることを保証する機能となる。[^gang-submit]  
 複数のプロセスが同時に Task Shader を使用した場合、GPU がデッドロックする可能性があるが、*Gang Submit* があれば効果的に防止することが可能となる。  
 
-[^gang-submit]: [AMDGPUドライバーに「Gang Submit」を実装するパッチ | Coelacanth's Dream](http://localhost:1313/posts/2022/03/04/amdgpu-gang-submission/)
+[^gang-submit]: [AMDGPUドライバーに「Gang Submit」を実装するパッチ | Coelacanth's Dream](/posts/2022/03/04/amdgpu-gang-submission/)

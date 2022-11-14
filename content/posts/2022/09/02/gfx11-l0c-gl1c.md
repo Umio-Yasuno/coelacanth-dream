@@ -20,7 +20,7 @@ noindex: false
 パッチは AMD の Zhang, Yifan 氏によって投稿されている。  
 これは一時的な回避策とされ、IP Discovery Table にキャッシュ情報が追加され次第、パッチで追加された部分は削除される。  
 
-[^ip-discovery]: [次世代 GPU IPブロックのサポートが進む AMDGPUドライバー ―― GFX11, GC 11.0, MES 11.0, IMU | Coelacanth's Dream](http://localhost:1313/posts/2022/04/30/amd-gc_11_0_0/#ip)
+[^ip-discovery]: [次世代 GPU IPブロックのサポートが進む AMDGPUドライバー ―― GFX11, GC 11.0, MES 11.0, IMU | Coelacanth's Dream](/posts/2022/04/30/amd-gc_11_0_0/#ip)
 
 *Phoenix APU (GC 11.0.1, GFX1103)* と *Yellow Carp/Rembrandt APU* のキャッシュ情報は完全には一致せず、異なる点が L0ベクタキャッシュ (TCP L1 Cache per CU, Texture Cacher per Pipe, Private) と GL1データキャッシュとなる。  
 それに触れたのが以下の Liu, Aaron 氏によるコメント。  

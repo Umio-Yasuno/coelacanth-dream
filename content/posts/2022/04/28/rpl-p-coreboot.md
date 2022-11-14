@@ -38,7 +38,7 @@ Linux Kernel では、*Alder Lake-N* と *Raptor Lake-P* の CPUID Model が追�
 
  * [[PATCH] x86/cpu: Add new Alderlake and Raptorlake CPU model numbers - Luck, Tony](https://lore.kernel.org/all/YlS7n7Xtso9BXZA2@agluck-desk3.sc.intel.com/)
 
-[^adl-n]: [Intel Alder Lake と Rocket Lake に追加される CPUID Model | Coelacanth's Dream](http://localhost:1313/posts/2022/01/07/intel-adl-rkl-new-model/)
+[^adl-n]: [Intel Alder Lake と Rocket Lake に追加される CPUID Model | Coelacanth's Dream](/posts/2022/01/07/intel-adl-rkl-new-model/)
 
 ## GPU {#gpu}
 
