@@ -11,16 +11,19 @@ noindex: false
 ---
 
 2022/11/14 23:00 付で *RDNA 3 アーキテクチャ* のさらなる詳細が解禁された (らしく)、各種メディアが解説記事を公開している。  
-AMD がメディア向け資料を一般向けに公開していないため、それら各種メディアの記事を参考に *RDNA 3 アーキテクチャ* で疑問だった部分をいくつか個人的に整理してみる。  
+AMD がメディア向け資料を一般向けに公開していないため、それら各種メディアの記事に掲載されているスライド資料を参考に *RDNA 3 アーキテクチャ* で疑問だった部分をいくつか個人的に整理してみる。  
 
-PC Watch の記事は、*GCN アーキテクチャ* を VLIW (Very long instruction word) としていたり、
-*GCN* における L1キャッシュが CU あたり 64KB になっていたり (正確には 16KB)、
-Wave を、スレッドの塊といったよく説明に使われる表現ではなく、Wave32 を 32-bits 単位の ALU 定義、Wave64 を 64-bits 単位の ALU 定義としていたり、
-発行 (issue) ではなく実行 (execution) となっていたり……怪しいと思う記述がいくつか見られ、質問をメールで送ったのだが、今の所返信は来ていない。  
+PC Watch の記事は、*GCN アーキテクチャ* を VLIW (Very long instruction word) としていたり、  
+*GCN* における L1キャッシュが CU あたり 64KB になっていたり (正確には 16KB)、  
+*Radeon RX Vega (Vega10)* の ShaderArray (SA) 数を 8基としていたり (正確には 4基、ShaderEngine (SE) 4基、SE あたり SA 1基という構成)、*Navi21* の SA 数を 4基としていたり (正確には 8基、SE 4基、SE あたり SA 2基)、[^se-sa]  
+Wave を、スレッドの塊といったよく説明に使われる表現ではなく、Wave32 を 32-bits 単位の ALU 定義、Wave64 を 64-bits 単位の ALU 定義としていたり、  
+発行 (issue) ではなく実行 (execution) となっていたり……怪しいと思う記述がいくつか見られ、質問をメールで送ったのだが、執筆時点で返信は来ていない。  
 そうしたことを気にするのは自分くらいしかいないのかもしれない。  
 
  * [AMD Reveals More Details Around The Radeon RX 7900 Series / RDNA3 - Phoronix](https://www.phoronix.com/review/amd-radeon-rx7900)
  * [【笠原一輝のユビキタス情報局】新演算器とチップレットで電力効率と性能を引き上げたRadeon RX 7000の詳細 - PC Watch](https://pc.watch.impress.co.jp/docs/column/ubiq/1455417.html)
+
+[^se-sa]: [pal/ndDevice.cpp at dev · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/dev/src/core/os/nullDevice/ndDevice.cpp)
 
 ## CU, SIMD Unit {#cu-simd}
 最初の発表では曖昧だったが、今回の情報解禁でより詳細な Compute Unit のブロック図が示された。  
