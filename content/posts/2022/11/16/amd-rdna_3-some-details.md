@@ -16,9 +16,15 @@ AMD がメディア向け資料を一般向けに公開していないため、�
 PC Watch の記事は、*GCN アーキテクチャ* を VLIW (Very long instruction word) としていたり、  
 *GCN* における L1キャッシュが CU あたり 64KB になっていたり (正確には 16KB)、  
 *Radeon RX Vega (Vega10)* の ShaderArray (SA) 数を 8基としていたり (正確には 4基、ShaderEngine (SE) 4基、SE あたり SA 1基という構成)、*Navi21* の SA 数を 4基としていたり (正確には 8基、SE 4基、SE あたり SA 2基)、[^se-sa]  
+CU 内の L0キャッシュを内部レジスタのキャッシュと表現していたり (レジスタファイルとキャッシュメモリの関係を説明するのに適切ではないように思う)、  
 Wave を、スレッドの塊といったよく説明に使われる表現ではなく、Wave32 を 32-bits 単位の ALU 定義、Wave64 を 64-bits 単位の ALU 定義としていたり、  
 発行 (issue) ではなく実行 (execution) となっていたり……怪しいと思う記述がいくつか見られ、質問をメールで送ったのだが、執筆時点で返信は来ていない。  
 そうしたことを気にするのは自分くらいしかいないのかもしれない。  
+
+{{< ins >}}
+その後 PC Watch より返信が来て、メールで最初に質問した部分に関しては一部修正された。  
+上でぐだぐだと書いた記事への指摘には、メール送信後に気付いた部分も含まれている。  
+{{< /ins >}}
 
  * [AMD Reveals More Details Around The Radeon RX 7900 Series / RDNA3 - Phoronix](https://www.phoronix.com/review/amd-radeon-rx7900)
  * [【笠原一輝のユビキタス情報局】新演算器とチップレットで電力効率と性能を引き上げたRadeon RX 7000の詳細 - PC Watch](https://pc.watch.impress.co.jp/docs/column/ubiq/1455417.html)
