@@ -3,7 +3,7 @@ title: "RDNA 3 アーキテクチャのさらなる詳細"
 date: 2022-11-16T09:24:27+09:00
 draft: false
 categories: [ "Hardware", "AMD", "GPU" ]
-tags: [ "GFX11", ]
+tags: [ "GFX11", "RDNA_3", ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]
@@ -12,6 +12,9 @@ noindex: false
 
 2022/11/14 23:00 付で *RDNA 3 アーキテクチャ* のさらなる詳細が解禁された (らしく)、各種メディアが解説記事を公開している。  
 AMD がメディア向け資料を一般向けに公開していないため、それら各種メディアの記事に掲載されているスライド資料を参考に *RDNA 3 アーキテクチャ* で疑問だった部分をいくつか個人的に整理してみる。  
+
+ * [AMD Reveals More Details Around The Radeon RX 7900 Series / RDNA3 - Phoronix](https://www.phoronix.com/review/amd-radeon-rx7900)
+ * [【笠原一輝のユビキタス情報局】新演算器とチップレットで電力効率と性能を引き上げたRadeon RX 7000の詳細 - PC Watch](https://pc.watch.impress.co.jp/docs/column/ubiq/1455417.html)
 
 PC Watch の記事は、*GCN アーキテクチャ* を VLIW (Very long instruction word) としていたり、  
 *GCN* における L1キャッシュが CU あたり 64KB になっていたり (正確には 16KB)、  
@@ -26,9 +29,6 @@ Wave を、スレッドの塊といったよく説明に使われる表現では
 上でぐだぐだと書いた記事への指摘には、メール送信後に気付いた部分も含まれている。  
 {{< /ins >}}
 
- * [AMD Reveals More Details Around The Radeon RX 7900 Series / RDNA3 - Phoronix](https://www.phoronix.com/review/amd-radeon-rx7900)
- * [【笠原一輝のユビキタス情報局】新演算器とチップレットで電力効率と性能を引き上げたRadeon RX 7000の詳細 - PC Watch](https://pc.watch.impress.co.jp/docs/column/ubiq/1455417.html)
-
 [^se-sa]: [pal/ndDevice.cpp at dev · GPUOpen-Drivers/pal](https://github.com/GPUOpen-Drivers/pal/blob/dev/src/core/os/nullDevice/ndDevice.cpp)
 
 ## CU, SIMD Unit {#cu-simd}
@@ -38,7 +38,7 @@ LDS のサイズはスライド中にないが、従来と同じ 128KB (2x64KB) 
 
 [^lds]: [RDNA 3 アーキテクチャの CU の若干の考察 | Coelacanth's Dream](/posts/2022/11/09/rdna_3-cu-consider/)
 
-SIMD Unit については、1xSIMD64 と 2xSIMD32 の 2つのモードがあり、Dual issue Wave32 時は SIMD32 (Float or Int) と SIMD32 (Float) の組み合わせで動作し、それぞれで別の命令を発行することができる。  
+SIMD Unit については、1xSIMD64 と 2xSIMD32 の 2つのモードがあり、Dual issue Wave32 時は SIMD32 (Float or Int) と SIMD32 (Float) の組み合わせで動作し、それぞれに別の `VOPD` 命令を発行することができる。  
 この説明は `VOPD (Dual issue wave32)` 命令が基本 FP32 フォーマットにのみ対応することと一致する。  
 1xSIMD64 では Wave64 を 1サイクルで発行することができる。  
 おそらく `VOPD` 命令以外を Wave32 で発行すると SIMD Unit の使用率は半分に留まると思われるが、コンパイラは `VOPD` 命令以外は Wave64 を選択すれば問題ないと思われる。  
@@ -55,7 +55,7 @@ LLVM へのパッチでは *RDNA 3 アーキテクチャ* の FP64 (DP) : FP32 (
 ### WMMA (Wave Matrix Multiply-accumulate) {#wmma}
 行列演算命令、`WMMA (Wave Matrix Multiply-accumulate)` 命令については、1個の `WMMA` 命令から内部ではドット積命令用の 64x Dot2 ALU (FP16, BF16, Int8), 64x Dot4 ALU (Int4) に対して分解した命令を連続で発行する形式となっている。  
 BF16 フォーマットを用いた計算処理において *RDNA 3 アーキテクチャ* はピークスループット性能が *RDNA 2* の 2.7倍、という FP32 フォーマットと同じ比率の性能向上だったことはこの `WMMA` 命令の形式が関係していると思われる。  
-`WMMA` 命令によってピークスループット性能が飛躍的に向上したりはしないが、命令数を減らすことができ命令キャッシュを圧迫せず、またコンパイラによるレジスタ割り当てもやりやすくなると思われ、実性能では向上が見込める。  
+`WMMA` 命令によってピークスループット性能自体は変わらないが、命令数を減らすことができ (命令キャッシュを圧迫しない)、またコンパイラによるレジスタ割り当てもやりやすくなると思われ、実性能では向上が見込める。  
 
 *RDNA 3 アーキテクチャ* では Int4, unsigned Int4 の Dot8 命令にも対応しているはずだが、スライドでは触れられていない。内部的には 64x Dot4 ユニットを活用する形式とかなのだろうか。[^dot8]  
 

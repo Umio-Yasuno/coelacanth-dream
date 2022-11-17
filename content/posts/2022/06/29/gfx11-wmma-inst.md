@@ -3,7 +3,7 @@ title: "RDNA 3/GFX11 では行列積和演算命令、WMMA (Wave Matrix Multiply
 date: 2022-06-29T05:49:48+09:00
 draft: false
 categories: [ "Hardware", "AMD", "GPU" ]
-tags: [ "GFX11", "LLVM" ]
+tags: [ "GFX11", "RDNA_3", "LLVM" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]

@@ -3,7 +3,7 @@ title: "L0ベクタキャッシュと GL1データキャッシュが増やされ
 date: 2022-09-02T14:42:02+09:00
 draft: false
 categories: [ "Hardware", "AMD", "APU" ]
-tags: [ "GFX11", "Linux_Kernel", "Phoenix" ]
+tags: [ "GFX11", "RDNA_3", "Linux_Kernel", "Phoenix" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]

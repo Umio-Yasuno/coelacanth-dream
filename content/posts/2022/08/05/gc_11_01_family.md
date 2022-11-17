@@ -3,7 +3,7 @@ title: "RDNA 3/GFX11 Phoenix APU は AMDGPU_FAMILY_GC_11_0_1 に"
 date: 2022-08-05T10:59:41+09:00
 draft: false
 categories: [ "Hardware", "AMD", "GPU", "APU" ]
-tags: [ "GFX11", "Linux_Kernel", "Phoenix" ]
+tags: [ "GFX11", "RDNA_3", "Linux_Kernel", "Phoenix" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]

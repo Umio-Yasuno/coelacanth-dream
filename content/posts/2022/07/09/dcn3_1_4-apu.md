@@ -3,7 +3,7 @@ title: "RDNA 3/GFX11 APU に採用される DCN 3.1.4"
 date: 2022-07-09T21:01:46+09:00
 draft: false
 categories: [ "Hardware", "APU", "AMD" ]
-tags: [ "GFX11", "Linux_Kernel", "Phoenix" ]
+tags: [ "GFX11", "RDNA_3", "Linux_Kernel", "Phoenix" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]

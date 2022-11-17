@@ -3,7 +3,7 @@ title: "RadeonSI ドライバーで GFX11 のサポートが進められる"
 date: 2022-05-05T12:48:07+09:00
 draft: false
 categories: [ "Hardware", "AMD", "GPU", "APU" ]
-tags: [ "GFX11", "RadeonSI", "NGG" ]
+tags: [ "GFX11", "RDNA_3", "RadeonSI", "NGG" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]

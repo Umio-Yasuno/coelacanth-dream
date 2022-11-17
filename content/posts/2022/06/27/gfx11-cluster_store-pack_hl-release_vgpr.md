@@ -3,7 +3,7 @@ title: "GFX11 で有効化、サポートされる機能 ―― ReleaseVGPR, S_P
 date: 2022-06-27T12:13:54+09:00
 draft: false
 categories: [ "Hardware", "Software", "AMD", "GPU" ]
-tags: [ "GFX11", "LLVM" ]
+tags: [ "GFX11", "RDNA_3", "LLVM" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]

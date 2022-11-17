@@ -3,7 +3,7 @@ title: "GFX11 でサポートされる VOPD (Dual issue wave32) 命令の範囲�
 date: 2022-06-21T05:57:44+09:00
 draft: false
 categories: [ "Hardware", "Software", "AMD", "GPU" ]
-tags: [ "GFX11", "LLVM" ]
+tags: [ "GFX11", "RDNA_3", "LLVM" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]

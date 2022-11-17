@@ -3,7 +3,7 @@ title: "次世代 GPU IPブロックのサポートが進む AMDGPUドライバ�
 date: 2022-04-30T18:16:11+09:00
 draft: false
 categories: [ "Hardware", "AMD", "GPU" ]
-tags: [ "Linux_Kernel", "GFX11", ]
+tags: [ "Linux_Kernel", "GFX11", "RDNA_3", ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]

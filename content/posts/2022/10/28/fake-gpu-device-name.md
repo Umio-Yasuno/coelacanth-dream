@@ -21,9 +21,16 @@ Chips and Cheese に MrFreak 氏と clamchowder 氏による、ベンチマー�
 今回は一部パッチを当てたドライバーのビルドとインストールをして実証したが、コードの変更もビルドもそこまで手間は掛からない。ビルド時間も最近の 6/8-Core CPU であれば 5分程度で終わると思われる。  
 そして GPU デバイス名を書き換えることによるメリットは、全く無いと個人的には思っている。こうした偽装する方法が広まることで、ベンチマーク結果から出てきた怪しい情報による騒ぎがインターネットから少しでも減れば良いなとは思うが。  
 
-以下は Basemark GPU での実証。  
+以下の画像は Basemark GPU での実証。  
 
 {{< figure src="../fake_vk.jpg" >}}
+
+Geekbench5 でも試してみたが、普通に通って結果が掲載されている。  
+
+ * AMD Radeon RX 7300P
+    * <https://browser.geekbench.com/v5/compute/5907225>
+ * AMD Radeon RX 9999 Series
+    * <https://browser.geekbench.com/v5/compute/5907234>
 
 まず GPU デバイス名、あるいはそれに近い情報を得る方法として、基本的に OpenGL では `glGetString(GL_RENDERER)`、Vulkan では `VkPhysicalDeviceProperties` の `deviceName` が使われると思う。  
 Mesa3D RadeonSI (OpenGL) と RADV (Vulkan)、2つのオープンソースドライバーではそこに `libdrm` API 経由で取得できる `marketing_name` を用いている。  

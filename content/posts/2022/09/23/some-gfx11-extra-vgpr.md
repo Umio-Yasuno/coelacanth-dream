@@ -3,7 +3,7 @@ title: "追加のベクタレジスタを持つ Navi31/GFX1100 と Navi32/GFX110
 date: 2022-09-23T19:39:39+09:00
 draft: false
 categories: [ "Hardware", "AMD", "GPU" ]
-tags: [ "GFX11", "LLVM" ]
+tags: [ "GFX11", "RDNA_3", "LLVM" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]

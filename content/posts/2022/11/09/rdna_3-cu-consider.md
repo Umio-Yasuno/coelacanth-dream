@@ -3,7 +3,7 @@ title: "RDNA 3 アーキテクチャの CU の若干の考察"
 date: 2022-11-09T00:04:07+09:00
 draft: false
 categories: [ "Hardware", "AMD", "GPU" ]
-tags: [ "GFX11", "RadeonSI", "RADV" ]
+tags: [ "GFX11", "RDNA_3", "RadeonSI", "RADV" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]

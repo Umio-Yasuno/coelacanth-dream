@@ -3,7 +3,7 @@ title: "コードネームあれこれ ―― Phoenix/2, Plum Bonito, Wheat Nas,
 date: 2022-10-01T06:22:40+09:00
 draft: true
 categories: [ "Hardware", "AMD", "Intel", "CPU", "GPU", "CPU" ]
-tags: [ "Phoenix", "GFX11", "Codename" ]
+tags: [ "Phoenix", "GFX11", "RDNA_3", "Codename" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]

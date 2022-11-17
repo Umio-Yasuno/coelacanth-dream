@@ -3,7 +3,7 @@ title: "AMD、RDNA 3 アーキテクチャを採用した RX 7900 Series を発�
 date: 2022-11-04T20:24:20+09:00
 draft: false
 categories: [ "Hardware", "AMD", "GPU" ]
-tags: [ "GFX11", ]
+tags: [ "GFX11", "RDNA_3", ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]

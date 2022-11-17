@@ -3,7 +3,7 @@ title: "GFX11 のサポートに向けた LLVM へのさらなるパッチ ―�
 date: 2022-05-10T12:14:27+09:00
 draft: false
 categories: [ "Hardware", "AMD", "GPU" ]
-tags: [ "GFX11", "LLVM" ]
+tags: [ "GFX11", "RDNA_3", "LLVM" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]
