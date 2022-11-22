@@ -3,7 +3,7 @@ title: "AMD Financial Analyst Day 個人的まとめ"
 date: 2022-06-11T04:18:05+09:00
 draft: false
 categories: [ "Hardware", "AMD", "CPU", "GPU", "APU" ]
-tags: [ "CDNA_3", "gfx940", "Zen_4", "Zen_5", "GFX11" ]
+tags: [ "CDNA_3", "gfx940", "Zen_4", "Zen_5", "GFX11", "RDNA_3", "Phoenix" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]
