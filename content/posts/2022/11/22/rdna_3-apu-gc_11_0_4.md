@@ -22,8 +22,8 @@ AMD の Yifan Zhang 氏により、Linux Kernel における AMDGPU ドライバ
  >         
  > {{< quote >}} [[PATCH 07/19] drm/amdgpu/discovery: set the APU flag for GC 11.0.4](https://lists.freedesktop.org/archives/amd-gfx/2022-November/086813.html) {{< /quote >}}
 
-*GC 11.0.4* は現時点では基本 *GC 11.0.1* と共通したコードパスとなっており、`AMDGPU_FAMILY_GC_11_0_1`、GPU ID には *gfx1103* が設定されている。  
-同時に *SMU IP v13.0.11* と *PSP IP v13.0.11* をサポートするパッチも投稿されているが、他バージョン IP との機能的な違いは今の所見られない。  
+*GC 11.0.4* は現時点では基本 *GC 11.0.1* と共通したコードパスを用いており、AMDGPUファミリーには `AMDGPU_FAMILY_GC_11_0_1`、GPU ID には *gfx1103* が設定されている。  
+同時に *SMU IP v13.0.11* と *PSP IP v13.0.11* をサポートするパッチも投稿されているが、異なるのはレジスタのオフセット値などで、他 IP バージョンとの機能的な違いは今の所見られない。  
 
  >          	case IP_VERSION(11, 0, 1):
  >         +	case IP_VERSION(11, 0, 4):
