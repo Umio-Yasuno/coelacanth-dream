@@ -22,7 +22,18 @@ AMD の Yifan Zhang 氏により、Linux Kernel における AMDGPU ドライバ
  >         
  > {{< quote >}} [[PATCH 07/19] drm/amdgpu/discovery: set the APU flag for GC 11.0.4](https://lists.freedesktop.org/archives/amd-gfx/2022-November/086813.html) {{< /quote >}}
 
+| GC (Graphics Compute) IP ver | GFX ID | AMDGPU_FAMILY | Type |
+| :-------- | :-----: | :--: | :--: |
+| 11.0.0    | gfx1100 (Navi31)[^navi31] | AMDGPU_FAMILY_GC_11_0_0 (FAMILY_GFX1100) | dGPU |
+| 11.0.1    | gfx1103 (Phoenix) | AMDGPU_FAMILY_GC_11_0_1 (FAMILY_GFX1103) | APU  |
+| 11.0.2    | gfx1102 (Navi33) | AMDGPU_FAMILY_GC_11_0_0 (FAMILY_GFX1100) | dGPU |
+| 11.0.3?   | gfx1101 (Navi32)? | AMDGPU_FAMILY_GC_11_0_0 (FAMILY_GFX1100)? | dGPU |
+| 11.0.4    | gfx1103? | AMDGPU_FAMILY_GC_11_0_1 (FAMILY_GFX1103) | APU  |
+
+[^navi31]: [Support Tensile for gfx11 series platform by TonyYHsieh · Pull Request #1521 · ROCmSoftwarePlatform/Tensile](https://github.com/ROCmSoftwarePlatform/Tensile/pull/1521/commits/3796d41aec358721fced1ed4337c27f69aeda3bb)
+
 *GC 11.0.4* は現時点では基本 *GC 11.0.1* と共通したコードパスを用いており、AMDGPUファミリーには `AMDGPU_FAMILY_GC_11_0_1`、GPU ID には *gfx1103* が設定されている。  
+補足すると、GPU ID は主にコンパイラやライブラリが機能の有無等を判定するために用いられるため、複数の AMD GPU に同じ GPU ID が割り当てられることもあれば、必要に応じて別の GPU ID が割り当てられることもある。  
 同時に *SMU IP v13.0.11* と *PSP IP v13.0.11* をサポートするパッチも投稿されているが、異なるのはレジスタのオフセット値などで、他 IP バージョンとの機能的な違いは今の所見られない。  
 
  >          	case IP_VERSION(11, 0, 1):
