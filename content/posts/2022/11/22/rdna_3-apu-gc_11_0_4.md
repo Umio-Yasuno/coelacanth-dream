@@ -53,6 +53,7 @@ AMD の Yifan Zhang 氏により、Linux Kernel における AMDGPU ドライバ
 
 AMD は 2023年のモバイル向けプロセッサに、**Ryzen 7040 Series** として *Phoenix APU* を、**Ryzen 7045 Series** に *Dragon Range APU* を投入することを発表している。[^dragon_range]  
 今回パッチが投稿された *GC 11.0.4* はその *Dragon Range APU* の GPU IP という可能性が考えられる。  
+というより現時点で AMD が公式に発表しているロードマップの中で当てはまりそうなのが *Dragon Range APU* くらししかない、と言った方が正確だろう。  
 
 *Phoenix APU* は TDP 35-45W、モバイル用途と薄型ゲーミング PC 向け、*Dragon Range* は TDP 55W+、最高の性能を求めるゲーミング PC 向けという位置付けになっている。  
 メモリは *Phoenix APU* が LPDDR5 メモリをサポートし、*Dragon Range APU* は DDR5 メモリをサポートするとしている。  
