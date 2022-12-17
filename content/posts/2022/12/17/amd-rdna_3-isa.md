@@ -13,6 +13,9 @@ noindex: false
 AMD は 2022-12-16 付で 「"RDNA3" Instruction Set Architecture: Reference Guide」 (以下、ドキュメント) を公開した。  
 その内容から自分が気になったものをピックアップしていく。  
 
+ * [Developer Guides, Manuals & ISA Documents - AMD](https://developer.amd.com/resources/developer-guides-manuals/)
+    * ["RDNA3" Instruction Set Architecture: Reference Guide - RDNA3_Shader_ISA_December2022.pdf](https://developer.amd.com/wp-content/resources/RDNA3_Shader_ISA_December2022.pdf)
+
 ## GDS {#gds}
 すべての ShaderEngine、CU からアクセス可能なスクラッチメモリ、GDS (Global Data Share) のサイズが変更され、*RDNA 2 アーキテクチャ* では 64KiB だったのが、*RDNA 3 アーキテクチャ* では 4KiB に減らされている。[^gds]  
 同様の変更は *CDNA 1/2 アーキテクチャ* でも見られ、*CDNA 1/MI100/Arcturus* では 4KiB、*CDNA 2/MI200/Aldebaran* では GDS 自体が削除されている。[^gds-cdna]  
@@ -53,3 +56,11 @@ Dual issue VALU/Wave32, `VOPD` 命令は対応する命令を最大 2種類同�
 Dual issue VALU/Wave32 と併せて、*RDNA 3 アーキテクチャ* ではコンパイラ側での最適化余地が増えたが、同時に負担も大きくなっているように思う。  
 
 [^s_delay_alu]: RDNA3_Shader_ISA_December2022.pdf: Page 44
+
+## SLC, GLC, DLC {#cache}
+*RDNA 1/2/3 アーキテクチャ* ではスカラ、ベクタ共にメモリ命令 (load, store, atomic) ではキャッシュポリシー指定用のフラグビット `SLC, GLC, DLC` が用意されているが、*RDNA 3* ではそれぞれの意味が変更され、MALL (Memory-Attached Last-Level cache, Infinity Cache) のキャッシュコントロールが可能になった。[^cache]  
+*RDNA 2 アーキテクチャ* では、`GLC (Globally Coherent)` は CU 内の L0キャッシュ、`DLC (Device Level Coherent)` と `SLC (System Level Coherent)` は L2キャッシュのコントロールビットとなっていたa。`DLC` と `SLC` のパターンでキャッシュポリシーは変わる。  
+*RDNA 3 アーキテクチャ* では `GLC` は GL1 (first-level cache)、`SLC` は GL2 (L2キャッシュ)、`DLC` は MALL 用と再定義された。  
+また、SRD (Shader Resouce Descriptor) 部に `LLC NoAlloc` 2-bits が用意されており、その部分の値でも MALL に対するキャッシュポリシーは変わる。  
+
+[^cache]: RDNA3_Shader_ISA_December2022.pdf: Page 35
