@@ -15,15 +15,16 @@ noindex: false
 一応書いておくと、RadeonSI ドライバーは Mesa3D ライブラリの AMD GPU 向け OpenGL ドライバーであり、最小構成の環境でなければインストールされているように思う。  
 各種ファームウェアのバージョン情報等も出力されるため、バグを報告する際にも役立つ。  
 
-`rocminfo` といったコマンドもあるが、RadeonSI ドライバーより得られる情報は少ない上、あくまで ROCm 環境がインストールされているか、そして有効かを確かめるためのコマンドであるため、目的には合わないと考えている。  
+`rocminfo` といったコマンドもあるが、RadeonSI ドライバーより得られる情報は少ない上、どちらかと言えば ROCm 環境が正常にインストールされているかを確かめるためのコマンドであるため、今回の目的には合わないと考えている。  
 
 RadeonSI ドライバーのデバッグ情報を出力するには、環境変数 `AMD_DEBUG=info` を付けて OpenGL API を呼ぶアプリケーション、コマンドを実行すればいい。  
 個人的には `glxinfo -B` がオススメで、OpenGL API を呼びながら新たにウィンドウを生成せず、コマンド自体が出力するメッセージも短めだ。  
 最終的なコマンドは `AMD_DEBUG=info glxinfo -B` となる。  
+一応書いておくと、`RADV_DEBUG=info` を付けて Vulkan API を呼ぶコマンドを実行しても同様の情報が出力される。  
 
  * [Environment Variables — The Mesa 3D Graphics Library latest documentation](https://docs.mesa3d.org/envvars.html#radeonsi-driver-environment-variables)
 
-結果としては、以下のようなデバッグ情報が出力される。  
+結果としては、記事下部のようなデバッグ情報が出力される。  
 また、デバッグ情報を出力する部分のソースファイルは [src/amd/common/ac_gpu_info.c · main · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/blob/main/src/amd/common/ac_gpu_info.c) となる。  
 
 `num_se` は有効な ShaderEngine 数、`num_rb` は RB (RenderBackend) 数、`num_cu` は CU 数を示す。  
