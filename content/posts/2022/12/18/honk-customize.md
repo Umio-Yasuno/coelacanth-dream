@@ -17,6 +17,8 @@ noindex: false
 また、最小実装ということが手伝い、カスタマイズ、それによる再ビルドと再起動に必要とするコストは小さい。  
 そこで、個人的に `honk` を運用しながらカスタマイズしていって得た知見を共有することで、誰かの `honk` を構築し、カスタマイズする切っ掛けになればと思い、この記事を書いている。  
 
+ * [humungus - honk](https://humungus.tedunangst.com/r/honk)
+
 [^honk-intro]: [Go言語製 ActivityPub サーバーの最小実装 honk を立ててみた | Coelacanth's Dream](/posts/2022/06/19/honk/)
 
 カスタマイズにあたって先にオープンソースライセンス周りの話に触れると、有名な ActivityPub サーバー、Mastodon, Pleroma, Misskey, Pixelfed, PeerTube では AGPLv3 が採用されているが、`honk` では ISCライセンスが採用されている。  
