@@ -101,6 +101,7 @@ hfcs では正規表現を使うことができるが、ユーザーが設定し
  * [zevweiss/honk: Miscellaneous patches for Ted Unangst's honk: https://humungus.tedunangst.com/r/honk -- tweaks branch probably rebased semi-often](https://github.com/zevweiss/honk)
  * <https://git.icyphox.sh/honk>
  * [statianzo/honk: fork of honk - honk - Gitodome](https://git.jxs.me/statianzo/honk)
+ * [~petersanchez/honk - netlandish hg](https://hg.code.netlandish.com/~petersanchez/honk)
  * [~ols/yeet - sourcehut git](https://git.sr.ht/~ols/yeet)
 
 Ben Cartwright-Cox (benjojo) 氏の fork では、外部ユーザーのアバター画像のサポートと WebUI 上での表示、MP4 と GIF のサポートが追加されており、また外部からの `Like` をログに出力するよう (記録はしない) 変更されている。  
@@ -113,6 +114,7 @@ Ben Cartwright-Cox (benjojo) 氏の fork では、外部ユーザーのアバタ
 投稿に表示される時刻フォーマットを `2006-01-02 15:04:05` に変更したり、`honkpage.js` を書き直したり、一部レイアウトを flex に置き換えたり、くらい。  
 
 好みの fork をそのまま運用してもいいが、それぞれの変更内容を一部取り込んでいって独自の `honk` を構築する手もある。  
+上で挙げた fork の中にもそのようなレポジトリがいくつかある。  
 
 {{< ref >}}
  * [misskey-dev/misskey: 🌎 An interplanetary microblogging platform 🚀](https://github.com/misskey-dev/misskey)
