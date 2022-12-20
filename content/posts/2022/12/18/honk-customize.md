@@ -14,7 +14,7 @@ noindex: false
 加えて自分の観測範囲では、以前に紹介した Ted Unangst 氏による Go言語製の ActivityPub サーバーの最小実装、`honk` を構築する人が増えている。[^honk-intro]  
 `honk` は省メモリであるため、メモリ 512MB の VPS でも快適に動作する。  
 メインでも予備でも、個人で運用可能な ActivityPub サーバーが欲しい人にとって `honk` は有力な選択肢になると思う。  
-また、最小実装ということが手伝い、カスタマイズ、それによる再ビルドと再起動に必要とするコストは小さい。  
+また、最小実装ということが手伝い、カスタマイズ、それによる再ビルドと再起動に必要とするコストは小さく、バイナリサイズも自分が運用しているもので 13M と小さい。  
 そこで、個人的に `honk` を運用しながらカスタマイズしていって得た知見を共有することで、誰かの `honk` を構築し、カスタマイズする切っ掛けになればと思い、この記事を書いている。  
 
  * [humungus - honk](https://humungus.tedunangst.com/r/honk)
@@ -65,6 +65,10 @@ HTMLテンプレートの変更は、それを前提とした CSS セレクタ�
 自分は `honk` のソースコードを読み込んでいる訳ではないが、カスタマイズし、自分の fork を作っていく中で触れた部分について簡単な解説を書いていく。  
 
 `activity.go` には ActivityPub 形式との変換、他 ActivityPub 実装との相互運用のための処理がまとめられている。  
+ActivityPub における `Inbox/Outbox` や RSS の出力は `web.go` にまとめられている。  
+
+`honk` ではアバター画像を保存せず、WebUI では設定された色のパターンとユーザー名のハッシュから生成した画像を表示する。その部分の実装が `avatar.go` にまとめられている。  
+一応、`{datadir}/memes` に画像を置き、アカウントのプロフィールで `avatar: <file>` の形式で記述することで外部に対してアバター画像を設定することはできる。  
 
 `fun.go` は *All sorts of fun stuff.* とあるように、投稿に対する色々な処理がまとめられてある。  
 具体的には投稿の種類の判定、ユーザー名の正規化、HTML 要素からの不要な属性の削除、フィルターの適用、画像リンクの処理、データベースへの添付ファイルの保存といった処理がある。  
@@ -117,6 +121,7 @@ Ben Cartwright-Cox (benjojo) 氏の fork では、外部ユーザーのアバタ
 上で挙げた fork の中にもそのようなレポジトリがいくつかある。  
 
 {{< ref >}}
+ * [humungus - honk](https://humungus.tedunangst.com/r/honk)
  * [misskey-dev/misskey: 🌎 An interplanetary microblogging platform 🚀](https://github.com/misskey-dev/misskey)
  * [mastodon/mastodon: Your self-hosted, globally interconnected microblogging community](https://github.com/mastodon/mastodon)
  * [Pixelfed - Decentralized social media](https://pixelfed.org/)
