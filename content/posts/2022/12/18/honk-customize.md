@@ -25,6 +25,16 @@ noindex: false
 ライセンスについて詳しい訳ではないため雑な解説となるが、AGPLv3 ではソフトウェアの利用にあたってコピーレフトが適用されるが、ISCライセンスにコピーレフト条項はない。  
 こうした点でも `honk` はカスタマイズが容易だと言えるかもしれない。  
 
+{{< pindex >}}
+ * [Customization](#custom)
+    * [CSS](#css)
+    * [HTMLテンプレート](#html-template)
+    * [JavaScript](#js)
+    * [Admin](#admin)
+    * [Go Code](#go-code)
+ * [fork of honk](#fork)
+{{< /pindex >}}
+
 ## Customization {#custom}
 ### CSS {#css}
 まず一番簡単な `honk` のカスタマイズは CSS による配色の変更だろう。  
@@ -58,6 +68,14 @@ HTMLテンプレートの変更は、それを前提とした CSS セレクタ�
 ### JavaScript {#js}
 `honk` の WebUI では JavaScript が使われており、例えば投稿に対する Boost (`bonk`)、リプライ (`honk back`)、削除 (`bonk`)、編集 (`edit`)、ブックマーク (`save`) をサーバーにリクエストする部分に JavaScript が使われている。  
 主な JavaScript コードは `views/honkpage.js` にまとめられているが、グローバル変数は HTMLテンプレート `views/honkpage.html` に記述されている。  
+
+### Admin {#admin}
+`./honk admin` コマンドから、一部のページに表示されるメッセージやアバターカラー、用語を変更することができる。  
+メッセージはタイムライン上部、`/about` ページ、ログインページに表示するものを設定でき、HTML を直接記述する形式となっている。  
+アバターカラーは `#RRGGBB` または `#RRGGBBAA` を 4個設定でき、設定した色が生成するアバター画像に用いられる。  
+
+`lingo for ...` からは `honk` 独自の用語である `honked, bonked, honked back, qonked, evented` を置き換えることができる。  
+自分が見たことのある例では、`honked` を `posted`、`bonked` を `reposted`、`honked back` を `replied` に設定している人がいた。  
 
 ### Go Code {#go-code}
 見た目だけでなく処理部分もカスタマイズしようとすると Go で書かれたソースコードの変更が必要となる。  
