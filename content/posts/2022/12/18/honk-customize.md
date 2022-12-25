@@ -131,12 +131,12 @@ Ben Cartwright-Cox (benjojo) 氏の fork では、外部ユーザーのアバタ
 
  * [benjojo/honk-benjojo: The benjojo.co.uk fork of honk](https://github.com/benjojo/honk-benjojo)
 
-自分の fork は [Umio-Yasuno/honk-fisherman](https://github.com/Umio-Yasuno/honk-fisherman) で公開している。いくつかの変更を各ブランチで分けているが、それらをまとめ、実際に運用しているのが `dream` ブランチとなっている。  
-変更は HTMLテンプレートが主で、処理部は先に挙げた細かい修正くらいしかしていない。  
-投稿に表示される時刻フォーマットを `2006-01-02 15:04:05` に変更したり、`honkpage.js` を書き直したり、一部レイアウトを flex に置き換えたり、くらい。  
-
 好みの fork をそのまま運用してもいいが、それぞれの変更内容を一部取り込んでいって独自の `honk` を構築する手もある。  
 上で挙げた fork の中にもそのようなレポジトリがいくつかある。  
+
+自分の fork は [Umio-Yasuno/honk-fisherman](https://github.com/Umio-Yasuno/honk-fisherman) で公開している。いくつかの変更を各ブランチで分けているが、それらをまとめ、実際に運用しているのが `dream` ブランチとなっている。  
+変更は HTMLテンプレートが主で、処理部は先に挙げた細かい修正くらいしかしていない。  
+投稿に表示される時刻フォーマットを `2006-01-02 15:04:05` に変更したり、`honkpage.js` を書き直したり、メニュー部を自分なりに分かりやすくしたりしている。  
 
 {{< ref >}}
  * [humungus - honk](https://humungus.tedunangst.com/r/honk)
