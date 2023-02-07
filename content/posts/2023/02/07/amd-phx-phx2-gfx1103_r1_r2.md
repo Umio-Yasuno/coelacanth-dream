@@ -16,13 +16,14 @@ Felix Held 氏により、*AMD Phoenix APU* と *AMD Phoenix2 APU* の `CPUID Fa
 Coreboot はオープンソースなファームウェア、BIOS/UEFI を開発するプロジェクトであり、Felix Held 氏は現在フルタイムで Coreboot プロジェクトの開発に参加している。  
 
  * [soc/amd/phoenix/include/cpu: rename CPUID define to match CPU model (Ie7500130) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/72843/1)
+ * [soc/amd/phoenix/include/cpu: add Phoenix CPUID (Id4eb3502) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/72853/1/)
 
- >         - #define PHOENIX_A0_CPUID	0x00a70f80
- >         + #define PHOENIX2_A0_CPUID	0x00a70f80
+ >         #define PHOENIX_A0_CPUID	0x00a70f40
+ >         #define PHOENIX2_A0_CPUID	0x00a70f80
  >
  > {{< quote >}} <https://review.coreboot.org/c/coreboot/+/72843/1/src/soc/amd/phoenix/include/soc/cpu.h#b6> {{< /quote >}}
 
-Felix Held 氏のコメントによれば、`0x00a70f80 (Family: 0x19, Model: 0xA8, Stepping: 0)` は *Phoenix2* の `CPUID Family/Model/Stepping` であり、*Phoenix APU* は `0x00a70f80 (Family: 0x19, Model: 0xA0, Stepping: 0)` となる。  
+Felix Held 氏のコメントによれば、`0x00a70f80 (Family: 0x19, Model: 0xA8, Stepping: 0)` は *Phoenix2* の `CPUID Family/Model/Stepping` であり、*Phoenix APU* は `0x00a70f40 (Family: 0x19, Model: 0xA4, Stepping: 0)` となる。  
 前回 Coreboot で *Phoenix APU* のサポートが進められていることを取り上げた時には、エンジニアサンプリング品やリビジョンによって `CPUID Model` を変えていると考えたが、少なくとも *Phoenix APU* と *Phoenix2 APU* はそれに関係なく明確に違う `CPUID Model` が割り当てられているようだ。[^phx-coreboot]  
 
 [^phx-coreboot]: [Coreboot で Phoenix APU のサポートが進められる | Coelacanth's Dream](/posts/2023/01/11/coreboot-phoenix/)
@@ -38,6 +39,9 @@ AMD のソフトウェア開発者である Marek Olšák 氏により、*Phoeni
 
 *GFX1103_R1* と *GFX1103_R2* の違いとしては、L2キャッシュブロックあたりのサイズが明らかにされており、*GFX1103_R1* が *Rembrandt (Yellow Carp)* と同じ 512KiB なのに対し、*GFX1103_R2* は 256KiB となっている。  
 ここでは *GFX1103_R2* を指定したコードは追加されていないが、`switch` 文の `default` ケースが 256KiB となっている。  
+また、AMD GPU は基本 L2キャッシュブロックをメモリチャネルと同数持ち、*Phoenix APU (GC 11.0.1)* は合計 L2キャッシュサイズ 2MiB を持つことが過去に amd-gfx メーリングリストにて明かされている。[^phx-cache]  
+
+[^phx-cache]: [L0ベクタキャッシュと GL1データキャッシュが増やされる RDNA 3/GFX11 APU | Coelacanth's Dream](/posts/2022/09/02/gfx11-l0c-gl1c/)
 
  >             case CHIP_REMBRANDT:
  >         +   case CHIP_GFX1103_R1:
