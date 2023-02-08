@@ -60,6 +60,7 @@ AMD のソフトウェア開発者である Marek Olšák 氏により、*Phoeni
 ただ、*GFX1103_R1* と *GFX1103_R2* を判定する部分では `eRivisionID, external_rev_id` が用いられているが、AMDGPU ドライバーのコードを見るに、*Phoenix APU (GC 11.0.1)* と *GC 11.0.4* の `rev_id` に追加されるオフセット値は同じであり、これまでのパターンから `eRivisionID, external_rev_id` も同一である可能性が高い。  
 そうなると、*Phoniex APU (GC 11.0.1)* も *GC 11.0.4* も *GFX1103_R1* として判定される。  
 現時点で *Phoenix APU* として *GC 11.0.1, GFX1103_R1*、*GC 11.0.4, GFX1103_R1*、*GC 11.0.x?, GFX1103_R2* の 3種類が存在することが考えられるが、前者 2つに関しては単にステッピングの違いを表現しただけの可能性もある。  
+Coreboot にて存在が明かされた *Phoenix2* も、GC IPバージョンや DeviceID が不明なため、*GFX1103_R1* と *GFX1103_R2* のどちらが採用されているかは不明である。  
 
  * [[PATCH] drm/amdgpu: add soc21 common ip block support for GC 11.0.1](https://lists.freedesktop.org/archives/amd-gfx/2022-May/078678.html)
  * [[PATCH 09/19] drm/amdgpu: add soc21 common ip block support for GC 11.0.4](https://lists.freedesktop.org/archives/amd-gfx/2022-November/086816.html)
