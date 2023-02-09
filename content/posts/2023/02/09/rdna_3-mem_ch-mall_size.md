@@ -1,5 +1,5 @@
 ---
-title: "Navi31/Navi32/Navi33 のメモリチャネル数と MALL サイズ"
+title: "Navi31/Navi32/Navi33 のメモリチャネル数と L3キャッシュサイズ"
 date: 2023-02-09T19:57:29+09:00
 draft: false
 categories: [ "Hardware", "AMD", "GPU" ]
@@ -70,11 +70,6 @@ GPU がサポートするメモリチャネルとそこに接続された MALL �
 [^7900-xtx]: [AMD Radeon™ RX 7900 XTX | AMD](https://www.amd.com/en/products/graphics/amd-radeon-rx-7900xtx#product-specs)
 [^7900-xt]: [AMD Radeon™ RX 7900 XT | AMD](https://www.amd.com/en/products/graphics/amd-radeon-rx-7900xt#product-specs)
 
-AMDGPU ドライバーは、電源投入時に GPU 内部の PSP (Platform Security Processor) が VRAM に出力する GPU 情報、IP discovery table に対応しており、  
-GPU 側が対応していれば MALL の情報、メモリコントローラあたりのサイズ、通常の倍のサイズ、もしくは半分を使用するかといった情報も出力されるが、DCN 部のコードでその値は使われていない。[^ip-discovery]  
-
-[^ip-discovery]: [次世代 GPU IPブロックのサポートが進む AMDGPUドライバー ―― GFX11, GC 11.0, MES 11.0, IMU | Coelacanth's Dream](/posts/2022/04/30/amd-gc_11_0_0/#ip)
-
  >         +	int gc_11_0_0_max_chans = 48;
  >         +	int gc_11_0_0_max_avail_chans = 32;
  >         +	int gc_11_0_0_avail_chans = 16;
@@ -96,3 +91,8 @@ GPU 側が対応していれば MALL の情報、メモリコントローラあ�
  >         +}
  >
  > {{< quote >}} [drm/amd/display: adjust MALL size available for DCN32 and DCN321 (235fef6c) · Commits · Alex Deucher / linux · GitLab](https://gitlab.freedesktop.org/agd5f/linux/-/commit/235fef6c7fd341026eee90cc546e6e8ff8b2c315) {{< /quote >}}
+
+AMDGPU ドライバーは、電源投入時に GPU 内部の PSP (Platform Security Processor) が VRAM に出力する GPU 情報、IP discovery table に対応しており、  
+GPU 側が対応していれば MALL の情報、メモリコントローラあたりのサイズ、通常の倍のサイズ、もしくは半分を使用するかといった情報も出力されるが、DCN 部のコードでその値は使われていない。[^ip-discovery]  
+
+[^ip-discovery]: [次世代 GPU IPブロックのサポートが進む AMDGPUドライバー ―― GFX11, GC 11.0, MES 11.0, IMU | Coelacanth's Dream](/posts/2022/04/30/amd-gc_11_0_0/#ip)
