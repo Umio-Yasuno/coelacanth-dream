@@ -8,8 +8,14 @@ categories: [ "Hardware", "AMD", "GPU", "Database" ]
 summary: " "
 ---
 
+## Reference {#ref}
+ * <https://www.kernel.org/doc/html/latest/gpu/amdgpu/driver-misc.html#accelerated-processing-units-apu-info>
+ * <https://www.kernel.org/doc/html/latest/gpu/amdgpu/driver-misc.html#discrete-gpu-info>
+ * [DeviceInfoUtils.cpp - GPUOpen-Tools/common-src-DeviceInfo](https://github.com/GPUOpen-Tools/common-src-DeviceInfo/blob/master/DeviceInfoUtils.cpp)
+ * [device_info/DeviceInfo.cpp at master · GPUOpen-Tools/device_info](https://github.com/GPUOpen-Tools/device_info/blob/master/DeviceInfo.cpp)
+ * [data/amdgpu.ids · master · Mesa / drm · GitLab](https://gitlab.freedesktop.org/mesa/drm/blob/master/data/amdgpu.ids)
+
 {{< pindex >}}
- * [参考リンク](#reference_title)
  * [APU](#apu)
     * FAMILY_RV
         * [Raven](#raven-gfx902)
@@ -29,7 +35,9 @@ summary: " "
     * FAMILY_GC_10_3_6
         * [gfx1036](#gfx1036)
     * FAMILY_GC_10_3_7
-        * [Sabrina (gfx1037)](#sabrina)
+        * [Mendocino (gfx1037)](#mdn)
+    * FAMILY_GC_11_0_1
+        * Phoenix (GC 11.0.1, gfx1103)
  * [Discrete GPU](#dgpu)
     * FAMILY_AI
         * [Vega10](#vega10-gfx900)
@@ -45,13 +53,12 @@ summary: " "
         * [Navy Flounder/Navi22](#navy_flounder-gfx1031)
         * [Dimgrey Cavefish/Navi23](#dimgrey_cavefish-gfx1032)
         * [Beige Goby/Navi24](#beige_goby-gfx1034)
-{{< /pindex >}}
+    * FAMILY_GC_11_0_0
+        * [Navi31 (GC 11.0.0, gfx1100)](#navi31)
+        * Navi32 (GC 11.0.3?, gfx1101)
+        * Navi33 (GC 11.0.2, gfx1102)
 
-{{< ref >}}
- * [DeviceInfoUtils.cpp - GPUOpen-Tools/common-src-DeviceInfo](https://github.com/GPUOpen-Tools/common-src-DeviceInfo/blob/master/DeviceInfoUtils.cpp)
- * [device_info/DeviceInfo.cpp at master · GPUOpen-Tools/device_info](https://github.com/GPUOpen-Tools/device_info/blob/master/DeviceInfo.cpp)
- * [data/amdgpu.ids · master · Mesa / drm · GitLab](https://gitlab.freedesktop.org/mesa/drm/blob/master/data/amdgpu.ids)
-{{< /ref >}}
+{{< /pindex >}}
 
 ## APU {#apu}
 ### FAMILY_RV {#family_rv}
@@ -408,12 +415,10 @@ DG02SRTBP4MFA
 [^gc_10_3_6-did]: [[PATCH] drm/amdkfd: Add fw version for 10.3.6](https://lists.freedesktop.org/archives/amd-gfx/2022-June/080084.html)
 
 ### FAMILY_GC_10_3_7 {#family_gc_10_3_7}
-#### Sabrina SoC (gfx1037) {#sabrina}
+#### Mendocino (gfx1037) {#mdn}
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
-| 0x1506[^sabrina-did] &darr; | | | |
-
-[^sabrina-did]: [AMD Sabrina SoC は GC 10.3.7 | Coelacanth's Dream](/posts/2022/05/03/amd-sabrina-soc-gc_10_3_7/)
+| 0x1506 &darr; | | | |
 
 ## Discrete GPU {#dgpu}
 ### FAMILY_AI {#family_ai}
@@ -745,3 +750,17 @@ SubSystem ID? (Pro 5500M:0x020F, Pro 5300M:0x0210)
 [^amdgpu_ids-1337803]: <http://repo.radeon.com/amdgpu/21.40.1/ubuntu/pool/main/libd/libdrm-amdgpu-common/libdrm-amdgpu-common_1.0.0.40501-1337803_all.deb>
 [^amdgpu_ids-1362367]: <http://repo.radeon.com/amdgpu/21.40.2/ubuntu/pool/main/libd/libdrm-amdgpu-common/libdrm-amdgpu-common_1.0.0.40502-1362367_all.deb>
 
+### Navi31 (GC 11.0.0, gfx1100) {#navi31}
+| Device ID | Revision ID | Product Name | Memo |
+| :--- | :--- | :---: | :---: |
+| 0x73A8 | 0x00 | |
+| 0x7448 | 0x00 | |
+| 0x744C &darr; | 0xC0 | RX 7900 XTX |
+|  | 0xC8 | RX 7900 XT |
+|  | 0xCC |  |
+|  | 0xCE |  |
+|  | 0xCF |  |
+|  | 0xE0 |  |
+|  | 0xEC |  |
+|  | 0xEE |  |
+| 0x745E | 0xCC | |

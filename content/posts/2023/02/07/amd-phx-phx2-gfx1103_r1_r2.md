@@ -31,6 +31,8 @@ Felix Held 氏のコメントによれば、`0x00a70f80 (Family: 0x19, Model: 0x
 `CPUID` は実行した CPU の情報を返す命令であり、EAX/ECX レジスタの値によって情報の種類は変わる。  
 `CPUID Family/Model/Stepping` は EAX レジスタの値が `0x1` の時に返される情報であり、ソフトウェアはそれを用いてプロセッサの種類を判定することができる。  
 
+*Phoenix* と *Phoenix2* の関係性はコードネーム的にも *Raven* と *Raven2 (Dali/Pollock)* に近いものと思われる。  
+
 ## GFX1103_R1, GFX1103_R2 {#gfx1103_r1_r2}
 AMD のソフトウェア開発者である Marek Olšák 氏により、*Phoenix APU* の GPU ID (GFX ID) となる *GFX1103* を *GFX1103_R1* と *GFX1103_R2* に分けるパッチが Mesa3D に投稿され、それを含めたマージリクエストは既に main ブランチに取り込まれている。  
 
