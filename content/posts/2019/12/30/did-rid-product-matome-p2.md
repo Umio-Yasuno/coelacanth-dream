@@ -38,6 +38,7 @@ summary: " "
         * [Mendocino (gfx1037)](#mdn)
     * FAMILY_GC_11_0_1
         * Phoenix (GC 11.0.1, gfx1103)
+    * Phoenix2
  * [Discrete GPU](#dgpu)
     * FAMILY_AI
         * [Vega10](#vega10-gfx900)
@@ -419,6 +420,15 @@ DG02SRTBP4MFA
 | Device ID | Revision ID | Product Name | Memo |
 | :--- | :--- | :---: | :---: |
 | 0x1506 &darr; | | | |
+
+
+### Phoenix2 {#phx2}
+| Device ID | Revision ID | Product Name | Memo |
+| :--- | :--- | :---: | :---: |
+| 0x1205 | | | VBIOS image use[^coreboot-phx2] |
+| 0x15C8 | | | |
+
+[^coreboot-phx2]: [soc/amd/phoenix: add VBIOS ID remapping for phoenix (I7eef5eb4) · Gerrit Code Review](https://review.coreboot.org/c/coreboot/+/73122/4)
 
 ## Discrete GPU {#dgpu}
 ### FAMILY_AI {#family_ai}
