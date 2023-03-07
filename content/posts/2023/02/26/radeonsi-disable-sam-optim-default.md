@@ -39,6 +39,12 @@ VKD3D の同様部分では、ResizableBAR/SAM の効果はゲームによって
 最初に取り上げた AMD の Marek Olšák 氏によるマージリクエストも、当初は最適化のデフォルトでの無効化だけでなく、最適化に関するコードを削除するコミットも含まれていたが、後に更新されて無効化のみとなった。  
 今後調査が進めば、*RadeonSI* ドライバーで ResizableBAR/SAM 向けの最適化が再度有効化されるかもしれない。  
 
+{{< ins >}}
+その後、別のマージリクエストで ResizableBAR/SAM の最適化に関するコードが削除された。
+
+ * [amd,radeonsi: reviewed commits from !21403 (!21641) · Merge requests · Mesa / mesa · GitLab](https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/21641)
+{{< /ins >}}
+
 [^vkd3d]: [vkd3d-proton/CHANGELOG.md at ac8760c00534b0c28a1de51af38844718e068119 · HansKristian-Work/vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton/blob/ac8760c00534b0c28a1de51af38844718e068119/CHANGELOG.md#performance)
 
 {{< ref >}}
