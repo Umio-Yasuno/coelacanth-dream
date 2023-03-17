@@ -66,7 +66,7 @@ summary: " "
 | EOP | End Of Packet | |
 | SMU | System Manasgement Unit | |
 | PG | Powergating | |
-| RLC | Rear left Center? | |
+| RLC | RunList Controller | |
 | PFP | Prefetch Parser[^pfp] | |
 | CE | Constant Engine | |
 | DE | Dispatch Engine | |
