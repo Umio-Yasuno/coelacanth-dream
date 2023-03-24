@@ -23,7 +23,7 @@ Coreboot はオープンソースなファームウェア、BIOS/UEFI を開発�
  >
  > {{< quote >}} <https://review.coreboot.org/c/coreboot/+/72843/1/src/soc/amd/phoenix/include/soc/cpu.h#b6> {{< /quote >}}
 
-Felix Held 氏のコメントによれば、`0x00a70f80 (Family: 0x19, Model: 0xA8, Stepping: 0)` は *Phoenix2* の `CPUID Family/Model/Stepping` であり、*Phoenix APU* は `0x00a70f40 (Family: 0x19, Model: 0xA4, Stepping: 0)` となる。  
+Felix Held 氏のコメントによれば、`0x00a70f80 (Family: 0x19, Model: 0x78, Stepping: 0)` は *Phoenix2* の `CPUID Family/Model/Stepping` であり、*Phoenix APU* は `0x00a70f40 (Family: 0x19, Model: 0x74, Stepping: 0)` となる。  
 前回 Coreboot で *Phoenix APU* のサポートが進められていることを取り上げた時には、エンジニアサンプリング品やリビジョンによって `CPUID Model` を変えていると考えたが、少なくとも *Phoenix APU* と *Phoenix2 APU* はそれに関係なく明確に違う `CPUID Model` が割り当てられているようだ。[^phx-coreboot]  
 
 [^phx-coreboot]: [Coreboot で Phoenix APU のサポートが進められる | Coelacanth's Dream](/posts/2023/01/11/coreboot-phoenix/)
