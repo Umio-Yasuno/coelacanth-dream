@@ -159,6 +159,6 @@ GPU Metrics の構造体定義が `drivers/gpu/drm/amd/include/kgd_pp_interface.
 
 以下は *Cezanne /Green Sardine APU* での実行結果。GPU Metrics のバージョンは `gpu_metrics_v2_2` となる。  
 試した限りでは、`average_gfx_power` に *Cezanne /Green Sardine APU* は対応しておらず、`0xFFFF (65535)` で固定だったため、そうした値の場合は表示しないようにしている。  
-`gpu_metrics_v2_2` は現状 *Renoir APU* 系統でのみ使われているため、先の実装を行ったライブラリ側で `None` を返すようにしてもいいのかもしれない。  
+`gpu_metrics_v2_2` は現状 *Renoir APU* 系統と *Cyan Skilfish/Skillfish APU* と SMU バージョンが古い *VanGogh APU* で使われており、*Renoir APU* 系統は `average_gfx_power` に対応していないようだった。  
 
 {{< figure src="../gpu_metrics.webp" title="GPU Metrics" >}}
