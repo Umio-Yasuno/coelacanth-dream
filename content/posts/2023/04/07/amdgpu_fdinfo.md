@@ -1,5 +1,5 @@
 ---
-title: "【雑記】fdinfo からプロセスごとの AMD GPU 使用量を、GPU Metrics から消費電力と温度情報を取得する"
+title: "【雑記】 fdinfo からプロセスごとの AMD GPU 使用量を、GPU Metrics から消費電力と温度情報を取得する"
 date: 2023-04-07T03:50:40+09:00
 draft: false
 categories: [ "Diary", "Note" ]
@@ -78,7 +78,30 @@ Rust では [std::fs::read_link](https://doc.rust-lang.org/std/fs/fn.read_link.h
 
 すべての `/proc/<pid>/` を見て、PID とそのプロセスの GPU に関連付けられている `fd`、オプションでプロセス名、それらをまとめたインデックスを毎回生成するのはコストが高いと思われる。  
 そのためインデックスを `Arc<Mutex<T>>` で包み、インデックスからプロセスごとの使用量と使用率を計算して表示を更新するスレッドとは別にインデックスを更新するスレッドを作るようにした。  
+インデックスの更新用スレッドは `lock()`、表示更新用のスレッドは `try_lock()` を用いてロックする。  
 インデックスの更新間隔は表示の更新よりも遅くしてあり、表示が 1秒か 0.1秒間隔なのに対し、インデックスは今の所 5秒間隔で更新するようにしている。  
+試した限りでは、更新間隔を縮めても表示更新用のスレッドがロックの確保に失敗することはなく、また失敗しても使用率の計算に使う更新間隔に 1周分加算しておけばいいだけなので、5秒ではなく 2秒とか 3秒でもいいかも。  
+
+ソート機能も実装したが、一旦 PID、プロセス名、各使用率をまとめた構造体の `Vec` を作るようにして、それからソートしたい種類に応じて [sort_by](https://doc.rust-lang.org/stable/std/vec/struct.Vec.html#method.sort_by) を実行するようにするだけで良かった。  
+
+ >                     match (sort, reverse) {
+ >                         (FdInfoSortType::PID, false) => b.pid.cmp(&a.pid),
+ >                         (FdInfoSortType::PID, true) => a.pid.cmp(&b.pid),
+ >                         (FdInfoSortType::VRAM, false) => b.usage.vram_usage.cmp(&a.usage.vram_usage),
+ >                         (FdInfoSortType::VRAM, true) => a.usage.vram_usage.cmp(&b.usage.vram_usage),
+ >                         (FdInfoSortType::GFX, false) => b.usage.gfx.cmp(&a.usage.gfx),
+ >                         (FdInfoSortType::GFX, true) => a.usage.gfx.cmp(&b.usage.gfx),
+ >                         (FdInfoSortType::MediaEngine, false) =>
+ >                             (b.usage.dec + b.usage.enc + b.usage.uvd_enc)
+ >                                 .cmp(&(a.usage.dec + a.usage.enc + a.usage.uvd_enc)),
+ >                         (FdInfoSortType::MediaEngine, true) =>
+ >                             (a.usage.dec + a.usage.enc + a.usage.uvd_enc)
+ >                                 .cmp(&(b.usage.dec + b.usage.enc + b.usage.uvd_enc)),
+ >                     }
+
+以下は自環境での実行結果。  
+
+{{< figure src="../fdinfo.webp" title="fdinfo" >}}
 
 ## GPU Metrics
 AMDGPU ドライバーは対応している APU/dGPU であれば `sysfs` に GPU Metrics (ファイル名は `gpu_metrics`) を出力する。  
@@ -133,3 +156,9 @@ GPU Metrics の構造体定義が `drivers/gpu/drm/amd/include/kgd_pp_interface.
  >         }
 
 トレイトの実装に慣れないマクロを使いまくったが、結果的にはシンプルで維持も楽になったため良かった。  
+
+以下は *Cezanne /Green Sardine APU* での実行結果。GPU Metrics のバージョンは `gpu_metrics_v2_2` となる。  
+試した限りでは、`average_gfx_power` に *Cezanne /Green Sardine APU* は対応しておらず、`0xFFFF (65535)` で固定だったため、そうした値の場合は表示しないようにしている。  
+`gpu_metrics_v2_2` は現状 *Renoir APU* 系統でのみ使われているため、先の実装を行ったライブラリ側で `None` を返すようにしてもいいのかもしれない。  
+
+{{< figure src="../gpu_metrics.webp" title="GPU Metrics" >}}
