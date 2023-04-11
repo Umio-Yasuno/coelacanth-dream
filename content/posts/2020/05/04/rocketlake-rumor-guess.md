@@ -1,7 +1,7 @@
 ---
 title: "Rocket Lakeの噂、そこからの推測"
 date: 2020-05-04T21:19:30+09:00
-draft: true
+draft: false
 tags: [ "Rocket_Lake", "Guess", "Rumor" ]
 keywords: [ "", ]
 categories: [ "Hardware", "Intel", "CPU", "GPU" ]
@@ -56,7 +56,7 @@ noindex: false
 PCIe Gen4.0の対応を謳うもの[^6]があるのは確かで、確度は高いと言える。  
 
 [^5]: [Z490 AORUS PRO AX (rev. 1.0) | Motherboard - GIGABYTE Global](https://www.gigabyte.com/Motherboard/Z490-AORUS-PRO-AX-rev-10/support)<br>&emsp;<https://download.gigabyte.com/FileList/Manual/mb_manual_z490-aorus-pro-ax_1001_e.pdf>
-[^6]: [ASRock > Z490 PG Velocita](https://www.asrock.com/mb/Intel/Z490%20PG%20Velocita/index.asp)
+[^6]: [ASRock \> Z490 PG Velocita](https://www.asrock.com/mb/Intel/Z490%20PG%20Velocita/index.asp)
 
 マザーボード関連で言えば、特にCPU、GPU共にアーキテクチャが変わらない前世代 *Coffee Lake* 向けのマザーボードではサポートされていなかった DisplayPort 1.4 のサポートが、Z490マザーボードでは追加されていたりする。  
 それでも対応解像度は 4096x2304@60Hz と変わっておらず、これも *Rocket Lake* へ先駆けた対応ではないかと思う。  
@@ -119,15 +119,3 @@ Intelは *Suny Cove (Ice Lake)* でIPCを平均18%向上させたとあるため
 デスクトップ向けというのを考えればパターン1の方が調和しているように思える。
 
 {{< figure src="/image/2020/05/04/rocketlake-guess-pattern1.webp" title="パターン1: CPU+I/O(14nmm) + GPU+Display(10nm)" width="64%" >}}
-
-{{< ref >}}
-
- * [Intel、「Comet Lake」ベースの8製品を第10世代Coreプロセッサに追加投入 | マイナビニュース](https://news.mynavi.jp/article/20190821-881022/)
- * [北森瓦版 - 一部のマザーボードには“Rocket Lake-S”用のM.2スロットがある模様](https://northwood.blog.fc2.com/blog-entry-10255.html)
-    * [Intel Rocket Lake: Das verraten Z490-Mainboards über Intels nächste CPU-Generation](https://www.pcgameshardware.de/CPU-CPU-154106/Specials/rocket-lake-vorhersage-pcie-ddr-1349116/)
-    * [Z490 AORUS PRO AX (rev. 1.0) | Motherboard - GIGABYTE Global](https://www.gigabyte.com/Motherboard/Z490-AORUS-PRO-AX-rev-10/support)<br>&emsp;<https://download.gigabyte.com/FileList/Manual/mb_manual_z490-aorus-pro-ax_1001_e.pdf>
-    * [ASRock > Z490 PG Velocita](https://www.asrock.com/mb/Intel/Z490%20PG%20Velocita/index.asp)
- * [Rocket Lake - Microarchitectures - Intel - WikiChip](https://en.wikichip.org/wiki/intel/microarchitectures/rocket_lake)
- * [Exclusive: Intel Rocket Lake-S features PCI-Express 4.0, Xe Graphics - VideoCardz.com](https://videocardz.com/newz/exclusive-intel-rocket-lake-s-features-pci-express-4-0-xe-graphics)
- * [Intel "Rocket Lake-S" Desktop Processor Comes in Core Counts Up to 8, Gen12 iGPU Included | TechPowerUp](https://www.techpowerup.com/261611/intel-rocket-lake-s-desktop-processor-comes-in-core-counts-up-to-8-gen12-igpu-included)
-     * <https://twitter.com/momomo_us/status/1200042853587537921>
