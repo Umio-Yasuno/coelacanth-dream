@@ -31,11 +31,19 @@ CPU と GPU で共有可能なキャッシュを持たないという点で Inte
 そして *Meteor Lake GPU* では ADM とも呼ばれる L4キャッシュをサポートする。  
 パッチでは ADM が何の略称なのか、ADM/L4キャッシュのサイズについては触れていない。  
 
-Intel iGPU における L4キャッシュというと、*Gen9 アーキテクチャ* でサポートしていた eDRAM が思い出される。  
-しかし eDRAM がメモリサイドキャッシュ、SoC 全体で使用可能なキャッシュであったのに対し、ADM/L4キャッシュはあくまで GPU 側でも割り当て可能キャッシュとなっている。従来の LLC の役割が移ったキャッシュなのだろう。  
-また、GPU 専用のキャッシュではなく、CPU からも使用可能ではないかと思われる。  
+Intel GPU ドライバーでは、サンプラーが持つキャッシュを L2、GPU Device 全体で共有するキャッシュを L3 としている。  
+*{{< xe >}}-Core アーキテクチャ* でキャッシュ階層の定義を改める動きがあり、従来の GPU L3キャッシュを L2キャッシュとしていたが、最近になって公開されたドキュメントでは Device Cache となっていた。[^acm]  
+ドライバーや過去のドキュメントとの整合性を取る上で不都合があったのかもしれない。  
 
-気になるのは ADM/L4キャッシュが *Meteor Lake* のどこに搭載されているかだが、恐らく Base Tile と思われる。  
+[^acm]: [2023 Intel® Processors - Alchemist/Arctic Sound-M Platform](https://www.intel.com/content/www/us/en/docs/graphics-for-linux/developer-reference/1-0/alchemist-arctic-sound-m.html)
+
+Intel iGPU における L4キャッシュというと、*Gen9 アーキテクチャ* でサポートしていた eDRAM が思い出される。  
+しかし eDRAM がメモリサイドキャッシュ、SoC 全体で使用可能なキャッシュ (SLC, System Level Cache とも呼ばれる) であったのに対し、ADM/L4キャッシュはあくまで GPU 側でも割り当て可能なキャッシュとなっている。  
+ADM/L4キャッシュはメモリサイドキャッシュというより、従来の LLC の役割が移ったキャッシュなのだろう。また、GPU 専用のキャッシュではなく、CPU からも使用可能ではないかと思われる。  
+そうなると結局は従来のキャッシュ構成を引き継いでいることとなる。  
+ADM/L4キャッシュを搭載しない構成があるとして、その場合 LLC を GPU が使うことができるのかは気になる。  
+
+もう一つ気になるのは ADM/L4キャッシュが *Meteor Lake* のどこに搭載されているかだが、恐らく Base Tile と思われる。  
 Intel は *Meteor Lake* のタイル構成を公開しており、Base Tile 上に GPU, SoC, CPU, IO Extender Tile を積層する構成となっている。ADM/L4キャッシュを搭載した Tile をオプションで追加可能な構成になっているようには見えない。  
 メモリコントローラーが搭載されている SoC Tile の可能性もあるが、HotChips34 で発表された SoC Tile の内部ブロックにキャッシュは載っていない。  
 
