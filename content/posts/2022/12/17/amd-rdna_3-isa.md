@@ -3,7 +3,7 @@ title: "AMD、RDNA 3 Instruction Set Architecture: Reference Guide を公開"
 date: 2022-12-17T16:33:02+09:00
 draft: false
 categories: [ "Hardware", "AMD", "GPU" ]
-tags: [ "GFX11", ]
+tags: [ "GFX11", "RDNA_3" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]
