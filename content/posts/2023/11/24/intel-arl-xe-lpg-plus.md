@@ -61,6 +61,7 @@ IGC へのパッチから、*Arrow Lake* GPU の EU 構成は *Meteor Lake* GPU 
 
 そして、*Arrow Lake* GPU は *Meteor Lake* GPU と異なり、XMX (Xe Matrix eXtension) ユニットを搭載し、行列積和演算命令、`DPAS (Dot Product Accumulate Systolic)` をサポートすると思われる。  
 `hasDPAS()` 内の判定に `Xe_ARL` を除外するような変更はされておらず、また `Xe_ARL` における `DPAS` 命令のレイテンシ情報が追加されているからだ。  
+`DPAS` 命令、XMX ユニットは *Xe-HPG アーキテクチャ* の場合、FP16/BF16/INT8/INT4/INT2 のデータフォーマットに対応しており、*Arrow Lake* GPU でも同様だろう。  
 
 *Meteor Lake* GPU が XMX ユニットを搭載しなかったことについては、ダイサイズの削減や、XeSS (Xe Super Sampling) は XMX ユニットが無くても実行可能であることが理由として考えられる。  
 しかし、*Arrow Lake* GPU では XMX ユニットを搭載する判断をしたようだ。  
@@ -93,3 +94,8 @@ IGC へのパッチから、*Arrow Lake* GPU の EU 構成は *Meteor Lake* GPU 
  >         +    }
  >
  > {{< quote >}} [intel-graphics-compiler/visa/LocalScheduler/LatencyTable.cpp at 2998e867d91dec7198b77aa589e82e65c26ad45f · intel/intel-graphics-compiler](https://github.com/intel/intel-graphics-compiler/blob/2998e867d91dec7198b77aa589e82e65c26ad45f/visa/LocalScheduler/LatencyTable.cpp) {{< /quote >}}
+
+{{< ref >}}
+ * [Intel® Xe GPU Architecture](https://www.intel.com/content/www/us/en/docs/oneapi/optimization-guide-gpu/2023-2/intel-xe-gpu-architecture.html)
+ * [Introduction to the Xe-HPG Architecture](https://www.intel.com/content/www/us/en/developer/articles/technical/introduction-to-the-xe-hpg-architecture.html)
+{{< /ref >}}
