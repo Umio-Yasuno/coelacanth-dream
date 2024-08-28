@@ -1,5 +1,5 @@
 ---
-title: "AMD CPU も Intel Thread Director に近い機能を実装か"
+title: "AMD CPU も Intel Thread Director と同様の機能を実装か"
 date: 2024-08-27T22:48:06+09:00
 draft: false
 categories: [ "CPU", "AMD" ]
@@ -40,11 +40,22 @@ BIOS/UEFI から提供され、共有メモリに配置される CPU コアの�
 ドライバーは CPU コア (スレッド) から実行中のスレッドの分類を読み取り、そしてそのコア (スレッド) が処理に対して最適でない場合、ランキングデータから最適なコア (スレッド) を選択する。  
 
 機能としては概ね Intel HFI, Intel Thread Director (ITD), EHFI (Enhanced HFI) と同じと見ていいだろう。  
-ただしスレッドの分類は異なる。  
+ただしスレッドの分類は異なり、ITD の場合は以下のようになっている[^itd]。  
+
+| Intel Thread Director | Description |
+| :-- | :--: |
+| Class 0 | Non-vectorized integer or floating-point code. |
+| Class 1 | Integer or floating-point vectorized code,<br>excluding Intel® Deep Learning Boost (Intel® DL Boost) code. |
+| Class 2 | Intel DL Boost code. |
+| Class 3 | Pause (spin-wait) dominated code. |
+
+[^itd]: [Linux Kernel に Intel Thread Director を実装するパッチ | Coelacanth's Dream](/posts/2022/09/10/linux-kernel-intel-itd/#itd)
 
 AMD のヘテロジニアスアーキテクチャは Intel のそれとは異なり、マイクロアーキテクチャと IPC は同一であるため、CPPC (Collaborative Processor Performance Control) に関連する値の設定を調整することで充分適したスケジューリングができると自分は考えていたが、実際は性能と電力効率の最大化にはハードウェアからヒントを用いたスケジューリングが必要だったのだろう。  
 
  * [amd-pstate ドライバーにおける異種コア構成のトポロジへの対応 | Coelacanth's Dream](/posts/2024/05/22/amd-pstate-hetero-core-topology/)
+
+## CPUID
 
 AMD HFI, Workload Classification の機能フラグビットは `CPUID 0x8000_0021:EAX:Bit22` とされている。  
 
@@ -73,7 +84,7 @@ AMD HFI に関する情報は `CPUID 0x8000_0027` から読み取ることがで
 
 InstaLatx64 氏の Github リポジトリで公開されている Ryzen 7 9700X の CPUID 実行結果一覧を見ると[^cpuid_result]、`CPUID 0x8000_0021:EAX:Bit22` フラグビットが立っており、また `CPUID 0x8000_0027:EAX` が 3 となっているため、AMD HFI は *Zen 5/c* からサポートしていると考えられる。  
 
-[^cpuid_result]: https://github.com/InstLatx64/InstLatx64/blob/4b94fc56e1d959d5124fae901679b434263bdd6e/AuthenticAMD/AuthenticAMD0B40F40_K20_GraniteRidge_03_CPUID.txt#L82
+[^cpuid_result]: <https://github.com/InstLatx64/InstLatx64/blob/4b94fc56e1d959d5124fae901679b434263bdd6e/AuthenticAMD/AuthenticAMD0B40F40_K20_GraniteRidge_03_CPUID.txt>
 
 Ryzen AI 300 Series は *Zen 5* と *Zen 5c* のヘテロジニアスアーキテクチャを採っており、`amd_hfi` ドライバーによる最適化が期待される。  
 西川善司氏による 4Gamer.net の記事にて、Windows では I/O 処理スレッド等は *Zen 5c* に積極的に割り当てるようになっていることが書かれており、Windows では既に先行して `amd_hfi` ドライバーと同様の機能が実装されていると考えられる。[^4gamer]  
