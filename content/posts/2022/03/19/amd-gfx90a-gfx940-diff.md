@@ -41,7 +41,7 @@ AMD の Stanislav Mekhanoshin 氏より、新たな CDNA系 GPUID *gfx940* の�
 ### XF32 {#xf32}
 命令名の XF32 サフィックスは TF32 データフォーマットであることを示す。  
 TF32 そのままを命令名に使用しなかった理由には、ハードウェア仕様によるものと Stanislav Mekhanoshin 氏は説明している。[^xf32]  
-TF32 は 19-bits 長のデータフォーマットであり、データのダイナミックレンジは FP32 と同じ 8-bits、精度は FP16 と同じ 10-bits となっている。(1-bit は符号 [sign] bit )  
+TF32 は 19-bits 長のデータフォーマットであり、データのダイナミックレンジは FP32 と同じ 8-bits、精度は FP"16" と同じ 10-bits となっている。(1-bit は符号 [sign] bit )  
 
 TF32 データフォーマットには、NVIDIA GPU では *NVIDIA A100* からサポートしており、Intel GPU でも *Ponte Vecchio ({{< xe class="hpc" >}})* がサポートする。[^xe-hpc-tf32]  
 *Ponte Vecchio ({{< xe class="hpc" >}})* は他に QF, BF8 といったデータフォーマットをサポートするとしているが、詳細はまだ不明。  
