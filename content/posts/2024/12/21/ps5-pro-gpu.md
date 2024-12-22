@@ -32,7 +32,7 @@ RDNA 3 の BVH (Bounding Volume Hierarchy) 構造体のスタックを管理す�
 
 ## 専用命令 {inst}
 PS5 Pro では小規模な CNN 向けの 3x3 の畳み込みを行う専用命令が実装されており、8-bit (Int8?) では 300TOPS、16-bit (FP16?) では 67TFLOPS のピーク理論性能となる。  
-FP32 ピーク理論性能との比率から、RDNA 3 (Wave Matrix Multiply Accumulate) 命令のように内部で複数の命令に分解して発行する方式ではなく、むしろ CDNA 系の MFMA (Matrix fused-multiply-add) 命令のように CU 内に専用のユニットを持つ方式に近いと考えられる。  
+FP32 ピーク理論性能との比率から、RDNA 3 の WMMA (Wave Matrix Multiply Accumulate) 命令のように内部で複数のドット積命令に分解して発行する方式ではなく、CDNA 系の MFMA (Matrix fused-multiply-add) 命令のように CU 内に専用のユニットを持つ方式に近いと考えられる。  
 
 ベクタレジスタへの柔軟なアクセス可能にする命令と、CNN に必要な計算を処理するための命令は合計で 44個追加されている。  
 
