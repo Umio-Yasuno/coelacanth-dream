@@ -40,3 +40,5 @@ SIMD 幅によって割り当てるレジスタファイルは増え、実行も
 VRT により、使用するレジスタファイル数が少ないスレッドが複数あってもレジスタの無駄は小さく、多くのスレッドをサポートすることのメリットはより大きくなる。  
 
  * [Add support for Panther Lake devices · intel/intel-graphics-compiler@f45f621](https://github.com/intel/intel-graphics-compiler/commit/f45f621c4b52705ee14c7e52a7110948ce072b9f)
+
+VRT と EU がサポートするスレッド数の増加により、*Xe3 アーキテクチャ* では EU の使用率向上、EU あたりの実効性能の向上が期待できるだろう。  
