@@ -2,7 +2,7 @@
 title: "Linux 環境では AMD dGPU のデフォルトプロファイルが 3D_FULL_SCREEN に"
 date: 2024-12-29T23:42:08+09:00
 draft: false
-categories: [ "Software" ]
+categories: [ "Software", "AMD", "GPU" ]
 tags: [ "Linux_Kernel", "RDNA_2", "RDNA_3" ]
 noindex: false
 # summary: ""
