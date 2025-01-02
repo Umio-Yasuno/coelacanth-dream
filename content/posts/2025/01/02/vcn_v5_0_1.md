@@ -23,7 +23,7 @@ v5.0.1 というのは現時点で VCN IP としては最新のバージョン�
 
 ## エンコード機能は持たず {#enc}
 AMDGPU ドライバーには VCN IP がサポートするコーデック情報がハードコードされており、User Mode Driver が API 経由でその情報を取得できるようになっている。  
-そして、今回追加された VCN IP v5.0.1 のコーデック情報によれば、VCN v5.0.1 はメディアエンジンとしてエンコード機能を持たず、デコード機能のみを持つ。  
+そして、今回追加された VCN v5.0.1 のコーデック情報によれば、VCN v5.0.1 はメディアエンジンとしてエンコード機能を持たず、デコード機能のみを持つ。  
 
  >         diff --git a/drivers/gpu/drm/amd/amdgpu/soc15.c b/drivers/gpu/drm/amd/amdgpu/soc15.c
  >         index 3bb4a573e07b2..a59b4c36cad73 100644
@@ -59,6 +59,7 @@ VCN v5.0.1 が何の AMD GPU に搭載されるかについては、現在 AMDGP
 
 VCN v5.0.1 のコーデック情報は `drivers/gpu/drm/amd/amdgpu/soc15.c` に追加されており、`soc15` は *Vega* 系の APU/GPU や *CDNA* 系の GPU のサポートに関係している。  
 また、*MI300/Aqua Vanjaram/CDNA 3* はメディアエンジンとして VCN v4.0.3 と JPEG v4.0.3 を搭載しており、こちらもエンコード機能は持たない。  
-ということで VCN IP v5.0.1 は次世代の *CDNA* 系 GPU にメディアエンジンとして搭載される IPブロックと推測できる。  
+ということで VCN v5.0.1 は次世代の *CDNA* 系 GPU にメディアエンジンとして搭載される IPブロックと推測できる。  
 
-ちなみに、VCN IP v5.0.0 は `drivers/gpu/drm/amd/amdgpu/soc24.c` にコーデック情報が記述されており、そして `soc24` は *RDNA 4* 系の GPU のサポートに関係している。  
+ちなみに、VCN v5.0.0 は `drivers/gpu/drm/amd/amdgpu/soc24.c` にコーデック情報が記述されており、`soc24` は *RDNA 4* 系の GPU のサポートに関係している。  
+それと VCN IP v5.0.0 はエンコード機能をサポートしている。  
