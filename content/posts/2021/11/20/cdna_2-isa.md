@@ -37,7 +37,6 @@ noindex: false
 
 GDS の削除は、AMDGPU ドライバーで *Aldebaran* をサポートする最初のパッチで触れられていた。  
 {{< link >}} [Linux Kernel に 「Aldebaran」 GPU をサポートするパッチが投稿される　―― CDNA 2/MI200? | Coelacanth's Dream](/posts/2021/02/25/amd-aldebaran-gpu/#removed-gds) {{< /link >}}
-そこでは GDS を削除した理由を、アトミック操作/使用のためとしている。  
 GDS への変更は *CDNA 1/MI100/Arcturus* の時点で行われており、*Vega10/Vega20* では GDS は 64KB (32バンク) だったのが [^gds-size]、*CDNA 1/MI100/Arcturus* では 4KB (4バンク) に減らされている。[^arct-gds]  
 GDS はすべての CU からアクセス可能なオンチップメモリであり、1つの GPU に搭載される CU数が増えたことで、性能の確保と実装コストが高く付くようになったのかもしれない。  
 
