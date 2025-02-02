@@ -3,7 +3,7 @@ title: "gfx950 は FP6/FP4 フォーマットをサポート、MI350X/CDNA 4 か
 date: 2024-11-20T05:19:45+09:00
 draft: false
 categories: [ "AMD", "GPU" ]
-tags: [ "CDNA", "GFX9", "LLVM" ]
+tags: [ "CDNA", "GFX9", "LLVM", "CDNA_4" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]
