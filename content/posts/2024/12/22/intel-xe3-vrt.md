@@ -39,6 +39,12 @@ SIMD 幅によって割り当てるレジスタファイルは増え、実行も
 また、Intel Graphics Compiler (IGC) の変更から、*Xe3 アーキテクチャ* では XVE (EU) あたり 10スレッドをサポートするが明らかになっている。これによりレジスタファイルサイズも XVE (EU) あたり 80KiB になると考えられる。  
 VRT により、使用するレジスタファイル数が少ないスレッドが複数あってもレジスタの無駄は小さく、多くのスレッドをサポートすることのメリットはより大きくなる。  
 
+{{< ins >}}
+[intel/compute-runtime](https://github.com/intel/compute-runtime) の情報から、EU あたり 10スレッドを設定可能なのは 96 GRF かそれより小さい場合とされており、EU あたりのレジスタファイルサイズは 64KiB が維持される可能性が高くなった。  
+
+ * [compute-runtime/shared/source/helpers/gfx_core_helper_xe3_and_later.inl at master · intel/compute-runtime](https://github.com/intel/compute-runtime/blob/master/shared/source/helpers/gfx_core_helper_xe3_and_later.inl)
+{{< /ins >}}
+
  * [Add support for Panther Lake devices · intel/intel-graphics-compiler@f45f621](https://github.com/intel/intel-graphics-compiler/commit/f45f621c4b52705ee14c7e52a7110948ce072b9f)
 
 VRT と EU がサポートするスレッド数の増加により、*Xe3 アーキテクチャ* では EU の使用率向上、EU あたりの実効性能の向上が期待できるだろう。  
