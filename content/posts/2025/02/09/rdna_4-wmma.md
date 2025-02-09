@@ -78,8 +78,10 @@ noindex: false
 *RDNA 4/GFX12* では入力フォーマットに FP8 (1 bit sign, 4 bit exponent, 3 bit mantissa) と BF8 (1 bit sign, 5 bit exponent, 2 bit mantissa) のサポートが追加され、  
 入力フォーマットが IU4 の場合は 16x16x32 (A: 16x32, B: 32x16, C: 16x16) のレイアウトもサポートする。  
 
+*RDNA 4/GFX12* がサポートする FP8/BF8 は OCP (Open Compute Project) 準拠のフォーマットであり、*MI300/CDNA 3* がサポートする FP8/BF8 とは異なって無限大 (Inf) をサポートしている。  
+
 また、疎行列を入力に取る `SWMMAC (Wave Matrix(sparse) Multiply-Accumulate)` 命令のサポートが追加された。  
-`SWMMAC` 命令の対応フォーマットは `WMMA` 命令と同じであり、行列のレイアウトは 16x16x32 (A: sparse 32x16, B: 16x32, C: 16x16) と、入力フォーマットが IU4 の場合は 16x16x64 (A: sparse 16x64, B: 64x16, C: 16x16) をサポートする。  
+`SWMMAC` 命令の対応フォーマットは `WMMA` 命令と同じであり、行列のレイアウトは *CDNA* 系の `SMFMAC` 命令と同じだとすると 16x16x32 (A: sparse 32x16, B: 16x32, C: 16x16)、入力フォーマットが IU4 の場合は 16x16x64 (A: sparse 16x64, B: 64x16, C: 16x16) をサポートする。  
 
 *RDNA 4/GFX12* でも *RDNA 3/GFX11* の内部的に複数のドット積命令に分解して発行する形式を継続するのか、それとも *CDNA* 系のように専用の行列演算ユニットを実装するのかまだ不明である。  
 *RDNA 3/GFX11* から行列演算の IPC が向上しているのかについても、*RDNA 4/GFX12* におけるサイクル数が公開されていないため不明。  
@@ -93,4 +95,5 @@ noindex: false
  * ["AMD Instinct MI300" Instruction Set Architecture: Reference Guide - amd-instinct-mi300-cdna3-instruction-set-architecture.pdf](https://www.amd.com/content/dam/amd/en/documents/instinct-tech-docs/instruction-set-architectures/amd-instinct-mi300-cdna3-instruction-set-architecture.pdf)
  * [Pipeline descriptions — ROCm Compute Profiler 3.0.0 documentation](https://rocm.docs.amd.com/projects/rocprofiler-compute/en/latest/conceptual/pipeline-descriptions.html)
  * [FP8 Numbers — HIP 6.3.42134 Documentation](https://rocm.docs.amd.com/projects/HIP/en/latest/reference/fp8_numbers.html)
+ * [OCP 8-bit Floating Point Specification (OFP8) Revision 1.0 - OCP 8-bit Floating Point Specification (OFP8) Revision 1.0 2023-12-01.pdf](https://www.opencompute.org/documents/ocp-8-bit-floating-point-specification-ofp8-revision-1-0-2023-12-01-pdf-1)
 {{< /ref >}}
