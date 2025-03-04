@@ -14,8 +14,8 @@ noindex: false
 
  * [AMD Unveils Next-Generation AMD RDNA™ 4 Architecture with the Launch of AMD Radeon™ RX 9000 Series Graphics Cards](https://www.amd.com/en/newsroom/press-releases/2025-2-28-amd-unveils-next-generation-amd-rdna-4-architectu.html)
  * [レイトレ性能が2倍になった「Radeon RX 9070」正式発表！ - PC Watch](https://pc.watch.impress.co.jp/docs/news/1666581.html)
- * [AMD Radeon RX 9070 Series Technical Deep Dive - Complete Slide Deck | TechPowerUp](https://www.techpowerup.com/review/amd-radeon-rx-9070-series-technical-deep-dive/7.html)
  * [RDNA 4世代初のGPU「Radeon RX 9070」シリーズは3月6日に世界市場で発売。4KゲームではRX 7900 GREより20～42％も上回る](https://www.4gamer.net/games/869/G086962/20250228040/)
+ * [AMD Radeon RX 9070 Series Technical Deep Dive - Complete Slide Deck | TechPowerUp](https://www.techpowerup.com/review/amd-radeon-rx-9070-series-technical-deep-dive/7.html)
 
 ## Out Of Order Memory {#ooom}
 *RDNA 3* ではメモリーリクエストに対して順番通りに処理して結果を返していたが、この方式だとキャッシュミス等によるレイテンシの長いリクエストによって他のリクエストが遅れる場合があった。  
@@ -26,7 +26,7 @@ noindex: false
 *RDNA 3* とそれ以前ではベクタレジスタの割り当ては静的であり、使用する最大量も合わせて割り当てていた。  
 *RDNA 4* では部分的にベクタレジスタの割り当てと解放が可能になったとされている。割り当ての最適化により稼働させられる Wave 数も増えたとしている。  
 
-割り当てを待つ条件についてはソフトウェア管理だとしているが、具体的な方法 (データの依存性を示す命令を挿入する等) で動的割り当てが機能するかは不明。  
+割り当てを待つ条件についてはソフトウェア管理だとしているが、動的割り当てが機能する具体的な方法 (データの依存性を示す命令を挿入する等) は不明。  
 
 ## Cache {#cache}
 RX 9070 /XT では 64MB の Infinity Cache を持ち、メモリチャネルあたり 4MB という点は *RDNA 3* と変わらない。  
