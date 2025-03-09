@@ -16,6 +16,10 @@ AMD は 2025/03/07 付で「"RDNA4" Instruction Set Architecture: Reference Guid
  * [New content released on GPUOpen for AMD RDNA™ 4 on-shelf day - AMD GPUOpen](https://gpuopen.com/learn/new_content_released_on_gpuopen_for_amd_rdna_4_on-shelf_day/)
    * ["RDNA4" Instruction Set Architecture: Reference Guide - rdna4-instruction-set-architecture.pdf](https://www.amd.com/content/dam/amd/en/documents/radeon-tech-docs/instruction-set-architectures/rdna4-instruction-set-architecture.pdf)
 
+キャッシュ階層の節ではやはり GL1 Cache (Graphical Level 1 Cache) が GL1 Buffer へとなっていたが、説明自体は *RDNA 3* における GL1 Cache と変わっていなかった。  
+
+*RDNA 4* も *RDNA 3* と同様に Dual Issue VALU (VOPD) をサポートするが、新たに追加された `V_DUAL_*` 命令は無い。  
+
 ## Dynamic register allocation / Dynamic VGPR {#dynamic}
 2025/02/28 に行われた Radeon RX 9000 シリーズの正式発表時に初めて公開された Dynamic register allocation / Dynamic VGPR だが、コンパイラバックエンドである LLVM ではまだサポートされておらず、どのように機能するかは不明だった。  
 それが今回、発売のタイミングになって Dynamic VGPR の詳細と LLVM にサポートを追加するプルリクエストが公開された。  
