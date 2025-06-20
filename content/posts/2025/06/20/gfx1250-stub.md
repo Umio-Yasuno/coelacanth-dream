@@ -16,6 +16,7 @@ AMD の Stanislav Mekhanoshin 氏によって LLVM に新たな GFX ID、*gfx125
  * [[AMDGPU] Initial support for gfx1250 target. by rampitec · Pull Request #144965 · llvm/llvm-project](https://github.com/llvm/llvm-project/pull/144965)
 
 だがそれを置いても *gfx1250* は今後の AMD GPU を見る上でかなり興味深い存在である。  
+
 まず、*gfx1250 (gfx12.5.0)* の GFX メジャーバージョンは RDNA 4 系と同じ GFX12 であり、Wave32 に対応しているが、WGP (Work-Group Processor) モードには対応せず、CU モードのみをサポートする。  
 RDNA 系アーキテクチャにおける WGP モードと CU モードは主に LDS (Local Data Share) の割り当てに影響し、WGP モードではペアとなる 2基の CU の LDS 64KiB を合わせて割り当てることが可能になるが、CU モードでは常に CU 内の LDS のみに割り当てる。  
 
@@ -26,6 +27,18 @@ RDNA 系アーキテクチャとして見ても、*gfx1250* は画像系命令�
 RDNA 3/4 の Dual issue、VOPD 命令もサポートしていないとされている。  
 
 CDNA 4 アーキテクチャでは LDS を従来の 64KiB (32バンク) から 160KiB (64バンク) に増やしたが、*gfx1250* は 64KiB (32バンク) のままとされている。  
+
+*gfx1250* は APU とされているが、MI300A/CDNA 3 と MI300X/CDNA 3 のように APU と dGPU のどちらにも対応したアーキテクチャなのかは不明。  
+
+ >         +     ``gfx1250``                 ``amdgcn``   APU                     - Architected                   *TBA*
+ >         +                                                                        flat
+ >         +                                                                        scratch                       .. TODO::
+ >         +                                                                      - Packed
+ >         +                                                                        work-item                       Add product
+ >         +                                                                        IDs                             names.
+ >         +
+ >         
+ > {{< quote >}} [[AMDGPU] Initial support for gfx1250 target. by rampitec · Pull Request #144965 · llvm/llvm-project](https://github.com/llvm/llvm-project/pull/144965) {{< /quote >}}
 
 すべて "現時点の内容では" という言葉が前に付くが、*gfx1250* は CDNA と RDNA を融合したような存在となっている。  
 以前に AMD の Jack Huynh 氏はそのようなアーキテクチャとなる UDNA の構想を語っていたが、*gfx1250* がそうなのだろうか？
