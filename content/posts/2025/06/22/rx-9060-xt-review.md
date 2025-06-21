@@ -1,7 +1,7 @@
 ---
 title: "Radeon RX 9060 XT 16GB を購入したので簡易レビュー"
-date: 2025-06-17T18:07:26+09:00
-draft: true
+date: 2025-06-22T08:50:35+09:00
+draft: false
 categories: [ "Hardware", "AMD", "GPU", "Diary" ]
 tags: [ "gfx1200", "RDNA_4"]
 noindex: false
@@ -113,3 +113,4 @@ fp8-matrix, bf8-matrix の性能が 0 GFLOPS となっているが、これは R
 こうして各ニュースサイトのレビュー記事の価値や、ベンチマーク結果を取る人たちの偉大さを知る。  
 
 とはいえ気が向いたら追加の検証や比較を行った記事を書くかもしれない。  
+
