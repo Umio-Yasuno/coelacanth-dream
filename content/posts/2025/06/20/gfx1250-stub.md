@@ -1,5 +1,5 @@
 ---
-title: "LLVM に gfx1250 が \"仮に\" 追加される ――Wave32 に対応して MFMA 系命令をサポートしない CDNA APU?"
+title: "LLVM に gfx1250 が \"仮に\" 追加される ――Wave32 に対応して MFMA 系命令をサポートしない CDNA APU? [追記修正]"
 date: 2025-06-20T19:57:33+09:00
 draft: false
 categories: [ "AMD", "GPU" ]
@@ -24,7 +24,6 @@ RDNA 系アーキテクチャにおける WGP モードと CU モードは主に
 他にもフルレートでの FP64 実行の機能フラグも *gfx1250* には設定されていない。  
 
 RDNA 系アーキテクチャとして見ても、*gfx1250* は画像系命令のサポートやレイトレーシング関連命令のサポートを示す機能フラグが設定されていない。  
-RDNA 3/4 の Dual issue、VOPD 命令もサポートしていないとされている。  
 
 CDNA 4 アーキテクチャでは LDS を従来の 64KiB (32バンク) から 160KiB (64バンク) に増やしたが、*gfx1250* は 64KiB (32バンク) のままとされている。  
 
@@ -46,6 +45,60 @@ CDNA 4 アーキテクチャでは LDS を従来の 64KiB (32バンク) から 1
 
  * [AMD RDNA と CDNA の違いを考える | Coelacanth's Dream](/posts/2024/11/22/rdna-cdna-udna/)
 
-さらに仮と推測に話なってしまうが、*gfx1250* が UDNA とすると、グラフィクス処理に必要な画像系命令やレイトレーシング関連命令はオプション扱いになるのかもしれない。  
-RDNA 3 では CU 内の SIMDユニットに 2x SIMD32 という構成を取り、Dual issue、VOPD 命令に対応することで、クロックあたりの FP32 性能を倍増させたが、これらはパックド FP32 実行に置き換えられるのだろうか？  
+さらに仮と推測の話となってしまうが、*gfx1250* が UDNA とすると、グラフィクス処理に必要な画像系命令やレイトレーシング関連命令はオプション扱いになるのかもしれない。  
 
+## 追記修正 [2025-06-24]
+最初の版では、*gfx1250* は Dual issue、VOPD 命令をサポートしないと書いたが、これは間違いだった。本当に申し訳ない。  
+`FeatureGFX12` 内に `FeatureVOPD` が含まれているため、*gfx1250* も VOPD 命令をサポートすると考えられる。  
+パックド FP32 実行と VOPD 命令の両方をサポートすることの利点としては、パックド FP32 実行には FMA (`v_pk_fma_f32`) 命令があるが FMAC 命令は含まれず、VOPD 命令には FMAC (`v_dual_fmac_f32`) 命令 があるが FMA 命令が含まれないため、より多くのケースで FP32 演算性能レートを倍に引き上げられると考えられる。  
+FMA 命令と FMAC 命令はそれぞれフォーマットが異なり、FMA 命令は `d = a * b + c`、FMAC 命令は `d = a * b + d` のフォーマットとなっている。  
+
+ >         +def FeatureISAVersion12_50 : FeatureSet<
+ >         +  [FeatureGFX12,
+ >         +   FeatureGFX1250Insts,
+ >         +   FeatureCuMode,
+ >         +   FeatureLDSBankCount32,
+ >         +   FeatureDLInsts,
+ >         +   FeatureFmacF64Inst,
+ >         +   FeaturePackedFP32Ops,
+ >         +   FeatureDot7Insts,
+ >         +   FeatureDot8Insts,
+ >         +   FeatureWavefrontSize32,
+ >         +   FeatureShaderCyclesHiLoRegisters,
+ >         +   FeatureArchitectedFlatScratch,
+ >         +   FeatureArchitectedSGPRs,
+ >         +   FeatureAtomicFaddRtnInsts,
+ >         +   FeatureAtomicFaddNoRtnInsts,
+ >         +   FeatureAtomicDsPkAdd16Insts,
+ >         +   FeatureAtomicFlatPkAdd16Insts,
+ >         +   FeatureAtomicBufferGlobalPkAddF16Insts,
+ >         +   FeatureAtomicGlobalPkAddBF16Inst,
+ >         +   FeatureAtomicBufferPkAddBF16Inst,
+ >         +   FeatureFlatAtomicFaddF32Inst,
+ >         +   FeatureFP8ConversionInsts,
+ >         +   FeaturePackedTID,
+ >         +   FeatureVcmpxPermlaneHazard,
+ >         +   FeatureSALUFloatInsts,
+ >         +   FeaturePseudoScalarTrans,
+ >         +   FeatureHasRestrictedSOffset,
+ >         +   FeatureScalarDwordx3Loads,
+ >         +   FeatureDPPSrc1SGPR,
+ >         +   FeatureBitOp3Insts,
+ >         +   FeatureBF16ConversionInsts,
+ >         +   FeatureCvtPkF16F32Inst,
+ >         +   FeatureMinimum3Maximum3PKF16,
+ >         +   FeaturePrngInst,
+ >         +   FeaturePermlane16Swap,
+ >         +   FeatureAshrPkInsts,
+ >         +   FeatureSupportsSRAMECC,
+ >         +   FeatureMaxHardClauseLength63,
+ >         +   FeatureAtomicFMinFMaxF64GlobalInsts,
+ >         +   FeatureAtomicFMinFMaxF64FlatInsts,
+ >         +   FeatureFlatBufferGlobalAtomicFaddF64Inst,
+ >         +   FeatureMemoryAtomicFAddF32DenormalSupport,
+ >         +   FeatureKernargPreload,
+ >         +   FeatureLshlAddU64Inst,
+ >         +]>;
+ >         +
+ >         
+ > {{< quote >}} [[AMDGPU] Initial support for gfx1250 target. by rampitec · Pull Request #144965 · llvm/llvm-project](https://github.com/llvm/llvm-project/pull/144965) {{< /quote >}}
