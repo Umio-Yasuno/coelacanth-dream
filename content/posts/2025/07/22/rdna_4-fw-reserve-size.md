@@ -50,9 +50,9 @@ AMDGPU ドライバーのモジュールパラメータには `vramlimit` とい
  >          		/* reserve vram for mem train according to TMR location */
  >          		amdgpu_ttm_training_data_block_init(adev, reserve_size);
 
-この 516MiB というサイズは予約済み領域、言い換えればユーザーが使用できない領域としては大きく、現状 RDNA 4 GPU で最も廉価である RX 9060 XT 8GB では他モデル (RX 9060 XT 16GB, RX 9070 /XT 16GB) よりも性能面で影響を強く受けるだろう。  
+この 516MiB というサイズは予約済み領域、言い換えればユーザーが使用できない領域としては大きく、8GB モデルでも同様だとすると、現状 RDNA 4 GPU で最も廉価である RX 9060 XT 8GB では他モデル (RX 9060 XT 16GB, RX 9070 /XT 16GB) よりも性能面で影響を強く受けるだろう。  
 またこれは従来の世代よりもずっと大きく、RX 6600 8GB の場合に割り当てられるサイズはたったの 3MiB である。  
-drm/amd に issue を投稿した Adriano Martins 氏によれば、Windows 環境では起動直後で 80MiB のみが使用済みとされるらしいため、今後修正されることを願っている。  
+drm/amd に issue を投稿した Adriano Martins 氏によれば、Windows 環境では起動直後で 80MiB のみが使われるらしいため、今後修正されることを願っている。  
 
 ## 他の確認方法
 もし Linux Kernel への変更なしで予約されるサイズを調べたい場合は、以下のリポジトリをクローンし、`cargo run --example vbios_parser | grep fw_reserved_size_in_kb` を実行することで確かめられる。  
