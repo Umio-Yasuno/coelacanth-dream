@@ -38,6 +38,7 @@ CDNA 4 で LDS のサイズと帯域を拡張させた理由について、デ�
 RDNA 3 からサポートされている Dual issue (VOPD 命令) は 2種類の VOPD 命令を同時に実行する機能だが、正常に機能させるにはいくつかの要件を守る必要がある。  
 その一つが 2種類の命令 (opX, opY) のソースオペランドが異なる VGPR バンクであること、というものだ。  
 それが *gfx1250* では緩和され、同じ VGPR バンクであっても正常に VOPD 命令が実行可能となる。  
+具体的な例は特に思いつかないが、VOPD 命令にコンパイル可能なパターンが増えることで実行性能も向上するケースがあるかもしれない。  
 
  >         +  // If \p AllowSameVGPR is set then same VGPRs are allowed for X and Y sources
  >         +  // even though it violates requirement to be from different banks.
@@ -67,6 +68,7 @@ WGP モードでは 2基の CU をまとめた WGP (Work-group processor) を Wo
 そして *gfx1250* では CU あたり 4基の SIMD ユニットを持つとされている。  
 CU モードのみをサポートすることと SIMD ユニットの数は、GCN アーキテクチャの構成に近いと言える。  
 見方を変えれば、LDS のサイズが拡張されたことと合わせ、RDNA 系の CU 2基を 1基に融合させた結果とも見えるだろう。  
+しかし、SIMD ユニットの幅は不明である。  
 
 この場合、VOPD 命令はどのように実行されるかだが、  
 RDNA 3/4 では、SIMD32 (Float, Int) ユニット 2基に加え、それぞれにサブセットとなる SIMD32 (Float) ユニットがあり、VOPD 命令の実行にはサブセットを活用する方式だった。  
