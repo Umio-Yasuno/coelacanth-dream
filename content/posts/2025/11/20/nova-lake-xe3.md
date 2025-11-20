@@ -19,8 +19,9 @@ noindex: false
  * [Add support for NVL-S and NVL-U devices · intel/cm-compiler@fc99a66](https://github.com/intel/cm-compiler/commit/fc99a661b7e65696fb530f779caa7eb96eccd7f6)
  * [Add support for xe3p device · intel/cm-compiler@5d3ad70](https://github.com/intel/cm-compiler/commit/5d3ad7006730c36926d96b49a8faeaf68b822e86)
 
-Nova Lake のサポートを追加するパッチにおいても Nova Lake `xe3-lpg` とされ、その後に追加された Xe3P のサポートを追加するパッチにおいても Xe3P の新命令に Nova Lake はサポートしていないとされている。  
-Xe3P では XMX (Xe Matrix eXtensions) で実行される行列積和演算命令 DPAS (Dot Product and Accumulate Systolic) に FP8/FP4 やマイクロスケーリングフォーマット (MXFP4/MXFP8 等) 関連の命令が追加されている。  
+Nova Lake のサポートを追加するパッチにおいて Nova Lake の GMD ID (Intel GPU のハードウェア IP バージョン) は、`nvl-ul/nvl-hx/nvl-s` が 30.4.4、`nvl-h/nvl-u` が 30.5.4、リリース ID は `xe3-lpg` とされている。  
+その後に Xe3P、`cri (Crescent Island?)` のサポートを追加するパッチが公開されているが、GMD ID は 35.11.0 とされ、Nova Lake とはバージョンが大きく異なる。  
+また、Xe3P では XMX (Xe Matrix eXtensions) で実行される行列積和演算命令 DPAS (Dot Product and Accumulate Systolic) に FP8/FP4 やマイクロスケーリングフォーマット (MXFP4/MXFP8 等) 関連の命令が追加されているが、それらの命令を Nova Lake はサポートしていない。  
 
  >         --- a/clang/lib/Driver/ToolChains/Arch/GenXPlatforms.cpp
  >         +++ b/clang/lib/Driver/ToolChains/Arch/GenXPlatforms.cpp
@@ -43,63 +44,6 @@ Xe3P では XMX (Xe Matrix eXtensions) で実行される行列積和演算命�
  >         +  {"nvl-ul", encodeGmdId(30, 4, 4)},
  >
  > {{< quote >}} [Add support for NVL-S and NVL-U devices · intel/cm-compiler@fc99a66](https://github.com/intel/cm-compiler/commit/fc99a661b7e65696fb530f779caa7eb96eccd7f6) {{< /quote >}}
-
- >         +  { encodeGmdId(35, 11, 0),
- >         +    { /*.HasFP64 =*/ true,
- >         +      /*.HasBFloat16 =*/ true,
- >         +      /*.HasSLMCasInt64 =*/ true,
- >         +      /*.HasBfn =*/ true,
- >         +      /*.HasDp4a =*/ true,
- >         +      /*.HasDpas =*/ true,
- >         +      /*.HasDpasw =*/ false,
- >         +      /*.HasDpasFp16 =*/ true,
- >         +      /*.HasDpasBf16 =*/ true,
- >         +      /*.HasDpasTf32 =*/ true,
- >         +      /*.HasSrndFp32ToFp16 =*/ true,
- >         +      /*.HasMoveBf8 =*/ true,
- >         +      /*.HasMoveHf8 =*/ true,
- >         +      /*.HasSrndFp16ToBf8 =*/ true,
- >         +      /*.HasDpasBf8 =*/ true,
- >         +      /*.HasDpasHf8 =*/ true,
- >         +      /*.HasDpasFp4 =*/ true,
- >         +      /*.HasBdpas =*/ true,
- >         +      /*.HasBF16Atomic =*/ true,
- >         +      /*.HasShuffleIndex4 =*/ true,
- >         +      /*.HasDownScale =*/ true,
- >         +      /*.HasLfsr =*/ true,
- >         +      /*.HasTanh =*/ true,
- >         +      /*.HasSigmoid =*/ true,
- >         +      /*.HasSrndBf16ToBf8 =*/ true,
- >         +      /*.HasSrndBf16ToHf8 =*/ true,
- >         +      /*.HasSrndFp16ToHf8 =*/ true,
- >         +      /*.GrfWidth =*/ 512,
- >         +      /*.SupportedGrfNums =*/ {32,64,96,128,160,192,256,512},
- >         +      /*.MaxSLMSize =*/ 384, }, },
- >            { encodeGmdId(30, 5, 4),
- >              { /*.HasFP64 =*/ true,
- >                /*.HasBFloat16 =*/ true,
- >         @@ -55,6 +103,19 @@ static const std::unordered_map<uint32_t, TargetProperties> TargetProps = {
- >                /*.HasMoveBf8 =*/ true,
- >                /*.HasMoveHf8 =*/ true,
- >                /*.HasSrndFp16ToBf8 =*/ true,
- >         +      /*.HasDpasBf8 =*/ false,
- >         +      /*.HasDpasHf8 =*/ false,
- >         +      /*.HasDpasFp4 =*/ false,
- >         +      /*.HasBdpas =*/ false,
- >         +      /*.HasBF16Atomic =*/ false,
- >         +      /*.HasShuffleIndex4 =*/ false,
- >         +      /*.HasDownScale =*/ false,
- >         +      /*.HasLfsr =*/ false,
- >         +      /*.HasTanh =*/ false,
- >         +      /*.HasSigmoid =*/ false,
- >         +      /*.HasSrndBf16ToBf8 =*/ false,
- >         +      /*.HasSrndBf16ToHf8 =*/ false,
- >         +      /*.HasSrndFp16ToHf8 =*/ false,
- >                /*.GrfWidth =*/ 512,
- >                /*.SupportedGrfNums =*/ {32,64,96,128,160,192,256},
- >                /*.MaxSLMSize =*/ 128, }, },
- >
- > {{< quote >}} [Add support for xe3p device · intel/cm-compiler@5d3ad70](https://github.com/intel/cm-compiler/commit/5d3ad7006730c36926d96b49a8faeaf68b822e86) {{< /quote >}}
 
 Nova Lake の GPU 部において Xe3、Panther Lake や Wildcat Lake よりも進んだ部分となるのはあくまでもディスプレイエンジン、メディアエンジンだと思われる。  
 
