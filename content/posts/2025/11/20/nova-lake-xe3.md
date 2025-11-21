@@ -19,9 +19,9 @@ noindex: false
  * [Add support for NVL-S and NVL-U devices · intel/cm-compiler@fc99a66](https://github.com/intel/cm-compiler/commit/fc99a661b7e65696fb530f779caa7eb96eccd7f6)
  * [Add support for xe3p device · intel/cm-compiler@5d3ad70](https://github.com/intel/cm-compiler/commit/5d3ad7006730c36926d96b49a8faeaf68b822e86)
 
-Nova Lake のサポートを追加するパッチにおいて Nova Lake の GMD ID (Intel GPU のハードウェア IP バージョン) は、`nvl-ul/nvl-hx/nvl-s` が 30.4.4、`nvl-h/nvl-u` が 30.5.4、リリース ID は `xe3-lpg` とされている。  
+Nova Lake のサポートを追加するパッチにおいて Nova Lake の GMD ID (Graphics Media Display ID?, Intel GPU におけるハードウェア IP バージョン) は、`nvl-ul/nvl-hx/nvl-s` が 30.4.4、`nvl-h/nvl-u` が 30.5.4、リリース ID は `xe3-lpg` とされている。  
 その後に Xe3P、`cri (Crescent Island?)` のサポートを追加するパッチが公開されているが、GMD ID は 35.11.0 とされ、Nova Lake とはバージョンが大きく異なる。  
-また、Xe3P では XMX (Xe Matrix eXtensions) で実行される行列積和演算命令 DPAS (Dot Product and Accumulate Systolic) に FP8/FP4 やマイクロスケーリングフォーマット (MXFP4/MXFP8 等) 関連の命令が追加されているが、それらの命令を Nova Lake はサポートしていない。  
+また、Xe3P では XMX (Xe Matrix eXtensions) で実行される行列積和演算命令 DPAS (Dot Product and Accumulate Systolic) に FP8/FP4 やマイクロスケーリングフォーマット (MXFP4/MXFP8 等) 関連の命令が追加されているが、それらの命令を Nova Lake はサポートしていないとされている。  
 
  >         --- a/clang/lib/Driver/ToolChains/Arch/GenXPlatforms.cpp
  >         +++ b/clang/lib/Driver/ToolChains/Arch/GenXPlatforms.cpp
@@ -46,4 +46,4 @@ Nova Lake のサポートを追加するパッチにおいて Nova Lake の GMD 
  > {{< quote >}} [Add support for NVL-S and NVL-U devices · intel/cm-compiler@fc99a66](https://github.com/intel/cm-compiler/commit/fc99a661b7e65696fb530f779caa7eb96eccd7f6) {{< /quote >}}
 
 Nova Lake の GPU 部において Xe3、Panther Lake や Wildcat Lake よりも進んだ部分となるのはあくまでもディスプレイエンジン、メディアエンジンだと思われる。  
-
+元々、Linux Kernel の Intel xe ドライバーに向けた Nova Lake 関連のパッチも、ディスプレイエンジンである Xe3p_LPD、メディアエンジンである Xe3p_LPM が Nova Lake-S に搭載される、というものであり、GPU コア部のアーキテクチャまでは言及していなかったように思う。  
