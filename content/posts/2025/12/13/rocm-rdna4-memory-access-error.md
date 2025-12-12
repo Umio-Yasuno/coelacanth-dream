@@ -15,15 +15,14 @@ ROCm + RDNA 4 GPU という環境で、数ヶ月に渡って発生していた�
 ## ランダムに発生するメモリアクセスエラー {#memory-error}
 まず ROCm + RDNA 4 GPU では以前からランダムにメモリアクセスエラーが発生しており、安定性に問題を抱えていた。  
 主に PyTorch を使用している際に発生するが、発生する頻度はほとんどランダムであり、発生するタイミングもカーネルを実行中、唐突に発生するということしか分からなかった。  
+ログを取り、仔細に読み込んでも、割り当てていないメモリアドレスにアクセスしている以外には不明だった。  
 
  * [[Issue]: Memory access fault by GPU node-1 (Agent handle: 0x5de975b3cc80) on address 0x799bfc063000 · Issue #5051 · ROCm/ROCm](https://github.com/ROCm/ROCm/issues/5051)
 
-自分が RX 9060 XT 16GB (gfx1200) で試した限りでは ROCm 6.4.1 では発生せず、ROCm 7.0rc から発生するようになったが、その時は原因が不明だったため、ただ運が良かっただけという可能性もある。  
+自分が RX 9060 XT 16GB (gfx1200) で試した限りでは ROCm 6.4.1 では発生せず、ROCm 7.0rc から発生するようになったが、  
 また、Vulkan API を使用したゲームをプレイ中に発生することは一度もなかった。  
-[TheRock](https://github.com/ROCm/TheRock/tree/main) での rc リリースを含めるなら 2025/08 から、正式なリリースでは 2025/09 から発生していたことになる。  
 
 ## 回避策と修正 {#wa-fix}
-
 問題が報告されてから、しばらくの間は特に進展が無かったが、最近になって Linux Kernel のブートパラメータによる回避策が見つかった。  
 `amdgpu.cwsr_enable=0` をブートパラメータに指定するというものであり、自分が探した限り、回避策を最初に見つけたのは Github ユーザーの CSFFlame 氏である。  
 
@@ -50,6 +49,8 @@ CWSR (compute wave store and resume) は AMD GPU が実行する Wave、シェ�
  * [[PATCH v3] drm/amdkfd: Trap handler support for expert scheduling mode](https://lists.freedesktop.org/archives/amd-gfx/2025-December/134755.html)
 
 つまり今までの情報を要約すると、ROCm 7.0 から hipBLASLt は "expert scheduling mode" を有効化しているが、amdkfd の CWSR における、Wave を中断し、保存、そして再開する処理においては "expert scheduling mode" をサポートしていなかった、という状況の不一致がメモリアクセスエラーを引き起こしていた可能性が高い。  
+PyTorch は内部的に hipBLASLt を使用しているため、主に PyTorch を実行中に発生していたこととも符号する。  
+この問題は TheRock での rc リリースを含めるなら 2025/08 から、正式なリリースでは 2025/09 から発生していたことになる。  
 
 今後は amdkfd から取得可能な情報に "expert scheduling mode" のサポートについて追加され、hipBLASLt はそれを用いてサポートを切り替える方式となるらしい。  
 
