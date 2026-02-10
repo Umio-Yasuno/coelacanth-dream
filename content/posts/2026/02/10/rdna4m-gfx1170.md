@@ -1,9 +1,9 @@
 ---
-title: "LLVM に RDNA 4m/GFX1170 APU のサポートが追加される ――専用の行列積和演算ユニットを削減か?"
+title: "LLVM に RDNA 4m/GFX1170 APU のサポートが追加される ――専用の行列積和演算ユニットを削減か? [更新] WMMA 命令をサポート"
 date: 2026-02-10T01:06:19+09:00
 draft: false
 categories: [ "AMD", "APU" ]
-tags: [ "LLVM", "GFX11" ]
+tags: [ "LLVM", "GFX11", "GFX1170" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]
