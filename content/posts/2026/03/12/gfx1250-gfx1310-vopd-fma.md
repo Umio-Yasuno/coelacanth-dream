@@ -1,5 +1,5 @@
 ---
-title: "RDNA 5 ではより多くのケースで FP32 性能が倍になる可能性"
+title: "RDNA 5 ではより多くのケースで Dual Issue が機能し、FP32 性能が倍になる可能性"
 date: 2026-03-12T12:05:03+09:00
 draft: false
 categories: [ "Hardware", "AMD", "GPU" ]
