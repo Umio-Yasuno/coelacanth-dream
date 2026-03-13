@@ -1,5 +1,5 @@
 ---
-title: "RDNA 5 ではより多くのケースで Dual Issue が機能し、FP32 性能が倍になる可能性"
+title: "RDNA 5 ではより多くのケースで Dual Issue が機能し、ピーク FP32 性能を出しやすくなる可能性"
 date: 2026-03-12T12:05:03+09:00
 draft: false
 categories: [ "Hardware", "AMD", "GPU" ]
@@ -24,17 +24,30 @@ Dual Issue VALU は *RDNA 3 アーキテクチャ (GFX11)* から実装された
 そして、*RDNA 5 (gfx1310)* では Dual Issue 系命令として、新たな命令エンコーディングを採用した `VOPD3` が追加された。  
 `VOPD3` には、`V_{FMAAK,FMAMK}_F32` 命令を除いた `VOPD` の命令が含まれており、そして `V_FMA_F32_e64` 命令が追加されている。  
 
- >         +defvar VOPD3XPseudosExtraGFX13 = ["V_ADD_U32_e32", "V_LSHLREV_B32_e32", "V_FMA_F32_e64", "V_SUB_U32_e32",
- >         +                                  "V_LSHRREV_B32_e32", "V_ASHRREV_I32_e32"];
- >         +defvar VOPD3XPseudosExtraGFX1250 = ["V_FMA_F64_e64", "V_ADD_F64_pseudo_e32",
- >         +                                    "V_MUL_F64_pseudo_e32", "V_MAX_NUM_F64_e32", "V_MIN_NUM_F64_e32"];
- >         +defvar VOPD3XPseudosGFX13 = !listconcat(
- >         +                              !filter(x, VOPDXPseudosGFX12, !and(!eq(!find(x, "FMAAK"), -1),
- >         +                                                                 !eq(!find(x, "FMAMK"), -1))),
- >         +                              VOPD3XPseudosExtraGFX13);
- >         +defvar VOPD3XPseudosGFX1250 = !listconcat(VOPD3XPseudosGFX13, VOPD3XPseudosExtraGFX1250);
+ >         defvar VOPDPseudosCommon = [
+ >           "V_FMAC_F32_e32", "V_FMAAK_F32", "V_FMAMK_F32", "V_MUL_F32_e32",
+ >           "V_ADD_F32_e32", "V_SUB_F32_e32", "V_SUBREV_F32_e32", "V_MUL_LEGACY_F32_e32",
+ >           "V_MOV_B32_e32", "V_CNDMASK_B32_e32", "V_MAX_F32_e32", "V_MIN_F32_e32",
+ >           "V_DOT2C_F32_F16_e32", "V_DOT2C_F32_BF16_e32"
+ >         ];
+ >         defvar VOPDYOnlyPseudosCommon = ["V_ADD_U32_e32", "V_LSHLREV_B32_e32"];
+ >         defvar VOPDYOnlyPseudosGFX11_12 = ["V_AND_B32_e32"];
+ >         defvar VOPDYOnlyPseudosGFX1250 = ["V_MAX_I32_e32", "V_MIN_I32_e32",
+ >                                           "V_SUB_U32_e32", "V_LSHRREV_B32_e32",
+ >                                           "V_ASHRREV_I32_e32"];
+ >         
+ >         defvar VOPDXPseudosGFX11 = VOPDPseudosCommon;
+ >         defvar VOPDXPseudosGFX12 = VOPDPseudosCommon;
+ >         defvar VOPDYPseudosGFX11 = !listconcat(VOPDXPseudosGFX11, VOPDYOnlyPseudosCommon, VOPDYOnlyPseudosGFX11_12);
+ >         defvar VOPDYPseudosGFX12 = !listconcat(VOPDXPseudosGFX12, VOPDYOnlyPseudosCommon, VOPDYOnlyPseudosGFX11_12);
+ >         defvar VOPDYPseudosGFX1250 = !listconcat(VOPDXPseudosGFX12, VOPDYOnlyPseudosCommon, VOPDYOnlyPseudosGFX1250);
+ >         
+ >         def GFX11GenD : GFXGenD<GFX11Gen, VOPDXPseudosGFX11, VOPDYPseudosGFX11>;
+ >         def GFX12GenD : GFXGenD<GFX12Not12_50Gen, VOPDXPseudosGFX12, VOPDYPseudosGFX12>;
+ >         def GFX1250GenD : GFXGenD<GFX1250Gen, VOPDXPseudosGFX12, VOPDYPseudosGFX1250>;
+ >         def GFX13GenD : GFXGenD<GFX13Gen, VOPDXPseudosGFX12, VOPDYPseudosGFX1250>;
  >
- > {{< quote >}} [[AMDGPU] Add VOPD to gfx13 (#182815) · llvm/llvm-project@1911488](https://github.com/llvm/llvm-project/commit/1911488ca3b27e006588f5e2a02e63dc85ba3f3f) {{< /quote >}}
+ > {{< quote >}} <https://github.com/llvm/llvm-project/blob/bc211002c2e84f20fb3a028aadcca9606d8045f5/llvm/lib/Target/AMDGPU/VOPDInstructions.td#L249-L266> {{< /quote >}}
 
 `V_{FMAAK,FMAMK}_F32` 命令と `V_FMA_F32` 命令の違いは入力にリテラル定数を用いるかどうかであり、`V_FMAAK_F32` 命令は加算部分の引数に、`V_FMAMK_F32` 命令は乗算部分の片方の引数にリテラル定数を用いる。  
 `V_FMA_F32` 命令は命令エンコーディングの違いから、3つの入力にそれぞれ別のレジスタを指定可能となっている。  
