@@ -3,7 +3,7 @@ title: "LLVM に gfx1250 が \"仮に\" 追加される ――Wave32 に対応�
 date: 2025-06-20T19:57:33+09:00
 draft: false
 categories: [ "AMD", "GPU" ]
-tags: [ "LLVM", "CDNA" ]
+tags: [ "LLVM", "CDNA", "GFX12.5" ]
 noindex: false
 # summary: ""
 # keywords: [ "", ]
